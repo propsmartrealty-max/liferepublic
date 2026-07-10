@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { RERA_REGISTRY } from '../../data/rera';
 import { Facebook, Instagram, Twitter, Linkedin, Phone, MapPin, ArrowUpRight } from 'lucide-react';
 import { pseoSlugs, pseoRegistry } from '../../data/pseo-registry';
+import { seoClusters } from '../../data/seo-clusters';
 import { EnquiryModal } from '../ui/EnquiryModal';
 
 export const Footer: React.FC = () => {
@@ -164,20 +165,64 @@ export const Footer: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Massive SEO Silo - Popular Searches */}
+                {/* Massive SEO Silo - Themed Keyword Clusters */}
                 <div className="border-t border-white/10 py-12 mt-12">
-                    <h5 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">Popular Location Searches</h5>
-                    <div className="flex flex-wrap gap-x-4 gap-y-3">
-                        {pseoSlugs.map((slug) => (
-                            <Link
-                                key={slug}
-                                to={`/location/${slug}`}
-                                className="text-xs text-gray-500 hover:text-accent transition-colors"
-                                title={pseoRegistry[slug].title}
-                            >
-                                {pseoRegistry[slug].title.split('|')[0].trim()}
-                            </Link>
-                        ))}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div>
+                            <h5 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">Popular Configurations in Pune West</h5>
+                            <div className="flex flex-col gap-y-3">
+                                {seoClusters.configurations.map((item) => (
+                                    <Link
+                                        key={item.slug}
+                                        to={`/insights/${item.slug}`}
+                                        className="text-xs text-gray-500 hover:text-accent transition-colors"
+                                        title={item.name}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                        <div>
+                            <h5 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">Top Locations & Micro-Markets</h5>
+                            <div className="flex flex-col gap-y-3">
+                                {seoClusters.locations.map((item) => (
+                                    <Link
+                                        key={item.slug}
+                                        to={`/insights/${item.slug}`}
+                                        className="text-xs text-gray-500 hover:text-accent transition-colors"
+                                        title={item.name}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                ))}
+                                {pseoSlugs.slice(0, 5).map((slug) => (
+                                    <Link
+                                        key={slug}
+                                        to={`/location/${slug}`}
+                                        className="text-xs text-gray-500 hover:text-accent transition-colors"
+                                        title={pseoRegistry[slug].title}
+                                    >
+                                        {pseoRegistry[slug].title.split('|')[0].trim()}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                        <div>
+                            <h5 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">Real Estate Investment Themes</h5>
+                            <div className="flex flex-col gap-y-3">
+                                {seoClusters.themes.map((item) => (
+                                    <Link
+                                        key={item.slug}
+                                        to={`/insights/${item.slug}`}
+                                        className="text-xs text-gray-500 hover:text-accent transition-colors"
+                                        title={item.name}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
 

@@ -30,6 +30,8 @@ import { CommunityForum } from './pages/CommunityForum';
 import { LocationLanding } from './pages/LocationLanding';
 import { NotFound } from './pages/NotFound';
 import HTMLSitemap from './pages/HTMLSitemap';
+import { InsightsLanding } from './pages/InsightsLanding';
+import { InsightDetail } from './pages/InsightDetail';
 
 // Keep layout components static as they are used on every page
 import { FloatingContact } from './components/ui/FloatingContact';
@@ -251,6 +253,18 @@ function App() {
           <Route path="/location/:slug" element={
             <Layout ariaLabel="Sovereign Sector Landing Page">
               <HyperLocalLanding />
+            </Layout>
+          } />
+
+          {/* Insights / Knowledge Hub */}
+          <Route path="/insights" element={
+            <Layout ariaLabel="Pune Real Estate Insights">
+              <InsightsLanding />
+            </Layout>
+          } />
+          <Route path="/insights/:slug" element={
+            <Layout ariaLabel="Pune Real Estate Insights Detail">
+              <InsightDetail />
             </Layout>
           } />
 

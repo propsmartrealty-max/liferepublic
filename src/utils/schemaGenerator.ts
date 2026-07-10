@@ -279,7 +279,14 @@ export const generateLocalBusinessSchema = () => {
             'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
             'opens': '10:00',
             'closes': '19:00'
-        }
+        },
+        'department': [
+            {
+                '@type': 'RealEstateAgent',
+                'name': 'Kolte Patil Life Republic Sales Office',
+                'telephone': '+91-7744009295'
+            }
+        ]
     };
 };
 
@@ -397,5 +404,23 @@ export const generateBreadcrumbSchema = (items: { name: string; item: string }[]
             'name': it.name,
             'item': it.item.startsWith('http') ? it.item : `${DOMAIN}${it.item}`
         }))
+    };
+};
+
+export const generateArticleSchema = (article: { title: string; description: string; slug: string; date: string }) => {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        'headline': article.title,
+        'description': article.description,
+        'url': `${DOMAIN}/insights/${article.slug}`,
+        'datePublished': article.date,
+        'author': {
+            '@type': 'Organization',
+            'name': 'Kolte Patil Life Republic'
+        },
+        'publisher': {
+            '@id': `${DOMAIN}/#organization`
+        }
     };
 };

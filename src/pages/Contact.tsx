@@ -105,6 +105,18 @@ export const Contact: React.FC = () => {
                             </div>
 
 
+                            <div className="mt-8 rounded-xl overflow-hidden shadow-lg border border-gray-100 h-[300px]">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.996160105342!2d73.71261537446698!3d18.57416346752763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc6e326466f%3A0xc07c3905cf6ce12a!2sKolte%20Patil%20Life%20Republic!5e0!3m2!1sen!2sin!4v1704100000000!5m2!1sen!2sin" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style={{ border: 0 }} 
+                                    allowFullScreen={true} 
+                                    loading="lazy" 
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title="Google Maps Location of Kolte Patil Life Republic"
+                                ></iframe>
+                            </div>
                         </div>
                     </div>
 
