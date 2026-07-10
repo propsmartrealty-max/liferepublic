@@ -244,12 +244,17 @@ export const Footer: React.FC = () => {
 
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-gray-500/60">
                     <p>© 2025 Life Republic. Designed with precision.</p>
-                    <div className="flex gap-8">
-                        <Link to="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
-                        <Link to="/terms" className="hover:text-accent transition-colors">Terms of Use</Link>
+                    <div className="flex gap-4 md:gap-8 flex-wrap justify-center">
+                        <Link to="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
+                        <Link to="/terms-of-service" className="hover:text-accent transition-colors">Terms of Service</Link>
+                        <Link to="/disclaimer" className="hover:text-accent transition-colors">Disclaimer</Link>
                         <Link to="/sitemap" className="hover:text-accent transition-colors">HTML Sitemap</Link>
                         <a href="/sitemap.xml" className="hover:text-accent transition-colors">XML Sitemap</a>
                     </div>
+                </div>
+                
+                <div className="mt-8 pt-8 border-t border-white/5 text-[9px] text-gray-500/40 text-center leading-relaxed">
+                    Disclaimer: This website is for informational purposes only and does not constitute an offer or solicitation. The visual representations, including images and 3D walkthroughs, are artistic impressions and may differ from the actual project. Pricing and specifications are subject to change without notice. By submitting your contact details, you authorize our partners to contact you via phone, SMS, or email, overriding any NDNC registration.
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-yellow-400 via-red-500 pink-500 purple-500 blue-500 to-green-500"></div>

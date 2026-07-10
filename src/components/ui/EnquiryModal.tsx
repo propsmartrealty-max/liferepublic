@@ -186,7 +186,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                         <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-[2rem] border border-gray-100">
                                             <Globe size={24} className="text-accent shrink-0 mt-1" />
                                             <p className="text-[10px] text-gray-500 font-medium leading-relaxed uppercase tracking-wider">
-                                                By authorizing, you synchronize with the Sovereign Communication Protocol. Data protection via RSA encryption active. 
+                                                By authorizing, you agree to our <a href="/privacy-policy" className="text-accent underline" target="_blank">Privacy Policy</a> and <a href="/terms-of-service" className="text-accent underline" target="_blank">Terms of Service</a>. You consent to receive updates via Phone, SMS, or WhatsApp overriding your NDNC registration.
                                             </p>
                                         </div>
 

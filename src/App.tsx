@@ -34,9 +34,15 @@ import HTMLSitemap from './pages/HTMLSitemap';
 import { InsightsLanding } from './pages/InsightsLanding';
 import { InsightDetail } from './pages/InsightDetail';
 import { SiloLanding } from './pages/SiloLanding';
+import { PrivacyPolicy } from './pages/legal/PrivacyPolicy';
+import { TermsOfService } from './pages/legal/TermsOfService';
+import { Disclaimer } from './pages/legal/Disclaimer';
 
 // Keep layout components static as they are used on every page
 import { FloatingContact } from './components/ui/FloatingContact';
+import { EnquiryModal } from './components/ui/EnquiryModal';
+import { BrochureModal } from './components/ui/BrochureModal';
+import { CookieConsent } from './components/ui/CookieConsent';
 import { Layout } from './components/layout/Layout';
 import { SmoothScrolling } from './components/layout/SmoothScrolling';
 import { ExitIntentOffer } from './components/ui/ExitIntentOffer';
@@ -106,6 +112,7 @@ function App() {
     <SmoothScrolling>
       <ExitIntentOffer />
       <FloatingContact />
+      <CookieConsent />
       <AnimatePresence mode="wait">
         <Suspense fallback={<PageLoader />}>
           <Routes location={location} key={location.pathname}>
@@ -272,8 +279,25 @@ function App() {
             </Layout>
           } />
           <Route path="/insights/:slug" element={
-            <Layout ariaLabel="Pune Real Estate Insights Detail">
+            <Layout ariaLabel="Real Estate Market Analysis">
               <InsightDetail />
+            </Layout>
+          } />
+
+          {/* Legal Compliance */}
+          <Route path="/privacy-policy" element={
+            <Layout ariaLabel="Privacy Policy">
+              <PrivacyPolicy />
+            </Layout>
+          } />
+          <Route path="/terms-of-service" element={
+            <Layout ariaLabel="Terms of Service">
+              <TermsOfService />
+            </Layout>
+          } />
+          <Route path="/disclaimer" element={
+            <Layout ariaLabel="Legal Disclaimer">
+              <Disclaimer />
             </Layout>
           } />
 
