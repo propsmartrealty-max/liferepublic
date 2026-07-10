@@ -14,6 +14,7 @@ export interface Project {
         type: string;
         size: string;
         image: string;
+        virtualTourUrl?: string;
         details?: string[];
     }[];
     specifications?: {

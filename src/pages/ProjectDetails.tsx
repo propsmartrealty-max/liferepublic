@@ -3,8 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
     MapPin, Sparkles, ShieldCheck, Download, ArrowRight, 
-    CheckCircle2, HelpCircle, Layout, Layers, FileText, 
-    ChevronLeft, Share2, Phone, Building2, ZoomIn, Navigation, X
+    ChevronLeft, Share2, Phone, Building2, ZoomIn, Navigation, X, Play, Video
 } from 'lucide-react';
 import { api } from '../services/api';
 import type { Project } from '../lib/types';
@@ -30,6 +29,7 @@ const ProjectDetails: React.FC = () => {
     const [activeTab, setActiveTab] = useState<'overview' | 'layouts' | 'amenities' | 'specifications' | 'faqs'>('overview');
     const [selectedFloorPlan, setSelectedFloorPlan] = useState<any>(null);
     const [isZoomed, setIsZoomed] = useState(false);
+    const [isVirtualTourOpen, setIsVirtualTourOpen] = useState(false);
 
     useEffect(() => {
         const loadProject = async () => {
@@ -197,9 +197,17 @@ const ProjectDetails: React.FC = () => {
                                             <h3 className={`text-xl font-serif font-bold ${selectedFloorPlan === plan ? 'text-white' : 'text-secondary'}`}>{plan.type}</h3>
                                             <Layers size={18} className="text-accent" />
                                         </div>
-                                        <div className="flex items-center gap-3">
-                                            <span className="text-[10px] font-bold text-accent uppercase tracking-widest">Carpet Area</span>
-                                            <span className={`text-lg font-mono font-bold ${selectedFloorPlan === plan ? 'text-white/60' : 'text-secondary/40'}`}>{plan.size}</span>
+                                        <div className="flex items-center justify-between">
+                                            <div className="flex items-center gap-3">
+                                                <span className="text-[10px] font-bold text-accent uppercase tracking-widest">Carpet Area</span>
+                                                <span className={`text-lg font-mono font-bold ${selectedFloorPlan === plan ? 'text-white/60' : 'text-secondary/40'}`}>{plan.size}</span>
+                                            </div>
+                                            {plan.virtualTourUrl && (
+                                                <div className={`flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full ${selectedFloorPlan === plan ? 'bg-accent/20 text-accent' : 'bg-gray-100 text-gray-400'}`}>
+                                                    <Video size={12} />
+                                                    3D Tour
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </motion.div>
@@ -222,6 +230,15 @@ const ProjectDetails: React.FC = () => {
                                                     <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">Validated Carpet Area</span>
                                                     <span className="text-2xl font-mono font-bold text-secondary">{selectedFloorPlan.size}</span>
                                                 </div>
+                                                {selectedFloorPlan.virtualTourUrl && (
+                                                    <Button 
+                                                        variant="outline" 
+                                                        className="mt-6 flex items-center gap-2 rounded-2xl px-8 py-4 font-bold text-xs uppercase tracking-[0.2em] border-accent text-accent hover:bg-accent hover:text-white"
+                                                        onClick={() => setIsVirtualTourOpen(true)}
+                                                    >
+                                                        <Play size={16} /> Enter 3D Virtual Walkthrough
+                                                    </Button>
+                                                )}
                                             </div>
                                             <div className="grid grid-cols-1 gap-4">
                                                 {selectedFloorPlan.details?.map((d: string, idx: number) => (
@@ -327,6 +344,25 @@ const ProjectDetails: React.FC = () => {
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[1000] bg-secondary/95 backdrop-blur-3xl flex items-center justify-center p-10">
                         <button onClick={() => setIsZoomed(false)} className="absolute top-10 right-10 p-4 bg-white/10 text-white rounded-full hover:bg-white hover:text-secondary transition-all"><X size={32} /></button>
                         <motion.img initial={{ scale: 0.9 }} animate={{ scale: 1 }} exit={{ scale: 0.9 }} src={selectedFloorPlan.image} className="max-w-full max-h-full object-contain mix-blend-screen" />
+                    </motion.div>
+                )}
+
+                {/* Virtual Tour Modal */}
+                {isVirtualTourOpen && selectedFloorPlan?.virtualTourUrl && (
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[1000] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center p-4 md:p-10">
+                        <div className="w-full max-w-6xl flex justify-end mb-4">
+                            <button onClick={() => setIsVirtualTourOpen(false)} className="flex items-center gap-2 p-3 bg-white/10 text-white rounded-xl hover:bg-accent hover:text-white transition-all font-bold uppercase tracking-widest text-xs">
+                                Close Tour <X size={16} />
+                            </button>
+                        </div>
+                        <div className="w-full max-w-6xl h-[70vh] md:h-[80vh] bg-gray-900 rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 relative">
+                            <iframe 
+                                src={selectedFloorPlan.virtualTourUrl}
+                                className="absolute inset-0 w-full h-full border-0"
+                                allowFullScreen
+                                loading="lazy"
+                            ></iframe>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

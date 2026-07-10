@@ -39,10 +39,10 @@ export const projectsRegistry: Project[] = [
         amenities: ['Clubhouse Atmos', 'Infinity Edge Pool', 'Gymnasium', 'Landscaped Garden', 'Children\'s Play Area', 'Multi-purpose Hall', 'Yoga Deck', 'Jogging Track'],
         masterLayout: '/images/home/master-layout-full.jpg',
         floorPlans: [
-            { type: '2 BHK Optima', size: '682 sq.ft.', image: '/images/home/master-layout-full.jpg', details: ['Carpet Area: 682 sq.ft.', 'Modern Kitchen Layout', 'Spacious Balcony'] },
+            { type: '2 BHK Optima', size: '682 sq.ft.', image: '/images/home/master-layout-full.jpg', virtualTourUrl: 'https://my.matterport.com/show/?m=JvwN82W8Xq1', details: ['Carpet Area: 682 sq.ft.', 'Modern Kitchen Layout', 'Spacious Balcony'] },
             { type: '2 BHK Grande', size: '800 sq.ft.', image: '/images/home/master-layout-full.jpg', details: ['Carpet Area: 800 sq.ft.', 'Master Bedroom with Ensuite', 'Extra Utility Space'] },
-            { type: '2.5 BHK', size: '943 sq.ft.', image: '/images/home/master-layout-full.jpg', details: ['Carpet Area: 943 sq.ft.', 'Additional Study Room', 'Premium Living Area'] },
-            { type: '3 BHK', size: '1037 sq.ft.', image: '/images/home/master-layout-full.jpg', details: ['Carpet Area: 1037 sq.ft.', 'Triple Balcony System', 'Luxury Finishes'] }
+            { type: '2.5 BHK', size: '943 sq.ft.', image: '/images/home/master-layout-full.jpg', virtualTourUrl: 'https://my.matterport.com/show/?m=JvwN82W8Xq1', details: ['Carpet Area: 943 sq.ft.', 'Additional Study Room', 'Premium Living Area'] },
+            { type: '3 BHK', size: '1037 sq.ft.', image: '/images/home/master-layout-full.jpg', virtualTourUrl: 'https://my.matterport.com/show/?m=JvwN82W8Xq1', details: ['Carpet Area: 1037 sq.ft.', 'Triple Balcony System', 'Luxury Finishes'] }
         ],
         specifications: [
             { title: 'Structure & Walls', items: ['Earthquake resistant R.C.C. structure', 'Gypsum finished internal walls', 'OBD paint in all rooms'] },
@@ -69,8 +69,8 @@ export const projectsRegistry: Project[] = [
         amenities: ['Private Clubhouse', 'Olympic Size Pool', 'Urban Park Access', 'Pet Park', 'Amphitheatre', 'Co-working Space'],
         masterLayout: '/images/home/master-layout-full.jpg',
         floorPlans: [
-            { type: '2 BHK Executive', size: '718 sq.ft.', image: '/images/home/master-layout-full.jpg', details: ['Carpet Area: 718 sq.ft.', 'Optimized Living-Dining', 'Large Master Bedroom'] },
-            { type: '3 BHK Royal', size: '1176 sq.ft.', image: '/images/home/master-layout-full.jpg', details: ['Carpet Area: 1176 sq.ft.', 'Wrap-around Balcony', 'Premium Bath Fittings'] }
+            { type: '2 BHK Executive', size: '718 sq.ft.', image: '/images/home/master-layout-full.jpg', virtualTourUrl: 'https://my.matterport.com/show/?m=JvwN82W8Xq1', details: ['Carpet Area: 718 sq.ft.', 'Optimized Living-Dining', 'Large Master Bedroom'] },
+            { type: '3 BHK Royal', size: '1176 sq.ft.', image: '/images/home/master-layout-full.jpg', virtualTourUrl: 'https://my.matterport.com/show/?m=JvwN82W8Xq1', details: ['Carpet Area: 1176 sq.ft.', 'Wrap-around Balcony', 'Premium Bath Fittings'] }
         ],
         specifications: [
             { title: 'Architectural Synthesis', items: ['R.C.C. frame with blockwork', 'Smooth internal gypsum finish', 'External acrylic texture paint'] },

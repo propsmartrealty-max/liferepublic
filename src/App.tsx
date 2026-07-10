@@ -25,6 +25,7 @@ import { ConnectivityHub } from './pages/ConnectivityHub';
 import { TownshipIntelligence } from './pages/TownshipIntelligence';
 import { HyperLocalLanding } from './pages/HyperLocalLanding';
 import { NRIInvestmentHub } from './pages/NRIInvestmentHub';
+import { ITProfessionalsHub } from './pages/ITProfessionalsHub';
 import { Sustainability } from './pages/Sustainability';
 import { CommunityForum } from './pages/CommunityForum';
 import { LocationLanding } from './pages/LocationLanding';
@@ -289,6 +290,11 @@ function App() {
           <Route path="/nri-investment-guide" element={
             <Layout ariaLabel="Kolte Patil Life Republic NRI Investment Guide">
               <NRIInvestmentHub />
+            </Layout>
+          } />
+          <Route path="/it-professionals-hinjewadi" element={
+            <Layout ariaLabel="IT Professionals Hub | Life Republic Hinjewadi">
+              <ITProfessionalsHub />
             </Layout>
           } />
           <Route path="/testimonials" element={
