@@ -33,6 +33,7 @@ import { NotFound } from './pages/NotFound';
 import HTMLSitemap from './pages/HTMLSitemap';
 import { InsightsLanding } from './pages/InsightsLanding';
 import { InsightDetail } from './pages/InsightDetail';
+import { SiloLanding } from './pages/SiloLanding';
 
 // Keep layout components static as they are used on every page
 import { FloatingContact } from './components/ui/FloatingContact';
@@ -254,6 +255,13 @@ function App() {
           <Route path="/location/:slug" element={
             <Layout ariaLabel="Sovereign Sector Landing Page">
               <HyperLocalLanding />
+            </Layout>
+          } />
+
+          {/* Programmatic SEO (10,000+ Permutations) */}
+          <Route path="/search/:siloSlug" element={
+            <Layout ariaLabel="Kolte Patil Real Estate Search">
+              <SiloLanding />
             </Layout>
           } />
 
