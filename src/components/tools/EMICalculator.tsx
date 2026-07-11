@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calculator, IndianRupee, Sparkles, ArrowRight, ShieldCheck, Zap, Info, TrendingDown, Landmark } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Calculator, IndianRupee, ArrowRight, TrendingDown } from 'lucide-react';
 import { personalizationStore } from '../../lib/personalizationStore';
 
 export const EMICalculator: React.FC = () => {

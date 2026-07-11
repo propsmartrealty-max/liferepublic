@@ -18,7 +18,7 @@ export const getInsightData = (slug: string): InsightArticle | null => {
     const baseTitle = cluster.name;
     const isConfiguration = slug.includes("bhk") || slug.includes("duplex") || slug.includes("simplex");
     
-    let content = `
+    const content = `
         <p class="mb-4">
             Kolte Patil Life Republic offers some of the most premium properties when it comes to <strong>${baseTitle}</strong>. Located strategically near the Rajiv Gandhi IT Park in Hinjewadi and extending towards the Mahalunge-Baner corridor, this 390-acre integrated township is designed to elevate your lifestyle.
         </p>

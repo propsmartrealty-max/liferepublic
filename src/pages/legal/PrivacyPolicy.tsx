@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Lock, Eye } from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 export const PrivacyPolicy: React.FC = () => {
     return (

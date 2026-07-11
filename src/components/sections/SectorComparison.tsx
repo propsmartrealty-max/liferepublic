@@ -1,6 +1,5 @@
 import React from 'react';
-import { Check, Shield, Zap, Heart, Sparkles, TrendingUp, Target, User, Star, Activity, Timer } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Check, Zap, TrendingUp, Target, Star, Activity, Timer } from 'lucide-react';
 import sectorsData from '../../data/sectors.json';
 
 export const SectorComparison: React.FC = () => {

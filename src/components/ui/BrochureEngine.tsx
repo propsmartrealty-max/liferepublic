@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Download, FileCheck, Mail, Phone, ChevronRight, X, Sparkles, Users, BrainCircuit, ShieldCheck, Database, Zap, CheckCircle2, QrCode, ArrowUpRight, Cpu, Network } from 'lucide-react';
+import { FileCheck, Sparkles, Users, BrainCircuit, Database, Zap, CheckCircle2, QrCode, ArrowUpRight, Network } from 'lucide-react';
 import { brochureGenerator } from '../../services/brochureGenerator';
 import { personalizationStore } from '../../lib/personalizationStore';
 

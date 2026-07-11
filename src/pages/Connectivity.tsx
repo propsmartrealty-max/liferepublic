@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Train, Milestone, School, ShieldCheck, HeartPulse, Trees, Route, Clock, Zap, ArrowRight } from 'lucide-react';
+import { Route, Clock, Zap, ArrowRight } from 'lucide-react';
 import { SEO } from '../components/seo/SEO';
 import { SectorComparison } from '../components/sections/SectorComparison';
 

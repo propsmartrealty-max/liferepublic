@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, Link } from 'react-router-dom';
 import { extractSiloData } from '../lib/pSEO-engine';
-import { MapPin, CheckCircle2, ChevronRight, Home, TrendingUp } from 'lucide-react';
+import { CheckCircle2, ChevronRight, Home } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 
 export const SiloLanding: React.FC = () => {

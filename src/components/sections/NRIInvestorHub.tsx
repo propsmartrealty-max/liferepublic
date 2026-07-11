@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, FileText, Globe, Gavel, Landmark, Info, Zap, Cpu, Network, ShieldCheck, ArrowUpRight, TrendingUp } from 'lucide-react';
+import { FileText, Globe, Gavel, Landmark, Cpu, Network, ShieldCheck, ArrowUpRight, TrendingUp } from 'lucide-react';
 
 const guidelines = [
     {

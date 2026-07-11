@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
-import { ArrowRight, Briefcase, Plane, GraduationCap, HeartPulse, Users } from 'lucide-react';
+import { ArrowRight, Briefcase, Plane, GraduationCap, HeartPulse } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { api } from '../services/api';
 import type { Project } from '../lib/types';
@@ -15,16 +15,7 @@ import { SEO } from '../components/seo/SEO';
 import { ResidentPulse } from '../components/ui/ResidentPulse';
 import { generateCollectionSchema, generateGlobalSchema, generateLocalBusinessSchema, generateReviewSchema } from '../utils/schemaGenerator';
 
-import { RecommendedProjects } from '../components/personalization/RecommendedProjects';
-import { RecentlyViewed } from '../components/sections/RecentlyViewed';
-import { InfraTracker } from '../components/sections/InfraTracker';
-import { CommunityCalendar } from '../components/sections/CommunityCalendar';
-import { NeuralGallery } from '../components/sections/NeuralGallery';
-import { ConstructionUpdates } from '../components/sections/ConstructionUpdates';
 import { TestimonialCarousel } from '../components/sections/TestimonialCarousel';
-import { PersonalizedDashboard } from '../components/sections/PersonalizedDashboard';
-import { AerialTour } from '../components/sections/AerialTour';
-import { SectorMesh } from '../components/sections/SectorMesh';
 import { NeuralErrorBoundary } from '../components/ui/NeuralErrorBoundary';
 
 const Home: React.FC = () => {

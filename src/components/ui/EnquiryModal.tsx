@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Send, CheckCircle, Sparkles, Loader2, ShieldCheck, Target, Zap, Globe, Cpu, Network, ArrowUpRight } from 'lucide-react';
+import { X, CheckCircle, ShieldCheck, Target, Zap, Globe, Cpu, ArrowUpRight } from 'lucide-react';
 import { Button } from './Button';
 import { api } from '../../services/api';
 import { personalizationStore } from '../../lib/personalizationStore';

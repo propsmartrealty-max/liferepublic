@@ -52,10 +52,10 @@ export interface SiloData {
 export const extractSiloData = (slug: string): SiloData | null => {
     // Example slug: luxury-3-bhk-flats-in-hinjewadi-kolte-patil-life-republic
     
-    let intentMatch = pSEOMatrix.intents.find(i => slug.includes(i.key));
-    let configMatch = pSEOMatrix.configurations.find(c => slug.includes(c.key));
-    let locationMatch = pSEOMatrix.locations.find(l => slug.includes(l.key));
-    let entityMatch = pSEOMatrix.entities.find(e => slug.includes(e.key));
+    const intentMatch = pSEOMatrix.intents.find(i => slug.includes(i.key));
+    const configMatch = pSEOMatrix.configurations.find(c => slug.includes(c.key));
+    const locationMatch = pSEOMatrix.locations.find(l => slug.includes(l.key));
+    const entityMatch = pSEOMatrix.entities.find(e => slug.includes(e.key));
 
     // Fallbacks if not perfectly matched
     const intent = intentMatch?.title || 'Premium';

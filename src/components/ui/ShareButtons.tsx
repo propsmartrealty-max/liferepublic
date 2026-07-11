@@ -1,5 +1,5 @@
 import React from 'react';
-import { Share2, Twitter, Facebook, Linkedin, Copy, Check, Send, Zap, Globe, ShieldCheck, ArrowUpRight } from 'lucide-react';
+import { Twitter, Linkedin, Copy, Check, Send, Zap, ShieldCheck } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface ShareButtonsProps {

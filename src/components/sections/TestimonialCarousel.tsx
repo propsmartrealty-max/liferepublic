@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import { Quote, Star, CheckCircle2 } from 'lucide-react';
 

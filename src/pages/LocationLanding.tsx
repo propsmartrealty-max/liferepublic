@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from '../components/ui/Button';
-import { ArrowRight, Navigation, CheckCircle2, Map, Zap, Target, BarChart3, Compass, ShieldCheck, Cpu, Network, ArrowUpRight, Globe } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Navigation, Map, Zap, Target, BarChart3, Compass, ShieldCheck, Cpu, Network, ArrowUpRight, Globe } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { ProjectCard } from '../components/ui/ProjectCard';
 import { SEO } from '../components/seo/SEO';
 import { generateLocationKeywords } from '../lib/seo-utils';

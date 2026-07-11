@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { X, Sparkles, MessageSquare, Zap, ArrowRight, ShieldCheck, TrendingUp, Target, Cpu, Network, ArrowUpRight } from 'lucide-react';
+import { X, Sparkles, ShieldCheck, Target, Cpu, Network, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { personalizationStore } from '../../lib/personalizationStore';
 

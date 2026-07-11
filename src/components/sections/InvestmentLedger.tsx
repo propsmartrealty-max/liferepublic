@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TrendingUp, DollarSign, BarChart3, ArrowUpRight, LineChart, Sparkles, Zap, ShieldCheck, Timer, AlertCircle, TrendingDown, Cpu, Network, ArrowRight, Calculator, PieChart, Coins } from 'lucide-react';
+import { TrendingUp, ArrowUpRight, LineChart, Sparkles, ShieldCheck, Timer, Cpu, Network, ArrowRight, Calculator, PieChart, Coins } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ledgerData = [

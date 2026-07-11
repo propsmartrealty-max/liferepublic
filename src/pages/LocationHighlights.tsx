@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/seo/SEO';
-import { MapPin, Train, School, Stethoscope, ShoppingBag, Briefcase, Zap, Compass, Target, Navigation, ArrowUpRight, BarChart3 } from 'lucide-react';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
+import { Train, ShoppingBag, Briefcase, Zap, Compass, Target, Navigation, ArrowUpRight, BarChart3 } from 'lucide-react';
 
 const SovereignMap = React.lazy(() => import('../components/ui/SovereignMap').then(module => ({ default: module.SovereignMap })));
 

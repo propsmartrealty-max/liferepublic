@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronRight, Globe, MapPin, Building2, Zap, ArrowUpRight, Cpu, Network, ShieldCheck } from 'lucide-react';
+import { Globe, MapPin, Building2, Zap, ArrowUpRight, Cpu, Network, ShieldCheck } from 'lucide-react';
 import sectorsData from '../../data/sectors.json';
 import { motion } from 'framer-motion';
 

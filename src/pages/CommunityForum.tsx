@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, Users, Calendar, Megaphone, ArrowRight, ShieldCheck, Zap, Sparkles, TrendingUp, Heart, Globe, Cpu, Network, ArrowUpRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { MessageSquare, Users, Calendar, Megaphone, ArrowRight, ShieldCheck, Zap, Heart, Globe, Network, ArrowUpRight } from 'lucide-react';
 import { SEO } from '../components/seo/SEO';
 
 const forumPosts = [

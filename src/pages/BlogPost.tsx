@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { SEO } from '../components/seo/SEO';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
-import { Calendar, ArrowLeft, User, Clock, Share2, Sparkles, Target, ChevronRight } from 'lucide-react';
+import { Calendar, ArrowLeft, User, Clock, Sparkles, Target, ChevronRight } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { ShareButtons } from '../components/ui/ShareButtons';
 import { supabase } from '../lib/supabase';

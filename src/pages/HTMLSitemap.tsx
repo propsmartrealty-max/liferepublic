@@ -5,7 +5,6 @@ import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { projectsRegistry as projects } from '../data/projects';
 import { ID_TO_SLUG } from '../data/slug-registry';
 import { supabase } from '../lib/supabase';
-import type { BlogPost } from '../lib/types';
 
 const pseoRegistry: Record<string, { title: string }> = {
     'flats-in-hinjewadi-phase-1': { title: 'Premium Flats in Hinjewadi Phase 1 | Life Republic' },

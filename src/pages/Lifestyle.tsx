@@ -1,8 +1,7 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
-import { Trees, Users, ShieldCheck, Sparkles, MapPin, School, Heart, Coffee, ArrowRight, Compass, Timer, Music, Play, Wind, Zap, Globe, Cpu, ArrowUpRight } from 'lucide-react';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { Trees, Users, ShieldCheck, School, Wind, Zap, Globe, Cpu, ArrowUpRight } from 'lucide-react';
 import { SEO } from '../components/seo/SEO';
-import { Link } from 'react-router-dom';
 
 const volumes = [
     {

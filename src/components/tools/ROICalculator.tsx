@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TrendingUp, BarChart3, PieChart, Info, Download, Sparkles, Zap, ShieldCheck, Landmark } from 'lucide-react';
+import { TrendingUp, BarChart3, PieChart, Info, Download, Zap, ShieldCheck, Landmark } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { personalizationStore } from '../../lib/personalizationStore';
 

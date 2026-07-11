@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Leaf, Droplets, Sun, Wind, Trees, ShieldCheck, Cpu, Zap, Network, Globe, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Leaf, Droplets, Sun, Trees, ShieldCheck, Zap, Network, Globe, ArrowUpRight } from 'lucide-react';
 import { SEO } from '../components/seo/SEO';
 
 const metrics = [

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useScroll, useTransform, AnimatePresence, motion } from 'framer-motion';
-import { MapPin, Info, ArrowRight, ExternalLink, Sparkles, Navigation, Target, Zap, Globe, Shield } from 'lucide-react';
+import { Info, ArrowRight, Sparkles, Navigation, Target, Globe, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const sectors = [

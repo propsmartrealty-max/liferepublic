@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { History, Sparkles, ArrowRight, BrainCircuit, Zap, TrendingUp, Cpu, Network, ArrowUpRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { BrainCircuit, Zap, TrendingUp, Cpu, ArrowUpRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { personalizationStore } from '../../lib/personalizationStore';
 import { api } from '../../services/api';

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import type { ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { AlertTriangle, RefreshCcw, ShieldAlert } from 'lucide-react';
+import { RefreshCcw, ShieldAlert } from 'lucide-react';
 
 interface Props {
     children: ReactNode;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserPlus, Home, MapPin, ShieldCheck, Zap, Trees, Activity, Heart, Globe, Cpu } from 'lucide-react';
+import { Home, ShieldCheck, Zap, Trees, Activity, Heart, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const activities = [

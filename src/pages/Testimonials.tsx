@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/seo/SEO';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
-import { Star, Quote, CheckCircle2, PlayCircle, Users, Heart, Sparkles, Trophy, Video, ShieldCheck, MapPin, Building2, Cpu, Network, ArrowUpRight, Zap, Globe } from 'lucide-react';
+import { Star, Quote, PlayCircle, Users, Heart, Sparkles, Trophy, ShieldCheck, Cpu, Network, ArrowUpRight, Globe } from 'lucide-react';
 
 const reviews = [
     {

@@ -3,9 +3,8 @@ import { api } from '../../services/api';
 import type { Project } from '../../lib/types';
 import { ProjectCard } from '../../components/ui/ProjectCard';
 import { SEO } from '../../components/seo/SEO';
-import { Breadcrumbs } from '../../components/ui/Breadcrumbs';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, TrendingUp, Target, Zap, Layout, ArrowUpRight, Calculator, Landmark, Shield } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Sparkles, TrendingUp, Target, Layout, ArrowUpRight, Calculator, Landmark, Shield } from 'lucide-react';
 
 export const TwoBHK: React.FC = () => {
     const [projects, setProjects] = useState<Project[]>([]);

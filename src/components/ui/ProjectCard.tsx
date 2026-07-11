@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-    MapPin, Download, Layout as LayoutIcon, 
+    MapPin, Layout as LayoutIcon, 
     Layers, Sparkles, ShieldCheck, ChevronRight,
     ZoomIn, Info, CheckCircle2
 } from 'lucide-react';

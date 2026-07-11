@@ -3,9 +3,8 @@ import { api } from '../../services/api';
 import type { Project } from '../../lib/types';
 import { ProjectCard } from '../../components/ui/ProjectCard';
 import { SEO } from '../../components/seo/SEO';
-import { Breadcrumbs } from '../../components/ui/Breadcrumbs';
 import { motion } from 'framer-motion';
-import { Maximize, Layout, ShieldCheck, Zap, Sparkles, Target, ChevronRight, ArrowUpRight, Wind, Building2 } from 'lucide-react';
+import { Maximize, Layout, ShieldCheck, Zap, Sparkles, Target, ArrowUpRight, Building2 } from 'lucide-react';
 
 export const ThreeBHK: React.FC = () => {
     const [projects, setProjects] = useState<Project[]>([]);

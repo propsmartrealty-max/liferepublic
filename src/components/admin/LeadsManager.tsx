@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { api } from '../../services/api';
-import { Trash2, Phone, Mail, CheckCircle, Clock, ChevronLeft, ChevronRight, BrainCircuit, Activity, Star, Zap } from 'lucide-react';
+import { Trash2, ChevronLeft, ChevronRight, BrainCircuit, Activity, Star, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { DemandAnalytics } from './DemandAnalytics';
 

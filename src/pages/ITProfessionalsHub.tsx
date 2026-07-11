@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Laptop, Wifi, Clock, ArrowRight, TrendingUp } from 'lucide-react';
+import { Briefcase, Laptop, Wifi, Clock, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { SEO } from '../components/seo/SEO';

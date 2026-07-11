@@ -177,12 +177,12 @@ export const generateCanonicalURL = (path: string): string => {
  */
 export const generateLocationKeywords = (location: string): string => {
     return [
-        `Premium Flats in ${location}`,
-        `Life Republic ${location} Connectivity`,
-        `Buy Property in ${location} vs Hinjewadi`,
-        `Real Estate Investment in ${location} 2026`,
-        `2 & 3 BHK in ${location} Pune`,
-        `Distance from ${location} to Hinjewadi Phase 3`,
-        `${location} Property Appreciation Trends`
+        `Premium Flats in ${location} near Kolte Patil Life Republic`,
+        `Kolte Patil Life Republic ${location} Connectivity`,
+        `Buy Property in Kolte Patil Life Republic vs ${location}`,
+        `Kolte Patil Life Republic Investment in ${location} 2026`,
+        `2 & 3 BHK in Kolte Patil Life Republic near ${location}`,
+        `Distance from ${location} to Kolte Patil Life Republic Phase 3`,
+        `Kolte Patil Life Republic ${location} Property Appreciation`
     ].join(', ');
 };

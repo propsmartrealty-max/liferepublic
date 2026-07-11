@@ -8,8 +8,8 @@ import { VitePWA } from 'vite-plugin-pwa'
  * Optimized for <1.5s Load Time & 60fps Velocity
  */
 
-export default defineConfig((env: any) => {
-  const isSsr = env.ssrBuild || env.isSsrBuild || (env.command === 'build' && process.argv.includes('--ssr'));
+export default defineConfig(({ command, ssrBuild }: any) => {
+  const isSsr = ssrBuild || (command === 'build' && process.argv.includes('--ssr'));
   
   return {
     plugins: [
@@ -104,7 +104,20 @@ export default defineConfig((env: any) => {
       },
       rollupOptions: {
         output: isSsr ? {} : {
-          // Rely on Vite's default chunking strategy to prevent React ESM interop issues
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+                return 'vendor-react';
+              }
+              if (id.includes('framer-motion')) {
+                return 'vendor-framer';
+              }
+              if (id.includes('lucide-react')) {
+                return 'vendor-icons';
+              }
+              return 'vendor';
+            }
+          },
           chunkFileNames: 'assets/js/[name]-[hash].js',
           entryFileNames: 'assets/js/[name]-[hash].js',
           assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',

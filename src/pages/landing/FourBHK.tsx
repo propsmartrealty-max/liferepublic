@@ -4,9 +4,7 @@ import type { Project } from '../../lib/types';
 import { api } from '../../services/api';
 import { ProjectCard } from '../../components/ui/ProjectCard';
 import { SEO } from '../../components/seo/SEO';
-import { Breadcrumbs } from '../../components/ui/Breadcrumbs';
-import { Sparkles, ShieldCheck, TrendingUp, Target, Crown, Compass, ArrowUpRight, Landmark, Gem, Zap } from 'lucide-react';
-import { Button } from '../../components/ui/Button';
+import { ShieldCheck, TrendingUp, Target, Crown, ArrowUpRight, Landmark, Gem, Zap } from 'lucide-react';
 
 export const FourBHK: React.FC = () => {
     const [projects, setProjects] = useState<Project[]>([]);

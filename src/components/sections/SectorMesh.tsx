@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import sectorsData from '../../data/sectors.json';
-import { Globe, Map, Zap, Route, Target, Compass, Timer, Network, Cpu, ShieldCheck, Sparkles, Activity, Layers, Navigation } from 'lucide-react';
+import { Zap, Route, Target, Timer, Network, Cpu, ShieldCheck, Sparkles, Activity, Layers, Navigation } from 'lucide-react';
 
 export const SectorMesh: React.FC = () => {
     const [hoveredSectorId, setHoveredSectorId] = useState<string | null>(null);
