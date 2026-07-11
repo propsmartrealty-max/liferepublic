@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-    MapPin, Sparkles, ShieldCheck, ArrowRight, ZoomIn, Navigation, X, Play, Video
+    MapPin, Sparkles, ShieldCheck, ArrowRight, ZoomIn, Navigation, X, Play, Video, FileText, Layers, CheckCircle2
 } from 'lucide-react';
 import { api } from '../services/api';
 import type { Project } from '../lib/types';

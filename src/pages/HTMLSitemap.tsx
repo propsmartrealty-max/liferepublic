@@ -120,8 +120,9 @@ export const HTMLSitemap: React.FC = () => {
                     <div>
                         <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 uppercase tracking-widest text-[10px]">Legal</h2>
                         <ul className="space-y-3">
-                            <li><Link to="/privacy" className="text-gray-600 hover:text-accent transition-colors font-medium">Privacy Policy</Link></li>
-                            <li><Link to="/terms" className="text-gray-600 hover:text-accent transition-colors font-medium">Terms of Service</Link></li>
+                            <li><Link to="/privacy-policy" className="text-gray-600 hover:text-accent transition-colors font-medium">Privacy Policy</Link></li>
+                            <li><Link to="/terms-of-service" className="text-gray-600 hover:text-accent transition-colors font-medium">Terms of Service</Link></li>
+                            <li><Link to="/disclaimer" className="text-gray-600 hover:text-accent transition-colors font-medium">Disclaimer</Link></li>
                         </ul>
                     </div>
 

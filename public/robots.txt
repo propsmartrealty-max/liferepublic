@@ -39,5 +39,4 @@ Disallow: /search?*
 Disallow: /?*
 
 Sitemap: https://life-republic.in/sitemap.xml
-Sitemap: https://life-republic.in/sitemap-silos-index.xml
 Host: https://life-republic.in
