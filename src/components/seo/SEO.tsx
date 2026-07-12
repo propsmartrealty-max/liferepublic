@@ -14,6 +14,7 @@ interface SEOProps {
     type?: 'website' | 'article' | 'product';
     schema?: Record<string, unknown> | Record<string, unknown>[];
     breadcrumbItems?: { name: string; item: string }[];
+    noindex?: boolean;
 }
 
 const DOMAIN = 'https://life-republic.in';
@@ -27,6 +28,7 @@ export const SEO: React.FC<SEOProps> = ({
     type = 'website',
     schema,
     breadcrumbItems,
+    noindex = false,
 }) => {
     const siteTitle = 'Kolte Patil Life Republic Hinjewadi';
     const locationSuffix = 'Pune';
@@ -163,7 +165,11 @@ export const SEO: React.FC<SEOProps> = ({
             <meta name="description" content={metaDescription} />
             <meta name="keywords" content={metaKeywords} />
             <link rel="canonical" href={fullCanonical} />
-            <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+            {noindex ? (
+                <meta name="robots" content="noindex, nofollow" />
+            ) : (
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+            )}
 
             {/* Open Graph / Facebook */}
             <meta property="og:type" content={type} />
@@ -182,9 +188,7 @@ export const SEO: React.FC<SEOProps> = ({
 
             {/* Structured Data (JSON-LD) */}
             {allSchemas.map((s, i) => (
-                <script key={i} type="application/ld+json">
-                    {JSON.stringify(s)}
-                </script>
+                <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
             ))}
         </Helmet>
     );

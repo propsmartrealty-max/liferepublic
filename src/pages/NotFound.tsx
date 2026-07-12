@@ -14,6 +14,7 @@ export const NotFound: React.FC = () => {
                 description="The page you are looking for does not exist. Explore our luxury 2, 3, 4 BHK flats and villas in Hinjewadi."
                 keywords="404 error, page not found, life republic hinjewadi"
                 canonical="/404"
+                noindex={true}
             />
             <main className="flex-grow pt-32 pb-20 px-4 text-center">
                 <div className="max-w-2xl mx-auto">
