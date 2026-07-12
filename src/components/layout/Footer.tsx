@@ -248,6 +248,7 @@ export const Footer: React.FC = () => {
                         <Link to="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
                         <Link to="/terms-of-service" className="hover:text-accent transition-colors">Terms of Service</Link>
                         <Link to="/disclaimer" className="hover:text-accent transition-colors">Disclaimer</Link>
+                        <Link to="/locations-directory" className="hover:text-accent transition-colors">Locations Directory</Link>
                         <Link to="/sitemap" className="hover:text-accent transition-colors">HTML Sitemap</Link>
                         <a href="/sitemap.xml" className="hover:text-accent transition-colors">XML Sitemap</a>
                     </div>

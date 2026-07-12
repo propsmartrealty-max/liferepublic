@@ -24,9 +24,7 @@ export const FAQ: React.FC = () => {
 
     return (
         <section className="py-20 bg-white">
-            <script type="application/ld+json">
-                {JSON.stringify(faqSchema)}
-            </script>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <div className="container mx-auto px-4 max-w-4xl">
                 <div className="text-center mb-12">
                     <div className="inline-flex items-center justify-center p-3 bg-accent/10 rounded-full mb-4 text-accent">

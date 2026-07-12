@@ -25,6 +25,7 @@ import { ITProfessionalsHub } from './pages/ITProfessionalsHub';
 import { Sustainability } from './pages/Sustainability';
 import { CommunityForum } from './pages/CommunityForum';
 import { LocationLanding } from './pages/LocationLanding';
+import LocationsDirectory from './pages/LocationsDirectory';
 import { NotFound } from './pages/NotFound';
 import HTMLSitemap from './pages/HTMLSitemap';
 import { InsightsLanding } from './pages/InsightsLanding';
@@ -247,6 +248,13 @@ function App() {
           <Route path="/location/:slug" element={
             <Layout ariaLabel="Sovereign Sector Landing Page">
               <HyperLocalLanding />
+            </Layout>
+          } />
+
+          {/* Locations Directory */}
+          <Route path="/locations-directory" element={
+            <Layout ariaLabel="Pune Real Estate Locations Directory">
+              <LocationsDirectory />
             </Layout>
           } />
 

@@ -56,6 +56,9 @@ const Home: React.FC = () => {
                 schema={schema}
             />
             
+            {/* SEO Static H1 */}
+            <h1 className="sr-only">Kolte Patil Life Republic Township Hinjewadi</h1>
+
             {/* Phase 1: Captivation */}
             <HeroSlider />
             <ResidentPulse />

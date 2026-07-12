@@ -48,7 +48,7 @@ const VolumeItem = ({ vol, idx }: { vol: any, idx: number }) => {
             <div className="lg:w-1/2 relative group">
                 <div className={`absolute inset-0 bg-gradient-to-br ${vol.color} rounded-[5rem] blur-[120px] opacity-0 group-hover:opacity-100 transition-all duration-1000`}></div>
                 <div className="relative aspect-[16/10] rounded-[5rem] overflow-hidden shadow-[0_80px_160px_-40px_rgba(0,0,0,0.4)] border-8 border-gray-50/50 backdrop-blur-xl">
-                    <motion.img style={{ y }} src={vol.img} alt={vol.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[2s] group-hover:scale-110" />
+                    <motion.img style={{ y }} src={vol.img} alt={vol.title} loading="lazy" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[2s] group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent"></div>
                 </div>
             </div>
