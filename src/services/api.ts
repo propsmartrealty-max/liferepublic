@@ -2,7 +2,7 @@ import { Lead, Project, Amenity, Banner } from '../lib/types';
 import { emailService } from './email';
 
 // Cloudflare Worker API URL (Update this when deploying)
-const API_URL = import.meta.env.VITE_CLOUDFLARE_API_URL || 'http://localhost:8787/api';
+const API_URL = import.meta.env.VITE_CLOUDFLARE_API_URL || '/api';
 
 const handleApiError = (error: any, context: string) => {
     console.error(`API Error in ${context}:`, error);
@@ -109,20 +109,6 @@ export const api = {
         },
         create: async (lead: Omit<Lead, 'id' | 'created_at' | 'status'>) => {
 
-            let emailSent = false;
-            try {
-                await emailService.sendLeadNotification({
-                    name: lead.name,
-                    phone: lead.phone,
-                    email: lead.email,
-                    message: lead.message || '',
-                    project: lead.project_id || 'General Enquiry'
-                });
-                emailSent = true;
-            } catch (e) {
-                console.error("Email dispatch failed.");
-            }
-
             try {
                 const res = await fetch(`${API_URL}/leads`, {
                     method: 'POST',
@@ -139,11 +125,7 @@ export const api = {
                 
                 return null;
             } catch (e) {
-                console.error("Database connection failed.", e);
-                if (!emailSent) {
-                    throw new Error("Both Database and Email systems failed.");
-                }
-                return null; 
+                return handleApiError(e, 'leads.create');
             }
         }
     },
@@ -152,10 +134,10 @@ export const api = {
             const formData = new FormData();
             formData.append("file", file);
             
-            const response = await fetch(`${API_BASE}/upload`, {
+            const response = await fetch(`${API_URL}/upload`, {
                 method: "POST",
                 headers: {
-                    "Authorization": `Bearer ${localStorage.getItem("admin_token")}`
+                    "Authorization": `Bearer ${localStorage.getItem("lr_admin_token")}`
                 },
                 body: formData
             });
