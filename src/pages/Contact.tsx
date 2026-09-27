@@ -235,7 +235,6 @@ const ContactForm: React.FC = () => {
                         onChange={e => setFormData({ ...formData, configuration: e.target.value })}
                     >
                         <option value="" disabled>Select Configuration</option>
-                        <option value="1 BHK">1 BHK</option>
                         <option value="2 BHK">2 BHK</option>
                         <option value="3 BHK">3 BHK</option>
                         <option value="4 BHK">4 BHK</option>

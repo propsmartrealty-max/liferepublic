@@ -197,7 +197,6 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                                 </select>
                                                 <select required name="configuration" defaultValue="" className="w-full px-8 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-secondary text-lg appearance-none cursor-pointer">
                                                     <option value="" disabled>Select Configuration</option>
-                                                    <option value="1 BHK">1 BHK</option>
                                                     <option value="2 BHK">2 BHK</option>
                                                     <option value="3 BHK">3 BHK</option>
                                                     <option value="4 BHK">4 BHK</option>

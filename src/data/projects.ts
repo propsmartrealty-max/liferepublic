@@ -113,7 +113,6 @@ export const projectsRegistry: Project[] = [
         amenities: ['Central Planet Park', 'Digital Library', 'EV Charging Station', 'Multi-sport Courts', 'Sunset Deck'],
         masterLayout: 'https://liferepublic.in/images/home/overview-img.jpg',
         floorPlans: [
-            { type: '1 BHK Smart', size: '445 sq.ft.', image: 'https://liferepublic.in/images/home/overview-img.jpg', details: ['Carpet Area: 445 sq.ft.', 'Efficient Space Planning', 'Smart Kitchen Hub'] },
             { type: '2 BHK Smart', size: '629 sq.ft.', image: 'https://liferepublic.in/images/home/overview-img.jpg', details: ['Carpet Area: 629 sq.ft.', 'Dual Balcony Layout', 'Optimized Master Bedroom'] }
         ],
         specifications: [
@@ -258,7 +257,6 @@ export const projectsRegistry: Project[] = [
         amenities: ['Gymnasium', 'Walking Track', 'Retail Plaza', 'CCTV Security', 'Power Backup', 'Landscaped Garden'],
         masterLayout: 'https://liferepublic.in/images/home/overview-img.jpg',
         floorPlans: [
-            { type: '1 BHK Smart', size: '445 sq.ft.', image: 'https://liferepublic.in/images/home/overview-img.jpg', details: ['Carpet Area: 445 sq.ft.', 'Optimized Floor Space', 'Modern Kitchen Hub'] },
             { type: '2 BHK Smart', size: '610 sq.ft.', image: 'https://liferepublic.in/images/home/overview-img.jpg', details: ['Carpet Area: 610 sq.ft.', 'Dual Balcony', 'Smart Room Layout'] }
         ],
         specifications: [

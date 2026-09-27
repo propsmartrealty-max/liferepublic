@@ -91,7 +91,6 @@ export const HTMLSitemap: React.FC = () => {
                     <div>
                         <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 uppercase tracking-widest text-[10px]">By Configuration</h2>
                         <ul className="space-y-3">
-                            <li><Link to="/1-bhk-flats-in-hinjewadi" className="text-gray-600 hover:text-accent transition-colors font-medium">1 BHK Flats</Link></li>
                             <li><Link to="/2-bhk-flats-in-hinjewadi" className="text-gray-600 hover:text-accent transition-colors font-medium">2 BHK Flats</Link></li>
                             <li><Link to="/3-bhk-flats-in-hinjewadi" className="text-gray-600 hover:text-accent transition-colors font-medium">3 BHK Flats</Link></li>
                             <li><Link to="/4-bhk-flats-in-hinjewadi" className="text-gray-600 hover:text-accent transition-colors font-medium">4 BHK Luxury Flats</Link></li>

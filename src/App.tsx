@@ -171,11 +171,6 @@ function App() {
               <FourBHK />
             </Layout>
           } />
-          <Route path="/1-bhk-flats-in-hinjewadi" element={
-            <Layout ariaLabel="1 BHK Flats in Hinjewadi">
-              <Projects />
-            </Layout>
-          } />
           <Route path="/row-houses-in-life-republic" element={
             <Layout ariaLabel="Row Houses in Life Republic">
               <Projects />

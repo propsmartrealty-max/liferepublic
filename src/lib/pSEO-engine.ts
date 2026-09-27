@@ -10,7 +10,6 @@ export const pSEOMatrix = {
         { key: 'walk-to-work', title: 'Walk to Work' }
     ],
     configurations: [
-        { key: '1-bhk-flats', title: '1 BHK Flats' },
         { key: '2-bhk-flats', title: '2 BHK Flats' },
         { key: '3-bhk-flats', title: '3 BHK Flats' },
         { key: '4-bhk-flats', title: '4 BHK Flats' },
