@@ -5,17 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --primary: #2D2D2D; /* Charcoal Grey from 'Life' text */
-    --secondary: #F07C27; /* Warm Orange from Kolte Patil logo */
-    --accent: #36A849; /* Vibrant Green from 'f' and 'REPUBLIC' */
-    --background: #FFFFFF;
-    --surface: #F4F7F4; /* Very subtle green-tinted off-white */
-    --text-main: #2D2D2D;
-    --text-muted: #666666;
-    --border-strong: #2D2D2D;
-  }
-
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
@@ -24,44 +13,44 @@
   }
 
   body {
-    @apply bg-background text-text-main font-sans;
-    /* Global grid background pattern with subtle green tint */
-    background-image: linear-gradient(to right, rgba(54, 168, 73, 0.05) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(54, 168, 73, 0.05) 1px, transparent 1px);
-    background-size: 4rem 4rem;
+    @apply bg-background text-text-main font-sans overflow-x-hidden;
+    /* Deep dark architectural mesh background */
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(54, 168, 73, 0.08), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(240, 124, 39, 0.08), transparent 25%),
+      linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 4rem 4rem, 4rem 4rem;
+    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif tracking-tight text-primary;
+    @apply font-serif tracking-tight text-white;
   }
 }
 
 @layer components {
-  /* Architectural Editorial Style using Brand Colors */
+  /* High-Contrast Glassmorphism */
   .glass-panel {
-    @apply bg-surface border-2 border-strong shadow-hard;
+    @apply bg-white/5 backdrop-blur-2xl border border-white/10 shadow-glass rounded-3xl;
   }
   
   .glass-card {
-    @apply bg-surface border-2 border-strong transition-all duration-300 shadow-hard hover:shadow-hard-hover hover:-translate-y-1;
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-glass transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:shadow-glass-hover hover:-translate-y-2;
   }
 
-  /* High-end typography */
+  /* Animated Glowing Text */
   .heading-hero {
-    @apply text-6xl md:text-8xl lg:text-[7rem] font-serif font-bold tracking-tighter leading-[0.95] text-primary uppercase;
+    @apply text-5xl md:text-7xl lg:text-[6rem] font-serif font-bold tracking-tighter leading-[1.1] text-white;
+    text-shadow: 0 0 40px rgba(255,255,255,0.3);
   }
   
   .heading-section {
-    @apply text-4xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tighter leading-[1.05] text-primary mb-8 uppercase;
+    @apply text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight leading-[1.1] text-white mb-8;
   }
 
   .text-golden-gradient {
-    @apply text-accent;
-  }
-
-  /* Section borders */
-  .section-bordered {
-    @apply border-y-2 border-strong py-20;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-[#72d683];
   }
 }
 
@@ -75,9 +64,9 @@
   }
 }
 
-/* Base resets for animations */
+/* Fluid Animations */
 .fade-in {
-  animation: fadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes fadeIn {

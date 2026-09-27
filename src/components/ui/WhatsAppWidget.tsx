@@ -22,7 +22,7 @@ export const WhatsAppWidget: React.FC = () => {
                         initial={{ opacity: 0, y: 20, scale: 0.9 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.9 }}
-                        className="bg-white rounded-none border-2 border-primary shadow-hard p-6 mb-4 w-[320px]"
+                        className="bg-white rounded-2xl bg-white/10 backdrop-blur-2xl border border-white/20 shadow-glass text-white p-6 mb-4 w-[320px]"
                     >
                         <div className="flex justify-between items-center mb-4">
                             <h3 className="font-bold text-secondary text-lg">Life Republic Desk</h3>
@@ -34,7 +34,7 @@ export const WhatsAppWidget: React.FC = () => {
                             Connect with our platinum advisors instantly via WhatsApp for priority service.
                         </p>
                         <textarea
-                            className="w-full bg-gray-50 border border-gray-100 rounded-none p-3 outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none text-sm mb-4 text-secondary"
+                            className="w-full bg-gray-50 border border-gray-100 rounded-2xl p-3 outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none text-sm mb-4 text-secondary"
                             rows={3}
                             placeholder="Type your message here..."
                             value={message}
@@ -42,7 +42,7 @@ export const WhatsAppWidget: React.FC = () => {
                         />
                         <button
                             onClick={handleSend}
-                            className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 rounded-none flex items-center justify-center gap-2 transition-colors"
+                            className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 rounded-2xl flex items-center justify-center gap-2 transition-colors"
                         >
                             <MessageCircle size={18} />
                             Start Chat
@@ -55,7 +55,7 @@ export const WhatsAppWidget: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-14 h-14 bg-[#25D366] text-white rounded-none border-2 border-primary flex items-center justify-center shadow-hard hover:shadow-hard-hover transition-all"
+                className="w-14 h-14 bg-[#25D366] text-white rounded-2xl border-2 border-primary flex items-center justify-center shadow-glass hover:shadow-glass-hover transition-all"
             >
                 {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
             </motion.button>

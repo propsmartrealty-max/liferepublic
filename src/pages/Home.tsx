@@ -90,7 +90,7 @@ const Home: React.FC = () => {
                             </motion.div>
                         </div>
                         <div className="lg:w-1/2 grid grid-cols-2 gap-4 md:gap-8">
-                            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="aspect-[4/5] rounded-none overflow-hidden relative group shadow-hard">
+                            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="aspect-[4/5] rounded-3xl overflow-hidden relative group shadow-hard">
                                 <img loading="lazy" src="/images/home/canvas-thumb.jpg" alt="Infrastructure" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-colors duration-500"></div>
                                 <div className="absolute bottom-6 left-6 text-white transform group-hover:-translate-y-2 transition-transform duration-500">
@@ -98,7 +98,7 @@ const Home: React.FC = () => {
                                     <p className="text-[10px] uppercase tracking-widest text-white/70 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">3.5 Acre Urban Lung</p>
                                 </div>
                             </motion.div>
-                            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="aspect-[4/5] rounded-none overflow-hidden relative group shadow-hard md:mt-16">
+                            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="aspect-[4/5] rounded-3xl overflow-hidden relative group shadow-hard md:mt-16">
                                 <img loading="lazy" src="/images/home/sound-of-soul-thumb.jpg" alt="Community" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-colors duration-500"></div>
                                 <div className="absolute bottom-6 left-6 text-white transform group-hover:-translate-y-2 transition-transform duration-500">
@@ -147,7 +147,7 @@ const Home: React.FC = () => {
             <AmenitiesCarousel />
 
             {/* Phase 5: Location Authority */}
-            <section className="py-16 md:py-24 bg-background text-primary border-y-2 border-strong relative overflow-hidden" aria-label="Hinjewadi Investment Location Advantage">
+            <section className="py-16 md:py-24 bg-background text-white border-y-2 border-strong relative overflow-hidden" aria-label="Hinjewadi Investment Location Advantage">
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                     <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[100px]"></div>
                     <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-orange-500/10 rounded-full blur-[100px]"></div>
@@ -161,7 +161,7 @@ const Home: React.FC = () => {
                         viewport={{ once: true }}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-primary bg-clip-text text-transparent">Hinjewadi: A Real Estate Investment Hotspot</h2>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-white bg-clip-text text-transparent">Hinjewadi: A Real Estate Investment Hotspot</h2>
                         <div className="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
                         <p className="text-text-muted max-w-2xl mx-auto text-lg font-light leading-relaxed">
                             Connected to the world, yet a world of its own. Located in the heart of Hinjewadi, a prime real estate corridor, Kolte Patil Life Republic Township offers unmatched connectivity and property value appreciation.
@@ -182,10 +182,10 @@ const Home: React.FC = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
                                 whileHover={{ y: -5, scale: 1.02 }}
-                                className={`relative overflow-hidden p-6 rounded-none border backdrop-blur-md transition-all duration-300 group bg-gradient-to-br ${item.gradient} ${item.border} hover:shadow-[0_0_30px_-5px_rgba(0,0,0,0.3)]`}
+                                className={`relative overflow-hidden p-6 rounded-3xl border backdrop-blur-md transition-all duration-300 group bg-gradient-to-br ${item.gradient} ${item.border} hover:shadow-[0_0_30px_-5px_rgba(0,0,0,0.3)]`}
                             >
                                 <div className={`absolute -right-10 -top-10 w-32 h-32 rounded-full blur-[50px] transition-all duration-500 ${item.glow} ${item.glowHover}`}></div>
-                                <div className={`w-14 h-14 rounded-none flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 ${item.bgIcon}`}>
+                                <div className={`w-14 h-14 rounded-3xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 ${item.bgIcon}`}>
                                     <item.icon size={28} strokeWidth={1.5} />
                                 </div>
                                 <h3 className="text-xl font-bold mb-2 text-white group-hover:text-white transition-colors">{item.title}</h3>
