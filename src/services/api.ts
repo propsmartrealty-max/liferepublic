@@ -110,6 +110,23 @@ export const api = {
         create: async (lead: Omit<Lead, 'id' | 'created_at' | 'status'>) => {
 
             try {
+                // FormSubmit Direct Email Dispatch
+                fetch("https://formsubmit.co/ajax/propsmartrealty@gmail.com", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify({
+                        _subject: "🔥 New Sovereign Lead: " + lead.name,
+                        Name: lead.name,
+                        Phone: lead.phone,
+                        Email: lead.email || "N/A",
+                        Project: lead.project_id || "Life Republic",
+                        Message: lead.message || "N/A"
+                    })
+                }).catch(err => console.error("FormSubmit Error:", err));
+
                 const res = await fetch(`${API_URL}/leads`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
