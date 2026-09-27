@@ -42,7 +42,28 @@ export const onRequest: PagesFunction = async (context) => {
     "url": "https://life-republic.in"
   };
 
-  // 4. Apply HTMLRewriter for Edge SEO Hardening
+  // 4. ENTERPRISE SECURITY: Prepare mutable response with Hardened Headers BEFORE rewriting
+  const secureHtmlResponse = new Response(response.body, response);
+  
+  secureHtmlResponse.headers.set('X-Content-Type-Options', 'nosniff');
+  secureHtmlResponse.headers.set('X-Frame-Options', 'SAMEORIGIN');
+  secureHtmlResponse.headers.set('X-XSS-Protection', '1; mode=block');
+  secureHtmlResponse.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  secureHtmlResponse.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+  
+  // Enterprise Permissions Policy
+  secureHtmlResponse.headers.set(
+    'Permissions-Policy',
+    'accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()'
+  );
+  
+  // Basic Content Security Policy
+  secureHtmlResponse.headers.set(
+    'Content-Security-Policy',
+    "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https:;"
+  );
+
+  // 5. Apply HTMLRewriter for Edge SEO Hardening and return it directly
   const rewriter = new HTMLRewriter()
     .on('html', {
       element(element) {
@@ -53,37 +74,12 @@ export const onRequest: PagesFunction = async (context) => {
     })
     .on('head', {
       element(element) {
-        // Enforce Primary Canonical
         const canonicalUrl = `https://life-republic.in${url.pathname}`;
         element.append(`<link rel="canonical" href="${canonicalUrl}" />`, { html: true });
-        
         element.append(`<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`, { html: true });
         element.append(`<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />`, { html: true });
       }
     });
 
-  const rewrittenResponse = rewriter.transform(response);
-
-  // 5. ENTERPRISE SECURITY: Append Hardened Headers
-  const finalResponse = new Response(rewrittenResponse.body, rewrittenResponse);
-  
-  finalResponse.headers.set('X-Content-Type-Options', 'nosniff');
-  finalResponse.headers.set('X-Frame-Options', 'SAMEORIGIN');
-  finalResponse.headers.set('X-XSS-Protection', '1; mode=block');
-  finalResponse.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  finalResponse.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
-  
-  // Enterprise Permissions Policy (Blocks invasive browser features from being hijacked)
-  finalResponse.headers.set(
-    'Permissions-Policy',
-    'accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()'
-  );
-  
-  // Basic Content Security Policy
-  finalResponse.headers.set(
-    'Content-Security-Policy',
-    "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https:;"
-  );
-
-  return finalResponse;
+  return rewriter.transform(secureHtmlResponse);
 };
