@@ -27,7 +27,7 @@ export const onRequest: PagesFunction = async (context) => {
   secureHtmlResponse.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   secureHtmlResponse.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
   secureHtmlResponse.headers.set('Permissions-Policy', 'accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()');
-  secureHtmlResponse.headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https:;");
+  secureHtmlResponse.headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob: https://www.facebook.com; connect-src 'self' https: wss:;");
 
   // 3. ROUTE-AWARE DYNAMIC SEO GRAPH (Google & Graph Protocol)
   let pageTitle = "Kolte Patil Life Republic Hinjewadi | Official 400-Acre Township";
