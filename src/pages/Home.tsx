@@ -147,7 +147,7 @@ const Home: React.FC = () => {
             <AmenitiesCarousel />
 
             {/* Phase 5: Location Authority */}
-            <section className="py-16 md:py-24 bg-background text-primary border-y-2 border-border-strong relative overflow-hidden" aria-label="Hinjewadi Investment Location Advantage">
+            <section className="py-16 md:py-24 bg-background text-primary border-y-2 border-strong relative overflow-hidden" aria-label="Hinjewadi Investment Location Advantage">
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                     <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[100px]"></div>
                     <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-orange-500/10 rounded-full blur-[100px]"></div>
@@ -170,10 +170,10 @@ const Home: React.FC = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
-                            { icon: Briefcase, title: 'Work', desc: 'Rajiv Gandhi IT Park', time: '10 Mins', gradient: 'from-blue-500/20 to-cyan-500/5', border: 'border-2 border-border-strong shadow-hard', text: 'text-blue-400', bgIcon: 'bg-blue-500/20 text-blue-400', glow: 'bg-blue-500/20', glowHover: 'group-hover:bg-blue-500/30' },
-                            { icon: Plane, title: 'Connect', desc: 'Mumbai-Pune Expy', time: '15 Mins', gradient: 'from-orange-500/20 to-amber-500/5', border: 'border-2 border-border-strong shadow-hard', text: 'text-orange-400', bgIcon: 'bg-orange-500/20 text-orange-400', glow: 'bg-orange-500/20', glowHover: 'group-hover:bg-orange-500/30' },
-                            { icon: GraduationCap, title: 'Learn', desc: 'Anisha Global School', time: 'Inside', gradient: 'from-green-500/20 to-emerald-500/5', border: 'border-2 border-border-strong shadow-hard', text: 'text-green-400', bgIcon: 'bg-green-500/20 text-green-400', glow: 'bg-green-500/20', glowHover: 'group-hover:bg-green-500/30' },
-                            { icon: HeartPulse, title: 'Care', desc: 'Ruby Hall Clinic', time: '15 Mins', gradient: 'from-rose-500/20 to-pink-500/5', border: 'border-2 border-border-strong shadow-hard', text: 'text-rose-400', bgIcon: 'bg-rose-500/20 text-rose-400', glow: 'bg-rose-500/20', glowHover: 'group-hover:bg-rose-500/30' }
+                            { icon: Briefcase, title: 'Work', desc: 'Rajiv Gandhi IT Park', time: '10 Mins', gradient: 'from-blue-500/20 to-cyan-500/5', border: 'border-2 border-strong shadow-hard', text: 'text-blue-400', bgIcon: 'bg-blue-500/20 text-blue-400', glow: 'bg-blue-500/20', glowHover: 'group-hover:bg-blue-500/30' },
+                            { icon: Plane, title: 'Connect', desc: 'Mumbai-Pune Expy', time: '15 Mins', gradient: 'from-orange-500/20 to-amber-500/5', border: 'border-2 border-strong shadow-hard', text: 'text-orange-400', bgIcon: 'bg-orange-500/20 text-orange-400', glow: 'bg-orange-500/20', glowHover: 'group-hover:bg-orange-500/30' },
+                            { icon: GraduationCap, title: 'Learn', desc: 'Anisha Global School', time: 'Inside', gradient: 'from-green-500/20 to-emerald-500/5', border: 'border-2 border-strong shadow-hard', text: 'text-green-400', bgIcon: 'bg-green-500/20 text-green-400', glow: 'bg-green-500/20', glowHover: 'group-hover:bg-green-500/30' },
+                            { icon: HeartPulse, title: 'Care', desc: 'Ruby Hall Clinic', time: '15 Mins', gradient: 'from-rose-500/20 to-pink-500/5', border: 'border-2 border-strong shadow-hard', text: 'text-rose-400', bgIcon: 'bg-rose-500/20 text-rose-400', glow: 'bg-rose-500/20', glowHover: 'group-hover:bg-rose-500/30' }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}

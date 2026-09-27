@@ -6,14 +6,14 @@
 
 @layer base {
   :root {
-    --primary: #000000;
-    --secondary: #1A1A1A;
-    --accent: #CFA144; /* Refined Architectural Gold */
-    --background: #FDFCF8; /* Warm Editorial Off-White */
-    --surface: #FFFFFF;
-    --text-main: #000000;
-    --text-muted: #555555;
-    --border-strong: #000000; /* High contrast borders */
+    --primary: #2D2D2D; /* Charcoal Grey from 'Life' text */
+    --secondary: #F07C27; /* Warm Orange from Kolte Patil logo */
+    --accent: #36A849; /* Vibrant Green from 'f' and 'REPUBLIC' */
+    --background: #FFFFFF;
+    --surface: #F4F7F4; /* Very subtle green-tinted off-white */
+    --text-main: #2D2D2D;
+    --text-muted: #666666;
+    --border-strong: #2D2D2D;
   }
 
   html {
@@ -25,9 +25,9 @@
 
   body {
     @apply bg-background text-text-main font-sans;
-    /* Global grid background pattern for architectural feel */
-    background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+    /* Global grid background pattern with subtle green tint */
+    background-image: linear-gradient(to right, rgba(54, 168, 73, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(54, 168, 73, 0.05) 1px, transparent 1px);
     background-size: 4rem 4rem;
   }
 
@@ -37,22 +37,13 @@
 }
 
 @layer components {
-  /* Architectural Editorial Style */
+  /* Architectural Editorial Style using Brand Colors */
   .glass-panel {
-    @apply bg-surface border-2 border-border-strong shadow-hard;
+    @apply bg-surface border-2 border-strong shadow-hard;
   }
   
   .glass-card {
-    @apply bg-surface border-2 border-border-strong transition-all duration-300 shadow-hard hover:shadow-hard-hover hover:-translate-y-1;
-  }
-
-  /* Structural Buttons */
-  .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-sans font-bold uppercase tracking-widest text-sm border-2 border-primary transition-all duration-300 hover:bg-white hover:text-primary shadow-hard hover:shadow-hard-hover;
-  }
-
-  .btn-outline {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-transparent text-primary font-sans font-bold uppercase tracking-widest text-sm border-2 border-primary transition-all duration-300 hover:bg-primary hover:text-white shadow-hard hover:shadow-hard-hover;
+    @apply bg-surface border-2 border-strong transition-all duration-300 shadow-hard hover:shadow-hard-hover hover:-translate-y-1;
   }
 
   /* High-end typography */
@@ -65,12 +56,12 @@
   }
 
   .text-golden-gradient {
-    @apply text-accent; /* Removed gradient for a more flat, striking editorial look */
+    @apply text-accent;
   }
 
   /* Section borders */
   .section-bordered {
-    @apply border-y-2 border-border-strong py-20;
+    @apply border-y-2 border-strong py-20;
   }
 }
 

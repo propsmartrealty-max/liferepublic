@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
                                 <a
                                     key={idx}
                                     href="#"
-                                    className="h-12 w-12 rounded-full border border-border-strong flex items-center justify-center hover:bg-accent hover:border-accent hover:text-primary font-bold transition-all duration-300 group"
+                                    className="h-12 w-12 rounded-full border border-strong flex items-center justify-center hover:bg-accent hover:border-accent hover:text-primary font-bold transition-all duration-300 group"
                                     aria-label={label}
                                 >
                                     <Icon size={20} className="text-primary font-bold/60 group-hover:text-primary font-bold transition-colors" />
@@ -138,7 +138,7 @@ export const Footer: React.FC = () => {
                         <h4 className="text-lg font-serif font-bold mb-8 text-primary font-bold">Visit Us</h4>
                         <div className="space-y-6">
                             <div className="flex items-start gap-4 group">
-                                <div className="p-3 rounded-none bg-transparent border-2 border-border-strong group-hover:bg-accent/20 transition-colors">
+                                <div className="p-3 rounded-none bg-transparent border-2 border-strong group-hover:bg-accent/20 transition-colors">
                                     <MapPin size={20} className="text-accent" />
                                 </div>
                                 <div className="space-y-1">
@@ -148,7 +148,7 @@ export const Footer: React.FC = () => {
                             </div>
 
                             <div className="flex items-center gap-4 group">
-                                <div className="p-3 rounded-none bg-transparent border-2 border-border-strong group-hover:bg-accent/20 transition-colors">
+                                <div className="p-3 rounded-none bg-transparent border-2 border-strong group-hover:bg-accent/20 transition-colors">
                                     <Phone size={20} className="text-accent" />
                                 </div>
                                 <div>
@@ -166,7 +166,7 @@ export const Footer: React.FC = () => {
                 </div>
 
                 {/* Massive SEO Silo - Themed Keyword Clusters */}
-                <div className="border-t border-border-strong py-12 mt-12">
+                <div className="border-t border-strong py-12 mt-12">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div>
                             <h5 className="text-sm font-bold text-primary uppercase tracking-widest mb-6">Popular Configurations in Pune West</h5>
@@ -227,7 +227,7 @@ export const Footer: React.FC = () => {
                 </div>
 
                 {/* RERA Numbers Section */}
-                <div className="border-t border-border-strong py-8">
+                <div className="border-t border-strong py-8">
                     <h5 className="text-sm font-bold text-primary uppercase tracking-widest mb-4">RERA Registration Numbers</h5>
                     <div className="flex flex-wrap gap-x-6 gap-y-2 text-[10px] text-text-muted hover:text-primary">
                         {RERA_REGISTRY.map((item: { title: string, rera: string }, index: number) => (
@@ -242,7 +242,7 @@ export const Footer: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="pt-8 border-t border-border-strong flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-text-muted">
+                <div className="pt-8 border-t border-strong flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-text-muted">
                     <p>© 2025 Life Republic. Designed with precision.</p>
                     <div className="flex gap-4 md:gap-8 flex-wrap justify-center">
                         <Link to="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
@@ -254,7 +254,7 @@ export const Footer: React.FC = () => {
                     </div>
                 </div>
                 
-                <div className="mt-8 pt-8 border-t border-border-strong text-[9px] text-text-muted text-center leading-relaxed">
+                <div className="mt-8 pt-8 border-t border-strong text-[9px] text-text-muted text-center leading-relaxed">
                     Disclaimer: This website is for informational purposes only and does not constitute an offer or solicitation. The visual representations, including images and 3D walkthroughs, are artistic impressions and may differ from the actual project. Pricing and specifications are subject to change without notice. By submitting your contact details, you authorize our partners to contact you via phone, SMS, or email, overriding any NDNC registration.
                 </div>
             </div>

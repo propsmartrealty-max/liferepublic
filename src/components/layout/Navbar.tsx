@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
     };
 
     return (
-        <header className={'fixed top-0 left-0 w-full z-[100] bg-surface border-b-2 border-border-strong transition-all duration-300 ' + (scrolled ? 'py-2 shadow-hard' : 'py-4')}>
+        <header className={'fixed top-0 left-0 w-full z-[100] bg-surface border-b-2 border-strong transition-all duration-300 ' + (scrolled ? 'py-2 shadow-hard' : 'py-4')}>
             <nav className="w-full" aria-label="Main Navigation">
                 <div className="relative flex items-center justify-between px-6 lg:px-12 w-full">
                     <Link to="/" className="flex items-center group">
@@ -71,19 +71,19 @@ export const Navbar: React.FC = () => {
                         <Button variant="primary" size="lg" className="hidden sm:flex rounded-none px-8 py-3.5 font-bold text-xs tracking-[0.25em] uppercase gap-2.5 shadow-hard hover:scale-105 transition-all" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
                             Enquire Now <Sparkles size={14} />
                         </Button>
-                        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-3 bg-transparent border-2 border-border-strong rounded-none text-primary hover:text-accent transition-all border border-border-strong" aria-label="Toggle Menu">
+                        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-3 bg-transparent border-2 border-strong rounded-none text-primary hover:text-accent transition-all border border-strong" aria-label="Toggle Menu">
                             {isOpen ? <X size={28} /> : <Menu size={28} />}
                         </button>
                     </div>
                 </div>
                 <AnimatePresence>
                     {showQuickSwitch && (
-                        <motion.div initial={{ opacity: 0, y: -40, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -40, scale: 0.95 }} onMouseLeave={() => setShowQuickSwitch(false)} className="absolute left-1/2 -translate-x-1/2 top-40 w-full max-w-6xl bg-surface/95 border-2 border-border-strong backdrop-blur-3xl rounded-none p-20 border border-border-strong shadow-hard z-[-1]">
+                        <motion.div initial={{ opacity: 0, y: -40, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -40, scale: 0.95 }} onMouseLeave={() => setShowQuickSwitch(false)} className="absolute left-1/2 -translate-x-1/2 top-40 w-full max-w-6xl bg-surface/95 border-2 border-strong backdrop-blur-3xl rounded-none p-20 border border-strong shadow-hard z-[-1]">
                             <div className="grid grid-cols-1 md:grid-cols-4 gap-20">
                                 <div className="space-y-12"><div className="flex items-center gap-4 text-accent mb-4"><Building2 size={20} /><span className="text-[12px] font-bold uppercase tracking-[0.6em]">Premium Clusters</span></div><div className="space-y-6">{sectorsData.sectors.slice(0, 6).map(s => (<Link key={s.id} to={`/projects/${ID_TO_SLUG[s.id] || s.slug}`} className="flex items-center justify-between text-primary/50 hover:text-primary group transition-all"><span className="text-lg font-bold tracking-tight">{s.name}</span><ArrowUpRight size={20} className="opacity-0 group-hover:opacity-100 -translate-y-2 translate-x-2 transition-all text-accent" /></Link>))}</div></div>
                                 <div className="space-y-12"><div className="flex items-center gap-4 text-accent mb-4"><Zap size={20} /><span className="text-[12px] font-bold uppercase tracking-[0.6em]">Investment Yield</span></div><div className="space-y-6">{sectorsData.sectors.slice(6, 12).map(s => (<Link key={s.id} to={`/projects/${ID_TO_SLUG[s.id] || s.slug}`} className="flex items-center justify-between text-primary/50 hover:text-primary group transition-all"><span className="text-lg font-bold tracking-tight">{s.name}</span><TrendingUp size={20} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all text-accent" /></Link>))}</div></div>
                                 <div className="space-y-12"><div className="flex items-center gap-4 text-accent mb-4"><MapPin size={20} /><span className="text-[12px] font-bold uppercase tracking-[0.6em]">Strategic Zones</span></div><div className="space-y-6">{sectorsData.localities.slice(0, 6).map(l => (<Link key={l.id} to={`/location/${l.slug}`} className="flex items-center justify-between text-primary/50 hover:text-primary group transition-all"><span className="text-lg font-bold tracking-tight">{l.name}</span><ArrowRight size={20} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all text-accent" /></Link>))}</div></div>
-                                <div className="bg-transparent border-2 border-border-strong rounded-none p-12 flex flex-col justify-between border border-border-strong group"><div className="space-y-6 text-center"><Sparkles size={48} className="text-accent mx-auto mb-4 animate-pulse" /><h4 className="text-4xl font-serif font-bold text-primary tracking-tighter">Master <br />Blueprint.</h4><p className="text-sm text-primary/30 leading-relaxed font-medium">Navigate the 390-acre tectonic landscape through our interactive spatial mesh.</p></div><Link to="/master-plan" className="w-full bg-accent text-secondary py-8 rounded-none text-center font-bold text-xs uppercase tracking-[0.5em] shadow-hard hover:bg-white transition-all mt-10">Explore Map</Link></div>
+                                <div className="bg-transparent border-2 border-strong rounded-none p-12 flex flex-col justify-between border border-strong group"><div className="space-y-6 text-center"><Sparkles size={48} className="text-accent mx-auto mb-4 animate-pulse" /><h4 className="text-4xl font-serif font-bold text-primary tracking-tighter">Master <br />Blueprint.</h4><p className="text-sm text-primary/30 leading-relaxed font-medium">Navigate the 390-acre tectonic landscape through our interactive spatial mesh.</p></div><Link to="/master-plan" className="w-full bg-accent text-secondary py-8 rounded-none text-center font-bold text-xs uppercase tracking-[0.5em] shadow-hard hover:bg-white transition-all mt-10">Explore Map</Link></div>
                             </div>
                         </motion.div>
                     )}
@@ -96,7 +96,7 @@ export const Navbar: React.FC = () => {
                             <Link to="/" className="flex items-center group">
                                 <img loading="lazy" src="/images/brand/logo.webp" alt="Life Republic" className="h-10 md:h-12 w-auto object-contain transition-transform duration-700 group-hover:scale-105 filter drop-shadow-xl" />
                             </Link>
-                            <button onClick={() => setIsOpen(false)} className="p-3 sm:p-4 bg-transparent border-2 border-border-strong rounded-none text-primary border border-border-strong hover:bg-white/10 transition-colors" aria-label="Close Menu">
+                            <button onClick={() => setIsOpen(false)} className="p-3 sm:p-4 bg-transparent border-2 border-strong rounded-none text-primary border border-strong hover:bg-white/10 transition-colors" aria-label="Close Menu">
                                 <X size={28} />
                             </button>
                         </div>
@@ -106,7 +106,7 @@ export const Navbar: React.FC = () => {
                             { name: 'Infrastructure', path: '/location-highlights' },
                             { name: 'Investment Hub', path: '/nri-corner' }
                         ].map((link) => (<Link key={link.name} to={link.path} onClick={() => setIsOpen(false)} className="block text-3xl sm:text-4xl font-serif font-bold text-primary hover:text-accent transition-all tracking-tight leading-tight">{link.name}</Link>))}</div>
-                        <div className="space-y-6 pt-8 border-t border-border-strong relative z-10 mt-auto"><div className="flex items-center gap-3 text-primary/30 font-bold uppercase tracking-[0.4em] text-[9px]"><ShieldCheck size={16} className="text-accent" /> MahaRERA Synchronized</div><Button variant="primary" size="lg" className="w-full rounded-none py-4 font-bold text-lg shadow-hard" onClick={() => { setIsOpen(false); window.dispatchEvent(new CustomEvent('open-enquiry-modal')); }}>Enquire Now</Button></div>
+                        <div className="space-y-6 pt-8 border-t border-strong relative z-10 mt-auto"><div className="flex items-center gap-3 text-primary/30 font-bold uppercase tracking-[0.4em] text-[9px]"><ShieldCheck size={16} className="text-accent" /> MahaRERA Synchronized</div><Button variant="primary" size="lg" className="w-full rounded-none py-4 font-bold text-lg shadow-hard" onClick={() => { setIsOpen(false); window.dispatchEvent(new CustomEvent('open-enquiry-modal')); }}>Enquire Now</Button></div>
                     </motion.div>
                 )}
             </AnimatePresence>
