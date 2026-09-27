@@ -192,6 +192,8 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                                     <option value="Aros">Aros</option>
                                                     <option value="Echoes">Echoes</option>
                                                     <option value="Espada">Espada</option>
+                                                    <option value="Duet">Duet</option>
+
                                                 </select>
                                                 <select required name="configuration" defaultValue="" className="w-full px-8 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-secondary text-lg appearance-none cursor-pointer">
                                                     <option value="" disabled>Select Configuration</option>

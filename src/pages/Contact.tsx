@@ -222,6 +222,8 @@ const ContactForm: React.FC = () => {
                         <option value="Aros">Aros</option>
                         <option value="Echoes">Echoes</option>
                         <option value="Espada">Espada</option>
+                        <option value="Duet">Duet</option>
+
                     </select>
                 </div>
                 <div>
