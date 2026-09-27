@@ -59,12 +59,15 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
         const formData = new FormData(e.currentTarget);
         const history = personalizationStore.getHistory();
         
+        const configValue = formData.get('configuration') as string || 'Not Specified';
+        const clusterValue = formData.get('cluster') as string || 'Not Specified';
+
         const leadData = {
             name: formData.get('name') as string,
             email: formData.get('email') as string,
             phone: formData.get('phone') as string,
-            project_id: projectId || projectName,
-            message: `Sovereign Enquiry: ${projectName} | Intent: ${history.sentiment}`,
+            project_id: clusterValue || projectId || projectName,
+            message: `Cluster: ${clusterValue} | Configuration: ${configValue} | Intent: ${history.sentiment}`,
             metadata: {
                 intent_score: history.intentScore,
                 sentiment: history.sentiment,
@@ -86,7 +89,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
             
             // Actually launch the fallback!
             setTimeout(() => {
-                const message = encodeURIComponent(`Hi, I would like to enquire about ${projectName || 'Life Republic'}`);
+                const message = encodeURIComponent(`Hi, I would like to enquire about ${clusterValue || projectName || 'Life Republic'} for ${configValue}`);
                 window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
                 
                 setIsSubmitting(false);
@@ -179,6 +182,29 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                             <input required id="enquiry-name" aria-label="Full Legal Name" name="name" placeholder="Full Legal Name" className="w-full px-10 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-secondary text-xl placeholder:text-gray-300" />
                                             <input required id="enquiry-phone" aria-label="10-Digit Mobile Number" name="phone" pattern="[0-9]{10}" placeholder="10-Digit Mobile Matrix" className="w-full px-10 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-secondary text-xl placeholder:text-gray-300" />
                                             <input required id="enquiry-email" aria-label="Email Address" name="email" type="email" placeholder="Sovereign Email Address" className="w-full px-10 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-secondary text-xl placeholder:text-gray-300" />
+                                            
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <select required name="cluster" defaultValue={projectName !== "Life Republic" ? projectName : ""} className="w-full px-8 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-secondary text-lg appearance-none cursor-pointer">
+                                                    <option value="" disabled>Select Cluster</option>
+                                                    <option value="Canvas">Canvas (Ultra Luxury)</option>
+                                                    <option value="Atmos">Atmos (Premium)</option>
+                                                    <option value="Universe">Universe (Smart Homes)</option>
+                                                    <option value="Arezo">Arezo (Value)</option>
+                                                    <option value="24K Espada">24K Espada (Row Houses)</option>
+                                                    <option value="ORO Avenue">ORO Avenue</option>
+                                                    <option value="Nora">Nora (Bungalow Plots)</option>
+                                                    <option value="General">Not Sure Yet</option>
+                                                </select>
+                                                <select required name="configuration" defaultValue="" className="w-full px-8 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-secondary text-lg appearance-none cursor-pointer">
+                                                    <option value="" disabled>Select Configuration</option>
+                                                    <option value="1 BHK">1 BHK</option>
+                                                    <option value="2 BHK">2 BHK</option>
+                                                    <option value="3 BHK">3 BHK</option>
+                                                    <option value="4 BHK">4 BHK</option>
+                                                    <option value="Row House / Villa">Row House / Villa</option>
+                                                    <option value="Plot">Bungalow Plot</option>
+                                                </select>
+                                            </div>
                                         </div>
 
                                         {error && <p className="text-red-500 text-xs font-bold uppercase tracking-widest text-center animate-bounce">{error}</p>}

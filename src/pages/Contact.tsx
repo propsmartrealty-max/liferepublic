@@ -135,6 +135,8 @@ const ContactForm: React.FC = () => {
         name: '',
         phone: '',
         email: '',
+        cluster: '',
+        configuration: '',
         message: ''
     });
     const [loading, setLoading] = React.useState(false);
@@ -147,14 +149,15 @@ const ContactForm: React.FC = () => {
                 name: formData.name,
                 phone: formData.phone,
                 email: formData.email,
-                message: formData.message
+                project_id: formData.cluster,
+                message: `Cluster: ${formData.cluster || 'Not Specified'} | Configuration: ${formData.configuration || 'Not Specified'} | Msg: ${formData.message}`
             }));
             alert('Thank you! We will contact you shortly.');
-            setFormData({ name: '', phone: '', email: '', message: '' });
+            setFormData({ name: '', phone: '', email: '', cluster: '', configuration: '', message: '' });
         } catch (e) {
             console.error(e);
             alert('System busy. Redirecting to WhatsApp desk for immediate assistance...');
-            const message = encodeURIComponent(`Hi, I'm ${formData.name}. ${formData.message}`);
+            const message = encodeURIComponent(`Hi, I'm ${formData.name}. I'm interested in ${formData.cluster} ${formData.configuration}. ${formData.message}`);
             window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
         } finally {
             setLoading(false);
@@ -194,6 +197,7 @@ const ContactForm: React.FC = () => {
                 <input
                     id="contact-email"
                     aria-label="Email Address"
+                    required
                     type="email"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent"
                     placeholder="your@email.com"
@@ -201,6 +205,46 @@ const ContactForm: React.FC = () => {
                     onChange={e => setFormData({ ...formData, email: e.target.value })}
                 />
             </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Cluster Name</label>
+                    <select
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent"
+                        value={formData.cluster}
+                        onChange={e => setFormData({ ...formData, cluster: e.target.value })}
+                    >
+                        <option value="" disabled>Select Cluster</option>
+                        <option value="Canvas">Canvas (Ultra Luxury)</option>
+                        <option value="Atmos">Atmos (Premium)</option>
+                        <option value="Universe">Universe (Smart Homes)</option>
+                        <option value="Arezo">Arezo (Value)</option>
+                        <option value="24K Espada">24K Espada (Row Houses)</option>
+                        <option value="ORO Avenue">ORO Avenue</option>
+                        <option value="Nora">Nora (Bungalow Plots)</option>
+                        <option value="General">Not Sure Yet</option>
+                    </select>
+                </div>
+                <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Configuration</label>
+                    <select
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent"
+                        value={formData.configuration}
+                        onChange={e => setFormData({ ...formData, configuration: e.target.value })}
+                    >
+                        <option value="" disabled>Select Configuration</option>
+                        <option value="1 BHK">1 BHK</option>
+                        <option value="2 BHK">2 BHK</option>
+                        <option value="3 BHK">3 BHK</option>
+                        <option value="4 BHK">4 BHK</option>
+                        <option value="Row House / Villa">Row House / Villa</option>
+                        <option value="Plot">Bungalow Plot</option>
+                    </select>
+                </div>
+            </div>
+
             <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
                 <textarea
