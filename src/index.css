@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,14 +6,14 @@
 
 @layer base {
   :root {
-    --primary: #0A0A0A;
-    --secondary: #171717;
-    --accent: #D4AF37; /* Royal Gold */
-    --background: #FFFFFF;
-    --surface: #FAFAFA;
-    --text-main: #171717;
-    --text-muted: #737373;
-    --border: #E5E5E5;
+    --primary: #000000;
+    --secondary: #1A1A1A;
+    --accent: #CFA144; /* Refined Architectural Gold */
+    --background: #FDFCF8; /* Warm Editorial Off-White */
+    --surface: #FFFFFF;
+    --text-main: #000000;
+    --text-muted: #555555;
+    --border-strong: #000000; /* High contrast borders */
   }
 
   html {
@@ -24,7 +24,11 @@
   }
 
   body {
-    @apply bg-background text-text-main font-sans ;
+    @apply bg-background text-text-main font-sans;
+    /* Global grid background pattern for architectural feel */
+    background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 4rem 4rem;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -33,51 +37,44 @@
 }
 
 @layer components {
-  /* Ultra-Premium Glassmorphism */
+  /* Architectural Editorial Style */
   .glass-panel {
-    @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.04)] dark:bg-black/40 dark:border-white/10;
+    @apply bg-surface border-2 border-border-strong shadow-hard;
   }
   
   .glass-card {
-    @apply bg-white/50 backdrop-blur-md border border-white/20 shadow-[0_4px_24px_rgba(0,0,0,0.02)] transition-all duration-500 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] hover:bg-white/80;
+    @apply bg-surface border-2 border-border-strong transition-all duration-300 shadow-hard hover:shadow-hard-hover hover:-translate-y-1;
   }
 
-  /* Vercel-style soft glow */
-  .glow-effect {
-    position: relative;
+  /* Structural Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-sans font-bold uppercase tracking-widest text-sm border-2 border-primary transition-all duration-300 hover:bg-white hover:text-primary shadow-hard hover:shadow-hard-hover;
   }
-  .glow-effect::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    background: linear-gradient(to right, transparent, var(--accent), transparent);
-    z-index: -1;
-    opacity: 0;
-    border-radius: inherit;
-    transition: opacity 0.5s ease;
-  }
-  .glow-effect:hover::before {
-    opacity: 0.5;
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-transparent text-primary font-sans font-bold uppercase tracking-widest text-sm border-2 border-primary transition-all duration-300 hover:bg-primary hover:text-white shadow-hard hover:shadow-hard-hover;
   }
 
   /* High-end typography */
   .heading-hero {
-    @apply text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tighter leading-[1.1] text-primary;
+    @apply text-6xl md:text-8xl lg:text-[7rem] font-serif font-bold tracking-tighter leading-[0.95] text-primary uppercase;
   }
   
   .heading-section {
-    @apply text-3xl md:text-5xl font-serif font-bold tracking-tight mb-8;
+    @apply text-4xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tighter leading-[1.05] text-primary mb-8 uppercase;
   }
 
   .text-golden-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-700;
+    @apply text-accent; /* Removed gradient for a more flat, striking editorial look */
+  }
+
+  /* Section borders */
+  .section-bordered {
+    @apply border-y-2 border-border-strong py-20;
   }
 }
 
 @layer utilities {
-  .animate-spring {
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -89,10 +86,10 @@
 
 /* Base resets for animations */
 .fade-in {
-  animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
