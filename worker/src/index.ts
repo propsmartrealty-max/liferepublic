@@ -6,6 +6,7 @@ type Bindings = {
   DB: D1Database;
   STORAGE: R2Bucket;
   JWT_SECRET: string;
+  RESEND_API_KEY: string;
 };
 
 const app = new Hono<{ Bindings: Bindings }>();
@@ -93,16 +94,46 @@ app.get('/api/amenities', async (c) => {
 });
 
 // -------------------------------------------------------------
-// Leads
+// Leads & Email Dispatch Pipeline (Resend)
 // -------------------------------------------------------------
 app.post('/api/leads', async (c) => {
   const body = await c.req.json();
   const { name, phone, email, project_id, message } = body;
   
   try {
+    // 1. Persist to Sovereign D1 Vault
     await c.env.DB.prepare(
       'INSERT INTO leads (name, phone, email, project_id, message) VALUES (?, ?, ?, ?, ?)'
     ).bind(name, phone, email, project_id, message).run();
+    
+    // 2. Dispatch High-Priority Alert to Platinum Desk via Resend API
+    if (c.env.RESEND_API_KEY) {
+      await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${c.env.RESEND_API_KEY}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          from: 'Sovereign Desk <leads@life-republic.in>',
+          to: 'propsmartrealty@gmail.com',
+          subject: `🔥 NEW HIGH-INTENT LEAD: ${name} (Life Republic)`,
+          html: `
+            <div style="font-family: sans-serif; padding: 20px; border: 1px solid #e5e5e5; border-radius: 8px;">
+              <h2 style="color: #D4AF37; margin-bottom: 20px;">Sovereign Lead Acquired</h2>
+              <table style="width: 100%; border-collapse: collapse;">
+                <tr><td style="padding: 10px; border-bottom: 1px solid #eee;"><strong>Name:</strong></td><td style="padding: 10px; border-bottom: 1px solid #eee;">${name}</td></tr>
+                <tr><td style="padding: 10px; border-bottom: 1px solid #eee;"><strong>Phone:</strong></td><td style="padding: 10px; border-bottom: 1px solid #eee;">${phone}</td></tr>
+                <tr><td style="padding: 10px; border-bottom: 1px solid #eee;"><strong>Email:</strong></td><td style="padding: 10px; border-bottom: 1px solid #eee;">${email || 'N/A'}</td></tr>
+                <tr><td style="padding: 10px; border-bottom: 1px solid #eee;"><strong>Project ID:</strong></td><td style="padding: 10px; border-bottom: 1px solid #eee;">${project_id || 'General'}</td></tr>
+                <tr><td style="padding: 10px;"><strong>Message:</strong></td><td style="padding: 10px;">${message || 'No message provided.'}</td></tr>
+              </table>
+              <p style="margin-top: 20px; font-size: 12px; color: #737373;">This lead was captured via the secure Cloudflare Edge Network.</p>
+            </div>
+          `
+        })
+      });
+    }
     
     return c.json({ success: true }, 201);
   } catch (e: any) {
@@ -121,11 +152,34 @@ app.get('/api/leads', protect, async (c) => {
 });
 
 // -------------------------------------------------------------
-// Uploads (R2 Presigned URLs placeholder)
+// R2 Object Storage (Native Binary Uploads)
 // -------------------------------------------------------------
 app.post('/api/upload', protect, async (c) => {
-  // Generate presigned URL for R2 in production
-  return c.json({ url: 'https://cdn.life-republic.in/mock-upload-success.jpg' });
+  try {
+    const body = await c.req.parseBody();
+    const file = body['file'] as File;
+    
+    if (!file) {
+      return c.json({ error: 'No file provided' }, 400);
+    }
+    
+    // Generate secure unique filename
+    const ext = file.name.split('.').pop();
+    const filename = `assets/${Date.now()}-${Math.random().toString(36).substring(2, 9)}.${ext}`;
+    
+    // Stream binary directly to Cloudflare R2 Edge
+    await c.env.STORAGE.put(filename, await file.arrayBuffer(), {
+      httpMetadata: { contentType: file.type }
+    });
+    
+    // Return the public CDN URL mapping for this bucket
+    // (Ensure you map your R2 bucket to a public custom domain like cdn.life-republic.in)
+    const publicUrl = `https://cdn.life-republic.in/${filename}`;
+    
+    return c.json({ url: publicUrl, key: filename });
+  } catch (e: any) {
+    return c.json({ error: e.message }, 500);
+  }
 });
 
 export default app;

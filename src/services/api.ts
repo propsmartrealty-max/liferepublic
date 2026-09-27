@@ -149,9 +149,20 @@ export const api = {
     },
     upload: {
         image: async (file: File) => {
-            // Placeholder: R2 presigned URL implementation goes here
-            console.warn("Upload not yet migrated to R2. Returning local blob.");
-            return URL.createObjectURL(file);
+            const formData = new FormData();
+            formData.append("file", file);
+            
+            const response = await fetch(`${API_BASE}/upload`, {
+                method: "POST",
+                headers: {
+                    "Authorization": `Bearer ${localStorage.getItem("admin_token")}`
+                },
+                body: formData
+            });
+            
+            if (!response.ok) throw new Error("Upload failed");
+            const data = await response.json();
+            return data.url;
         }
     },
     township: {
