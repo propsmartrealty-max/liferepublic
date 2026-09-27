@@ -1,196 +1,97 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ChevronDown, ArrowRight, Sparkles } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '../ui/Button';
-import { personalizationStore } from '../../lib/personalizationStore';
 
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-import { api } from '../../services/api';
-import type { Banner } from '../../lib/types';
-
-// Fallback slides if DB is empty
-const defaultSlides = [
-    {
-        id: 1,
-        image_url: '/images/home/master-layout-full.jpg',
-        title: 'Kolte Patil Life Republic Township Hinjewadi',
-        subtitle: 'Experience 400+ acres of integrated community living near Rajiv Gandhi IT Park in Hinjewadi',
-        description: 'A 390+ acre integrated township in Hinjewadi that offers a world of its own.',
-        order: 1
-    },
-    {
-        id: 2,
-        image_url: '/images/home/24k-espada-thumb.jpg',
-        title: 'Luxury 1, 2 & 3 BHK Flats in Pune West',
-        subtitle: 'Homes designed for those who dream big. Ready possession apartments available.',
-        description: 'From smart homes to luxury villas, find your perfect space.',
-        order: 2
-    },
-    {
-        id: 3,
-        image_url: '/images/home/atmos-thumb.jpg',
-        title: 'World-Class Amenities & Infrastructure',
-        subtitle: 'Global schools, 150ft wide roads, and multi-level security',
-        description: 'Join a vibrant community of over 10,000 happy families.',
-        order: 3
-    },
+const slides = [
+  {
+    id: 1,
+    image: 'https://liferepublic.in/images/webp/home/main-banner.webp',
+    title: 'Welcome to Life Republic',
+    subtitle: 'A 400-Acre Integrated Township in Hinjewadi, Pune',
+  },
+  {
+    id: 2,
+    image: 'https://liferepublic.in/images/home/slider-1.webp',
+    title: 'World-Class Amenities',
+    subtitle: 'Over 50+ lifestyle features designed for your well-being',
+  },
+  {
+    id: 3,
+    image: 'https://liferepublic.in/images/home/slider-2.webp',
+    title: 'The Canvas of Luxury',
+    subtitle: 'Premium 3 & 4 BHK residences with skyline views',
+  }
 ];
 
-export const HeroSlider: React.FC = () => {
-    const navigate = useNavigate();
-    const { scrollY } = useScroll();
-    const y = useTransform(scrollY, [0, 500], [0, 200]);
-    const opacity = useTransform(scrollY, [0, 300], [1, 0]);
-    const [slides, setSlides] = React.useState<Banner[]>(defaultSlides);
+export const HeroSlider = () => {
+  const [current, setCurrent] = useState(0);
 
-    React.useEffect(() => {
-        const loadBanners = async () => {
-            try {
-                const data = await api.banners.getAll();
-                if (data && data.length > 0) {
-                    setSlides(data);
-                }
-            } catch (error) {
-                console.error('Failed to load banners:', error);
-            }
-        };
-        loadBanners();
-    }, []);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
 
-    return (
-        <section className="relative h-[100dvh] w-full overflow-hidden">
-            <motion.div style={{ y }} className="absolute inset-0 w-full h-full">
-                <Swiper
-                    modules={[Autoplay, EffectFade, Navigation, Pagination]}
-                    effect="fade"
-                    autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    }}
-                    loop={true}
-                    pagination={{
-                        clickable: true,
-                        renderBullet: function (_index, className) {
-                            return '<span class="' + className + ' !bg-white !opacity-50 hover:!opacity-100 transition-opacity"></span>';
-                        },
-                    }}
-                    className="h-full w-full"
-                >
-                    {slides.map((slide, index) => {
-                        const HeadingTag = index === 0 ? motion.h1 : motion.h2;
-                        return (
-                            <SwiperSlide key={slide.id}>
-                                {({ isActive }) => (
-                                    <div className={`relative h-full w-full transition-opacity duration-1000 ${isActive ? 'opacity-100' : 'opacity-0'}`}>
-                                        <div className="absolute inset-0 bg-black/40 z-10" />
-                                        <img
-                                            src={slide.image_url}
-                                            alt={slide.title}
-                                            loading={index === 0 ? "eager" : "lazy"}
-                                            fetchPriority={index === 0 ? "high" : "low"}
-                                            className="h-full w-full object-cover"
-                                        />
-                                        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
-                                            <motion.div
-                                                initial={{ opacity: 0, scale: 0.8 }}
-                                                animate={isActive ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                                                transition={{ duration: 1, delay: 0.2 }}
-                                                className="mb-8 w-24 h-24 bg-white/10 backdrop-blur-xl rounded-3xl p-3 border border-white/20 shadow-2xl overflow-hidden"
-                                            >
-                                                <img loading="lazy" src="/images/life-republic-logo-color.png" alt="Life Republic" className="w-full h-full object-contain brightness-110" />
-                                            </motion.div>
-                                            <HeadingTag
-                                                initial={{ opacity: 0, y: 30 }}
-                                                animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                                                transition={{ duration: 0.8, delay: 0.1 }}
-                                                className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 drop-shadow-lg tracking-tight"
-                                            >
-                                                {slide.title}
-                                            </HeadingTag>
-                                            <motion.p
-                                                initial={{ opacity: 0, y: 20 }}
-                                                animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                                                transition={{ duration: 0.8, delay: 0.4 }}
-                                                className="text-base sm:text-lg md:text-2xl text-gray-100 font-light tracking-wide max-w-3xl drop-shadow-md mb-8"
-                                            >
-                                                {slide.subtitle}
-                                            </motion.p>
-                                            <motion.div
-                                                initial={{ opacity: 0, y: 30 }}
-                                                animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                                                transition={{ duration: 0.8, delay: 0.6 }}
-                                                className="flex flex-col sm:flex-row gap-4 justify-center"
-                                            >
-                                                <Button
-                                                    variant="primary"
-                                                    size="lg"
-                                                    className="gap-3 group"
-                                                    onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}
-                                                >
-                                                    Enquire Now <Sparkles size={20} className="group-hover:animate-pulse" />
-                                                </Button>
-                                                <Button
-                                                    variant="glass"
-                                                    size="lg"
-                                                    className="gap-3 group"
-                                                    onClick={() => navigate('/projects')}
-                                                >
-                                                    Explore Portfolio <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                                                </Button>
+  return (
+    <section className="relative h-[90vh] md:h-screen w-full overflow-hidden bg-primary">
+      <AnimatePresence mode='wait'>
+        <motion.div
+          key={current}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="absolute inset-0"
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/80 z-10" />
+          <img
+            src={slides[current].image}
+            alt={slides[current].title}
+            className="w-full h-full object-cover"
+            loading={current === 0 ? "eager" : "lazy"}
+          />
+        </motion.div>
+      </AnimatePresence>
 
-                                                {/* Intelligence Nudge */}
-                                                {personalizationStore.getHistory().searchQueries.length > 0 && (
-                                                    <motion.button
-                                                        initial={{ opacity: 0, x: 20 }}
-                                                        animate={{ opacity: 1, x: 0 }}
-                                                        onClick={() => window.dispatchEvent(new CustomEvent('open-neural-search'))}
-                                                        className="flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-sm font-bold hover:bg-white hover:text-secondary transition-all group"
-                                                    >
-                                                        <Sparkles size={16} className="text-accent" />
-                                                        Resume Search: "{personalizationStore.getHistory().searchQueries[0]}"
-                                                    </motion.button>
-                                                )}
-                                            </motion.div>
-                                        </div>
-                                    </div>
-                                )}
-                            </SwiperSlide>
-                        );
-                    })}
-                </Swiper>
-            </motion.div>
+      <div className="relative z-20 h-full flex flex-col justify-end pb-24 md:pb-32 px-6 md:px-12 container mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="max-w-4xl"
+        >
+          <span className="inline-block py-1.5 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-semibold tracking-widest uppercase mb-6">
+            Kolte Patil Developers
+          </span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tighter text-white leading-[1.05] mb-6 drop-shadow-lg">
+            {slides[current].title}
+          </h1>
+          <p className="text-xl md:text-2xl text-white/90 font-light mb-10 max-w-2xl drop-shadow-md">
+            {slides[current].subtitle}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="lg" className="rounded-full px-8 bg-white text-primary hover:bg-white/90 glow-effect" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry'))}>
+              Schedule a Visit
+            </Button>
+            <Button size="lg" variant="outline" className="rounded-full px-8 border-white/30 text-white hover:bg-white/10 glass-panel" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
+              Explore Clusters
+            </Button>
+          </div>
+        </motion.div>
+      </div>
 
-            {/* Scroll Indicator */}
-            <motion.div
-                style={{ opacity }}
-                className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-30 flex flex-col items-center cursor-pointer pointer-events-none"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            >
-                <span className="text-white/80 text-xs tracking-[0.2em] mb-2 uppercase">Scroll to Explore</span>
-                <ChevronDown className="text-white/80" size={24} />
-            </motion.div>
-
-            <style>{`
-                .swiper-pagination-bullet {
-                  width: 10px;
-                  height: 10px;
-                  transition: all 0.3s ease;
-                }
-                .swiper-pagination-bullet-active {
-                  background: #C5A059 !important;
-                  width: 30px;
-                  border-radius: 5px;
-                  opacity: 1 !important;
-                }
-              `}</style>
-        </section>
-    );
+      {/* Progress Indicators */}
+      <div className="absolute bottom-8 left-6 md:left-12 z-30 flex gap-3">
+        {slides.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrent(idx)}
+            className={`h-1 rounded-full transition-all duration-500 ${current === idx ? 'w-12 bg-white' : 'w-4 bg-white/30 hover:bg-white/50'}`}
+            aria-label={`Go to slide ${idx + 1}`}
+          />
+        ))}
+      </div>
+    </section>
+  );
 };

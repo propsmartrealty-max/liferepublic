@@ -1,39 +1,42 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        primary: "#FFFFFF", // Clean White
-        "primary-dark": "#2C2C2C", // Dark Grey (Logo Text)
-        secondary: "#4A4A4A", // Medium Grey (Body Text)
-        "secondary-light": "#777777", // Light Grey
-        accent: "#58A618", // Life Republic Green
-        "accent-dark": "#3D7A0F", // Darker Green
-        "accent-light": "#8BD650", // Lighter Green/Gradient
-        "brand-blue": "#0094D8", // Droplet Blue
-        surface: "#F8F9FA", // Light grey surface
-        "surface-dark": "#1A1A1A", // Dark surface
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        accent: 'var(--accent)',
+        background: 'var(--background)',
+        surface: 'var(--surface)',
+        'text-main': 'var(--text-main)',
+        'text-muted': 'var(--text-muted)',
       },
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Playfair Display', 'Georgia', 'serif'],
       },
-    },
-    container: {
-      center: true,
-      padding: '1rem',
-      screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
-        '2xl': '1280px', // Cap max width at 1280px
+      animation: {
+        'fade-in': 'fadeIn 1s ease-out',
+        'slide-up': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        }
+      },
+      boxShadow: {
+        'glass': '0 8px 32px rgba(0, 0, 0, 0.04)',
+        'glass-hover': '0 8px 32px rgba(0, 0, 0, 0.08)',
+        'glow': '0 0 20px rgba(212, 175, 55, 0.3)',
+      }
     },
   },
   plugins: [],
-}
+};

@@ -1,38 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  html, body {
-    overflow-x: hidden;
-  }
-  
-  body {
-    @apply bg-primary text-secondary font-sans antialiased selection:bg-accent selection:text-white;
+  :root {
+    --primary: #0A0A0A;
+    --secondary: #171717;
+    --accent: #D4AF37; /* Royal Gold */
+    --background: #FFFFFF;
+    --surface: #FAFAFA;
+    --text-main: #171717;
+    --text-muted: #737373;
+    --border: #E5E5E5;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-serif tracking-tight;
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+  }
+
+  body {
+    @apply bg-background text-text-main font-sans ;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight text-primary;
+  }
+}
+
+@layer components {
+  /* Ultra-Premium Glassmorphism */
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.04)] dark:bg-black/40 dark:border-white/10;
+  }
+  
+  .glass-card {
+    @apply bg-white/50 backdrop-blur-md border border-white/20 shadow-[0_4px_24px_rgba(0,0,0,0.02)] transition-all duration-500 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] hover:bg-white/80;
+  }
+
+  /* Vercel-style soft glow */
+  .glow-effect {
+    position: relative;
+  }
+  .glow-effect::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+    z-index: -1;
+    opacity: 0;
+    border-radius: inherit;
+    transition: opacity 0.5s ease;
+  }
+  .glow-effect:hover::before {
+    opacity: 0.5;
+  }
+
+  /* High-end typography */
+  .heading-hero {
+    @apply text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tighter leading-[1.1] text-primary;
+  }
+  
+  .heading-section {
+    @apply text-3xl md:text-5xl font-serif font-bold tracking-tight mb-8;
+  }
+
+  .text-golden-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-700;
   }
 }
 
 @layer utilities {
-  .glass-panel {
-    @apply bg-white/10 backdrop-blur-2xl border border-white/20 shadow-2xl;
+  .animate-spring {
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-  
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent via-accent-light to-brand-blue;
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
   }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Base resets for animations */
+.fade-in {
+  animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
