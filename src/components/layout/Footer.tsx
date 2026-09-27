@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
 
     return (
         <>
-        <footer className="relative bg-primary-dark text-white pt-24 pb-12 overflow-hidden">
+        <footer className="relative bg-primary-dark text-primary font-bold pt-24 pb-12 overflow-hidden">
             {/* Fluid Curve Top */}
             <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(113%+1.3px)] h-[60px] md:h-[100px] fill-primary">
@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
                                 <img loading="lazy" src="/images/brand/logo.webp" alt="Life Republic" className="w-full h-full object-contain" />
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-3xl font-serif font-bold tracking-wider text-white">
+                                <span className="text-3xl font-serif font-bold tracking-wider text-primary font-bold">
                                     LIFE REPUBLIC
                                 </span>
                                 <span className="text-xs uppercase tracking-[0.3em] text-accent/80 mt-1">
@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
                                 </span>
                             </div>
                         </div>
-                        <p className="text-gray-400 leading-relaxed max-w-sm">
+                        <p className="text-primary leading-relaxed max-w-sm">
                             <strong>Kolte Patil Life Republic Township Hinjewadi</strong> is a premium 390+ acre integrated township. Offering 1, 2, 3 BHK flats and villas near Rajiv Gandhi IT Park.
                         </p>
                         <div className="flex gap-4">
@@ -53,10 +53,10 @@ export const Footer: React.FC = () => {
                                 <a
                                     key={idx}
                                     href="#"
-                                    className="h-12 w-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all duration-300 group"
+                                    className="h-12 w-12 rounded-full border border-border-strong flex items-center justify-center hover:bg-accent hover:border-accent hover:text-primary font-bold transition-all duration-300 group"
                                     aria-label={label}
                                 >
-                                    <Icon size={20} className="text-white/60 group-hover:text-white transition-colors" />
+                                    <Icon size={20} className="text-primary font-bold/60 group-hover:text-primary font-bold transition-colors" />
                                 </a>
                             ))}
                         </div>
@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
 
                     {/* Quick Link Columns (Span 2 each) */}
                     <div className="lg:col-span-2 lg:col-start-4">
-                        <h4 className="text-lg font-serif font-bold mb-8 text-white">Explore</h4>
+                        <h4 className="text-lg font-serif font-bold mb-8 text-primary font-bold">Explore</h4>
                         <ul className="space-y-4">
                             {[
                                 { name: 'Home', path: '/' },
@@ -77,7 +77,7 @@ export const Footer: React.FC = () => {
                                 <li key={link.name}>
                                     <Link
                                         to={link.path}
-                                        className="text-gray-400 hover:text-accent flex items-center gap-2 group transition-all duration-300"
+                                        className="text-primary hover:text-accent flex items-center gap-2 group transition-all duration-300"
                                     >
                                         <span className="w-0 group-hover:w-2 h-[1px] bg-accent transition-all duration-300"></span>
                                         {link.name}
@@ -88,7 +88,7 @@ export const Footer: React.FC = () => {
                     </div>
 
                     <div className="lg:col-span-2">
-                        <h4 className="text-lg font-serif font-bold mb-8 text-white">Project Clusters</h4>
+                        <h4 className="text-lg font-serif font-bold mb-8 text-primary font-bold">Project Clusters</h4>
                         <ul className="space-y-4">
                             {[
                                 { name: 'Atmos (2 & 3 BHK)', path: '/projects/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi' },
@@ -100,7 +100,7 @@ export const Footer: React.FC = () => {
                                 <li key={link.name}>
                                     <Link
                                         to={link.path}
-                                        className="text-gray-400 hover:text-white group flex items-center gap-2 transition-all duration-300"
+                                        className="text-primary hover:text-primary font-bold group flex items-center gap-2 transition-all duration-300"
                                     >
                                         {link.name}
                                         <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 -translate-y-1 group-hover:translate-y-0 transition-all duration-300 text-accent" />
@@ -111,7 +111,7 @@ export const Footer: React.FC = () => {
                     </div>
 
                     <div className="lg:col-span-2">
-                        <h4 className="text-lg font-serif font-bold mb-8 text-white">Location Index</h4>
+                        <h4 className="text-lg font-serif font-bold mb-8 text-primary font-bold">Location Index</h4>
                         <ul className="space-y-4">
                             {[
                                 { name: 'Near Hinjewadi Phase 1', path: '/location/flats-near-hinjewadi' },
@@ -123,7 +123,7 @@ export const Footer: React.FC = () => {
                                 <li key={link.name}>
                                     <Link
                                         to={link.path}
-                                        className="text-gray-400 hover:text-white group flex items-center gap-2 transition-all duration-300"
+                                        className="text-primary hover:text-primary font-bold group flex items-center gap-2 transition-all duration-300"
                                     >
                                         {link.name}
                                         <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 -translate-y-1 group-hover:translate-y-0 transition-all duration-300 text-accent" />
@@ -135,27 +135,27 @@ export const Footer: React.FC = () => {
 
                     {/* Contact Column (Span 3) */}
                     <div className="lg:col-span-3">
-                        <h4 className="text-lg font-serif font-bold mb-8 text-white">Visit Us</h4>
+                        <h4 className="text-lg font-serif font-bold mb-8 text-primary font-bold">Visit Us</h4>
                         <div className="space-y-6">
                             <div className="flex items-start gap-4 group">
-                                <div className="p-3 rounded-lg bg-white/5 group-hover:bg-accent/20 transition-colors">
+                                <div className="p-3 rounded-none bg-transparent border-2 border-border-strong group-hover:bg-accent/20 transition-colors">
                                     <MapPin size={20} className="text-accent" />
                                 </div>
                                 <div className="space-y-1">
-                                    <p className="text-gray-300 font-medium">Site Address</p>
-                                    <p className="text-sm text-gray-500">Marunji, Hinjewadi, Pune, Maharashtra 411057</p>
+                                    <p className="text-primary font-medium">Site Address</p>
+                                    <p className="text-sm text-text-muted hover:text-primary">Marunji, Hinjewadi, Pune, Maharashtra 411057</p>
                                 </div>
                             </div>
 
                             <div className="flex items-center gap-4 group">
-                                <div className="p-3 rounded-lg bg-white/5 group-hover:bg-accent/20 transition-colors">
+                                <div className="p-3 rounded-none bg-transparent border-2 border-border-strong group-hover:bg-accent/20 transition-colors">
                                     <Phone size={20} className="text-accent" />
                                 </div>
                                 <div>
-                                    <p className="text-gray-300 font-medium">Get in touch</p>
+                                    <p className="text-primary font-medium">Get in touch</p>
                                     <button 
                                         onClick={() => setIsEnquiryOpen(true)}
-                                        className="text-sm text-gray-500 hover:text-white transition-colors cursor-pointer"
+                                        className="text-sm text-text-muted hover:text-primary hover:text-primary font-bold transition-colors cursor-pointer"
                                     >
                                         Request Callback
                                     </button>
@@ -166,16 +166,16 @@ export const Footer: React.FC = () => {
                 </div>
 
                 {/* Massive SEO Silo - Themed Keyword Clusters */}
-                <div className="border-t border-white/10 py-12 mt-12">
+                <div className="border-t border-border-strong py-12 mt-12">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div>
-                            <h5 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">Popular Configurations in Pune West</h5>
+                            <h5 className="text-sm font-bold text-primary uppercase tracking-widest mb-6">Popular Configurations in Pune West</h5>
                             <div className="flex flex-col gap-y-3">
                                 {seoClusters.configurations.map((item) => (
                                     <Link
                                         key={item.slug}
                                         to={`/insights/${item.slug}`}
-                                        className="text-xs text-gray-500 hover:text-accent transition-colors"
+                                        className="text-xs text-text-muted hover:text-primary hover:text-accent transition-colors"
                                         title={item.name}
                                     >
                                         {item.name}
@@ -184,13 +184,13 @@ export const Footer: React.FC = () => {
                             </div>
                         </div>
                         <div>
-                            <h5 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">Top Locations & Micro-Markets</h5>
+                            <h5 className="text-sm font-bold text-primary uppercase tracking-widest mb-6">Top Locations & Micro-Markets</h5>
                             <div className="flex flex-col gap-y-3">
                                 {seoClusters.locations.map((item) => (
                                     <Link
                                         key={item.slug}
                                         to={`/insights/${item.slug}`}
-                                        className="text-xs text-gray-500 hover:text-accent transition-colors"
+                                        className="text-xs text-text-muted hover:text-primary hover:text-accent transition-colors"
                                         title={item.name}
                                     >
                                         {item.name}
@@ -200,7 +200,7 @@ export const Footer: React.FC = () => {
                                     <Link
                                         key={slug}
                                         to={`/location/${slug}`}
-                                        className="text-xs text-gray-500 hover:text-accent transition-colors"
+                                        className="text-xs text-text-muted hover:text-primary hover:text-accent transition-colors"
                                         title={pseoRegistry[slug].title}
                                     >
                                         {pseoRegistry[slug].title.split('|')[0].trim()}
@@ -209,13 +209,13 @@ export const Footer: React.FC = () => {
                             </div>
                         </div>
                         <div>
-                            <h5 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">Real Estate Investment Themes</h5>
+                            <h5 className="text-sm font-bold text-primary uppercase tracking-widest mb-6">Real Estate Investment Themes</h5>
                             <div className="flex flex-col gap-y-3">
                                 {seoClusters.themes.map((item) => (
                                     <Link
                                         key={item.slug}
                                         to={`/insights/${item.slug}`}
-                                        className="text-xs text-gray-500 hover:text-accent transition-colors"
+                                        className="text-xs text-text-muted hover:text-primary hover:text-accent transition-colors"
                                         title={item.name}
                                     >
                                         {item.name}
@@ -227,22 +227,22 @@ export const Footer: React.FC = () => {
                 </div>
 
                 {/* RERA Numbers Section */}
-                <div className="border-t border-white/5 py-8">
-                    <h5 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">RERA Registration Numbers</h5>
-                    <div className="flex flex-wrap gap-x-6 gap-y-2 text-[10px] text-gray-500">
+                <div className="border-t border-border-strong py-8">
+                    <h5 className="text-sm font-bold text-primary uppercase tracking-widest mb-4">RERA Registration Numbers</h5>
+                    <div className="flex flex-wrap gap-x-6 gap-y-2 text-[10px] text-text-muted hover:text-primary">
                         {RERA_REGISTRY.map((item: { title: string, rera: string }, index: number) => (
                             <span key={index} className="flex items-center gap-1">
-                                <span className="text-gray-400">{item.title}:</span>
+                                <span className="text-primary">{item.title}:</span>
                                 <span className="font-mono text-accent/80">{item.rera}</span>
                             </span>
                         ))}
                     </div>
-                    <p className="text-[10px] text-gray-600 mt-4 italic">
-                        The projects have been registered via MahaRERA registration numbers and are available on the website <a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-accent underline">https://maharera.mahaonline.gov.in</a> under registered projects.
+                    <p className="text-[10px] text-text-muted mt-4 italic">
+                        The projects have been registered via MahaRERA registration numbers and are available on the website <a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noreferrer" className="text-text-muted hover:text-primary hover:text-accent underline">https://maharera.mahaonline.gov.in</a> under registered projects.
                     </p>
                 </div>
 
-                <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-gray-500/60">
+                <div className="pt-8 border-t border-border-strong flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-text-muted">
                     <p>© 2025 Life Republic. Designed with precision.</p>
                     <div className="flex gap-4 md:gap-8 flex-wrap justify-center">
                         <Link to="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
@@ -254,11 +254,11 @@ export const Footer: React.FC = () => {
                     </div>
                 </div>
                 
-                <div className="mt-8 pt-8 border-t border-white/5 text-[9px] text-gray-500/40 text-center leading-relaxed">
+                <div className="mt-8 pt-8 border-t border-border-strong text-[9px] text-text-muted text-center leading-relaxed">
                     Disclaimer: This website is for informational purposes only and does not constitute an offer or solicitation. The visual representations, including images and 3D walkthroughs, are artistic impressions and may differ from the actual project. Pricing and specifications are subject to change without notice. By submitting your contact details, you authorize our partners to contact you via phone, SMS, or email, overriding any NDNC registration.
                 </div>
             </div>
-            <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-yellow-400 via-red-500 pink-500 purple-500 blue-500 to-green-500"></div>
+            
         </footer>
         <EnquiryModal 
             isOpen={isEnquiryOpen} 
