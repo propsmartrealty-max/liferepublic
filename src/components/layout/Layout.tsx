@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { FloatingContact } from '../ui/FloatingContact';
+import { WhatsAppWidget } from '../ui/WhatsAppWidget';
 import { Breadcrumbs } from '../seo/Breadcrumbs';
 import { EnquiryModal } from '../ui/EnquiryModal';
 import { NeuralSearch } from '../ui/NeuralSearch';
