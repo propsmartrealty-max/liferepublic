@@ -33,7 +33,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
             </div>
             <h1 className="text-3xl font-serif font-bold text-secondary mb-4">Structural Anomaly Detected</h1>
             <p className="text-gray-500 mb-10 leading-relaxed">
-              We've encountered a temporary architectural glitch. Our digital engineers are on the way.
+              We.ve encountered a temporary architectural glitch: {this.state.error?.message || this.state.error?.toString()} 
             </p>
             <div className="space-y-4">
               <Button 
