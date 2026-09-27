@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { supabase } from '../../lib/supabase';
+import { api } from '../../services/api';
 import { Button } from '../../components/ui/Button';
 
 export const AdminLogin = () => {
@@ -15,16 +15,12 @@ export const AdminLogin = () => {
         setLoading(true);
         setError(null);
 
-        const { error } = await supabase.auth.signInWithPassword({
-            email,
-            password,
-        });
-
-        if (error) {
-            setError(error.message);
-            setLoading(false);
-        } else {
+        try {
+            await api.auth.login(email, password);
             navigate('/admin/dashboard');
+        } catch (err: any) {
+            setError(err.message || 'Invalid email or password');
+            setLoading(false);
         }
     };
 

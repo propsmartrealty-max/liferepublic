@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
-import { supabase } from '../../lib/supabase';
+import { api } from '../../services/api';
 import { LayoutDashboard, Image, LogOut, Menu, X } from 'lucide-react';
 
 export const AdminLayout: React.FC = () => {
@@ -9,7 +9,7 @@ export const AdminLayout: React.FC = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const handleLogout = async () => {
-        await supabase.auth.signOut();
+        api.auth.logout();
         navigate('/admin/login');
     };
 

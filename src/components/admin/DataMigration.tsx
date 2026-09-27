@@ -1,77 +1,20 @@
-import { useState } from 'react';
-import { supabase } from '../../lib/supabase';
-import { projectsRegistry as projects } from '../../data/projects';
-import { Button } from '../ui/Button';
+import React, { useState } from 'react';
+import { Database, AlertTriangle, CheckCircle, Loader2 } from 'lucide-react';
+import { Button } from './../ui/Button';
 
-export const DataMigration = () => {
-    const [status, setStatus] = useState<string>('');
-    const [loading, setLoading] = useState(false);
-
-    const handleMigration = async () => {
-        if (!confirm('This will overwrite existing projects in the database with the same ID. Continue?')) return;
-
-        setLoading(true);
-        setStatus('Starting migration...');
-
-        let successCount = 0;
-        let failCount = 0;
-
-        try {
-            for (const project of projects) {
-                setStatus(`Migrating ${project.title}...`);
-
-                const dbProject = {
-                    id: project.id,
-                    title: project.title,
-                    category: project.category,
-                    location: project.location,
-                    price: project.price,
-                    image: project.image,
-                    description: project.description,
-                    overview: project.overview,
-                    features: project.features,
-                    amenities: project.amenities,
-                    master_layout: project.masterLayout,
-                    floor_plans: project.floorPlans,
-                    gallery: project.gallery,
-                    status: project.status || 'Available',
-                    theme_color: project.themeColor
-                };
-
-                const { error } = await supabase
-                    .from('projects')
-                    .upsert(dbProject);
-
-                if (error) {
-                    console.error(`Failed to migrate ${project.id}:`, error);
-                    failCount++;
-                } else {
-                    successCount++;
-                }
-            }
-
-            setStatus(`Migration completed. Success: ${successCount}, Failed: ${failCount}`);
-        } catch (error) {
-            console.error('Migration error:', error);
-            setStatus('Migration failed with an unexpected error.');
-        } finally {
-            setLoading(false);
-        }
-    };
-
+export const DataMigration: React.FC = () => {
     return (
-        <div className="bg-white p-6 rounded-xl shadow-sm border mt-8">
-            <h3 className="text-lg font-bold font-serif mb-4">Data Migration</h3>
-            <p className="text-sm text-gray-600 mb-4">
-                Import static data from <code>data/projects.ts</code> into the Supabase database.
-                This is useful for initializing the database or resetting data.
-            </p>
-            <div className="flex items-center gap-4">
-                <Button onClick={handleMigration} disabled={loading}>
-                    {loading ? 'Migrating...' : 'Migrate Projects Data'}
-                </Button>
-                {status && <span className="text-sm text-gray-600">{status}</span>}
+        <div className="bg-white rounded-lg shadow p-6 max-w-2xl">
+            <h2 className="text-xl font-bold font-serif mb-4 flex items-center gap-2">
+                <Database className="text-accent" /> Data Migration (Cloudflare D1)
+            </h2>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6 flex gap-3">
+                <AlertTriangle className="text-yellow-600 shrink-0 mt-0.5" size={20} />
+                <p className="text-sm text-yellow-800">
+                    This tool was for migrating old Supabase project IDs. This feature is disabled as the database is now running on Cloudflare D1.
+                </p>
             </div>
+            <Button disabled>Migrate</Button>
         </div>
     );
 };

@@ -131,18 +131,18 @@ export const HeroSlider: React.FC = () => {
                                                 <Button
                                                     variant="primary"
                                                     size="lg"
-                                                    className="gap-2 bg-accent hover:bg-white hover:text-accent border-2 border-transparent px-6 py-3 sm:px-10 sm:py-4 font-bold rounded-full shadow-2xl"
+                                                    className="gap-3 group"
                                                     onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}
                                                 >
-                                                    Enquire Now <Sparkles size={20} />
+                                                    Enquire Now <Sparkles size={20} className="group-hover:animate-pulse" />
                                                 </Button>
                                                 <Button
-                                                    variant="outline"
+                                                    variant="glass"
                                                     size="lg"
-                                                    className="gap-2 bg-white/10 backdrop-blur-md border-2 border-white/20 text-white hover:bg-white hover:text-accent px-6 py-3 sm:px-10 sm:py-4 font-bold rounded-full transition-all"
+                                                    className="gap-3 group"
                                                     onClick={() => navigate('/projects')}
                                                 >
-                                                    Explore Portfolio <ArrowRight size={20} />
+                                                    Explore Portfolio <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                                                 </Button>
 
                                                 {/* Intelligence Nudge */}

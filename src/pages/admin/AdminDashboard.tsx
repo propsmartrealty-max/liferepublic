@@ -21,7 +21,7 @@ export const AdminDashboard = () => {
     }, []);
 
     const handleLogout = async () => {
-        await supabase.auth.signOut();
+        api.auth.logout();
         navigate('/admin/login');
     };
 
