@@ -33,9 +33,9 @@ export const Navbar: React.FC = () => {
     };
 
     return (
-        <header className={`fixed top-0 left-0 w-full z-[100] transition-all duration-700 px-6 py-8 ${scrolled ? 'sm:py-4' : 'sm:py-8'}`}>
-            <nav className="container mx-auto" aria-label="Main Navigation">
-                <div className={`relative flex items-center justify-between px-4 md:px-10 py-3 md:py-5 bg-background/80 backdrop-blur-3xl rounded-none border border-border-strong shadow-hard transition-all ${scrolled ? 'shadow-accent/20 border-accent/20' : ''}`}>
+        <header className={'fixed top-0 left-0 w-full z-[100] bg-surface border-b-2 border-border-strong transition-all duration-300 ' + (scrolled ? 'py-2 shadow-hard' : 'py-4')}>
+            <nav className="w-full" aria-label="Main Navigation">
+                <div className="relative flex items-center justify-between px-6 lg:px-12 w-full">
                     <Link to="/" className="flex items-center group">
                         <img loading="lazy" src="/images/brand/logo.webp" alt="Life Republic" className="h-10 md:h-12 w-auto object-contain transition-transform duration-700 group-hover:scale-105 filter drop-shadow-xl" />
                     </Link>
