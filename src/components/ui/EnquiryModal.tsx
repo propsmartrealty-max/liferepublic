@@ -186,14 +186,12 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                                 <select required name="cluster" defaultValue={projectName !== "Life Republic" ? projectName : ""} className="w-full px-8 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-secondary text-lg appearance-none cursor-pointer">
                                                     <option value="" disabled>Select Cluster</option>
-                                                    <option value="Canvas">Canvas (Ultra Luxury)</option>
-                                                    <option value="Atmos">Atmos (Premium)</option>
-                                                    <option value="Universe">Universe (Smart Homes)</option>
-                                                    <option value="Arezo">Arezo (Value)</option>
-                                                    <option value="24K Espada">24K Espada (Row Houses)</option>
-                                                    <option value="ORO Avenue">ORO Avenue</option>
-                                                    <option value="Nora">Nora (Bungalow Plots)</option>
-                                                    <option value="General">Not Sure Yet</option>
+                                                    <option value="Qrious">Qrious</option>
+                                                    <option value="Canvas">Canvas</option>
+                                                    <option value="Atmos">Atmos</option>
+                                                    <option value="Aros">Aros</option>
+                                                    <option value="Echoes">Echoes</option>
+                                                    <option value="Espada">Espada</option>
                                                 </select>
                                                 <select required name="configuration" defaultValue="" className="w-full px-8 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-secondary text-lg appearance-none cursor-pointer">
                                                     <option value="" disabled>Select Configuration</option>
