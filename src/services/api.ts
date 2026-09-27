@@ -1,179 +1,53 @@
-import { Lead, Project, Amenity, Banner } from '../lib/types';
-import { emailService } from './email';
-
-// Cloudflare Worker API URL (Update this when deploying)
-const API_URL = import.meta.env.VITE_CLOUDFLARE_API_URL || '/api';
-
-const handleApiError = (error: any, context: string) => {
-    console.error(`API Error in ${context}:`, error);
-    throw error;
-};
-
-// Ensure URLs are absolute for images
-const normalizeUrl = (url: string) => {
-    if (!url) return '';
-    return url.startsWith('http') ? url : url; 
-};
-
-// Helper to get auth headers
-const getAuthHeaders = () => {
-    const token = localStorage.getItem('lr_admin_token');
-    return {
-        'Content-Type': 'application/json',
-        ...(token ? { 'Authorization': `Bearer ${token}` } : {})
-    };
-};
+import { projectsRegistry } from '../data/projects';
 
 export const api = {
-    auth: {
-        login: async (email: string, password: string) => {
-            try {
-                const res = await fetch(`${API_URL}/auth/login`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, password })
-                });
-                if (!res.ok) throw new Error('Invalid credentials');
-                const data = await res.json();
-                localStorage.setItem('lr_admin_token', data.token);
-                return data.user;
-            } catch (e) { return handleApiError(e, 'auth.login'); }
-        },
-        logout: () => {
-            localStorage.removeItem('lr_admin_token');
-        }
-    },
-    banners: {
-        getAll: async () => {
-            try {
-                const res = await fetch(`${API_URL}/banners`);
-                if (!res.ok) throw new Error('Failed to fetch banners');
-                const data = await res.json();
-                return data.map((b: any) => ({
-                    ...b,
-                    image_url: normalizeUrl(b.image_url)
-                }));
-            } catch (e) { return handleApiError(e, 'banners.getAll'); }
-        }
-    },
-    projects: {
-        getAll: async () => {
-            try {
-                const res = await fetch(`${API_URL}/projects`);
-                if (!res.ok) throw new Error('Failed to fetch projects');
-                const data = await res.json();
-                return data.map((p: any) => ({
-                    ...p,
-                    image: normalizeUrl(p.image),
-                    floor_plans: p.floor_plans?.map(normalizeUrl) || [],
-                    gallery: p.gallery?.map(normalizeUrl) || []
-                }));
-            } catch (e) { return handleApiError(e, 'projects.getAll'); }
-        },
-        getById: async (id: string) => {
-            try {
-                const res = await fetch(`${API_URL}/projects/${id}`);
-                if (!res.ok) throw new Error('Project not found');
-                const p = await res.json();
-                return {
-                    ...p,
-                    image: normalizeUrl(p.image),
-                    floor_plans: p.floor_plans?.map(normalizeUrl) || [],
-                    gallery: p.gallery?.map(normalizeUrl) || []
-                };
-            } catch (e) { return handleApiError(e, 'projects.getById'); }
-        }
-    },
-    amenities: {
-        getAll: async () => {
-            try {
-                const res = await fetch(`${API_URL}/amenities`);
-                if (!res.ok) throw new Error('Failed to fetch amenities');
-                const data = await res.json();
-                return data.map((a: any) => ({
-                    ...a,
-                    image_url: normalizeUrl(a.image_url)
-                }));
-            } catch (e) { return handleApiError(e, 'amenities.getAll'); }
-        }
-    },
-    stats: {
-        get: async () => {
-            const res = await fetch(`${API_URL}/admin/stats`, { headers: getAuthHeaders() });
-            if (!res.ok) throw new Error("Failed to fetch stats");
-            return await res.json();
-        }
-    },
     leads: {
-        getAll: async () => {
+        create: async (lead: any) => {
             try {
-                const res = await fetch(`${API_URL}/leads`, {
-                    headers: getAuthHeaders()
-                });
-                if (!res.ok) throw new Error('Failed to fetch leads');
-                return await res.json();
-            } catch (e) { return handleApiError(e, 'leads.getAll'); }
-        },
-        create: async (lead: Omit<Lead, 'id' | 'created_at' | 'status'>) => {
+                let formData = new FormData();
+                formData.append('name', lead.name);
+                formData.append('email', lead.email || 'N/A');
+                formData.append('phone', lead.phone);
+                formData.append('_subject', `New Lead from Life Republic Website - ${lead.name}`);
+                formData.append('_captcha', 'false');
+                formData.append('_template', 'table');
+                
+                const detailedMessage = `
+Cluster / Project: ${lead.project_id || 'Not Specified'}
+Message: ${lead.message || 'No additional message'}
+                `.trim();
+                
+                formData.append('message', detailedMessage);
 
-            try {
-                // FormSubmit Direct Email Dispatch
-                fetch("https://formsubmit.co/ajax/propsmartrealty@gmail.com", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Accept": "application/json"
-                    },
-                    body: JSON.stringify({
-                        _subject: "🔥 New Sovereign Lead: " + lead.name,
-                        Name: lead.name,
-                        Phone: lead.phone,
-                        Email: lead.email || "N/A",
-                        Project: lead.project_id || "Life Republic",
-                        Message: lead.message || "N/A"
-                    })
-                }).catch(err => console.error("FormSubmit Error:", err));
-
-                const res = await fetch(`${API_URL}/leads`, {
+                const response = await fetch('https://formsubmit.co/ajax/propsmartrealty@gmail.com', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(lead)
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
                 });
                 
-                if (!res.ok) throw new Error('Failed to insert lead');
-
-                const vault = JSON.parse(localStorage.getItem('lr_sovereign_vault') || '[]');
-                const last = vault[vault.length - 1];
-                if (last) last.synced = true;
-                localStorage.setItem('lr_sovereign_vault', JSON.stringify(vault));
-                
-                return null;
-            } catch (e) {
-                return handleApiError(e, 'leads.create');
+                if (!response.ok) throw new Error('Failed to dispatch lead');
+                return await response.json();
+            } catch (error) {
+                console.error('Lead Capture Error:', error);
+                throw error;
             }
         }
     },
-    upload: {
-        image: async (file: File) => {
-            const formData = new FormData();
-            formData.append("file", file);
-            
-            const response = await fetch(`${API_URL}/upload`, {
-                method: "POST",
-                headers: {
-                    "Authorization": `Bearer ${localStorage.getItem("lr_admin_token")}`
-                },
-                body: formData
-            });
-            
-            if (!response.ok) throw new Error("Upload failed");
-            const data = await response.json();
-            return data.url;
-        }
+    projects: {
+        getAll: async () => projectsRegistry,
+        getById: async (id: string) => {
+            const proj = projectsRegistry.find(p => p.id === id);
+            if (!proj) throw new Error('Project not found');
+            return proj;
+        },
+        getFeatured: async (limit = 3) => projectsRegistry.slice(0, limit)
     },
-    township: {
-        searchKnowledgeBase: async (query: string) => {
-            return [];
-        }
+    amenities: {
+        getAll: async () => [
+            { id: 1, name: 'Clubhouse', image_url: 'https://liferepublic.in/images/home/overview-img.jpg', order: 1 },
+            { id: 2, name: 'Swimming Pool', image_url: 'https://liferepublic.in/images/home/overview-img.jpg', order: 2 },
+            { id: 3, name: 'Gymnasium', image_url: 'https://liferepublic.in/images/home/overview-img.jpg', order: 3 },
+            { id: 4, name: 'Kids Play Area', image_url: 'https://liferepublic.in/images/home/overview-img.jpg', order: 4 },
+        ]
     }
 };

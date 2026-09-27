@@ -1,6 +1,5 @@
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
-import { ProtectedRoute } from './components/admin/ProtectedRoute';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import { Amenities } from './pages/Amenities';
@@ -45,11 +44,6 @@ import { ExitIntentOffer } from './components/ui/ExitIntentOffer';
 import { useEffect } from 'react';
 
 // Lazy load Admin components
-import { AdminLogin } from './pages/admin/AdminLogin';
-import { AdminSignup } from './pages/admin/AdminSignup';
-import { AdminDashboard } from './pages/admin/AdminDashboard';
-import { AdminLayout } from './components/admin/AdminLayout';
-import { ImageManager } from './components/admin/ImageManager';
 
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -352,37 +346,6 @@ function App() {
               <CommunityForum />
             </Layout>
           } />
-          {/* Admin Routes */}
-          <Route path="/admin/login" element={
-            <Suspense fallback={<PageLoader />}>
-              <AdminLogin />
-            </Suspense>
-          } />
-          <Route path="/admin/signup" element={
-            <Suspense fallback={<PageLoader />}>
-              <AdminSignup />
-            </Suspense>
-          } />
-          <Route path="/admin" element={<ProtectedRoute />}>
-            <Route element={
-              <Suspense fallback={<PageLoader />}>
-                <AdminLayout />
-              </Suspense>
-            }>
-              <Route index element={<Navigate to="/admin/dashboard" replace />} />
-              <Route path="dashboard" element={
-                <Suspense fallback={<PageLoader />}>
-                  <AdminDashboard />
-                </Suspense>
-              } />
-              <Route path="images" element={
-                <Suspense fallback={<PageLoader />}>
-                  <div className="p-8"><h1 className="text-2xl font-bold font-serif mb-6">Image Manager</h1><ImageManager /></div>
-                </Suspense>
-              } />
-            </Route>
-          </Route>
-
           {/* Catch-all for 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
