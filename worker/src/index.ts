@@ -182,4 +182,23 @@ app.post('/api/upload', protect, async (c) => {
   }
 });
 
+
+app.get('/api/admin/stats', async (c) => {
+  try {
+    const leadsCount = await c.env.DB.prepare('SELECT COUNT(*) as count FROM leads').first();
+    const projectsCount = await c.env.DB.prepare('SELECT COUNT(*) as count FROM projects').first();
+    const bannersCount = await c.env.DB.prepare('SELECT COUNT(*) as count FROM banners').first();
+    
+    // In a real scenario, Web Analytics would be fetched here.
+    // For now, we return D1 accurate records.
+    return c.json({
+      leads: leadsCount?.count || 0,
+      projects: projectsCount?.count || 0,
+      banners: bannersCount?.count || 0,
+    });
+  } catch (e) {
+    return c.json({ error: 'Failed to fetch stats' }, 500);
+  }
+});
+
 export default app;

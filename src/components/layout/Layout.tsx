@@ -83,6 +83,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
       
       {/* Global UI Hardening Layer */}
       <FloatingContact />
+      <WhatsAppWidget />
       
       <EnquiryModal 
         isOpen={isEnquiryOpen}

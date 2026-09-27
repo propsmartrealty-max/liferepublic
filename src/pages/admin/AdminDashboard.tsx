@@ -76,12 +76,8 @@ export const AdminDashboard = () => {
     useEffect(() => {
         const fetchStats = async () => {
             try {
-                const [leads, projects, banners] = await Promise.all([
-                    api.leads.getCount().catch(() => 0),
-                    api.projects.getCount().catch(() => 0),
-                    api.banners.getCount().catch(() => 0),
-                ]);
-                setStats({ leads, projects, banners });
+                const data = await api.stats.get();
+                setStats(data);
             } catch (error) {
                 console.error('Failed to fetch stats', error);
             }

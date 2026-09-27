@@ -97,6 +97,13 @@ export const api = {
             } catch (e) { return handleApiError(e, 'amenities.getAll'); }
         }
     },
+    stats: {
+        get: async () => {
+            const res = await fetch(`${API_URL}/admin/stats`, { headers: getAuthHeaders() });
+            if (!res.ok) throw new Error("Failed to fetch stats");
+            return await res.json();
+        }
+    },
     leads: {
         getAll: async () => {
             try {
