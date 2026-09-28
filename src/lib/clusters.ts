@@ -504,7 +504,7 @@ export const CLUSTERS = [
         sector: "Sector R15",
         usp: "Ultra-Premium Row Houses",
         configurations: [
-            { type: "4 BHK Row House", size: "1800 sq.ft.", price: "₹3.40 Cr*" }
+            { type: "4 BHK Row House", size: "Premium Row House", price: "₹3.40 Cr*" }
         ],
         masterLayout: "https://liferepublic.in/images/home/slider-3.webp"
     },
@@ -520,8 +520,7 @@ export const CLUSTERS = [
         sector: "Sector R24",
         usp: "Signature 24K Luxury Estates",
         configurations: [
-            { type: "3 BHK", size: "1200 sq.ft.", price: "₹3.5 Cr*" },
-            { type: "4 BHK", size: "1600 sq.ft.", price: "₹2.2 Cr*" }
+            { type: "5 BHK Row House", size: "Premium Row House", price: "₹3.5 Cr*" }
         ],
         masterLayout: "https://liferepublic.in/images/home/slider-4.webp"
     }
