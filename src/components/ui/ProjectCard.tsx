@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export const ProjectCard = ({ project, priority }: { project: any, priority?: boolean }) => {
     return (
-        <Link to={`/projects/${project.slug}`} className="block h-full">
+        <Link to={`/projects/${project.slug || project.id}`} className="block h-full">
             <motion.div
                 className="group relative h-[400px] w-full rounded-3xl overflow-hidden bg-surface border border-white/5 hover:border-white/20 transition-all duration-700"
             >
@@ -13,7 +13,7 @@ export const ProjectCard = ({ project, priority }: { project: any, priority?: bo
                 <div className="absolute inset-0 z-0">
                     <img
                         src={project.image || project.configurations?.[0]?.image}
-                        alt={project.name}
+                        alt={project.name || project.title}
                         className="w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-40 transition-all duration-1000 ease-[0.16,1,0.3,1]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
@@ -30,7 +30,7 @@ export const ProjectCard = ({ project, priority }: { project: any, priority?: bo
 
                     <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-[0.16,1,0.3,1]">
                         <h3 className="text-3xl font-display font-bold text-white mb-2 tracking-tight group-hover:text-primary transition-colors">
-                            {project.name}
+                            {project.name || project.title}
                         </h3>
                         <p className="text-gray-400 text-sm mb-6 max-w-[80%] line-clamp-2">
                             {project.description || "Next-generation spatial architecture."}
