@@ -5,13 +5,13 @@ export const CLUSTERS = [
         slug: "kolte-patil-life-republic-echoes",
         category: "Premium Residences",
         description: "Echoes is the newest residential phase at Life Republic (Sector R31/31st Avenue). Offering meticulously planned 2 & 2.5 BHK homes with 40+ amenities across a 5.89-acre development.",
-        price: "₹75 - ₹85 Lakhs",
+        price: "₹75 Lakhs - ₹90 Lakhs",
         rera: "PM1261012502409",
-        image: "https://life-republic.in/images/gallery/eros/master-layout.webp", // fallback
+        image: "https://life-republic.in/images/gallery/eros/master-layout.webp", 
         masterLayout: "https://life-republic.in/images/gallery/eros/master-layout.webp",
         configurations: [
-            { type: "2 BHK Moment", size: "735 sq.ft.", price: "₹75 Lakhs*" },
-            { type: "2.5 BHK Memoria", size: "866 sq.ft.", price: "₹85 Lakhs*" }
+            { type: "2 BHK", size: "735 - 840 sq.ft.", price: "₹75 Lakhs*" },
+            { type: "2.5 BHK", size: "866 - 1,086 sq.ft.", price: "₹85 Lakhs*" }
         ]
     },
     {
@@ -20,13 +20,12 @@ export const CLUSTERS = [
         slug: "kolte-patil-life-republic-duet",
         category: "Premium 2 BHK",
         description: "Duet features smart, space-efficient 2 BHK apartments designed for modern nuclear families with access to township-level infrastructure.",
-        price: "₹67 - ₹76 Lakhs",
+        price: "₹62 Lakhs - ₹76 Lakhs",
         rera: "P52100079424",
         image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2000&auto=format&fit=crop",
         masterLayout: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2000&auto=format&fit=crop",
         configurations: [
-            { type: "2 BHK Compact", size: "650 sq.ft.", price: "₹67 Lakhs*" },
-            { type: "2 BHK Optima", size: "750 sq.ft.", price: "₹76 Lakhs*" }
+            { type: "2 BHK", size: "721 - 766 sq.ft.", price: "₹62 Lakhs*" }
         ]
     },
     {
@@ -40,8 +39,10 @@ export const CLUSTERS = [
         image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop",
         masterLayout: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop",
         configurations: [
-            { type: "2 BHK", size: "780 sq.ft.", price: "₹78 Lakhs*" },
-            { type: "3 BHK", size: "1050 sq.ft.", price: "₹1.1 Cr*" }
+            { type: "2 BHK Large", size: "813 sq.ft.", price: "₹78 Lakhs*" },
+            { type: "2 BHK Lux", size: "900 sq.ft.", price: "₹85 Lakhs*" },
+            { type: "3 BHK Large", size: "1,116 sq.ft.", price: "₹1.1 Cr*" },
+            { type: "3 BHK Lux", size: "1,231 sq.ft.", price: "₹1.3 Cr*" }
         ]
     },
     {
@@ -50,13 +51,14 @@ export const CLUSTERS = [
         slug: "kolte-patil-life-republic-canvas",
         category: "Ultra-Luxury 3 & 4 BHK",
         description: "Canvas (Sector R5 / 5th Avenue) is the pinnacle of luxury at Life Republic. Offering sprawling 3 & 4 BHK residences with bespoke finishes and private decks.",
-        price: "₹1.5 Cr - ₹2.8 Cr",
+        price: "₹1.30 Cr - ₹2.8 Cr",
         rera: "P52100077008",
         image: "https://images.unsplash.com/photo-1600607687931-cece5ce21448?q=80&w=2000&auto=format&fit=crop",
         masterLayout: "https://images.unsplash.com/photo-1600607687931-cece5ce21448?q=80&w=2000&auto=format&fit=crop",
         configurations: [
-            { type: "3 BHK Premium", size: "1250 sq.ft.", price: "₹1.5 Cr*" },
-            { type: "4 BHK Signature", size: "1850 sq.ft.", price: "₹2.5 Cr*" }
+            { type: "3 BHK", size: "1,151 - 1,330 sq.ft.", price: "₹1.30 Cr*" },
+            { type: "3.5 BHK", size: "1,450 - 1,700 sq.ft.", price: "₹1.65 Cr*" },
+            { type: "4 BHK", size: "1,700 - 2,023 sq.ft.", price: "₹2.2 Cr*" }
         ]
     },
     {
@@ -65,13 +67,13 @@ export const CLUSTERS = [
         slug: "kolte-patil-life-republic-aros",
         category: "Premium 2 & 3 BHK",
         description: "Aros redefines community living with a massive 19,000 sq.ft. clubhouse, a 2.6-acre Nature's Nest, and a spectacular 70-meter high Sky Trail.",
-        price: "₹82 Lakhs - ₹1.4 Cr",
+        price: "₹75 Lakhs - ₹1.2 Cr",
         rera: "P52100047921",
         image: "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=2000&auto=format&fit=crop",
         masterLayout: "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=2000&auto=format&fit=crop",
         configurations: [
-            { type: "2 BHK", size: "750 sq.ft.", price: "₹82 Lakhs*" },
-            { type: "3 BHK", size: "950 sq.ft.", price: "₹1.1 Cr*" }
+            { type: "2 BHK", size: "836 sq.ft.", price: "₹75 Lakhs*" },
+            { type: "3 BHK", size: "920 - 1,176 sq.ft.", price: "₹95 Lakhs*" }
         ]
     },
     {
@@ -86,8 +88,8 @@ export const CLUSTERS = [
         masterLayout: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2000&auto=format&fit=crop",
         configurations: [
             { type: "2 BHK", size: "722 sq.ft.", price: "₹64 Lakhs*" },
-            { type: "2.5 BHK", size: "911 sq.ft.", price: "₹85 Lakhs*" },
-            { type: "3 BHK", size: "1037 sq.ft.", price: "₹95 Lakhs*" }
+            { type: "2.5 BHK", size: "850 sq.ft.", price: "₹82 Lakhs*" },
+            { type: "3 BHK", size: "1,032 sq.ft.", price: "₹95 Lakhs*" }
         ]
     },
     {
@@ -96,13 +98,13 @@ export const CLUSTERS = [
         slug: "kolte-patil-life-republic-universe",
         category: "Smart 1 & 2 BHK",
         description: "Smart, tech-enabled 1 and 2 BHK residences designed for millennials, featuring home automation and high-speed fiber infrastructure.",
-        price: "₹45 Lakhs - ₹65 Lakhs",
+        price: "₹40 Lakhs - ₹65 Lakhs",
         rera: "P52100027629",
         image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2000&auto=format&fit=crop",
         masterLayout: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2000&auto=format&fit=crop",
         configurations: [
-            { type: "1 BHK", size: "450 sq.ft.", price: "₹45 Lakhs*" },
-            { type: "2 BHK", size: "620 sq.ft.", price: "₹60 Lakhs*" }
+            { type: "1 BHK", size: "393 - 507 sq.ft.", price: "₹40 Lakhs*" },
+            { type: "2 BHK", size: "560 - 682 sq.ft.", price: "₹60 Lakhs*" }
         ]
     }
 ];
