@@ -1,0 +1,131 @@
+{
+  "aros": {
+    "gallery": [
+      "https://liferepublic.in/images/project/gallery/1709192604interioraros3.webp",
+      "https://liferepublic.in/images/project/gallery/17193131292.webp",
+      "https://liferepublic.in/images/project/gallery/1709204612Exterioraros2.webp",
+      "https://liferepublic.in/images/project/gallery/17193131747.webp",
+      "https://liferepublic.in/images/project/gallery/1709204594Exterioraros4.webp",
+      "https://liferepublic.in/images/project/gallery/17193131201.webp",
+      "https://liferepublic.in/images/project/gallery/1709193098interioraros1.webp",
+      "https://liferepublic.in/images/project/gallery/1726067831Aros-Gallery-1.webp",
+      "https://liferepublic.in/images/project/gallery/1709204604Exterioraros3.webp",
+      "https://liferepublic.in/images/project/gallery/1709204620Exterioraros1.webp",
+      "https://liferepublic.in/images/project/gallery/1709192588interioraros4.webp"
+    ],
+    "floorPlans": [
+      "https://liferepublic.in/images/project/plan/1724406891aros3.webp",
+      "https://liferepublic.in/images/project/plan/1711954372Aros 3 BHK Regal small.webp",
+      "https://liferepublic.in/images/project/plan/1724406923aros5.webp",
+      "https://liferepublic.in/images/project/plan/1724406939aros6.webp",
+      "https://liferepublic.in/images/project/plan/1724406503master.webp",
+      "https://liferepublic.in/images/project/plan/1711954304Aros 2 BHK Elite small.webp",
+      "https://liferepublic.in/images/project/plan/1711954331Aros 3 BHK Imperial small.webp",
+      "https://liferepublic.in/images/project/plan/1724406876aros2.webp",
+      "https://liferepublic.in/images/project/plan/1724406848aros1.webp",
+      "https://liferepublic.in/images/project/plan/1724406909aros4.webp",
+      "https://liferepublic.in/images/project/plan/1711954351Aros 3 RLK small.webp",
+      "https://liferepublic.in/images/project/plan/1724406952aros7.webp"
+    ],
+    "amenities": [
+      {
+        "name": "AROS AMENITES",
+        "icon": "https://liferepublic.in/images/project/aminities/1726068485Aros-Amenites-3.webp"
+      },
+      {
+        "name": "AROS AMENITES",
+        "icon": "https://liferepublic.in/images/project/aminities/1726068519Aros-Amenites-1.webp"
+      },
+      {
+        "name": "AROS AMENITES",
+        "icon": "https://liferepublic.in/images/project/aminities/1726068582Aros-Amenites-5.webp"
+      },
+      {
+        "name": "AROS AMENITES",
+        "icon": "https://liferepublic.in/images/project/aminities/1726068543Aros-Amenites-2.webp"
+      },
+      {
+        "name": "AROS AMENITES",
+        "icon": "https://liferepublic.in/images/project/aminities/1726068466Aros-Amenites-4.webp"
+      }
+    ]
+  },
+  "atmos": {
+    "gallery": [
+      "https://liferepublic.in/images/project/gallery/17182847281.webp",
+      "https://liferepublic.in/images/project/gallery/1710507570atmos1.webp",
+      "https://liferepublic.in/images/project/gallery/1710507583atmos3 copy.webp",
+      "https://liferepublic.in/images/project/gallery/1710507590atmos4.webp"
+    ],
+    "floorPlans": [
+      "https://liferepublic.in/images/project/plan/1711961745atmos-25 s.webp",
+      "https://liferepublic.in/images/project/plan/1711961620atmos-20 s.webp",
+      "https://liferepublic.in/images/project/plan/1711961897atmos-30 s.webp",
+      "https://liferepublic.in/images/project/plan/1711960894atmos-11 s.webp",
+      "https://liferepublic.in/images/project/plan/1711961711atmos-23 s.webp",
+      "https://liferepublic.in/images/project/plan/1711961041atmos-15 s.webp",
+      "https://liferepublic.in/images/project/plan/1711961872atmos-29 s.webp",
+      "https://liferepublic.in/images/project/plan/1711961788atmos-26 s.webp",
+      "https://liferepublic.in/images/project/plan/1711961116atmos-17 s.webp",
+      "https://liferepublic.in/images/project/plan/1711957330atmos master thumb.webp",
+      "https://liferepublic.in/images/project/plan/1711961082atmos-16 s.webp",
+      "https://liferepublic.in/images/project/plan/1711961682atmos-22 s.webp",
+      "https://liferepublic.in/images/project/plan/1711961816atmos-27 s.webp",
+      "https://liferepublic.in/images/project/plan/1711961556atmos-19 s.webp",
+      "https://liferepublic.in/images/project/plan/1711961845atmos-28 s.webp",
+      "https://liferepublic.in/images/project/plan/1711960933atmos-12 s.webp",
+      "https://liferepublic.in/images/project/plan/1711961007atmos-13 s.webp",
+      "https://liferepublic.in/images/project/plan/1711961653atmos-21 s.webp"
+    ],
+    "amenities": []
+  },
+  "universe": {
+    "gallery": [
+      "https://liferepublic.in/images/project/gallery/1715321757universe-g-3.webp",
+      "https://liferepublic.in/images/project/gallery/17108326182 (1).webp",
+      "https://liferepublic.in/images/project/gallery/171083280210.webp",
+      "https://liferepublic.in/images/project/gallery/1715321748universe-g-2.webp",
+      "https://liferepublic.in/images/project/gallery/17108326353.webp",
+      "https://liferepublic.in/images/project/gallery/1715321782universe-g-6.webp",
+      "https://liferepublic.in/images/project/gallery/17108327579.webp",
+      "https://liferepublic.in/images/project/gallery/1715321653universe-g-1.webp",
+      "https://liferepublic.in/images/project/gallery/17108326524.webp",
+      "https://liferepublic.in/images/project/gallery/17108326826.webp",
+      "https://liferepublic.in/images/project/gallery/1715321764universe-g-4.webp",
+      "https://liferepublic.in/images/project/gallery/1715321774universe-g-5.webp",
+      "https://liferepublic.in/images/project/gallery/1715321790universe-g-7.webp",
+      "https://liferepublic.in/images/project/gallery/17108326675.webp",
+      "https://liferepublic.in/images/project/gallery/17108327087.webp",
+      "https://liferepublic.in/images/project/gallery/17108327398.webp",
+      "https://liferepublic.in/images/project/gallery/171083281311.webp",
+      "https://liferepublic.in/images/project/gallery/1718954872uni4.webp"
+    ],
+    "floorPlans": [
+      "https://liferepublic.in/images/project/plan/1724418615small4.webp",
+      "https://liferepublic.in/images/project/plan/1724418673small1.webp",
+      "https://liferepublic.in/images/project/plan/1724418657small2.webp",
+      "https://liferepublic.in/images/project/plan/1724418636small3.webp",
+      "https://liferepublic.in/images/project/plan/1724418593small5.webp"
+    ],
+    "amenities": []
+  },
+  "oro-avenue": {
+    "gallery": [
+      "https://liferepublic.in/images/project/gallery/17108372636.webp",
+      "https://liferepublic.in/images/project/gallery/17108372697.webp",
+      "https://liferepublic.in/images/project/gallery/17108372484.webp",
+      "https://liferepublic.in/images/project/gallery/17108372758.webp",
+      "https://liferepublic.in/images/project/gallery/17108372251 (1).webp",
+      "https://liferepublic.in/images/project/gallery/17108372413 (1).webp",
+      "https://liferepublic.in/images/project/gallery/17108372555.webp",
+      "https://liferepublic.in/images/project/gallery/17108372342 (1).webp"
+    ],
+    "floorPlans": [
+      "https://liferepublic.in/images/project/plan/1724417303small2.webp",
+      "https://liferepublic.in/images/project/plan/1724417337small4.webp",
+      "https://liferepublic.in/images/project/plan/1724417320small3.webp",
+      "https://liferepublic.in/images/project/plan/1724417283small1.webp"
+    ],
+    "amenities": []
+  }
+}
