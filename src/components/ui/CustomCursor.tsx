@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { motion, useSpring, useMotionValue } from 'framer-motion';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 export const CustomCursor = () => {
     const [isHovering, setIsHovering] = useState(false);
-    
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
+    const mouseX = useMotionValue(-100);
+    const mouseY = useMotionValue(-100);
 
-    const smoothOptions = { damping: 20, stiffness: 300, mass: 0.5 };
-    const smoothX = useSpring(mouseX, smoothOptions);
-    const smoothY = useSpring(mouseY, smoothOptions);
+    const springConfig = { damping: 25, stiffness: 400, mass: 0.5 };
+    const cursorX = useSpring(mouseX, springConfig);
+    const cursorY = useSpring(mouseY, springConfig);
 
     useEffect(() => {
         const updateMousePosition = (e: MouseEvent) => {
-            mouseX.set(e.clientX);
-            mouseY.set(e.clientY);
+            mouseX.set(e.clientX - 16);
+            mouseY.set(e.clientY - 16);
         };
 
         const handleMouseOver = (e: MouseEvent) => {
@@ -35,38 +34,22 @@ export const CustomCursor = () => {
         };
     }, [mouseX, mouseY]);
 
-    // Antigravity cursor hides the default cursor. We need to hide it globally in CSS later.
     return (
-        <motion.div 
-            className="fixed top-0 left-0 pointer-events-none z-[9999] flex items-center justify-center"
-            style={{ 
-                x: smoothX, 
-                y: smoothY,
-                translateX: '-50%',
-                translateY: '-50%'
+        <motion.div
+            className="fixed top-0 left-0 w-8 h-8 pointer-events-none z-[9999] mix-blend-difference hidden md:flex items-center justify-center"
+            style={{
+                x: cursorX,
+                y: cursorY,
             }}
         >
             <motion.div 
-                className="flex items-center gap-2 bg-white border border-white/20 text-[#202124] shadow-[0_4px_12px_rgba(0,0,0,0.1)] rounded-full overflow-hidden"
-                initial={{ width: 12, height: 12, borderRadius: '50%' }}
-                animate={{ 
-                    width: isHovering ? 'auto' : 16, 
-                    height: isHovering ? 40 : 16,
-                    padding: isHovering ? '0 16px' : '0'
+                className="w-full h-full bg-white rounded-full flex items-center justify-center"
+                animate={{
+                    scale: isHovering ? 2.5 : 0.5,
+                    opacity: isHovering ? 0.8 : 1
                 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-            >
-                {isHovering && (
-                    <motion.div 
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="flex items-center gap-2 whitespace-nowrap"
-                    >
-                        <span className="text-xs font-medium font-sans">Explore</span>
-                        <span className="material-symbol text-base">arrow_forward</span>
-                    </motion.div>
-                )}
-            </motion.div>
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            />
         </motion.div>
     );
 };
