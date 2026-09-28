@@ -15,7 +15,7 @@ export const CLUSTERS = [
         masterLayout: "https://life-republic.in/images/gallery/eros/master-layout.webp",
         configurations: [
             { type: "2 BHK", size: "735 - 840 sq.ft.", price: "₹86 Lacs*" },
-            { type: "2.5 BHK", size: "866 - 1,086 sq.ft.", price: "₹85 Lakhs*" }
+            { type: "2.5 BHK", size: "866 - 1,086 sq.ft.", price: "₹1.02 Cr*" }
         ],
         gallery: [
         "https://liferepublic.in/images/project/gallery/1774005843Elevation 01 A.jpg",
