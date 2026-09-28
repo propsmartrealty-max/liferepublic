@@ -16,7 +16,33 @@ export const CLUSTERS = [
         configurations: [
             { type: "2 BHK", size: "735 - 840 sq.ft.", price: "₹75 Lakhs*" },
             { type: "2.5 BHK", size: "866 - 1,086 sq.ft.", price: "₹85 Lakhs*" }
-        ]
+        ],
+        gallery: [
+        "https://liferepublic.in/images/project/gallery/1774005843Elevation 01 A.jpg",
+        "https://liferepublic.in/images/project/gallery/1774005858Elevation 03 \u2013 Evening.jpg",
+        "https://liferepublic.in/images/project/gallery/1774005826Balcony.jpg",
+        "https://liferepublic.in/images/project/gallery/1774005907Master Bedroom.jpg",
+        "https://liferepublic.in/images/project/gallery/1774005871Gate.jpg",
+        "https://liferepublic.in/images/project/gallery/1774005885Living Room.jpg"
+],
+        amenitiesList: [
+        {
+                "name": "CHILDREN\u2019S PLAY AREA",
+                "icon": "https://liferepublic.in/images/project/aminities/1774006132Children\u2019s Play Area.jpg"
+        },
+        {
+                "name": "POOL",
+                "icon": "https://liferepublic.in/images/project/aminities/1774006174Pool 02.jpg"
+        },
+        {
+                "name": "CLUBHOUSE",
+                "icon": "https://liferepublic.in/images/project/aminities/1774006149Clubhouse.jpg"
+        }
+],
+        floorPlans: [
+        "https://liferepublic.in/images/project/plan/1774006373728x728 - 1_.jpg",
+        "https://liferepublic.in/images/project/plan/1774006416728x728 - 2_.jpg"
+]
     },
     {
         id: "duet",
@@ -34,7 +60,74 @@ export const CLUSTERS = [
         masterLayout: "https://liferepublic.in/images/home/slider-1.webp",
         configurations: [
             { type: "2 BHK", size: "721 - 766 sq.ft.", price: "₹62 Lakhs*" }
-        ]
+        ],
+        gallery: [
+        "https://liferepublic.in/images/project/gallery/1747221668duet interior 2.jpg",
+        "https://liferepublic.in/images/project/gallery/1747221661duet interior 1.jpg",
+        "https://liferepublic.in/images/project/gallery/1747221674duet interior 3.jpg"
+],
+        amenitiesList: [
+        {
+                "name": "PARTY LAWN",
+                "icon": "https://liferepublic.in/images/project/aminities/1747221841PARTY LAWN.jpg"
+        },
+        {
+                "name": "LOUNGE POOL",
+                "icon": "https://liferepublic.in/images/project/aminities/1747221826Lounge Pool.jpg"
+        },
+        {
+                "name": "COSMIC PLAY",
+                "icon": "https://liferepublic.in/images/project/aminities/1747221780COSMIC PLAY.jpg"
+        },
+        {
+                "name": "INDOOR GAMES AREA",
+                "icon": "https://liferepublic.in/images/project/aminities/1747221802indoor games area.jpg"
+        },
+        {
+                "name": "BBQ AREA",
+                "icon": "https://liferepublic.in/images/project/aminities/1747221772bbq area.jpg"
+        },
+        {
+                "name": "MULTI   SPORTS COURT",
+                "icon": "https://liferepublic.in/images/project/aminities/1747221834Multi - Sports Court.jpg"
+        },
+        {
+                "name": "AV ROOM",
+                "icon": "https://liferepublic.in/images/project/aminities/1747221760av room.jpg"
+        },
+        {
+                "name": "GYM",
+                "icon": "https://liferepublic.in/images/project/aminities/1747221795gym.jpg"
+        },
+        {
+                "name": "JACUZZI WITH FEATURE CANOPY",
+                "icon": "https://liferepublic.in/images/project/aminities/1747221809Jacuzzi with feature canopy.jpg"
+        },
+        {
+                "name": "DIGITAL GAMES AREA",
+                "icon": "https://liferepublic.in/images/project/aminities/1747221787digital games area.jpg"
+        },
+        {
+                "name": "KIDS PLAY AREA",
+                "icon": "https://liferepublic.in/images/project/aminities/1747221819kids play area.jpg"
+        },
+        {
+                "name": "~ FT",
+                "icon": "https://liferepublic.in/images/project/aminities/1747221749~370 ft. Jogging Track.jpg"
+        }
+],
+        floorPlans: [
+        "https://liferepublic.in/images/project/plan/17473051321744275848duetfp3.jpg",
+        "https://liferepublic.in/images/project/plan/17473051101744275822duetfp.jpg",
+        "https://liferepublic.in/images/project/plan/17473051661744275888duetunit 1.jpg",
+        "https://liferepublic.in/images/project/plan/17473052011744275914duetunit 4.jpg",
+        "https://liferepublic.in/images/project/plan/17473051801744275897duetunit 2.jpg",
+        "https://liferepublic.in/images/project/plan/17473050951744275811duetfp 1.jpg",
+        "https://liferepublic.in/images/project/plan/17473051891744275906duetunit 3.jpg",
+        "https://liferepublic.in/images/project/plan/17473051221744275832duetfp2.jpg",
+        "https://liferepublic.in/images/project/plan/17473051411744275858duetfp4.jpg",
+        "https://liferepublic.in/images/project/plan/17473052091744275922duetunit 5.jpg"
+]
     },
     {
         id: "qrious",
@@ -55,26 +148,135 @@ export const CLUSTERS = [
             { type: "2 BHK Lux", size: "900 sq.ft.", price: "₹85 Lakhs*" },
             { type: "3 BHK Large", size: "1,116 sq.ft.", price: "₹1.1 Cr*" },
             { type: "3 BHK Lux", size: "1,231 sq.ft.", price: "₹1.3 Cr*" }
-        ]
+        ],
+        gallery: [
+        "https://liferepublic.in/images/project/gallery/17507608341749723762QriousLiving.jpg",
+        "https://liferepublic.in/images/project/gallery/17507608521750750923qrious gallery2.jpg",
+        "https://liferepublic.in/images/project/gallery/17507608441750750916qrious gallery1.jpg",
+        "https://liferepublic.in/images/project/gallery/17507608601750750943qrious gallery3.jpg",
+        "https://liferepublic.in/images/project/gallery/17507608261749723734QriousBedroom.jpg"
+],
+        amenitiesList: [
+        {
+                "name": "CH ENTRY ()",
+                "icon": "https://liferepublic.in/images/project/aminities/17507610811749724278CH ENTRY (1).jpg"
+        },
+        {
+                "name": "POOL",
+                "icon": "https://liferepublic.in/images/project/aminities/17507609671749724047POOL 01_1.jpg"
+        },
+        {
+                "name": "GYM DAY",
+                "icon": "https://liferepublic.in/images/project/aminities/17507610191749724099GYM_DAY.jpg"
+        },
+        {
+                "name": "TERRACE  RAILING",
+                "icon": "https://liferepublic.in/images/project/aminities/17507611161749724364TERRACE 01_RAILING.jpg"
+        },
+        {
+                "name": "ZUMBA YOGA",
+                "icon": "https://liferepublic.in/images/project/aminities/17507611001749724338ZUMBA_YOGA.jpg"
+        },
+        {
+                "name": "LOUNGERS  ()",
+                "icon": "https://liferepublic.in/images/project/aminities/17507610431749724153LOUNGERS_1 (1).jpg"
+        },
+        {
+                "name": "CAM A PLAY AREA MULTICORT",
+                "icon": "https://liferepublic.in/images/project/aminities/17507611281749724374CAM 04A_PLAY AREA MULTICORT.jpg"
+        },
+        {
+                "name": "LIFESTYLE",
+                "icon": "https://liferepublic.in/images/project/aminities/17507609871749724068LIFESTYLE.jpg"
+        },
+        {
+                "name": "CHESS",
+                "icon": "https://liferepublic.in/images/project/aminities/17507610301749724113Chess.jpg"
+        },
+        {
+                "name": "PAVILION",
+                "icon": "https://liferepublic.in/images/project/aminities/17507610031749724083PAVILION.jpg"
+        }
+],
+        floorPlans: [
+        "https://liferepublic.in/images/project/plan/1750763925qrious20.jpg",
+        "https://liferepublic.in/images/project/plan/1750764931qrious25.jpg",
+        "https://liferepublic.in/images/project/plan/1750765294qrious39.jpg",
+        "https://liferepublic.in/images/project/plan/1750765087qrious36.jpg",
+        "https://liferepublic.in/images/project/plan/1750765385qrious43.jpg",
+        "https://liferepublic.in/images/project/plan/1750763886qrious18.jpg",
+        "https://liferepublic.in/images/project/plan/1750765036qrious29.jpg",
+        "https://liferepublic.in/images/project/plan/1750763592qrious32.jpg",
+        "https://liferepublic.in/images/project/plan/1750765104qrious37.jpg",
+        "https://liferepublic.in/images/project/plan/1750764957qrious26.jpg",
+        "https://liferepublic.in/images/project/plan/1750765463qrious46.jpg",
+        "https://liferepublic.in/images/project/plan/1750765349qrious41.jpg",
+        "https://liferepublic.in/images/project/plan/1750764914qrious24.jpg",
+        "https://liferepublic.in/images/project/plan/1750765063qrious35.jpg",
+        "https://liferepublic.in/images/project/plan/1750763869qrious17.jpg",
+        "https://liferepublic.in/images/project/plan/1750765442qrious45.jpg",
+        "https://liferepublic.in/images/project/plan/1750765367qrious42.jpg",
+        "https://liferepublic.in/images/project/plan/1750764894qrious23.jpg",
+        "https://liferepublic.in/images/project/plan/1750761881qrious13.jpg",
+        "https://liferepublic.in/images/project/plan/1750764994qrious27.jpg",
+        "https://liferepublic.in/images/project/plan/1750765127qrious38.jpg",
+        "https://liferepublic.in/images/project/plan/1750765485qrious47.jpg",
+        "https://liferepublic.in/images/project/plan/17507618301749725218Pg- 14.jpg",
+        "https://liferepublic.in/images/project/plan/1750763905qrious19.jpg",
+        "https://liferepublic.in/images/project/plan/1750763545qrious15.jpg",
+        "https://liferepublic.in/images/project/plan/1750763612qrious33.jpg",
+        "https://liferepublic.in/images/project/plan/1750765425qrious44.jpg",
+        "https://liferepublic.in/images/project/plan/1750763940qrious21.jpg",
+        "https://liferepublic.in/images/project/plan/1750765016qrious28.jpg",
+        "https://liferepublic.in/images/project/plan/1750763525qrious14.jpg",
+        "https://liferepublic.in/images/project/plan/1750763568qrious31.jpg",
+        "https://liferepublic.in/images/project/plan/1750765315qrious40.jpg",
+        "https://liferepublic.in/images/project/plan/1750764868qrious22.jpg"
+]
     },
     {
         id: "canvas",
         status: "New Launch",
         possession: "Dec 2028",
-        sector: "Sector R12",
-        usp: "Ultra-Luxury Estates & Villas",
+        sector: "Sector R5",
+        usp: "Pune's Tallest Residential Tower",
         name: "Canvas",
         slug: "kolte-patil-life-republic-canvas",
-        category: "Ultra-Luxury 3 & 4 BHK",
-        description: "Canvas (Sector R5 / 5th Avenue) is the pinnacle of luxury at Life Republic. Offering sprawling 3 & 4 BHK residences with bespoke finishes and private decks.",
-        price: "₹1.30 Cr - ₹2.8 Cr",
+        category: "Premium 3 & 4 BHK",
+        description: "Pune's Tallest Residential Tower reaching ~120M high. Canvas offers ultra-premium 3 & 4 BHK residences with 50+ curated amenities across a 6+ acre estate. Each unit features 2 master bedrooms.",
+        price: "₹1.45 Cr Onwards",
         rera: "P52100077008",
-        image: "https://liferepublic.in/images/webp/popup/canvas_desktop.jpg",
-        masterLayout: "https://liferepublic.in/images/home/slider-1.webp",
+        image: "https://liferepublic.in/images/project/gallery/1727440628GATE SCULPTURE.webp",
+        masterLayout: "https://liferepublic.in/images/project/plan/172846001957.webp",
         configurations: [
-            { type: "3 BHK", size: "1,151 - 1,330 sq.ft.", price: "₹1.30 Cr*" },
-            { type: "3.5 BHK", size: "1,450 - 1,700 sq.ft.", price: "₹1.65 Cr*" },
-            { type: "4 BHK", size: "1,700 - 2,023 sq.ft.", price: "₹2.2 Cr*" }
+            { type: "3 BHK", size: "1,151 - 1,330 sq.ft.", price: "₹1.45 Cr*" },
+            { type: "4 BHK", size: "1,700 - 2,023 sq.ft.", price: "₹2.20 Cr*" }
+        ],
+        gallery: [
+            "https://liferepublic.in/images/project/gallery/1727440628GATE SCULPTURE.webp",
+            "https://liferepublic.in/images/project/gallery/1727440638GATE.webp",
+            "https://liferepublic.in/images/project/gallery/1727440765TERRACE 01.webp",
+            "https://liferepublic.in/images/project/gallery/1727440648Living.webp",
+            "https://liferepublic.in/images/project/gallery/1727440618DECK.webp",
+            "https://liferepublic.in/images/project/gallery/1727440555BALCONY 1.webp",
+            "https://liferepublic.in/images/project/gallery/1727440659LOBBY.webp",
+            "https://liferepublic.in/images/project/gallery/1727440680MASTER BEDROOM.webp"
+        ],
+        amenitiesList: [
+            { name: "Top Podium", icon: "https://liferepublic.in/images/project/aminities/1727441184TOP PODIUM.webp" },
+            { name: "Pavillion", icon: "https://liferepublic.in/images/project/aminities/1727441099PAVILLION.webp" },
+            { name: "Multipurpose Hall", icon: "https://liferepublic.in/images/project/aminities/1727441088MULTIPURPOSE HALL.webp" },
+            { name: "Play Court", icon: "https://liferepublic.in/images/project/aminities/1727441143PLAY COURT_NIGHT.webp" },
+            { name: "Bonfire", icon: "https://liferepublic.in/images/project/aminities/1727441022BONFIRE.webp" },
+            { name: "Infinity Pool", icon: "https://liferepublic.in/images/project/aminities/1727441152POOL 01.webp" }
+        ],
+        floorPlans: [
+            "https://liferepublic.in/images/project/plan/172846001957.webp",
+            "https://liferepublic.in/images/project/plan/17284728371Canvas Flipchart - A3 - Final-21.webp",
+            "https://liferepublic.in/images/project/plan/172845998455.webp",
+            "https://liferepublic.in/images/project/plan/172845999054.webp",
+            "https://liferepublic.in/images/project/plan/17284730741Canvas Flipchart - A3 - Final-29 copy.webp",
+            "https://liferepublic.in/images/project/plan/172846003358.webp"
         ]
     },
     {

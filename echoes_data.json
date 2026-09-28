@@ -1,0 +1,40 @@
+{
+  "echoes": {
+    "gallery": [
+      "https://liferepublic.in/images/project/gallery/1774005843Elevation 01 A.jpg",
+      "https://liferepublic.in/images/project/gallery/1774005858Elevation 03 \u2013 Evening.jpg",
+      "https://liferepublic.in/images/project/gallery/1774005826Balcony.jpg",
+      "https://liferepublic.in/images/project/gallery/1774005907Master Bedroom.jpg",
+      "https://liferepublic.in/images/project/gallery/1774005871Gate.jpg",
+      "https://liferepublic.in/images/project/gallery/1774005885Living Room.jpg"
+    ],
+    "floorPlans": [
+      "https://liferepublic.in/images/project/plan/1774006373728x728 - 1_.jpg",
+      "https://liferepublic.in/images/project/plan/1774006416728x728 - 2_.jpg"
+    ],
+    "amenities": [
+      {
+        "name": "CHILDREN\u2019S PLAY AREA",
+        "icon": "https://liferepublic.in/images/project/aminities/1774006132Children\u2019s Play Area.jpg"
+      },
+      {
+        "name": "POOL",
+        "icon": "https://liferepublic.in/images/project/aminities/1774006174Pool 02.jpg"
+      },
+      {
+        "name": "CLUBHOUSE",
+        "icon": "https://liferepublic.in/images/project/aminities/1774006149Clubhouse.jpg"
+      }
+    ]
+  },
+  "township": [
+    "https://liferepublic.in/images/BetterLiving/1712120613unrestricted-greenery.webp",
+    "https://liferepublic.in/images/BetterLiving/1709190517environment.webp",
+    "https://liferepublic.in/images/webp/whatsapp-icon.webp",
+    "https://liferepublic.in/images/BetterLiving/1709190056blissful-urban-park.webp",
+    "https://liferepublic.in/images/webp/logo.webp",
+    "https://liferepublic.in/generatecaptcha?t=img",
+    "https://liferepublic.in/images/BetterLiving/1709719407highstreet-retail.webp",
+    "https://liferepublic.in/images/banner/1726044298BL1600x900.webp"
+  ]
+}

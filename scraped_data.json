@@ -1,0 +1,157 @@
+{
+  "duet": {
+    "gallery": [
+      "https://liferepublic.in/images/project/gallery/1747221668duet interior 2.jpg",
+      "https://liferepublic.in/images/project/gallery/1747221661duet interior 1.jpg",
+      "https://liferepublic.in/images/project/gallery/1747221674duet interior 3.jpg"
+    ],
+    "floorPlans": [
+      "https://liferepublic.in/images/project/plan/17473051321744275848duetfp3.jpg",
+      "https://liferepublic.in/images/project/plan/17473051101744275822duetfp.jpg",
+      "https://liferepublic.in/images/project/plan/17473051661744275888duetunit 1.jpg",
+      "https://liferepublic.in/images/project/plan/17473052011744275914duetunit 4.jpg",
+      "https://liferepublic.in/images/project/plan/17473051801744275897duetunit 2.jpg",
+      "https://liferepublic.in/images/project/plan/17473050951744275811duetfp 1.jpg",
+      "https://liferepublic.in/images/project/plan/17473051891744275906duetunit 3.jpg",
+      "https://liferepublic.in/images/project/plan/17473051221744275832duetfp2.jpg",
+      "https://liferepublic.in/images/project/plan/17473051411744275858duetfp4.jpg",
+      "https://liferepublic.in/images/project/plan/17473052091744275922duetunit 5.jpg"
+    ],
+    "amenities": [
+      {
+        "name": "PARTY LAWN",
+        "icon": "https://liferepublic.in/images/project/aminities/1747221841PARTY LAWN.jpg"
+      },
+      {
+        "name": "LOUNGE POOL",
+        "icon": "https://liferepublic.in/images/project/aminities/1747221826Lounge Pool.jpg"
+      },
+      {
+        "name": "COSMIC PLAY",
+        "icon": "https://liferepublic.in/images/project/aminities/1747221780COSMIC PLAY.jpg"
+      },
+      {
+        "name": "INDOOR GAMES AREA",
+        "icon": "https://liferepublic.in/images/project/aminities/1747221802indoor games area.jpg"
+      },
+      {
+        "name": "BBQ AREA",
+        "icon": "https://liferepublic.in/images/project/aminities/1747221772bbq area.jpg"
+      },
+      {
+        "name": "MULTI   SPORTS COURT",
+        "icon": "https://liferepublic.in/images/project/aminities/1747221834Multi - Sports Court.jpg"
+      },
+      {
+        "name": "AV ROOM",
+        "icon": "https://liferepublic.in/images/project/aminities/1747221760av room.jpg"
+      },
+      {
+        "name": "GYM",
+        "icon": "https://liferepublic.in/images/project/aminities/1747221795gym.jpg"
+      },
+      {
+        "name": "JACUZZI WITH FEATURE CANOPY",
+        "icon": "https://liferepublic.in/images/project/aminities/1747221809Jacuzzi with feature canopy.jpg"
+      },
+      {
+        "name": "DIGITAL GAMES AREA",
+        "icon": "https://liferepublic.in/images/project/aminities/1747221787digital games area.jpg"
+      },
+      {
+        "name": "KIDS PLAY AREA",
+        "icon": "https://liferepublic.in/images/project/aminities/1747221819kids play area.jpg"
+      },
+      {
+        "name": "~ FT",
+        "icon": "https://liferepublic.in/images/project/aminities/1747221749~370 ft. Jogging Track.jpg"
+      }
+    ]
+  },
+  "qrious": {
+    "gallery": [
+      "https://liferepublic.in/images/project/gallery/17507608341749723762QriousLiving.jpg",
+      "https://liferepublic.in/images/project/gallery/17507608521750750923qrious gallery2.jpg",
+      "https://liferepublic.in/images/project/gallery/17507608441750750916qrious gallery1.jpg",
+      "https://liferepublic.in/images/project/gallery/17507608601750750943qrious gallery3.jpg",
+      "https://liferepublic.in/images/project/gallery/17507608261749723734QriousBedroom.jpg"
+    ],
+    "floorPlans": [
+      "https://liferepublic.in/images/project/plan/1750763925qrious20.jpg",
+      "https://liferepublic.in/images/project/plan/1750764931qrious25.jpg",
+      "https://liferepublic.in/images/project/plan/1750765294qrious39.jpg",
+      "https://liferepublic.in/images/project/plan/1750765087qrious36.jpg",
+      "https://liferepublic.in/images/project/plan/1750765385qrious43.jpg",
+      "https://liferepublic.in/images/project/plan/1750763886qrious18.jpg",
+      "https://liferepublic.in/images/project/plan/1750765036qrious29.jpg",
+      "https://liferepublic.in/images/project/plan/1750763592qrious32.jpg",
+      "https://liferepublic.in/images/project/plan/1750765104qrious37.jpg",
+      "https://liferepublic.in/images/project/plan/1750764957qrious26.jpg",
+      "https://liferepublic.in/images/project/plan/1750765463qrious46.jpg",
+      "https://liferepublic.in/images/project/plan/1750765349qrious41.jpg",
+      "https://liferepublic.in/images/project/plan/1750764914qrious24.jpg",
+      "https://liferepublic.in/images/project/plan/1750765063qrious35.jpg",
+      "https://liferepublic.in/images/project/plan/1750763869qrious17.jpg",
+      "https://liferepublic.in/images/project/plan/1750765442qrious45.jpg",
+      "https://liferepublic.in/images/project/plan/1750765367qrious42.jpg",
+      "https://liferepublic.in/images/project/plan/1750764894qrious23.jpg",
+      "https://liferepublic.in/images/project/plan/1750761881qrious13.jpg",
+      "https://liferepublic.in/images/project/plan/1750764994qrious27.jpg",
+      "https://liferepublic.in/images/project/plan/1750765127qrious38.jpg",
+      "https://liferepublic.in/images/project/plan/1750765485qrious47.jpg",
+      "https://liferepublic.in/images/project/plan/17507618301749725218Pg- 14.jpg",
+      "https://liferepublic.in/images/project/plan/1750763905qrious19.jpg",
+      "https://liferepublic.in/images/project/plan/1750763545qrious15.jpg",
+      "https://liferepublic.in/images/project/plan/1750763612qrious33.jpg",
+      "https://liferepublic.in/images/project/plan/1750765425qrious44.jpg",
+      "https://liferepublic.in/images/project/plan/1750763940qrious21.jpg",
+      "https://liferepublic.in/images/project/plan/1750765016qrious28.jpg",
+      "https://liferepublic.in/images/project/plan/1750763525qrious14.jpg",
+      "https://liferepublic.in/images/project/plan/1750763568qrious31.jpg",
+      "https://liferepublic.in/images/project/plan/1750765315qrious40.jpg",
+      "https://liferepublic.in/images/project/plan/1750764868qrious22.jpg"
+    ],
+    "amenities": [
+      {
+        "name": "CH ENTRY ()",
+        "icon": "https://liferepublic.in/images/project/aminities/17507610811749724278CH ENTRY (1).jpg"
+      },
+      {
+        "name": "POOL",
+        "icon": "https://liferepublic.in/images/project/aminities/17507609671749724047POOL 01_1.jpg"
+      },
+      {
+        "name": "GYM DAY",
+        "icon": "https://liferepublic.in/images/project/aminities/17507610191749724099GYM_DAY.jpg"
+      },
+      {
+        "name": "TERRACE  RAILING",
+        "icon": "https://liferepublic.in/images/project/aminities/17507611161749724364TERRACE 01_RAILING.jpg"
+      },
+      {
+        "name": "ZUMBA YOGA",
+        "icon": "https://liferepublic.in/images/project/aminities/17507611001749724338ZUMBA_YOGA.jpg"
+      },
+      {
+        "name": "LOUNGERS  ()",
+        "icon": "https://liferepublic.in/images/project/aminities/17507610431749724153LOUNGERS_1 (1).jpg"
+      },
+      {
+        "name": "CAM A PLAY AREA MULTICORT",
+        "icon": "https://liferepublic.in/images/project/aminities/17507611281749724374CAM 04A_PLAY AREA MULTICORT.jpg"
+      },
+      {
+        "name": "LIFESTYLE",
+        "icon": "https://liferepublic.in/images/project/aminities/17507609871749724068LIFESTYLE.jpg"
+      },
+      {
+        "name": "CHESS",
+        "icon": "https://liferepublic.in/images/project/aminities/17507610301749724113Chess.jpg"
+      },
+      {
+        "name": "PAVILION",
+        "icon": "https://liferepublic.in/images/project/aminities/17507610031749724083PAVILION.jpg"
+      }
+    ]
+  }
+}

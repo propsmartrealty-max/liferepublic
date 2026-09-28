@@ -27,6 +27,9 @@ interface ProjectData {
     usp?: string;
     masterLayout?: string;
     configurations?: Configuration[];
+    gallery?: string[];
+    amenitiesList?: {name: string, icon: string}[];
+    floorPlans?: string[];
 }
 
 export const ProjectCard = ({ project, priority }: { project: ProjectData, priority?: boolean }) => {
