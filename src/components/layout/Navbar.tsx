@@ -1,115 +1,114 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-    Menu, X, ArrowRight, Sparkles, Building2, ShieldCheck, 
-    MapPin, ChevronDown, Zap, ArrowUpRight, TrendingUp 
-} from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Search, Phone } from 'lucide-react';
 import { Button } from '../ui/Button';
-import sectorsData from '../../data/sectors.json';
-import { ID_TO_SLUG } from '../../data/slug-registry';
 
-export const Navbar: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
-    const [showQuickSwitch, setShowQuickSwitch] = useState(false);
+export const Navbar = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const location = useLocation();
 
     useEffect(() => {
-        const handleScroll = () => setScrolled(window.scrollY > 20);
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Scroll to top on route change
     useEffect(() => {
-        setIsOpen(false);
-        setShowQuickSwitch(false);
-    }, [location]);
-
-    const getAccentBg = () => {
-        if (location.pathname.includes('luxury') || location.pathname.includes('24k')) return 'bg-[#C5A059]';
-        if (location.pathname.includes('smart') || location.pathname.includes('qrious')) return 'bg-blue-400';
-        return 'bg-accent';
-    };
+        window.scrollTo(0, 0);
+        setIsMobileMenuOpen(false);
+    }, [location.pathname]);
 
     return (
-        <header className="fixed top-6 left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl z-[100] transition-all duration-700">
-            <nav className="w-full" aria-label="Main Navigation">
-                <div className="relative flex items-center justify-between px-8 py-4 bg-[#0B0D14]/90 backdrop-blur-[40px] border border-gray-200 shadow-[0_8px_32px_rgba(0,0,0,0.06)] rounded-[3rem] px-10 py-4 transition-all">
-                    <Link to="/" className="flex items-center group">
-                        <img loading="lazy" src="/images/brand/logo.webp" alt="Life Republic" className="h-10 md:h-12 w-auto object-contain transition-transform duration-700 group-hover:scale-105 filter drop-shadow-xl" />
-                    </Link>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0B0D14]/95 backdrop-blur-xl border-b border-white/10 py-3' : 'bg-transparent py-5'}`}>
+            <div className="container mx-auto px-4 md:px-8">
+                <div className="flex items-center justify-between">
                     
-                    <div className="hidden lg:flex items-center gap-12">
+                    {/* Logo Section */}
+                    <Link to="/" className="flex items-center z-50">
+                        <div className="bg-white rounded-md px-4 py-2 border border-[#E5C07B]/50 flex items-center shadow-[0_0_15px_rgba(229,192,123,0.15)]">
+                            <span className="text-xl font-serif font-bold text-[#7F1D1D] tracking-tight">KOLTE PATIL</span>
+                            <span className="w-px h-6 bg-gray-300 mx-3"></span>
+                            <span className="text-xs font-bold text-gray-800 tracking-widest uppercase">Life Republic</span>
+                        </div>
+                    </Link>
+
+                    {/* Desktop Menu */}
+                    <div className="hidden lg:flex items-center space-x-8">
                         {[
-                            { name: 'Sectors', path: '/projects', special: true },
-                            { name: 'Lifestyle', path: '/lifestyle' },
-                            { name: 'Infrastructure', path: '/location-highlights' },
-                            { name: 'Investment', path: '/nri-corner' }
+                            { name: 'TOWNSHIP', path: '/master-plan' },
+                            { name: 'VILLAS & PLOTS', path: '/projects/nora-plots' },
+                            { name: 'APARTMENTS', path: '/projects' },
+                            { name: 'HIGH STREET', path: '/location' },
+                            { name: 'SCHOOL', path: '/lifestyle' }
                         ].map((link) => (
-                            <div key={link.name} className="relative group">
-                                {link.special ? (
-                                    <button 
-                                        onMouseEnter={() => setShowQuickSwitch(true)} 
-                                        onClick={() => setShowQuickSwitch(!showQuickSwitch)} 
-                                        className="flex items-center gap-3 text-[15px] font-medium text-white/80 tracking-tight font-semibold hover:text-white transition-all"
-                                    >
-                                        {link.name} 
-                                        <ChevronDown size={16} className={`transition-transform duration-500 ${showQuickSwitch ? 'rotate-180 text-accent' : ''}`} />
-                                    </button>
-                                ) : (
-                                    <Link to={link.path} className={`text-sm font-bold tracking-tight font-semibold transition-all ${location.pathname === link.path ? 'text-white' : 'text-white/70 hover:text-white'}`}>
-                                        {link.name}
-                                    </Link>
-                                )}
-                                <motion.div className={`absolute -bottom-2 left-0 h-[2px] ${getAccentBg()} w-0 group-hover:w-full transition-all duration-700 ${location.pathname === link.path ? 'w-full' : ''}`} />
-                            </div>
+                            <Link 
+                                key={link.name} 
+                                to={link.path} 
+                                className="text-[11px] font-bold text-white hover:text-[#E5C07B] uppercase tracking-[0.15em] transition-colors"
+                            >
+                                {link.name}
+                            </Link>
                         ))}
                     </div>
 
-                    <div className="flex items-center gap-6">
-                        <Button className="bg-[#7F1D1D] hover:bg-[#991B1B] text-white border border-red-900/50 rounded-full px-6 py-2 shadow-lg" variant="primary" size="lg" className="hidden sm:flex rounded-[2rem] bg-primary text-white px-8 py-3 font-bold text-[13px] tracking-tight font-semibold gap-2 shadow-[0_4px_14px_rgba(54,168,73,0.3)] hover:scale-105 transition-all duration-300 border-none" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
-                            Enquire Now <Sparkles size={14} />
+                    {/* Right Actions */}
+                    <div className="hidden lg:flex items-center space-x-3 z-50">
+                        <Button className="bg-[#10B981] hover:bg-[#059669] text-white text-[10px] uppercase font-bold tracking-wider px-5 py-2.5 rounded-full shadow-md flex items-center gap-2">
+                            <Phone size={14} className="fill-current" /> WHATSAPP
                         </Button>
-                        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-3 bg-transparent border border-white/10 rounded-none text-white hover:text-accent transition-all border border-white/20" aria-label="Toggle Menu">
-                            {isOpen ? <X size={28} /> : <Menu size={28} />}
-                        </button>
+                        <Button className="bg-transparent border border-white/20 text-white hover:border-[#E5C07B] hover:text-[#E5C07B] text-[10px] uppercase font-bold tracking-wider px-5 py-2.5 rounded-full flex items-center gap-2">
+                            <Search size={14} /> SEARCH
+                        </Button>
+                        <Button className="bg-[#7F1D1D] hover:bg-[#991B1B] text-white border border-red-900/50 text-[10px] uppercase font-bold tracking-wider px-6 py-2.5 rounded-full shadow-[0_0_15px_rgba(153,27,27,0.4)]" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
+                            ENQUIRE
+                        </Button>
+                    </div>
+
+                    {/* Mobile Toggle */}
+                    <button 
+                        className="lg:hidden text-white z-50 p-2"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                        {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                    </button>
+                </div>
+            </div>
+
+            {/* Mobile Menu */}
+            {isMobileMenuOpen && (
+                <div className="lg:hidden absolute top-0 left-0 w-full h-screen bg-[#0B0D14] z-40 pt-24 px-6 flex flex-col">
+                    <div className="flex flex-col space-y-6 flex-1">
+                        {[
+                            { name: 'TOWNSHIP', path: '/master-plan' },
+                            { name: 'VILLAS & PLOTS', path: '/projects/nora-plots' },
+                            { name: 'APARTMENTS', path: '/projects' },
+                            { name: 'HIGH STREET', path: '/location' },
+                            { name: 'SCHOOL', path: '/lifestyle' }
+                        ].map((link) => (
+                            <Link 
+                                key={link.name} 
+                                to={link.path} 
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-xl font-serif font-bold text-white border-b border-white/10 pb-4"
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                    </div>
+                    <div className="pb-12 space-y-4">
+                        <Button className="w-full bg-[#10B981] hover:bg-[#059669] text-white py-4 rounded-full font-bold tracking-wider uppercase text-sm">
+                            WHATSAPP
+                        </Button>
+                        <Button className="w-full bg-[#7F1D1D] hover:bg-[#991B1B] text-white py-4 rounded-full font-bold tracking-wider uppercase text-sm border border-red-900/50" onClick={() => { setIsMobileMenuOpen(false); window.dispatchEvent(new CustomEvent('open-enquiry-modal')); }}>
+                            ENQUIRE NOW
+                        </Button>
                     </div>
                 </div>
-                <AnimatePresence>
-                    {showQuickSwitch && (
-                        <motion.div initial={{ opacity: 0, y: -40, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -40, scale: 0.95 }} onMouseLeave={() => setShowQuickSwitch(false)} className="absolute left-1/2 -translate-x-1/2 top-40 w-full max-w-6xl bg-black/40 backdrop-blur-3xl border border-white/10 shadow-glass rounded-3xl backdrop-blur-3xl rounded-2xl p-20 border border-white/10 shadow-hard z-[-1]">
-                            <div className="grid grid-cols-1 md:grid-cols-4 gap-20">
-                                <div className="space-y-12"><div className="flex items-center gap-4 text-accent mb-4"><Building2 size={20} /><span className="text-[12px] font-bold tracking-tight font-semibold">Premium Clusters</span></div><div className="space-y-6">{sectorsData.sectors.slice(0, 6).map(s => (<Link key={s.id} to={`/projects/${ID_TO_SLUG[s.id] || s.slug}`} className="flex items-center justify-between text-white/50 hover:text-white group transition-all"><span className="text-lg font-bold tracking-tight">{s.name}</span><ArrowUpRight size={20} className="opacity-0 group-hover:opacity-100 -translate-y-2 translate-x-2 transition-all text-accent" /></Link>))}</div></div>
-                                <div className="space-y-12"><div className="flex items-center gap-4 text-accent mb-4"><Zap size={20} /><span className="text-[12px] font-bold tracking-tight font-semibold">Investment Yield</span></div><div className="space-y-6">{sectorsData.sectors.slice(6, 12).map(s => (<Link key={s.id} to={`/projects/${ID_TO_SLUG[s.id] || s.slug}`} className="flex items-center justify-between text-white/50 hover:text-white group transition-all"><span className="text-lg font-bold tracking-tight">{s.name}</span><TrendingUp size={20} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all text-accent" /></Link>))}</div></div>
-                                <div className="space-y-12"><div className="flex items-center gap-4 text-accent mb-4"><MapPin size={20} /><span className="text-[12px] font-bold tracking-tight font-semibold">Strategic Zones</span></div><div className="space-y-6">{sectorsData.localities.slice(0, 6).map(l => (<Link key={l.id} to={`/location/${l.slug}`} className="flex items-center justify-between text-white/50 hover:text-white group transition-all"><span className="text-lg font-bold tracking-tight">{l.name}</span><ArrowRight size={20} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all text-accent" /></Link>))}</div></div>
-                                <div className="bg-transparent border border-white/10 rounded-2xl p-12 flex flex-col justify-between border border-white/10 group"><div className="space-y-6 text-center"><Sparkles size={48} className="text-accent mx-auto mb-4 animate-pulse" /><h4 className="text-4xl font-serif font-bold text-white tracking-tighter">Master <br />Blueprint.</h4><p className="text-sm text-white/30 leading-relaxed font-medium">Navigate the 390-acre tectonic landscape through our interactive spatial mesh.</p></div><Link to="/master-plan" className="w-full bg-accent text-white py-8 rounded-2xl text-center font-bold text-xs tracking-tight font-semibold shadow-hard hover:bg-[#0B0D14] transition-all mt-10">Explore Map</Link></div>
-                            </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-            </nav>
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div initial={{ opacity: 0, x: '100%' }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: '100%' }} className="fixed inset-0 bg-black/90 backdrop-blur-3xl z-[110] lg:hidden p-6 sm:p-10 flex flex-col">
-                        <div className="flex justify-between items-center mb-8 sm:mb-16 relative z-10">
-                            <Link to="/" className="flex items-center group">
-                                <img loading="lazy" src="/images/brand/logo.webp" alt="Life Republic" className="h-10 md:h-12 w-auto object-contain transition-transform duration-700 group-hover:scale-105 filter drop-shadow-xl" />
-                            </Link>
-                            <button onClick={() => setIsOpen(false)} className="p-3 sm:p-4 bg-transparent border border-white/10 rounded-2xl text-white border border-white/10 hover:bg-[#0B0D14]/10 transition-colors" aria-label="Close Menu">
-                                <X size={28} />
-                            </button>
-                        </div>
-                        <div className="space-y-6 flex-1 relative z-10 overflow-y-auto">{[
-                            { name: 'Sovereign Sectors', path: '/projects' },
-                            { name: 'Luxury Villas', path: '/projects/kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi' },
-                            { name: 'Infrastructure', path: '/location-highlights' },
-                            { name: 'Investment Hub', path: '/nri-corner' }
-                        ].map((link) => (<Link key={link.name} to={link.path} onClick={() => setIsOpen(false)} className="block text-3xl sm:text-4xl font-serif font-bold text-white hover:text-accent transition-all tracking-tight leading-tight">{link.name}</Link>))}</div>
-                        <div className="space-y-6 pt-8 border-t border-white/10 relative z-10 mt-auto"><div className="flex items-center gap-3 text-white/30 font-bold tracking-tight font-semibold text-[9px]"><ShieldCheck size={16} className="text-accent" /> MahaRERA Synchronized</div><Button className="bg-[#7F1D1D] hover:bg-[#991B1B] text-white border border-red-900/50 rounded-full px-6 py-2 shadow-lg" variant="primary" size="lg" className="w-full rounded-2xl py-4 font-bold text-lg shadow-hard" onClick={() => { setIsOpen(false); window.dispatchEvent(new CustomEvent('open-enquiry-modal')); }}>Enquire Now</Button></div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </header>
+            )}
+        </nav>
     );
 };

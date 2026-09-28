@@ -152,14 +152,9 @@ const Home: React.FC = () => {
             {/* Phase 4: Lifestyle */}
             <AmenitiesCarousel />
 
+            
             {/* Phase 5: Location Authority */}
-            <section className="py-16 md:py-24 bg-background text-secondary border-y-2 border-strong relative overflow-hidden" aria-label="Hinjewadi Investment Location Advantage">
-                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                    <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[100px]"></div>
-                    <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-orange-500/10 rounded-full blur-[100px]"></div>
-                </div>
-                <div className="absolute inset-0 bg-[url('/images/gallery/eros/master-layout.webp')] bg-cover bg-center opacity-5 mix-blend-overlay"></div>
-
+            <section className="py-24 bg-[#0B0D14] text-white border-y border-white/5 relative overflow-hidden" aria-label="Hinjewadi Investment Location Advantage">
                 <div className="container mx-auto px-4 relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -167,19 +162,24 @@ const Home: React.FC = () => {
                         viewport={{ once: true }}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-secondary bg-clip-text text-transparent">Minutes From Everywhere, <span className="text-[#E5C07B]">Miles From Chaos</span></h2>
-                        <span className="text-[#E5C07B] text-[10px] font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 mb-4 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-12 border border-[#E5C07B]/30 px-4 py-1.5 rounded-full bg-[#151822]/80 backdrop-blur-md"><span className="text-red-500">📍</span> STRATEGIC CONNECTIVITY & PROXIMITY</span>
-                        <p className="text-text-muted max-w-2xl mx-auto text-lg font-light leading-relaxed">
+                        <span className="inline-block py-1 px-4 rounded-full border border-[#E5C07B]/30 text-[#E5C07B] text-[10px] font-bold tracking-[0.2em] uppercase mb-8">
+                            📍 STRATEGIC CONNECTIVITY & PROXIMITY
+                        </span>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4 text-white">
+                            Minutes From Everywhere, <span className="text-[#E5C07B]">Miles From Chaos</span>
+                        </h2>
+                        <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base font-light leading-relaxed">
                             Seamless access to Hinjewadi IT Park, Wakad, and Pune-Mumbai Expressway via the multi-level Wakad junction.
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
                         {[
-                            { icon: Briefcase, title: 'Work', desc: 'Rajiv Gandhi IT Park', time: '10 Mins', gradient: 'from-blue-500/20 to-cyan-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-blue-700 bg-blue-50 border-blue-100', bgIcon: 'bg-blue-500/20 text-blue-400', glow: 'bg-blue-500/20', glowHover: 'group-hover:bg-blue-500/30' },
-                            { icon: Plane, title: 'Connect', desc: 'Mumbai-Pune Expy', time: '15 Mins', gradient: 'from-orange-500/20 to-amber-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-orange-700 bg-orange-50 border-orange-100', bgIcon: 'bg-orange-500/20 text-orange-400', glow: 'bg-orange-500/20', glowHover: 'group-hover:bg-orange-500/30' },
-                            { icon: GraduationCap, title: 'Learn', desc: 'Anisha Global School', time: 'Inside', gradient: 'from-green-500/20 to-emerald-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-green-700 bg-green-50 border-green-100', bgIcon: 'bg-green-500/20 text-green-400', glow: 'bg-green-500/20', glowHover: 'group-hover:bg-green-500/30' },
-                            { icon: HeartPulse, title: 'Care', desc: 'Ruby Hall Clinic', time: '15 Mins', gradient: 'from-rose-500/20 to-pink-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-rose-700 bg-rose-50 border-rose-100', bgIcon: 'bg-rose-500/20 text-rose-400', glow: 'bg-rose-500/20', glowHover: 'group-hover:bg-rose-500/30' }
+                            { time: '5 Mins', title: 'Hinjewadi IT Park', desc: 'Phase 1 • Direct IT Hub Access' },
+                            { time: '10 Mins', title: 'Wakad Junction', desc: '4.5 km • Mumbai-Bengaluru Hwy' },
+                            { time: '15 Mins', title: 'Ruby Hall Clinic', desc: '7 km • Multi-Specialty Healthcare' },
+                            { time: 'On-Campus', title: 'Anisha Global', desc: '0 km • Inside 390-Acre Township' },
+                            { time: 'Walking Dist', title: 'High Street', desc: '100 m • Premium Retail Hub' }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
@@ -187,25 +187,18 @@ const Home: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                whileHover={{ y: -5, scale: 1.02 }}
-                                className={`relative overflow-hidden p-6 rounded-3xl border backdrop-blur-md transition-all duration-300 group bg-transparent border border-white/10 hover:border-[#E5C07B]/30 hover:bg-white/[0.02]`}
+                                whileHover={{ y: -5 }}
+                                className="p-6 rounded-xl border border-white/10 bg-[#151822]/50 hover:bg-[#151822] hover:border-[#E5C07B]/30 transition-all duration-300 text-center flex flex-col justify-center min-h-[140px]"
                             >
-                                <div className={`absolute -right-10 -top-10 w-32 h-32 rounded-full blur-[50px] transition-all duration-500 ${item.glow} ${item.glowHover}`}></div>
-                                <div className={`w-14 h-14 rounded-3xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 ${item.bgIcon}`}>
-                                    <item.icon size={28} strokeWidth={1.5} />
-                                </div>
-                                <h3 className="text-xl font-bold mb-2 text-secondary group-hover:text-secondary transition-colors">{item.title}</h3>
-                                <p className="text-text-muted mb-4 font-light text-sm">{item.desc}</p>
-                                <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-white border border-gray-200 text-gray-700 shadow-sm`}>
-                                    {item.time}
-                                </div>
+                                <h3 className="text-[#E5C07B] text-xl font-serif font-bold mb-2">{item.time}</h3>
+                                <h4 className="text-white text-sm font-bold mb-1">{item.title}</h4>
+                                <p className="text-gray-500 text-[10px] uppercase tracking-wider">{item.desc}</p>
                             </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
-
-            {/* Phase 6: Interactive Depth */}
+{/* Phase 6: Interactive Depth */}
             <NeuralErrorBoundary>
                 <MasterPlan />
             </NeuralErrorBoundary>

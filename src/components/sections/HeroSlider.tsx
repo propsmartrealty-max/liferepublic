@@ -1,96 +1,112 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '../ui/Button';
-
-const slides = [
-  {
-    id: 1,
-    image: '/images/home/slider-1.webp',
-    title: 'Kolte Patil Life Republic <br/><span className="text-[#E5C07B]">390-Acre Smart Township Ecosystem</span>',
-    subtitle: 'A 400-Acre Integrated Township in Hinjewadi, Pune',
-  },
-  {
-    id: 2,
-    image: '/images/home/slider-2.webp',
-    title: 'An Integrated City <br/><span className="text-[#E5C07B]">Miles From Chaos</span>',
-    subtitle: 'Over 50+ lifestyle features designed for your well-being',
-  },
-  {
-    id: 3,
-    image: '/images/home/slider-3.webp',
-    title: 'The Canvas of <br/><span className="text-[#E5C07B]">Ultra-Luxury</span>',
-    subtitle: 'Premium 3 & 4 BHK residences with skyline views',
-  }
-];
+import React from 'react';
+import { motion } from 'framer-motion';
 
 export const HeroSlider = () => {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 6000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <section className="relative h-[90vh] md:h-screen w-full overflow-hidden bg-primary">
-      <AnimatePresence mode='wait'>
-        <motion.div
-          key={current}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="absolute inset-0"
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/80 z-10" />
-          <img
-            src={slides[current].image}
-            alt=<span dangerouslySetInnerHTML={{ __html: slides[current].title }} />
-            className="w-full h-full object-cover"
-            loading={current === 0 ? "eager" : "lazy"}
-          />
-        </motion.div>
-      </AnimatePresence>
-
-      <div className="relative z-20 h-full flex flex-col justify-end pb-24 md:pb-32 px-6 md:px-12 container mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="max-w-5xl mx-auto md:mx-0 text-center md:text-left flex flex-col items-center md:items-start"
-        >
-          <span className="inline-block py-1.5 px-4  bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-semibold tracking-tight mb-6">
-            Kolte Patil Developers
-          </span>
-          <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-serif font-bold text-white leading-[1.1] mb-6 drop-shadow-2xl">
-            <span dangerouslySetInnerHTML={{ __html: slides[current].title }} />
-          </h1>
-          <p className="text-xl md:text-2xl text-white text-white/90 font-medium tracking-tight mb-10 max-w-2xl drop-shadow-md">
-            {slides[current].subtitle}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className=" px-8 bg-white text-primary hover:bg-white/90 glow-effect" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry'))}>
-              Schedule a Visit
-            </Button>
-            <Button size="lg" variant="outline" className=" px-8 border-white/30 text-white hover:bg-white/10 glass-panel" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
-              Explore Clusters
-            </Button>
-          </div>
-        </motion.div>
+    <section className="relative h-screen w-full overflow-hidden bg-[#0B0D14] flex flex-col items-center justify-center pt-20">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B0D14]/80 via-[#0B0D14]/40 to-[#0B0D14] z-10" />
+        <img
+          src="/images/home/slider-1.webp"
+          alt="Life Republic Township Aerial View"
+          className="w-full h-full object-cover scale-105 opacity-60"
+        />
       </div>
 
-      {/* Progress Indicators */}
-      <div className="absolute bottom-8 left-6 md:left-12 z-30 flex gap-3">
-        {slides.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrent(idx)}
-            className={`h-1  transition-all duration-500 ${current === idx ? 'w-12 bg-white' : 'w-4 bg-white/30 hover:bg-white/50'}`}
-            aria-label={`Go to slide ${idx + 1}`}
-          />
-        ))}
+      {/* Content Container */}
+      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center text-center">
+        
+        {/* Top Location Pill */}
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+        >
+            <span className="inline-block py-1.5 px-6 rounded-full bg-transparent border border-[#E5C07B]/30 text-[#E5C07B] text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
+              <span className="text-lg leading-none align-middle mr-2">✦</span> 390-ACRE INTEGRATED TOWNSHIP ECOSYSTEM • HINJEWADI, PUNE
+            </span>
+        </motion.div>
+
+        {/* Main Typography */}
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="max-w-5xl mx-auto mb-6"
+        >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white font-medium mb-2 drop-shadow-xl">
+                Kolte Patil Life Republic
+            </h2>
+            <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-serif font-bold text-white leading-[1.05] drop-shadow-2xl">
+                390-Acre Smart Township <span className="text-[#E5C07B]">Ecosystem</span>
+            </h1>
+        </motion.div>
+
+        {/* Subtitle */}
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="max-w-3xl mx-auto mb-10"
+        >
+            <p className="text-lg md:text-xl text-gray-300 font-light leading-relaxed">
+                MahaRERA Sanctioned Premium Apartments, Luxury Villas, High Street Retail, 
+                The Cliff Club & Anisha Global School — <span className="text-[#E5C07B] font-semibold">Starting ₹65 Lakhs*</span> just 10 Mins from 
+                Hinjewadi IT Park.
+            </p>
+        </motion.div>
+
+        {/* Stats Grid */}
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="border border-white/20 rounded-xl p-6 md:px-10 bg-black/20 backdrop-blur-sm mb-12 flex flex-col md:flex-row gap-8 md:gap-16 max-w-4xl w-full justify-center text-left"
+        >
+            <div>
+                <p className="text-white font-serif text-2xl font-bold mb-1">390 Acres</p>
+                <p className="text-[#E5C07B] text-[10px] uppercase tracking-widest font-bold">SMART TOWNSHIP</p>
+            </div>
+            <div className="w-px bg-white/20 hidden md:block"></div>
+            <div>
+                <p className="text-white font-serif text-2xl font-bold mb-1">Apts & Villas</p>
+                <p className="text-[#E5C07B] text-[10px] uppercase tracking-widest font-bold">FROM ₹65 LAKHS*</p>
+            </div>
+            <div className="w-px bg-white/20 hidden md:block"></div>
+            <div>
+                <p className="text-white font-serif text-2xl font-bold mb-1">Anisha Global</p>
+                <p className="text-[#E5C07B] text-[10px] uppercase tracking-widest font-bold">INTERNATIONAL SCHOOL</p>
+            </div>
+            <div className="w-px bg-white/20 hidden lg:block"></div>
+            <div className="hidden lg:block">
+                <p className="text-white font-serif text-2xl font-bold mb-1">Retail Hub</p>
+                <p className="text-[#E5C07B] text-[10px] uppercase tracking-widest font-bold">HIGH STREET</p>
+            </div>
+        </motion.div>
+
+        {/* Action Buttons */}
+        <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center"
+        >
+            <button 
+                className="bg-[#7F1D1D] hover:bg-[#991B1B] text-white border border-red-900/50 px-10 py-4 rounded-full text-sm font-bold tracking-[0.2em] uppercase shadow-[0_0_30px_rgba(153,27,27,0.4)] transition-all flex items-center justify-center gap-3"
+                onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}
+            >
+                <span className="text-[#E5C07B] text-lg leading-none">✦</span> ENQUIRE NOW
+            </button>
+            <button 
+                className="bg-transparent hover:bg-white/5 text-white border border-white/20 px-10 py-4 rounded-full text-sm font-bold tracking-[0.2em] uppercase transition-all flex items-center justify-center gap-3"
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+                EXPLORE TOWNSHIP <span className="rotate-90">➔</span>
+            </button>
+        </motion.div>
+
       </div>
     </section>
   );
