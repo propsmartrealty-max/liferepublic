@@ -39,7 +39,7 @@ export const Navbar = () => {
                         <Link 
                             key={item.name} 
                             to={item.path}
-                            className="hover:opacity-50 transition-opacity cursor-interactive"
+                            className="px-6 py-3 rounded-[1rem] hover:bg-rainbow-hover hover:text-white transition-all duration-300 cursor-interactive"
                         >
                             {item.name}
                         </Link>
@@ -82,7 +82,7 @@ export const Navbar = () => {
                                 <Link 
                                     to={item.path}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="text-4xl font-light uppercase tracking-widest"
+                                    className="text-3xl font-bold uppercase tracking-widest px-8 py-4 rounded-[1.5rem] hover:bg-rainbow-hover hover:text-white transition-all duration-300 block text-center"
                                 >
                                     {item.name}
                                 </Link>
