@@ -81,7 +81,7 @@ export const Testimonials: React.FC = () => {
                             <ShieldCheck size={20} className="text-accent animate-pulse" />
                             <span className="text-[12px] font-bold uppercase tracking-[0.7em] text-accent">Verified Social Monograph v6.5</span>
                         </motion.div>
-                        <h1 className="text-8xl md:text-[13rem] font-serif font-bold mb-16 tracking-tighter leading-[0.8] italic">
+                        <h1 className="text-8xl md:text-[5rem] lg:text-[6rem] font-serif font-bold mb-16 tracking-tighter leading-[0.8] italic">
                             The Collective <br /> <span className="text-accent">Authority.</span>
                         </h1>
                         <p className="text-3xl md:text-4xl text-white/40 max-w-5xl mx-auto leading-relaxed font-medium italic">
@@ -214,7 +214,7 @@ export const Testimonials: React.FC = () => {
                             <Network size={400} />
                         </div>
                         <Sparkles size={64} className="text-accent mx-auto mb-12 animate-pulse" />
-                        <h2 className="text-7xl md:text-[10rem] font-serif font-bold text-secondary tracking-tighter leading-[0.8] italic">Ready to join the <br /><span className="text-accent">Citizenship?</span></h2>
+                        <h2 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-secondary tracking-tighter leading-[0.8] italic">Ready to join the <br /><span className="text-accent">Citizenship?</span></h2>
                         <p className="text-3xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto italic">
                             Our citizens are our greatest structural proof. Join 12,500+ families already living the **Sovereign 15-Minute City** dream.
                         </p>

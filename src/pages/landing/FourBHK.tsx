@@ -64,7 +64,7 @@ export const FourBHK: React.FC = () => {
                             <Crown size={16} className="text-accent animate-pulse" />
                             <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent">The 24K Sovereign Monograph v5.5</span>
                         </div>
-                        <h1 className="text-6xl md:text-[11rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.8]">
+                        <h1 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.8]">
                             The 4BHK <br /> <span className="text-accent italic">Authority.</span>
                         </h1>
                         <p className="text-2xl md:text-3xl text-gray-400 font-medium max-w-4xl mx-auto leading-relaxed">

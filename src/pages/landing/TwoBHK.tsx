@@ -46,7 +46,7 @@ export const TwoBHK: React.FC = () => {
                             <Sparkles size={16} className="text-accent animate-pulse" />
                             <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent">The Efficiency Collection v5.5</span>
                         </motion.div>
-                        <h1 className="text-6xl md:text-[10rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.8]">Synthesizing <br /> <span className="text-accent italic">Efficiency.</span></h1>
+                        <h1 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.8]">Synthesizing <br /> <span className="text-accent italic">Efficiency.</span></h1>
                         <p className="text-2xl md:text-3xl text-gray-400 max-w-4xl leading-relaxed font-medium">The Life Republic 2 BHK collection is engineered for the modern professional, synthesizing smart spatial flow with high-yield investment potential.</p>
                     </div>
                 </div>

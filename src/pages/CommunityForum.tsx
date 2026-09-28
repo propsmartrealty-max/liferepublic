@@ -33,7 +33,7 @@ export const CommunityForum: React.FC = () => {
                             <Network size={20} className="text-accent animate-pulse" />
                             <span className="text-[11px] font-bold uppercase tracking-[0.6em]">Social Synthesis Matrix v6.0</span>
                         </motion.div>
-                        <h1 className="text-7xl md:text-[11rem] font-serif font-bold text-secondary mb-12 tracking-tighter leading-[0.8]">Resident <br /><span className="text-accent italic">Authority.</span></h1>
+                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-secondary mb-12 tracking-tighter leading-[0.8]">Resident <br /><span className="text-accent italic">Authority.</span></h1>
                         <p className="text-2xl md:text-3xl text-gray-400 leading-relaxed font-medium max-w-3xl">
                             A preview of the private digital ecosystem for Life Republic citizens. Seamlessly connect with 12,000+ families through the <span className="text-secondary font-bold underline decoration-accent underline-offset-8">Sovereign Social Protocol</span>.
                         </p>
@@ -216,7 +216,7 @@ export const CommunityForum: React.FC = () => {
                         <div className="w-32 h-32 bg-accent text-secondary rounded-[3.5rem] flex items-center justify-center mx-auto mb-16 shadow-2xl group-hover:scale-110 transition-transform">
                             <Heart size={64} className="animate-pulse" />
                         </div>
-                        <h2 className="text-6xl md:text-[13rem] font-serif font-bold text-white mb-16 tracking-tighter leading-[0.8] italic">Join the <span className="text-accent">Citizenship.</span></h2>
+                        <h2 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-16 tracking-tighter leading-[0.8] italic">Join the <span className="text-accent">Citizenship.</span></h2>
                         <p className="text-3xl text-white/50 mb-24 font-medium leading-relaxed max-w-4xl mx-auto">Secure your place in Hinjewadi's most active integrated township. Join 12,000+ families already in residence.</p>
                         <a href="/projects" className="inline-flex items-center gap-8 bg-white text-secondary px-24 py-12 rounded-full font-bold text-3xl hover:bg-accent hover:scale-[1.05] transition-all shadow-2xl group/btn">
                             Browse Sovereign Portfolio

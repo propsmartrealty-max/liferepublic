@@ -54,7 +54,7 @@ const VolumeItem = ({ vol, idx }: { vol: any, idx: number }) => {
             </div>
             <div className="lg:w-1/2 space-y-16">
                 <div className="flex items-center gap-10">
-                    <div className="p-8 bg-secondary text-accent rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-white/10 group-hover:rotate-12 transition-transform">
+                    <div className="p-8 bg-secondary text-accent rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-border-strong group-hover:rotate-12 transition-transform">
                         <vol.icon size={48} strokeWidth={1.5} />
                     </div>
                     <div>
@@ -102,16 +102,16 @@ export const Lifestyle: React.FC = () => {
                             <Wind size={24} className="text-accent animate-pulse" />
                             <span className="text-[12px] font-bold uppercase tracking-[0.7em] text-accent">The Lifestyle Monograph v6.5</span>
                         </div>
-                        <h1 className="text-7xl md:text-[18rem] font-serif font-bold text-white mb-16 tracking-tighter leading-[0.75]">
+                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-16 tracking-tighter leading-[0.75]">
                             Atmospheric <br /> <span className="italic text-accent">Sovereignty.</span>
                         </h1>
-                        <p className="text-3xl md:text-4xl text-white/40 max-w-6xl mx-auto leading-relaxed font-medium italic">
+                        <p className="text-3xl md:text-4xl text-text-muted max-w-6xl mx-auto leading-relaxed font-medium italic">
                             Synthesizing nature, infrastructure, and community into a high-fidelity resident experience. Welcome to the **15-Minute Sovereign City**.
                         </p>
                     </motion.div>
                 </div>
                 
-                <div className="absolute bottom-24 left-24 hidden lg:flex items-center gap-16 text-white/30">
+                <div className="absolute bottom-24 left-24 hidden lg:flex items-center gap-16 text-text-muted">
                     <div className="flex items-center gap-6"><Zap size={24} className="text-accent" /><span className="text-[11px] font-bold uppercase tracking-[0.6em]">Atmosphere Sync Active</span></div>
                     <div className="flex items-center gap-6"><Globe size={24} /><span className="text-[11px] font-bold uppercase tracking-[0.6em]">400-Acre structural mesh</span></div>
                 </div>
@@ -137,10 +137,10 @@ export const Lifestyle: React.FC = () => {
                                 <Cpu size={24} className="text-accent" />
                                 <span className="text-[12px] font-bold text-accent uppercase tracking-[0.7em]">Citizenship Synthesis v6.5</span>
                             </div>
-                            <h2 className="text-7xl md:text-[15rem] font-serif font-bold text-white mb-48 tracking-tighter leading-[0.75]">Join the <br /> <span className="text-accent italic">Republic.</span></h2>
+                            <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-secondary mb-24 tracking-tighter leading-[0.75]">Join the <br /> <span className="text-accent italic">Republic.</span></h2>
                         </motion.div>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-24">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16">
                             {[
                                 { label: 'Active Citizens', val: '12,500+', icon: Users, color: 'text-blue-400' },
                                 { label: 'Parks & Avenues', val: '45+', icon: Trees, color: 'text-emerald-400' },
@@ -148,11 +148,11 @@ export const Lifestyle: React.FC = () => {
                                 { label: 'Infrastructure', val: '2026', icon: Zap, color: 'text-orange-400' }
                             ].map((stat, i) => (
                                 <motion.div key={i} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.15 }} className="space-y-12 group/stat">
-                                    <div className="w-24 h-24 bg-white/5 border border-white/10 rounded-[2.5rem] flex items-center justify-center text-white/40 mx-auto group-hover/stat:bg-accent group-hover/stat:text-secondary group-hover/stat:rotate-12 transition-all shadow-2xl">
+                                    <div className="w-24 h-24 bg-surface border border-border-strong rounded-[2.5rem] flex items-center justify-center text-text-muted mx-auto group-hover/stat:bg-accent group-hover/stat:text-secondary group-hover/stat:rotate-12 transition-all shadow-2xl">
                                         <stat.icon size={48} strokeWidth={1} />
                                     </div>
-                                    <div className={`text-9xl md:text-[10rem] font-serif font-bold tracking-tighter group-hover/stat:scale-110 transition-transform ${stat.color}`}>{stat.val}</div>
-                                    <div className="text-[14px] font-bold text-white/30 uppercase tracking-[0.8em]">{stat.label}</div>
+                                    <div className={`text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tighter group-hover/stat:scale-110 transition-transform ${stat.color}`}>{stat.val}</div>
+                                    <div className="text-[14px] font-bold text-text-muted uppercase tracking-[0.8em]">{stat.label}</div>
                                 </motion.div>
                             ))}
                         </div>

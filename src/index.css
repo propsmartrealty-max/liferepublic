@@ -35,7 +35,7 @@
 
   .heading-hero {
     text-transform: uppercase;
-    @apply text-6xl md:text-8xl lg:text-[7rem] font-serif font-medium tracking-[-0.04em] leading-[1.05] text-white;
+    @apply text-6xl md:text-8xl lg:text-[4rem] lg:text-[5rem] font-serif font-medium tracking-[-0.04em] leading-[1.05] text-white;
   }
   
   .heading-section {

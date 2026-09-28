@@ -79,7 +79,7 @@ export const RecentlyViewed: React.FC = () => {
                             <BrainCircuit size={24} className="animate-pulse" />
                             <span className="text-[11px] font-bold uppercase tracking-[0.6em]">{sentimentLabel}</span>
                         </div>
-                        <h2 className="text-6xl md:text-[9rem] font-serif font-bold text-secondary tracking-tighter leading-[0.85] mb-8">
+                        <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-secondary tracking-tighter leading-[0.85] mb-8">
                             {greeting}
                         </h2>
                         <p className="text-2xl text-gray-400 font-medium tracking-tight leading-relaxed max-w-2xl">

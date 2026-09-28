@@ -74,7 +74,7 @@ export const MediaCenter: React.FC = () => {
                             <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent">Sovereign Archive v5.5</span>
                         </div>
                         <h1 className="text-6xl md:text-9xl font-serif font-bold text-white mb-10 tracking-tighter leading-none">
-                            The Media <br /> <span className="text-accent italic text-7xl md:text-[10rem]">Nexus.</span>
+                            The Media <br /> <span className="text-accent italic text-7xl md:text-[5rem] lg:text-[6rem]">Nexus.</span>
                         </h1>
                         <p className="text-2xl text-gray-400 font-medium max-w-3xl mx-auto leading-relaxed">
                             Synthesizing the structural evolution of Pune's premier township. Access the definitive monograph of our 2026 Hinjewadi transformation.

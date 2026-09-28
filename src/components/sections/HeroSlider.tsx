@@ -5,19 +5,19 @@ import { Button } from '../ui/Button';
 const slides = [
   {
     id: 1,
-    image: 'https://liferepublic.in/images/webp/home/main-banner.webp',
+    image: '/images/home/slider-1.webp',
     title: 'Welcome to Life Republic',
     subtitle: 'A 400-Acre Integrated Township in Hinjewadi, Pune',
   },
   {
     id: 2,
-    image: 'https://liferepublic.in/images/home/slider-1.webp',
+    image: '/images/home/slider-2.webp',
     title: 'World-Class Amenities',
     subtitle: 'Over 50+ lifestyle features designed for your well-being',
   },
   {
     id: 3,
-    image: 'https://liferepublic.in/images/home/slider-2.webp',
+    image: '/images/home/slider-3.webp',
     title: 'The Canvas of Luxury',
     subtitle: 'Premium 3 & 4 BHK residences with skyline views',
   }

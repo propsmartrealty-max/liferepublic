@@ -45,7 +45,7 @@ export const NRIInvestorHub: React.FC = () => {
                             <Globe size={16} className="text-accent animate-pulse" />
                             <span className="text-[10px] font-bold uppercase tracking-[0.6em]">Global Investment Authority v6.0</span>
                         </motion.div>
-                        <h2 className="text-6xl md:text-[9rem] font-serif font-bold text-secondary mb-12 tracking-tighter leading-[0.8]">
+                        <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-secondary mb-12 tracking-tighter leading-[0.8]">
                             NRI Legal & <br /><span className="text-accent italic">Tax Synthesis.</span>
                         </h2>
                         <p className="text-2xl text-gray-400 font-medium leading-relaxed mb-16 max-w-2xl">

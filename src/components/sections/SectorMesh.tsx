@@ -53,7 +53,7 @@ export const SectorMesh: React.FC = () => {
                             <Cpu size={16} className="text-accent animate-pulse" />
                             <span className="text-[11px] font-bold uppercase tracking-[0.5em] text-accent">Tectonic Velocity Lab v6.5</span>
                         </motion.div>
-                        <h2 className="text-6xl md:text-[9rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.85]">
+                        <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.85]">
                             Neural <br /> <span className="text-accent italic">Velocity Mesh.</span>
                         </h2>
                         <p className="text-2xl text-gray-400 font-medium leading-relaxed max-w-3xl">

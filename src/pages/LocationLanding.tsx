@@ -62,7 +62,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                             <Target size={24} className="text-accent animate-pulse" />
                             <span className="text-[12px] font-bold uppercase tracking-[0.7em] text-accent">Strategic Epicenter Sync 2026</span>
                         </div>
-                        <h1 className="text-7xl md:text-[14rem] font-serif font-bold mb-16 leading-[0.75] tracking-tighter">
+                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold mb-16 leading-[0.75] tracking-tighter">
                             Beyond <br /> <span className="text-accent italic">{locationName}.</span>
                         </h1>
                         <p className="text-3xl md:text-4xl text-gray-400 max-w-4xl mb-20 leading-relaxed font-medium italic">
@@ -102,7 +102,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                                     <Cpu size={24} />
                                     <span className="text-[12px] uppercase tracking-[0.6em]">The Transit Synthesis</span>
                                 </div>
-                                <h2 className="text-6xl md:text-[8rem] font-serif font-bold text-secondary tracking-tighter leading-[0.85]">The Superior <br /><span className="text-accent italic">Commute Delta.</span></h2>
+                                <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-secondary tracking-tighter leading-[0.85]">The Superior <br /><span className="text-accent italic">Commute Delta.</span></h2>
                             </div>
                             <p className="text-2xl md:text-3xl text-gray-500 leading-relaxed font-medium italic">
                                 standalone properties in {locationName} often lack dedicated infrastructure. Life Republic residents enjoy the 150ft Spine Road advantage, bypassing all local bottlenecks.
@@ -177,7 +177,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                 <div className="container mx-auto px-4 text-center">
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}>
                         <span className="text-[11px] font-bold text-accent uppercase tracking-[0.8em] mb-6 block">Personalized Synthesis</span>
-                        <h2 className="text-7xl md:text-[12rem] font-serif font-bold text-secondary mb-32 tracking-tighter leading-none italic">The Sovereign <span className="text-accent">Clusters.</span></h2>
+                        <h2 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-secondary mb-32 tracking-tighter leading-none italic">The Sovereign <span className="text-accent">Clusters.</span></h2>
                     </motion.div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
                         {featuredProjects.map((project) => (

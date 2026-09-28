@@ -31,7 +31,7 @@ export const Sustainability: React.FC = () => {
                             <ShieldCheck size={16} className="text-emerald-400 animate-pulse" />
                             <span className="text-[10px] font-bold uppercase tracking-[0.6em]">Sovereign ESG Protocol v6.0</span>
                         </motion.div>
-                        <h1 className="text-7xl md:text-[10rem] font-serif font-bold text-secondary mb-10 tracking-tighter leading-[0.8]">
+                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-secondary mb-10 tracking-tighter leading-[0.8]">
                             Environmental <br /><span className="text-emerald-500 italic">Structuralism.</span>
                         </h1>
                         <p className="text-2xl md:text-3xl text-gray-400 leading-relaxed font-medium max-w-3xl">

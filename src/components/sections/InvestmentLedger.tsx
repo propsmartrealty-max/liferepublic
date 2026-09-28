@@ -87,7 +87,7 @@ export const InvestmentLedger: React.FC = () => {
                             <Cpu size={16} className="text-accent" />
                             <span className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.6em]">Financial Synthesis Protocol v6.5</span>
                         </motion.div>
-                        <h2 className="text-6xl md:text-[11rem] font-serif font-bold text-secondary mb-12 tracking-tighter leading-[0.8]">
+                        <h2 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-secondary mb-12 tracking-tighter leading-[0.8]">
                             The Financial <br /> <span className="text-accent italic">Authority.</span>
                         </h2>
                         <p className="text-2xl md:text-3xl text-gray-400 font-medium leading-relaxed max-w-3xl">

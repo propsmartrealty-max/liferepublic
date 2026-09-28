@@ -118,7 +118,7 @@ export const MasterPlan: React.FC = () => {
                         <Navigation size={20} className="text-accent animate-pulse" />
                         <span className="text-[11px] font-bold uppercase tracking-[0.6em]">The Master Blueprint v6.0</span>
                     </motion.div>
-                    <h2 className="text-6xl md:text-[10rem] font-serif font-bold text-secondary mb-12 tracking-tighter leading-[0.85]">
+                    <h2 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-secondary mb-12 tracking-tighter leading-[0.85]">
                         Spatial <br /> <span className="text-accent italic">Sovereignty.</span>
                     </h2>
                     <p className="text-2xl md:text-3xl text-gray-400 max-w-4xl mx-auto leading-relaxed font-medium">

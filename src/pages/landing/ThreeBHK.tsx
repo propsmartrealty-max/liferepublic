@@ -49,7 +49,7 @@ export const ThreeBHK: React.FC = () => {
                             <Sparkles size={16} className="text-accent animate-pulse" />
                             <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent">The Premium Collection v5.5</span>
                         </motion.div>
-                        <h1 className="text-6xl md:text-[10rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.8]">
+                        <h1 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.8]">
                             Synthesizing <br /> <span className="text-accent italic">Grandeur.</span>
                         </h1>
                         <p className="text-2xl md:text-3xl text-gray-400 max-w-4xl leading-relaxed font-medium">
