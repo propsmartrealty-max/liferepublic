@@ -28,8 +28,8 @@ export const onRequest: PagesFunction = async (context) => {
         
         // Inject SEO and dynamic meta tags via Edge
         const path = url.pathname;
-        let title = "Kolte Patil Life Republic | 390 Acre Township in Hinjewadi";
-        let desc = "Experience ultra-premium living at Pune's largest integrated township. Explore configurations, floor plans, and exclusive pricing.";
+        let title = "Kolte Patil Life Republic Pune | Price, Projects, 2 & 3 BHK, Reviews";
+        let desc = "Explore Kolte Patil Life Republic Pune near Hinjewadi. Compare current projects, 2 & 3 BHK homes, prices, floor plans, amenities, RERA details, location, connectivity and resale options.";
 
         if (path.includes('/projects/')) {
             const projectSlug = path.split('/').pop();

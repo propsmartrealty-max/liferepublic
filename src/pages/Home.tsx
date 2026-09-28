@@ -85,7 +85,7 @@ export const Home = () => {
                         transition={{ duration: 1, delay: 1 }}
                         className="text-xl md:text-3xl text-white/80 font-light tracking-wide"
                     >
-                        The future of township living.
+                        An Integrated Township Near Hinjewadi, Pune.
                     </motion.p>
                 </div>
                 <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center animate-bounce text-white/50">
@@ -133,7 +133,7 @@ export const Home = () => {
                         <img src="https://liferepublic.in/images/projects/location/172060335117189650503rd Avenue-.jpg" className="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-opacity duration-1000 group-hover:scale-105" />
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                             <h2 className="text-4xl md:text-5xl text-white font-medium tracking-tight drop-shadow-2xl">Apartments</h2>
-                            <p className="absolute bottom-10 text-white/70 text-sm font-light max-w-xs text-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000">Explore premium residential clusters including Universe, Arezo, Atmos, and Aros.</p>
+                            <p className="absolute bottom-10 text-white/70 text-sm font-light max-w-xs text-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000">Explore current and completed Life Republic projects including Qrious, Duet, Canvas, Aros, Atmos, and Echoes. Compare 2 & 3 BHK homes, floor plans, and RERA details.</p>
                         </div>
                         <Link to="/projects" className="absolute inset-0 z-10"></Link>
                     </div>
@@ -141,7 +141,7 @@ export const Home = () => {
                         <img src="https://liferepublic.in/images/home/box-img-01.jpg" className="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-opacity duration-1000 group-hover:scale-105" />
                         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
                             <h2 className="text-4xl md:text-5xl text-white font-medium tracking-tight drop-shadow-2xl">Township</h2>
-                            <p className="absolute bottom-10 text-white/70 text-sm font-light max-w-xs text-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000">Experience the 390-acre ecosystem with 100+ amenities, schools, and high-street retail.</p>
+                            <p className="absolute bottom-10 text-white/70 text-sm font-light max-w-xs text-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000">Explore the Kolte-Patil Life Republic Pune location, connectivity to Hinjewadi IT Park, township amenities, and resale investment potential.</p>
                         </div>
                         <Link to="/township-guide" className="absolute inset-0 z-10"></Link>
                     </div>
