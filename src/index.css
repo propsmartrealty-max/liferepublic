@@ -77,13 +77,15 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1px;
+  padding: 2px;
   background: var(--lr-rainbow);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+  -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   opacity: 0.3;
   transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 10;
 }
 .rainbow-border-wrap:hover::before {
   opacity: 1;
