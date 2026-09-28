@@ -30,11 +30,11 @@ export const Navbar = () => {
                 
                 {/* Logo */}
                 <Link to="/" className="flex items-center cursor-interactive z-50">
-                    <img src="/logo.webp" alt="Life Republic" className="h-10 object-contain mix-blend-lighten" />
+                    <img src="/logo.webp" alt="Life Republic" className="h-16 object-contain mix-blend-lighten" />
                 </Link>
 
                 {/* Desktop Links - Minimal */}
-                <div className="hidden md:flex items-center space-x-12 text-sm uppercase tracking-widest font-medium">
+                <div className="hidden md:flex items-center space-x-12 text-base uppercase tracking-widest font-bold">
                     {navLinks.map((item) => (
                         <Link 
                             key={item.name} 
@@ -50,7 +50,7 @@ export const Navbar = () => {
                 <div className="hidden md:flex items-center z-50">
                     <button 
                         onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}
-                        className="border border-white rounded-full px-6 py-2 uppercase tracking-widest text-xs bg-rainbow-hover transition-all duration-500 border-white/50 hover:border-transparent transition-colors cursor-interactive"
+                        className="border border-white rounded-full px-8 py-3 uppercase tracking-widest text-sm font-bold bg-rainbow-hover transition-all duration-500 border-white/50 hover:border-transparent cursor-interactive"
                     >
                         Enquire
                     </button>

@@ -25,7 +25,7 @@ const ProjectDetails: React.FC = () => {
 
     if (!project) return null; 
 
-    const reraVerificationUrl = `https://maharerait.mahaonline.gov.in/PrintPreview/PrintPreview/?q=${project.rera}`;
+    const reraVerificationUrl = `https://maharera.maharashtra.gov.in/`;
 
     const commonAmenities = [
         "Clubhouse & Lounge", "Infinity Swimming Pool", "State-of-the-art Gym", "Jogging & Cycling Tracks", 
