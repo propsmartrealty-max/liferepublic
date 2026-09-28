@@ -56,12 +56,12 @@ export const Contact: React.FC = () => {
                 schema={localBusinessSchema}
             />
             <Breadcrumbs />
-            <section className="bg-[#0B0D14] text-white py-20">
+            <section className="bg-white text-[#202124] py-20">
                 <div className="container mx-auto px-4 text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-6xl font-serif font-bold mb-6"
+                        className="text-5xl md:text-6xl font-sans font-bold mb-6"
                     >
                         Contact Kolte Patil Life Republic Sales
                     </motion.h1>
@@ -76,7 +76,7 @@ export const Contact: React.FC = () => {
                     {/* Contact Info */}
                     <div className="space-y-8">
                         <div>
-                            <h2 className="text-3xl font-serif font-bold text-white mb-6">Get in Touch</h2>
+                            <h2 className="text-3xl font-sans font-bold text-[#202124] mb-6">Get in Touch</h2>
                             <p className="text-gray-600 text-lg">
                                 Have questions? Our experts are here to help you navigate your home buying journey.
                             </p>
@@ -84,28 +84,28 @@ export const Contact: React.FC = () => {
 
                         <div className="space-y-6">
                             <div className="flex items-start gap-4">
-                                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent flex-shrink-0">
+                                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-[#1a73e8] flex-shrink-0">
                                     <MapPin size={24} />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
+                                    <h3 className="text-xl font-bold text-[#202124] mb-2">Visit Us</h3>
                                     <p className="text-gray-600">Life Republic Township, Marunji, Hinjawadi, Pune, Maharashtra 411057</p>
                                 </div>
                             </div>
 
                             <div className="flex items-start gap-4">
-                                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent flex-shrink-0">
+                                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-[#1a73e8] flex-shrink-0">
                                     <Phone size={24} />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-white mb-2">Digital Sales Desk</h3>
+                                    <h3 className="text-xl font-bold text-[#202124] mb-2">Digital Sales Desk</h3>
                                     <p className="text-gray-600">Submit an enquiry to request an instant callback from our advisors.</p>
-                                    <p className="text-gray-500 text-sm mt-2">Mon - Sun: 9:00 AM - 7:00 PM</p>
+                                    <p className="text-[#5F6368] text-sm mt-2">Mon - Sun: 9:00 AM - 7:00 PM</p>
                                 </div>
                             </div>
 
 
-                            <div className="mt-8 rounded-xl overflow-hidden shadow-lg border border-white/5 h-[300px]">
+                            <div className="mt-8 rounded-xl overflow-hidden shadow-lg border border-[#DADCE0] h-[300px]">
                                 <iframe 
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.996160105342!2d73.71261537446698!3d18.57416346752763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc6e326466f%3A0xc07c3905cf6ce12a!2sKolte%20Patil%20Life%20Republic!5e0!3m2!1sen!2sin!4v1704100000000!5m2!1sen!2sin" 
                                     width="100%" 
@@ -121,7 +121,7 @@ export const Contact: React.FC = () => {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="bg-[#1A1C23] p-8 rounded-xl shadow-lg border border-white/5">
+                    <div className="bg-[#F8F9FA] p-8 rounded-xl shadow-lg border border-[#DADCE0]">
                         <ContactForm />
                     </div>
                 </div>

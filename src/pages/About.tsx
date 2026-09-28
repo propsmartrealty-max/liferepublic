@@ -20,7 +20,7 @@ export const About: React.FC = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-5xl font-serif font-bold text-white mb-6"
+                        className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-6"
                     >
                         About Kolte Patil Life Republic Township Hinjewadi
                     </motion.h1>

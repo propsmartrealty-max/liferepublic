@@ -45,7 +45,7 @@ export const NeuralGallery: React.FC<NeuralGalleryProps> = ({ images, title }) =
     return (
         <div className="relative group">
             {/* Main Display */}
-            <div className="aspect-[16/9] rounded-[2.5rem] overflow-hidden relative shadow-2xl bg-gray-900 border border-white/10">
+            <div className="aspect-[16/9] rounded-[24px] overflow-hidden relative shadow-2xl bg-gray-900 border border-[#DADCE0]">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={mode}
@@ -68,15 +68,15 @@ export const NeuralGallery: React.FC<NeuralGalleryProps> = ({ images, title }) =
                 <div className={`absolute inset-0 bg-gradient-to-t ${overlayStyles[mode]} pointer-events-none transition-all duration-1000`} />
 
                 {/* Atmospheric Controls */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 p-2 bg-[#151822] border border-white/10/10 backdrop-blur-2xl rounded-full border border-white/20 shadow-xl z-20">
+                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 p-2 bg-[#151822] border border-[#DADCE0]/10 backdrop-blur-2xl rounded-full border border-[#DADCE0] shadow-xl z-20">
                     {modes.map((m) => (
                         <button
                             key={m.id}
                             onClick={() => setMode(m.id as any)}
                             className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-500 ${
                                 mode === m.id 
-                                ? 'bg-white text-white shadow-lg' 
-                                : 'text-white hover:bg-white/10'
+                                ? 'bg-white text-[#202124] shadow-lg' 
+                                : 'text-[#202124] hover:bg-white/10'
                             }`}
                         >
                             <m.icon size={16} />
@@ -88,9 +88,9 @@ export const NeuralGallery: React.FC<NeuralGalleryProps> = ({ images, title }) =
                 </div>
 
                 {/* Status Indicator */}
-                <div className="absolute top-8 left-8 flex items-center gap-3 bg-black/40 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10">
-                    <Sparkles size={14} className="text-accent animate-pulse" />
-                    <span className="text-[10px] text-white/80 font-bold tracking-tight font-medium italic">
+                <div className="absolute top-8 left-8 flex items-center gap-3 bg-black/40 backdrop-blur-md px-4 py-2 rounded-xl border border-[#DADCE0]">
+                    <Sparkles size={14} className="text-[#1a73e8] animate-pulse" />
+                    <span className="text-[10px] text-[#202124]/80 font-bold tracking-tight font-medium italic">
                         Neural Synthesis Active
                     </span>
                 </div>
@@ -98,8 +98,8 @@ export const NeuralGallery: React.FC<NeuralGalleryProps> = ({ images, title }) =
 
             {/* Reflection Layer */}
             <div className="mt-8 text-center">
-                <h4 className="text-white font-serif font-bold text-2xl mb-2">{title}</h4>
-                <p className="text-gray-400 text-xs tracking-tight font-semibold">Experience the Tectonic Flow</p>
+                <h4 className="text-[#202124] font-sans font-bold text-2xl mb-2">{title}</h4>
+                <p className="text-[#5F6368] text-xs tracking-tight font-semibold">Experience the Tectonic Flow</p>
             </div>
         </div>
     );

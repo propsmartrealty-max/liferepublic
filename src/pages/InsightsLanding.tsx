@@ -27,9 +27,9 @@ export const InsightsLanding: React.FC = () => {
 
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto text-center mb-8">
-                    <span className="text-accent text-sm font-bold tracking-tight font-semibold block mb-4">Market Knowledge Hub</span>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#E5C07B] mb-6">Pune Real Estate Insights</h1>
-                    <p className="text-lg text-white leading-relaxed">
+                    <span className="text-[#1a73e8] text-sm font-bold tracking-tight font-semibold block mb-4">Market Knowledge Hub</span>
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold text-[#E5C07B] mb-6">Pune Real Estate Insights</h1>
+                    <p className="text-lg text-[#202124] leading-relaxed">
                         Deep dive into the trends, micro-markets, and premium lifestyle offerings shaping the future of Hinjewadi, Mahalunge, and Baner.
                     </p>
                 </div>
@@ -37,7 +37,7 @@ export const InsightsLanding: React.FC = () => {
                 <div className="space-y-24">
                     {categories.map((category) => (
                         <div key={category.title}>
-                            <h2 className="text-3xl font-serif font-bold text-[#E5C07B] mb-8 pb-4 border-b border-white/10">
+                            <h2 className="text-3xl font-sans font-bold text-[#E5C07B] mb-8 pb-4 border-b border-[#DADCE0]">
                                 {category.title}
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -45,17 +45,17 @@ export const InsightsLanding: React.FC = () => {
                                     <Link 
                                         key={item.slug} 
                                         to={`/insights/${item.slug}`}
-                                        className="group bg-[#151822] border border-white/10 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-white/5 flex flex-col justify-between"
+                                        className="group bg-[#151822] border border-[#DADCE0] rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#DADCE0] flex flex-col justify-between"
                                     >
                                         <div>
-                                            <h3 className="text-xl font-bold text-[#E5C07B] mb-3 group-hover:text-accent transition-colors">
+                                            <h3 className="text-xl font-bold text-[#E5C07B] mb-3 group-hover:text-[#1a73e8] transition-colors">
                                                 {item.name}
                                             </h3>
-                                            <p className="text-sm text-white line-clamp-2">
+                                            <p className="text-sm text-[#202124] line-clamp-2">
                                                 Explore premium opportunities and deep market analysis for {item.name.toLowerCase()} in the thriving Pune West corridor.
                                             </p>
                                         </div>
-                                        <div className="mt-6 flex items-center gap-2 text-sm font-bold text-accent tracking-tight font-medium">
+                                        <div className="mt-6 flex items-center gap-2 text-sm font-bold text-[#1a73e8] tracking-tight font-medium">
                                             Read More
                                             <ArrowRight size={16} className="transform group-hover:translate-x-2 transition-transform" />
                                         </div>

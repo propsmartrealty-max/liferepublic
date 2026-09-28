@@ -23,14 +23,14 @@ export const NRIInvestment: React.FC = () => {
             <Breadcrumbs />
             
             {/* Hero Section */}
-            <section className="relative py-12 bg-[#0B0D14] overflow-hidden">
+            <section className="relative py-12 bg-white overflow-hidden">
                 <div className="container mx-auto px-4 relative">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
                             <motion.span
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                className="text-white font-bold tracking-widest uppercase text-sm flex items-center gap-2 mb-4"
+                                className="text-[#202124] font-bold tracking-widest uppercase text-sm flex items-center gap-2 mb-4"
                             >
                                 <Plane size={16} /> Global Investor Portfolio
                             </motion.span>
@@ -38,17 +38,17 @@ export const NRIInvestment: React.FC = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.1 }}
-                                className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight"
+                                className="text-4xl md:text-6xl font-sans font-bold text-[#202124] mb-6 leading-tight"
                             >
                                 The NRI Gateway to <br />
-                                <span className="text-accent underline-offset-8 underline decoration-double">Pune Real Estate</span>
+                                <span className="text-[#1a73e8] underline-offset-8 underline decoration-double">Pune Real Estate</span>
                             </motion.h1>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
                                 Secure your future in India's most resilient real estate market. Kolte Patil Life Republic offers a premium township experience for the global Indian.
                             </p>
                             <div className="flex gap-4">
                                 <Button size="lg" className="rounded-full px-12">Download Investor Kit</Button>
-                                <Button variant="outline" size="lg" className="rounded-full px-12 border-white/10">Talk to NRI Desk</Button>
+                                <Button variant="outline" size="lg" className="rounded-full px-12 border-[#DADCE0]">Talk to NRI Desk</Button>
                             </div>
                         </div>
                         <div className="relative">
@@ -64,17 +64,17 @@ export const NRIInvestment: React.FC = () => {
             </section>
 
             {/* Stats Summary from investmentStats */}
-            <section className="py-12 bg-[#1A1C23] border-y border-white/5">
+            <section className="py-12 bg-[#F8F9FA] border-y border-[#DADCE0]">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {investmentStats.map((stat, idx) => (
                             <div key={idx} className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-[#151822] border border-white/10 rounded-xl shadow-sm flex items-center justify-center text-accent">
+                                <div className="w-12 h-12 bg-[#151822] border border-[#DADCE0] rounded-xl shadow-sm flex items-center justify-center text-[#1a73e8]">
                                     <stat.icon size={24} />
                                 </div>
                                 <div>
-                                    <div className="text-xl font-bold text-white">{stat.value}</div>
-                                    <div className="text-xs text-gray-500 tracking-tight font-medium font-bold">{stat.label}</div>
+                                    <div className="text-xl font-bold text-[#202124]">{stat.value}</div>
+                                    <div className="text-xs text-[#5F6368] tracking-tight font-medium font-bold">{stat.label}</div>
                                 </div>
                             </div>
                         ))}
@@ -83,44 +83,44 @@ export const NRIInvestment: React.FC = () => {
             </section>
 
             {/* Why Invest Section */}
-            <section className="py-12 bg-[#0B0D14]">
+            <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-8">
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Why Choice Life Republic?</h2>
+                        <h2 className="text-3xl md:text-5xl font-sans font-bold text-[#202124] mb-6">Why Choice Life Republic?</h2>
                         <div className="w-24 h-1 bg-accent mx-auto"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         <div className="text-center group">
-                            <div className="w-20 h-20 bg-[#151822] border border-white/10/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-accent group-hover:border-accent transition-all duration-500">
-                                <DollarSign size={32} className="text-accent group-hover:text-white transition-colors" />
+                            <div className="w-20 h-20 bg-[#151822] border border-[#DADCE0]/5 border border-[#DADCE0] rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-accent group-hover:border-accent transition-all duration-500">
+                                <DollarSign size={32} className="text-[#1a73e8] group-hover:text-[#202124] transition-colors" />
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-4">Capital Appreciation</h3>
-                            <p className="text-gray-400">Hinjewadi real estate has consistently outperformed other Pune micro-markets over the last decade.</p>
+                            <h3 className="text-2xl font-bold text-[#202124] mb-4">Capital Appreciation</h3>
+                            <p className="text-[#5F6368]">Hinjewadi real estate has consistently outperformed other Pune micro-markets over the last decade.</p>
                         </div>
                         <div className="text-center group">
-                            <div className="w-20 h-20 bg-[#151822] border border-white/10/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-accent group-hover:border-accent transition-all duration-500">
-                                <PieChart size={32} className="text-accent group-hover:text-white transition-colors" />
+                            <div className="w-20 h-20 bg-[#151822] border border-[#DADCE0]/5 border border-[#DADCE0] rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-accent group-hover:border-accent transition-all duration-500">
+                                <PieChart size={32} className="text-[#1a73e8] group-hover:text-[#202124] transition-colors" />
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-4">Rental Yield</h3>
-                            <p className="text-gray-400">Proximity to IT Phase 1, 2, and 3 ensures a robust tenant pool from top-tier tech firms.</p>
+                            <h3 className="text-2xl font-bold text-[#202124] mb-4">Rental Yield</h3>
+                            <p className="text-[#5F6368]">Proximity to IT Phase 1, 2, and 3 ensures a robust tenant pool from top-tier tech firms.</p>
                         </div>
                         <div className="text-center group">
-                            <div className="w-20 h-20 bg-[#151822] border border-white/10/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-accent group-hover:border-accent transition-all duration-500">
-                                <ShieldCheck size={32} className="text-accent group-hover:text-white transition-colors" />
+                            <div className="w-20 h-20 bg-[#151822] border border-[#DADCE0]/5 border border-[#DADCE0] rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-accent group-hover:border-accent transition-all duration-500">
+                                <ShieldCheck size={32} className="text-[#1a73e8] group-hover:text-[#202124] transition-colors" />
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-4">RERA Verification</h3>
-                            <p className="text-gray-400">Every cluster at Life Republic is RERA certified, giving global investors peace of mind and total transparency.</p>
+                            <h3 className="text-2xl font-bold text-[#202124] mb-4">RERA Verification</h3>
+                            <p className="text-[#5F6368]">Every cluster at Life Republic is RERA certified, giving global investors peace of mind and total transparency.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* NRI Services Desk */}
-            <section className="py-12 bg-[#1A1C23]">
+            <section className="py-12 bg-[#F8F9FA]">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto rounded-3xl bg-[#151822] border border-white/10 shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                    <div className="max-w-4xl mx-auto rounded-3xl bg-[#151822] border border-[#DADCE0] shadow-2xl overflow-hidden flex flex-col md:flex-row">
                         <div className="p-12 md:w-1/2">
-                            <h2 className="text-3xl font-serif font-bold text-white mb-6">Dedicated NRI Support</h2>
+                            <h2 className="text-3xl font-sans font-bold text-[#202124] mb-6">Dedicated NRI Support</h2>
                             <ul className="space-y-4 mb-8">
                                 <li className="flex items-center gap-3 text-gray-600">
                                     <div className="w-2 h-2 bg-accent rounded-full"></div> Virtual Site Tours
@@ -139,9 +139,9 @@ export const NRIInvestment: React.FC = () => {
                         </div>
                         <div className="md:w-1/2 bg-accent/10 p-12 flex items-center justify-center">
                             <div className="text-center">
-                                <Globe size={80} className="text-accent mx-auto mb-6 opacity-50" />
-                                <div className="text-4xl font-serif font-bold text-white mb-2">2500+</div>
-                                <div className="text-white/60 tracking-tight font-medium text-sm font-bold">NRI Families Onboarded</div>
+                                <Globe size={80} className="text-[#1a73e8] mx-auto mb-6 opacity-50" />
+                                <div className="text-4xl font-sans font-bold text-[#202124] mb-2">2500+</div>
+                                <div className="text-[#202124]/60 tracking-tight font-medium text-sm font-bold">NRI Families Onboarded</div>
                             </div>
                         </div>
                     </div>

@@ -33,7 +33,7 @@ export class NeuralErrorBoundary extends Component<Props, State> {
     public render() {
         if (this.state.hasError) {
             return this.props.fallback || (
-                <div className="w-full h-[500px] flex items-center justify-center bg-[#1A1C23] rounded-[3rem] border border-white/5 p-12">
+                <div className="w-full h-[500px] flex items-center justify-center bg-[#F8F9FA] rounded-[24px] border border-[#DADCE0] p-12">
                     <div className="max-w-md text-center">
                         <motion.div 
                             initial={{ scale: 0.9, opacity: 0 }}
@@ -42,13 +42,13 @@ export class NeuralErrorBoundary extends Component<Props, State> {
                         >
                             <ShieldAlert size={40} />
                         </motion.div>
-                        <h2 className="text-3xl font-serif font-bold text-white mb-4">Neural Recalibration</h2>
-                        <p className="text-gray-500 mb-8 leading-relaxed font-medium">
+                        <h2 className="text-3xl font-sans font-bold text-[#202124] mb-4">Neural Recalibration</h2>
+                        <p className="text-[#5F6368] mb-8 leading-relaxed font-medium">
                             Our advanced spatial engine is undergoing a temporary re-synchronization. Please refresh the township view or explore our static project collection.
                         </p>
                         <button 
                             onClick={this.handleReset}
-                            className="inline-flex items-center gap-3 px-8 py-4 bg-[#0B0D14] text-white rounded-2xl font-bold hover:bg-accent transition-all shadow-xl group"
+                            className="inline-flex items-center gap-3 px-8 py-4 bg-white text-[#202124] rounded-2xl font-bold hover:bg-accent transition-all shadow-xl group"
                         >
                             <RefreshCcw size={18} className="group-hover:rotate-180 transition-transform duration-500" />
                             Synchronize Township

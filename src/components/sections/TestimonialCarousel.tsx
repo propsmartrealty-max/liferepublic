@@ -34,12 +34,12 @@ const testimonials = [
 
 export const TestimonialCarousel: React.FC = () => {
     return (
-        <section className="py-16 bg-[#0B0D14] text-white overflow-hidden relative">
+        <section className="py-16 bg-white text-[#202124] overflow-hidden relative">
             <div className="absolute inset-0 opacity-5 pointer-events-none"></div>
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-8">
-                    <span className="text-accent text-[10px] font-bold tracking-tight font-semibold block mb-4 italic">Social Synthesis</span>
-                    <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6">Resident Stories</h2>
+                    <span className="text-[#1a73e8] text-[10px] font-bold tracking-tight font-semibold block mb-4 italic">Social Synthesis</span>
+                    <h2 className="text-4xl md:text-6xl font-sans font-bold mb-6">Resident Stories</h2>
                     <div className="w-24 h-1 bg-accent mx-auto"></div>
                 </div>
 
@@ -54,25 +54,25 @@ export const TestimonialCarousel: React.FC = () => {
                         <SwiperSlide key={idx}>
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-12">
                                 <div className="relative order-2 lg:order-1">
-                                    <div className="absolute -left-8 -top-8 text-accent/20">
+                                    <div className="absolute -left-8 -top-8 text-[#1a73e8]/20">
                                         <Quote size={120} />
                                     </div>
                                     <div className="relative z-10">
-                                        <div className="flex gap-1 text-accent mb-8">
+                                        <div className="flex gap-1 text-[#1a73e8] mb-8">
                                             {[...Array(5)].map((_, i) => (
                                                 <Star key={i} size={18} fill="currentColor" />
                                             ))}
                                         </div>
-                                        <p className="text-2xl md:text-4xl font-serif font-light leading-relaxed mb-12 italic text-gray-200">
+                                        <p className="text-2xl md:text-4xl font-sans font-light leading-relaxed mb-12 italic text-gray-200">
                                             "{t.text}"
                                         </p>
                                         <div className="flex items-center gap-6">
-                                            <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center font-serif text-2xl text-accent font-bold">
+                                            <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center font-sans text-2xl text-[#1a73e8] font-bold">
                                                 {t.name.charAt(0)}
                                             </div>
                                             <div>
                                                 <h4 className="text-xl font-bold tracking-wider">{t.name}</h4>
-                                                <div className="flex items-center gap-2 text-accent text-xs font-bold tracking-tight font-medium mt-1">
+                                                <div className="flex items-center gap-2 text-[#1a73e8] text-xs font-bold tracking-tight font-medium mt-1">
                                                     <CheckCircle2 size={12} />
                                                     {t.location}
                                                 </div>
@@ -84,7 +84,7 @@ export const TestimonialCarousel: React.FC = () => {
                                     <motion.div 
                                         initial={{ scale: 0.9, opacity: 0 }}
                                         whileInView={{ scale: 1, opacity: 1 }}
-                                        className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border border-white/10"
+                                        className="relative aspect-[4/5] rounded-[24px] overflow-hidden shadow-2xl border border-[#DADCE0]"
                                     >
                                         <img loading="lazy" src={t.image} alt={t.name} className="absolute inset-0 w-full h-full object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent opacity-60"></div>

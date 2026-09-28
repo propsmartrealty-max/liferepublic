@@ -71,8 +71,8 @@ const SectorMarker = React.memo(({ sector, activeSector, onSelect }: { sector: a
                 onClick={() => onSelect(sector)}
                 className={`w-16 h-16 rounded-[1.5rem] flex items-center justify-center transition-all shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4)] border-2 ${
                     activeSector?.id === sector.id 
-                        ? 'bg-accent text-white scale-125 border-white shadow-accent/50' 
-                        : 'bg-[#0B0D14]/40 backdrop-blur-3xl text-white border-white/20 hover:bg-white hover:text-white hover:border-white'
+                        ? 'bg-accent text-[#202124] scale-125 border-white shadow-accent/50' 
+                        : 'bg-white/40 backdrop-blur-3xl text-[#202124] border-[#DADCE0] hover:bg-white hover:text-[#202124] hover:border-white'
                 }`}
             >
                 {sector.intensity === 'High' ? <Sparkles size={28} /> : <Target size={28} />}
@@ -84,9 +84,9 @@ const SectorMarker = React.memo(({ sector, activeSector, onSelect }: { sector: a
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0 }}
-                        className="absolute top-full mt-6 bg-[#0B0D14]/90 backdrop-blur-2xl px-6 py-2 rounded-full border border-white/10 shadow-2xl pointer-events-none whitespace-nowrap"
+                        className="absolute top-full mt-6 bg-white/90 backdrop-blur-2xl px-6 py-2 rounded-full border border-[#DADCE0] shadow-2xl pointer-events-none whitespace-nowrap"
                     >
-                        <span className="text-[10px] font-bold text-white tracking-tight font-semibold">{sector.name.split(':')[1] || sector.name}</span>
+                        <span className="text-[10px] font-bold text-[#202124] tracking-tight font-semibold">{sector.name.split(':')[1] || sector.name}</span>
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -107,26 +107,26 @@ export const MasterPlan: React.FC = () => {
     const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.1, 1, 1.1]);
 
     return (
-        <section ref={containerRef} className="py-48 bg-[#0B0D14] overflow-hidden relative">
+        <section ref={containerRef} className="py-48 bg-white overflow-hidden relative">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-32">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="inline-flex items-center gap-6 px-10 py-4 bg-[#0B0D14] text-white rounded-full mb-12 shadow-2xl border border-white/10"
+                        className="inline-flex items-center gap-6 px-10 py-4 bg-white text-[#202124] rounded-full mb-12 shadow-2xl border border-[#DADCE0]"
                     >
-                        <Navigation size={20} className="text-accent animate-pulse" />
+                        <Navigation size={20} className="text-[#1a73e8] animate-pulse" />
                         <span className="text-[11px] font-bold tracking-tight font-semibold">The Master Blueprint v6.0</span>
                     </motion.div>
-                    <h2 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-12 tracking-tighter leading-[0.85]">
-                        Spatial <br /> <span className="text-accent italic">Sovereignty.</span>
+                    <h2 className="text-6xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-12 tracking-tighter leading-[0.85]">
+                        Spatial <br /> <span className="text-[#1a73e8] italic">Sovereignty.</span>
                     </h2>
-                    <p className="text-2xl md:text-3xl text-gray-400 max-w-4xl mx-auto leading-relaxed font-medium">
+                    <p className="text-2xl md:text-3xl text-[#5F6368] max-w-4xl mx-auto leading-relaxed font-medium">
                         Navigate the 390-acre tectonic landscape. Every sector is programmatically synchronized with the 150ft Spine Road infrastructure.
                     </p>
                 </div>
 
-                <div className="relative group w-full max-w-[1400px] mx-auto rounded-[3rem] md:rounded-[6rem] overflow-hidden shadow-[0_120px_240px_-60px_rgba(0,0,0,0.3)] border-8 md:border-[16px] border-gray-50 bg-gray-200 h-[60vh] sm:h-[80vh] lg:h-[900px]">
+                <div className="relative group w-full max-w-[1400px] mx-auto rounded-[24px] md:rounded-[6rem] overflow-hidden shadow-[0_120px_240px_-60px_rgba(0,0,0,0.3)] border-8 md:border-[16px] border-gray-50 bg-gray-200 h-[60vh] sm:h-[80vh] lg:h-[900px]">
                     {!imgLoaded && (
                         <div className="absolute inset-0 flex items-center justify-center bg-[#151822] z-20">
                             <motion.div animate={{ rotate: 360 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
@@ -171,38 +171,38 @@ export const MasterPlan: React.FC = () => {
                                 initial={{ opacity: 0, y: 50, scale: 0.9 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 exit={{ opacity: 0, y: 50, scale: 0.9 }}
-                                className="absolute left-4 right-4 sm:left-auto sm:right-16 bottom-4 sm:bottom-16 sm:w-[550px] bg-[#151822] border border-white/10 rounded-[2.5rem] sm:rounded-[5rem] shadow-[0_100px_200px_-50px_rgba(0,0,0,0.5)] p-8 sm:p-16 border border-white z-40 overflow-hidden group/hud"
+                                className="absolute left-4 right-4 sm:left-auto sm:right-16 bottom-4 sm:bottom-16 sm:w-[550px] bg-[#151822] border border-[#DADCE0] rounded-[24px] sm:rounded-[5rem] shadow-[0_100px_200px_-50px_rgba(0,0,0,0.5)] p-8 sm:p-16 border border-white z-40 overflow-hidden group/hud"
                             >
                                 <div className="absolute top-0 right-0 p-12 opacity-5">
                                     <Globe size={150} />
                                 </div>
                                 <div className="flex justify-between items-start mb-8 relative z-10">
-                                    <div className="w-24 h-24 bg-[#0B0D14] text-accent rounded-[3rem] flex items-center justify-center shadow-2xl group-hover/hud:rotate-12 transition-transform duration-500">
+                                    <div className="w-24 h-24 bg-white text-[#1a73e8] rounded-[24px] flex items-center justify-center shadow-2xl group-hover/hud:rotate-12 transition-transform duration-500">
                                         <Info size={48} />
                                     </div>
                                     <button 
                                         onClick={() => setActiveSector(null)}
-                                        className="p-6 bg-[#1A1C23] hover:bg-accent hover:text-white rounded-full transition-all text-gray-400 group/close"
+                                        className="p-6 bg-[#F8F9FA] hover:bg-accent hover:text-[#202124] rounded-full transition-all text-[#5F6368] group/close"
                                     >
                                         <ArrowRight size={40} className="group-hover/close:translate-x-1 transition-transform" />
                                     </button>
                                 </div>
-                                <h3 className="text-5xl font-serif font-bold text-white mb-4 tracking-tighter leading-none relative z-10">{activeSector.name}</h3>
+                                <h3 className="text-5xl font-sans font-bold text-[#202124] mb-4 tracking-tighter leading-none relative z-10">{activeSector.name}</h3>
                                 <div className="flex items-center gap-6 mb-12 relative z-10">
-                                    <div className="flex items-center gap-3 px-6 py-3 bg-accent text-white rounded-full border border-white shadow-xl">
+                                    <div className="flex items-center gap-3 px-6 py-3 bg-accent text-[#202124] rounded-full border border-white shadow-xl">
                                         <Shield size={16} />
                                         <span className="text-[12px] font-bold tracking-tight font-semibold">{activeSector.status}</span>
                                     </div>
-                                    <span className="text-[12px] font-bold tracking-tight font-semibold text-gray-400">
+                                    <span className="text-[12px] font-bold tracking-tight font-semibold text-[#5F6368]">
                                         {activeSector.type}
                                     </span>
                                 </div>
-                                <p className="text-2xl text-gray-500 font-medium leading-relaxed mb-8 relative z-10">
+                                <p className="text-2xl text-[#5F6368] font-medium leading-relaxed mb-8 relative z-10">
                                     A curated architectural masterpiece within the 390-acre ecosystem. Designed for high-velocity lifestyle and absolute sovereignty.
                                 </p>
                                 <Link 
                                     to={activeSector.link}
-                                    className="w-full bg-[#0B0D14] text-white py-10 rounded-full flex items-center justify-center gap-6 font-bold text-2xl hover:bg-accent hover:scale-[1.02] transition-all shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)] group/btn relative z-10"
+                                    className="w-full bg-white text-[#202124] py-10 rounded-full flex items-center justify-center gap-6 font-bold text-2xl hover:bg-accent hover:scale-[1.02] transition-all shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)] group/btn relative z-10"
                                 >
                                     Explore Sector Portfolio <ArrowRight size={28} className="group-hover/btn:translate-x-3 transition-transform" />
                                 </Link>
@@ -215,8 +215,8 @@ export const MasterPlan: React.FC = () => {
                 <div className="mt-32 flex flex-wrap justify-center gap-24">
                     {[
                         { color: 'bg-accent shadow-[0_0_30px_rgba(197,160,89,0.5)]', label: 'Sovereign Pulse Clusters' },
-                        { color: 'bg-[#0B0D14] border border-white/20', label: '150ft Spine Road Backbone' },
-                        { color: 'bg-white border-2 border-white/10', label: 'IT Connectivity Radius' }
+                        { color: 'bg-white border border-[#DADCE0]', label: '150ft Spine Road Backbone' },
+                        { color: 'bg-white border-2 border-[#DADCE0]', label: 'IT Connectivity Radius' }
                     ].map((item, i) => (
                         <motion.div 
                             key={i} 
@@ -226,7 +226,7 @@ export const MasterPlan: React.FC = () => {
                             className="flex items-center gap-6"
                         >
                             <div className={`w-8 h-8 rounded-xl shadow-xl ${item.color}`}></div>
-                            <span className="text-[12px] font-bold text-gray-400 tracking-tight font-semibold">{item.label}</span>
+                            <span className="text-[12px] font-bold text-[#5F6368] tracking-tight font-semibold">{item.label}</span>
                         </motion.div>
                     ))}
                 </div>

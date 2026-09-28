@@ -33,7 +33,7 @@ export const ExitIntentOffer: React.FC = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="absolute inset-0 bg-[#0B0D14]/80 backdrop-blur-md"
+                    className="absolute inset-0 bg-white/80 backdrop-blur-md"
                     onClick={() => setIsVisible(false)}
                 />
                 
@@ -41,52 +41,52 @@ export const ExitIntentOffer: React.FC = () => {
                     initial={{ scale: 0.9, opacity: 0, y: 20 }}
                     animate={{ scale: 1, opacity: 1, y: 0 }}
                     exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                    className="relative bg-[#151822] border border-white/10 w-full max-w-4xl rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row"
+                    className="relative bg-[#151822] border border-[#DADCE0] w-full max-w-4xl rounded-[24px] overflow-hidden shadow-2xl flex flex-col md:flex-row"
                 >
                     <button 
                         onClick={() => setIsVisible(false)}
-                        className="absolute top-6 right-6 z-20 w-10 h-10 bg-[#151822] hover:bg-gray-200 rounded-full flex items-center justify-center text-white transition-colors"
+                        className="absolute top-6 right-6 z-20 w-10 h-10 bg-[#151822] hover:bg-gray-200 rounded-full flex items-center justify-center text-[#202124] transition-colors"
                     >
                         <X size={20} />
                     </button>
 
                     {/* Image/Visual Side */}
-                    <div className="md:w-1/2 relative bg-[#0B0D14] p-12 flex flex-col justify-between overflow-hidden">
+                    <div className="md:w-1/2 relative bg-white p-12 flex flex-col justify-between overflow-hidden">
                         <div className="absolute inset-0 opacity-20 bg-[url('/images/gallery/eros/master-layout.webp')] bg-cover bg-center"></div>
                         <div className="relative z-10">
-                            <div className="w-12 h-12 bg-accent rounded-2xl flex items-center justify-center text-white mb-8">
+                            <div className="w-12 h-12 bg-accent rounded-2xl flex items-center justify-center text-[#202124] mb-8">
                                 <Lock size={24} />
                             </div>
-                            <h3 className="text-4xl font-serif font-bold text-white mb-6">Access <br />Private Beta <br />Price List</h3>
-                            <p className="text-white/60 text-lg leading-relaxed font-light">
+                            <h3 className="text-4xl font-sans font-bold text-[#202124] mb-6">Access <br />Private Beta <br />Price List</h3>
+                            <p className="text-[#202124]/60 text-lg leading-relaxed font-light">
                                 Unlock the <strong>2026 pricing</strong> and inventory availability before the next market surge.
                             </p>
                         </div>
-                        <div className="relative z-10 flex items-center gap-2 text-accent text-xs font-bold tracking-tight font-medium">
+                        <div className="relative z-10 flex items-center gap-2 text-[#1a73e8] text-xs font-bold tracking-tight font-medium">
                             <ShieldCheck size={16} /> Sales Desk Verified
                         </div>
                     </div>
 
                     {/* Form Side */}
                     <div className="md:w-1/2 p-12 md:p-16">
-                        <h4 className="text-2xl font-serif font-bold text-white mb-2">Wait! Don't Leave.</h4>
-                        <p className="text-gray-500 mb-10">Enter your details to receive the digital brochure and current price list directly on WhatsApp.</p>
+                        <h4 className="text-2xl font-sans font-bold text-[#202124] mb-2">Wait! Don't Leave.</h4>
+                        <p className="text-[#5F6368] mb-10">Enter your details to receive the digital brochure and current price list directly on WhatsApp.</p>
                         
                         <form className="space-y-6">
                             <div className="space-y-2">
-                                <label className="text-[10px] font-bold tracking-tight font-medium text-gray-400">Full Name</label>
+                                <label className="text-[10px] font-bold tracking-tight font-medium text-[#5F6368]">Full Name</label>
                                 <input 
                                     type="text" 
                                     placeholder="John Doe" 
-                                    className="w-full bg-[#1A1C23] border-none rounded-xl p-4 text-white focus:ring-2 focus:ring-accent outline-none transition-all"
+                                    className="w-full bg-[#F8F9FA] border-none rounded-xl p-4 text-[#202124] focus:ring-2 focus:ring-accent outline-none transition-all"
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label className="text-[10px] font-bold tracking-tight font-medium text-gray-400">Mobile Number</label>
+                                <label className="text-[10px] font-bold tracking-tight font-medium text-[#5F6368]">Mobile Number</label>
                                 <input 
                                     type="tel" 
                                     placeholder="+91 99999 99999" 
-                                    className="w-full bg-[#1A1C23] border-none rounded-xl p-4 text-white focus:ring-2 focus:ring-accent outline-none transition-all"
+                                    className="w-full bg-[#F8F9FA] border-none rounded-xl p-4 text-[#202124] focus:ring-2 focus:ring-accent outline-none transition-all"
                                 />
                             </div>
                             <Button variant="primary" className="w-full rounded-xl py-6 flex items-center justify-center gap-3 group">
@@ -94,7 +94,7 @@ export const ExitIntentOffer: React.FC = () => {
                             </Button>
                         </form>
                         
-                        <p className="text-center text-[10px] text-gray-400 mt-8">
+                        <p className="text-center text-[10px] text-[#5F6368] mt-8">
                             Your privacy is our priority. No spam, only the price list.
                         </p>
                     </div>

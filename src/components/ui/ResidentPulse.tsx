@@ -4,17 +4,17 @@ import { motion } from 'framer-motion';
 
 const activities = [
     { type: 'Live Pulse', message: '12,452+ Sovereign Families call this home', time: 'ACTIVE', icon: Heart, color: 'text-red-500', bg: 'bg-red-50' },
-    { type: 'Synthesis', message: 'New 3 BHK booking in Echoes Sector R22', time: '2 mins ago', icon: Home, color: 'text-accent', bg: 'bg-accent/10' },
+    { type: 'Synthesis', message: 'New 3 BHK booking in Echoes Sector R22', time: '2 mins ago', icon: Home, color: 'text-[#1a73e8]', bg: 'bg-accent/10' },
     { type: 'Global Tour', message: 'Digital walkthrough initiated from New Jersey, USA', time: '15 mins ago', icon: Globe, color: 'text-blue-500', bg: 'bg-blue-50' },
     { type: 'Possession', message: 'Authority letter issued for Arezo Tower A', time: '1 hour ago', icon: ShieldCheck, color: 'text-indigo-600', bg: 'bg-indigo-50' },
     { type: 'Infrastructure', message: 'Central Spine Road LED telemetry sync complete', time: '3 hours ago', icon: Zap, color: 'text-amber-500', bg: 'bg-amber-50' },
     { type: 'Bio-Sovereignty', message: '15 native trees planted in Urban Park Sector R10', time: 'Today', icon: Trees, color: 'text-emerald-500', bg: 'bg-emerald-50' },
-    { type: 'Resident ROI', message: '12.4% average appreciation synthesized for Arezo residents', time: '2025 YTD', icon: Activity, color: 'text-accent', bg: 'bg-accent/10' }
+    { type: 'Resident ROI', message: '12.4% average appreciation synthesized for Arezo residents', time: '2025 YTD', icon: Activity, color: 'text-[#1a73e8]', bg: 'bg-accent/10' }
 ];
 
 export const ResidentPulse: React.FC = () => {
     return (
-        <div className="bg-transparent border-y border-white/5 py-6 overflow-hidden relative group w-full">
+        <div className="bg-transparent border-y border-[#DADCE0] py-6 overflow-hidden relative group w-full">
             {/* Background Synthesis HUD Overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white z-10 pointer-events-none"></div>
             
@@ -25,7 +25,7 @@ export const ResidentPulse: React.FC = () => {
                         <motion.div 
                             key={idx} 
                             whileHover={{ scale: 1.05 }}
-                            className="flex items-center gap-6 px-10 border-r border-white/5 last:border-r-0 group/item cursor-pointer"
+                            className="flex items-center gap-6 px-10 border-r border-[#DADCE0] last:border-r-0 group/item cursor-pointer"
                         >
                             <div className={`${activity.bg} ${activity.color} p-4 rounded-2xl shadow-sm group-hover/item:shadow-xl transition-all duration-500 border border-transparent group-hover/item:border-current/20`}>
                                 <activity.icon size={24} className="group-hover/item:rotate-12 transition-transform" />
@@ -36,9 +36,9 @@ export const ResidentPulse: React.FC = () => {
                                         {activity.type}
                                     </span>
                                     <div className="w-1 h-1 rounded-full bg-gray-200"></div>
-                                    <span className="text-[9px] font-bold text-gray-400 tracking-tight font-medium">{activity.time}</span>
+                                    <span className="text-[9px] font-bold text-[#5F6368] tracking-tight font-medium">{activity.time}</span>
                                 </div>
-                                <span className="text-sm font-bold text-white tracking-tight group-hover/item:text-accent transition-colors">
+                                <span className="text-sm font-bold text-[#202124] tracking-tight group-hover/item:text-[#1a73e8] transition-colors">
                                     {activity.message}
                                 </span>
                             </div>

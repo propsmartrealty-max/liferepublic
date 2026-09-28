@@ -47,15 +47,15 @@ export const RecommendedProjects: React.FC = () => {
                         <motion.span 
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            className="text-accent text-xs font-bold tracking-tight font-semibold flex items-center gap-2 mb-3"
+                            className="text-[#1a73e8] text-xs font-bold tracking-tight font-semibold flex items-center gap-2 mb-3"
                         >
                             <Sparkles size={14} /> Curated For You
                         </motion.span>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-white">
+                        <h2 className="text-3xl md:text-4xl font-sans font-bold text-[#202124]">
                             Tailored Selection
                         </h2>
                     </div>
-                    <p className="text-gray-500 max-w-sm text-sm font-medium leading-relaxed">
+                    <p className="text-[#5F6368] max-w-sm text-sm font-medium leading-relaxed">
                         Based on your interest in Life Republic sectors and configurations.
                     </p>
                 </div>

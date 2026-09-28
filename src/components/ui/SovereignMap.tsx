@@ -129,24 +129,24 @@ export const SovereignMap: React.FC = () => {
 
   if (loadError) {
     return (
-      <div className="w-full h-[600px] rounded-[2rem] bg-[#151822] flex flex-col items-center justify-center border border-white/10">
+      <div className="w-full h-[600px] rounded-[2rem] bg-[#151822] flex flex-col items-center justify-center border border-[#DADCE0]">
         <MapIcon size={48} className="text-gray-300 mb-4" />
-        <p className="text-gray-500 font-serif">Interactive map temporarily unavailable.</p>
-        <p className="text-gray-400 text-sm mt-2">Please check connectivity or API configuration.</p>
+        <p className="text-[#5F6368] font-sans">Interactive map temporarily unavailable.</p>
+        <p className="text-[#5F6368] text-sm mt-2">Please check connectivity or API configuration.</p>
       </div>
     );
   }
 
   if (!isLoaded) {
     return (
-      <div className="w-full h-[600px] rounded-[2rem] bg-[#1A1C23] animate-pulse flex items-center justify-center">
+      <div className="w-full h-[600px] rounded-[2rem] bg-[#F8F9FA] animate-pulse flex items-center justify-center">
         <div className="w-10 h-10 border-4 border-accent border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
   }
 
   return (
-    <div className="relative w-full rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
+    <div className="relative w-full rounded-[2rem] overflow-hidden shadow-2xl border border-[#DADCE0]">
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
@@ -177,10 +177,10 @@ export const SovereignMap: React.FC = () => {
             onCloseClick={() => setActiveMarker(null)}
           >
             <div className="p-2 min-w-[150px]">
-              <h3 className="font-serif font-bold text-white mb-1">
+              <h3 className="font-sans font-bold text-[#202124] mb-1">
                 {markers.find(m => m.id === activeMarker)?.title}
               </h3>
-              <div className="flex items-center gap-1 text-xs text-accent tracking-tight font-medium font-bold">
+              <div className="flex items-center gap-1 text-xs text-[#1a73e8] tracking-tight font-medium font-bold">
                 <Navigation size={12} />
                 {markers.find(m => m.id === activeMarker)?.type}
               </div>
@@ -190,14 +190,14 @@ export const SovereignMap: React.FC = () => {
       </GoogleMap>
       
       {/* Premium Overlay UI */}
-      <div className="absolute top-6 left-6 bg-[#151822] border border-white/10/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white/20">
+      <div className="absolute top-6 left-6 bg-[#151822] border border-[#DADCE0]/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-[#DADCE0]">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent">
+          <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-[#1a73e8]">
             <MapPin size={20} />
           </div>
           <div>
-            <div className="text-[10px] font-bold tracking-tight font-medium text-gray-400">Location</div>
-            <div className="font-serif font-bold text-white text-sm">Hinjewadi IT Corridor</div>
+            <div className="text-[10px] font-bold tracking-tight font-medium text-[#5F6368]">Location</div>
+            <div className="font-sans font-bold text-[#202124] text-sm">Hinjewadi IT Corridor</div>
           </div>
         </div>
       </div>

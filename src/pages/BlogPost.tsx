@@ -80,7 +80,7 @@ export const BlogPostPage: React.FC = () => {
 
     if (loading) {
         return (
-            <div className="min-h-[75vh] bg-[#0B0D14] flex items-center justify-center">
+            <div className="min-h-[75vh] bg-white flex items-center justify-center">
                 <div className="w-12 h-12 border-4 border-accent border-t-transparent rounded-full animate-spin"></div>
             </div>
         );
@@ -89,8 +89,8 @@ export const BlogPostPage: React.FC = () => {
     if (error || !post) {
         return (
             <div className="min-h-[75vh] pt-32 flex flex-col items-center justify-center text-center px-4">
-                <h1 className="text-4xl font-serif font-bold text-white mb-4">Article Displaced</h1>
-                <p className="text-gray-500 mb-8 max-w-md">{error || "The requested insights could not be retrieved from the Sovereign Archive."}</p>
+                <h1 className="text-4xl font-sans font-bold text-[#202124] mb-4">Article Displaced</h1>
+                <p className="text-[#5F6368] mb-8 max-w-md">{error || "The requested insights could not be retrieved from the Sovereign Archive."}</p>
                 <Link to="/media-center">
                     <Button variant="primary" className="rounded-full px-8">Return to Media Center</Button>
                 </Link>
@@ -109,7 +109,7 @@ export const BlogPostPage: React.FC = () => {
             />
 
             {/* Editorial Header */}
-            <header className="relative pt-32 pb-20 bg-[#0B0D14] overflow-hidden">
+            <header className="relative pt-32 pb-20 bg-white overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-secondary z-10"></div>
                 {post.image && (
                     <motion.div 
@@ -124,24 +124,24 @@ export const BlogPostPage: React.FC = () => {
                 
                 <div className="container mx-auto px-4 relative z-20">
                     <div className="max-w-4xl mx-auto">
-                        <Link to="/media-center" className="inline-flex items-center text-accent hover:text-white mb-12 transition-colors group">
+                        <Link to="/media-center" className="inline-flex items-center text-[#1a73e8] hover:text-[#202124] mb-12 transition-colors group">
                             <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Media Center
                         </Link>
                         
-                        <div className="flex flex-wrap items-center gap-6 text-[10px] font-bold tracking-tight font-semibold text-accent/80 mb-8">
+                        <div className="flex flex-wrap items-center gap-6 text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8]/80 mb-8">
                             <span className="flex items-center gap-2"><Calendar size={14} /> {formatDate(post.published_at || post.created_at)}</span>
                             <span className="flex items-center gap-2"><User size={14} /> {post.author || 'Sovereign Editor'}</span>
                             <span className="flex items-center gap-2"><Clock size={14} /> {Math.ceil(post.content.length / 1000)} MIN READ</span>
                         </div>
                         
-                        <h1 className="text-4xl md:text-7xl font-serif font-bold text-white mb-12 leading-tight tracking-tighter">
+                        <h1 className="text-4xl md:text-7xl font-sans font-bold text-[#202124] mb-12 leading-tight tracking-tighter">
                             {post.title}
                         </h1>
 
                         {post.tags && post.tags.length > 0 && (
                             <div className="flex flex-wrap gap-3">
                                 {post.tags.map(tag => (
-                                    <span key={tag} className="bg-[#151822] border border-white/10/10 backdrop-blur-md text-white/70 border border-white/20 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-tight font-medium">
+                                    <span key={tag} className="bg-[#151822] border border-[#DADCE0]/10 backdrop-blur-md text-[#202124]/70 border border-[#DADCE0] px-4 py-1.5 rounded-full text-[10px] font-bold tracking-tight font-medium">
                                         #{tag}
                                     </span>
                                 ))}
@@ -151,24 +151,24 @@ export const BlogPostPage: React.FC = () => {
                 </div>
             </header>
 
-            <article className="relative bg-[#151822] border border-white/10 -mt-12 rounded-t-[4rem] z-30 shadow-2xl">
+            <article className="relative bg-[#151822] border border-[#DADCE0] -mt-12 rounded-t-[4rem] z-30 shadow-2xl">
                 <div className="max-w-4xl mx-auto px-6 py-12">
-                    <div className="prose prose-xl max-w-none prose-headings:font-serif prose-headings:text-white prose-headings:font-bold prose-p:text-gray-600 prose-p:leading-relaxed prose-a:text-accent prose-strong:text-white prose-img:rounded-[2rem] prose-img:shadow-2xl font-medium">
+                    <div className="prose prose-xl max-w-none prose-headings:font-sans prose-headings:text-[#202124] prose-headings:font-bold prose-p:text-gray-600 prose-p:leading-relaxed prose-a:text-[#1a73e8] prose-strong:text-[#202124] prose-img:rounded-[2rem] prose-img:shadow-2xl font-medium">
                         <div dangerouslySetInnerHTML={{ __html: post.content }} />
                     </div>
 
-                    <div className="mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div className="mt-24 pt-12 border-t border-[#DADCE0] flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-[#0B0D14] text-accent rounded-full flex items-center justify-center">
+                            <div className="w-12 h-12 bg-white text-[#1a73e8] rounded-full flex items-center justify-center">
                                 <Target size={24} />
                             </div>
                             <div>
-                                <p className="text-white font-bold">Life Republic Media Desk</p>
-                                <p className="text-xs text-gray-400 font-medium tracking-widest uppercase">Sovereign Publication</p>
+                                <p className="text-[#202124] font-bold">Life Republic Media Desk</p>
+                                <p className="text-xs text-[#5F6368] font-medium tracking-widest uppercase">Sovereign Publication</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-6">
-                            <span className="text-[10px] font-bold tracking-tight font-semibold text-gray-400">Share Synthesis</span>
+                            <span className="text-[10px] font-bold tracking-tight font-semibold text-[#5F6368]">Share Synthesis</span>
                             <ShareButtons
                                 url={`/media-center/${post.slug}`}
                                 title={post.title}
@@ -180,19 +180,19 @@ export const BlogPostPage: React.FC = () => {
 
             {/* Related Insights */}
             {related.length > 0 && (
-                <section className="py-12 bg-[#1A1C23]/50">
+                <section className="py-12 bg-[#F8F9FA]/50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-4 block text-center md:text-left">Complementary Synthesis</span>
-                            <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-12 text-center md:text-left">Related <span className="text-accent italic">Sovereign Insights.</span></h2>
+                            <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-4 block text-center md:text-left">Complementary Synthesis</span>
+                            <h2 className="text-3xl md:text-5xl font-sans font-bold text-[#202124] mb-12 text-center md:text-left">Related <span className="text-[#1a73e8] italic">Sovereign Insights.</span></h2>
                             
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 {related.map((item, idx) => (
                                     <Link key={item.id} to={`/media-center/${item.slug}`} className="group">
-                                        <div className="bg-[#151822] border border-white/10 rounded-[2rem] border border-white/5 p-8 h-full flex flex-col hover:border-accent transition-all hover:shadow-xl hover:shadow-accent/5">
-                                            <div className="text-[9px] font-bold text-accent tracking-tight font-medium mb-4">{formatDate(item.published_at)}</div>
-                                            <h3 className="text-lg font-serif font-bold text-white mb-4 line-clamp-2 group-hover:text-accent transition-colors">{item.title}</h3>
-                                            <div className="mt-auto flex items-center gap-2 text-[9px] font-bold text-white tracking-tight font-semibold">
+                                        <div className="bg-[#151822] border border-[#DADCE0] rounded-[2rem] border border-[#DADCE0] p-8 h-full flex flex-col hover:border-accent transition-all hover:shadow-xl hover:shadow-accent/5">
+                                            <div className="text-[9px] font-bold text-[#1a73e8] tracking-tight font-medium mb-4">{formatDate(item.published_at)}</div>
+                                            <h3 className="text-lg font-sans font-bold text-[#202124] mb-4 line-clamp-2 group-hover:text-[#1a73e8] transition-colors">{item.title}</h3>
+                                            <div className="mt-auto flex items-center gap-2 text-[9px] font-bold text-[#202124] tracking-tight font-semibold">
                                                 View Article <ChevronRight size={14} />
                                             </div>
                                         </div>
@@ -205,17 +205,17 @@ export const BlogPostPage: React.FC = () => {
             )}
 
             {/* Final CTA */}
-            <section className="py-12 bg-[#0B0D14] overflow-hidden">
+            <section className="py-12 bg-white overflow-hidden">
                 <div className="container mx-auto px-4 text-center">
-                    <div className="max-w-3xl mx-auto bg-[#0B0D14] rounded-[3rem] p-12 md:p-20 shadow-2xl relative overflow-hidden group">
+                    <div className="max-w-3xl mx-auto bg-white rounded-[24px] p-12 md:p-20 shadow-2xl relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px] pointer-events-none group-hover:scale-110 transition-transform duration-1000"></div>
-                        <Sparkles size={48} className="text-accent mx-auto mb-8 animate-pulse" />
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Deepen Your <span className="text-accent italic">Sovereign Knowledge.</span></h2>
-                        <p className="text-gray-400 text-lg mb-10 leading-relaxed font-medium">
+                        <Sparkles size={48} className="text-[#1a73e8] mx-auto mb-8 animate-pulse" />
+                        <h2 className="text-3xl md:text-5xl font-sans font-bold text-[#202124] mb-6">Deepen Your <span className="text-[#1a73e8] italic">Sovereign Knowledge.</span></h2>
+                        <p className="text-[#5F6368] text-lg mb-10 leading-relaxed font-medium">
                             Synthesize your personal investment portfolio using our AI-driven Thesis engine.
                         </p>
                         <Link to="/township-intelligence">
-                            <button className="bg-[#151822] border border-white/10 text-white px-12 py-5 rounded-full font-bold shadow-2xl hover:bg-accent transition-all">
+                            <button className="bg-[#151822] border border-[#DADCE0] text-[#202124] px-12 py-5 rounded-full font-bold shadow-2xl hover:bg-accent transition-all">
                                 Initiate Portfolio Synthesis
                             </button>
                         </Link>

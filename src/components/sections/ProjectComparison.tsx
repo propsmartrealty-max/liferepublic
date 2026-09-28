@@ -45,11 +45,11 @@ export const ProjectComparison: React.FC = () => {
     if (loading) return <div className="py-12 text-center">Loading comparisons...</div>;
 
     return (
-        <section className="py-12 bg-[#0B0D14]">
+        <section className="py-12 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-8">
-                    <h2 className="text-4xl font-serif font-bold text-white mb-4">Sovereign Project Comparison Hub</h2>
-                    <p className="text-gray-500 max-w-2xl mx-auto">Select up to 3 projects to compare configurations, amenities, and investment potential side-by-side.</p>
+                    <h2 className="text-4xl font-sans font-bold text-[#202124] mb-4">Sovereign Project Comparison Hub</h2>
+                    <p className="text-[#5F6368] max-w-2xl mx-auto">Select up to 3 projects to compare configurations, amenities, and investment potential side-by-side.</p>
                 </div>
 
                 {/* Selection Bar */}
@@ -60,8 +60,8 @@ export const ProjectComparison: React.FC = () => {
                             onClick={() => toggleProject(p.id)}
                             className={`px-4 py-2 rounded-full text-xs font-bold transition-all border ${
                                 selectedIds.includes(p.id)
-                                    ? 'bg-[#0B0D14] text-white border-secondary shadow-lg'
-                                    : 'bg-white text-gray-400 border-white/5 hover:border-accent'
+                                    ? 'bg-white text-[#202124] border-secondary shadow-lg'
+                                    : 'bg-white text-[#5F6368] border-[#DADCE0] hover:border-accent'
                             }`}
                         >
                             {p.title}
@@ -79,41 +79,41 @@ export const ProjectComparison: React.FC = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0.95 }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="bg-[#1A1C23] rounded-[2.5rem] border border-white/5 overflow-hidden group hover:shadow-2xl transition-all"
+                                className="bg-[#F8F9FA] rounded-[24px] border border-[#DADCE0] overflow-hidden group hover:shadow-2xl transition-all"
                             >
                                 <div className="relative h-48">
                                     <img loading="lazy" src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                                        <h3 className="text-xl font-bold text-white">{p.title}</h3>
-                                        <div className="text-accent text-sm font-bold tracking-tight font-medium">{p.category}</div>
+                                        <h3 className="text-xl font-bold text-[#202124]">{p.title}</h3>
+                                        <div className="text-[#1a73e8] text-sm font-bold tracking-tight font-medium">{p.category}</div>
                                     </div>
                                 </div>
 
                                 <div className="p-8 space-y-6">
-                                    <div className="flex justify-between items-center text-sm border-b border-white/10 pb-4">
-                                        <span className="text-gray-400 uppercase font-bold tracking-tighter">Starting Price</span>
-                                        <span className="text-white font-bold flex items-center gap-1">
+                                    <div className="flex justify-between items-center text-sm border-b border-[#DADCE0] pb-4">
+                                        <span className="text-[#5F6368] uppercase font-bold tracking-tighter">Starting Price</span>
+                                        <span className="text-[#202124] font-bold flex items-center gap-1">
                                             <IndianRupee size={14} /> {p.price}
                                         </span>
                                     </div>
 
                                     <div className="space-y-4">
-                                        <div className="text-[10px] text-gray-400 font-bold tracking-tight font-medium">Core Features</div>
+                                        <div className="text-[10px] text-[#5F6368] font-bold tracking-tight font-medium">Core Features</div>
                                         {p.features.slice(0, 4).map((f, i) => (
                                             <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                                                <CheckCircle2 size={16} className="text-accent" /> {f}
+                                                <CheckCircle2 size={16} className="text-[#1a73e8]" /> {f}
                                             </div>
                                         ))}
                                     </div>
 
-                                    <div className="space-y-4 pt-4 border-t border-white/10">
-                                        <div className="text-[10px] text-gray-400 font-bold tracking-tight font-medium">Investment Rating</div>
+                                    <div className="space-y-4 pt-4 border-t border-[#DADCE0]">
+                                        <div className="text-[10px] text-[#5F6368] font-bold tracking-tight font-medium">Investment Rating</div>
                                         <div className="flex gap-1">
                                             {[...Array(5)].map((_, i) => (
                                                 <div key={i} className={`w-8 h-1 rounded-full ${i < 4 ? 'bg-accent' : 'bg-gray-200'}`}></div>
                                             ))}
                                         </div>
-                                        <div className="text-xs text-gray-500 italic">High yield potential due to Phase 1 proximity.</div>
+                                        <div className="text-xs text-[#5F6368] italic">High yield potential due to Phase 1 proximity.</div>
                                     </div>
 
                                     <Button 
@@ -130,12 +130,12 @@ export const ProjectComparison: React.FC = () => {
 
                     {/* Empty Slots */}
                     {[...Array(3 - comparedProjects.length)].map((_, i) => (
-                        <div key={`empty-${i}`} className="hidden md:flex flex-col items-center justify-center border-2 border-dashed border-white/10 rounded-[2.5rem] bg-[#1A1C23]/50 p-12 text-center">
-                            <div className="w-16 h-16 bg-[#151822] border border-white/10 rounded-2xl flex items-center justify-center text-gray-200 mb-4">
+                        <div key={`empty-${i}`} className="hidden md:flex flex-col items-center justify-center border-2 border-dashed border-[#DADCE0] rounded-[24px] bg-[#F8F9FA]/50 p-12 text-center">
+                            <div className="w-16 h-16 bg-[#151822] border border-[#DADCE0] rounded-2xl flex items-center justify-center text-gray-200 mb-4">
                                 <Home size={32} />
                             </div>
-                            <h4 className="text-gray-400 font-bold mb-2">Compare Another Project</h4>
-                            <p className="text-gray-400 text-xs">Select a sector from the bar above to audit it side-by-side.</p>
+                            <h4 className="text-[#5F6368] font-bold mb-2">Compare Another Project</h4>
+                            <p className="text-[#5F6368] text-xs">Select a sector from the bar above to audit it side-by-side.</p>
                         </div>
                     ))}
                 </div>

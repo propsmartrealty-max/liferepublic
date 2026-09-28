@@ -51,46 +51,46 @@ export const ExitIntentModal: React.FC = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={handleClose}
-                        className="absolute inset-0 bg-[#0B0D14]/98 backdrop-blur-3xl"
+                        className="absolute inset-0 bg-white/98 backdrop-blur-3xl"
                     />
 
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9, y: 100 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 100 }}
-                        className="relative bg-[#151822] border border-white/10 rounded-t-[4rem] sm:rounded-[5rem] shadow-[0_100px_200px_-50px_rgba(0,0,0,0.6)] w-full max-w-5xl overflow-hidden border border-white/10"
+                        className="relative bg-[#151822] border border-[#DADCE0] rounded-t-[4rem] sm:rounded-[5rem] shadow-[0_100px_200px_-50px_rgba(0,0,0,0.6)] w-full max-w-5xl overflow-hidden border border-[#DADCE0]"
                     >
                         <button
                             onClick={handleClose}
                             className="absolute top-12 right-12 p-5 bg-[#151822] hover:bg-accent rounded-full transition-all z-20 group hover:rotate-90"
                         >
-                            <X size={28} className="text-white" />
+                            <X size={28} className="text-[#202124]" />
                         </button>
 
                         <div className="flex flex-col lg:flex-row min-h-[650px]">
                             {/* Visual Tectonic Side */}
-                            <div className="w-full lg:w-[40%] bg-[#0B0D14] p-16 md:p-20 text-white relative overflow-hidden flex flex-col justify-center">
+                            <div className="w-full lg:w-[40%] bg-white p-16 md:p-20 text-[#202124] relative overflow-hidden flex flex-col justify-center">
                                 <div className="absolute inset-0 bg-[url('/images/aerial-sunset.png')] bg-cover bg-center grayscale opacity-10 scale-110 group-hover:scale-125 transition-transform duration-[2s]"></div>
                                 <div className="relative z-10 space-y-16">
-                                    <div className="w-28 h-28 bg-accent/20 rounded-[3rem] flex items-center justify-center text-accent border border-accent/30 shadow-2xl relative">
+                                    <div className="w-28 h-28 bg-accent/20 rounded-[24px] flex items-center justify-center text-[#1a73e8] border border-accent/30 shadow-2xl relative">
                                         <div className="absolute inset-0 bg-accent/20 blur-2xl animate-pulse rounded-full"></div>
                                         <Target size={54} className="relative z-10" />
                                     </div>
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-3">
                                             <div className="w-2 h-2 rounded-full bg-accent animate-ping"></div>
-                                            <p className="text-[11px] font-bold tracking-tight font-semibold text-accent">Neural Calibration v6.0</p>
+                                            <p className="text-[11px] font-bold tracking-tight font-semibold text-[#1a73e8]">Neural Calibration v6.0</p>
                                         </div>
-                                        <h3 className="text-6xl md:text-7xl font-serif font-bold leading-[0.9] tracking-tighter">
+                                        <h3 className="text-6xl md:text-7xl font-sans font-bold leading-[0.9] tracking-tighter">
                                             Synthesis <br />Locked.
                                         </h3>
                                     </div>
                                     <div className="space-y-6">
-                                        <div className="flex justify-between items-end text-[12px] font-bold tracking-tight font-semibold text-white/40">
+                                        <div className="flex justify-between items-end text-[12px] font-bold tracking-tight font-semibold text-[#202124]/40">
                                             <span>Portfolio Completeness</span>
-                                            <span className="text-accent text-3xl font-serif">{completeness}%</span>
+                                            <span className="text-[#1a73e8] text-3xl font-sans">{completeness}%</span>
                                         </div>
-                                        <div className="w-full h-2 bg-[#151822] border border-white/10/10 rounded-full overflow-hidden">
+                                        <div className="w-full h-2 bg-[#151822] border border-[#DADCE0]/10 rounded-full overflow-hidden">
                                             <motion.div 
                                                 initial={{ width: 0 }} 
                                                 animate={{ width: `${completeness}%` }} 
@@ -98,7 +98,7 @@ export const ExitIntentModal: React.FC = () => {
                                                 className="h-full bg-accent shadow-[0_0_30px_var(--accent)]" 
                                             />
                                         </div>
-                                        <p className="text-[10px] text-white/20 font-bold tracking-tight font-semibold text-center">Protocol LR-2026-ZENITH Active</p>
+                                        <p className="text-[10px] text-[#202124]/20 font-bold tracking-tight font-semibold text-center">Protocol LR-2026-ZENITH Active</p>
                                     </div>
                                 </div>
                             </div>
@@ -106,23 +106,23 @@ export const ExitIntentModal: React.FC = () => {
                             {/* Conversion Context Side */}
                             <div className="w-full lg:w-[60%] p-16 md:p-24 flex flex-col justify-center bg-transparent relative">
                                 <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
-                                    <Sparkles size={200} className="text-white" />
+                                    <Sparkles size={200} className="text-[#202124]" />
                                 </div>
-                                <div className="flex items-center gap-4 text-accent mb-12">
+                                <div className="flex items-center gap-4 text-[#1a73e8] mb-12">
                                     <Cpu size={24} className="animate-pulse" />
                                     <span className="text-[12px] font-bold tracking-tight font-semibold">Behavioral Anchor Protocol</span>
                                 </div>
-                                <h2 className="text-6xl md:text-8xl font-serif font-bold text-white mb-10 tracking-tighter leading-[0.8] italic">
-                                    Secure the <br /> <span className="text-accent">Thesis.</span>
+                                <h2 className="text-6xl md:text-8xl font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.8] italic">
+                                    Secure the <br /> <span className="text-[#1a73e8]">Thesis.</span>
                                 </h2>
-                                <p className="text-2xl text-gray-400 font-medium leading-relaxed mb-8 max-w-2xl">
+                                <p className="text-2xl text-[#5F6368] font-medium leading-relaxed mb-8 max-w-2xl">
                                     Our engine has synthesized your {lastSector} journey across {uniqueSectors} sectors. Exiting now will interrupt the final 2026 ROI calibration for your portfolio journey.
                                 </p>
 
                                 <div className="space-y-8">
                                     <button 
                                         onClick={handleFastTrack}
-                                        className="w-full py-10 bg-[#0B0D14] text-white rounded-full font-bold text-2xl flex items-center justify-center gap-6 hover:bg-accent hover:text-white transition-all shadow-[0_60px_120px_-30px_rgba(0,0,0,0.5)] group hover:scale-[1.02]"
+                                        className="w-full py-10 bg-white text-[#202124] rounded-full font-bold text-2xl flex items-center justify-center gap-6 hover:bg-accent hover:text-[#202124] transition-all shadow-[0_60px_120px_-30px_rgba(0,0,0,0.5)] group hover:scale-[1.02]"
                                     >
                                         <ShieldCheck size={32} />
                                         Synthesize Sovereign Portfolio
@@ -143,7 +143,7 @@ export const ExitIntentModal: React.FC = () => {
                                 
                                 <button 
                                     onClick={handleClose}
-                                    className="mt-20 text-center text-[11px] font-bold text-gray-300 tracking-tight font-semibold hover:text-accent transition-colors block w-full"
+                                    className="mt-20 text-center text-[11px] font-bold text-gray-300 tracking-tight font-semibold hover:text-[#1a73e8] transition-colors block w-full"
                                 >
                                     Dismiss & Preserve Current Synthesis Session
                                 </button>

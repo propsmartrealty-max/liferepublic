@@ -35,7 +35,7 @@ const LocationsDirectory: React.FC = () => {
     }, []);
 
     return (
-        <div className="min-h-[75vh] bg-[#1A1C23] pt-24 pb-20">
+        <div className="min-h-[75vh] bg-[#F8F9FA] pt-24 pb-20">
             <SEO 
                 title="Pune Real Estate Locations Directory | Kolte Patil Life Republic"
                 description="Browse our comprehensive directory of premium real estate options across Pune West, including Hinjewadi, Wakad, and Baner."
@@ -45,7 +45,7 @@ const LocationsDirectory: React.FC = () => {
             
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className="text-center mb-8">
-                    <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+                    <h1 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-6">
                         Pune Real Estate Directory
                     </h1>
                     <p className="text-gray-600 max-w-2xl mx-auto">
@@ -55,8 +55,8 @@ const LocationsDirectory: React.FC = () => {
 
                 <div className="space-y-16">
                     {Object.entries(groupedLinks).map(([location, slugs]) => (
-                        <div key={location} className="bg-[#151822] border border-white/10 rounded-3xl p-8 shadow-sm border border-white/5">
-                            <h2 className="text-2xl font-serif font-bold text-accent mb-6 capitalize border-b border-white/5 pb-4">
+                        <div key={location} className="bg-[#151822] border border-[#DADCE0] rounded-3xl p-8 shadow-sm border border-[#DADCE0]">
+                            <h2 className="text-2xl font-sans font-bold text-[#1a73e8] mb-6 capitalize border-b border-[#DADCE0] pb-4">
                                 Properties in {formatTitle(location)}
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -64,7 +64,7 @@ const LocationsDirectory: React.FC = () => {
                                     <Link 
                                         key={slug} 
                                         to={`/search/${slug}`}
-                                        className="text-sm text-gray-500 hover:text-accent transition-colors flex items-center gap-2 group"
+                                        className="text-sm text-[#5F6368] hover:text-[#1a73e8] transition-colors flex items-center gap-2 group"
                                     >
                                         <span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-accent transition-colors" />
                                         {formatTitle(slug.replace('-kolte-patil-life-republic', ''))}
@@ -76,8 +76,8 @@ const LocationsDirectory: React.FC = () => {
                 </div>
                 
                 {/* Full Index Note */}
-                <div className="mt-16 text-center text-xs text-gray-400">
-                    Showing top property combinations. For our complete catalog of 3,000+ configurations, please use our <Link to="/projects" className="text-accent hover:underline">Project Finder</Link>.
+                <div className="mt-16 text-center text-xs text-[#5F6368]">
+                    Showing top property combinations. For our complete catalog of 3,000+ configurations, please use our <Link to="/projects" className="text-[#1a73e8] hover:underline">Project Finder</Link>.
                 </div>
             </div>
         </div>

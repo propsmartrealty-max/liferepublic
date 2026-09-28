@@ -65,7 +65,7 @@ export const RecentlyViewed: React.FC = () => {
     const history = personalizationStore.getHistory();
 
     return (
-        <section className="py-16 bg-[#0B0D14] overflow-hidden relative">
+        <section className="py-16 bg-white overflow-hidden relative">
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-100 to-transparent"></div>
             
             <div className="container mx-auto px-4">
@@ -75,14 +75,14 @@ export const RecentlyViewed: React.FC = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         className="max-w-3xl"
                     >
-                        <div className="flex items-center gap-4 text-accent mb-8">
+                        <div className="flex items-center gap-4 text-[#1a73e8] mb-8">
                             <BrainCircuit size={24} className="animate-pulse" />
                             <span className="text-[11px] font-bold tracking-tight font-semibold">{sentimentLabel}</span>
                         </div>
-                        <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-white tracking-tighter leading-[0.85] mb-8">
+                        <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] tracking-tighter leading-[0.85] mb-8">
                             {greeting}
                         </h2>
-                        <p className="text-2xl text-gray-400 font-medium tracking-tight leading-relaxed max-w-2xl">
+                        <p className="text-2xl text-[#5F6368] font-medium tracking-tight leading-relaxed max-w-2xl">
                             A high-fidelity visualization of your neural path through the 390-acre Life Republic ecosystem. 2026 engagement telemetry synchronized.
                         </p>
                     </motion.div>
@@ -90,14 +90,14 @@ export const RecentlyViewed: React.FC = () => {
                     <motion.div 
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        className="flex gap-10 items-center bg-[#1A1C23]/50 backdrop-blur-xl px-12 py-6 rounded-[3rem] border border-white/5 shadow-inner group"
+                        className="flex gap-10 items-center bg-[#F8F9FA]/50 backdrop-blur-xl px-12 py-6 rounded-[24px] border border-[#DADCE0] shadow-inner group"
                     >
                         <div className="text-right">
-                            <span className="text-[10px] font-bold text-gray-400 tracking-tight font-medium block mb-1">Intent Multiplier</span>
-                            <span className="text-4xl font-serif font-bold text-white tracking-tighter group-hover:text-accent transition-colors">{history.intentScore}</span>
+                            <span className="text-[10px] font-bold text-[#5F6368] tracking-tight font-medium block mb-1">Intent Multiplier</span>
+                            <span className="text-4xl font-sans font-bold text-[#202124] tracking-tighter group-hover:text-[#1a73e8] transition-colors">{history.intentScore}</span>
                         </div>
                         <div className="w-px h-12 bg-gray-200"></div>
-                        <div className="p-4 bg-[#151822] border border-white/10 rounded-2xl shadow-sm text-accent group-hover:rotate-12 transition-transform">
+                        <div className="p-4 bg-[#151822] border border-[#DADCE0] rounded-2xl shadow-sm text-[#1a73e8] group-hover:rotate-12 transition-transform">
                             <TrendingUp size={32} />
                         </div>
                     </motion.div>
@@ -114,7 +114,7 @@ export const RecentlyViewed: React.FC = () => {
                                 className="flex-none w-[350px] md:w-[500px] snap-start"
                             >
                                 <Link to={`/projects/${ID_TO_SLUG[project.id] || project.id}`} className="group block relative">
-                                    <div className="relative aspect-[4/5] rounded-[4.5rem] overflow-hidden bg-[#1A1C23] mb-10 shadow-2xl transition-all duration-1000 group-hover:shadow-[0_60px_120px_-30px_rgba(0,0,0,0.4)]">
+                                    <div className="relative aspect-[4/5] rounded-[4.5rem] overflow-hidden bg-[#F8F9FA] mb-10 shadow-2xl transition-all duration-1000 group-hover:shadow-[0_60px_120px_-30px_rgba(0,0,0,0.4)]">
                                         <img 
                                             src={project.image} 
                                             alt={project.title} 
@@ -123,26 +123,26 @@ export const RecentlyViewed: React.FC = () => {
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/20 to-transparent opacity-80"></div>
                                         
-                                        <div className="absolute bottom-16 left-16 right-16 text-white space-y-6">
+                                        <div className="absolute bottom-16 left-16 right-16 text-[#202124] space-y-6">
                                             <div className="flex items-center gap-4">
-                                                <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center text-accent">
+                                                <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center text-[#1a73e8]">
                                                     <Zap size={14} />
                                                 </div>
-                                                <span className="text-[11px] font-bold tracking-tight font-semibold text-white/50">
+                                                <span className="text-[11px] font-bold tracking-tight font-semibold text-[#202124]/50">
                                                     {project.category} Synthesis
                                                 </span>
                                             </div>
-                                            <h3 className="text-4xl md:text-5xl font-serif font-bold leading-[0.9] group-hover:text-accent transition-colors tracking-tighter">
+                                            <h3 className="text-4xl md:text-5xl font-sans font-bold leading-[0.9] group-hover:text-[#1a73e8] transition-colors tracking-tighter">
                                                 {project.title}
                                             </h3>
                                         </div>
 
-                                        <div className="absolute top-12 right-12 w-20 h-20 rounded-[2rem] bg-[#151822] border border-white/10 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all translate-x-12 group-hover:translate-x-0 shadow-[0_30px_60px_-10px_rgba(0,0,0,0.5)]">
+                                        <div className="absolute top-12 right-12 w-20 h-20 rounded-[2rem] bg-[#151822] border border-[#DADCE0] text-[#202124] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all translate-x-12 group-hover:translate-x-0 shadow-[0_30px_60px_-10px_rgba(0,0,0,0.5)]">
                                             <ArrowUpRight size={36} />
                                         </div>
                                     </div>
                                     <div className="px-8 space-y-4">
-                                        <p className="text-lg font-medium text-gray-400 leading-relaxed line-clamp-2 italic">
+                                        <p className="text-lg font-medium text-[#5F6368] leading-relaxed line-clamp-2 italic">
                                             "{project.description}"
                                         </p>
                                         <div className="flex items-center gap-4">
@@ -160,9 +160,9 @@ export const RecentlyViewed: React.FC = () => {
                 </div>
 
                 <div className="mt-20 flex items-center justify-center gap-6">
-                    <div className="px-8 py-3 bg-[#1A1C23] border border-white/5 rounded-full flex items-center gap-4">
-                        <Cpu size={16} className="text-accent" />
-                        <span className="text-[10px] font-bold text-gray-400 tracking-tight font-semibold">Sovereign Memory Active</span>
+                    <div className="px-8 py-3 bg-[#F8F9FA] border border-[#DADCE0] rounded-full flex items-center gap-4">
+                        <Cpu size={16} className="text-[#1a73e8]" />
+                        <span className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold">Sovereign Memory Active</span>
                     </div>
                 </div>
             </div>

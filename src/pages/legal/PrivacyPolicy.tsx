@@ -4,19 +4,19 @@ import { Shield } from 'lucide-react';
 
 export const PrivacyPolicy: React.FC = () => {
     return (
-        <div className="pt-32 pb-24 bg-[#1A1C23] min-h-[75vh]">
+        <div className="pt-32 pb-24 bg-[#F8F9FA] min-h-[75vh]">
             <Helmet>
                 <title>Privacy Policy | Kolte Patil Life Republic Hinjewadi</title>
                 <meta name="description" content="Privacy Policy and Data Protection guidelines for Kolte Patil Life Republic. Read how we protect your information." />
             </Helmet>
             <div className="container mx-auto px-6 max-w-4xl">
-                <div className="bg-[#151822] border border-white/10 rounded-3xl p-8 md:p-12 shadow-sm border border-white/5">
-                    <div className="flex items-center gap-4 mb-8 text-accent">
+                <div className="bg-[#151822] border border-[#DADCE0] rounded-3xl p-8 md:p-12 shadow-sm border border-[#DADCE0]">
+                    <div className="flex items-center gap-4 mb-8 text-[#1a73e8]">
                         <Shield size={32} />
-                        <h1 className="text-3xl md:text-4xl font-serif font-bold text-white">Privacy Policy</h1>
+                        <h1 className="text-3xl md:text-4xl font-sans font-bold text-[#202124]">Privacy Policy</h1>
                     </div>
                     
-                    <div className="prose prose-lg prose-headings:font-serif prose-headings:text-white max-w-none text-gray-600">
+                    <div className="prose prose-lg prose-headings:font-sans prose-headings:text-[#202124] max-w-none text-gray-600">
                         <p>Last updated: {new Date().toLocaleDateString()}</p>
                         
                         <h2>1. Information Collection</h2>

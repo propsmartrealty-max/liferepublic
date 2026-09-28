@@ -38,10 +38,10 @@ export const SimilarProjects: React.FC<SimilarProjectsProps> = ({ currentId }) =
     if (loading || projects.length === 0) return null;
 
     return (
-        <section className="py-16 bg-[#1A1C23]">
+        <section className="py-16 bg-[#F8F9FA]">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-serif font-bold text-white mb-4">You May Also Like</h2>
+                    <h2 className="text-3xl font-sans font-bold text-[#202124] mb-4">You May Also Like</h2>
                     <div className="w-16 h-1 bg-gray-300 mx-auto" />
                 </div>
 

@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
 
     return (
         <>
-        <footer className="relative bg-[#0B0D14] text-white font-bold pt-24 pb-12 overflow-hidden">
+        <footer className="relative bg-white text-[#202124] font-bold pt-24 pb-12 overflow-hidden">
             {/* Fluid Curve Top */}
             <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(113%+1.3px)] h-[60px] md:h-[100px] fill-primary">
@@ -28,19 +28,19 @@ export const Footer: React.FC = () => {
                     {/* Brand Column (Span 3) */}
                     <div className="lg:col-span-3 space-y-8">
                         <div className="flex flex-col gap-6">
-                            <div className="w-16 h-16 bg-[#151822] border border-white/10 rounded-2xl flex items-center justify-center p-2 shadow-2xl overflow-hidden group-hover:scale-110 transition-transform duration-500">
+                            <div className="w-16 h-16 bg-[#151822] border border-[#DADCE0] rounded-2xl flex items-center justify-center p-2 shadow-2xl overflow-hidden group-hover:scale-110 transition-transform duration-500">
                                 <img loading="lazy" src="/images/brand/logo.webp" alt="Life Republic" className="w-full h-full object-contain" />
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-3xl font-serif font-bold tracking-wider text-white font-bold">
+                                <span className="text-3xl font-sans font-bold tracking-wider text-[#202124] font-bold">
                                     LIFE REPUBLIC
                                 </span>
-                                <span className="text-xs tracking-tight font-semibold text-accent/80 mt-1">
+                                <span className="text-xs tracking-tight font-semibold text-[#1a73e8]/80 mt-1">
                                     By Kolte Patil
                                 </span>
                             </div>
                         </div>
-                        <p className="text-white leading-relaxed max-w-sm">
+                        <p className="text-[#202124] leading-relaxed max-w-sm">
                             <strong>Kolte Patil Life Republic Township Hinjewadi</strong> is a premium 390+ acre integrated township. Offering 1, 2, 3 BHK flats and villas near Rajiv Gandhi IT Park.
                         </p>
                         <div className="flex gap-4">
@@ -53,10 +53,10 @@ export const Footer: React.FC = () => {
                                 <a
                                     key={idx}
                                     href="#"
-                                    className="h-12 w-12 rounded-full border border-strong flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white font-bold transition-all duration-300 group"
+                                    className="h-12 w-12 rounded-full border border-strong flex items-center justify-center hover:bg-accent hover:border-accent hover:text-[#202124] font-bold transition-all duration-300 group"
                                     aria-label={label}
                                 >
-                                    <Icon size={20} className="text-white font-bold/60 group-hover:text-white font-bold transition-colors" />
+                                    <Icon size={20} className="text-[#202124] font-bold/60 group-hover:text-[#202124] font-bold transition-colors" />
                                 </a>
                             ))}
                         </div>
@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
 
                     {/* Quick Link Columns (Span 2 each) */}
                     <div className="lg:col-span-2 lg:col-start-4">
-                        <h4 className="text-lg font-serif font-bold mb-8 text-white font-bold">Explore</h4>
+                        <h4 className="text-lg font-sans font-bold mb-8 text-[#202124] font-bold">Explore</h4>
                         <ul className="space-y-4">
                             {[
                                 { name: 'Home', path: '/' },
@@ -77,7 +77,7 @@ export const Footer: React.FC = () => {
                                 <li key={link.name}>
                                     <Link
                                         to={link.path}
-                                        className="text-white hover:text-accent flex items-center gap-2 group transition-all duration-300"
+                                        className="text-[#202124] hover:text-[#1a73e8] flex items-center gap-2 group transition-all duration-300"
                                     >
                                         <span className="w-0 group-hover:w-2 h-[1px] bg-accent transition-all duration-300"></span>
                                         {link.name}
@@ -88,7 +88,7 @@ export const Footer: React.FC = () => {
                     </div>
 
                     <div className="lg:col-span-2">
-                        <h4 className="text-lg font-serif font-bold mb-8 text-white font-bold">Project Clusters</h4>
+                        <h4 className="text-lg font-sans font-bold mb-8 text-[#202124] font-bold">Project Clusters</h4>
                         <ul className="space-y-4">
                             {[
                                 { name: 'Atmos (2 & 3 BHK)', path: '/projects/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi' },
@@ -100,10 +100,10 @@ export const Footer: React.FC = () => {
                                 <li key={link.name}>
                                     <Link
                                         to={link.path}
-                                        className="text-white hover:text-white font-bold group flex items-center gap-2 transition-all duration-300"
+                                        className="text-[#202124] hover:text-[#202124] font-bold group flex items-center gap-2 transition-all duration-300"
                                     >
                                         {link.name}
-                                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 -translate-y-1 group-hover:translate-y-0 transition-all duration-300 text-accent" />
+                                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 -translate-y-1 group-hover:translate-y-0 transition-all duration-300 text-[#1a73e8]" />
                                     </Link>
                                 </li>
                             ))}
@@ -111,7 +111,7 @@ export const Footer: React.FC = () => {
                     </div>
 
                     <div className="lg:col-span-2">
-                        <h4 className="text-lg font-serif font-bold mb-8 text-white font-bold">Location Index</h4>
+                        <h4 className="text-lg font-sans font-bold mb-8 text-[#202124] font-bold">Location Index</h4>
                         <ul className="space-y-4">
                             {[
                                 { name: 'Near Hinjewadi Phase 1', path: '/location/flats-near-hinjewadi' },
@@ -123,10 +123,10 @@ export const Footer: React.FC = () => {
                                 <li key={link.name}>
                                     <Link
                                         to={link.path}
-                                        className="text-white hover:text-white font-bold group flex items-center gap-2 transition-all duration-300"
+                                        className="text-[#202124] hover:text-[#202124] font-bold group flex items-center gap-2 transition-all duration-300"
                                     >
                                         {link.name}
-                                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 -translate-y-1 group-hover:translate-y-0 transition-all duration-300 text-accent" />
+                                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 -translate-y-1 group-hover:translate-y-0 transition-all duration-300 text-[#1a73e8]" />
                                     </Link>
                                 </li>
                             ))}
@@ -135,27 +135,27 @@ export const Footer: React.FC = () => {
 
                     {/* Contact Column (Span 3) */}
                     <div className="lg:col-span-3">
-                        <h4 className="text-lg font-serif font-bold mb-8 text-white font-bold">Visit Us</h4>
+                        <h4 className="text-lg font-sans font-bold mb-8 text-[#202124] font-bold">Visit Us</h4>
                         <div className="space-y-6">
                             <div className="flex items-start gap-4 group">
                                 <div className="p-3 rounded-2xl bg-transparent border-2 border-strong group-hover:bg-accent/20 transition-colors">
-                                    <MapPin size={20} className="text-accent" />
+                                    <MapPin size={20} className="text-[#1a73e8]" />
                                 </div>
                                 <div className="space-y-1">
-                                    <p className="text-white font-medium">Site Address</p>
-                                    <p className="text-sm text-text-muted hover:text-white">Marunji, Hinjewadi, Pune, Maharashtra 411057</p>
+                                    <p className="text-[#202124] font-medium">Site Address</p>
+                                    <p className="text-sm text-text-muted hover:text-[#202124]">Marunji, Hinjewadi, Pune, Maharashtra 411057</p>
                                 </div>
                             </div>
 
                             <div className="flex items-center gap-4 group">
                                 <div className="p-3 rounded-2xl bg-transparent border-2 border-strong group-hover:bg-accent/20 transition-colors">
-                                    <Phone size={20} className="text-accent" />
+                                    <Phone size={20} className="text-[#1a73e8]" />
                                 </div>
                                 <div>
-                                    <p className="text-white font-medium">Get in touch</p>
+                                    <p className="text-[#202124] font-medium">Get in touch</p>
                                     <button 
                                         onClick={() => setIsEnquiryOpen(true)}
-                                        className="text-sm text-text-muted hover:text-white hover:text-white font-bold transition-colors cursor-pointer"
+                                        className="text-sm text-text-muted hover:text-[#202124] hover:text-[#202124] font-bold transition-colors cursor-pointer"
                                     >
                                         Request Callback
                                     </button>
@@ -169,13 +169,13 @@ export const Footer: React.FC = () => {
                 <div className="border-t border-strong py-12 mt-12">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div>
-                            <h5 className="text-sm font-bold text-white tracking-tight font-medium mb-6">Popular Configurations in Pune West</h5>
+                            <h5 className="text-sm font-bold text-[#202124] tracking-tight font-medium mb-6">Popular Configurations in Pune West</h5>
                             <div className="flex flex-col gap-y-3">
                                 {seoClusters.configurations.map((item) => (
                                     <Link
                                         key={item.slug}
                                         to={`/insights/${item.slug}`}
-                                        className="text-xs text-text-muted hover:text-white hover:text-accent transition-colors"
+                                        className="text-xs text-text-muted hover:text-[#202124] hover:text-[#1a73e8] transition-colors"
                                         title={item.name}
                                     >
                                         {item.name}
@@ -184,13 +184,13 @@ export const Footer: React.FC = () => {
                             </div>
                         </div>
                         <div>
-                            <h5 className="text-sm font-bold text-white tracking-tight font-medium mb-6">Top Locations & Micro-Markets</h5>
+                            <h5 className="text-sm font-bold text-[#202124] tracking-tight font-medium mb-6">Top Locations & Micro-Markets</h5>
                             <div className="flex flex-col gap-y-3">
                                 {seoClusters.locations.map((item) => (
                                     <Link
                                         key={item.slug}
                                         to={`/insights/${item.slug}`}
-                                        className="text-xs text-text-muted hover:text-white hover:text-accent transition-colors"
+                                        className="text-xs text-text-muted hover:text-[#202124] hover:text-[#1a73e8] transition-colors"
                                         title={item.name}
                                     >
                                         {item.name}
@@ -200,7 +200,7 @@ export const Footer: React.FC = () => {
                                     <Link
                                         key={slug}
                                         to={`/location/${slug}`}
-                                        className="text-xs text-text-muted hover:text-white hover:text-accent transition-colors"
+                                        className="text-xs text-text-muted hover:text-[#202124] hover:text-[#1a73e8] transition-colors"
                                         title={pseoRegistry[slug].title}
                                     >
                                         {pseoRegistry[slug].title.split('|')[0].trim()}
@@ -209,13 +209,13 @@ export const Footer: React.FC = () => {
                             </div>
                         </div>
                         <div>
-                            <h5 className="text-sm font-bold text-white tracking-tight font-medium mb-6">Real Estate Investment Themes</h5>
+                            <h5 className="text-sm font-bold text-[#202124] tracking-tight font-medium mb-6">Real Estate Investment Themes</h5>
                             <div className="flex flex-col gap-y-3">
                                 {seoClusters.themes.map((item) => (
                                     <Link
                                         key={item.slug}
                                         to={`/insights/${item.slug}`}
-                                        className="text-xs text-text-muted hover:text-white hover:text-accent transition-colors"
+                                        className="text-xs text-text-muted hover:text-[#202124] hover:text-[#1a73e8] transition-colors"
                                         title={item.name}
                                     >
                                         {item.name}
@@ -228,29 +228,29 @@ export const Footer: React.FC = () => {
 
                 {/* RERA Numbers Section */}
                 <div className="border-t border-strong py-8">
-                    <h5 className="text-sm font-bold text-white tracking-tight font-medium mb-4">RERA Registration Numbers</h5>
-                    <div className="flex flex-wrap gap-x-6 gap-y-2 text-[10px] text-text-muted hover:text-white">
+                    <h5 className="text-sm font-bold text-[#202124] tracking-tight font-medium mb-4">RERA Registration Numbers</h5>
+                    <div className="flex flex-wrap gap-x-6 gap-y-2 text-[10px] text-text-muted hover:text-[#202124]">
                         {RERA_REGISTRY.map((item: { title: string, rera: string }, index: number) => (
                             <span key={index} className="flex items-center gap-1">
-                                <span className="text-white">{item.title}:</span>
-                                <span className="font-mono text-accent/80">{item.rera}</span>
+                                <span className="text-[#202124]">{item.title}:</span>
+                                <span className="font-mono text-[#1a73e8]/80">{item.rera}</span>
                             </span>
                         ))}
                     </div>
                     <p className="text-[10px] text-text-muted mt-4 italic">
-                        The projects have been registered via MahaRERA registration numbers and are available on the website <a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noreferrer" className="text-text-muted hover:text-white hover:text-accent underline">https://maharera.mahaonline.gov.in</a> under registered projects.
+                        The projects have been registered via MahaRERA registration numbers and are available on the website <a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noreferrer" className="text-text-muted hover:text-[#202124] hover:text-[#1a73e8] underline">https://maharera.mahaonline.gov.in</a> under registered projects.
                     </p>
                 </div>
 
                 <div className="pt-8 border-t border-strong flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-text-muted">
                     <p>© 2025 Life Republic. Designed with precision.</p>
                     <div className="flex gap-4 md:gap-8 flex-wrap justify-center">
-                        <Link to="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
-                        <Link to="/terms-of-service" className="hover:text-accent transition-colors">Terms of Service</Link>
-                        <Link to="/disclaimer" className="hover:text-accent transition-colors">Disclaimer</Link>
-                        <Link to="/locations-directory" className="hover:text-accent transition-colors">Locations Directory</Link>
-                        <Link to="/sitemap" className="hover:text-accent transition-colors">HTML Sitemap</Link>
-                        <a href="/sitemap.xml" className="hover:text-accent transition-colors">XML Sitemap</a>
+                        <Link to="/privacy-policy" className="hover:text-[#1a73e8] transition-colors">Privacy Policy</Link>
+                        <Link to="/terms-of-service" className="hover:text-[#1a73e8] transition-colors">Terms of Service</Link>
+                        <Link to="/disclaimer" className="hover:text-[#1a73e8] transition-colors">Disclaimer</Link>
+                        <Link to="/locations-directory" className="hover:text-[#1a73e8] transition-colors">Locations Directory</Link>
+                        <Link to="/sitemap" className="hover:text-[#1a73e8] transition-colors">HTML Sitemap</Link>
+                        <a href="/sitemap.xml" className="hover:text-[#1a73e8] transition-colors">XML Sitemap</a>
                     </div>
                 </div>
                 

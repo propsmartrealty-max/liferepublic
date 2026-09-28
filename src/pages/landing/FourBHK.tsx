@@ -50,7 +50,7 @@ export const FourBHK: React.FC = () => {
             />
 
             {/* Sovereign Hero */}
-            <section className="relative pt-48 pb-32 bg-[#0B0D14] overflow-hidden">
+            <section className="relative pt-48 pb-32 bg-white overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-secondary z-10"></div>
                 <div className="absolute inset-0 bg-[url('/images/aerial-sunset.png')] bg-cover bg-center opacity-30 grayscale blur-[1px]"></div>
                 
@@ -61,13 +61,13 @@ export const FourBHK: React.FC = () => {
                         transition={{ duration: 1 }}
                     >
                         <div className="inline-flex items-center gap-4 px-8 py-3 bg-accent/20 border border-accent/30 rounded-full mb-12 backdrop-blur-xl">
-                            <Crown size={16} className="text-accent animate-pulse" />
-                            <span className="text-[10px] font-bold tracking-tight font-semibold text-accent">The 24K Sovereign Monograph v5.5</span>
+                            <Crown size={16} className="text-[#1a73e8] animate-pulse" />
+                            <span className="text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8]">The 24K Sovereign Monograph v5.5</span>
                         </div>
-                        <h1 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.8]">
-                            The 4BHK <br /> <span className="text-accent italic">Authority.</span>
+                        <h1 className="text-6xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.8]">
+                            The 4BHK <br /> <span className="text-[#1a73e8] italic">Authority.</span>
                         </h1>
-                        <p className="text-2xl md:text-3xl text-gray-400 font-medium max-w-4xl mx-auto leading-relaxed">
+                        <p className="text-2xl md:text-3xl text-[#5F6368] font-medium max-w-4xl mx-auto leading-relaxed">
                             Bespoke villas and row houses engineered for those who demand absolute spatial sovereignty within Hinjewadi's premier managed ecosystem.
                         </p>
                     </motion.div>
@@ -75,14 +75,14 @@ export const FourBHK: React.FC = () => {
             </section>
 
             {/* Spatial Matrix */}
-            <section className="py-16 bg-[#0B0D14] relative overflow-hidden">
+            <section className="py-16 bg-white relative overflow-hidden">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
                         <div className="lg:col-span-8">
                             <div className="mb-10">
-                                <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-6 block">Structural Synthesis</span>
-                                <h2 className="text-5xl md:text-8xl font-serif font-bold text-white mb-10 tracking-tighter">Spatial <br /><span className="text-accent italic">Superiority.</span></h2>
-                                <p className="text-2xl text-gray-500 font-medium leading-relaxed max-w-3xl">
+                                <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-6 block">Structural Synthesis</span>
+                                <h2 className="text-5xl md:text-8xl font-sans font-bold text-[#202124] mb-10 tracking-tighter">Spatial <br /><span className="text-[#1a73e8] italic">Superiority.</span></h2>
+                                <p className="text-2xl text-[#5F6368] font-medium leading-relaxed max-w-3xl">
                                     Owning a 4BHK at Life Republic is a statement of architectural and financial wisdom. Our villas (24K Espada, Sound of Soul) synthesize land ownership with the elite security of a managed township.
                                 </p>
                             </div>
@@ -91,7 +91,7 @@ export const FourBHK: React.FC = () => {
                                 {loading ? (
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                                         {[1, 2].map(i => (
-                                            <div key={i} className="bg-[#1A1C23] rounded-[4rem] h-[600px] animate-pulse" />
+                                            <div key={i} className="bg-[#F8F9FA] rounded-[24px] h-[600px] animate-pulse" />
                                         ))}
                                     </div>
                                 ) : (
@@ -113,10 +113,10 @@ export const FourBHK: React.FC = () => {
                         </div>
 
                         <div className="lg:col-span-4 sticky top-40">
-                            <div className="bg-[#0B0D14] rounded-[4rem] p-16 text-white relative overflow-hidden group shadow-[0_60px_120px_-30px_rgba(0,0,0,0.4)] border border-white/5">
+                            <div className="bg-white rounded-[24px] p-16 text-[#202124] relative overflow-hidden group shadow-[0_60px_120px_-30px_rgba(0,0,0,0.4)] border border-[#DADCE0]">
                                 <div className="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full blur-[100px] pointer-events-none group-hover:scale-125 transition-transform duration-1000"></div>
-                                <Gem size={64} className="text-accent mb-12 group-hover:rotate-12 transition-transform" />
-                                <h3 className="text-4xl font-serif font-bold mb-12 tracking-tighter">Bespoke <br />Privileges.</h3>
+                                <Gem size={64} className="text-[#1a73e8] mb-12 group-hover:rotate-12 transition-transform" />
+                                <h3 className="text-4xl font-sans font-bold mb-12 tracking-tighter">Bespoke <br />Privileges.</h3>
                                 <ul className="space-y-10">
                                     {[
                                         { icon: ShieldCheck, text: "Gated Land Sovereignty" },
@@ -125,17 +125,17 @@ export const FourBHK: React.FC = () => {
                                         { icon: Landmark, text: "Managed Villa Protocols" }
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-center gap-6 group/item">
-                                            <div className="w-14 h-14 bg-[#151822] border border-white/10/5 rounded-2xl flex items-center justify-center text-accent group-hover/item:bg-accent group-hover/item:text-white transition-all shadow-inner border border-white/5">
+                                            <div className="w-14 h-14 bg-[#151822] border border-[#DADCE0]/5 rounded-2xl flex items-center justify-center text-[#1a73e8] group-hover/item:bg-accent group-hover/item:text-[#202124] transition-all shadow-inner border border-[#DADCE0]">
                                                 <item.icon size={28} />
                                             </div>
-                                            <span className="text-[11px] font-bold text-white/70 tracking-tight font-semibold group-hover/item:text-white transition-colors">{item.text}</span>
+                                            <span className="text-[11px] font-bold text-[#202124]/70 tracking-tight font-semibold group-hover/item:text-[#202124] transition-colors">{item.text}</span>
                                         </li>
                                     ))}
                                 </ul>
                                 <div className="mt-16">
                                     <button 
                                         onClick={() => window.dispatchEvent(new CustomEvent('open-sovereign-concierge', { detail: { project: '4BHK Ultra-Luxury Tour' } }))}
-                                        className="w-full bg-[#151822] border border-white/10 text-white py-8 rounded-full font-bold text-xl hover:bg-accent transition-all flex items-center justify-center gap-4 group shadow-2xl"
+                                        className="w-full bg-[#151822] border border-[#DADCE0] text-[#202124] py-8 rounded-full font-bold text-xl hover:bg-accent transition-all flex items-center justify-center gap-4 group shadow-2xl"
                                     >
                                         Request Private Tour 
                                         <ArrowUpRight size={24} className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
@@ -144,24 +144,24 @@ export const FourBHK: React.FC = () => {
                             </div>
 
                             {/* Financial Superiority Matrix */}
-                            <div className="mt-16 p-12 bg-[#1A1C23] rounded-[4rem] border border-white/5 shadow-inner group">
-                                <h4 className="text-[11px] font-bold text-white tracking-tight font-semibold mb-10 flex items-center gap-3">
-                                    <TrendingUp size={20} className="text-accent animate-pulse" /> Financial Scarcity Delta
+                            <div className="mt-16 p-12 bg-[#F8F9FA] rounded-[24px] border border-[#DADCE0] shadow-inner group">
+                                <h4 className="text-[11px] font-bold text-[#202124] tracking-tight font-semibold mb-10 flex items-center gap-3">
+                                    <TrendingUp size={20} className="text-[#1a73e8] animate-pulse" /> Financial Scarcity Delta
                                 </h4>
                                 <div className="space-y-10">
                                     <div className="flex justify-between items-center group/stat">
-                                        <span className="text-[10px] text-gray-400 font-bold tracking-tight font-semibold">Villa Appreciation</span>
-                                        <span className="text-2xl font-serif font-bold text-accent">+15% YoY</span>
+                                        <span className="text-[10px] text-[#5F6368] font-bold tracking-tight font-semibold">Villa Appreciation</span>
+                                        <span className="text-2xl font-sans font-bold text-[#1a73e8]">+15% YoY</span>
                                     </div>
                                     <div className="flex justify-between items-center group/stat">
-                                        <span className="text-[10px] text-gray-400 font-bold tracking-tight font-semibold">Inventory Scarcity</span>
-                                        <span className="text-2xl font-serif font-bold text-accent">Tier 1</span>
+                                        <span className="text-[10px] text-[#5F6368] font-bold tracking-tight font-semibold">Inventory Scarcity</span>
+                                        <span className="text-2xl font-sans font-bold text-[#1a73e8]">Tier 1</span>
                                     </div>
                                     <div className="w-full h-px bg-gray-200 opacity-60"></div>
-                                    <div className="flex items-start gap-4 p-4 bg-[#151822] border border-white/10 rounded-2xl border border-white/5">
-                                        <Zap size={16} className="text-accent mt-1 shrink-0" />
-                                        <p className="text-[10px] text-gray-400 font-medium leading-relaxed italic">
-                                            *4BHK clusters at Life Republic are limited to <span className="text-white font-bold">5% of total inventory</span>, ensuring extreme long-term value preservation.
+                                    <div className="flex items-start gap-4 p-4 bg-[#151822] border border-[#DADCE0] rounded-2xl border border-[#DADCE0]">
+                                        <Zap size={16} className="text-[#1a73e8] mt-1 shrink-0" />
+                                        <p className="text-[10px] text-[#5F6368] font-medium leading-relaxed italic">
+                                            *4BHK clusters at Life Republic are limited to <span className="text-[#202124] font-bold">5% of total inventory</span>, ensuring extreme long-term value preservation.
                                         </p>
                                     </div>
                                 </div>

@@ -102,7 +102,7 @@ export const TownshipGuide: React.FC = () => {
             <Breadcrumbs />
 
             {/* Hero Section */}
-            <section className="relative py-12 bg-[#0B0D14] overflow-hidden">
+            <section className="relative py-12 bg-white overflow-hidden">
                 <div className="absolute inset-0 opacity-5"></div>
                 <div className="container mx-auto px-4 relative">
                     <motion.div
@@ -110,10 +110,10 @@ export const TownshipGuide: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="max-w-4xl mx-auto text-center"
                     >
-                        <span className="text-accent font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Pillar Content 2026</span>
-                        <h1 className="text-4xl md:text-7xl font-serif font-bold text-white mb-8 leading-tight">
+                        <span className="text-[#1a73e8] font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Pillar Content 2026</span>
+                        <h1 className="text-4xl md:text-7xl font-sans font-bold text-[#202124] mb-8 leading-tight">
                             The Sovereign Guide to <br />
-                            <span className="text-accent underline decoration-accent/30 italic">Life Republic</span>
+                            <span className="text-[#1a73e8] underline decoration-accent/30 italic">Life Republic</span>
                         </h1>
                         <p className="text-gray-300 text-xl md:text-2xl leading-relaxed mb-10 font-light italic">
                             "A community built for thinking minds, where 390 acres meet infinite potential."
@@ -122,7 +122,7 @@ export const TownshipGuide: React.FC = () => {
                             <Button variant="primary" size="lg" className="rounded-full px-12" onClick={() => window.scrollTo({ top: 800, behavior: 'smooth' })}>
                                 Read Full Analysis
                             </Button>
-                            <Button variant="outline" size="lg" className="rounded-full border-white text-white">Download Master Blueprint</Button>
+                            <Button variant="outline" size="lg" className="rounded-full border-white text-[#202124]">Download Master Blueprint</Button>
                         </div>
                     </motion.div>
                 </div>
@@ -130,8 +130,8 @@ export const TownshipGuide: React.FC = () => {
 
             {/* Pillar Content Body */}
             <article className="py-12 max-w-5xl mx-auto px-4">
-                <div className="prose prose-lg prose-headings:font-serif prose-headings:text-white max-w-none text-gray-300 leading-relaxed">
-                    <p className="lead text-2xl text-gray-500 font-light mb-12 border-l-4 border-accent pl-8">
+                <div className="prose prose-lg prose-headings:font-sans prose-headings:text-[#202124] max-w-none text-gray-300 leading-relaxed">
+                    <p className="lead text-2xl text-[#5F6368] font-light mb-12 border-l-4 border-accent pl-8">
                         Kolte Patil Life Republic is not just a real estate project; it is a meticulously engineered ecosystem designed to support the next generation of global citizens. Situated in the technology heartland of Hinjewadi, Pune, this 390-acre township integrates residential, commercial, and educational infrastructure into a single, cohesive sovereign domain.
                     </p>
 
@@ -145,10 +145,10 @@ export const TownshipGuide: React.FC = () => {
                             { icon: <School />, title: "Global School", desc: "Anisha Global School within the township for world-class education." },
                             { icon: <Shield />, title: "Tier-1 Security", desc: "24/7 centralized surveillance and professional security force." }
                         ].map((item, i) => (
-                            <div key={i} className="bg-[#1A1C23] p-6 rounded-2xl border border-white/5 hover:shadow-md transition-shadow">
-                                <div className="text-accent mb-4">{item.icon}</div>
-                                <h4 className="font-bold text-white mb-2">{item.title}</h4>
-                                <p className="text-sm text-gray-500">{item.desc}</p>
+                            <div key={i} className="bg-[#F8F9FA] p-6 rounded-2xl border border-[#DADCE0] hover:shadow-md transition-shadow">
+                                <div className="text-[#1a73e8] mb-4">{item.icon}</div>
+                                <h4 className="font-bold text-[#202124] mb-2">{item.title}</h4>
+                                <p className="text-sm text-[#5F6368]">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -162,7 +162,7 @@ export const TownshipGuide: React.FC = () => {
 
                     <div className="space-y-16">
                         {clusters.map((cluster, i) => (
-                            <div key={i} className="group relative bg-[#151822] border border-white/10 border border-white/5 rounded-3xl p-8 hover:border-accent/30 transition-all overflow-hidden flex flex-col md:flex-row gap-8 items-center">
+                            <div key={i} className="group relative bg-[#151822] border border-[#DADCE0] border border-[#DADCE0] rounded-3xl p-8 hover:border-accent/30 transition-all overflow-hidden flex flex-col md:flex-row gap-8 items-center">
                                 <div className="md:w-1/3">
                                     <div className="aspect-[4/3] bg-[#151822] rounded-2xl overflow-hidden">
                                         <img loading="lazy" 
@@ -174,14 +174,14 @@ export const TownshipGuide: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className="md:w-2/3">
-                                    <div className="flex items-center gap-2 text-accent mb-2">
+                                    <div className="flex items-center gap-2 text-[#1a73e8] mb-2">
                                         <Building2 size={16} />
                                         <span className="text-xs font-bold tracking-tight font-medium">{cluster.segment}</span>
                                     </div>
-                                    <h3 className="text-3xl font-bold text-white mb-4">{cluster.name} — <span className="text-gray-400 font-light">{cluster.sector}</span></h3>
+                                    <h3 className="text-3xl font-bold text-[#202124] mb-4">{cluster.name} — <span className="text-[#5F6368] font-light">{cluster.sector}</span></h3>
                                     <p className="text-gray-600 mb-6 text-lg">{cluster.desc}</p>
                                     <Link to={`/location/${cluster.slug}`}>
-                                        <Button variant="ghost" className="p-0 text-accent hover:bg-transparent group/btn">
+                                        <Button variant="ghost" className="p-0 text-[#1a73e8] hover:bg-transparent group/btn">
                                             Explore Portfolio <ArrowRight size={18} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
                                         </Button>
                                     </Link>
@@ -196,15 +196,15 @@ export const TownshipGuide: React.FC = () => {
                     {/* Sovereign Comparison Ledger */}
                     <div className="mt-24 overflow-x-auto">
                         <div className="min-w-[800px]">
-                            <h2 id="comparison" className="text-4xl font-serif font-bold mb-10 text-white text-center">The Sovereign Comparison Ledger</h2>
-                            <table className="w-full border-collapse rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5 mb-8">
+                            <h2 id="comparison" className="text-4xl font-sans font-bold mb-10 text-[#202124] text-center">The Sovereign Comparison Ledger</h2>
+                            <table className="w-full border-collapse rounded-[24px] overflow-hidden shadow-2xl border border-[#DADCE0] mb-8">
                                 <thead>
-                                    <tr className="bg-[#0B0D14] text-white">
-                                        <th className="p-8 text-left font-serif tracking-tight font-semibold text-xs font-bold border-b border-white/10">Sector Cluster</th>
-                                        <th className="p-8 text-left font-serif tracking-tight font-semibold text-xs font-bold border-b border-white/10">Typology</th>
-                                        <th className="p-8 text-left font-serif tracking-tight font-semibold text-xs font-bold border-b border-white/10">Price Point</th>
-                                        <th className="p-8 text-left font-serif tracking-tight font-semibold text-xs font-bold border-b border-white/10">Possession</th>
-                                        <th className="p-8 text-left font-serif tracking-tight font-semibold text-xs font-bold border-b border-white/10">Core USP</th>
+                                    <tr className="bg-white text-[#202124]">
+                                        <th className="p-8 text-left font-sans tracking-tight font-semibold text-xs font-bold border-b border-[#DADCE0]">Sector Cluster</th>
+                                        <th className="p-8 text-left font-sans tracking-tight font-semibold text-xs font-bold border-b border-[#DADCE0]">Typology</th>
+                                        <th className="p-8 text-left font-sans tracking-tight font-semibold text-xs font-bold border-b border-[#DADCE0]">Price Point</th>
+                                        <th className="p-8 text-left font-sans tracking-tight font-semibold text-xs font-bold border-b border-[#DADCE0]">Possession</th>
+                                        <th className="p-8 text-left font-sans tracking-tight font-semibold text-xs font-bold border-b border-[#DADCE0]">Core USP</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -215,17 +215,17 @@ export const TownshipGuide: React.FC = () => {
                                         { name: "Canvas", type: "3, 3.5 & 4 BHK", price: "₹1.49Cr*", status: "Dec 2028", usp: "Infinity Amenities & 40-Storey Towers" },
                                         { name: "24K Espada", type: "Row Houses", price: "₹3.5Cr*", status: "Ready/Ongoing", usp: "Ultra-Luxury Villas" }
                                     ].map((row, i) => (
-                                        <tr key={i} className={`border-b border-gray-50 transition-all duration-300 ${i % 2 === 0 ? 'bg-white' : 'bg-[#1A1C23]/50'} hover:bg-accent/10 group`}>
+                                        <tr key={i} className={`border-b border-gray-50 transition-all duration-300 ${i % 2 === 0 ? 'bg-white' : 'bg-[#F8F9FA]/50'} hover:bg-accent/10 group`}>
                                             <td className="p-8">
-                                                <span className="font-bold text-white group-hover:text-accent transition-colors">{row.name}</span>
+                                                <span className="font-bold text-[#202124] group-hover:text-[#1a73e8] transition-colors">{row.name}</span>
                                             </td>
                                             <td className="p-8 text-gray-600 text-sm font-medium">{row.type}</td>
                                             <td className="p-8">
-                                                <span className="font-mono text-accent font-bold bg-accent/5 px-3 py-1 rounded-md">{row.price}</span>
+                                                <span className="font-mono text-[#1a73e8] font-bold bg-accent/5 px-3 py-1 rounded-md">{row.price}</span>
                                             </td>
-                                            <td className="p-8 text-gray-500 text-sm">{row.status}</td>
+                                            <td className="p-8 text-[#5F6368] text-sm">{row.status}</td>
                                             <td className="p-8">
-                                                <span className="font-medium text-white text-sm italic opacity-80 group-hover:opacity-100">"{row.usp}"</span>
+                                                <span className="font-medium text-[#202124] text-sm italic opacity-80 group-hover:opacity-100">"{row.usp}"</span>
                                             </td>
                                         </tr>
                                     ))}
@@ -235,15 +235,15 @@ export const TownshipGuide: React.FC = () => {
                     </div>
 
                     {/* MahaRERA Sovereign Trust Ledger */}
-                    <div className="mt-16 bg-[#1A1C23] rounded-[2.5rem] p-4 md:p-12 border border-white/5 shadow-inner">
+                    <div className="mt-16 bg-[#F8F9FA] rounded-[24px] p-4 md:p-12 border border-[#DADCE0] shadow-inner">
                         <div className="flex flex-col md:flex-row items-center justify-between mb-10 gap-6">
                             <div className="max-w-md">
-                                <h3 className="text-2xl font-serif font-bold text-white mb-2">The Trust Ledger</h3>
-                                <p className="text-sm text-gray-500">MahaRERA registration certificates for all active and proposed clusters within the 390-acre domain.</p>
+                                <h3 className="text-2xl font-sans font-bold text-[#202124] mb-2">The Trust Ledger</h3>
+                                <p className="text-sm text-[#5F6368]">MahaRERA registration certificates for all active and proposed clusters within the 390-acre domain.</p>
                             </div>
-                            <div className="flex items-center gap-3 bg-[#151822] border border-white/10 px-6 py-3 rounded-2xl shadow-sm border border-white/5">
-                                <Shield className="text-accent" size={20} />
-                                <span className="text-xs font-bold text-white tracking-tight font-medium">100% RERA Compliant</span>
+                            <div className="flex items-center gap-3 bg-[#151822] border border-[#DADCE0] px-6 py-3 rounded-2xl shadow-sm border border-[#DADCE0]">
+                                <Shield className="text-[#1a73e8]" size={20} />
+                                <span className="text-xs font-bold text-[#202124] tracking-tight font-medium">100% RERA Compliant</span>
                             </div>
                         </div>
                         
@@ -258,39 +258,39 @@ export const TownshipGuide: React.FC = () => {
                                 { name: "Sound of Soul", rera: "P52100032047" },
                                 { name: "ORO Avenue", rera: "P52100017116" }
                             ].map((item, i) => (
-                                <div key={i} className="bg-[#151822] border border-white/10 p-4 rounded-xl border border-white/5 hover:border-accent/30 transition-all text-center group">
-                                    <p className="text-[10px] font-bold text-gray-400 uppercase mb-1">{item.name}</p>
-                                    <p className="text-xs font-mono font-bold text-white group-hover:text-accent transition-colors">{item.rera}</p>
+                                <div key={i} className="bg-[#151822] border border-[#DADCE0] p-4 rounded-xl border border-[#DADCE0] hover:border-accent/30 transition-all text-center group">
+                                    <p className="text-[10px] font-bold text-[#5F6368] uppercase mb-1">{item.name}</p>
+                                    <p className="text-xs font-mono font-bold text-[#202124] group-hover:text-[#1a73e8] transition-colors">{item.rera}</p>
                                 </div>
                             ))}
                         </div>
-                        <p className="text-[10px] text-gray-400 mt-8 text-center tracking-tight font-medium italic">
+                        <p className="text-[10px] text-[#5F6368] mt-8 text-center tracking-tight font-medium italic">
                             Verification available at maharera.mahaonline.gov.in under registered projects.
                         </p>
                     </div>
 
                     <SovereignFinancials />
 
-                    <h2 id="roi" className="text-4xl font-bold mb-8 mt-16 text-white font-serif leading-tight underline decoration-accent/30 underline-offset-8">3. Strategic ROI & Connectivity</h2>
+                    <h2 id="roi" className="text-4xl font-bold mb-8 mt-16 text-[#202124] font-sans leading-tight underline decoration-accent/30 underline-offset-8">3. Strategic ROI & Connectivity</h2>
                     <p className="mb-8">
                         Homebuyers in <strong>Pune</strong> are increasingly looking at Marunji and Hinjewadi through a lens of capital appreciation. Life Republic’s strategic positioning offers a dual advantage of proximity to massive employment hubs and internal lifestyle appreciation.
                     </p>
-                    <div className="bg-[#0B0D14] p-12 rounded-[2rem] text-white shadow-2xl relative overflow-hidden mb-8">
+                    <div className="bg-white p-12 rounded-[2rem] text-[#202124] shadow-2xl relative overflow-hidden mb-8">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
-                        <h4 className="text-2xl font-bold mb-6 text-accent">Connectivity Metrics 2026:</h4>
+                        <h4 className="text-2xl font-bold mb-6 text-[#1a73e8]">Connectivity Metrics 2026:</h4>
                         <div className="space-y-6">
                             <div className="flex gap-4 items-start">
-                                <div className="p-2 bg-[#151822] border border-white/10/10 rounded-lg text-accent"><Train size={20} /></div>
+                                <div className="p-2 bg-[#151822] border border-[#DADCE0]/10 rounded-lg text-[#1a73e8]"><Train size={20} /></div>
                                 <div>
                                     <h5 className="font-bold">Hinjewadi Metro Line 3</h5>
-                                    <p className="text-white/60 text-sm">Targeting direct connectivity from the township gate to PMRDA Metro hubs for rapid transit.</p>
+                                    <p className="text-[#202124]/60 text-sm">Targeting direct connectivity from the township gate to PMRDA Metro hubs for rapid transit.</p>
                                 </div>
                             </div>
                             <div className="flex gap-4 items-start">
-                                <div className="p-2 bg-[#151822] border border-white/10/10 rounded-lg text-accent"><Zap size={20} /></div>
+                                <div className="p-2 bg-[#151822] border border-[#DADCE0]/10 rounded-lg text-[#1a73e8]"><Zap size={20} /></div>
                                 <div>
                                     <h5 className="font-bold">Hinjewadi Phase 1, 2, & 3</h5>
-                                    <p className="text-white/60 text-sm">Under 10 minutes from Global IT majors like Infosys, Wipro, and TCS.</p>
+                                    <p className="text-[#202124]/60 text-sm">Under 10 minutes from Global IT majors like Infosys, Wipro, and TCS.</p>
                                 </div>
                             </div>
                         </div>
@@ -301,8 +301,8 @@ export const TownshipGuide: React.FC = () => {
                     {/* Operational Sovereignty proof-grid */}
                     <div className="mt-24 mb-8">
                         <div className="text-center mb-12">
-                            <h3 className="text-3xl font-serif font-bold text-white mb-4">Operational Sovereignty</h3>
-                            <p className="text-gray-500 max-w-2xl mx-auto">Life Republic is a mature ecosystem with fully functional critical infrastructure serving 5,000+ resident families.</p>
+                            <h3 className="text-3xl font-sans font-bold text-[#202124] mb-4">Operational Sovereignty</h3>
+                            <p className="text-[#5F6368] max-w-2xl mx-auto">Life Republic is a mature ecosystem with fully functional critical infrastructure serving 5,000+ resident families.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {[
@@ -314,8 +314,8 @@ export const TownshipGuide: React.FC = () => {
                                     <img loading="lazy" src={item.img} alt={item.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onError={(e) => { e.currentTarget.src = 'https://life-republic.in/images/gallery/eros/master-layout.webp' }} />
                                     <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent"></div>
                                     <div className="absolute bottom-6 left-6">
-                                        <p className="text-xs font-bold text-accent tracking-tight font-medium mb-1">{item.status}</p>
-                                        <h4 className="text-xl font-bold text-white">{item.title}</h4>
+                                        <p className="text-xs font-bold text-[#1a73e8] tracking-tight font-medium mb-1">{item.status}</p>
+                                        <h4 className="text-xl font-bold text-[#202124]">{item.title}</h4>
                                     </div>
                                 </div>
                             ))}
@@ -332,16 +332,16 @@ export const TownshipGuide: React.FC = () => {
                             "150ft Wide Internal Spine Road",
                             "High Rental Yield Potential"
                         ].map((point, i) => (
-                            <div key={i} className="flex items-center gap-4 text-xl text-white">
-                                <CheckCircle2 className="text-accent flex-shrink-0" />
+                            <div key={i} className="flex items-center gap-4 text-xl text-[#202124]">
+                                <CheckCircle2 className="text-[#1a73e8] flex-shrink-0" />
                                 <span>{point}</span>
                             </div>
                         ))}
                     </div>
 
                     {/* Sovereign Intelligence FAQ (VSO) */}
-                    <div className="mt-24 pt-24 border-t border-white/5">
-                        <h2 id="faq" className="text-4xl font-serif font-bold text-white mb-12 text-center">Township Intelligence FAQ</h2>
+                    <div className="mt-24 pt-24 border-t border-[#DADCE0]">
+                        <h2 id="faq" className="text-4xl font-sans font-bold text-[#202124] mb-12 text-center">Township Intelligence FAQ</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                             {[
                                 { 
@@ -362,10 +362,10 @@ export const TownshipGuide: React.FC = () => {
                                 }
                             ].map((faq, i) => (
                                 <div key={i} className="group">
-                                    <h4 className="text-lg font-bold text-white mb-3 group-hover:text-accent transition-colors flex gap-3">
-                                        <span className="text-accent">Q:</span> {faq.q}
+                                    <h4 className="text-lg font-bold text-[#202124] mb-3 group-hover:text-[#1a73e8] transition-colors flex gap-3">
+                                        <span className="text-[#1a73e8]">Q:</span> {faq.q}
                                     </h4>
-                                    <p className="text-gray-600 text-sm leading-relaxed pl-7 border-l-2 border-white/5 group-hover:border-accent/30 transition-all">
+                                    <p className="text-gray-600 text-sm leading-relaxed pl-7 border-l-2 border-[#DADCE0] group-hover:border-accent/30 transition-all">
                                         {faq.a}
                                     </p>
                                 </div>
@@ -373,22 +373,22 @@ export const TownshipGuide: React.FC = () => {
                         </div>
                     </div>
 
-                    <p className="italic text-gray-500 text-sm border-t border-white/5 pt-8 mt-12">
+                    <p className="italic text-[#5F6368] text-sm border-t border-[#DADCE0] pt-8 mt-12">
                         *This guide is for informational purposes for the Kolte Patil Life Republic digital ecosystem. Pricing and availability of individual clusters vary by possession timelines and market demand.
                     </p>
                 </div>
             </article>
             
             {/* Silo Mesh: Latest from Media Center */}
-            <section className="py-12 bg-[#1A1C23] border-t border-white/5">
+            <section className="py-12 bg-[#F8F9FA] border-t border-[#DADCE0]">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                         <div>
-                            <span className="text-accent font-bold tracking-widest uppercase text-xs mb-2 block">Insights & Intelligence</span>
-                            <h2 className="text-4xl font-serif font-bold text-white">Latest Township Updates</h2>
+                            <span className="text-[#1a73e8] font-bold tracking-widest uppercase text-xs mb-2 block">Insights & Intelligence</span>
+                            <h2 className="text-4xl font-sans font-bold text-[#202124]">Latest Township Updates</h2>
                         </div>
                         <Link to="/media-center">
-                            <Button variant="outline" className="rounded-full border-secondary text-white hover:bg-[#0B0D14] hover:text-white transition-all">
+                            <Button variant="outline" className="rounded-full border-secondary text-[#202124] hover:bg-white hover:text-[#202124] transition-all">
                                 View Media Center <ArrowRight size={18} className="ml-2" />
                             </Button>
                         </Link>
@@ -400,7 +400,7 @@ export const TownshipGuide: React.FC = () => {
                                 <Link 
                                     key={post.id} 
                                     to={`/media-center/${post.slug}`}
-                                    className="group bg-[#151822] border border-white/10 rounded-3xl overflow-hidden border border-white/5 hover:shadow-xl transition-all flex flex-col h-full"
+                                    className="group bg-[#151822] border border-[#DADCE0] rounded-3xl overflow-hidden border border-[#DADCE0] hover:shadow-xl transition-all flex flex-col h-full"
                                 >
                                     <div className="aspect-video relative overflow-hidden">
                                         <img loading="lazy" 
@@ -409,19 +409,19 @@ export const TownshipGuide: React.FC = () => {
                                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                         />
                                         <div className="absolute top-4 left-4">
-                                            <span className="bg-[#151822] border border-white/10/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-accent tracking-tight font-medium">
+                                            <span className="bg-[#151822] border border-[#DADCE0]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#1a73e8] tracking-tight font-medium">
                                                 {post.tags?.[0] || 'Updates'}
                                             </span>
                                         </div>
                                     </div>
                                     <div className="p-6 flex flex-col flex-grow">
-                                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors line-clamp-2">
+                                        <h3 className="text-xl font-bold text-[#202124] mb-3 group-hover:text-[#1a73e8] transition-colors line-clamp-2">
                                             {post.title}
                                         </h3>
-                                        <p className="text-gray-500 text-sm line-clamp-3 mb-6 flex-grow">
+                                        <p className="text-[#5F6368] text-sm line-clamp-3 mb-6 flex-grow">
                                             {post.excerpt || post.meta_description}
                                         </p>
-                                        <div className="flex items-center text-accent text-xs font-bold tracking-tight font-medium">
+                                        <div className="flex items-center text-[#1a73e8] text-xs font-bold tracking-tight font-medium">
                                             Read Analysis <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>
@@ -429,7 +429,7 @@ export const TownshipGuide: React.FC = () => {
                             ))
                         ) : (
                             [1, 2, 3].map((i) => (
-                                <div key={i} className="bg-[#151822] border border-white/10 rounded-3xl h-80 animate-pulse border border-white/5">
+                                <div key={i} className="bg-[#151822] border border-[#DADCE0] rounded-3xl h-80 animate-pulse border border-[#DADCE0]">
                                     <div className="h-40 bg-[#151822] rounded-t-3xl"></div>
                                     <div className="p-6 space-y-4">
                                         <div className="h-6 bg-[#151822] w-3/4 rounded-lg"></div>
@@ -443,9 +443,9 @@ export const TownshipGuide: React.FC = () => {
             </section>
 
             {/* Newsletter / CTA Section */}
-            <section className="bg-[#1A1C23] py-12">
+            <section className="bg-[#F8F9FA] py-12">
                 <div className="container mx-auto px-4 text-center max-w-3xl">
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8">Receive the Sovereign Technical Ledger</h2>
+                    <h2 className="text-3xl md:text-5xl font-sans font-bold text-[#202124] mb-8">Receive the Sovereign Technical Ledger</h2>
                     <p className="text-gray-600 text-lg mb-10">
                         Get the full technical breakdown, possession timelines, and current inventory for all sectors.
                     </p>

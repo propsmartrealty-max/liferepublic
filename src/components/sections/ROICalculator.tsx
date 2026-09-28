@@ -30,7 +30,7 @@ export const ROICalculator: React.FC = () => {
     };
 
     return (
-        <section className="py-12 bg-[#0B0D14] overflow-hidden relative">
+        <section className="py-12 bg-white overflow-hidden relative">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row items-end justify-between gap-8 mb-8">
                     <div className="max-w-2xl text-left">
@@ -39,13 +39,13 @@ export const ROICalculator: React.FC = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             className="inline-flex items-center gap-3 px-4 py-2 bg-accent/20 border border-accent/30 rounded-full mb-6"
                         >
-                            <Target size={14} className="text-accent" />
-                            <span className="text-[10px] font-bold tracking-tight font-semibold text-accent">Tectonic ROI Engine v2.0</span>
+                            <Target size={14} className="text-[#1a73e8]" />
+                            <span className="text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8]">Tectonic ROI Engine v2.0</span>
                         </motion.div>
-                        <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
-                            Project Your <br /> <span className="text-accent italic">Wealth Velocity.</span>
+                        <h2 className="text-4xl md:text-6xl font-sans font-bold text-[#202124] mb-6 leading-tight">
+                            Project Your <br /> <span className="text-[#1a73e8] italic">Wealth Velocity.</span>
                         </h2>
-                        <p className="text-gray-500 text-lg leading-relaxed font-medium">
+                        <p className="text-[#5F6368] text-lg leading-relaxed font-medium">
                             Synthesize your portfolio's growth based on Hinjewadi's 2026 infrastructure roadmap. Our engine accounts for the **Metro Expansion** and the **Spine Road Connectivity** delta.
                         </p>
                     </div>
@@ -53,15 +53,15 @@ export const ROICalculator: React.FC = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                     {/* Controls */}
-                    <div className="lg:col-span-5 bg-[#1A1C23] rounded-[3rem] p-10 md:p-14 border border-white/5 flex flex-col justify-between">
+                    <div className="lg:col-span-5 bg-[#F8F9FA] rounded-[24px] p-10 md:p-14 border border-[#DADCE0] flex flex-col justify-between">
                         <div className="space-y-16">
                             <div>
                                 <div className="flex justify-between items-center mb-6">
-                                    <label className="text-sm font-bold text-white tracking-tight font-medium flex items-center gap-2">
-                                        <TrendingUp className="text-accent" size={18} />
+                                    <label className="text-sm font-bold text-[#202124] tracking-tight font-medium flex items-center gap-2">
+                                        <TrendingUp className="text-[#1a73e8]" size={18} />
                                         Capital Input
                                     </label>
-                                    <span className="text-2xl font-serif font-bold text-white">{formatCurrency(investment)}</span>
+                                    <span className="text-2xl font-sans font-bold text-[#202124]">{formatCurrency(investment)}</span>
                                 </div>
                                 <input 
                                     type="range"
@@ -72,7 +72,7 @@ export const ROICalculator: React.FC = () => {
                                     onChange={(e) => setInvestment(Number(e.target.value))}
                                     className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-accent"
                                 />
-                                <div className="flex justify-between mt-4 text-[9px] font-bold text-gray-400 tracking-tight font-medium">
+                                <div className="flex justify-between mt-4 text-[9px] font-bold text-[#5F6368] tracking-tight font-medium">
                                     <span>60 Lacs</span>
                                     <span>5 Cr</span>
                                 </div>
@@ -80,11 +80,11 @@ export const ROICalculator: React.FC = () => {
 
                             <div>
                                 <div className="flex justify-between items-center mb-6">
-                                    <label className="text-sm font-bold text-white tracking-tight font-medium flex items-center gap-2">
-                                        <Calculator className="text-white" size={18} />
+                                    <label className="text-sm font-bold text-[#202124] tracking-tight font-medium flex items-center gap-2">
+                                        <Calculator className="text-[#202124]" size={18} />
                                         Time Horizon
                                     </label>
-                                    <span className="text-2xl font-serif font-bold text-white">{years} Years</span>
+                                    <span className="text-2xl font-sans font-bold text-[#202124]">{years} Years</span>
                                 </div>
                                 <input 
                                     type="range"
@@ -95,7 +95,7 @@ export const ROICalculator: React.FC = () => {
                                     onChange={(e) => setYears(Number(e.target.value))}
                                     className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-secondary"
                                 />
-                                <div className="flex justify-between mt-4 text-[9px] font-bold text-gray-400 tracking-tight font-medium">
+                                <div className="flex justify-between mt-4 text-[9px] font-bold text-[#5F6368] tracking-tight font-medium">
                                     <span>Launch (2024)</span>
                                     <span>Maturity (2039)</span>
                                 </div>
@@ -104,76 +104,76 @@ export const ROICalculator: React.FC = () => {
                             <div className="flex items-center gap-4 pt-4">
                                 <button 
                                     onClick={() => setStrategy('conservative')}
-                                    className={`flex-1 py-3 px-4 rounded-xl text-[10px] font-bold tracking-tight font-medium transition-all ${strategy === 'conservative' ? 'bg-[#0B0D14] text-white shadow-lg' : 'bg-white border border-white/5 text-gray-400 hover:bg-[#1A1C23]'}`}
+                                    className={`flex-1 py-3 px-4 rounded-xl text-[10px] font-bold tracking-tight font-medium transition-all ${strategy === 'conservative' ? 'bg-white text-[#202124] shadow-lg' : 'bg-white border border-[#DADCE0] text-[#5F6368] hover:bg-[#F8F9FA]'}`}
                                 >
                                     Conservative (8%)
                                 </button>
                                 <button 
                                     onClick={() => setStrategy('aggressive')}
-                                    className={`flex-1 py-3 px-4 rounded-xl text-[10px] font-bold tracking-tight font-medium transition-all ${strategy === 'aggressive' ? 'bg-accent text-white shadow-lg' : 'bg-white border border-white/5 text-gray-400 hover:bg-[#1A1C23]'}`}
+                                    className={`flex-1 py-3 px-4 rounded-xl text-[10px] font-bold tracking-tight font-medium transition-all ${strategy === 'aggressive' ? 'bg-accent text-[#202124] shadow-lg' : 'bg-white border border-[#DADCE0] text-[#5F6368] hover:bg-[#F8F9FA]'}`}
                                 >
                                     Metro Adjusted (12%)
                                 </button>
                             </div>
                         </div>
 
-                        <div className="mt-12 p-6 bg-[#151822] border border-white/10 rounded-3xl border border-white/5 shadow-sm flex items-start gap-4">
-                            <ShieldCheck className="text-accent shrink-0" size={20} />
-                            <p className="text-xs text-gray-500 leading-relaxed font-bold tracking-tight font-medium">
+                        <div className="mt-12 p-6 bg-[#151822] border border-[#DADCE0] rounded-3xl border border-[#DADCE0] shadow-sm flex items-start gap-4">
+                            <ShieldCheck className="text-[#1a73e8] shrink-0" size={20} />
+                            <p className="text-xs text-[#5F6368] leading-relaxed font-bold tracking-tight font-medium">
                                 Projections account for the 2026 Metro Correction and IT Phase 3 cluster delivery.
                             </p>
                         </div>
                     </div>
 
                     {/* Results Display */}
-                    <div className="lg:col-span-7 bg-[#0B0D14] rounded-[3.5rem] p-10 md:p-16 text-white shadow-2xl relative overflow-hidden flex flex-col justify-between group">
+                    <div className="lg:col-span-7 bg-white rounded-[3.5rem] p-10 md:p-16 text-[#202124] shadow-2xl relative overflow-hidden flex flex-col justify-between group">
                         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none group-hover:scale-110 transition-transform duration-1000"></div>
                         
                         <div className="relative z-10 space-y-12">
                             <div>
-                                <div className="flex items-center gap-2 text-accent mb-4">
+                                <div className="flex items-center gap-2 text-[#1a73e8] mb-4">
                                     <Zap size={14} className="animate-pulse" />
                                     <span className="text-[10px] font-bold tracking-tight font-semibold">Sovereign Valuation</span>
                                 </div>
-                                <p className="text-white/40 text-xs font-bold tracking-tight font-semibold mb-4">Projected Market Value (Year {2024 + years})</p>
+                                <p className="text-[#202124]/40 text-xs font-bold tracking-tight font-semibold mb-4">Projected Market Value (Year {2024 + years})</p>
                                 <motion.h3 
                                     key={futureValue}
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    className="text-6xl md:text-8xl font-serif font-bold text-white tracking-tighter"
+                                    className="text-6xl md:text-8xl font-sans font-bold text-[#202124] tracking-tighter"
                                 >
                                     {formatCurrency(futureValue)}
                                 </motion.h3>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-white/10">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-[#DADCE0]">
                                 <div>
                                     <div className="flex items-center gap-2 mb-2">
                                         <TrendingUp size={14} className="text-green-400" />
-                                        <p className="text-white/40 text-[10px] font-bold tracking-tight font-medium">Growth Premium</p>
+                                        <p className="text-[#202124]/40 text-[10px] font-bold tracking-tight font-medium">Growth Premium</p>
                                     </div>
-                                    <p className="text-3xl font-serif font-bold text-green-400">+{formatCurrency(profit)}</p>
+                                    <p className="text-3xl font-sans font-bold text-green-400">+{formatCurrency(profit)}</p>
                                 </div>
                                 <div>
                                     <div className="flex items-center gap-2 mb-2">
-                                        <Sparkles size={14} className="text-accent" />
-                                        <p className="text-white/40 text-[10px] font-bold tracking-tight font-medium">Yield Signal</p>
+                                        <Sparkles size={14} className="text-[#1a73e8]" />
+                                        <p className="text-[#202124]/40 text-[10px] font-bold tracking-tight font-medium">Yield Signal</p>
                                     </div>
-                                    <p className="text-3xl font-serif font-bold text-white italic">{getVerdict()}</p>
+                                    <p className="text-3xl font-sans font-bold text-[#202124] italic">{getVerdict()}</p>
                                 </div>
                             </div>
 
                             <div className="pt-12">
                                 <button 
                                     onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}
-                                    className="w-full py-6 px-10 bg-[#0B0D14] text-white rounded-[2rem] flex items-center justify-between font-bold hover:bg-accent hover:scale-[1.02] transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] group"
+                                    className="w-full py-6 px-10 bg-white text-[#202124] rounded-[2rem] flex items-center justify-between font-bold hover:bg-accent hover:scale-[1.02] transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] group"
                                 >
                                     <span className="text-lg">Enquire Now for Detailed Monograph</span>
-                                    <div className="w-12 h-12 bg-[#0B0D14] text-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all">
+                                    <div className="w-12 h-12 bg-white text-[#202124] rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all">
                                         <ChevronRight size={24} />
                                     </div>
                                 </button>
-                                <p className="text-center mt-6 text-[10px] text-white/20 font-bold tracking-tight font-semibold">Secure Ledger Access Protocol v5.0</p>
+                                <p className="text-center mt-6 text-[10px] text-[#202124]/20 font-bold tracking-tight font-semibold">Secure Ledger Access Protocol v5.0</p>
                             </div>
                         </div>
                     </div>

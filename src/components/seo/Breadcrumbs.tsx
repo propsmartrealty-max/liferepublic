@@ -64,13 +64,13 @@ export const Breadcrumbs: React.FC = () => {
             <Helmet>
                 <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
             </Helmet>
-            <nav aria-label="Breadcrumb" className="py-3 px-4 text-xs text-gray-400">
+            <nav aria-label="Breadcrumb" className="py-3 px-4 text-xs text-[#5F6368]">
                 <ol className="flex items-center flex-wrap gap-1" itemScope itemType="https://schema.org/BreadcrumbList">
                     {breadcrumbs.map((item, index) => (
                         <li key={item.path} className="flex items-center gap-1" itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
                             {index < breadcrumbs.length - 1 ? (
                                 <>
-                                    <Link to={item.path} className="hover:text-accent transition-colors" itemProp="item">
+                                    <Link to={item.path} className="hover:text-[#1a73e8] transition-colors" itemProp="item">
                                         {index === 0 ? <Home size={12} /> : <span itemProp="name">{item.label}</span>}
                                     </Link>
                                     <ChevronRight size={10} className="text-gray-300" />

@@ -52,7 +52,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
   }, []);
 
   return (
-    <div className="min-h-[75vh] bg-[#0B0D14] flex flex-col font-sans selection:bg-accent selection:text-white overflow-x-hidden">
+    <div className="min-h-[75vh] bg-white flex flex-col font-sans selection:bg-accent selection:text-[#202124] overflow-x-hidden">
       {/* Sovereign Residents Pulse Ticker */}
             
       <Navbar />

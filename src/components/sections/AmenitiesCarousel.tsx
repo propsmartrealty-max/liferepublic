@@ -67,7 +67,7 @@ export const AmenitiesCarousel: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="text-4xl lg:text-5xl font-serif font-bold mb-4 text-white"
+                        className="text-4xl lg:text-5xl font-sans font-bold mb-4 text-[#202124]"
                     >
                         World-Class Amenities
                     </motion.h2>
@@ -108,7 +108,7 @@ export const AmenitiesCarousel: React.FC = () => {
                 >
                     {displayAmenities.map((item, index) => (
                         <SwiperSlide key={index}>
-                            <div className="group relative h-[400px] rounded-2xl overflow-hidden shadow-lg border border-white/5">
+                            <div className="group relative h-[400px] rounded-2xl overflow-hidden shadow-lg border border-[#DADCE0]">
                                 <img
                                     src={item.image_url}
                                     alt={item.title}
@@ -119,7 +119,7 @@ export const AmenitiesCarousel: React.FC = () => {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                                 <div className="absolute bottom-0 left-0 p-8 w-full">
-                                    <h3 className="text-2xl font-serif font-bold text-white mb-2 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                    <h3 className="text-2xl font-sans font-bold text-[#202124] mb-2 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                                         {item.title}
                                     </h3>
                                     <p className="text-gray-200 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">

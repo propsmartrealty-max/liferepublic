@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-24 pb-20 bg-[#1A1C23] min-h-[50vh]">
+        <div className="pt-24 pb-20 bg-[#F8F9FA] min-h-[50vh]">
             <Breadcrumbs />
             <SEO
                 title="Projects in Kolte Patil Life Republic Township Hinjewadi | 1, 2, 3 BHK & Villas"
@@ -45,7 +45,7 @@ const Projects: React.FC = () => {
                     transition={{ duration: 0.6 }}
                     className="max-w-4xl mx-auto text-center"
                 >
-                    <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-3">
+                    <h1 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-3">
                         Properties in Kolte Patil Life Republic Township Hinjewadi
                     </h1>
                     <p className="text-xl text-gray-600 leading-relaxed">
@@ -61,10 +61,10 @@ const Projects: React.FC = () => {
             </div>
 
             {/* Semantic Project Cluster Mesh (Phase 15 SEO) */}
-            <section className="py-10 bg-[#0B0D14] border-t border-white/5">
+            <section className="py-10 bg-white border-t border-[#DADCE0]">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mb-3">
-                        <h2 className="text-3xl font-serif font-bold text-white mb-4 italic">The Life Republic Ecosystem</h2>
+                        <h2 className="text-3xl font-sans font-bold text-[#202124] mb-4 italic">The Life Republic Ecosystem</h2>
                         <p className="text-gray-600">
                             Explore specialized residential sectors in Kolte Patil Life Republic Township Hinjewadi, designed for distinctive lifestyles and investment goals.
                         </p>
@@ -72,35 +72,35 @@ const Projects: React.FC = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                         <div className="space-y-4">
-                            <h3 className="font-bold text-accent tracking-tight font-medium text-sm">Luxury Lifestyle</h3>
+                            <h3 className="font-bold text-[#1a73e8] tracking-tight font-medium text-sm">Luxury Lifestyle</h3>
                             <ul className="space-y-2">
-                                <li><Link to="/projects/kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi" className="text-white hover:text-accent font-medium text-sm">Canvas Luxury Apartments</Link></li>
-                                <li><Link to="/projects/kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi" className="text-white hover:text-accent font-medium text-sm">24K Espada Row Houses</Link></li>
-                                <li><Link to="/projects/kolte-patil-life-republic-villas-hinjewadi" className="text-white hover:text-accent font-medium text-sm">Signature Villas Pune</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi" className="text-[#202124] hover:text-[#1a73e8] font-medium text-sm">Canvas Luxury Apartments</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi" className="text-[#202124] hover:text-[#1a73e8] font-medium text-sm">24K Espada Row Houses</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-villas-hinjewadi" className="text-[#202124] hover:text-[#1a73e8] font-medium text-sm">Signature Villas Pune</Link></li>
                             </ul>
                         </div>
                         <div className="space-y-4">
-                            <h3 className="font-bold text-accent tracking-tight font-medium text-sm">Smart Living</h3>
+                            <h3 className="font-bold text-[#1a73e8] tracking-tight font-medium text-sm">Smart Living</h3>
                             <ul className="space-y-2">
-                                <li><Link to="/projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi" className="text-white hover:text-accent font-medium text-sm">Universe Smart Homes</Link></li>
-                                <li><Link to="/projects/kolte-patil-life-republic-arezo-efficient-2-bhk-flats-hinjewadi" className="text-white hover:text-accent font-medium text-sm">Arezo Efficient Flats</Link></li>
-                                <li><Link to="/projects/kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi" className="text-white hover:text-accent font-medium text-sm">Duet Premium Residences</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi" className="text-[#202124] hover:text-[#1a73e8] font-medium text-sm">Universe Smart Homes</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-arezo-efficient-2-bhk-flats-hinjewadi" className="text-[#202124] hover:text-[#1a73e8] font-medium text-sm">Arezo Efficient Flats</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi" className="text-[#202124] hover:text-[#1a73e8] font-medium text-sm">Duet Premium Residences</Link></li>
                             </ul>
                         </div>
                         <div className="space-y-4">
-                            <h3 className="font-bold text-accent tracking-tight font-medium text-sm">NRI Investment</h3>
+                            <h3 className="font-bold text-[#1a73e8] tracking-tight font-medium text-sm">NRI Investment</h3>
                             <ul className="space-y-2">
-                                <li><Link to="/nri-investment-guide" className="text-white hover:text-accent font-medium text-sm">Pune Real Estate ROI Guide</Link></li>
-                                <li><Link to="/projects/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi" className="text-white hover:text-accent font-medium text-sm">Atmos Modern Apartments</Link></li>
-                                <li><Link to="/projects/kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi" className="text-white hover:text-accent font-medium text-sm">Aros Premium Sector</Link></li>
+                                <li><Link to="/nri-investment-guide" className="text-[#202124] hover:text-[#1a73e8] font-medium text-sm">Pune Real Estate ROI Guide</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi" className="text-[#202124] hover:text-[#1a73e8] font-medium text-sm">Atmos Modern Apartments</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi" className="text-[#202124] hover:text-[#1a73e8] font-medium text-sm">Aros Premium Sector</Link></li>
                             </ul>
                         </div>
                         <div className="space-y-4">
-                            <h3 className="font-bold text-accent tracking-tight font-medium text-sm">Community Hubs</h3>
+                            <h3 className="font-bold text-[#1a73e8] tracking-tight font-medium text-sm">Community Hubs</h3>
                             <ul className="space-y-2">
-                                <li><Link to="/amenities" className="text-white hover:text-accent font-medium text-sm">Township Amenities Hub</Link></li>
-                                <li><Link to="/connectivity" className="text-white hover:text-accent font-medium text-sm">Project Connectivity Analysis</Link></li>
-                                <li><Link to="/sustainability" className="text-white hover:text-accent font-medium text-sm">Green Living Initiatives</Link></li>
+                                <li><Link to="/amenities" className="text-[#202124] hover:text-[#1a73e8] font-medium text-sm">Township Amenities Hub</Link></li>
+                                <li><Link to="/connectivity" className="text-[#202124] hover:text-[#1a73e8] font-medium text-sm">Project Connectivity Analysis</Link></li>
+                                <li><Link to="/sustainability" className="text-[#202124] hover:text-[#1a73e8] font-medium text-sm">Green Living Initiatives</Link></li>
                             </ul>
                         </div>
                     </div>

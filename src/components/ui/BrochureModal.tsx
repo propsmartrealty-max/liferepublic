@@ -62,15 +62,15 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose, p
                         initial={{ opacity: 0, scale: 0.95, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                        className="fixed z-[70] bg-[#151822] border border-white/10 rounded-2xl shadow-2xl w-full max-w-md overflow-hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                        className="fixed z-[70] bg-[#151822] border border-[#DADCE0] rounded-2xl shadow-2xl w-full max-w-md overflow-hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                     >
-                        <div className="bg-[#E5C07B]/30 p-6 border-b border-white/5 flex justify-between items-center">
-                            <h3 className="text-xl font-serif font-bold text-white">
+                        <div className="bg-[#E5C07B]/30 p-6 border-b border-[#DADCE0] flex justify-between items-center">
+                            <h3 className="text-xl font-sans font-bold text-[#202124]">
                                 Download Brochure
                             </h3>
                             <button
                                 onClick={onClose}
-                                className="text-gray-400 hover:text-white transition-colors"
+                                className="text-[#5F6368] hover:text-[#202124] transition-colors"
                             >
                                 <X size={24} />
                             </button>
@@ -80,7 +80,7 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose, p
                             {!isSubmitted ? (
                                 <>
                                     <p className="text-gray-600 mb-6 text-sm">
-                                        Please fill in your details to instantly download the brochure for <span className="font-semibold text-white">{projectName}</span>.
+                                        Please fill in your details to instantly download the brochure for <span className="font-semibold text-[#202124]">{projectName}</span>.
                                     </p>
                                     <form onSubmit={handleSubmit} className="space-y-4">
                                         <div>
@@ -89,7 +89,7 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose, p
                                                 name="name"
                                                 type="text"
                                                 required
-                                                className="w-full px-4 py-3 border border-white/10 rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all"
+                                                className="w-full px-4 py-3 border border-[#DADCE0] rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all"
                                                 placeholder="Your Name"
                                             />
                                         </div>
@@ -100,7 +100,7 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose, p
                                                 type="tel"
                                                 required
                                                 pattern="[0-9]{10}"
-                                                className="w-full px-4 py-3 border border-white/10 rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all"
+                                                className="w-full px-4 py-3 border border-[#DADCE0] rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all"
                                                 placeholder="10-digit Mobile Number"
                                             />
                                         </div>
@@ -110,7 +110,7 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose, p
                                                 name="email"
                                                 type="email"
                                                 required
-                                                className="w-full px-4 py-3 border border-white/10 rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all"
+                                                className="w-full px-4 py-3 border border-[#DADCE0] rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all"
                                                 placeholder="your@email.com"
                                             />
                                         </div>
@@ -124,7 +124,7 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose, p
                                     <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <CheckCircle size={32} />
                                     </div>
-                                    <h4 className="text-xl font-bold text-white mb-2">Thank You!</h4>
+                                    <h4 className="text-xl font-bold text-[#202124] mb-2">Thank You!</h4>
                                     <p className="text-gray-600">The brochure has been sent to your email/phone.</p>
                                 </div>
                             )}

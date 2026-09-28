@@ -36,27 +36,27 @@ export const CookieConsent: React.FC = () => {
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     className="fixed bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:max-w-md z-[9999]"
                 >
-                    <div className="bg-[#151822] border border-white/10 rounded-2xl shadow-2xl border border-white/5 p-6 flex flex-col gap-4">
+                    <div className="bg-[#151822] border border-[#DADCE0] rounded-2xl shadow-2xl border border-[#DADCE0] p-6 flex flex-col gap-4">
                         <div className="flex items-start justify-between gap-4">
                             <div className="flex items-center gap-3">
-                                <div className="p-2 bg-accent/10 rounded-full text-accent">
+                                <div className="p-2 bg-accent/10 rounded-full text-[#1a73e8]">
                                     <Cookie size={20} />
                                 </div>
-                                <h3 className="font-bold text-white text-sm">We Value Your Privacy</h3>
+                                <h3 className="font-bold text-[#202124] text-sm">We Value Your Privacy</h3>
                             </div>
-                            <button onClick={declineCookies} className="text-gray-400 hover:text-gray-600">
+                            <button onClick={declineCookies} className="text-[#5F6368] hover:text-gray-600">
                                 <X size={20} />
                             </button>
                         </div>
                         
-                        <p className="text-xs text-gray-500 leading-relaxed font-medium">
-                            We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our <Link to="/privacy-policy" className="text-accent hover:underline">Privacy Policy</Link>.
+                        <p className="text-xs text-[#5F6368] leading-relaxed font-medium">
+                            We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our <Link to="/privacy-policy" className="text-[#1a73e8] hover:underline">Privacy Policy</Link>.
                         </p>
 
                         <div className="flex gap-3 mt-2">
                             <Button 
                                 variant="outline" 
-                                className="flex-1 rounded-xl py-3 text-[10px] font-bold tracking-tight font-medium border-white/10"
+                                className="flex-1 rounded-xl py-3 text-[10px] font-bold tracking-tight font-medium border-[#DADCE0]"
                                 onClick={declineCookies}
                             >
                                 Decline

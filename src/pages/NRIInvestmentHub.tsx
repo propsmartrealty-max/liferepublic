@@ -37,28 +37,28 @@ export const NRIInvestmentHub: React.FC = () => {
             <Breadcrumbs />
 
             {/* Global Authority Hero */}
-            <section className="relative py-16 bg-[#0B0D14] overflow-hidden">
+            <section className="relative py-16 bg-white overflow-hidden">
                 <div className="absolute inset-0 opacity-5"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                     >
-                        <span className="px-6 py-2 bg-accent/20 text-accent rounded-full text-xs font-bold tracking-tight font-semibold mb-8 inline-block border border-accent/20">
+                        <span className="px-6 py-2 bg-accent/20 text-[#1a73e8] rounded-full text-xs font-bold tracking-tight font-semibold mb-8 inline-block border border-accent/20">
                             Global Investors Portal
                         </span>
-                        <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-8 leading-tight">
+                        <h1 className="text-5xl md:text-7xl font-sans font-bold text-[#202124] mb-8 leading-tight">
                             Invest in Pune's <br />
-                            <span className="text-accent underline decoration-white/10 underline-offset-8">Sovereign Growth Corridor</span>
+                            <span className="text-[#1a73e8] underline decoration-white/10 underline-offset-8">Sovereign Growth Corridor</span>
                         </h1>
-                        <p className="text-white/60 text-xl max-w-3xl mx-auto leading-relaxed mb-12">
+                        <p className="text-[#202124]/60 text-xl max-w-3xl mx-auto leading-relaxed mb-12">
                             Secure your future in India's most resilient integrated township. Professional-grade ROI analytics for the cross-border investor.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button variant="primary" size="lg" className="rounded-full px-12" onClick={() => document.getElementById('ledger')?.scrollIntoView({ behavior: 'smooth' })}>
                                 View Performance Ledger
                             </Button>
-                            <Button variant="outline" size="lg" className="rounded-full px-12 border-white/20 text-white hover:bg-[#151822] border border-white/10/10">
+                            <Button variant="outline" size="lg" className="rounded-full px-12 border-[#DADCE0] text-[#202124] hover:bg-[#151822] border border-[#DADCE0]/10">
                                 Download NRI Guide PDF
                             </Button>
                         </div>
@@ -78,33 +78,33 @@ export const NRIInvestmentHub: React.FC = () => {
             <ProjectComparison />
 
             {/* NRI Trust Elements */}
-            <section className="py-12 bg-[#0B0D14] border-t border-white/5">
+            <section className="py-12 bg-white border-t border-[#DADCE0]">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         <div className="space-y-4">
-                            <div className="w-16 h-16 bg-[#1A1C23] rounded-2xl flex items-center justify-center text-white">
+                            <div className="w-16 h-16 bg-[#F8F9FA] rounded-2xl flex items-center justify-center text-[#202124]">
                                 <Landmark size={32} />
                             </div>
-                            <h3 className="text-2xl font-bold text-white">Repatriation Ease</h3>
-                            <p className="text-gray-500 leading-relaxed">
+                            <h3 className="text-2xl font-bold text-[#202124]">Repatriation Ease</h3>
+                            <p className="text-[#5F6368] leading-relaxed">
                                 Seamless capital repatriation as per FEMA guidelines. Our dedicated NRI desk assists with PIS account management and NRE/NRO compliance.
                             </p>
                         </div>
                         <div className="space-y-4">
-                            <div className="w-16 h-16 bg-[#1A1C23] rounded-2xl flex items-center justify-center text-white">
+                            <div className="w-16 h-16 bg-[#F8F9FA] rounded-2xl flex items-center justify-center text-[#202124]">
                                 <ShieldCheck size={32} />
                             </div>
-                            <h3 className="text-2xl font-bold text-white">Digital Governance</h3>
-                            <p className="text-gray-500 leading-relaxed">
+                            <h3 className="text-2xl font-bold text-[#202124]">Digital Governance</h3>
+                            <p className="text-[#5F6368] leading-relaxed">
                                 Monitor your investment from anywhere in the world. Virtual site visits, e-registration, and real-time construction tracking via the Planet App.
                             </p>
                         </div>
                         <div className="space-y-4">
-                            <div className="w-16 h-16 bg-[#1A1C23] rounded-2xl flex items-center justify-center text-white">
+                            <div className="w-16 h-16 bg-[#F8F9FA] rounded-2xl flex items-center justify-center text-[#202124]">
                                 <Globe size={32} />
                             </div>
-                            <h3 className="text-2xl font-bold text-white">Global Connectivity</h3>
-                            <p className="text-gray-500 leading-relaxed">
+                            <h3 className="text-2xl font-bold text-[#202124]">Global Connectivity</h3>
+                            <p className="text-[#5F6368] leading-relaxed">
                                 Strategically located for global ease. 15 mins to Mumbai-Pune Expressway and proximity to upcoming Pune Metro nodes.
                             </p>
                         </div>
@@ -115,8 +115,8 @@ export const NRIInvestmentHub: React.FC = () => {
             {/* Final CTA */}
             <section className="py-12 bg-accent relative overflow-hidden">
                 <div className="container mx-auto px-4 text-center relative z-10">
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-8">Ready to Expand Your Portfolio?</h2>
-                    <p className="text-white/60 max-w-2xl mx-auto mb-12 text-lg">
+                    <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-8">Ready to Expand Your Portfolio?</h2>
+                    <p className="text-[#202124]/60 max-w-2xl mx-auto mb-12 text-lg">
                         Schedule a one-on-one virtual consultation with our NRI investment strategists. Available across all time zones.
                     </p>
                     <Button 

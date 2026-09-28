@@ -49,24 +49,24 @@ export const LocalInfrastructure: React.FC = () => {
   };
 
   return (
-    <section className="py-12 bg-[#0B0D14] overflow-hidden">
+    <section className="py-12 bg-white overflow-hidden">
       <script type="application/ld+json">{JSON.stringify(schema)}</script>
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-end mb-8 gap-6">
           <div className="max-w-xl">
-            <span className="text-accent font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Global Connectivity</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 leading-tight">The Hinjewadi 5km Radius</h2>
-            <p className="text-gray-500">
+            <span className="text-[#1a73e8] font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Global Connectivity</span>
+            <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-4 leading-tight">The Hinjewadi 5km Radius</h2>
+            <p className="text-[#5F6368]">
               Strategic location at the heart of Pune's technology corridor. Life Republic offers unmatched access to the world's leading IT ecosystems and essential services.
             </p>
           </div>
           <div className="p-6 bg-accent/5 rounded-2xl border border-accent/10 flex items-center gap-4">
-            <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center text-white shadow-lg">
+            <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center text-[#202124] shadow-lg">
               <MapPin size={24} />
             </div>
             <div>
-              <p className="text-xs font-bold text-accent tracking-tight font-medium leading-none mb-1">Central Hub</p>
-              <p className="text-sm font-bold text-white">Hinjewadi Phase 1 & 2</p>
+              <p className="text-xs font-bold text-[#1a73e8] tracking-tight font-medium leading-none mb-1">Central Hub</p>
+              <p className="text-sm font-bold text-[#202124]">Hinjewadi Phase 1 & 2</p>
             </div>
           </div>
         </div>
@@ -79,18 +79,18 @@ export const LocalInfrastructure: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
-              className="group bg-[#1A1C23]/50 hover:bg-[#151822] border border-white/10 border border-white/5 p-6 rounded-[2rem] transition-all hover:shadow-xl hover:border-accent/30"
+              className="group bg-[#F8F9FA]/50 hover:bg-[#151822] border border-[#DADCE0] border border-[#DADCE0] p-6 rounded-[2rem] transition-all hover:shadow-xl hover:border-accent/30"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-[#151822] border border-white/10 border border-white/5 flex items-center justify-center text-accent shadow-sm group-hover:bg-accent group-hover:text-white transition-all">
+                <div className="w-10 h-10 rounded-xl bg-[#151822] border border-[#DADCE0] border border-[#DADCE0] flex items-center justify-center text-[#1a73e8] shadow-sm group-hover:bg-accent group-hover:text-[#202124] transition-all">
                   {React.cloneElement(poi.icon as React.ReactElement, { size: 18 } as any)}
                 </div>
                 <div className="w-px h-6 bg-gray-200" />
-                <span className="text-[10px] font-bold text-gray-400 tracking-tight font-semibold">{poi.category}</span>
+                <span className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold">{poi.category}</span>
               </div>
-              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-accent transition-colors">{poi.name}</h3>
-              <p className="text-xs font-medium text-gray-500 flex items-center gap-1">
-                <MapPin size={10} className="text-accent" /> {poi.distance}
+              <h3 className="text-lg font-bold text-[#202124] mb-1 group-hover:text-[#1a73e8] transition-colors">{poi.name}</h3>
+              <p className="text-xs font-medium text-[#5F6368] flex items-center gap-1">
+                <MapPin size={10} className="text-[#1a73e8]" /> {poi.distance}
               </p>
             </motion.div>
           ))}
@@ -98,8 +98,8 @@ export const LocalInfrastructure: React.FC = () => {
 
         <div className="mt-24">
           <div className="text-center mb-12">
-            <span className="text-accent font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Efficiency & Flow</span>
-            <h3 className="text-3xl font-serif font-bold text-white">The Pulse of Hinjewadi</h3>
+            <span className="text-[#1a73e8] font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Efficiency & Flow</span>
+            <h3 className="text-3xl font-sans font-bold text-[#202124]">The Pulse of Hinjewadi</h3>
           </div>
           
           <div className="relative max-w-4xl mx-auto px-4">
@@ -107,10 +107,10 @@ export const LocalInfrastructure: React.FC = () => {
             
             <div className="space-y-12">
               {[
-                { time: "05 Mins", destination: "Hinjewadi Phase 1 IT Park", desc: "Access to Infosys, Wipro, and TCS headquarters.", side: "left" as const, icon: <Building2 className="text-accent" /> },
-                { time: "08 Mins", destination: "Upcoming Metro Line 3", desc: "Rapid transit connecting the township to central Pune.", side: "right" as const, icon: <Train className="text-accent" /> },
-                { time: "12 Mins", destination: "Hinjewadi Phase 2 & 3", desc: "The tech expansion corridor and global MNC campuses.", side: "left" as const, icon: <PlusCircle className="text-accent" /> },
-                { time: "22 Mins", destination: "Shivaji Nagar (Central Pune)", desc: "Estimated travel time via the upcoming Metro link.", side: "right" as const, icon: <MapPin className="text-accent" /> }
+                { time: "05 Mins", destination: "Hinjewadi Phase 1 IT Park", desc: "Access to Infosys, Wipro, and TCS headquarters.", side: "left" as const, icon: <Building2 className="text-[#1a73e8]" /> },
+                { time: "08 Mins", destination: "Upcoming Metro Line 3", desc: "Rapid transit connecting the township to central Pune.", side: "right" as const, icon: <Train className="text-[#1a73e8]" /> },
+                { time: "12 Mins", destination: "Hinjewadi Phase 2 & 3", desc: "The tech expansion corridor and global MNC campuses.", side: "left" as const, icon: <PlusCircle className="text-[#1a73e8]" /> },
+                { time: "22 Mins", destination: "Shivaji Nagar (Central Pune)", desc: "Estimated travel time via the upcoming Metro link.", side: "right" as const, icon: <MapPin className="text-[#1a73e8]" /> }
               ].map((step, idx) => (
                 <motion.div
                   key={idx}
@@ -121,13 +121,13 @@ export const LocalInfrastructure: React.FC = () => {
                 >
                   <div className="flex-1 text-center md:text-left">
                     <div className={`flex flex-col ${step.side === 'right' ? 'md:items-start' : 'md:items-end'}`}>
-                      <span className="text-3xl font-serif font-bold text-accent mb-2">{step.time}</span>
-                      <h4 className="text-xl font-bold text-white mb-2">{step.destination}</h4>
-                      <p className="text-gray-500 text-sm max-w-xs">{step.desc}</p>
+                      <span className="text-3xl font-sans font-bold text-[#1a73e8] mb-2">{step.time}</span>
+                      <h4 className="text-xl font-bold text-[#202124] mb-2">{step.destination}</h4>
+                      <p className="text-[#5F6368] text-sm max-w-xs">{step.desc}</p>
                     </div>
                   </div>
                   
-                  <div className="relative z-10 w-12 h-12 rounded-full bg-[#151822] border border-white/10 border-4 border-gray-50 shadow-xl flex items-center justify-center">
+                  <div className="relative z-10 w-12 h-12 rounded-full bg-[#151822] border border-[#DADCE0] border-4 border-gray-50 shadow-xl flex items-center justify-center">
                     {step.icon}
                   </div>
                   

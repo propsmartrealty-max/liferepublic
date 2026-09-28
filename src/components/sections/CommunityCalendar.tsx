@@ -30,7 +30,7 @@ export const CommunityCalendar: React.FC = () => {
     ];
 
     return (
-        <section className="py-12 bg-[#0B0D14] overflow-hidden">
+        <section className="py-12 bg-white overflow-hidden">
             <Helmet>
                 <script type="application/ld+json">
                     {JSON.stringify(events.map(event => ({
@@ -65,14 +65,14 @@ export const CommunityCalendar: React.FC = () => {
                         <motion.span 
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            className="text-accent text-[10px] font-bold tracking-tight font-semibold block mb-6"
+                            className="text-[#1a73e8] text-[10px] font-bold tracking-tight font-semibold block mb-6"
                         >
                             The Sovereign Social
                         </motion.span>
-                        <h2 className="text-5xl md:text-6xl font-serif font-bold text-white leading-[1.1] mb-8">
+                        <h2 className="text-5xl md:text-6xl font-sans font-bold text-[#202124] leading-[1.1] mb-8">
                             Community <br />Pulse 2026
                         </h2>
-                        <p className="text-gray-500 text-lg font-light leading-relaxed max-w-xl">
+                        <p className="text-[#5F6368] text-lg font-light leading-relaxed max-w-xl">
                             Life at Life Republic is more than square footage. It's a curated ecosystem of events, networking, and wellness.
                         </p>
                     </div>
@@ -90,17 +90,17 @@ export const CommunityCalendar: React.FC = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: idx * 0.1 }}
-                            className="group p-8 rounded-[2.5rem] border border-white/5 bg-[#1A1C23]/50 hover:bg-[#151822] border border-white/10 hover:shadow-2xl hover:border-transparent transition-all duration-500 cursor-pointer"
+                            className="group p-8 rounded-[24px] border border-[#DADCE0] bg-[#F8F9FA]/50 hover:bg-[#151822] border border-[#DADCE0] hover:shadow-2xl hover:border-transparent transition-all duration-500 cursor-pointer"
                         >
                             <div className="flex justify-between items-start mb-8">
-                                <div className="text-accent font-serif font-bold text-xl">{event.date}</div>
-                                <div className="w-12 h-12 bg-[#151822] border border-white/10 rounded-2xl shadow-sm flex items-center justify-center text-white group-hover:bg-accent group-hover:text-white transition-colors">
+                                <div className="text-[#1a73e8] font-sans font-bold text-xl">{event.date}</div>
+                                <div className="w-12 h-12 bg-[#151822] border border-[#DADCE0] rounded-2xl shadow-sm flex items-center justify-center text-[#202124] group-hover:bg-accent group-hover:text-[#202124] transition-colors">
                                     <event.icon size={20} />
                                 </div>
                             </div>
-                            <span className="text-[10px] font-bold tracking-tight font-medium text-gray-400 block mb-2">{event.category}</span>
-                            <h4 className="text-xl font-bold text-white mb-4 group-hover:text-accent transition-colors">{event.title}</h4>
-                            <p className="text-gray-500 text-sm leading-relaxed mb-6">
+                            <span className="text-[10px] font-bold tracking-tight font-medium text-[#5F6368] block mb-2">{event.category}</span>
+                            <h4 className="text-xl font-bold text-[#202124] mb-4 group-hover:text-[#1a73e8] transition-colors">{event.title}</h4>
+                            <p className="text-[#5F6368] text-sm leading-relaxed mb-6">
                                 {event.desc}
                             </p>
                             <div className="flex items-center gap-1">
@@ -109,14 +109,14 @@ export const CommunityCalendar: React.FC = () => {
                                         <img loading="lazy" src={`https://i.pravatar.cc/150?u=${idx}${i}`} alt="Attendee" className="w-full h-full object-cover" />
                                     </div>
                                 ))}
-                                <span className="text-[10px] font-bold text-gray-400 ml-2">+450 Residents</span>
+                                <span className="text-[10px] font-bold text-[#5F6368] ml-2">+450 Residents</span>
                             </div>
                         </motion.div>
                     ))}
                 </div>
 
                 {/* Social Proof Layer */}
-                <div className="mt-32 border-t border-white/5 pt-20">
+                <div className="mt-32 border-t border-[#DADCE0] pt-20">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                         {[
                             { label: 'Families', value: '12,000+' },
@@ -125,8 +125,8 @@ export const CommunityCalendar: React.FC = () => {
                             { label: 'Security', value: '24/7 Intel' }
                         ].map((stat, idx) => (
                             <div key={idx} className="text-center">
-                                <span className="text-3xl md:text-4xl font-serif font-bold text-white block mb-2">{stat.value}</span>
-                                <span className="text-[10px] font-bold tracking-tight font-medium text-accent">{stat.label}</span>
+                                <span className="text-3xl md:text-4xl font-sans font-bold text-[#202124] block mb-2">{stat.value}</span>
+                                <span className="text-[10px] font-bold tracking-tight font-medium text-[#1a73e8]">{stat.label}</span>
                             </div>
                         ))}
                     </div>

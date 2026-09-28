@@ -40,14 +40,14 @@ export const SiloLanding: React.FC = () => {
             </Helmet>
 
             {/* Breadcrumbs */}
-            <div className="bg-[#1A1C23] border-b border-white/10">
+            <div className="bg-[#F8F9FA] border-b border-[#DADCE0]">
                 <div className="container mx-auto px-6 py-4">
-                    <div className="flex items-center gap-2 text-[10px] font-bold tracking-tight font-medium text-gray-500 overflow-x-auto whitespace-nowrap">
-                        <Link to="/" className="hover:text-accent transition-colors flex items-center gap-1"><Home size={12}/> Home</Link>
+                    <div className="flex items-center gap-2 text-[10px] font-bold tracking-tight font-medium text-[#5F6368] overflow-x-auto whitespace-nowrap">
+                        <Link to="/" className="hover:text-[#1a73e8] transition-colors flex items-center gap-1"><Home size={12}/> Home</Link>
                         <ChevronRight size={12} />
                         <span className="text-[#E5C07B]">Search</span>
                         <ChevronRight size={12} />
-                        <span className="text-accent truncate">{siloData.h1}</span>
+                        <span className="text-[#1a73e8] truncate">{siloData.h1}</span>
                     </div>
                 </div>
             </div>
@@ -58,13 +58,13 @@ export const SiloLanding: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
                         {/* Main Content */}
                         <div className="lg:col-span-8">
-                            <span className="inline-block px-4 py-2 bg-accent/10 text-accent text-[10px] font-bold tracking-tight font-semibold rounded-full mb-6">
+                            <span className="inline-block px-4 py-2 bg-accent/10 text-[#1a73e8] text-[10px] font-bold tracking-tight font-semibold rounded-full mb-6">
                                 Verified Listings
                             </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tighter leading-[1.1] mb-6">
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold text-[#202124] tracking-tighter leading-[1.1] mb-6">
                                 {siloData.h1}
                             </h1>
-                            <p className="text-xl text-gray-500 mb-10 leading-relaxed font-medium">
+                            <p className="text-xl text-[#5F6368] mb-10 leading-relaxed font-medium">
                                 {siloData.metaDescription}
                             </p>
 
@@ -80,29 +80,29 @@ export const SiloLanding: React.FC = () => {
                             {/* Features Grid */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
                                 {siloData.features.map((feature, idx) => (
-                                    <div key={idx} className="flex items-center gap-3 p-4 bg-[#1A1C23] rounded-2xl border border-white/5">
-                                        <CheckCircle2 size={20} className="text-accent" />
-                                        <span className="text-sm font-bold text-white">{feature}</span>
+                                    <div key={idx} className="flex items-center gap-3 p-4 bg-[#F8F9FA] rounded-2xl border border-[#DADCE0]">
+                                        <CheckCircle2 size={20} className="text-[#1a73e8]" />
+                                        <span className="text-sm font-bold text-[#202124]">{feature}</span>
                                     </div>
                                 ))}
                             </div>
 
                             {/* Dynamic SEO Article */}
                             <article 
-                                className="prose prose-lg prose-headings:font-serif prose-headings:text-white prose-p:text-gray-600 max-w-none border-t border-white/5 pt-12"
+                                className="prose prose-lg prose-headings:font-sans prose-headings:text-[#202124] prose-p:text-gray-600 max-w-none border-t border-[#DADCE0] pt-12"
                                 dangerouslySetInnerHTML={{ __html: siloData.content }}
                             />
                         </div>
 
                         {/* Sticky Sidebar */}
                         <div className="lg:col-span-4">
-                            <div className="sticky top-24 bg-[#0B0D14] text-white rounded-[2rem] p-8 shadow-2xl relative overflow-hidden">
+                            <div className="sticky top-24 bg-white text-[#202124] rounded-[2rem] p-8 shadow-2xl relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-48 h-48 bg-accent/10 rounded-full blur-[60px] pointer-events-none" />
-                                <h3 className="text-2xl font-serif font-bold mb-2">Request Callback</h3>
-                                <p className="text-gray-400 text-sm mb-8 font-medium">Register for priority access and exclusive inventory for this configuration.</p>
+                                <h3 className="text-2xl font-sans font-bold mb-2">Request Callback</h3>
+                                <p className="text-[#5F6368] text-sm mb-8 font-medium">Register for priority access and exclusive inventory for this configuration.</p>
                                 {/* Note: we use button to trigger modal here to avoid importing EnquiryForm if it doesn't exist */}
                                 <Button 
-                                    className="w-full bg-accent text-white hover:bg-[#151822] border border-white/10 transition-colors rounded-xl py-6 font-bold tracking-tight font-medium text-xs"
+                                    className="w-full bg-accent text-[#202124] hover:bg-[#151822] border border-[#DADCE0] transition-colors rounded-xl py-6 font-bold tracking-tight font-medium text-xs"
                                     onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { source: siloData.h1 }}))}
                                 >
                                     Book Site Visit
