@@ -1,7 +1,7 @@
 export const CLUSTERS = [
     {
         id: "echoes",
-        status: "Under Construction",
+        status: "New Launch",
         possession: "Dec 2027",
         sector: "Sector R10",
         usp: "Premium Residences with Smart Tech",
@@ -20,7 +20,7 @@ export const CLUSTERS = [
     },
     {
         id: "duet",
-        status: "Under Construction",
+        status: "New Launch",
         possession: "Dec 2026",
         sector: "Sector R7",
         usp: "Space-Efficient Smart Layouts",
@@ -79,7 +79,7 @@ export const CLUSTERS = [
     },
     {
         id: "aros",
-        status: "Ready to Move",
+        status: "Ready Possession",
         possession: "Immediate",
         sector: "Sector R1",
         usp: "Nature-Integrated Expansive Living",
@@ -118,7 +118,7 @@ export const CLUSTERS = [
     },
     {
         id: "universe",
-        status: "New Launch",
+        status: "Completed",
         possession: "June 2027",
         sector: "Town Center",
         usp: "High-Street Retail & Integrated High-Street",
@@ -134,5 +134,72 @@ export const CLUSTERS = [
             { type: "1 BHK", size: "393 - 507 sq.ft.", price: "₹40 Lakhs*" },
             { type: "2 BHK", size: "560 - 682 sq.ft.", price: "₹60 Lakhs*" }
         ]
+    },
+    {
+        id: "oro-avenue",
+        slug: "kolte-patil-life-republic-oro-avenue",
+        name: "Oro Avenue",
+        rera: "P52100017116", // Placeholder RERA
+        image: "https://liferepublic.in/images/projects/location/172060335117189650503rd Avenue-.jpg",
+        description: "Experience completed premium living at Oro Avenue.",
+        status: "Completed",
+        possession: "Ready",
+        sector: "Sector R9",
+        usp: "Premium Completed Residences",
+        configurations: [
+            { type: "1 BHK", size: "420 sq.ft.", price: "₹45 Lakhs*" },
+            { type: "2 BHK", size: "650 sq.ft.", price: "₹65 Lakhs*" }
+        ],
+        masterLayout: "https://liferepublic.in/images/home/slider-1.webp"
+    },
+    {
+        id: "i-tower",
+        slug: "kolte-patil-life-republic-i-tower",
+        name: "I Tower",
+        rera: "P52100009640", // Placeholder RERA
+        image: "https://liferepublic.in/images/projects/location/1720604991i tower.jpg",
+        description: "Iconic completed tower offering breathtaking views.",
+        status: "Completed",
+        possession: "Ready",
+        sector: "Sector R3",
+        usp: "Iconic Completed High-Rise",
+        configurations: [
+            { type: "2 BHK", size: "750 sq.ft.", price: "₹75 Lakhs*" },
+            { type: "3 BHK", size: "950 sq.ft.", price: "₹95 Lakhs*" }
+        ],
+        masterLayout: "https://liferepublic.in/images/home/slider-2.webp"
+    },
+    {
+        id: "sound-of-soul",
+        slug: "kolte-patil-life-republic-sound-of-soul",
+        name: "Sound of Soul",
+        rera: "P52100049289", // Placeholder RERA
+        image: "https://liferepublic.in/images/projects/location/1718965104Sound Of Soul image.jpg",
+        description: "Completed luxury row houses designed for serenity.",
+        status: "Completed",
+        possession: "Ready",
+        sector: "Sector R15",
+        usp: "Ultra-Premium Row Houses",
+        configurations: [
+            { type: "4 BHK Row House", size: "1800 sq.ft.", price: "₹2.5 Cr*" }
+        ],
+        masterLayout: "https://liferepublic.in/images/home/slider-3.webp"
+    },
+    {
+        id: "24k-espada",
+        slug: "kolte-patil-life-republic-24k-espada",
+        name: "24K Espada",
+        rera: "P52100052345", // Placeholder RERA
+        image: "https://liferepublic.in/images/projects/location/171896513924K Espada.jpg",
+        description: "Exclusive under construction 24K luxury residences.",
+        status: "Under Construction",
+        possession: "Dec 2027",
+        sector: "Sector R24",
+        usp: "Signature 24K Luxury Estates",
+        configurations: [
+            { type: "3 BHK", size: "1200 sq.ft.", price: "₹1.5 Cr*" },
+            { type: "4 BHK", size: "1600 sq.ft.", price: "₹2.2 Cr*" }
+        ],
+        masterLayout: "https://liferepublic.in/images/home/slider-4.webp"
     }
 ];
