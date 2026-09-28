@@ -41,6 +41,7 @@ import { Disclaimer } from './pages/legal/Disclaimer';
 
 // Keep layout components static as they are used on every page
 import { FloatingContact } from './components/ui/FloatingContact';
+import { CommandPalette } from './components/ui/CommandPalette';
 import { CookieConsent } from './components/ui/CookieConsent';
 import { Layout } from './components/layout/Layout';
 import { CustomCursor } from './components/ui/CustomCursor';
@@ -104,6 +105,7 @@ function App() {
   return (
     <>
       <GlobalErrorBoundary>
+      <CommandPalette />
       <CustomCursor />
       <ExitIntentOffer />
       <FloatingContact />
