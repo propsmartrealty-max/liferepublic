@@ -15,9 +15,8 @@ export default {
         'border-strong': 'rgba(255, 255, 255, 0.15)', // Glass border
       },
       fontFamily: {
-        sans: ['"Inter"', 'system-ui', 'sans-serif'],
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        serif: ['"Outfit"', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1)',

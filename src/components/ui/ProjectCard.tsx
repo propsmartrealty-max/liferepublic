@@ -86,7 +86,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, priority = fa
                 <div className="p-8 flex flex-col flex-grow relative">
                     <div className="mb-6">
                         <h3
-                            className="text-2xl font-serif font-bold text-secondary mb-2 line-clamp-1 hover:text-accent transition-colors cursor-pointer"
+                            className="text-2xl font-serif font-bold text-white mb-2 line-clamp-1 hover:text-accent transition-colors cursor-pointer"
                             onClick={handleProjectClick}
                         >
                             {project?.title ? project.title.split('|')[0] : 'Sovereign Project'}
@@ -98,13 +98,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, priority = fa
                     </div>
 
                     {/* Sovereign Tab System */}
-                    <div className="flex items-center justify-between p-1 bg-gray-50 rounded-2xl mb-8 border border-gray-100">
+                    <div className="flex items-center justify-between p-1 bg-white/5 rounded-2xl mb-8 border border-gray-100">
                         {tabs.map((tab) => (
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
                                 className={`flex flex-col items-center justify-center py-2.5 rounded-xl transition-all relative flex-1 ${
-                                    activeTab === tab.id ? 'bg-white shadow-lg text-accent' : 'text-gray-400 hover:text-gray-600'
+                                    activeTab === tab.id ? 'bg-white shadow-lg text-accent' : 'text-gray-400 hover:text-white/60'
                                 }`}
                             >
                                 <tab.icon size={16} className={activeTab === tab.id ? 'animate-pulse' : ''} />
@@ -125,7 +125,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, priority = fa
                             >
                                 {activeTab === 'overview' && (
                                     <div className="space-y-5">
-                                        <p className="text-gray-600 text-sm leading-relaxed line-clamp-4 font-medium italic">
+                                        <p className="text-white/60 text-sm leading-relaxed line-clamp-4 font-medium italic">
                                             {project.overview || project.description}
                                         </p>
                                         <div className="flex flex-wrap gap-2">
@@ -148,7 +148,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, priority = fa
                                                 <div className="w-6 h-6 rounded-lg bg-accent/10 flex items-center justify-center text-accent group-hover/item:bg-accent group-hover/item:text-white transition-all">
                                                     <Sparkles size={10} />
                                                 </div>
-                                                <span className="text-[10px] font-bold text-gray-500 uppercase tracking-tight truncate">{amenity}</span>
+                                                <span className="text-[10px] font-bold text-white/50 uppercase tracking-tight truncate">{amenity}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -157,7 +157,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, priority = fa
                                 {activeTab === 'layout' && (
                                     <div className="h-full flex flex-col gap-4">
                                         {project.masterLayout ? (
-                                            <div className="relative rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 group/img cursor-pointer flex-grow h-32" onClick={handleProjectClick}>
+                                            <div className="relative rounded-2xl overflow-hidden bg-white/5 border border-gray-100 group/img cursor-pointer flex-grow h-32" onClick={handleProjectClick}>
                                                 <img loading="lazy" src={project.masterLayout} className="w-full h-full object-cover opacity-80 group-hover/img:scale-105 transition-transform" />
                                                 <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity">
                                                     <ZoomIn size={24} className="text-white" />
@@ -178,9 +178,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, priority = fa
                                         {project.floorPlans && project.floorPlans.length > 0 ? (
                                             <div className="flex-grow h-32 overflow-hidden flex gap-2">
                                                 {project.floorPlans.slice(0, 2).map((fp, i) => (
-                                                    <div key={i} className="flex-1 rounded-2xl bg-gray-50 border border-gray-100 p-2 flex flex-col items-center justify-center relative group/fp cursor-pointer" onClick={handleProjectClick}>
+                                                    <div key={i} className="flex-1 rounded-2xl bg-white/5 border border-gray-100 p-2 flex flex-col items-center justify-center relative group/fp cursor-pointer" onClick={handleProjectClick}>
                                                         <img loading="lazy" src={fp.image} className="w-full h-12 object-contain mb-2" />
-                                                        <span className="text-[8px] font-bold text-secondary uppercase tracking-tighter">{fp.type}</span>
+                                                        <span className="text-[8px] font-bold text-white uppercase tracking-tighter">{fp.type}</span>
                                                         <div className="absolute inset-0 bg-accent/80 opacity-0 group-hover/fp:opacity-100 flex items-center justify-center transition-opacity rounded-2xl text-white">
                                                             <Layers size={16} />
                                                         </div>
@@ -202,8 +202,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, priority = fa
                                         {project.specifications ? (
                                             <div className="grid grid-cols-1 gap-2">
                                                 {project.specifications.slice(0, 3).map((spec, i) => (
-                                                    <div key={i} className="flex items-center justify-between p-3 bg-gray-50 rounded-xl border border-gray-100">
-                                                        <span className="text-[10px] font-bold text-secondary uppercase">{spec.title}</span>
+                                                    <div key={i} className="flex items-center justify-between p-3 bg-white/5 rounded-xl border border-gray-100">
+                                                        <span className="text-[10px] font-bold text-white uppercase">{spec.title}</span>
                                                         <CheckCircle2 size={12} className="text-accent" />
                                                     </div>
                                                 ))}

@@ -35,7 +35,7 @@ export const Navbar: React.FC = () => {
     return (
         <header className="fixed top-6 left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl z-[100] transition-all duration-700">
             <nav className="w-full" aria-label="Main Navigation">
-                <div className="relative flex items-center justify-between px-8 py-4 bg-black/40 backdrop-blur-3xl border border-white/20 shadow-glass rounded-full transition-all">
+                <div className="relative flex items-center justify-between px-8 py-4 bg-[#1C1C1E]/70 backdrop-blur-[40px] border border-white/[0.08] shadow-[0_8px_32px_rgba(0,0,0,0.5)] rounded-[3rem] px-10 py-4 transition-all">
                     <Link to="/" className="flex items-center group">
                         <img loading="lazy" src="/images/brand/logo.webp" alt="Life Republic" className="h-10 md:h-12 w-auto object-contain transition-transform duration-700 group-hover:scale-105 filter drop-shadow-xl" />
                     </Link>
@@ -52,13 +52,13 @@ export const Navbar: React.FC = () => {
                                     <button 
                                         onMouseEnter={() => setShowQuickSwitch(true)} 
                                         onClick={() => setShowQuickSwitch(!showQuickSwitch)} 
-                                        className="flex items-center gap-3 text-sm font-bold text-white/70 uppercase tracking-[0.3em] hover:text-white transition-all"
+                                        className="flex items-center gap-3 text-[15px] font-medium text-white/80 capitalize tracking-normal hover:text-white transition-all"
                                     >
                                         {link.name} 
                                         <ChevronDown size={16} className={`transition-transform duration-500 ${showQuickSwitch ? 'rotate-180 text-accent' : ''}`} />
                                     </button>
                                 ) : (
-                                    <Link to={link.path} className={`text-sm font-bold uppercase tracking-[0.3em] transition-all ${location.pathname === link.path ? 'text-white' : 'text-white/70 hover:text-white'}`}>
+                                    <Link to={link.path} className={`text-sm font-bold capitalize tracking-normal transition-all ${location.pathname === link.path ? 'text-white' : 'text-white/70 hover:text-white'}`}>
                                         {link.name}
                                     </Link>
                                 )}
@@ -68,7 +68,7 @@ export const Navbar: React.FC = () => {
                     </div>
 
                     <div className="flex items-center gap-6">
-                        <Button variant="primary" size="lg" className="hidden sm:flex rounded-full bg-accent text-white px-8 py-3.5 font-bold text-xs tracking-[0.25em] uppercase gap-2.5 shadow-glass hover:bg-white hover:text-accent hover:scale-105 transition-all border-none" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
+                        <Button variant="primary" size="lg" className="hidden sm:flex rounded-[2rem] bg-white text-black px-8 py-3 font-semibold text-[15px] tracking-tight gap-2 shadow-[0_4px_14px_rgba(255,255,255,0.25)] hover:scale-105 transition-all duration-300 border-none" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
                             Enquire Now <Sparkles size={14} />
                         </Button>
                         <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-3 bg-transparent border border-white/10 rounded-full text-white hover:text-accent transition-all border border-white/20" aria-label="Toggle Menu">

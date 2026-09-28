@@ -60,16 +60,18 @@ const Home: React.FC = () => {
 
             {/* Phase 1: Captivation */}
             <HeroSlider />
+      {/* Ultra Fluid Content Body */}
+      <div className="relative z-20 -mt-[100px] bg-[#0A0A0A]/80 backdrop-blur-[50px] rounded-t-[3rem] border-t border-white/[0.05] shadow-[0_-20px_60px_rgba(0,0,0,0.6)]">
             
             {/* Phase 2: Introduction & Scale */}
-            <section className="py-16 md:py-32 bg-gray-50 overflow-hidden relative" aria-label="Township Architecture and Volumes">
+            <section className="py-16 md:py-32 bg-transparent overflow-hidden relative" aria-label="Township Architecture and Volumes">
                 <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-accent/5 rounded-bl-[100%] pointer-events-none"></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2">
                             <motion.span initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-accent text-xs font-bold uppercase tracking-[0.5em] block mb-6">The Masterplan</motion.span>
-                            <motion.h2 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-serif font-bold text-secondary leading-[1.1] mb-8">A 390-Acre <br /><span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Vision</span></motion.h2>
-                            <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-gray-500 text-lg font-light leading-relaxed mb-10"><strong>Kolte Patil Life Republic</strong> is a premium integrated township located in the heart of <strong>Hinjewadi, Pune</strong>. Designed around the principles of spatial harmony and sustainable community flow, it offers an unparalleled holistic lifestyle near Rajiv Gandhi Infotech Park.</motion.p>
+                            <motion.h2 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-serif font-bold text-white leading-[1.1] mb-8">A 390-Acre <br /><span className="text-golden-gradient">Vision</span></motion.h2>
+                            <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-white/60 text-lg font-light leading-relaxed mb-10"><strong>Kolte Patil Life Republic</strong> is a premium integrated township located in the heart of <strong>Hinjewadi, Pune</strong>. Designed around the principles of spatial harmony and sustainable community flow, it offers an unparalleled holistic lifestyle near Rajiv Gandhi Infotech Park.</motion.p>
                             
                             <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex flex-col gap-8">
                                 {[
@@ -80,15 +82,15 @@ const Home: React.FC = () => {
                                     <div key={idx} className="group cursor-pointer hover:pl-2 transition-all duration-300">
                                         <div className="flex items-center gap-4 mb-2">
                                             <span className="text-accent font-bold text-xs font-sans tracking-tighter opacity-50 group-hover:opacity-100 transition-opacity">{vol.label}</span>
-                                            <h4 className="text-secondary font-bold uppercase text-xs tracking-widest">{vol.title}</h4>
+                                            <h4 className="text-white font-bold uppercase text-xs tracking-widest">{vol.title}</h4>
                                         </div>
-                                        <p className="text-text-muted text-sm pl-8 group-hover:text-gray-600 transition-colors">{vol.desc}</p>
+                                        <p className="text-white/50 text-sm pl-8 group-hover:text-white/80 transition-colors">{vol.desc}</p>
                                     </div>
                                 ))}
                             </motion.div>
                         </div>
                         <div className="lg:w-1/2 grid grid-cols-2 gap-4 md:gap-8">
-                            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="aspect-[4/5] rounded-3xl overflow-hidden relative group shadow-hard">
+                            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="aspect-[4/5] rounded-3xl overflow-hidden relative group shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
                                 <img loading="lazy" src="/images/home/canvas-thumb.jpg" alt="Infrastructure" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-colors duration-500"></div>
                                 <div className="absolute bottom-6 left-6 text-white transform group-hover:-translate-y-2 transition-transform duration-500">
@@ -96,7 +98,7 @@ const Home: React.FC = () => {
                                     <p className="text-[10px] uppercase tracking-widest text-white/70 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">3.5 Acre Urban Lung</p>
                                 </div>
                             </motion.div>
-                            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="aspect-[4/5] rounded-3xl overflow-hidden relative group shadow-hard md:mt-16">
+                            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="aspect-[4/5] rounded-3xl overflow-hidden relative group shadow-[0_8px_32px_rgba(0,0,0,0.5)] md:mt-16">
                                 <img loading="lazy" src="/images/home/sound-of-soul-thumb.jpg" alt="Community" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-colors duration-500"></div>
                                 <div className="absolute bottom-6 left-6 text-white transform group-hover:-translate-y-2 transition-transform duration-500">
@@ -110,15 +112,15 @@ const Home: React.FC = () => {
             </section>
 
             {/* Phase 3: The Core Offering (Projects) */}
-            <section className="py-16 md:py-32 bg-white" aria-label="Featured Township Projects">
+            <section className="py-16 md:py-32 bg-transparent" aria-label="Featured Township Projects">
                 <div className="container mx-auto px-4">
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
                         <span className="text-accent text-xs font-bold uppercase tracking-[0.5em] block mb-4">The Collection</span>
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-secondary">
-                            Life Republic <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Properties</span>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-white">
+                            Life Republic <span className="text-golden-gradient">Properties</span>
                         </h2>
                         <div className="w-16 h-1 bg-accent mx-auto mb-8 rounded-full"></div>
-                        <p className="text-gray-500 max-w-2xl mx-auto text-lg mb-10 font-light">
+                        <p className="text-white/60 max-w-2xl mx-auto text-lg mb-10 font-light">
                             Discover our diverse range of premium properties, from ultra-luxury villas and bespoke bungalow plots to state-of-the-art smart apartments.
                         </p>
                     </motion.div>
@@ -133,7 +135,7 @@ const Home: React.FC = () => {
 
                     <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mt-20">
                         <Link to="/projects">
-                            <Button variant="outline" size="lg" className="gap-2 px-10 py-4 text-sm tracking-[0.2em] border-secondary text-secondary hover:bg-secondary hover:text-white transition-all duration-300">
+                            <Button variant="outline" size="lg" className="gap-2 px-10 py-4 text-sm tracking-[0.2em] border-secondary text-white hover:bg-secondary hover:text-white transition-all duration-300">
                                 View Entire Collection <ArrowRight size={18} />
                             </Button>
                         </Link>
@@ -161,17 +163,17 @@ const Home: React.FC = () => {
                     >
                         <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-white bg-clip-text text-transparent">Hinjewadi: A Real Estate Investment Hotspot</h2>
                         <div className="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
-                        <p className="text-text-muted max-w-2xl mx-auto text-lg font-light leading-relaxed">
+                        <p className="text-white/50 max-w-2xl mx-auto text-lg font-light leading-relaxed">
                             Connected to the world, yet a world of its own. Located in the heart of Hinjewadi, a prime real estate corridor, Kolte Patil Life Republic Township offers unmatched connectivity and property value appreciation.
                         </p>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
-                            { icon: Briefcase, title: 'Work', desc: 'Rajiv Gandhi IT Park', time: '10 Mins', gradient: 'from-blue-500/20 to-cyan-500/5', border: 'border-2 border-strong shadow-hard', text: 'text-blue-400', bgIcon: 'bg-blue-500/20 text-blue-400', glow: 'bg-blue-500/20', glowHover: 'group-hover:bg-blue-500/30' },
-                            { icon: Plane, title: 'Connect', desc: 'Mumbai-Pune Expy', time: '15 Mins', gradient: 'from-orange-500/20 to-amber-500/5', border: 'border-2 border-strong shadow-hard', text: 'text-orange-400', bgIcon: 'bg-orange-500/20 text-orange-400', glow: 'bg-orange-500/20', glowHover: 'group-hover:bg-orange-500/30' },
-                            { icon: GraduationCap, title: 'Learn', desc: 'Anisha Global School', time: 'Inside', gradient: 'from-green-500/20 to-emerald-500/5', border: 'border-2 border-strong shadow-hard', text: 'text-green-400', bgIcon: 'bg-green-500/20 text-green-400', glow: 'bg-green-500/20', glowHover: 'group-hover:bg-green-500/30' },
-                            { icon: HeartPulse, title: 'Care', desc: 'Ruby Hall Clinic', time: '15 Mins', gradient: 'from-rose-500/20 to-pink-500/5', border: 'border-2 border-strong shadow-hard', text: 'text-rose-400', bgIcon: 'bg-rose-500/20 text-rose-400', glow: 'bg-rose-500/20', glowHover: 'group-hover:bg-rose-500/30' }
+                            { icon: Briefcase, title: 'Work', desc: 'Rajiv Gandhi IT Park', time: '10 Mins', gradient: 'from-blue-500/20 to-cyan-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-blue-400', bgIcon: 'bg-blue-500/20 text-blue-400', glow: 'bg-blue-500/20', glowHover: 'group-hover:bg-blue-500/30' },
+                            { icon: Plane, title: 'Connect', desc: 'Mumbai-Pune Expy', time: '15 Mins', gradient: 'from-orange-500/20 to-amber-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-orange-400', bgIcon: 'bg-orange-500/20 text-orange-400', glow: 'bg-orange-500/20', glowHover: 'group-hover:bg-orange-500/30' },
+                            { icon: GraduationCap, title: 'Learn', desc: 'Anisha Global School', time: 'Inside', gradient: 'from-green-500/20 to-emerald-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-green-400', bgIcon: 'bg-green-500/20 text-green-400', glow: 'bg-green-500/20', glowHover: 'group-hover:bg-green-500/30' },
+                            { icon: HeartPulse, title: 'Care', desc: 'Ruby Hall Clinic', time: '15 Mins', gradient: 'from-rose-500/20 to-pink-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-rose-400', bgIcon: 'bg-rose-500/20 text-rose-400', glow: 'bg-rose-500/20', glowHover: 'group-hover:bg-rose-500/30' }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
@@ -187,7 +189,7 @@ const Home: React.FC = () => {
                                     <item.icon size={28} strokeWidth={1.5} />
                                 </div>
                                 <h3 className="text-xl font-bold mb-2 text-white group-hover:text-white transition-colors">{item.title}</h3>
-                                <p className="text-text-muted mb-4 font-light text-sm">{item.desc}</p>
+                                <p className="text-white/50 mb-4 font-light text-sm">{item.desc}</p>
                                 <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-black/30 border border-white/10 ${item.text}`}>
                                     {item.time}
                                 </div>
@@ -210,13 +212,13 @@ const Home: React.FC = () => {
             <BrochureEngine />
 
             {/* Phase 9: SEO & Discovery */}
-            <section className="py-12 bg-gray-100 border-t border-gray-200" aria-label="Popular Real Estate Searches">
+            <section className="py-12 bg-transparent border-t border-gray-200" aria-label="Popular Real Estate Searches">
                 <div className="container mx-auto px-4">
-                    <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-6">Popular Searches</h3>
+                    <h3 className="text-sm font-bold text-white/60 uppercase tracking-widest mb-6">Popular Searches</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                         <div className="space-y-2">
                             <h4 className="font-semibold text-gray-700">By Configuration</h4>
-                            <ul className="space-y-1 text-gray-500">
+                            <ul className="space-y-1 text-white/60">
                                 <li><Link to="/2-bhk-flats-in-hinjewadi" className="hover:text-accent">2 BHK Flats in Hinjewadi</Link></li>
                                 <li><Link to="/3-bhk-flats-in-hinjewadi" className="hover:text-accent">3 BHK Flats in Hinjewadi</Link></li>
                                 <li><Link to="/4-bhk-flats-in-hinjewadi" className="hover:text-accent">4 BHK Villas in Hinjewadi</Link></li>
@@ -224,14 +226,15 @@ const Home: React.FC = () => {
                         </div>
                         <div className="space-y-2">
                             <h4 className="font-semibold text-gray-700">By Location</h4>
-                            <ul className="space-y-1 text-gray-500">
+                            <ul className="space-y-1 text-white/60">
                                 <li><Link to="/location/flats-near-marunji" className="hover:text-accent">Flats in Marunji</Link></li>
                                 <li><Link to="/location/flats-near-wakad" className="hover:text-accent">Flats near Wakad</Link></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-            </section>
+                        </section>
+        </div>
         </div>
     );
 };
