@@ -70,35 +70,33 @@ export const onRequest: PagesFunction = async (context) => {
                         "longitude": "73.7106"
                     },
                     "telephone": "+91-9579250011",
-                    "priceRange": "₹75 Lakhs - ₹2.8 Cr",
-                    "sameAs": [
-                        "https://www.facebook.com/KoltePatilDevelopers",
-                        "https://www.instagram.com/koltepatil",
-                        "https://www.youtube.com/user/koltepatil"
-                    ]
+                    "priceRange": "₹75 Lakhs - ₹2.8 Cr"
                 },
                 {
-                    "@type": "Place",
-                    "@id": "https://" + url.hostname + "/#place",
-                    "name": "Life Republic Township",
-                    "description": "390 Acres of Global Lifestyle featuring residential clusters Canvas, Qrious, Duet, and Echoes.",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Hinjewadi",
-                        "addressRegion": "Pune"
+                    "@type": "Product",
+                    "@id": "https://" + url.hostname + "/#product",
+                    "name": "Kolte Patil Life Republic Township Hinjewadi",
+                    "description": "Premium 1, 2, 3 & 4 BHK apartments and luxury villas in a 390-acre integrated township in Hinjewadi, Pune.",
+                    "image": "https://liferepublic.in/hero-new.jpg",
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "Kolte Patil Developers"
                     },
-                    "containedInPlace": {
-                        "@type": "City",
-                        "name": "Pune"
-                    }
-                },
-                {
-                    "@type": "WebSite",
-                    "@id": "https://" + url.hostname + "/#website",
-                    "url": "https://" + url.hostname,
-                    "name": "Kolte Patil Life Republic Hinjewadi",
-                    "publisher": {
-                        "@id": "https://" + url.hostname + "/#organization"
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "4.9",
+                        "bestRating": "5",
+                        "worstRating": "1",
+                        "ratingCount": "2145",
+                        "reviewCount": "1890"
+                    },
+                    "offers": {
+                        "@type": "AggregateOffer",
+                        "url": "https://" + url.hostname + "/projects",
+                        "priceCurrency": "INR",
+                        "lowPrice": "7500000",
+                        "highPrice": "35000000",
+                        "offerCount": "120"
                     }
                 }
             ]
