@@ -10,6 +10,18 @@ export const Navbar = () => {
         setIsMobileMenuOpen(false);
     }, [location.pathname]);
 
+    const navLinks = [
+        { name: 'Projects', path: '/projects' },
+        { name: 'Township', path: '/township-guide' },
+        { name: 'Central Garden', path: '/amenities' },
+        { name: 'Location', path: '/location' }
+    ];
+
+    const mobileNavLinks = [
+        ...navLinks,
+        { name: 'Lifestyle', path: '/lifestyle' }
+    ];
+
     return (
         <nav className="fixed top-0 left-0 right-0 z-[100] mix-blend-difference text-white">
             <div className="container mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
@@ -21,13 +33,13 @@ export const Navbar = () => {
 
                 {/* Desktop Links - Minimal */}
                 <div className="hidden md:flex items-center space-x-12 text-sm uppercase tracking-widest font-medium">
-                    {['Projects', 'Master Plan', 'Location'].map((item) => (
+                    {navLinks.map((item) => (
                         <Link 
-                            key={item} 
-                            to={item === 'Projects' ? '/projects' : `/${item.toLowerCase().replace(' ', '-')}`}
+                            key={item.name} 
+                            to={item.path}
                             className="hover:opacity-50 transition-opacity cursor-interactive"
                         >
-                            {item}
+                            {item.name}
                         </Link>
                     ))}
                 </div>
@@ -57,20 +69,20 @@ export const Navbar = () => {
                         exit={{ opacity: 0 }}
                         className="fixed inset-0 bg-black z-40 flex flex-col items-center justify-center mix-blend-normal text-white"
                     >
-                        {['Projects', 'Master Plan', 'Location', 'Lifestyle'].map((item, i) => (
+                        {mobileNavLinks.map((item, i) => (
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.1 }}
-                                key={item}
+                                key={item.name}
                                 className="my-4"
                             >
                                 <Link 
-                                    to={item === 'Projects' ? '/projects' : `/${item.toLowerCase().replace(' ', '-')}`}
+                                    to={item.path}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className="text-4xl font-light uppercase tracking-widest"
                                 >
-                                    {item}
+                                    {item.name}
                                 </Link>
                             </motion.div>
                         ))}
