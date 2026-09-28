@@ -138,16 +138,16 @@ export const CLUSTERS = [
         name: "Qrious",
         slug: "kolte-patil-life-republic-qrious",
         category: "Smart 2 & 3 BHK",
-        description: "Qrious offers technology-enabled 2 and 3 BHK homes tailored for IT professionals, located just 10 minutes from Hinjewadi IT Park Phase 1.",
-        price: "₹85 Lacs*",
+        description: "Qrious at Life Republic, Punawale features premium 2 & 3 BHK homes in a 7.58-acre development. Highlights include 5 Towers, 8 Flats/floor, 4 Lifts/tower, 36 Habitable Floors, and High Street Retail with 90 Shops.",
+        price: "₹89 Lakhs*",
         rera: "P52100079623",
         image: "https://liferepublic.in/images/home/slider-1.webp",
         masterLayout: "https://liferepublic.in/images/home/slider-1.webp",
         configurations: [
-            { type: "2 BHK Large", size: "813 sq.ft.", price: "₹85 Lacs*" },
-            { type: "2 BHK Lux", size: "900 sq.ft.", price: "₹85 Lakhs*" },
-            { type: "3 BHK Large", size: "1,116 sq.ft.", price: "₹1.1 Cr*" },
-            { type: "3 BHK Lux", size: "1,231 sq.ft.", price: "₹1.3 Cr*" }
+            { type: "2 BHK Large", size: "813 sq.ft.", price: "₹89 Lakhs*" },
+            { type: "2 BHK Luxurious", size: "900 sq.ft.", price: "₹97 Lakhs*" },
+            { type: "3 BHK Large", size: "1,116 sq.ft.", price: "₹1.23 Cr*" },
+            { type: "3 BHK Luxurious", size: "1,231 sq.ft.", price: "₹1.38 Cr*" }
         ],
         gallery: [
         "https://liferepublic.in/images/project/gallery/17507608341749723762QriousLiving.jpg",
@@ -522,7 +522,7 @@ export const CLUSTERS = [
         sector: "Sector R24",
         usp: "Signature 24K Luxury Estates",
         configurations: [
-            { type: "5 BHK Row House", size: "Premium Row House", price: "₹3.5 Cr*" }
+            { type: "5 BHK Row Villa", size: "3,618 sq.ft.", price: "₹3.5 Cr*" }
         ],
         masterLayout: "https://liferepublic.in/images/home/slider-4.webp"
     }
