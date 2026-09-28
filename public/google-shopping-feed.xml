@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+<channel>
+<title>PropSmart Kolte Patil Life Republic Properties</title>
+<link>https://life-republic.in</link>
+<description>Premium residential apartments and villas in Kolte Patil Life Republic Hinjewadi.</description>
+  <item>
+    <g:id>qrious-at-life-republic</g:id>
+    <g:title>Qrious at Life Republic - Hinjewadi Pune</g:title>
+    <g:description>Premium 2 & 3 BHK Apartments in Hinjewadi Phase 1</g:description>
+    <g:link>https://life-republic.in/projects/qrious</g:link>
+    <g:image_link>https://liferepublic.in/images/projects/qrious/qrious-1.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>8900000 INR</g:price>
+    <g:brand>Kolte Patil Developers</g:brand>
+    <g:product_type>Real Estate &gt; Residential</g:product_type>
+    <g:custom_label_0>Hinjewadi Phase 1</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>canvas-at-life-republic</g:id>
+    <g:title>Canvas at Life Republic - Hinjewadi Pune</g:title>
+    <g:description>Ultra-Luxury 3 & 4 BHK Residences in Hinjewadi Pune</g:description>
+    <g:link>https://life-republic.in/projects/canvas</g:link>
+    <g:image_link>https://liferepublic.in/images/projects/canvas/canvas-1.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>14500000 INR</g:price>
+    <g:brand>Kolte Patil Developers</g:brand>
+    <g:product_type>Real Estate &gt; Residential</g:product_type>
+    <g:custom_label_0>Hinjewadi Phase 1</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>espada-at-life-republic</g:id>
+    <g:title>Espada at Life Republic - Hinjewadi Pune</g:title>
+    <g:description>Exquisite 4 & 5 BHK Row Villas in Life Republic</g:description>
+    <g:link>https://life-republic.in/projects/espada</g:link>
+    <g:image_link>https://liferepublic.in/images/projects/espada/espada-1.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>28500000 INR</g:price>
+    <g:brand>Kolte Patil Developers</g:brand>
+    <g:product_type>Real Estate &gt; Residential</g:product_type>
+    <g:custom_label_0>Hinjewadi Phase 1</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>atmos-at-life-republic</g:id>
+    <g:title>Atmos at Life Republic - Hinjewadi Pune</g:title>
+    <g:description>Smart 2 & 2.5 BHK Homes in Hinjewadi</g:description>
+    <g:link>https://life-republic.in/projects/atmos</g:link>
+    <g:image_link>https://liferepublic.in/images/projects/atmos/atmos-1.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>7500000 INR</g:price>
+    <g:brand>Kolte Patil Developers</g:brand>
+    <g:product_type>Real Estate &gt; Residential</g:product_type>
+    <g:custom_label_0>Hinjewadi Phase 1</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>aros-at-life-republic</g:id>
+    <g:title>Aros at Life Republic - Hinjewadi Pune</g:title>
+    <g:description>Premium 2 & 3 BHK Apartments</g:description>
+    <g:link>https://life-republic.in/projects/aros</g:link>
+    <g:image_link>https://liferepublic.in/images/projects/aros/aros-1.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>9500000 INR</g:price>
+    <g:brand>Kolte Patil Developers</g:brand>
+    <g:product_type>Real Estate &gt; Residential</g:product_type>
+    <g:custom_label_0>Hinjewadi Phase 1</g:custom_label_0>
+  </item>
+</channel>
+</rss>
