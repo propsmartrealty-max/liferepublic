@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { MapPin, Clock, Sparkles, AlertCircle } from 'lucide-react';
 
 interface Configuration {
     type: string;
@@ -85,7 +86,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                         alt={displayName}
                         className="w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-110 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/10 transition-colors duration-700 group-hover:from-black"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent transition-colors duration-700 group-hover:from-[#050505]"></div>
                 </div>
 
                 <div className="absolute top-6 left-6 right-6 z-10 flex justify-between items-start" style={{ transform: "translateZ(30px)" }}>
@@ -139,7 +140,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                                         e.preventDefault();
                                         window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: displayName, type: link } }));
                                     }}
-                                    className="px-3 py-1.5 bg-white/5 hover:bg-rainbow-hover border border-white/10 rounded-md text-[10px] text-white/80 tracking-widest uppercase transition-colors"
+                                    className="px-3 py-1.5 bg-white/10 hover:bg-white text-white hover:text-black border border-white/20 rounded-md text-[10px] font-bold tracking-widest uppercase transition-all shadow-lg"
                                 >
                                     {link}
                                 </button>

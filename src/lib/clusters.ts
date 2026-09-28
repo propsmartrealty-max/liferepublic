@@ -1,6 +1,10 @@
 export const CLUSTERS = [
     {
         id: "echoes",
+        status: "Under Construction",
+        possession: "Dec 2027",
+        sector: "Sector R10",
+        usp: "Premium Residences with Smart Tech",
         name: "Echoes",
         slug: "kolte-patil-life-republic-echoes",
         category: "Premium Residences",
@@ -16,6 +20,10 @@ export const CLUSTERS = [
     },
     {
         id: "duet",
+        status: "Under Construction",
+        possession: "Dec 2026",
+        sector: "Sector R7",
+        usp: "Space-Efficient Smart Layouts",
         name: "Duet",
         slug: "kolte-patil-life-republic-duet",
         category: "Premium 2 BHK",
@@ -30,6 +38,10 @@ export const CLUSTERS = [
     },
     {
         id: "qrious",
+        status: "Nearing Possession",
+        possession: "June 2025",
+        sector: "Sector R8",
+        usp: "Educational & Play-Themed Amenities",
         name: "Qrious",
         slug: "kolte-patil-life-republic-qrious",
         category: "Smart 2 & 3 BHK",
@@ -47,6 +59,10 @@ export const CLUSTERS = [
     },
     {
         id: "canvas",
+        status: "New Launch",
+        possession: "Dec 2028",
+        sector: "Sector R12",
+        usp: "Ultra-Luxury Estates & Villas",
         name: "Canvas",
         slug: "kolte-patil-life-republic-canvas",
         category: "Ultra-Luxury 3 & 4 BHK",
@@ -63,6 +79,10 @@ export const CLUSTERS = [
     },
     {
         id: "aros",
+        status: "Ready to Move",
+        possession: "Immediate",
+        sector: "Sector R1",
+        usp: "Nature-Integrated Expansive Living",
         name: "Aros",
         slug: "kolte-patil-life-republic-aros",
         category: "Premium 2 & 3 BHK",
@@ -78,6 +98,10 @@ export const CLUSTERS = [
     },
     {
         id: "atmos",
+        status: "Under Construction",
+        possession: "Dec 2026",
+        sector: "Sector R4",
+        usp: "Elevated High-Rise Lifestyles",
         name: "Atmos",
         slug: "kolte-patil-life-republic-atmos",
         category: "Premium 2, 2.5 & 3 BHK",
@@ -94,6 +118,10 @@ export const CLUSTERS = [
     },
     {
         id: "universe",
+        status: "New Launch",
+        possession: "June 2027",
+        sector: "Town Center",
+        usp: "High-Street Retail & Integrated High-Street",
         name: "Universe",
         slug: "kolte-patil-life-republic-universe",
         category: "Smart 1 & 2 BHK",
