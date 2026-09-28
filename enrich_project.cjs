@@ -1,4 +1,9 @@
-import React, { useEffect, useState } from 'react';
+const fs = require('fs');
+let file = 'src/pages/ProjectDetails.tsx';
+let content = fs.readFileSync(file, 'utf8');
+
+// I will completely rewrite ProjectDetails.tsx to make it a massive, premium page with full details.
+const newContent = `import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import QRCode from 'react-qr-code';
@@ -25,7 +30,7 @@ const ProjectDetails: React.FC = () => {
 
     if (!project) return null; 
 
-    const reraVerificationUrl = `https://maharerait.mahaonline.gov.in/PrintPreview/PrintPreview/?q=${project.rera}`;
+    const reraVerificationUrl = \`https://maharerait.mahaonline.gov.in/PrintPreview/PrintPreview/?q=\${project.rera}\`;
 
     const commonAmenities = [
         "Clubhouse & Lounge", "Infinity Swimming Pool", "State-of-the-art Gym", "Jogging & Cycling Tracks", 
@@ -35,9 +40,9 @@ const ProjectDetails: React.FC = () => {
     return (
         <div className="bg-[#050505] min-h-screen text-white">
             <SEO 
-                title={`${project.name} | Kolte Patil Life Republic Hinjewadi | Price, Floor Plan`}
+                title={\`\${project.name} | Kolte Patil Life Republic Hinjewadi | Price, Floor Plan\`}
                 description={project.description}
-                canonical={`/projects/${project.slug}`}
+                canonical={\`/projects/\${project.slug}\`}
             />
             
             {/* Cinematic Hero */}
@@ -131,13 +136,13 @@ const ProjectDetails: React.FC = () => {
                                         
                                         <div className="flex gap-4">
                                             <button 
-                                                onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: project.name, type: `${config.type} Floor Plan` } }))}
+                                                onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: project.name, type: \`\${config.type} Floor Plan\` } }))}
                                                 className="flex-1 py-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl text-sm font-bold uppercase tracking-widest transition-colors"
                                             >
                                                 Floor Plan
                                             </button>
                                             <button 
-                                                onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: project.name, type: `${config.type} Cost Sheet` } }))}
+                                                onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: project.name, type: \`\${config.type} Cost Sheet\` } }))}
                                                 className="flex-1 py-4 bg-white text-black hover:bg-rainbow-hover rounded-2xl text-sm font-bold uppercase tracking-widest transition-colors"
                                             >
                                                 Cost Sheet
@@ -171,7 +176,7 @@ const ProjectDetails: React.FC = () => {
                                 <h2 className="text-4xl font-sans font-bold">Master Layout</h2>
                             </div>
                             <div className="relative aspect-[16/9] rounded-3xl overflow-hidden border border-white/10 bg-[#0A0A0A] group">
-                                <img src={project.masterLayout} alt={`${project.name} Master Layout`} className="w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700" />
+                                <img src={project.masterLayout} alt={\`\${project.name} Master Layout\`} className="w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700" />
                                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 gap-6">
                                     <p className="text-2xl font-bold tracking-widest uppercase">Unlock High-Res Plan</p>
                                     <button 
@@ -247,3 +252,6 @@ const ProjectDetails: React.FC = () => {
 };
 
 export default ProjectDetails;
+`
+
+fs.writeFileSync(file, newContent);
