@@ -64,9 +64,9 @@ const Projects: React.FC = () => {
             <section className="py-10 bg-black border-t border-white/10">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mb-3">
-                        <h2 className="text-3xl font-sans font-bold text-white mb-4 italic">The Life Republic Ecosystem</h2>
+                        <h2 className="text-3xl font-sans font-bold text-white mb-4 italic">The Life Republic Clusters</h2>
                         <p className="text-white/60">
-                            Explore specialized residential sectors in Kolte Patil Life Republic Township Hinjewadi, designed for distinctive lifestyles and investment goals.
+                            Explore the distinct residential clusters across the 390-acre Life Republic ecosystem. From smart apartments to ultra-luxury villas. Township Hinjewadi, designed for distinctive lifestyles and investment goals.
                         </p>
                     </div>
 
