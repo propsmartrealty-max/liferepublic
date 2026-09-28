@@ -5,19 +5,19 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Matrix definitions (Must match pSEO-engine.ts)
+// MASSSIVE SCALED MATRIX (Dominating Pune West Ecosystem)
 const pSEOMatrix = {
-    intents: ['luxury', 'premium', 'affordable', 'ready-possession', 'under-construction', 'investment', 'new-launch', 'walk-to-work'],
-    configurations: ['1-bhk-flats', '2-bhk-flats', '3-bhk-flats', '4-bhk-flats', 'duplex', 'penthouse', 'villas', 'row-houses', 'plots'],
-    locations: ['hinjewadi', 'wakad', 'baner', 'mahalunge', 'pcmc', 'tathawade', 'pune-west', 'it-park'],
-    entities: ['kolte-patil-life-republic', 'atmos', 'aros', 'universe', 'canvas', '24k-espada']
+    intents: ['luxury', 'premium', 'affordable', 'ready-possession', 'under-construction', 'investment', 'new-launch', 'best', 'top', 'high-roi', 'residential', 'township', 'pre-launch'],
+    configurations: ['1-bhk-flats', '2-bhk-flats', '3-bhk-flats', '4-bhk-flats', '5-bhk-flats', 'duplex', 'penthouse', 'villas', 'row-houses', 'twin-bungalows', 'plots', 'studio-apartments'],
+    locations: ['hinjewadi', 'hinjewadi-phase-1', 'hinjewadi-phase-2', 'hinjewadi-phase-3', 'wakad', 'baner', 'balewadi', 'mahalunge', 'punawale', 'tathawade', 'bavdhan', 'sus', 'pcmc', 'pune-west', 'it-park', 'marunji', 'kasarsai'],
+    entities: ['kolte-patil-life-republic', 'life-republic-township', 'atmos', 'aros', 'universe', 'canvas', '24k-espada', 'echoes']
 };
 
 const DOMAIN = 'https://life-republic.in';
-const MAX_URLS_PER_SITEMAP = 5000; // Keep it under Google's limit
+const MAX_URLS_PER_SITEMAP = 10000;
 
 async function generateSitemaps() {
-    console.log('Generating pSEO URL Matrix...');
+    console.log('Generating DOMINATOR pSEO URL Matrix...');
     const urls = [];
 
     // Generate all combinations
@@ -71,8 +71,6 @@ async function generateSitemaps() {
 
     fs.writeFileSync(path.join(publicDir, 'sitemap-silos-index.xml'), indexXml);
     console.log('Wrote sitemap-silos-index.xml');
-    
-    // Note: To truly integrate, we would append this index to the main sitemap or submit it separately via robots.txt
 }
 
 generateSitemaps().catch(console.error);
