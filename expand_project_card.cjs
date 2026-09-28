@@ -1,4 +1,11 @@
-import React, { useRef, useState } from 'react';
+const fs = require('fs');
+let file = 'src/components/ui/ProjectCard.tsx';
+let content = fs.readFileSync(file, 'utf8');
+
+// The new logic requires AnimatePresence, useState, LayoutGroup.
+// I will completely rewrite ProjectCard to support a vibrant Expanded state.
+
+const newContent = `import React, { useRef, useState } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { MapPin, Clock, Sparkles, AlertCircle, X, Maximize2, ShieldCheck, Layers, Calendar, Download } from 'lucide-react';
@@ -43,7 +50,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
     const displayRera = project.rera || '';
     const displayImage = project.image || (project.configurations?.[0]?.image) || 'https://images.unsplash.com/photo-1600607687931-cece5ce21448?q=80&w=2000&auto=format&fit=crop';
     const configurations = project.configurations || [];
-    const reraVerificationUrl = `https://maharera.maharashtra.gov.in/`;
+    const reraVerificationUrl = \`https://maharera.maharashtra.gov.in/\`;
 
     // 3D Parallax Tilt setup
     const x = useMotionValue(0);
@@ -72,7 +79,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
     };
 
     const config = configurations.length > 0 
-        ? `${configurations[0].type} ${configurations.length > 1 ? `& ${configurations[configurations.length - 1].type}` : ''}`
+        ? \`\${configurations[0].type} \${configurations.length > 1 ? \`& \${configurations[configurations.length - 1].type}\` : ''}\`
         : displayCategory;
 
     const commonAmenities = ["Clubhouse & Lounge", "Infinity Swimming Pool", "State-of-the-art Gym", "Jogging & Cycling Tracks"];
@@ -118,11 +125,11 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                     <div className="flex justify-between items-start">
                         <div className="flex flex-col gap-2 items-start">
                             {project.status && (
-                                <div className={`px-3 py-1 backdrop-blur-md border rounded-full text-[9px] font-bold uppercase tracking-widest shadow-xl flex items-center gap-1 ${
+                                <div className={\`px-3 py-1 backdrop-blur-md border rounded-full text-[9px] font-bold uppercase tracking-widest shadow-xl flex items-center gap-1 \${
                                     (project.status === 'Ready to Move' || project.status === 'Completed' || project.status === 'Ready Possession') ? 'bg-green-500/20 text-green-300 border-green-500/30' : 
                                     project.status === 'New Launch' ? 'bg-rainbow border-transparent text-white' : 
                                     'bg-white/10 text-white/90 border-white/20'
-                                }`}>
+                                }\`}>
                                     <AlertCircle size={10} />
                                     {project.status}
                                 </div>
@@ -172,7 +179,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                                 )}
                                 <p className="text-xs text-white/50 uppercase tracking-widest mb-1 font-bold">Pricing Structure</p>
                                 <div className="text-xl md:text-2xl font-bold rainbow-text-clip tracking-tight">
-                                    {configurations.length > 0 ? `${configurations[0].price} Onwards` : displayPrice}
+                                    {configurations.length > 0 ? \`\${configurations[0].price} Onwards\` : displayPrice}
                                 </div>
                             </div>
                         </div>
@@ -221,7 +228,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                                     <h2 className="text-5xl md:text-6xl font-bold text-white mb-2">{displayName}</h2>
                                     <p className="text-lg text-white/70 mb-6">{project.usp}</p>
                                     
-                                    <Link to={`/projects/${displaySlug}`} className="w-full py-4 bg-white text-black hover:bg-rainbow-hover rounded-full font-bold uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-2">
+                                    <Link to={\`/projects/\${displaySlug}\`} className="w-full py-4 bg-white text-black hover:bg-rainbow-hover rounded-full font-bold uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-2">
                                         View Full Page
                                     </Link>
                                 </div>
@@ -245,7 +252,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                                                 <div className="text-sm text-white/60 mb-4">{cfg.size}</div>
                                                 <div className="text-2xl font-bold rainbow-text-clip mb-4">{cfg.price}</div>
                                                 <button 
-                                                    onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: displayName, type: `${cfg.type} Floor Plan` } }))}
+                                                    onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: displayName, type: \`\${cfg.type} Floor Plan\` } }))}
                                                     className="w-full py-3 bg-white/10 hover:bg-rainbow-hover rounded-xl text-xs font-bold uppercase tracking-widest transition-colors"
                                                 >
                                                     View Floor Plan
@@ -291,3 +298,5 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
         </>
     );
 };
+`
+fs.writeFileSync(file, newContent);

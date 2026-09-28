@@ -1,4 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+const fs = require('fs');
+let file = 'src/components/ui/EnquiryModal.tsx';
+
+const newContent = `import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle, ShieldCheck, MapPin, Calendar, Clock } from 'lucide-react';
 import { api } from '../../services/api';
@@ -229,3 +232,5 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
         </AnimatePresence>
     );
 };
+`
+fs.writeFileSync(file, newContent);
