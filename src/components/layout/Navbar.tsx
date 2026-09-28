@@ -7,27 +7,25 @@ export const Navbar = () => {
     const location = useLocation();
 
     useEffect(() => {
-        window.scrollTo(0, 0);
         setIsMobileMenuOpen(false);
     }, [location.pathname]);
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#DADCE0]">
-            <div className="container mx-auto px-4 lg:px-8 h-16 flex items-center justify-between">
+        <nav className="fixed top-0 left-0 right-0 z-[100] mix-blend-difference text-white">
+            <div className="container mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
                 
                 {/* Logo */}
-                <Link to="/" className="flex items-center gap-2 z-50">
-                    <span className="material-symbol text-[#1a73e8] text-2xl">apartment</span>
-                    <span className="font-sans font-medium text-[#202124] text-xl tracking-tight">Life Republic</span>
+                <Link to="/" className="flex items-center cursor-interactive z-50">
+                    <span className="font-sans font-medium text-xl tracking-tight uppercase">Life Republic.</span>
                 </Link>
 
-                {/* Desktop Links */}
-                <div className="hidden md:flex items-center space-x-8 text-sm font-medium text-[#5F6368]">
-                    {['Projects', 'Master Plan', 'Location', 'Lifestyle'].map((item) => (
+                {/* Desktop Links - Minimal */}
+                <div className="hidden md:flex items-center space-x-12 text-sm uppercase tracking-widest font-medium">
+                    {['Projects', 'Master Plan', 'Location'].map((item) => (
                         <Link 
                             key={item} 
                             to={item === 'Projects' ? '/projects' : `/${item.toLowerCase().replace(' ', '-')}`}
-                            className="hover:text-[#202124] transition-colors"
+                            className="hover:opacity-50 transition-opacity cursor-interactive"
                         >
                             {item}
                         </Link>
@@ -38,15 +36,15 @@ export const Navbar = () => {
                 <div className="hidden md:flex items-center z-50">
                     <button 
                         onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}
-                        className="google-btn"
+                        className="border border-white rounded-full px-6 py-2 uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-colors cursor-interactive"
                     >
                         Enquire
                     </button>
                 </div>
 
                 {/* Mobile Toggle */}
-                <button className="md:hidden text-[#5F6368] z-50" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                    <span className="material-symbol text-2xl">{isMobileMenuOpen ? 'close' : 'menu'}</span>
+                <button className="md:hidden z-50 cursor-interactive" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                    <span className="material-symbol text-3xl">{isMobileMenuOpen ? 'close' : 'menu'}</span>
                 </button>
             </div>
 
@@ -54,23 +52,23 @@ export const Navbar = () => {
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div 
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: '100vh' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="fixed inset-0 top-16 bg-white z-40 flex flex-col px-6 py-8"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 bg-black z-40 flex flex-col items-center justify-center mix-blend-normal text-white"
                     >
                         {['Projects', 'Master Plan', 'Location', 'Lifestyle'].map((item, i) => (
                             <motion.div
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.1 }}
                                 key={item}
-                                className="border-b border-[#F1F3F4] py-4"
+                                className="my-4"
                             >
                                 <Link 
                                     to={item === 'Projects' ? '/projects' : `/${item.toLowerCase().replace(' ', '-')}`}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="text-xl font-medium text-[#202124]"
+                                    className="text-4xl font-light uppercase tracking-widest"
                                 >
                                     {item}
                                 </Link>

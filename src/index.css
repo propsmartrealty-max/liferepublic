@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,slnt,wdth,wght,ROND@8..144,-10..0,25..150,400..700,0..100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Google+Symbols:opsz,wght,FILL,GRAD,ROND@20..48,100..700,0..1,-50..200,0..100&display=block');
 
 @tailwind base;
@@ -6,68 +6,21 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-    background-color: #FFFFFF;
-    color: #202124;
-  }
-  
-  body {
-    @apply font-sans antialiased overflow-x-hidden;
-    background-color: #FFFFFF;
-    color: #202124;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-medium tracking-tight text-[#202124];
+  html, body {
+    background-color: #000000;
+    color: #FFFFFF;
+    @apply font-sans antialiased;
   }
 }
 
 @layer components {
-  .google-card {
-    @apply bg-[#F8F9FA] rounded-[24px] border border-[#DADCE0] transition-shadow duration-300 overflow-hidden;
-  }
-  .google-card:hover {
-    @apply shadow-google;
-  }
-  
-  .google-btn {
-    @apply bg-[#1a73e8] text-white rounded-full px-6 py-2.5 font-medium text-sm transition-colors flex items-center justify-center gap-2;
-  }
-  .google-btn:hover {
-    @apply bg-[#1557b0];
-  }
-  .google-btn:active {
-    @apply bg-[#174ea6];
-  }
-  
-  .google-btn-secondary {
-    @apply bg-white border border-[#DADCE0] text-[#1a73e8] rounded-full px-6 py-2.5 font-medium text-sm transition-colors flex items-center justify-center gap-2;
-  }
-  .google-btn-secondary:hover {
-    @apply bg-[#F8F9FA];
-  }
-  .google-btn-secondary:active {
-    @apply bg-[#F1F3F4];
-  }
-
   .material-symbol {
     font-family: 'Google Symbols', sans-serif;
-    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
   }
 }
 
-/* Subtle scrollbar */
+/* Hide scrollbar for cinematic feel */
 ::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #DADCE0;
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #BDC1C6;
+  display: none;
 }
