@@ -9,7 +9,7 @@ export const WhatsAppWidget: React.FC = () => {
     const handleSend = () => {
         if (!message.trim()) return;
         const encodedMessage = encodeURIComponent(message);
-        window.open(`https://wa.me/919876543210?text=${encodedMessage}`, '_blank');
+        window.open(`https://wa.me/917744009295?text=${encodedMessage}`, '_blank');
         setIsOpen(false);
         setMessage('');
     };

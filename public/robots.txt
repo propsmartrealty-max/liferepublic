@@ -1,9 +1,45 @@
-User-agent: *
-Allow: /
+# ==========================================
+# ENTERPRISE ROBOTS PROTOCOL (SEO HARDENED)
+# ==========================================
 
-# Disallow crawling of internal or protected paths
+# Explicitly whitelist and prioritize Googlebots
+User-agent: Googlebot
+Allow: /
 Disallow: /api/
 Disallow: /*?*
 Disallow: /cdn-cgi/
 
+User-agent: Googlebot-Image
+Allow: /
+Allow: /images/
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+Disallow: /api/
+Disallow: /*?*
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+Disallow: /api/
+Disallow: /*?*
+
+# Fallback for all other crawling agents
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*?*
+Disallow: /cdn-cgi/
+Disallow: /_redirects
+Disallow: /_headers
+
+# Explicit Sitemap Declarations
 Sitemap: https://life-republic.in/sitemap-silos-index.xml
+Sitemap: https://life-republic.in/sitemap.xml

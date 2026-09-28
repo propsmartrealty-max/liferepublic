@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react';
+with open('src/components/ui/ExitIntentOffer.tsx', 'r') as f:
+    content = f.read()
+
+new_content = """import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Download, Lock, ArrowRight, ShieldCheck } from 'lucide-react';
 
@@ -25,17 +28,9 @@ export const ExitIntentOffer: React.FC = () => {
 
     if (!isVisible) return null;
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        const formData = new FormData(e.currentTarget);
-        const name = formData.get('name');
-        const mobile = formData.get('mobile');
-        
-        const message = `Hello, I would like to access the Private Beta Price List for Life Republic.
-
-Name: ${name}
-Mobile: ${mobile}`;
-        window.open(`https://wa.me/917744009295?text=${encodeURIComponent(message)}`, '_blank');
+        // Route to WhatsApp logic here if needed
         setIsVisible(false);
     };
 
@@ -104,8 +99,6 @@ Mobile: ${mobile}`;
                             <div className="relative group">
                                 <input 
                                     type="text" 
-                                    name="name"
-                                    name="mobile"
                                     placeholder=" "
                                     className="peer w-full bg-transparent border-b border-white/20 py-3 text-white text-lg focus:border-white outline-none transition-all placeholder:text-transparent"
                                     required
@@ -145,3 +138,9 @@ Mobile: ${mobile}`;
         </AnimatePresence>
     );
 };
+"""
+
+with open('src/components/ui/ExitIntentOffer.tsx', 'w') as f:
+    f.write(new_content)
+
+print("Modal redesigned.")

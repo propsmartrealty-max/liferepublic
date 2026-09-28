@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npx tsx scripts/generate-sitemap.ts && npm run generate:sitemaps && tsc -b && npm run build:client && npm run build:server && npm run prerender && npx tsx scripts/sovereign-audit.ts",
-    "generate:sitemaps": "node scripts/generate-sitemaps.js && node scripts/generate-shopping-feed.js",
+    "generate:sitemaps": "node scripts/generate-sitemaps.js && node scripts/generate-shopping-feed.js && node scripts/ping-search-engines.js",
     "build:client": "npm run generate:sitemaps && vite build",
     "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
     "prerender": "npx tsx scripts/prerender.ts",

@@ -2,12 +2,15 @@ export const onRequest: PagesFunction = async (context) => {
     const url = new URL(context.request.url);
     const response = await context.next();
 
-    // 1. Enterprise Security Headers
+    // 1. Enterprise Security Headers & SEO Hardening
     const headers = new Headers(response.headers);
     headers.set('X-Content-Type-Options', 'nosniff');
     headers.set('X-Frame-Options', 'SAMEORIGIN');
     headers.set('X-XSS-Protection', '1; mode=block');
     headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+    
+    // SEO Hardening: Force Google to Index & Allow Large Image Previews for Discover
+    headers.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
     
     // Set Edge Geolocation Headers for the Client to consume if needed
     const country = context.request.cf?.country || 'Unknown';
@@ -69,7 +72,7 @@ export const onRequest: PagesFunction = async (context) => {
                         "latitude": "18.6185",
                         "longitude": "73.7106"
                     },
-                    "telephone": "+91-9579250011",
+                    "telephone": "+91-7744009295",
                     "priceRange": "₹75 Lakhs - ₹2.8 Cr"
                 },
                 {
