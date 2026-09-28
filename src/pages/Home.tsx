@@ -115,14 +115,20 @@ const Home: React.FC = () => {
             <section className="py-16 md:py-32 bg-transparent" aria-label="Featured Township Projects">
                 <div className="container mx-auto px-4">
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-                        <span className="text-accent text-xs font-bold tracking-tight font-semibold block mb-4">The Collection</span>
+                        <span className="text-[#E5C07B] text-[10px] font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 mb-4"><span className="text-xl">✦</span> SOVEREIGN PROJECT PORTFOLIO</span>
                         <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-secondary">
-                            Life Republic <span className="text-golden-gradient">Properties</span>
+                            Explore Life Republic <span className="text-[#E5C07B]">Complete Enclaves</span>
                         </h2>
-                        <div className="w-16 h-1 bg-accent mx-auto mb-8 rounded-full"></div>
-                        <p className="text-text-muted max-w-2xl mx-auto text-lg mb-10 font-light">
-                            Discover our diverse range of premium properties, from ultra-luxury villas and bespoke bungalow plots to state-of-the-art smart apartments.
-                        </p>
+                        
+                        <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base mb-10 font-light">390 Acres of master-planned luxury NA plots, private villas, hillside apartments, and senior retirement enclaves.</p>
+                    {/* Category Filter Pills (Static representation) */}
+                    <div className="flex flex-wrap justify-center gap-4 mb-16 max-w-4xl mx-auto border border-white/10 p-2 rounded-full bg-[#151822]/50 backdrop-blur-md">
+                        <button className="bg-[#7F1D1D] text-white px-6 py-2 rounded-full text-xs font-bold tracking-wider uppercase border border-red-900/50 flex items-center gap-2"><span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span> All Enclaves <span className="bg-black/20 px-2 py-0.5 rounded-full ml-1">16</span></button>
+                        <button className="text-gray-400 hover:text-white px-4 py-2 text-xs font-bold tracking-wider uppercase transition-colors">🏡 NA Plots <span className="bg-white/5 px-2 py-0.5 rounded-full ml-1">1</span></button>
+                        <button className="text-gray-400 hover:text-white px-4 py-2 text-xs font-bold tracking-wider uppercase transition-colors">🏰 Luxury Villas <span className="bg-white/5 px-2 py-0.5 rounded-full ml-1">2</span></button>
+                        <button className="text-gray-400 hover:text-white px-4 py-2 text-xs font-bold tracking-wider uppercase transition-colors">🏢 Apartments <span className="bg-white/5 px-2 py-0.5 rounded-full ml-1">12</span></button>
+                    </div>
+
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -161,10 +167,10 @@ const Home: React.FC = () => {
                         viewport={{ once: true }}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-secondary bg-clip-text text-transparent">Hinjewadi: A Real Estate Investment Hotspot</h2>
-                        <div className="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-secondary bg-clip-text text-transparent">Minutes From Everywhere, <span className="text-[#E5C07B]">Miles From Chaos</span></h2>
+                        <span className="text-[#E5C07B] text-[10px] font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 mb-4 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-12 border border-[#E5C07B]/30 px-4 py-1.5 rounded-full bg-[#151822]/80 backdrop-blur-md"><span className="text-red-500">📍</span> STRATEGIC CONNECTIVITY & PROXIMITY</span>
                         <p className="text-text-muted max-w-2xl mx-auto text-lg font-light leading-relaxed">
-                            Connected to the world, yet a world of its own. Located in the heart of Hinjewadi, a prime real estate corridor, Kolte Patil Life Republic Township offers unmatched connectivity and property value appreciation.
+                            Seamless access to Hinjewadi IT Park, Wakad, and Pune-Mumbai Expressway via the multi-level Wakad junction.
                         </p>
                     </motion.div>
 
@@ -182,7 +188,7 @@ const Home: React.FC = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
                                 whileHover={{ y: -5, scale: 1.02 }}
-                                className={`relative overflow-hidden p-6 rounded-3xl border backdrop-blur-md transition-all duration-300 group bg-gradient-to-br ${item.gradient} ${item.border} hover:shadow-[0_0_30px_-5px_rgba(0,0,0,0.3)]`}
+                                className={`relative overflow-hidden p-6 rounded-3xl border backdrop-blur-md transition-all duration-300 group bg-transparent border border-white/10 hover:border-[#E5C07B]/30 hover:bg-white/[0.02]`}
                             >
                                 <div className={`absolute -right-10 -top-10 w-32 h-32 rounded-full blur-[50px] transition-all duration-500 ${item.glow} ${item.glowHover}`}></div>
                                 <div className={`w-14 h-14 rounded-3xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 ${item.bgIcon}`}>

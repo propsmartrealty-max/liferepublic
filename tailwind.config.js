@@ -4,18 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#36A849', // Brand Green
-        secondary: '#1A1A1A', // Deep Charcoal (from logo text)
-        accent: '#F07C27', // Brand Orange (from bird)
-        background: '#FFFFFF', // Clean White
-        surface: '#F8F9FA', // Off-white for cards
-        'text-main': '#1A1A1A',
-        'text-muted': '#666666',
-        'border-strong': '#E5E7EB', // Light border
+        primary: '#E5C07B', // Golden Accent
+        secondary: '#FFFFFF', // White text
+        accent: '#991B1B', // Dark Red for buttons
+        background: '#0B0D14', // Deep dark blue/black
+        surface: '#151822', // Slightly lighter dark for cards
+        'text-main': '#F3F4F6',
+        'text-muted': '#9CA3AF',
+        'border-strong': 'rgba(255, 255, 255, 0.1)', // Subtle white borders
       },
       fontFamily: {
-        sans: ['"Outfit"', 'system-ui', '-apple-system', 'sans-serif'],
-        serif: ['"Outfit"', 'system-ui', 'sans-serif'],
+        sans: ['"Outfit"', 'system-ui', 'sans-serif'],
+        serif: ['"Playfair Display"', 'Georgia', 'serif'], // Elegant serif for headings
       },
       animation: {
         'fade-in': 'fadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1)',
@@ -37,8 +37,9 @@ export default {
         }
       },
       boxShadow: {
-        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.05)',
-        'glass-hover': '0 12px 48px 0 rgba(54, 168, 73, 0.15)', // Light green shadow
+        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.3)',
+        'glass-hover': '0 12px 48px 0 rgba(229, 192, 123, 0.15)', // Golden glow
+        'red-glow': '0 0 20px rgba(153, 27, 27, 0.5)',
       }
     },
   },

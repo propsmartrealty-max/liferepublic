@@ -1,16 +1,17 @@
 const fs = require('fs');
-const file = 'src/components/layout/Navbar.tsx';
+
+let file = 'src/components/layout/Navbar.tsx';
 let content = fs.readFileSync(file, 'utf8');
 
-// Replace the floating header container with a full-width flat structural header
-content = content.replace(/<header className=\{`fixed top-0 left-0 w-full z-\[100\] transition-all duration-700 px-6 py-8 \$\{scrolled \? 'sm:py-4' : 'sm:py-8'\}\`\}>/, 
-                          `<header className={'fixed top-0 left-0 w-full z-[100] bg-surface border-b-2 border-border-strong transition-all duration-300 ' + (scrolled ? 'py-2 shadow-hard' : 'py-4')}>`);
-
-content = content.replace(/<nav className="container mx-auto" aria-label="Main Navigation">/, 
-                          `<nav className="w-full" aria-label="Main Navigation">`);
-
-// Remove the inner styling that formed the pill
-content = content.replace(/<div className=\{`relative flex items-center justify-between px-4 md:px-10 py-3 md:py-5 bg-background\/80 backdrop-blur-3xl rounded-none border border-border-strong shadow-hard transition-all \$\{scrolled \? 'shadow-accent\/20 border-accent\/20' : ''\}\`\}>/, 
-                          `<div className="relative flex items-center justify-between px-6 lg:px-12 w-full">`);
+// Replace standard Apple pill style with dark mode elegant top bar style
+content = content.replace(/bg-white\/80/g, "bg-[#0B0D14]/90");
+content = content.replace(/border-gray-200\/50/g, "border-white/10 border-b");
+content = content.replace(/rounded-full/g, "rounded-none");
+content = content.replace(/text-secondary/g, "text-white");
+content = content.replace(/text-gray-900/g, "text-white");
+content = content.replace(/text-gray-800/g, "text-white");
+content = content.replace(/bg-gray-50/g, "bg-[#151822]");
+content = content.replace(/border-gray-100/g, "border-white/10");
+content = content.replace(/bg-white/g, "bg-[#0B0D14]");
 
 fs.writeFileSync(file, content);

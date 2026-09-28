@@ -6,19 +6,19 @@ const slides = [
   {
     id: 1,
     image: '/images/home/slider-1.webp',
-    title: 'Welcome to Life Republic',
+    title: 'Kolte Patil Life Republic <br/><span className="text-[#E5C07B]">390-Acre Smart Township Ecosystem</span>',
     subtitle: 'A 400-Acre Integrated Township in Hinjewadi, Pune',
   },
   {
     id: 2,
     image: '/images/home/slider-2.webp',
-    title: 'World-Class Amenities',
+    title: 'An Integrated City <br/><span className="text-[#E5C07B]">Miles From Chaos</span>',
     subtitle: 'Over 50+ lifestyle features designed for your well-being',
   },
   {
     id: 3,
     image: '/images/home/slider-3.webp',
-    title: 'The Canvas of Luxury',
+    title: 'The Canvas of <br/><span className="text-[#E5C07B]">Ultra-Luxury</span>',
     subtitle: 'Premium 3 & 4 BHK residences with skyline views',
   }
 ];
@@ -47,7 +47,7 @@ export const HeroSlider = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/80 z-10" />
           <img
             src={slides[current].image}
-            alt={slides[current].title}
+            alt=<span dangerouslySetInnerHTML={{ __html: slides[current].title }} />
             className="w-full h-full object-cover"
             loading={current === 0 ? "eager" : "lazy"}
           />
@@ -59,13 +59,13 @@ export const HeroSlider = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="max-w-4xl"
+          className="max-w-5xl mx-auto md:mx-0 text-center md:text-left flex flex-col items-center md:items-start"
         >
           <span className="inline-block py-1.5 px-4  bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-semibold tracking-tight mb-6">
             Kolte Patil Developers
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tighter text-white leading-[1.05] mb-6 drop-shadow-lg">
-            {slides[current].title}
+          <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-serif font-bold text-white leading-[1.1] mb-6 drop-shadow-2xl">
+            <span dangerouslySetInnerHTML={{ __html: slides[current].title }} />
           </h1>
           <p className="text-xl md:text-2xl text-white text-white/90 font-medium tracking-tight mb-10 max-w-2xl drop-shadow-md">
             {slides[current].subtitle}
