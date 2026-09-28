@@ -130,7 +130,7 @@ export const Home = () => {
             <section className="h-screen w-full snap-start relative bg-[#0a0a0a] flex items-center justify-center">
                 <div className="absolute inset-0 z-0 flex md:flex-row flex-col">
                     <div className="flex-1 relative group cursor-interactive overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2000&auto=format&fit=crop" className="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-opacity duration-1000 group-hover:scale-105" />
+                        <img src="https://liferepublic.in/images/projects/location/172060335117189650503rd Avenue-.jpg" className="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-opacity duration-1000 group-hover:scale-105" />
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                             <h2 className="text-4xl md:text-5xl text-white font-medium tracking-tight drop-shadow-2xl">Apartments</h2>
                             <p className="absolute bottom-10 text-white/70 text-sm font-light max-w-xs text-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000">Explore premium residential clusters including Universe, Arezo, Atmos, and Aros.</p>
@@ -138,7 +138,7 @@ export const Home = () => {
                         <Link to="/projects" className="absolute inset-0 z-10"></Link>
                     </div>
                     <div className="flex-1 relative group cursor-interactive overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1600607687931-cece5ce21448?q=80&w=2000&auto=format&fit=crop" className="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-opacity duration-1000 group-hover:scale-105" />
+                        <img src="https://liferepublic.in/images/home/box-img-01.jpg" className="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-opacity duration-1000 group-hover:scale-105" />
                         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
                             <h2 className="text-4xl md:text-5xl text-white font-medium tracking-tight drop-shadow-2xl">Township</h2>
                             <p className="absolute bottom-10 text-white/70 text-sm font-light max-w-xs text-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000">Experience the 390-acre ecosystem with 100+ amenities, schools, and high-street retail.</p>
