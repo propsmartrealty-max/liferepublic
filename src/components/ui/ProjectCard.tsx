@@ -122,6 +122,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                         <div className="flex flex-col gap-2 items-start">
                             {project.status && (
                                 <div className={`px-3 py-1 backdrop-blur-md border rounded-full text-[9px] font-bold uppercase tracking-widest shadow-xl flex items-center gap-1 ${
+                                    project.status === 'Sold Out' ? 'bg-red-500/20 text-red-400 border-red-500/30' :
                                     (project.status === 'Ready to Move' || project.status === 'Completed' || project.status === 'Ready Possession') ? 'bg-green-500/20 text-green-300 border-green-500/30' : 
                                     project.status === 'New Launch' ? 'bg-rainbow border-transparent text-white' : 
                                     'bg-white/10 text-white/90 border-white/20'
