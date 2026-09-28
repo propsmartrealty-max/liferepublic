@@ -16,7 +16,7 @@ export const Navbar = () => {
                 
                 {/* Logo */}
                 <Link to="/" className="flex items-center cursor-interactive z-50">
-                    <span className="font-sans font-medium text-xl tracking-tight uppercase">Life Republic.</span>
+                    <img src="/logo.webp" alt="Life Republic" className="h-10 object-contain mix-blend-lighten" />
                 </Link>
 
                 {/* Desktop Links - Minimal */}
