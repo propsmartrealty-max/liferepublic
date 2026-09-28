@@ -43,7 +43,7 @@ export const SectorMesh: React.FC = () => {
             </div>
             
             <div className="container mx-auto px-4 relative z-10">
-                <div className="flex flex-col lg:flex-row items-end justify-between gap-16 mb-32">
+                <div className="flex flex-col lg:flex-row items-end justify-between gap-8 mb-32">
                     <div className="max-w-4xl">
                         <motion.div 
                             initial={{ opacity: 0, x: -30 }}
@@ -53,7 +53,7 @@ export const SectorMesh: React.FC = () => {
                             <Cpu size={16} className="text-[#1a73e8] animate-pulse" />
                             <span className="text-[11px] font-bold tracking-tight font-semibold text-[#1a73e8]">Tectonic Velocity Lab v6.5</span>
                         </motion.div>
-                        <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.85]">
+                        <h2 className="text-5xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.85]">
                             Neural <br /> <span className="text-[#1a73e8] italic">Velocity Mesh.</span>
                         </h2>
                         <p className="text-2xl text-[#5F6368] font-medium leading-relaxed max-w-3xl">
@@ -84,7 +84,7 @@ export const SectorMesh: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {/* Residential Node Matrix */}
                     <div className="lg:col-span-1 space-y-12 h-[700px] overflow-y-auto pr-4 custom-scrollbar">
                         <div className="bg-[#151822] border border-[#DADCE0]/5 backdrop-blur-3xl rounded-[3.5rem] p-10 border border-[#DADCE0] shadow-2xl">
@@ -129,7 +129,7 @@ export const SectorMesh: React.FC = () => {
                                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--accent)_0%,transparent_70%)] opacity-20 animate-pulse"></div>
                                     
                                     <div className="relative z-10 space-y-12 w-full">
-                                        <div className="flex items-center justify-center gap-12">
+                                        <div className="flex items-center justify-center gap-6">
                                             <div className="w-24 h-24 bg-accent/20 rounded-3xl flex items-center justify-center text-[#1a73e8] relative group">
                                                 <div className="absolute inset-0 border-2 border-accent/30 rounded-3xl animate-ping"></div>
                                                 <Layers size={40} />
@@ -151,7 +151,7 @@ export const SectorMesh: React.FC = () => {
                                         </div>
 
                                         <div className="space-y-6">
-                                            <h3 className="text-5xl md:text-8xl font-sans font-bold text-[#202124] tracking-tighter leading-none">
+                                            <h3 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter leading-none">
                                                 {activeSector.name.split(' (')[0]} <br />
                                                 <span className="italic text-[#1a73e8]">{activeSector.id.toUpperCase()} Synthesis.</span>
                                             </h3>
@@ -233,14 +233,14 @@ export const SectorMesh: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="mt-32 pt-16 border-t border-[#DADCE0] flex flex-col md:flex-row items-center justify-between gap-12">
+                <div className="mt-32 pt-16 border-t border-[#DADCE0] flex flex-col md:flex-row items-center justify-between gap-6">
                     <div className="flex flex-col gap-2">
                         <p className="text-[12px] text-[#5F6368] tracking-tight font-semibold font-bold">Neural Mesh Protocol v6.5</p>
                         <p className="text-[11px] text-gray-600 font-medium tracking-widest flex items-center gap-3">
                             <Network size={14} className="text-[#1a73e8]" /> Fully Synchronized to Hinjewadi Tectonic Growth.
                         </p>
                     </div>
-                    <div className="flex gap-16">
+                    <div className="flex gap-8">
                         <div className="flex items-center gap-4 group cursor-help">
                             <div className="w-3 h-3 bg-accent rounded-full animate-pulse shadow-[0_0_20px_var(--accent)]"></div>
                             <span className="text-[11px] font-bold text-[#5F6368] tracking-tight font-medium group-hover:text-[#202124] transition-colors">Sector Velocity</span>

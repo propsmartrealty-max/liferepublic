@@ -26,7 +26,7 @@ export const TownshipIntelligence: React.FC = () => {
                     >
                         The Masterplan Intelligence
                     </motion.span>
-                    <h1 className="text-6xl md:text-7xl font-sans font-bold text-[#202124] mb-10 leading-[1.1]">
+                    <h1 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] mb-10 leading-[1.1]">
                         Integrated <br />Ecosystem
                     </h1>
                     <p className="text-[#5F6368] text-xl font-light leading-relaxed max-w-2xl">
@@ -91,7 +91,7 @@ export const TownshipIntelligence: React.FC = () => {
                         
                         <div className="relative z-10">
                             <h2 className="text-4xl font-sans font-bold mb-8">Velocity Matrix</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 <div>
                                     <h3 className="text-[#1a73e8] text-[10px] font-bold tracking-tight font-medium mb-8 border-b border-[#DADCE0] pb-4">Major Nodes</h3>
                                     <div className="space-y-6">

@@ -60,7 +60,7 @@ export const LocationHighlights: React.FC = () => {
                             <Compass size={16} className="text-[#1a73e8] animate-spin-slow" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8]">Infrastructure Synthesis 2026</span>
                         </motion.div>
-                        <h1 className="text-6xl md:text-9xl font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-none">
+                        <h1 className="text-5xl md:text-9xl font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-none">
                             The Strategic <br /> <span className="text-[#1a73e8] italic">Epicenter.</span>
                         </h1>
                         <p className="text-2xl text-[#5F6368] font-medium max-w-3xl leading-relaxed mb-12">
@@ -160,10 +160,10 @@ export const LocationHighlights: React.FC = () => {
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="text-center mb-10">
                         <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-4 block">The 2026 Forecast</span>
-                        <h2 className="text-5xl md:text-8xl font-sans font-bold text-[#202124] tracking-tighter">Infrastructure <span className="text-[#1a73e8] italic">Hardening.</span></h2>
+                        <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter">Infrastructure <span className="text-[#1a73e8] italic">Hardening.</span></h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {highlights.map((group, idx) => (
                             <motion.div
                                 key={idx}
@@ -215,7 +215,7 @@ export const LocationHighlights: React.FC = () => {
                             className="relative z-10"
                         >
                             <Zap size={72} className="text-[#1a73e8] mx-auto mb-12 animate-pulse" />
-                            <h2 className="text-5xl md:text-8xl font-sans font-bold text-[#202124] mb-12 tracking-tighter leading-tight">The Investment <br /><span className="text-[#1a73e8] italic text-7xl md:text-9xl">Conclusion.</span></h2>
+                            <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] mb-12 tracking-tighter leading-tight">The Investment <br /><span className="text-[#1a73e8] italic text-5xl md:text-9xl">Conclusion.</span></h2>
                             <p className="text-2xl text-[#5F6368] leading-relaxed font-medium mb-8 max-w-3xl mx-auto">
                                 Hinjewadi Phase 3 is the fastest-growing real estate cluster in Pune West. Life Republic's 390-acre scale ensures that your asset is not just a home, but a sovereign stake in the city's IT future.
                             </p>

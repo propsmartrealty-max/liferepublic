@@ -111,7 +111,7 @@ export const TownshipGuide: React.FC = () => {
                         className="max-w-4xl mx-auto text-center"
                     >
                         <span className="text-[#1a73e8] font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Pillar Content 2026</span>
-                        <h1 className="text-4xl md:text-7xl font-sans font-bold text-white mb-8 leading-tight">
+                        <h1 className="text-4xl md:text-5xl font-sans font-bold text-white mb-8 leading-tight">
                             The Sovereign Guide to <br />
                             <span className="text-[#1a73e8] underline decoration-accent/30 italic">Life Republic</span>
                         </h1>

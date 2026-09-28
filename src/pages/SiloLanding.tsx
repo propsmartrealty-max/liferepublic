@@ -55,13 +55,13 @@ export const SiloLanding: React.FC = () => {
             {/* Hero Section */}
             <section className="bg-transparent py-16 md:py-12">
                 <div className="container mx-auto px-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                         {/* Main Content */}
                         <div className="lg:col-span-8">
                             <span className="inline-block px-4 py-2 bg-accent/10 text-[#1a73e8] text-[10px] font-bold tracking-tight font-semibold rounded-full mb-6">
                                 Verified Listings
                             </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold text-[#202124] tracking-tighter leading-[1.1] mb-6">
+                            <h1 className="text-4xl md:text-5xl lg:text-5xl font-sans font-bold text-[#202124] tracking-tighter leading-[1.1] mb-6">
                                 {siloData.h1}
                             </h1>
                             <p className="text-xl text-[#5F6368] mb-10 leading-relaxed font-medium">

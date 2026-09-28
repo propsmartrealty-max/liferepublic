@@ -26,7 +26,7 @@ export const SectorLinkMesh: React.FC = () => {
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] pointer-events-none -mr-48 -mt-48"></div>
             
             <div className="container mx-auto px-4 relative z-10">
-                <div className="flex flex-col md:flex-row items-end justify-between gap-12 mb-8">
+                <div className="flex flex-col md:flex-row items-end justify-between gap-6 mb-8">
                     <div className="max-w-2xl">
                         <motion.div 
                             initial={{ opacity: 0, x: -20 }}
@@ -36,7 +36,7 @@ export const SectorLinkMesh: React.FC = () => {
                             <Network size={14} className="text-[#1a73e8] animate-pulse" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold">Sovereign Connectivity Matrix v6.0</span>
                         </motion.div>
-                        <h2 className="text-5xl md:text-7xl font-sans font-bold text-[#202124] tracking-tighter leading-none mb-6">
+                        <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter leading-none mb-6">
                             Infrastructure <br /><span className="text-[#1a73e8] italic">Synergy.</span>
                         </h2>
                         <p className="text-xl text-[#5F6368] font-medium leading-relaxed">
@@ -55,7 +55,7 @@ export const SectorLinkMesh: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Residential Cluster Matrix */}
                     <div className="space-y-10">
                         <div className="flex items-center gap-4 text-[#1a73e8] font-bold tracking-tight font-semibold text-[10px]">
@@ -135,7 +135,7 @@ export const SectorLinkMesh: React.FC = () => {
                 <motion.div 
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    className="mt-24 p-12 bg-white rounded-[24px] text-[#202124] flex flex-col lg:flex-row items-center justify-between gap-12 shadow-[0_60px_120px_-30px_rgba(0,0,0,0.4)] relative overflow-hidden group"
+                    className="mt-24 p-12 bg-white rounded-[24px] text-[#202124] flex flex-col lg:flex-row items-center justify-between gap-6 shadow-[0_60px_120px_-30px_rgba(0,0,0,0.4)] relative overflow-hidden group"
                 >
                     <div className="absolute top-0 right-0 p-16 opacity-5 group-hover:rotate-12 transition-transform duration-700">
                         <Cpu size={150} />

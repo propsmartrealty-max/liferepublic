@@ -77,7 +77,7 @@ export const Home = () => {
                 <div className="z-10 text-center px-4 max-w-5xl flex flex-col items-center">
                     <KineticText 
                         text="Life Republic." 
-                        className="text-6xl md:text-8xl font-sans font-bold text-white tracking-tight mb-6 justify-center rainbow-aura"
+                        className="text-5xl md:text-5xl font-sans font-bold text-white tracking-tight mb-6 justify-center rainbow-aura"
                     />
                     <motion.p 
                         initial={{ opacity: 0 }}
@@ -109,7 +109,7 @@ export const Home = () => {
                 <div className="z-10 px-8 md:px-24 max-w-4xl">
                     <KineticText 
                         text="390 acres of beautifully engineered spatial design." 
-                        className="text-3xl md:text-6xl font-sans font-medium text-white leading-[1.1] mb-12"
+                        className="text-3xl md:text-5xl font-sans font-medium text-white leading-[1.1] mb-12"
                     />
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -132,7 +132,7 @@ export const Home = () => {
                     <div className="flex-1 relative group cursor-interactive overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2000&auto=format&fit=crop" className="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-opacity duration-1000 group-hover:scale-105" />
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                            <h2 className="text-4xl md:text-6xl text-white font-medium tracking-tight drop-shadow-2xl">Apartments</h2>
+                            <h2 className="text-4xl md:text-5xl text-white font-medium tracking-tight drop-shadow-2xl">Apartments</h2>
                             <p className="absolute bottom-10 text-white/70 text-sm font-light max-w-xs text-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000">Explore premium residential clusters including Universe, Arezo, Atmos, and Aros.</p>
                         </div>
                         <Link to="/projects" className="absolute inset-0 z-10"></Link>
@@ -140,7 +140,7 @@ export const Home = () => {
                     <div className="flex-1 relative group cursor-interactive overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1600607687931-cece5ce21448?q=80&w=2000&auto=format&fit=crop" className="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-opacity duration-1000 group-hover:scale-105" />
                         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                            <h2 className="text-4xl md:text-6xl text-white font-medium tracking-tight drop-shadow-2xl">Township</h2>
+                            <h2 className="text-4xl md:text-5xl text-white font-medium tracking-tight drop-shadow-2xl">Township</h2>
                             <p className="absolute bottom-10 text-white/70 text-sm font-light max-w-xs text-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000">Experience the 390-acre ecosystem with 100+ amenities, schools, and high-street retail.</p>
                         </div>
                         <Link to="/township-guide" className="absolute inset-0 z-10"></Link>
@@ -167,7 +167,7 @@ export const Home = () => {
                 <div className="z-10 px-8 md:px-24 max-w-2xl text-right flex flex-col items-end">
                     <KineticText 
                         text="Connected to everything." 
-                        className="text-4xl md:text-7xl font-sans font-medium text-white mb-6 justify-end"
+                        className="text-4xl md:text-5xl font-sans font-medium text-white mb-6 justify-end"
                     />
                     <motion.p 
                         initial={{ opacity: 0 }}

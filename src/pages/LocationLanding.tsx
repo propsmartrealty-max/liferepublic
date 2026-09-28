@@ -62,7 +62,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                             <Target size={24} className="text-[#1a73e8] animate-pulse" />
                             <span className="text-[12px] font-bold tracking-tight font-semibold text-[#1a73e8]">Strategic Epicenter Sync 2026</span>
                         </div>
-                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-sans font-bold mb-8 leading-[0.75] tracking-tighter">
+                        <h1 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold mb-8 leading-[0.75] tracking-tighter">
                             Beyond <br /> <span className="text-[#1a73e8] italic">{locationName}.</span>
                         </h1>
                         <p className="text-3xl md:text-4xl text-[#5F6368] max-w-4xl mb-8 leading-relaxed font-medium italic">
@@ -82,7 +82,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                     </motion.div>
                 </div>
                 
-                <div className="absolute bottom-20 left-20 hidden lg:flex items-center gap-12 text-[#202124]/30">
+                <div className="absolute bottom-20 left-20 hidden lg:flex items-center gap-6 text-[#202124]/30">
                     <div className="flex items-center gap-4"><Network size={20} className="text-[#1a73e8]" /><span className="text-[11px] font-bold tracking-tight font-semibold">2026 Metro Sync Active</span></div>
                     <div className="flex items-center gap-4"><Globe size={20} /><span className="text-[11px] font-bold tracking-tight font-semibold">Hinjewadi ph 3 Hub</span></div>
                 </div>
@@ -102,7 +102,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                                     <Cpu size={24} />
                                     <span className="text-[12px] tracking-tight font-semibold">The Transit Synthesis</span>
                                 </div>
-                                <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] tracking-tighter leading-[0.85]">The Superior <br /><span className="text-[#1a73e8] italic">Commute Delta.</span></h2>
+                                <h2 className="text-5xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] tracking-tighter leading-[0.85]">The Superior <br /><span className="text-[#1a73e8] italic">Commute Delta.</span></h2>
                             </div>
                             <p className="text-2xl md:text-3xl text-[#5F6368] leading-relaxed font-medium italic">
                                 standalone properties in {locationName} often lack dedicated infrastructure. Life Republic residents enjoy the 150ft Spine Road advantage, bypassing all local bottlenecks.
@@ -177,9 +177,9 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                 <div className="container mx-auto px-4 text-center">
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}>
                         <span className="text-[11px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-6 block">Personalized Synthesis</span>
-                        <h2 className="text-7xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-32 tracking-tighter leading-none italic">The Sovereign <span className="text-[#1a73e8]">Clusters.</span></h2>
+                        <h2 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-32 tracking-tighter leading-none italic">The Sovereign <span className="text-[#1a73e8]">Clusters.</span></h2>
                     </motion.div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {featuredProjects.map((project) => (
                             <ProjectCard key={project.id} project={project} />
                         ))}

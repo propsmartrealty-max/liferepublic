@@ -25,7 +25,7 @@ export const NRIInvestment: React.FC = () => {
             {/* Hero Section */}
             <section className="relative py-12 bg-white overflow-hidden">
                 <div className="container mx-auto px-4 relative">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
                         <div>
                             <motion.span
                                 initial={{ opacity: 0, x: -20 }}
@@ -38,7 +38,7 @@ export const NRIInvestment: React.FC = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.1 }}
-                                className="text-4xl md:text-6xl font-sans font-bold text-[#202124] mb-6 leading-tight"
+                                className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-6 leading-tight"
                             >
                                 The NRI Gateway to <br />
                                 <span className="text-[#1a73e8] underline-offset-8 underline decoration-double">Pune Real Estate</span>
@@ -89,7 +89,7 @@ export const NRIInvestment: React.FC = () => {
                         <h2 className="text-3xl md:text-5xl font-sans font-bold text-[#202124] mb-6">Why Choice Life Republic?</h2>
                         <div className="w-24 h-1 bg-accent mx-auto"></div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="text-center group">
                             <div className="w-20 h-20 bg-[#151822] border border-[#DADCE0]/5 border border-[#DADCE0] rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-accent group-hover:border-accent transition-all duration-500">
                                 <DollarSign size={32} className="text-[#1a73e8] group-hover:text-[#202124] transition-colors" />

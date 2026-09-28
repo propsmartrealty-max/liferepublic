@@ -21,7 +21,7 @@ export const PersonalizedDashboard: React.FC = () => {
                 <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    className="flex flex-col md:flex-row items-center justify-between gap-12"
+                    className="flex flex-col md:flex-row items-center justify-between gap-6"
                 >
                     <div className="max-w-xl text-[#202124]">
                         <div className="inline-flex items-center gap-3 px-4 py-2 bg-accent/20 border border-accent/30 rounded-full mb-6">

@@ -47,7 +47,7 @@ export const NRIInvestmentHub: React.FC = () => {
                         <span className="px-6 py-2 bg-accent/20 text-[#1a73e8] rounded-full text-xs font-bold tracking-tight font-semibold mb-8 inline-block border border-accent/20">
                             Global Investors Portal
                         </span>
-                        <h1 className="text-5xl md:text-7xl font-sans font-bold text-[#202124] mb-8 leading-tight">
+                        <h1 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] mb-8 leading-tight">
                             Invest in Pune's <br />
                             <span className="text-[#1a73e8] underline decoration-white/10 underline-offset-8">Sovereign Growth Corridor</span>
                         </h1>
@@ -80,7 +80,7 @@ export const NRIInvestmentHub: React.FC = () => {
             {/* NRI Trust Elements */}
             <section className="py-12 bg-white border-t border-[#DADCE0]">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="space-y-4">
                             <div className="w-16 h-16 bg-[#F8F9FA] rounded-2xl flex items-center justify-center text-[#202124]">
                                 <Landmark size={32} />

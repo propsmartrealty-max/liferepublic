@@ -48,7 +48,7 @@ export const HyperLocalLanding: React.FC = () => {
 
             <div className="container mx-auto px-4">
                 {/* Authority Header */}
-                <div className="flex flex-col lg:flex-row gap-16 items-start mb-32">
+                <div className="flex flex-col lg:flex-row gap-8 items-start mb-32">
                     <div className="lg:w-2/3">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
@@ -57,7 +57,7 @@ export const HyperLocalLanding: React.FC = () => {
                         >
                             <Target size={14} /> Market Intelligence Report 2026
                         </motion.div>
-                        <h1 className="text-5xl md:text-7xl font-sans font-bold text-[#202124] mb-10 leading-[1.1]">
+                        <h1 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] mb-10 leading-[1.1]">
                             {config.title.split('|')[0]}
                         </h1>
                         <p className="text-[#5F6368] text-xl font-light leading-relaxed max-w-2xl mb-12">
@@ -92,7 +92,7 @@ export const HyperLocalLanding: React.FC = () => {
                 </div>
 
                 {/* Intelligence Matrix */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-40">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-40">
                     <div className="space-y-6">
                         <div className="w-12 h-12 bg-[#E5C07B]/20 rounded-2xl flex items-center justify-center text-[#1a73e8]">
                             <Clock size={20} />

@@ -61,7 +61,7 @@ export const Contact: React.FC = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-6xl font-sans font-bold mb-6"
+                        className="text-5xl md:text-5xl font-sans font-bold mb-6"
                     >
                         Contact Kolte Patil Life Republic Sales
                     </motion.h1>
@@ -72,7 +72,7 @@ export const Contact: React.FC = () => {
             </section>
 
             <section className="py-20">
-                <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Contact Info */}
                     <div className="space-y-8">
                         <div>

@@ -68,7 +68,7 @@ const ProjectDetails: React.FC = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.1 }}
-                                    className="text-6xl md:text-8xl font-sans font-bold text-white mb-6 tracking-tight leading-none"
+                                    className="text-5xl md:text-5xl font-sans font-bold text-white mb-6 tracking-tight leading-none"
                                 >
                                     {project.name}
                                 </motion.h1>
@@ -106,7 +106,7 @@ const ProjectDetails: React.FC = () => {
             </div>
 
             <div className="container mx-auto px-4 lg:px-8 py-20">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                     
                     {/* Left Column: Data */}
                     <div className="lg:col-span-8 space-y-24">

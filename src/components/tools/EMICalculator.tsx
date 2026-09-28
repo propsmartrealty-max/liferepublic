@@ -45,7 +45,7 @@ export const EMICalculator: React.FC = () => {
     return (
         <div className="bg-[#151822] border border-[#DADCE0] rounded-[24px] shadow-[0_80px_160px_-40px_rgba(0,0,0,0.1)] p-10 md:p-20 border border-[#DADCE0] relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full -mr-48 -mt-48 blur-[120px] pointer-events-none"></div>
-            <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-8">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-8">
                 <div className="flex items-center gap-6">
                     <div className="p-6 bg-white text-[#202124] rounded-[2rem] shadow-2xl relative group">
                         <Calculator size={40} className="group-hover:rotate-12 transition-transform" />
@@ -73,7 +73,7 @@ export const EMICalculator: React.FC = () => {
                             </div>
                             <input type="range" min="1000000" max="30000000" step="100000" value={loanAmount} onChange={(e) => setLoanAmount(Number(e.target.value))} className="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer accent-accent" />
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="group">
                                 <div className="flex justify-between mb-6"><label className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold">Rate (% p.a)</label><span className="text-2xl font-bold text-[#202124] group-hover:text-[#1a73e8] transition-colors">{interestRate}%</span></div>
                                 <input type="range" min="6" max="15" step="0.05" value={interestRate} onChange={(e) => setInterestRate(Number(e.target.value))} className="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer accent-accent" />
@@ -95,7 +95,7 @@ export const EMICalculator: React.FC = () => {
                 <div className="lg:col-span-5 flex flex-col gap-8">
                     <div className="flex-1 bg-white rounded-[24px] p-12 text-[#202124] relative overflow-hidden flex flex-col justify-between shadow-2xl border border-[#DADCE0]">
                         <div className="space-y-12">
-                            <div><p className="text-[10px] font-bold text-[#202124]/30 tracking-tight font-semibold mb-4">Projected Sovereign EMI</p><div className="flex items-center gap-4 text-6xl font-sans font-bold text-[#202124] tracking-tighter"><IndianRupee size={48} className="text-[#1a73e8]" />{emi.toLocaleString('en-IN')}</div></div>
+                            <div><p className="text-[10px] font-bold text-[#202124]/30 tracking-tight font-semibold mb-4">Projected Sovereign EMI</p><div className="flex items-center gap-4 text-5xl font-sans font-bold text-[#202124] tracking-tighter"><IndianRupee size={48} className="text-[#1a73e8]" />{emi.toLocaleString('en-IN')}</div></div>
                             <div className="space-y-6">
                                 <div className="flex justify-between items-center"><span className="text-[10px] text-[#202124]/30 font-bold tracking-tight font-semibold">Total Interest Cost</span><span className="text-xl font-bold text-[#1a73e8]">{formatCurrency(totalInterest)}</span></div>
                                 <div className="w-full h-px bg-transparent/10"></div>

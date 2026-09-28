@@ -134,7 +134,7 @@ export const BlogPostPage: React.FC = () => {
                             <span className="flex items-center gap-2"><Clock size={14} /> {Math.ceil(post.content.length / 1000)} MIN READ</span>
                         </div>
                         
-                        <h1 className="text-4xl md:text-7xl font-sans font-bold text-[#202124] mb-12 leading-tight tracking-tighter">
+                        <h1 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-12 leading-tight tracking-tighter">
                             {post.title}
                         </h1>
 

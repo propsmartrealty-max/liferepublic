@@ -50,7 +50,7 @@ export const Amenities: React.FC = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-6xl font-sans font-bold mb-6"
+                        className="text-5xl md:text-5xl font-sans font-bold mb-6"
                     >
                         Life Republic Township Amenities
                     </motion.h1>

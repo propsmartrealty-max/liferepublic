@@ -46,7 +46,7 @@ export const InsightDetail: React.FC = () => {
                     <span className="text-[#E5C07B]">{article.title}</span>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                     {/* Main Content */}
                     <div className="lg:col-span-8">
                         <header className="mb-12">

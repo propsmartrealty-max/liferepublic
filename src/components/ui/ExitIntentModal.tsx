@@ -81,7 +81,7 @@ export const ExitIntentModal: React.FC = () => {
                                             <div className="w-2 h-2 rounded-full bg-accent animate-ping"></div>
                                             <p className="text-[11px] font-bold tracking-tight font-semibold text-[#1a73e8]">Neural Calibration v6.0</p>
                                         </div>
-                                        <h3 className="text-6xl md:text-7xl font-sans font-bold leading-[0.9] tracking-tighter">
+                                        <h3 className="text-5xl md:text-5xl font-sans font-bold leading-[0.9] tracking-tighter">
                                             Synthesis <br />Locked.
                                         </h3>
                                     </div>
@@ -112,7 +112,7 @@ export const ExitIntentModal: React.FC = () => {
                                     <Cpu size={24} className="animate-pulse" />
                                     <span className="text-[12px] font-bold tracking-tight font-semibold">Behavioral Anchor Protocol</span>
                                 </div>
-                                <h2 className="text-6xl md:text-8xl font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.8] italic">
+                                <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.8] italic">
                                     Secure the <br /> <span className="text-[#1a73e8]">Thesis.</span>
                                 </h2>
                                 <p className="text-2xl text-[#5F6368] font-medium leading-relaxed mb-8 max-w-2xl">

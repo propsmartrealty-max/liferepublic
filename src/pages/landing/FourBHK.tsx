@@ -64,7 +64,7 @@ export const FourBHK: React.FC = () => {
                             <Crown size={16} className="text-[#1a73e8] animate-pulse" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8]">The 24K Sovereign Monograph v5.5</span>
                         </div>
-                        <h1 className="text-6xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.8]">
+                        <h1 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.8]">
                             The 4BHK <br /> <span className="text-[#1a73e8] italic">Authority.</span>
                         </h1>
                         <p className="text-2xl md:text-3xl text-[#5F6368] font-medium max-w-4xl mx-auto leading-relaxed">
@@ -81,7 +81,7 @@ export const FourBHK: React.FC = () => {
                         <div className="lg:col-span-8">
                             <div className="mb-10">
                                 <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-6 block">Structural Synthesis</span>
-                                <h2 className="text-5xl md:text-8xl font-sans font-bold text-[#202124] mb-10 tracking-tighter">Spatial <br /><span className="text-[#1a73e8] italic">Superiority.</span></h2>
+                                <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] mb-10 tracking-tighter">Spatial <br /><span className="text-[#1a73e8] italic">Superiority.</span></h2>
                                 <p className="text-2xl text-[#5F6368] font-medium leading-relaxed max-w-3xl">
                                     Owning a 4BHK at Life Republic is a statement of architectural and financial wisdom. Our villas (24K Espada, Sound of Soul) synthesize land ownership with the elite security of a managed township.
                                 </p>
@@ -89,13 +89,13 @@ export const FourBHK: React.FC = () => {
 
                             <AnimatePresence mode="wait">
                                 {loading ? (
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         {[1, 2].map(i => (
                                             <div key={i} className="bg-[#F8F9FA] rounded-[24px] h-[600px] animate-pulse" />
                                         ))}
                                     </div>
                                 ) : (
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         {projects.map((project, idx) => (
                                             <motion.div
                                                 key={project.id}

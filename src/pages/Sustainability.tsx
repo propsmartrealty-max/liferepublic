@@ -21,7 +21,7 @@ export const Sustainability: React.FC = () => {
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-emerald-500/5 rounded-full blur-[200px] pointer-events-none -mr-48 -mt-48"></div>
             
             <div className="container mx-auto px-4 relative z-10">
-                <div className="flex flex-col lg:flex-row items-end justify-between mb-32 gap-16">
+                <div className="flex flex-col lg:flex-row items-end justify-between mb-32 gap-8">
                     <div className="max-w-4xl">
                         <motion.div 
                             initial={{ opacity: 0, x: -30 }}
@@ -31,7 +31,7 @@ export const Sustainability: React.FC = () => {
                             <ShieldCheck size={16} className="text-emerald-400 animate-pulse" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold">Sovereign ESG Protocol v6.0</span>
                         </motion.div>
-                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.8]">
+                        <h1 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.8]">
                             Environmental <br /><span className="text-emerald-500 italic">Structuralism.</span>
                         </h1>
                         <p className="text-2xl md:text-3xl text-[#5F6368] leading-relaxed font-medium max-w-3xl">
@@ -50,7 +50,7 @@ export const Sustainability: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-32">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-32">
                     {metrics.map((metric, idx) => (
                         <motion.div 
                             key={idx}
@@ -87,7 +87,7 @@ export const Sustainability: React.FC = () => {
                                 <Network size={24} />
                                 <span className="text-[11px] tracking-tight font-semibold">Infrastructure Backbone Sync</span>
                             </div>
-                            <h2 className="text-5xl md:text-8xl font-sans font-bold tracking-tighter leading-[0.85]">The 150ft <br /> <span className="text-emerald-400 italic">Oxygen Corridor.</span></h2>
+                            <h2 className="text-5xl md:text-5xl font-sans font-bold tracking-tighter leading-[0.85]">The 150ft <br /> <span className="text-emerald-400 italic">Oxygen Corridor.</span></h2>
                             <p className="text-2xl text-[#202124]/60 leading-relaxed font-medium">
                                 Our central spine road is a massive 400-acre green filter. Lined with thousands of native trees, it creates a micro-climate that reduces ambient temperatures by up to 3°C across all residential clusters.
                             </p>

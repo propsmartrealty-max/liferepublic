@@ -28,7 +28,7 @@ export const InsightsLanding: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto text-center mb-8">
                     <span className="text-[#1a73e8] text-sm font-bold tracking-tight font-semibold block mb-4">Market Knowledge Hub</span>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold text-[#E5C07B] mb-6">Pune Real Estate Insights</h1>
+                    <h1 className="text-4xl md:text-5xl lg:text-5xl font-sans font-bold text-[#E5C07B] mb-6">Pune Real Estate Insights</h1>
                     <p className="text-lg text-[#202124] leading-relaxed">
                         Deep dive into the trends, micro-markets, and premium lifestyle offerings shaping the future of Hinjewadi, Mahalunge, and Baner.
                     </p>

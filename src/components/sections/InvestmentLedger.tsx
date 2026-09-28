@@ -46,7 +46,7 @@ export const InvestmentLedger: React.FC = () => {
                 >
                     <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-transparent pointer-events-none"></div>
                     
-                    <div className="flex items-center gap-12 relative z-10 w-full">
+                    <div className="flex items-center gap-6 relative z-10 w-full">
                         <div className="flex items-center gap-4 bg-accent text-[#202124] px-8 py-4 rounded-full font-bold text-[11px] tracking-tight font-semibold shadow-2xl animate-pulse whitespace-nowrap">
                             <Timer size={18} /> Live Scarcity Ledger
                         </div>
@@ -56,7 +56,7 @@ export const InvestmentLedger: React.FC = () => {
                                 initial={{ x: 20, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
                                 exit={{ x: -20, opacity: 0 }}
-                                className="flex flex-col md:flex-row md:items-center gap-6 md:gap-12 w-full"
+                                className="flex flex-col md:flex-row md:items-center gap-6 md:gap-6 w-full"
                             >
                                 <span className="font-sans font-bold text-[#202124] text-3xl md:text-4xl tracking-tighter italic">{liveTicker[tickerIndex].project}</span>
                                 <div className="h-8 w-px bg-transparent/10 hidden md:block"></div>
@@ -77,7 +77,7 @@ export const InvestmentLedger: React.FC = () => {
                     </div>
                 </motion.div>
 
-                <div className="flex flex-col lg:flex-row items-end justify-between mb-32 gap-16">
+                <div className="flex flex-col lg:flex-row items-end justify-between mb-32 gap-8">
                     <div className="max-w-4xl">
                         <motion.div 
                             initial={{ opacity: 0, x: -30 }}
@@ -87,7 +87,7 @@ export const InvestmentLedger: React.FC = () => {
                             <Cpu size={16} className="text-[#1a73e8]" />
                             <span className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold">Financial Synthesis Protocol v6.5</span>
                         </motion.div>
-                        <h2 className="text-6xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-12 tracking-tighter leading-[0.8]">
+                        <h2 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-12 tracking-tighter leading-[0.8]">
                             The Financial <br /> <span className="text-[#1a73e8] italic">Authority.</span>
                         </h2>
                         <p className="text-2xl md:text-3xl text-[#5F6368] font-medium leading-relaxed max-w-3xl">
@@ -104,7 +104,7 @@ export const InvestmentLedger: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-40">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-40">
                     {/* Tectonic Ledger Matrix v6.5 */}
                     <motion.div 
                         initial={{ opacity: 0, y: 50 }}
@@ -233,7 +233,7 @@ export const InvestmentLedger: React.FC = () => {
                     </motion.div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {[
                         { title: 'Rental Synthesis', desc: 'Sovereign 2 BHK yields have outpaced the Hinjewadi market by 22.4% since the Spine Road expansion. 2026 forecast: Peak Yield.', icon: LineChart },
                         { title: 'Liquidity Matrix', desc: 'The 400-acre gated ecosystem maintains a robust secondary market with 100% investor verification and zero-latency resale.', icon: ShieldCheck },

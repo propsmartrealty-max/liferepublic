@@ -63,7 +63,7 @@ export const ConnectivityHub: React.FC = () => {
                         >
                             <MapPin size={14} /> Township Connectivity Ledger
                         </motion.div>
-                        <h1 className="text-4xl md:text-6xl font-sans font-bold text-[#202124] mb-6 leading-tight">
+                        <h1 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-6 leading-tight">
                             Strategic Connectivity & <br />
                             <span className="text-[#1a73e8]">Urban Mobility Matrix</span>
                         </h1>
@@ -77,7 +77,7 @@ export const ConnectivityHub: React.FC = () => {
             {/* Distance Matrix */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                         {locationNodes.map((cat, idx) => (
                             <motion.div
                                 key={idx}

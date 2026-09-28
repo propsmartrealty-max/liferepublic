@@ -32,7 +32,7 @@ export const ITProfessionalsHub: React.FC = () => {
                         <span className="text-[#1a73e8] text-sm font-bold tracking-tight font-semibold block">
                             Rajiv Gandhi IT Park
                         </span>
-                        <h1 className="text-5xl md:text-7xl font-sans font-bold text-[#202124] tracking-tighter leading-[1.1]">
+                        <h1 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter leading-[1.1]">
                             The Ultimate <br /><span className="text-[#1a73e8] italic">Work-Life</span> Synthesis.
                         </h1>
                         <p className="text-xl text-gray-300 leading-relaxed font-medium">
@@ -52,7 +52,7 @@ export const ITProfessionalsHub: React.FC = () => {
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="text-center mb-8">
                         <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold block mb-4">Strategic Location</span>
-                        <h2 className="text-4xl md:text-6xl font-sans font-bold text-[#202124] tracking-tighter">Minutes from <br /><span className="text-[#1a73e8] italic">Innovation.</span></h2>
+                        <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter">Minutes from <br /><span className="text-[#1a73e8] italic">Innovation.</span></h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -88,7 +88,7 @@ export const ITProfessionalsHub: React.FC = () => {
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2 space-y-10">
                             <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold block">Smart Homes</span>
-                            <h2 className="text-4xl md:text-6xl font-sans font-bold tracking-tighter leading-tight">
+                            <h2 className="text-4xl md:text-5xl font-sans font-bold tracking-tighter leading-tight">
                                 Engineered for <br /><span className="text-[#1a73e8] italic">Digital Nomads.</span>
                             </h2>
                             <p className="text-xl text-[#5F6368] font-medium leading-relaxed">

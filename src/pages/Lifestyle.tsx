@@ -62,7 +62,7 @@ const VolumeItem = ({ vol, idx }: { vol: any, idx: number }) => {
                             <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
                             <h4 className="text-[12px] font-bold text-[#1a73e8] tracking-tight font-semibold">{vol.subtitle}</h4>
                         </div>
-                        <h3 className="text-6xl md:text-7xl font-sans font-bold text-[#202124] tracking-tighter leading-none">{vol.title}</h3>
+                        <h3 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter leading-none">{vol.title}</h3>
                     </div>
                 </div>
                 <p className="text-2xl md:text-3xl text-[#5F6368] font-medium leading-relaxed italic max-w-2xl">"{vol.desc}"</p>
@@ -102,7 +102,7 @@ export const Lifestyle: React.FC = () => {
                             <Wind size={24} className="text-[#1a73e8] animate-pulse" />
                             <span className="text-[12px] font-bold tracking-tight font-semibold text-[#1a73e8]">The Lifestyle Monograph v6.5</span>
                         </div>
-                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-4 tracking-tighter leading-[0.75]">
+                        <h1 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-4 tracking-tighter leading-[0.75]">
                             Atmospheric <br /> <span className="italic text-[#1a73e8]">Sovereignty.</span>
                         </h1>
                         <p className="text-3xl md:text-4xl text-text-muted max-w-6xl mx-auto leading-relaxed font-medium italic">
@@ -111,7 +111,7 @@ export const Lifestyle: React.FC = () => {
                     </motion.div>
                 </div>
                 
-                <div className="absolute bottom-24 left-24 hidden lg:flex items-center gap-16 text-text-muted">
+                <div className="absolute bottom-24 left-24 hidden lg:flex items-center gap-8 text-text-muted">
                     <div className="flex items-center gap-3"><Zap size={24} className="text-[#1a73e8]" /><span className="text-[11px] font-bold tracking-tight font-semibold">Atmosphere Sync Active</span></div>
                     <div className="flex items-center gap-3"><Globe size={24} /><span className="text-[11px] font-bold tracking-tight font-semibold">400-Acre structural mesh</span></div>
                 </div>
@@ -137,10 +137,10 @@ export const Lifestyle: React.FC = () => {
                                 <Cpu size={24} className="text-[#1a73e8]" />
                                 <span className="text-[12px] font-bold text-[#1a73e8] tracking-tight font-semibold">Citizenship Synthesis v6.5</span>
                             </div>
-                            <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] mb-4 tracking-tighter leading-[0.75]">Join the <br /> <span className="text-[#1a73e8] italic">Republic.</span></h2>
+                            <h2 className="text-5xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] mb-4 tracking-tighter leading-[0.75]">Join the <br /> <span className="text-[#1a73e8] italic">Republic.</span></h2>
                         </motion.div>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-16">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
                             {[
                                 { label: 'Active Citizens', val: '12,500+', icon: Users, color: 'rainbow-text-clip font-bold' },
                                 { label: 'Parks & Avenues', val: '45+', icon: Trees, color: 'text-emerald-400' },
@@ -151,7 +151,7 @@ export const Lifestyle: React.FC = () => {
                                     <div className="w-24 h-24 bg-surface border border-border-strong rounded-[24px] flex items-center justify-center text-text-muted mx-auto group-hover/stat:bg-accent group-hover/stat:text-[#202124] group-hover/stat:rotate-12 transition-all shadow-2xl">
                                         <stat.icon size={48} strokeWidth={1} />
                                     </div>
-                                    <div className={`text-4xl md:text-5xl lg:text-6xl font-sans font-bold tracking-tighter group-hover/stat:scale-110 transition-transform ${stat.color}`}>{stat.val}</div>
+                                    <div className={`text-4xl md:text-5xl lg:text-5xl font-sans font-bold tracking-tighter group-hover/stat:scale-110 transition-transform ${stat.color}`}>{stat.val}</div>
                                     <div className="text-[14px] font-bold text-text-muted tracking-tight font-semibold">{stat.label}</div>
                                 </motion.div>
                             ))}

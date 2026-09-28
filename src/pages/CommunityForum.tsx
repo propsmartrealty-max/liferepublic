@@ -33,7 +33,7 @@ export const CommunityForum: React.FC = () => {
                             <Network size={20} className="text-[#1a73e8] animate-pulse" />
                             <span className="text-[11px] font-bold tracking-tight font-semibold">Social Synthesis Matrix v6.0</span>
                         </motion.div>
-                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-12 tracking-tighter leading-[0.8]">Resident <br /><span className="text-[#1a73e8] italic">Authority.</span></h1>
+                        <h1 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-12 tracking-tighter leading-[0.8]">Resident <br /><span className="text-[#1a73e8] italic">Authority.</span></h1>
                         <p className="text-2xl md:text-3xl text-[#5F6368] leading-relaxed font-medium max-w-3xl">
                             A preview of the private digital ecosystem for Life Republic citizens. Seamlessly connect with 12,000+ families through the <span className="text-[#202124] font-bold underline decoration-accent underline-offset-8">Sovereign Social Protocol</span>.
                         </p>
@@ -111,7 +111,7 @@ export const CommunityForum: React.FC = () => {
                                         </div>
                                         
                                         <div className="flex items-center justify-between border-t border-gray-50 pt-10">
-                                            <div className="flex items-center gap-12">
+                                            <div className="flex items-center gap-6">
                                                 <div className="flex items-center gap-4">
                                                     <div className="w-12 h-12 bg-[#F8F9FA] rounded-2xl flex items-center justify-center text-[#202124] border border-[#DADCE0] shadow-sm">
                                                         <Users size={20} />
@@ -216,7 +216,7 @@ export const CommunityForum: React.FC = () => {
                         <div className="w-32 h-32 bg-accent text-[#202124] rounded-[3.5rem] flex items-center justify-center mx-auto mb-8 shadow-2xl group-hover:scale-110 transition-transform">
                             <Heart size={64} className="animate-pulse" />
                         </div>
-                        <h2 className="text-6xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-8 tracking-tighter leading-[0.8] italic">Join the <span className="text-[#1a73e8]">Citizenship.</span></h2>
+                        <h2 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-8 tracking-tighter leading-[0.8] italic">Join the <span className="text-[#1a73e8]">Citizenship.</span></h2>
                         <p className="text-3xl text-[#202124]/50 mb-10 font-medium leading-relaxed max-w-4xl mx-auto">Secure your place in Hinjewadi's most active integrated township. Join 12,000+ families already in residence.</p>
                         <a href="/projects" className="inline-flex items-center gap-8 bg-[#151822] border border-[#DADCE0] text-[#202124] px-24 py-12 rounded-full font-bold text-3xl hover:bg-accent hover:scale-[1.05] transition-all shadow-2xl group/btn">
                             Browse Sovereign Portfolio

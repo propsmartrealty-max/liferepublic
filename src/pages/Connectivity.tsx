@@ -43,7 +43,7 @@ export const Connectivity: React.FC = () => {
                             <Route size={14} className="text-[#1a73e8]" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8]">Sovereign Transit Protocol</span>
                         </motion.div>
-                        <h1 className="text-5xl md:text-8xl font-sans font-bold text-[#202124] mb-8 leading-tight">
+                        <h1 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] mb-8 leading-tight">
                             The Spine of <br /> <span className="text-[#1a73e8] italic">Future Mobility.</span>
                         </h1>
                         <p className="text-xl text-[#5F6368] max-w-2xl mx-auto leading-relaxed font-medium">
@@ -56,7 +56,7 @@ export const Connectivity: React.FC = () => {
             {/* Metro 2026 Roadmap */}
             <section className="py-12 bg-[#F8F9FA] overflow-hidden">
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col lg:flex-row gap-16 items-center">
+                    <div className="flex flex-col lg:flex-row gap-8 items-center">
                         <div className="lg:w-1/2">
                             <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-8">Metro Line 3 <br /> <span className="text-[#1a73e8] italic">The Value Catalyst.</span></h2>
                             <div className="space-y-8">
@@ -104,7 +104,7 @@ export const Connectivity: React.FC = () => {
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-end justify-between mb-8 gap-8">
                         <div>
-                            <h2 className="text-4xl md:text-6xl font-sans font-bold text-[#202124] mb-4">The Transit Matrix.</h2>
+                            <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-4">The Transit Matrix.</h2>
                             <p className="text-[#5F6368] text-xl font-medium">Real-time travel synthesis for the 2026 infrastructure roadmap.</p>
                         </div>
                         <div className="flex items-center gap-4 bg-[#F8F9FA] p-3 rounded-2xl border border-[#DADCE0] shadow-sm">
@@ -163,7 +163,7 @@ export const Connectivity: React.FC = () => {
             <section className="py-16 bg-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/aerial-night.png')] bg-cover bg-center opacity-10"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
-                    <h2 className="text-4xl md:text-6xl font-sans font-bold text-[#202124] mb-8">Synthesize Your Commute.</h2>
+                    <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-8">Synthesize Your Commute.</h2>
                     <p className="text-xl text-[#5F6368] mb-12 max-w-2xl mx-auto font-medium">
                         Experience the frictionless mobility of Pune's most strategically located integrated township.
                     </p>

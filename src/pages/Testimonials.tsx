@@ -81,7 +81,7 @@ export const Testimonials: React.FC = () => {
                             <ShieldCheck size={20} className="text-[#1a73e8] animate-pulse" />
                             <span className="text-[12px] font-bold tracking-tight font-semibold text-[#1a73e8]">Verified Social Monograph v6.5</span>
                         </motion.div>
-                        <h1 className="text-8xl md:text-[5rem] lg:text-[6rem] font-sans font-bold mb-8 tracking-tighter leading-[0.8] italic">
+                        <h1 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold mb-8 tracking-tighter leading-[0.8] italic">
                             The Collective <br /> <span className="text-[#1a73e8]">Authority.</span>
                         </h1>
                         <p className="text-3xl md:text-4xl text-[#202124]/40 max-w-5xl mx-auto leading-relaxed font-medium italic">
@@ -89,7 +89,7 @@ export const Testimonials: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
                         {communityStats.map((stat, idx) => (
                             <motion.div 
                                 key={idx}
@@ -102,7 +102,7 @@ export const Testimonials: React.FC = () => {
                                     <stat.icon size={48} strokeWidth={1} />
                                 </div>
                                 <div>
-                                    <div className="text-8xl font-sans font-bold tracking-tighter mb-2 italic group-hover:text-[#1a73e8] transition-colors">{stat.value}</div>
+                                    <div className="text-5xl font-sans font-bold tracking-tighter mb-2 italic group-hover:text-[#1a73e8] transition-colors">{stat.value}</div>
                                     <div className="text-[14px] font-bold tracking-tight font-semibold text-[#202124]/20">{stat.label}</div>
                                 </div>
                             </motion.div>
@@ -114,13 +114,13 @@ export const Testimonials: React.FC = () => {
             {/* Resident Stories Matrix v6.5 */}
             <section className="py-64 bg-[#F8F9FA]/30 relative overflow-hidden">
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-32 border-b border-[#DADCE0] pb-20 gap-12">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-32 border-b border-[#DADCE0] pb-20 gap-6">
                         <div className="max-w-3xl">
                             <div className="flex items-center gap-4 mb-6">
                                 <Cpu size={24} className="text-[#1a73e8]" />
                                 <span className="text-[11px] font-bold text-[#1a73e8] tracking-tight font-semibold">Community Narratives</span>
                             </div>
-                            <h2 className="text-7xl md:text-9xl font-sans font-bold text-[#202124] tracking-tighter leading-none italic">Citizen <br />Monographs.</h2>
+                            <h2 className="text-5xl md:text-9xl font-sans font-bold text-[#202124] tracking-tighter leading-none italic">Citizen <br />Monographs.</h2>
                         </div>
                         <div className="flex flex-wrap gap-6">
                             {['Connectivity', 'Safety', 'Nature', 'ROI Synthesis'].map((tag, i) => (
@@ -131,7 +131,7 @@ export const Testimonials: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="columns-1 md:columns-2 gap-16 space-y-16 max-w-7xl mx-auto">
+                    <div className="columns-1 md:columns-2 gap-8 space-y-16 max-w-7xl mx-auto">
                         {reviews.map((review, idx) => (
                             <motion.div
                                 key={idx}
@@ -214,7 +214,7 @@ export const Testimonials: React.FC = () => {
                             <Network size={400} />
                         </div>
                         <Sparkles size={64} className="text-[#1a73e8] mx-auto mb-12 animate-pulse" />
-                        <h2 className="text-7xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] tracking-tighter leading-[0.8] italic">Ready to join the <br /><span className="text-[#1a73e8]">Citizenship?</span></h2>
+                        <h2 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] tracking-tighter leading-[0.8] italic">Ready to join the <br /><span className="text-[#1a73e8]">Citizenship?</span></h2>
                         <p className="text-3xl text-[#5F6368] font-medium leading-relaxed max-w-3xl mx-auto italic">
                             Our citizens are our greatest structural proof. Join 12,500+ families already living the **Sovereign 15-Minute City** dream.
                         </p>

@@ -45,7 +45,7 @@ export const NRIInvestorHub: React.FC = () => {
                             <Globe size={16} className="text-[#1a73e8] animate-pulse" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold">Global Investment Authority v6.0</span>
                         </motion.div>
-                        <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] mb-12 tracking-tighter leading-[0.8]">
+                        <h2 className="text-5xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] mb-12 tracking-tighter leading-[0.8]">
                             NRI Legal & <br /><span className="text-[#1a73e8] italic">Tax Synthesis.</span>
                         </h2>
                         <p className="text-2xl text-[#5F6368] font-medium leading-relaxed mb-8 max-w-2xl">
@@ -131,7 +131,7 @@ export const NRIInvestorHub: React.FC = () => {
                                 <div className="w-2 h-2 rounded-full bg-accent animate-ping"></div>
                                 <span className="text-[10px] font-bold text-gray-300 tracking-tight font-medium">Global Synthesis</span>
                             </div>
-                            <div className="text-6xl font-sans font-bold text-[#202124] mb-2 tracking-tighter italic">1,850+</div>
+                            <div className="text-5xl font-sans font-bold text-[#202124] mb-2 tracking-tighter italic">1,850+</div>
                             <div className="text-[11px] font-bold text-[#5F6368] tracking-tight font-semibold">Global NRI Families</div>
                             <div className="flex items-center gap-2 mt-6 text-emerald-500 font-bold text-[10px] tracking-tight font-medium">
                                 <TrendingUp size={14} /> +12% Growth YOY

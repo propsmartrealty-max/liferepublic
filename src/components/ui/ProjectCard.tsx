@@ -218,7 +218,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                                         <ShieldCheck size={14} className="rainbow-text-clip font-bold" />
                                         <span className="text-xs font-bold tracking-widest uppercase">MahaRERA: {displayRera}</span>
                                     </div>
-                                    <h2 className="text-5xl md:text-6xl font-bold text-white mb-2">{displayName}</h2>
+                                    <h2 className="text-5xl md:text-5xl font-bold text-white mb-2">{displayName}</h2>
                                     <p className="text-lg text-white/70 mb-6">{project.usp}</p>
                                     
                                     <Link to={`/projects/${displaySlug}`} className="w-full py-4 bg-white text-black hover:bg-rainbow-hover rounded-full font-bold uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-2">

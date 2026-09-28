@@ -42,7 +42,7 @@ export const HTMLSitemap: React.FC = () => {
             <div className="container mx-auto px-4 mt-12">
                 <h1 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-12">Site Directory</h1>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     
                     {/* Core Pages */}
                     <div>

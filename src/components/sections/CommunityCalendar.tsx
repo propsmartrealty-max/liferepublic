@@ -69,7 +69,7 @@ export const CommunityCalendar: React.FC = () => {
                         >
                             The Sovereign Social
                         </motion.span>
-                        <h2 className="text-5xl md:text-6xl font-sans font-bold text-[#202124] leading-[1.1] mb-8">
+                        <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] leading-[1.1] mb-8">
                             Community <br />Pulse 2026
                         </h2>
                         <p className="text-[#5F6368] text-lg font-light leading-relaxed max-w-xl">
@@ -117,7 +117,7 @@ export const CommunityCalendar: React.FC = () => {
 
                 {/* Social Proof Layer */}
                 <div className="mt-32 border-t border-[#DADCE0] pt-20">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             { label: 'Families', value: '12,000+' },
                             { label: 'Schools', value: '02 Global' },

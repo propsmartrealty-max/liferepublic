@@ -42,7 +42,7 @@ export const ROICalculator: React.FC = () => {
                             <Target size={14} className="text-[#1a73e8]" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8]">Tectonic ROI Engine v2.0</span>
                         </motion.div>
-                        <h2 className="text-4xl md:text-6xl font-sans font-bold text-[#202124] mb-6 leading-tight">
+                        <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-6 leading-tight">
                             Project Your <br /> <span className="text-[#1a73e8] italic">Wealth Velocity.</span>
                         </h2>
                         <p className="text-[#5F6368] text-lg leading-relaxed font-medium">
@@ -140,13 +140,13 @@ export const ROICalculator: React.FC = () => {
                                     key={futureValue}
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    className="text-6xl md:text-8xl font-sans font-bold text-[#202124] tracking-tighter"
+                                    className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter"
                                 >
                                     {formatCurrency(futureValue)}
                                 </motion.h3>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-[#DADCE0]">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-12 border-t border-[#DADCE0]">
                                 <div>
                                     <div className="flex items-center gap-2 mb-2">
                                         <TrendingUp size={14} className="text-green-400" />

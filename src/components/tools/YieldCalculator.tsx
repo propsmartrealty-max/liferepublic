@@ -40,7 +40,7 @@ export const YieldCalculator: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
                     {/* Controls */}
                     <div className="bg-[#151822] border border-[#DADCE0]/5 backdrop-blur-xl p-10 rounded-[24px] border border-[#DADCE0] space-y-8">
                         <div>

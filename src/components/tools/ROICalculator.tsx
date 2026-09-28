@@ -70,7 +70,7 @@ export const ROICalculator: React.FC = () => {
         <div className="bg-[#151822] border border-[#DADCE0] rounded-[24px] shadow-[0_80px_160px_-40px_rgba(0,0,0,0.1)] p-10 md:p-20 border border-[#DADCE0] relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full -mr-48 -mt-48 blur-[120px] pointer-events-none"></div>
             
-            <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-8">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-8">
                 <div className="flex items-center gap-6">
                     <div className="p-6 bg-white text-[#202124] rounded-[2rem] shadow-2xl relative group">
                         <TrendingUp size={40} className="group-hover:rotate-12 transition-transform" />
@@ -201,12 +201,12 @@ export const ROICalculator: React.FC = () => {
                             <div className="space-y-12">
                                 <div className="group cursor-help">
                                     <p className="text-[10px] font-bold text-[#202124]/30 tracking-tight font-semibold mb-3">Projected Asset Valuation</p>
-                                    <p className="text-5xl md:text-6xl font-sans font-bold text-[#202124] tracking-tighter group-hover:text-[#1a73e8] transition-colors">{formatCurrency(finalValue)}</p>
+                                    <p className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter group-hover:text-[#1a73e8] transition-colors">{formatCurrency(finalValue)}</p>
                                 </div>
                                 
                                 <div className="group cursor-help">
                                     <p className="text-[10px] font-bold text-[#202124]/30 tracking-tight font-semibold mb-3">Total Wealth Synthesis</p>
-                                    <p className="text-5xl md:text-6xl font-sans font-bold text-[#1a73e8] tracking-tighter">+{formatCurrency(totalROI)}</p>
+                                    <p className="text-5xl md:text-5xl font-sans font-bold text-[#1a73e8] tracking-tighter">+{formatCurrency(totalROI)}</p>
                                     <div className="mt-4 flex flex-wrap gap-3">
                                         <div className="px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full text-[10px] font-bold text-[#1a73e8] tracking-tight font-medium">
                                             ~{((totalROI / propertyValue) * 100).toFixed(1)}% Absolute ROI

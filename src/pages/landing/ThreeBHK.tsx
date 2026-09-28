@@ -49,7 +49,7 @@ export const ThreeBHK: React.FC = () => {
                             <Sparkles size={16} className="text-[#1a73e8] animate-pulse" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8]">The Premium Collection v5.5</span>
                         </motion.div>
-                        <h1 className="text-6xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.8]">
+                        <h1 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.8]">
                             Synthesizing <br /> <span className="text-[#1a73e8] italic">Grandeur.</span>
                         </h1>
                         <p className="text-2xl md:text-3xl text-[#5F6368] max-w-4xl leading-relaxed font-medium">
@@ -61,7 +61,7 @@ export const ThreeBHK: React.FC = () => {
 
             <div className="container mx-auto px-4 py-16">
                 {/* Spatial Monograph Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-40">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-40">
                     {[
                         { title: 'Volumetric Depth', desc: '10.5ft+ floor-to-ceiling heights for enhanced air-flow and natural illumination.', icon: Maximize },
                         { title: 'Tectonic Design', desc: '3-side open corner apartments ensuring 270-degree views across elite clusters.', icon: Layout },
@@ -89,13 +89,13 @@ export const ThreeBHK: React.FC = () => {
                     <div className="flex items-end justify-between mb-10 border-b border-[#DADCE0] pb-12">
                         <div className="max-w-2xl">
                             <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-4 block">Active Synthesis</span>
-                            <h2 className="text-5xl md:text-7xl font-sans font-bold text-[#202124] tracking-tighter">The 3 BHK <span className="text-[#1a73e8] italic">Portfolio.</span></h2>
+                            <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter">The 3 BHK <span className="text-[#1a73e8] italic">Portfolio.</span></h2>
                         </div>
                         <div className="flex items-center gap-4 text-[10px] font-bold text-[#5F6368] tracking-tight font-medium bg-[#F8F9FA] px-6 py-3 rounded-full border border-[#DADCE0]">
                             <Building2 size={14} className="text-[#1a73e8]" /> {projects.length} Active Clusters
                         </div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projects.map((project) => (
                             <ProjectCard key={project.id} project={project} />
                         ))}
@@ -110,7 +110,7 @@ export const ThreeBHK: React.FC = () => {
                         <div className="lg:col-span-5 space-y-12">
                             <div className="space-y-6">
                                 <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold">Spatial Intelligence</span>
-                                <h2 className="text-5xl md:text-7xl font-sans font-bold tracking-tighter leading-tight">The Space <br /><span className="text-[#1a73e8] italic">Synthesis Delta.</span></h2>
+                                <h2 className="text-5xl md:text-5xl font-sans font-bold tracking-tighter leading-tight">The Space <br /><span className="text-[#1a73e8] italic">Synthesis Delta.</span></h2>
                             </div>
                             <p className="text-2xl text-[#5F6368] leading-relaxed font-medium">
                                 Standalone 3 BHK units in Hinjewadi often compromise on peripheral depth. Life Republic's township infrastructure adds 390-acres of "Extended Living Room" to your private residence.
@@ -161,7 +161,7 @@ export const ThreeBHK: React.FC = () => {
                             <Zap size={100} />
                         </div>
                         <Zap size={64} className="text-[#1a73e8] mx-auto mb-10 animate-pulse" />
-                        <h2 className="text-4xl md:text-7xl font-sans font-bold text-[#202124] mb-10 tracking-tighter">Secure Your <br /> <span className="text-[#1a73e8] italic">Sovereign Space.</span></h2>
+                        <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-10 tracking-tighter">Secure Your <br /> <span className="text-[#1a73e8] italic">Sovereign Space.</span></h2>
                         <p className="text-2xl text-[#5F6368] font-medium leading-relaxed max-w-2xl mx-auto mb-8">
                             Join the elite collection of homeowners who demand tectonic permanence and global standards.
                         </p>

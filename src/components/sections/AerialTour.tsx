@@ -38,7 +38,7 @@ export const AerialTour: React.FC = () => {
                             <Plane size={16} className="text-[#1a73e8]" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8]">Cinematic Aerial Sequence</span>
                         </div>
-                        <h2 className="text-5xl md:text-8xl font-sans font-bold mb-6 drop-shadow-2xl">
+                        <h2 className="text-5xl md:text-5xl font-sans font-bold mb-6 drop-shadow-2xl">
                             The Horizon of <br /> <span className="text-[#1a73e8] italic">Sovereignty.</span>
                         </h2>
                         <p className="text-xl md:text-2xl text-[#202124]/80 max-w-2xl mx-auto font-medium">

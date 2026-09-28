@@ -46,13 +46,13 @@ export const TwoBHK: React.FC = () => {
                             <Sparkles size={16} className="text-[#1a73e8] animate-pulse" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8]">The Efficiency Collection v5.5</span>
                         </motion.div>
-                        <h1 className="text-6xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.8]">Synthesizing <br /> <span className="text-[#1a73e8] italic">Efficiency.</span></h1>
+                        <h1 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.8]">Synthesizing <br /> <span className="text-[#1a73e8] italic">Efficiency.</span></h1>
                         <p className="text-2xl md:text-3xl text-[#5F6368] max-w-4xl leading-relaxed font-medium">The Life Republic 2 BHK collection is engineered for the modern professional, synthesizing smart spatial flow with high-yield investment potential.</p>
                     </div>
                 </div>
             </section>
             <div className="container mx-auto px-4 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-40">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-40">
                     {[
                         { title: 'Rental Yield Alpha', desc: 'Commanding 3-4.5% annual yields driven by 300,000+ IT professionals in proximity.', icon: TrendingUp },
                         { title: 'Smart Efficiency', desc: 'Zero-wastage floor plans synthesized for hybrid-work and ergonomic living.', icon: Layout },
@@ -67,14 +67,14 @@ export const TwoBHK: React.FC = () => {
                 </div>
                 <div className="mb-40">
                     <div className="flex items-end justify-between mb-10 border-b border-[#DADCE0] pb-12">
-                        <div className="max-w-2xl"><span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-4 block">Volume Synthesis</span><h2 className="text-5xl md:text-7xl font-sans font-bold text-[#202124] tracking-tighter">The 2 BHK <span className="text-[#1a73e8] italic">Portfolio.</span></h2></div>
+                        <div className="max-w-2xl"><span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-4 block">Volume Synthesis</span><h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter">The 2 BHK <span className="text-[#1a73e8] italic">Portfolio.</span></h2></div>
                     </div>
-                    {loading ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">{[1, 2, 3].map(i => (<div key={i} className="bg-[#F8F9FA] rounded-[3.5rem] h-[500px] animate-pulse" />))}</div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">{projects.map((project) => (<ProjectCard key={project.id} project={project} />))}</div>)}
+                    {loading ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{[1, 2, 3].map(i => (<div key={i} className="bg-[#F8F9FA] rounded-[3.5rem] h-[500px] animate-pulse" />))}</div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{projects.map((project) => (<ProjectCard key={project.id} project={project} />))}</div>)}
                 </div>
                 <section className="mb-40 bg-white rounded-[5rem] p-16 md:p-32 text-[#202124] relative overflow-hidden group">
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
                         <div className="lg:col-span-5 space-y-12">
-                            <h2 className="text-5xl md:text-7xl font-sans font-bold tracking-tighter leading-tight">The Yield <br /><span className="text-[#1a73e8] italic">Synthesis Delta.</span></h2>
+                            <h2 className="text-5xl md:text-5xl font-sans font-bold tracking-tighter leading-tight">The Yield <br /><span className="text-[#1a73e8] italic">Synthesis Delta.</span></h2>
                             <p className="text-2xl text-[#5F6368] leading-relaxed font-medium">A 2 BHK residence at Life Republic isn't just a home; it's a high-liquidity financial asset positioned at the epicenter of Pune's IT growth.</p>
                             <div className="p-8 bg-[#151822] border border-[#DADCE0]/5 rounded-[24px] border border-[#DADCE0]"><div className="flex items-center gap-4 text-[#1a73e8] mb-3"><Target size={20} /><span className="text-[11px] font-bold tracking-tight font-semibold">Market Scarcity</span></div><p className="text-lg font-bold text-[#202124] tracking-tight font-semibold">Premium 2 BHK inventory in Hinjewadi Ph 3 is projected to face a 12% supply-gap by 2026.</p></div>
                         </div>
@@ -88,7 +88,7 @@ export const TwoBHK: React.FC = () => {
                 </section>
                 <section className="text-center">
                     <div className="max-w-5xl mx-auto p-20 bg-[#F8F9FA] rounded-[5rem] border border-[#DADCE0] shadow-inner relative overflow-hidden">
-                        <h2 className="text-4xl md:text-7xl font-sans font-bold text-[#202124] mb-10 tracking-tighter">Secure Your <br /> <span className="text-[#1a73e8] italic">Sovereign Asset.</span></h2>
+                        <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-10 tracking-tighter">Secure Your <br /> <span className="text-[#1a73e8] italic">Sovereign Asset.</span></h2>
                         <div className="flex flex-col md:flex-row gap-8 justify-center"><a href="/contact"><button className="bg-white text-[#202124] px-20 py-10 rounded-full font-bold text-2xl hover:bg-accent hover:text-[#202124] transition-all shadow-2xl flex items-center justify-center gap-4 group">Initiate Site Synthesis <ArrowUpRight size={32} /></button></a></div>
                         <p className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold mt-16 block">Secure Yield Access Protocol v5.5</p>
                     </div>

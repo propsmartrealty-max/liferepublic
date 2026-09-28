@@ -22,7 +22,7 @@ export const SectorComparison: React.FC = () => {
                 <div className="flex flex-col md:flex-row items-end justify-between mb-8 gap-8">
                     <div className="max-w-3xl">
                         <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-4 block">Product Intelligence v6.5</span>
-                        <h2 className="text-4xl md:text-7xl font-sans font-bold text-[#202124] mb-8 tracking-tighter leading-tight">
+                        <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-8 tracking-tighter leading-tight">
                             The Sector <br /> <span className="text-[#1a73e8] italic">Sovereign Matrix.</span>
                         </h2>
                         <p className="text-xl text-[#5F6368] font-medium leading-relaxed">

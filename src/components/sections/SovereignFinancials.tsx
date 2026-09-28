@@ -30,7 +30,7 @@ export const SovereignFinancials: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Stats Grid */}
           <div className="grid grid-cols-2 gap-4">
             {stats.map((stat, i) => (

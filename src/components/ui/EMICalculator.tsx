@@ -36,7 +36,7 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/* Controls */}
                     <div className="space-y-10">
                         <div className="space-y-4">
@@ -94,7 +94,7 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
                         
                         <div>
                             <span className="text-[#202124]/40 text-[10px] font-bold tracking-tight font-semibold block mb-4">Estimated Monthly Installment</span>
-                            <div className="text-5xl md:text-6xl font-sans font-bold mb-4">
+                            <div className="text-5xl md:text-5xl font-sans font-bold mb-4">
                                 ₹{emi.toLocaleString('en-IN')}
                             </div>
                             <div className="flex items-center gap-2 text-[#1a73e8] text-sm font-bold">

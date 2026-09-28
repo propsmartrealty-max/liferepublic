@@ -21,7 +21,7 @@ export const HeroSlider = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="text-5xl md:text-7xl font-sans font-medium text-[#202124] tracking-tight leading-[1.1] mb-6"
+                    className="text-5xl md:text-5xl font-sans font-medium text-[#202124] tracking-tight leading-[1.1] mb-6"
                 >
                     Experience liftoff with <br className="hidden md:block"/>
                     the next-gen township

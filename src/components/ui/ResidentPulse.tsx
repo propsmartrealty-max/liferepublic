@@ -19,7 +19,7 @@ export const ResidentPulse: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white z-10 pointer-events-none"></div>
             
             <div className="container mx-auto px-4 relative z-20">
-                <div className="flex items-center gap-12 whitespace-nowrap animate-marquee">
+                <div className="flex items-center gap-6 whitespace-nowrap animate-marquee">
                     {/* Duplicate for seamless loop synthesis */}
                     {[...activities, ...activities].map((activity, idx) => (
                         <motion.div 

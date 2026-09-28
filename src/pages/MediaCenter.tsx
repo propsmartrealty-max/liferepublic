@@ -73,8 +73,8 @@ export const MediaCenter: React.FC = () => {
                             <Newspaper size={16} className="text-[#1a73e8]" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8]">Sovereign Archive v5.5</span>
                         </div>
-                        <h1 className="text-6xl md:text-9xl font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-none">
-                            The Media <br /> <span className="text-[#1a73e8] italic text-7xl md:text-[5rem] lg:text-[6rem]">Nexus.</span>
+                        <h1 className="text-5xl md:text-9xl font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-none">
+                            The Media <br /> <span className="text-[#1a73e8] italic text-5xl md:text-[5rem] lg:text-[6rem]">Nexus.</span>
                         </h1>
                         <p className="text-2xl text-[#5F6368] font-medium max-w-3xl mx-auto leading-relaxed">
                             Synthesizing the structural evolution of Pune's premier township. Access the definitive monograph of our 2026 Hinjewadi transformation.
@@ -105,7 +105,7 @@ export const MediaCenter: React.FC = () => {
                     <div className="flex flex-col md:flex-row items-end justify-between mb-8 gap-8 border-b border-[#DADCE0] pb-12">
                         <div className="max-w-2xl">
                             <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-4 block">Feed</span>
-                            <h2 className="text-4xl md:text-6xl font-sans font-bold text-[#202124] tracking-tighter">Architectural Insights.</h2>
+                            <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter">Architectural Insights.</h2>
                         </div>
                         <div className="flex gap-6">
                             {[
@@ -130,7 +130,7 @@ export const MediaCenter: React.FC = () => {
                             <p className="text-[#202124] font-bold text-xl font-sans">{error}</p>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {posts.map((post, idx) => (
                                 <motion.article
                                     key={post.id}
@@ -194,7 +194,7 @@ export const MediaCenter: React.FC = () => {
                             className="relative z-10"
                         >
                             <Sparkles size={64} className="text-[#1a73e8] mx-auto mb-10 animate-pulse" />
-                            <h2 className="text-4xl md:text-7xl font-sans font-bold text-[#202124] mb-10 tracking-tighter">Subscribe to the <br /><span className="text-[#1a73e8] italic">Sovereign Pulse.</span></h2>
+                            <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-10 tracking-tighter">Subscribe to the <br /><span className="text-[#1a73e8] italic">Sovereign Pulse.</span></h2>
                             <p className="text-[#5F6368] text-2xl mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
                                 Join 12,000+ citizens and investors. Receive direct architectural insights and 2026 infrastructure synthesis once a month.
                             </p>

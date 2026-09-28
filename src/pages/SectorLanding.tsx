@@ -106,7 +106,7 @@ export const SectorLanding: React.FC = () => {
                             </div>
                             <span className="font-bold tracking-widest uppercase text-sm">{data.type} Intelligence — {sectorData.segment || 'Strategic'}</span>
                         </div>
-                        <h1 className="text-4xl md:text-6xl font-sans font-bold text-[#202124] mb-6 leading-tight">
+                        <h1 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-6 leading-tight">
                             {sectorData.branding || data.name} <br />
                             <span className="text-[#1a73e8] underline decoration-accent/30">Life Republic</span>
                         </h1>
@@ -126,7 +126,7 @@ export const SectorLanding: React.FC = () => {
             {/* Intelligence Grid */}
             <section className="py-12 border-b border-[#DADCE0]">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                         <div>
                             <h2 className="text-3xl md:text-4xl font-sans font-bold text-[#202124] mb-8">{sectorData.segment} Hub Infrastructure</h2>
                             <div className="space-y-8">

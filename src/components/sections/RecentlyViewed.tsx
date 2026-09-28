@@ -69,7 +69,7 @@ export const RecentlyViewed: React.FC = () => {
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-100 to-transparent"></div>
             
             <div className="container mx-auto px-4">
-                <div className="flex flex-col lg:flex-row items-end justify-between mb-10 gap-16">
+                <div className="flex flex-col lg:flex-row items-end justify-between mb-10 gap-8">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -79,7 +79,7 @@ export const RecentlyViewed: React.FC = () => {
                             <BrainCircuit size={24} className="animate-pulse" />
                             <span className="text-[11px] font-bold tracking-tight font-semibold">{sentimentLabel}</span>
                         </div>
-                        <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] tracking-tighter leading-[0.85] mb-8">
+                        <h2 className="text-5xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] tracking-tighter leading-[0.85] mb-8">
                             {greeting}
                         </h2>
                         <p className="text-2xl text-[#5F6368] font-medium tracking-tight leading-relaxed max-w-2xl">
@@ -104,7 +104,7 @@ export const RecentlyViewed: React.FC = () => {
                 </div>
 
                 <div className="relative group">
-                    <div className="flex gap-12 overflow-x-auto pb-20 snap-x no-scrollbar scroll-smooth">
+                    <div className="flex gap-6 overflow-x-auto pb-20 snap-x no-scrollbar scroll-smooth">
                         {recentProjects.map((project, index) => (
                             <motion.div
                                 key={project.id}

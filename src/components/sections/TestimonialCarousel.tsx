@@ -39,7 +39,7 @@ export const TestimonialCarousel: React.FC = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-8">
                     <span className="text-[#1a73e8] text-[10px] font-bold tracking-tight font-semibold block mb-4 italic">Social Synthesis</span>
-                    <h2 className="text-4xl md:text-6xl font-sans font-bold mb-6">Resident Stories</h2>
+                    <h2 className="text-4xl md:text-5xl font-sans font-bold mb-6">Resident Stories</h2>
                     <div className="w-24 h-1 bg-accent mx-auto"></div>
                 </div>
 
@@ -52,7 +52,7 @@ export const TestimonialCarousel: React.FC = () => {
                 >
                     {testimonials.map((t, idx) => (
                         <SwiperSlide key={idx}>
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-12">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-12">
                                 <div className="relative order-2 lg:order-1">
                                     <div className="absolute -left-8 -top-8 text-[#1a73e8]/20">
                                         <Quote size={120} />
