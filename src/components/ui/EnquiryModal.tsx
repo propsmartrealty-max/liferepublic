@@ -31,6 +31,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
         }
     }, [isOpen]);
 
+    
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setError(null);
@@ -40,15 +41,36 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
         }
         setIsSubmitting(true);
         const formData = new FormData(e.currentTarget);
+        
         try {
-            await api.submitLead(formData);
+            const response = await fetch('https://formsubmit.co/ajax/propsmartrealty@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: formData.get('name'),
+                    phone: formData.get('phone'),
+                    email: formData.get('email'),
+                    configuration: formData.get('configuration'),
+                    cluster: formData.get('cluster') || formData.get('project'),
+                    visit_date: formData.get('date'),
+                    timing: formData.get('timing'),
+                    _subject: "New Website Enquiry - Kolte Patil Life Republic"
+                })
+            });
+            
+            if (!response.ok) throw new Error('Submission failed');
             setIsSubmitted(true);
         } catch (err) {
+            console.error(err);
             setError("Unable to submit. Please try again or call us directly.");
         } finally {
             setIsSubmitting(false);
         }
     };
+
 
     return (
         <AnimatePresence>

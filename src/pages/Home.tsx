@@ -57,22 +57,18 @@ export const Home = () => {
             {/* Slide 1: Hero Video */}
             <section className="h-screen w-full snap-start relative flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0 bg-black">
-                    {/* Fallback image if video fails to load, but we scale it slowly for a cinematic Ken Burns effect */}
+                    
+                    {/* Hero Architectural Shot */}
                     <motion.img 
-                        initial={{ scale: 1.1 }}
+                        initial={{ scale: 1.05 }}
                         animate={{ scale: 1 }}
-                        transition={{ duration: 10, ease: 'easeOut' }}
-                        src="/images/home/slider-1.webp" 
-                        alt="Life Republic" 
-                        className="absolute inset-0 w-full h-full object-cover opacity-50"
+                        transition={{ duration: 15, ease: 'easeOut' }}
+                        src="/hero-new.jpg" 
+                        alt="Life Republic Pune" 
+                        className="absolute inset-0 w-full h-full object-cover opacity-80"
                     />
-                    {/* Replace src with a real high-res architectural drone video link if available */}
-                    <video 
-                        autoPlay loop muted playsInline 
-                        className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-lighten"
-                        src="https://cdn.pixabay.com/video/2021/08/21/85860-591244456_large.mp4"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[#0a0a0a]/90"></div>
+
                 </div>
                 <div className="z-10 text-center px-4 max-w-5xl flex flex-col items-center">
                     <KineticText 

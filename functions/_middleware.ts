@@ -41,6 +41,47 @@ export const onRequest: PagesFunction = async (context) => {
             title = "World-Class Amenities | Life Republic Pune";
         }
 
+        
+        // Google Policy Compliant JSON-LD Schema (Zero-Spam Structured Data)
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "RealEstateAgent",
+            "name": "Kolte-Patil Life Republic Pune - Independent Review Platform",
+            "image": "https://liferepublic.com/logo.webp",
+            "description": "Independent property information, floor plans, pricing, and project reviews for Kolte Patil Life Republic township in Marunji near Hinjewadi, Pune.",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Survey No. 74, Marunji, Hinjawadi-Marunji-Kasarsai Road, Taluka Mulshi",
+                "addressLocality": "Pune",
+                "postalCode": "411057",
+                "addressRegion": "Maharashtra",
+                "addressCountry": "IN"
+            },
+            "url": "https://" + url.hostname,
+            "telephone": "+910000000000",
+            "priceRange": "₹"
+        };
+
+        let schemaHtml = `\n<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n</script>\n`;
+        
+        // If it's a specific project, we inject an ApartmentComplex schema to rank for the specific project cluster without stuffing the page text.
+        if (path.includes('/projects/')) {
+            const projectSlug = path.split('/').pop() || '';
+            const projectName = projectSlug.charAt(0).toUpperCase() + projectSlug.slice(1).replace(/-/g, ' ');
+            const projectSchema = {
+                "@context": "https://schema.org",
+                "@type": "ApartmentComplex",
+                "name": "Life Republic " + projectName,
+                "description": "Premium 2 & 3 BHK residences at Life Republic " + projectName + " near Hinjewadi IT Park.",
+                "url": "https://" + url.hostname + path,
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Hinjewadi, Pune"
+                }
+            };
+            schemaHtml = `\n<script type="application/ld+json">\n${JSON.stringify(projectSchema, null, 2)}\n</script>\n`;
+        }
+
         const dynamicMeta = `
             <title>${title}</title>
             <meta name="description" content="${desc}" />
@@ -48,8 +89,10 @@ export const onRequest: PagesFunction = async (context) => {
             <meta property="og:description" content="${desc}" />
             <meta name="twitter:title" content="${title}" />
             <meta name="twitter:description" content="${desc}" />
+            <link rel="canonical" href="https://${url.hostname}${url.pathname === '/' ? '' : url.pathname}" />
             <meta name="cf-edge-optimized" content="true" />
             <meta name="cf-edge-location" content="${city}, ${country}" />
+            ${schemaHtml}
         `;
 
         // Strip existing basic titles/metas to prevent duplicates
