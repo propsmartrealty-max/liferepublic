@@ -38,7 +38,7 @@ export const HyperLocalLanding: React.FC = () => {
     );
 
     return (
-        <div className="pt-32 pb-20 bg-transparent">
+        <div className="pt-4 pb-20 bg-transparent">
             <SEO 
                 title={config.title}
                 description={config.description}

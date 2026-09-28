@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/seo/SEO';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { MapPin, Car, Building2, Milestone, Info } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { InfraTracker } from '../components/sections/InfraTracker';
@@ -42,14 +41,13 @@ const locationNodes = [
 
 export const ConnectivityHub: React.FC = () => {
     return (
-        <div className="pt-20">
+        <div className="pt-4">
             <SEO 
                 title="Connectivity & Distance Guide | Life Republic to Hinjewadi Phase 1, 2, 3"
                 description="connectivity guide for Kolte Patil Life Republic. Real-time distance data to Hinjewadi IT Park, Metro Line 3, Mumbai Expressway, and Marunji Road."
                 keywords="Life Republic connectivity, Hinjewadi phase 1 distance, Life Republic to Mumbai Expressway, Pune Metro Line 3 Hinjewadi, Marunji road development"
             />
-            <Breadcrumbs />
-
+            
             {/* Sovereign Location Hero */}
             <section className="relative py-12 bg-white overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-secondary to-black/50 z-10"></div>

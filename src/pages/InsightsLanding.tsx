@@ -13,7 +13,7 @@ export const InsightsLanding: React.FC = () => {
     ];
 
     return (
-        <div className="bg-surface min-h-[75vh] pt-32 pb-24">
+        <div className="bg-surface min-h-[75vh] pt-4 pb-24">
             <Helmet>
                 <title>Pune Real Estate Insights & Market Trends | Life Republic</title>
                 <meta name="description" content="Explore the latest trends, configuration details, and location highlights for premium real estate in Pune West, Hinjewadi, and Mahalunge." />

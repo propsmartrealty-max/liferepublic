@@ -1,21 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/seo/SEO';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { generateAboutPageSchema } from '../utils/schemaGenerator';
 
 export const About: React.FC = () => {
     return (
-        <div className="pt-20">
-            <Breadcrumbs />
-            <SEO
+        <div className="pt-4">
+                        <SEO
                 title="About Kolte Patil Life Republic | 390+ Acre Township in Hinjewadi"
                 description="Learn about Life Republic, a 390-acre integrated township by Kolte Patil in Hinjewadi, Pune. Committed to sustainable living with world-class amenities like 150ft wide roads, schools, and fire stations."
                 keywords="Kolte Patil Developers, Life Republic Township Details, About Life Republic Hinjewadi, Integrated Township Pune, Kolte Patil History, Township in West Pune"
                 canonical="/about"
                 schema={generateAboutPageSchema()}
             />
-            <section className="bg-[#E5C07B] pt-20 pb-16">
+            <section className="bg-[#E5C07B] pt-4 pb-16">
                 <div className="container mx-auto px-4 text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}

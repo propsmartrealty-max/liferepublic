@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/seo/SEO';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 
 const pSEOMatrix = {
     intents: ['luxury', 'premium', 'affordable', 'ready-possession', 'under-construction', 'investment', 'new-launch', 'walk-to-work'],
@@ -35,14 +34,13 @@ const LocationsDirectory: React.FC = () => {
     }, []);
 
     return (
-        <div className="min-h-[75vh] bg-[#F8F9FA] pt-24 pb-20">
+        <div className="min-h-[75vh] bg-[#F8F9FA] pt-4 pb-20">
             <SEO 
                 title="Pune Real Estate Locations Directory | Kolte Patil Life Republic"
                 description="Browse our comprehensive directory of premium real estate options across Pune West, including Hinjewadi, Wakad, and Baner."
                 canonical="/locations-directory"
             />
-            <Breadcrumbs />
-            
+                        
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className="text-center mb-8">
                     <h1 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-6">

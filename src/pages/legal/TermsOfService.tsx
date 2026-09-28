@@ -4,7 +4,7 @@ import { FileText } from 'lucide-react';
 
 export const TermsOfService: React.FC = () => {
     return (
-        <div className="pt-32 pb-24 bg-[#F8F9FA] min-h-[75vh]">
+        <div className="pt-4 pb-24 bg-[#F8F9FA] min-h-[75vh]">
             <Helmet>
                 <title>Terms of Service | Kolte Patil Life Republic Hinjewadi</title>
                 <meta name="description" content="Terms of Service and Conditions of Use for the Kolte Patil Life Republic website." />

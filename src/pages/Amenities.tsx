@@ -6,7 +6,6 @@ import { ICON_MAP } from '../lib/icons';
 import { Star } from 'lucide-react';
 
 import { SEO } from '../components/seo/SEO';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 
 export const Amenities: React.FC = () => {
     const [amenities, setAmenities] = React.useState<Amenity[]>([]);
@@ -35,9 +34,8 @@ export const Amenities: React.FC = () => {
     ];
 
     return (
-        <div className="pt-20">
-            <Breadcrumbs />
-            <SEO
+        <div className="pt-4">
+                        <SEO
                 title="World-Class Amenities at Kolte Patil Life Republic Township Hinjewadi"
                 description="Discover the world-class amenities at Kolte Patil Life Republic Township Hinjewadi. 3.5-acre urban park, Olympic-size pool, international school, fire station, and 24x7 security. Nature Community Sustainability in Pune."
                 keywords="Life Republic Amenities, Clubhouse in Hinjewadi, School in Life Republic, Integrated Township Amenities, Swimming Pool, Gymnasium, Parks in Hinjewadi, Gated Community Facilities, Better Living in Hinjewadi Pune, Sustainable & Progressive Spaces Pune, 400 Acres of Community Living"

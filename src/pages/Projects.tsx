@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CLUSTERS } from '../lib/clusters';
 import { ProjectCard } from '../components/ui/ProjectCard';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { SectorComparison } from '../components/sections/SectorComparison';
 import { SectorMesh } from '../components/sections/SectorMesh';
 import { RecentlyViewed } from '../components/sections/RecentlyViewed';
@@ -15,9 +14,8 @@ const Projects: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-24 pb-20 bg-black min-h-[50vh]">
-            <Breadcrumbs />
-            <SEO
+        <div className="pt-4 pb-20 bg-black min-h-[50vh]">
+                        <SEO
                 title="Projects in Kolte Patil Life Republic Township Hinjewadi | 1, 2, 3 BHK & Villas"
                 description="Explore all residential projects in Kolte Patil Life Republic Township Hinjewadi. Choose from 1, 2, 3 BHK flats, row houses, and luxury villas. Check current pricing, floor plans, and availability."
                 keywords="Kolte Patil Life Republic Projects, Kolte Patil Life Republic Township Hinjewadi, Flats in Hinjewadi, 2 BHK in Life Republic, 3 BHK Flats Pune, Row Houses in Hinjewadi, Villas in Pune, New Launch Projects Hinjewadi, Ready Possession Flats"

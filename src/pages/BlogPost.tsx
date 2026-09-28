@@ -88,7 +88,7 @@ export const BlogPostPage: React.FC = () => {
 
     if (error || !post) {
         return (
-            <div className="min-h-[75vh] pt-32 flex flex-col items-center justify-center text-center px-4">
+            <div className="min-h-[75vh] pt-4 flex flex-col items-center justify-center text-center px-4">
                 <h1 className="text-4xl font-sans font-bold text-[#202124] mb-4">Article Displaced</h1>
                 <p className="text-[#5F6368] mb-8 max-w-md">{error || "The requested insights could not be retrieved from the Sovereign Archive."}</p>
                 <Link to="/media-center">
@@ -109,7 +109,7 @@ export const BlogPostPage: React.FC = () => {
             />
 
             {/* Editorial Header */}
-            <header className="relative pt-32 pb-20 bg-white overflow-hidden">
+            <header className="relative pt-4 pb-20 bg-white overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-secondary z-10"></div>
                 {post.image && (
                     <motion.div 

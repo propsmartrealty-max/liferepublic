@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/seo/SEO';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { Plane, Globe, DollarSign, PieChart, ShieldCheck, Users, TrendingUp } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 
@@ -14,14 +13,13 @@ const investmentStats = [
 
 export const NRIInvestment: React.FC = () => {
     return (
-        <div className="pt-20">
+        <div className="pt-4">
             <SEO 
                 title="NRI Investment Guide: Kolte Patil Life Republic Hinjewadi"
                 description="The definitive guide for NRI investors looking to capitalize on Pune's real estate growth. Deep analysis of ROI, taxation, and community living at Life Republic Hinjewadi."
                 keywords="NRI investment Pune, Hinjewadi real estate for NRIs, Kolte Patil NRI guide, Life Republic ROI, Pune property appreciation"
             />
-            <Breadcrumbs />
-            
+                        
             {/* Hero Section */}
             <section className="relative py-12 bg-white overflow-hidden">
                 <div className="container mx-auto px-4 relative">

@@ -10,7 +10,7 @@ export const SiloLanding: React.FC = () => {
     const siloData = siloSlug ? extractSiloData(siloSlug) : null;
 
     if (!siloData) {
-        return <div className="min-h-[75vh] pt-32 text-center">Silo not found.</div>;
+        return <div className="min-h-[75vh] pt-4 text-center">Silo not found.</div>;
     }
 
     // Schema Generator for this silo
@@ -29,7 +29,7 @@ export const SiloLanding: React.FC = () => {
     };
 
     return (
-        <div className="pt-20">
+        <div className="pt-4">
             <Helmet>
                 <title>{siloData.metaTitle}</title>
                 <meta name="description" content={siloData.metaDescription} />

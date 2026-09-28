@@ -198,7 +198,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                     <p className="font-medium italic">
                         With the 2026 Metro expansion centered around the Phase 3 epicenter, investing near Life Republic offers a superior appreciation delta compared to the saturated localities of {locationName}. Experience the difference of a 400-acre managed ecosystem anchored by the **150ft Spine Road Backbone**.
                     </p>
-                    <div className="pt-24 flex justify-center gap-8 items-center">
+                    <div className="pt-4 flex justify-center gap-8 items-center">
                         <div className="w-3 h-3 bg-accent rounded-full shadow-[0_0_15px_var(--accent)]"></div>
                         <div className="w-3 h-3 bg-accent/40 rounded-full"></div>
                         <div className="w-3 h-3 bg-accent/20 rounded-full"></div>

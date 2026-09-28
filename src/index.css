@@ -62,9 +62,23 @@
 }
 
 /* Hide scrollbar for cinematic feel */
+
+/* Sleek custom scrollbar */
 ::-webkit-scrollbar {
-  display: none;
+  width: 8px;
+  height: 8px;
 }
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
 
 /* Advanced Rainbow Design Language */
 .rainbow-border-wrap {
@@ -137,7 +151,7 @@ html, body {
   width: 100%;
   -webkit-text-size-adjust: 100%; /* Prevent iOS text size adjustment CLS */
   text-size-adjust: 100%;
-  overscroll-behavior-y: none; /* Prevent pull-to-refresh reload glitches */
+  
 }
 
 /* Enforce Google's strict 48x48px minimum touch target for accessibility */

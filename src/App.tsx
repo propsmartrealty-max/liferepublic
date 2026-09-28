@@ -112,6 +112,7 @@ function App() {
       <ExitIntentOffer />
       <FloatingContact />
       <CookieConsent />
+      <ScrollToTop />
       <AnimatePresence mode="wait">
         <Suspense fallback={<PageLoader />}>
           <Routes location={location} key={location.pathname}>

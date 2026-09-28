@@ -34,7 +34,7 @@ export const Home = () => {
     }, []);
 
     return (
-        <main ref={containerRef} className="h-screen w-full overflow-y-scroll snap-y snap-mandatory bg-black scroll-smooth">
+        <main ref={containerRef} className="w-full bg-black scroll-smooth">
             
             {/* Minimalist Slide Progress Tracker */}
             <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-4 mix-blend-difference pointer-events-none">

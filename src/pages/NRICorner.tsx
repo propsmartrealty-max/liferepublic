@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/seo/SEO';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { Globe, TrendingUp, Landmark, ShieldCheck } from 'lucide-react';
 import { NRIInvestorHub } from '../components/sections/NRIInvestorHub';
 import { ROICalculator } from '../components/sections/ROICalculator';
@@ -9,15 +8,14 @@ import { BrochureEngine } from '../components/ui/BrochureEngine';
 
 export const NRICorner: React.FC = () => {
     return (
-        <div className="pt-20">
+        <div className="pt-4">
             <SEO
                 title="NRI Property Investment in Pune | Kolte Patil Life Republic Hinjewadi"
                 description="Ultimate guide for NRI investors looking to buy property in Hinjewadi, Pune. High rental yield, capital appreciation, and hassle-free documentation at Life Republic."
                 keywords="NRI Investment Pune, Buy Property in India from USA, Expat Housing Pune, Kolte Patil NRI Services, Invest in Hinjewadi"
                 canonical="/nri-corner"
             />
-            <Breadcrumbs />
-
+            
             {/* Hero */}
             <section className="relative h-[40vh] flex items-center justify-center bg-white text-[#202124] overflow-hidden">
                 <div className="absolute inset-0 bg-black/60 z-10"></div>

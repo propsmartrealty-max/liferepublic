@@ -1,4 +1,7 @@
-import React from 'react';
+with open('src/components/ui/SovereignMap.tsx', 'r') as f:
+    content = f.read()
+
+new_content = """import React from 'react';
 import { MapPin, Navigation } from 'lucide-react';
 
 export const SovereignMap: React.FC = () => {
@@ -40,3 +43,9 @@ export const SovereignMap: React.FC = () => {
     </div>
   );
 };
+"""
+
+with open('src/components/ui/SovereignMap.tsx', 'w') as f:
+    f.write(new_content)
+
+print("SovereignMap redesigned to use iframe.")

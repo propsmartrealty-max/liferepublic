@@ -7,7 +7,7 @@ import { SEO } from '../components/seo/SEO';
 
 export const ITProfessionalsHub: React.FC = () => {
     return (
-        <div className="pt-20">
+        <div className="pt-4">
             <SEO
                 title="Premium Homes for IT Professionals in Hinjewadi | Life Republic"
                 description="Discover Kolte Patil Life Republic: The ultimate 390-acre township designed for IT professionals in Pune. Walk to work, enjoy 40+ amenities, and maximize your ROI."

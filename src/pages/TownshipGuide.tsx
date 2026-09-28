@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Shield, Zap, School, Building2, Train, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { SEO } from '../components/seo/SEO';
 import { Button } from '../components/ui/Button';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import type { BlogPost } from '../lib/types';
@@ -91,7 +90,7 @@ export const TownshipGuide: React.FC = () => {
     ];
 
     return (
-        <div className="pt-20 bg-transparent">
+        <div className="pt-4 bg-transparent">
             <SEO 
                 title="Life Republic Hinjewadi Guide: Portfolio, Clusters & ROI Analysis"
                 description="Comprehensive guide to Kolte Patil Life Republic. Explore Atmos, Aros, Universe, and Echoes. Analysis of ROI, schools, and Hinjewadi's 390-acre master township."
@@ -99,8 +98,7 @@ export const TownshipGuide: React.FC = () => {
                 canonical="/township-guide"
                 schema={[blogSchema, faqSchema]}
             />
-            <Breadcrumbs />
-
+            
             {/* Hero Section */}
             <section className="relative py-12 bg-black overflow-hidden">
                 <div className="absolute inset-0 opacity-5"></div>
@@ -340,7 +338,7 @@ export const TownshipGuide: React.FC = () => {
                     </div>
 
                     {/* Sovereign Intelligence FAQ (VSO) */}
-                    <div className="mt-24 pt-24 border-t border-white/10">
+                    <div className="mt-24 pt-4 border-t border-white/10">
                         <h2 id="faq" className="text-4xl font-sans font-bold text-white mb-12 text-center">Township Intelligence FAQ</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                             {[

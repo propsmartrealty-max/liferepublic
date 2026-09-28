@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/seo/SEO';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { Globe, ShieldCheck, Landmark, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { InvestmentLedger } from '../components/sections/InvestmentLedger';
@@ -27,15 +26,14 @@ const nriFAQs = [
 
 export const NRIInvestmentHub: React.FC = () => {
     return (
-        <div className="pt-20">
+        <div className="pt-4">
             <SEO 
                 title="NRI Real Estate Investment Guide Pune | Life Republic Hinjewadi"
                 description="The definitive investment portal for NRIs and global investors at Kolte Patil Life Republic. Access historical appreciation ledgers, yield calculators, and repatriation guides."
                 keywords="NRI investment Pune, buy property in Hinjewadi from USA, Life Republic ROI, Pune real estate for NRIs, FEMA repatriation rules property India"
                 schema={generateFAQSchema(nriFAQs)}
             />
-            <Breadcrumbs />
-
+            
             {/* Global Authority Hero */}
             <section className="relative py-16 bg-white overflow-hidden">
                 <div className="absolute inset-0 opacity-5"></div>

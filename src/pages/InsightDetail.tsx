@@ -15,7 +15,7 @@ export const InsightDetail: React.FC = () => {
     }
 
     return (
-        <div className="bg-surface min-h-[75vh] pt-32 pb-24">
+        <div className="bg-surface min-h-[75vh] pt-4 pb-24">
             <Helmet>
                 <title>{article.title}</title>
                 <meta name="description" content={article.excerpt} />

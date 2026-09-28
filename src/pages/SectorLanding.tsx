@@ -5,7 +5,6 @@ import { MapPin, Navigation, CheckCircle2, ArrowRight, Building2, Zap } from 'lu
 import { SEO } from '../components/seo/SEO';
 import { Button } from '../components/ui/Button';
 import { ProjectCard } from '../components/ui/ProjectCard';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { SectorMesh } from '../components/sections/SectorMesh';
 import sectorsData from '../data/sectors.json';
 import { api } from '../services/api';
@@ -81,7 +80,7 @@ export const SectorLanding: React.FC = () => {
     ];
 
     return (
-        <div className="pt-20 bg-transparent">
+        <div className="pt-4 bg-transparent">
             <SEO 
                 title={pageTitle}
                 description={pageDesc}
@@ -89,8 +88,7 @@ export const SectorLanding: React.FC = () => {
                 canonical={`/location/${slug}`}
                 schema={schema}
             />
-            <Breadcrumbs />
-
+            
             {/* Hero Section */}
             <section className="relative py-12 bg-white overflow-hidden">
                 <div className="absolute inset-0 opacity-5"></div>

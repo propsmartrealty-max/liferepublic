@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/seo/SEO';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { projectsRegistry as projects } from '../data/projects';
 import { ID_TO_SLUG } from '../data/slug-registry';
 import { supabase } from '../lib/supabase';
@@ -31,9 +30,8 @@ export const HTMLSitemap: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-20 pb-24 bg-[#F8F9FA] min-h-[75vh]">
-            <Breadcrumbs />
-            <SEO
+        <div className="pt-4 pb-24 bg-[#F8F9FA] min-h-[75vh]">
+                        <SEO
                 title="Sitemap | Kolte Patil Life Republic Hinjewadi Pune"
                 description="Navigate through all projects, locations, and property configurations available at Kolte Patil Life Republic Township, Hinjewadi, Pune."
                 canonical="/sitemap"

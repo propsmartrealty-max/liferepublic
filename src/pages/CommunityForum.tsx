@@ -14,7 +14,7 @@ const forumPosts = [
 
 export const CommunityForum: React.FC = () => {
     return (
-        <div className="bg-transparent pt-32 pb-40 relative overflow-hidden">
+        <div className="bg-transparent pt-4 pb-40 relative overflow-hidden">
             <SEO 
                 title="Sovereign Community Forum & Residents Hub | Life Republic"
                 description="Join the vibrant 12,000+ family community at Kolte Patil Life Republic. Connect, participate in events, and stay updated with Hinjewadi's premier social ecosystem."

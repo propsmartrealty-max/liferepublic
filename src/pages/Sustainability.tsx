@@ -12,7 +12,7 @@ const metrics = [
 
 export const Sustainability: React.FC = () => {
     return (
-        <div className="bg-transparent pt-32 pb-40 relative overflow-hidden">
+        <div className="bg-transparent pt-4 pb-40 relative overflow-hidden">
             <SEO 
                 title="Sovereign ESG & Sustainability Monograph | Life Republic"
                 description="Explore the environmental structuralism at Kolte Patil Life Republic. 15,000+ trees, 2.5 MLD water recycling, and 750kW solar sync in Hinjewadi's premier green township."

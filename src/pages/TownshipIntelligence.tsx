@@ -9,7 +9,7 @@ export const TownshipIntelligence: React.FC = () => {
     const { township } = townshipData;
 
     return (
-        <div className="pt-32 pb-20 bg-transparent">
+        <div className="pt-4 pb-20 bg-transparent">
             <SEO 
                 title="Township Intelligence | Kolte Patil Life Republic"
                 description="Explore the infrastructure, connectivity, and community intelligence of Kolte Patil Life Republic, Hinjewadi. The definitive guide to Pune's most integrated township."

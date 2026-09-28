@@ -57,8 +57,8 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
             
       <Navbar />
       
-      <main className={`flex-grow ${location.pathname === '/' ? '' : 'pt-32 sm:pt-40'}`} aria-label={ariaLabel}>
-        <div className="container mx-auto px-4">
+      <main className={`flex-grow ${location.pathname === '/' ? '' : 'pt-24'}`} aria-label={ariaLabel}>
+        <div className="container mx-auto px-4 py-2">
           <Breadcrumbs />
         </div>
         

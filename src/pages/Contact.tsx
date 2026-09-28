@@ -4,7 +4,6 @@ import { Phone, MapPin } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { SEO } from '../components/seo/SEO';
 
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 
 export const Contact: React.FC = () => {
     const startOfWeek = new Date();
@@ -47,7 +46,7 @@ export const Contact: React.FC = () => {
     };
 
     return (
-        <div className="pt-20">
+        <div className="pt-4">
             <SEO
                 title="Contact Kolte Patil Life Republic Sales Office | Hinjewadi"
                 description="Get in touch with the sales team for Life Republic by Kolte Patil. Schedule a VIP site visit, request a brochure, or request a callback for best deals."
@@ -55,8 +54,7 @@ export const Contact: React.FC = () => {
                 canonical="/contact"
                 schema={localBusinessSchema}
             />
-            <Breadcrumbs />
-            <section className="bg-white text-[#202124] py-20">
+                        <section className="bg-white text-[#202124] py-20">
                 <div className="container mx-auto px-4 text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}

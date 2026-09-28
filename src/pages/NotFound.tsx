@@ -16,7 +16,7 @@ export const NotFound: React.FC = () => {
                 canonical="/404"
                 noindex={true}
             />
-            <main className="flex-grow pt-32 pb-20 px-4 text-center">
+            <main className="flex-grow pt-4 pb-20 px-4 text-center">
                 <div className="max-w-2xl mx-auto">
                     <h1 className="text-9xl font-bold text-gray-200 mb-4">404</h1>
                     <h2 className="text-3xl font-sans font-bold text-[#202124] mb-6">Oops! We can't find that page.</h2>

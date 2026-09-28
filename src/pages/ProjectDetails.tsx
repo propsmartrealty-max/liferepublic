@@ -3,7 +3,6 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import QRCode from 'react-qr-code';
 import { CLUSTERS } from '../lib/clusters';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { SEO } from '../components/seo/SEO';
 import { MapPin, CheckCircle, Download, Calendar, Layers, ShieldCheck } from 'lucide-react';
 
@@ -53,8 +52,7 @@ const ProjectDetails: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 w-full pb-16">
                     <div className="container mx-auto px-4 lg:px-8">
-                        <Breadcrumbs />
-                        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+                                                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
                             <div className="max-w-3xl">
                                 <motion.div 
                                     initial={{ opacity: 0, y: 20 }}
