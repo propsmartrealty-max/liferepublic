@@ -14,7 +14,7 @@ const ProjectDetails: React.FC = () => {
     
     useEffect(() => {
         window.scrollTo(0, 0);
-        const found = CLUSTERS.find(c => c.slug === slug);
+        const found = CLUSTERS.find(c => c.slug === slug || c.id === slug);
         if (!found) {
             navigate('/projects', { replace: true });
         } else {
