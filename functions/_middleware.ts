@@ -1,40 +1,73 @@
-export const onRequest = async (context) => {
+export const onRequest: PagesFunction = async (context) => {
     const url = new URL(context.request.url);
     const response = await context.next();
+
+    // 1. Enterprise Security Headers
+    const headers = new Headers(response.headers);
+    headers.set('X-Content-Type-Options', 'nosniff');
+    headers.set('X-Frame-Options', 'DENY');
+    headers.set('X-XSS-Protection', '1; mode=block');
+    headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
     
-    // Only intercept HTML responses
-    const contentType = response.headers.get("content-type");
-    if (!contentType || !contentType.includes("text/html")) {
-        return response;
+    // Set Edge Geolocation Headers for the Client to consume if needed
+    const country = context.request.cf?.country || 'Unknown';
+    const city = context.request.cf?.city || 'Unknown';
+    headers.set('X-Edge-Country', typeof country === 'string' ? country : 'Unknown');
+    headers.set('X-Edge-City', typeof city === 'string' ? city : 'Unknown');
+
+    const contentType = headers.get('content-type') || '';
+
+    // 2. Advanced Edge HTML Rewriting & Minification
+    if (contentType.includes('text/html')) {
+        let html = await response.text();
+        
+        // Edge HTML Minification: Strip out excessive whitespace and comments
+        html = html.replace(/<!--[\s\S]*?-->/g, ''); // Remove HTML comments
+        html = html.replace(/>\s+</g, '><'); // Remove whitespace between tags
+        html = html.replace(/\n/g, ''); // Remove newlines
+        
+        // Inject SEO and dynamic meta tags via Edge
+        const path = url.pathname;
+        let title = "Kolte Patil Life Republic | 390 Acre Township in Hinjewadi";
+        let desc = "Experience ultra-premium living at Pune's largest integrated township. Explore configurations, floor plans, and exclusive pricing.";
+
+        if (path.includes('/projects/')) {
+            const projectSlug = path.split('/').pop();
+            title = `${projectSlug ? projectSlug.charAt(0).toUpperCase() + projectSlug.slice(1).replace(/-/g, ' ') : 'Premium Project'} | Kolte Patil Life Republic`;
+            desc = `Secure your future in our premium ${projectSlug} cluster. View exclusive layouts, exact pricing, and secure your site visit today.`;
+        } else if (path === '/township-guide') {
+            title = "390 Acre Township Guide | Life Republic Pune";
+        } else if (path === '/amenities') {
+            title = "World-Class Amenities | Life Republic Pune";
+        }
+
+        const dynamicMeta = `
+            <title>${title}</title>
+            <meta name="description" content="${desc}" />
+            <meta property="og:title" content="${title}" />
+            <meta property="og:description" content="${desc}" />
+            <meta name="twitter:title" content="${title}" />
+            <meta name="twitter:description" content="${desc}" />
+            <meta name="cf-edge-optimized" content="true" />
+            <meta name="cf-edge-location" content="${city}, ${country}" />
+        `;
+
+        // Strip existing basic titles/metas to prevent duplicates
+        html = html.replace(/<title>.*?<\/title>/gi, '');
+        html = html.replace(/<meta name="description".*?>/gi, '');
+        
+        html = html.replace('</head>', `${dynamicMeta}</head>`);
+
+        return new Response(html, {
+            status: response.status,
+            statusText: response.statusText,
+            headers
+        });
     }
 
-    // Force strict security headers at the Edge
-    const newHeaders = new Headers(response.headers);
-    newHeaders.set("X-Content-Type-Options", "nosniff");
-    newHeaders.set("X-Frame-Options", "DENY");
-    newHeaders.set("X-XSS-Protection", "1; mode=block");
-    newHeaders.set("Referrer-Policy", "strict-origin-when-cross-origin");
-    
-    // 1-Year Strict Transport Security (HSTS)
-    newHeaders.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
-
-    const edgeResponse = new Response(response.body, {
+    return new Response(response.body, {
         status: response.status,
         statusText: response.statusText,
-        headers: newHeaders,
+        headers
     });
-
-    // Cloudflare HTMLRewriter for Zero-Latency SEO Injection
-    return new HTMLRewriter()
-        .on('head', {
-            element(element) {
-                // Dynamically inject the precise canonical URL to prevent any Google Duplicate Content penalties
-                const cleanPath = url.pathname.endsWith('/') && url.pathname.length > 1 ? url.pathname.slice(0, -1) : url.pathname;
-                element.append(`<link rel="canonical" href="https://life-republic.in${cleanPath}" />`, { html: true });
-                
-                // Inject Edge Performance Marker
-                element.append(`<meta name="cf-edge-cache" content="HIT" />`, { html: true });
-            }
-        })
-        .transform(edgeResponse);
 };
