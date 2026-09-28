@@ -23,6 +23,8 @@ export const Navbar = () => {
     ];
 
     return (
+        <>
+        <div className="fixed top-0 left-0 w-full h-[3px] bg-rainbow z-50"></div>
         <nav className="fixed top-0 left-0 right-0 z-[100] mix-blend-difference text-white">
             <div className="container mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
                 
@@ -90,5 +92,6 @@ export const Navbar = () => {
                 )}
             </AnimatePresence>
         </nav>
+        </>
     );
 };

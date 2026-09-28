@@ -75,7 +75,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                     rotateY,
                     transformStyle: "preserve-3d"
                 }}
-                className="relative overflow-hidden rounded-[24px] bg-black border border-white/10 h-[600px] w-full flex flex-col justify-end transition-shadow duration-700 hover:border-white/30 hover:glow-rainbow group"
+                className="relative overflow-hidden rounded-[24px] bg-black rainbow-border-wrap h-[600px] w-full flex flex-col justify-end transition-shadow duration-700 hover:glow-rainbow group"
             >
                 <div className="absolute inset-0 z-0" style={{ transform: "translateZ(-20px)" }}>
                     <img

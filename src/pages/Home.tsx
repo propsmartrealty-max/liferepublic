@@ -77,7 +77,7 @@ export const Home = () => {
                 <div className="z-10 text-center px-4 max-w-5xl flex flex-col items-center">
                     <KineticText 
                         text="Life Republic." 
-                        className="text-6xl md:text-8xl font-sans font-bold text-white tracking-tight mb-6 justify-center"
+                        className="text-6xl md:text-8xl font-sans font-bold text-white tracking-tight mb-6 justify-center rainbow-aura"
                     />
                     <motion.p 
                         initial={{ opacity: 0 }}
@@ -147,7 +147,7 @@ export const Home = () => {
                     </div>
                 </div>
                 <div className="absolute top-16 text-center z-10 w-full pointer-events-none">
-                    <span className="text-white/50 uppercase tracking-[0.3em] text-sm">The Residences</span>
+                    <span className="rainbow-text-clip font-bold uppercase tracking-[0.3em] text-sm">The Residences</span>
                 </div>
             </section>
 
