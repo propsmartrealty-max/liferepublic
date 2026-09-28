@@ -21,7 +21,7 @@ export const HeroSlider = () => {
                     initial={{ opacity: 0, scale: 0.9, filter: 'blur(10px)' }}
                     animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
                     transition={{ duration: 2, ease: "easeOut" }}
-                    className="glass-pill px-6 py-2 mb-8 flex items-center gap-3 animate-float"
+                    className="glass-pill px-6 py-2 mb-4 flex items-center gap-3 animate-float"
                 >
                     <div className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"></div>
                     <span className="slim-text text-[10px]">Life Republic Township • Hinjewadi</span>
@@ -31,7 +31,7 @@ export const HeroSlider = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 2, delay: 0.3, ease: "easeOut" }}
-                    className="text-6xl md:text-8xl font-sans font-thin text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/40 leading-tight mb-8"
+                    className="text-6xl md:text-8xl font-sans font-thin text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/40 leading-tight mb-4"
                 >
                     Fluid <span className="font-serif italic text-white">Living.</span>
                 </motion.h1>
@@ -40,7 +40,7 @@ export const HeroSlider = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 0.6 }}
-                    className="text-lg md:text-xl font-sans font-extralight text-white/50 max-w-2xl mx-auto mb-8 leading-relaxed"
+                    className="text-lg md:text-xl font-sans font-extralight text-white/50 max-w-2xl mx-auto mb-4 leading-relaxed"
                 >
                     An architectural ecosystem that flows seamlessly with your lifestyle. 
                     390 acres of unbounded, wireframe-precision design.
@@ -50,7 +50,7 @@ export const HeroSlider = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 2, delay: 0.9 }}
-                    className="flex flex-col sm:flex-row gap-6"
+                    className="flex flex-col sm:flex-row gap-3"
                 >
                     <button 
                         onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}

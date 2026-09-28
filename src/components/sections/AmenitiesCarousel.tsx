@@ -7,7 +7,7 @@ import type { Amenity } from '../../lib/types';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination';
+
 import 'swiper/css/navigation';
 
 export const AmenitiesCarousel: React.FC = () => {
@@ -87,7 +87,7 @@ export const AmenitiesCarousel: React.FC = () => {
                     spaceBetween={30}
                     slidesPerView={1}
                     navigation
-                    pagination={{ clickable: true }}
+                    pagination={false}
                     loop={true}
                     autoplay={{
                         delay: 3500,
@@ -104,7 +104,7 @@ export const AmenitiesCarousel: React.FC = () => {
                             slidesPerView: 3,
                         },
                     }}
-                    className="pb-16"
+                    className="pb-4"
                 >
                     {displayAmenities.map((item, index) => (
                         <SwiperSlide key={index}>

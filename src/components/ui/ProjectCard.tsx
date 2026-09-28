@@ -12,7 +12,7 @@ export const ProjectCard = ({ project, priority }: { project: any, priority?: bo
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/5 rounded-full blur-3xl group-hover:bg-teal-400/10 transition-colors duration-1000"></div>
 
                 {/* Image Section - Organic pill shape */}
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.5rem]">
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[1.5rem]">
                     <img
                         src={project.image || project.configurations?.[0]?.image}
                         alt={project.name || project.title}
@@ -28,11 +28,11 @@ export const ProjectCard = ({ project, priority }: { project: any, priority?: bo
                 </div>
 
                 {/* Content Section - Extremely thin typography */}
-                <div className="px-6 py-8 flex flex-col flex-1 relative z-10">
+                <div className="px-6 py-6 flex flex-col flex-1 relative z-10">
                     <h3 className="text-2xl font-serif text-white/90 mb-3 group-hover:text-white transition-colors duration-500">
                         {project.name || project.title}
                     </h3>
-                    <p className="slim-text text-xs leading-relaxed mb-8 flex-1 line-clamp-2">
+                    <p className="slim-text text-xs leading-relaxed mb-4 flex-1 line-clamp-2">
                         {project.description || "Fluid spaces designed for an unobstructed flow of life and light."}
                     </p>
                     

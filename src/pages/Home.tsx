@@ -64,16 +64,16 @@ const Home: React.FC = () => {
       <div className="relative z-20 -mt-[100px] bg-[#0A0A0A]/80 backdrop-blur-[50px] rounded-t-[3rem] border-t border-white/[0.05] shadow-[0_-20px_60px_rgba(0,0,0,0.6)]">
             
             {/* Phase 2: Introduction & Scale */}
-            <section className="py-16 md:py-16 bg-transparent overflow-hidden relative" aria-label="Township Architecture and Volumes">
+            <section className="py-6 md:py-6 bg-transparent overflow-hidden relative" aria-label="Township Architecture and Volumes">
                 <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-accent/5 rounded-bl-[100%] pointer-events-none"></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2">
-                            <motion.span initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-accent text-xs font-bold tracking-tight font-semibold block mb-6">The Masterplan</motion.span>
-                            <motion.h2 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-serif font-bold text-white leading-[1.1] mb-8">A 390-Acre <br /><span className="text-golden-gradient">Vision</span></motion.h2>
-                            <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-text-muted text-lg font-light leading-relaxed mb-10"><strong>Kolte Patil Life Republic</strong> is a premium integrated township located in the heart of <strong>Hinjewadi, Pune</strong>. Designed around the principles of spatial harmony and sustainable community flow, it offers an unparalleled holistic lifestyle near Rajiv Gandhi Infotech Park.</motion.p>
+                            <motion.span initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-accent text-xs font-bold tracking-tight font-semibold block mb-3">The Masterplan</motion.span>
+                            <motion.h2 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-serif font-bold text-white leading-[1.1] mb-4">A 390-Acre <br /><span className="text-golden-gradient">Vision</span></motion.h2>
+                            <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-text-muted text-lg font-light leading-relaxed mb-4"><strong>Kolte Patil Life Republic</strong> is a premium integrated township located in the heart of <strong>Hinjewadi, Pune</strong>. Designed around the principles of spatial harmony and sustainable community flow, it offers an unparalleled holistic lifestyle near Rajiv Gandhi Infotech Park.</motion.p>
                             
-                            <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex flex-col gap-8">
+                            <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex flex-col gap-4">
                                 {[
                                     { label: '01', title: 'Macro Infrastructure', desc: 'A 150ft wide spine road connecting the entire ecosystem.' },
                                     { label: '02', title: 'Micro Habitats', desc: 'Lush green clusters designed for intimate community living.' },
@@ -89,7 +89,7 @@ const Home: React.FC = () => {
                                 ))}
                             </motion.div>
                         </div>
-                        <div className="lg:w-1/2 grid grid-cols-2 gap-4 md:gap-8">
+                        <div className="lg:w-1/2 grid grid-cols-2 gap-4 md:gap-4">
                             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="aspect-[4/5]  overflow-hidden relative group shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
                                 <img loading="lazy" src="/images/home/canvas-thumb.jpg" alt="Infrastructure" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-colors duration-500"></div>
@@ -115,14 +115,14 @@ const Home: React.FC = () => {
             
             
             
-            <section id="projects" className="py-16 bg-[#030508] relative" aria-label="Featured Projects">
+            <section id="projects" className="py-6 bg-[#030508] relative" aria-label="Featured Projects">
                 
                 {/* Fluid background orb */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-teal-500/5 rounded-full blur-[150px] pointer-events-none animate-pulse"></div>
 
                 <div className="container mx-auto px-6 lg:px-12 max-w-7xl relative z-10">
-                    <div className="flex flex-col items-center text-center mb-10">
-                        <div className="glass-pill px-6 py-2 mb-6">
+                    <div className="flex flex-col items-center text-center mb-4">
+                        <div className="glass-pill px-6 py-2 mb-3">
                             <span className="slim-text text-[9px] uppercase">The Portfolio</span>
                         </div>
                         <h2 className="text-5xl md:text-6xl font-sans font-thin text-white leading-tight">
@@ -130,7 +130,7 @@ const Home: React.FC = () => {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4">
                         {featuredProjects.slice(0, 3).map((project, index) => (
                             <motion.div 
                                 key={project.id}
@@ -144,7 +144,7 @@ const Home: React.FC = () => {
                         ))}
                     </div>
                     
-                    <div className="mt-10 flex justify-center">
+                    <div className="mt-6 flex justify-center">
                         <Link to="/projects" className="glass-pill px-10 py-4 text-white hover:bg-white/10 transition-colors duration-500 flex items-center gap-4 group">
                             <span className="font-sans font-light tracking-[0.2em] text-[10px] uppercase">View All Projects</span>
                             <div className="w-8 h-[0.5px] bg-white/30 group-hover:bg-white transition-colors duration-500"></div>
@@ -164,7 +164,7 @@ const Home: React.FC = () => {
             
             
             
-            <section className="py-16 bg-[#030508] relative overflow-hidden">
+            <section className="py-6 bg-[#030508] relative overflow-hidden">
                 <div className="absolute right-0 bottom-0 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-[150px] pointer-events-none animate-float"></div>
 
                 <div className="container mx-auto px-6 lg:px-12 max-w-7xl relative z-10">
@@ -172,15 +172,15 @@ const Home: React.FC = () => {
                         {/* Inner fluid effect */}
                         <div className="absolute -top-40 -left-40 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px]"></div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4 items-center relative z-10">
                             <div>
-                                <div className="glass-pill px-6 py-2 mb-8 inline-block">
+                                <div className="glass-pill px-6 py-2 mb-4 inline-block">
                                     <span className="slim-text text-[9px] uppercase">Fluid Connectivity</span>
                                 </div>
-                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-thin text-white leading-tight mb-8">
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-thin text-white leading-tight mb-4">
                                     Flow into the <br/> <span className="font-serif italic text-white/60">City Center.</span>
                                 </h2>
-                                <p className="slim-text text-sm leading-relaxed mb-8 max-w-lg">
+                                <p className="slim-text text-sm leading-relaxed mb-4 max-w-lg">
                                     A frictionless transit experience. Seamlessly glide from the serenity of your enclave to the heart of the Hinjewadi tech ecosystem.
                                 </p>
                                 
@@ -226,9 +226,9 @@ const Home: React.FC = () => {
             <BrochureEngine />
 
             {/* Phase 9: SEO & Discovery */}
-            <section className="py-12 bg-transparent border-t border-white/10" aria-label="Popular Real Estate Searches">
+            <section className="py-6 bg-transparent border-t border-white/10" aria-label="Popular Real Estate Searches">
                 <div className="container mx-auto px-4">
-                    <h3 className="text-sm font-bold text-text-muted tracking-tight font-medium mb-6">Popular Searches</h3>
+                    <h3 className="text-sm font-bold text-text-muted tracking-tight font-medium mb-3">Popular Searches</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                         <div className="space-y-2">
                             <h4 className="font-semibold text-gray-300">By Configuration</h4>

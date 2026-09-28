@@ -6,7 +6,7 @@ import { Quote, Star, CheckCircle2 } from 'lucide-react';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import 'swiper/css/pagination';
+
 
 const testimonials = [
     {
@@ -47,7 +47,7 @@ export const TestimonialCarousel: React.FC = () => {
                     modules={[Autoplay, Pagination]}
                     autoplay={{ delay: 6000 }}
                     loop={true}
-                    pagination={{ clickable: true }}
+                    pagination={false}
                     className="max-w-5xl"
                 >
                     {testimonials.map((t, idx) => (

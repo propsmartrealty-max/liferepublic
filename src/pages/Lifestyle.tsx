@@ -44,7 +44,7 @@ const VolumeItem = ({ vol, idx }: { vol: any, idx: number }) => {
     const scale = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.8, 1, 1, 0.8]);
 
     return (
-        <motion.div ref={ref} style={{ opacity, scale }} className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-32 items-center py-16`}>
+        <motion.div ref={ref} style={{ opacity, scale }} className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-32 items-center py-6`}>
             <div className="lg:w-1/2 relative group">
                 <div className={`absolute inset-0 bg-gradient-to-br ${vol.color} rounded-[5rem] blur-[120px] opacity-0 group-hover:opacity-100 transition-all duration-1000`}></div>
                 <div className="relative aspect-[16/10] rounded-[5rem] overflow-hidden shadow-[0_80px_160px_-40px_rgba(0,0,0,0.4)] border-8 border-gray-50/50 backdrop-blur-xl">
@@ -53,7 +53,7 @@ const VolumeItem = ({ vol, idx }: { vol: any, idx: number }) => {
                 </div>
             </div>
             <div className="lg:w-1/2 space-y-16">
-                <div className="flex items-center gap-10">
+                <div className="flex items-center gap-4">
                     <div className="p-8 bg-[#0B0D14] text-accent rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-border-strong group-hover:rotate-12 transition-transform">
                         <vol.icon size={48} strokeWidth={1.5} />
                     </div>
@@ -66,7 +66,7 @@ const VolumeItem = ({ vol, idx }: { vol: any, idx: number }) => {
                     </div>
                 </div>
                 <p className="text-2xl md:text-3xl text-gray-500 font-medium leading-relaxed italic max-w-2xl">"{vol.desc}"</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {vol.metrics.map((m: string, i: number) => (
                         <div key={i} className="p-8 bg-[#1A1C23] rounded-[2.5rem] border border-white/5 group/metric hover:bg-[#151822] border border-white/10 hover:shadow-2xl transition-all">
                             <div className="flex items-center gap-4">
@@ -90,7 +90,7 @@ export const Lifestyle: React.FC = () => {
         <div ref={containerRef} className="bg-transparent">
             <SEO title="Sovereign Lifestyle & Community Monograph | Life Republic 2026" description="Experience the 15-Minute City at Life Republic. Integrated schooling, 7,700+ trees, and a community of 12,000+ families in Hinjewadi's premier township." />
             
-            <section className="relative h-[75vh] flex items-center justify-center overflow-hidden bg-[#0B0D14]">
+            <section className="relative h-[50vh] flex items-center justify-center overflow-hidden bg-[#0B0D14]">
                 <motion.div style={{ scale: useTransform(smoothScroll, [0, 0.2], [1, 1.3]), y: useTransform(smoothScroll, [0, 0.2], [0, 100]) }} className="absolute inset-0">
                     <img loading="lazy" src={volumes[0].img} alt="Sovereign Life" className="w-full h-full object-cover grayscale opacity-20" />
                 </motion.div>
@@ -98,11 +98,11 @@ export const Lifestyle: React.FC = () => {
                 
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.8, ease: "circOut" }}>
-                        <div className="inline-flex items-center gap-8 px-12 py-5 bg-accent/10 border border-accent/20 rounded-full mb-8 backdrop-blur-3xl shadow-2xl">
+                        <div className="inline-flex items-center gap-4 px-12 py-5 bg-accent/10 border border-accent/20 rounded-full mb-4 backdrop-blur-3xl shadow-2xl">
                             <Wind size={24} className="text-accent animate-pulse" />
                             <span className="text-[12px] font-bold tracking-tight font-semibold text-accent">The Lifestyle Monograph v6.5</span>
                         </div>
-                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-8 tracking-tighter leading-[0.75]">
+                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-4 tracking-tighter leading-[0.75]">
                             Atmospheric <br /> <span className="italic text-accent">Sovereignty.</span>
                         </h1>
                         <p className="text-3xl md:text-4xl text-text-muted max-w-6xl mx-auto leading-relaxed font-medium italic">
@@ -112,8 +112,8 @@ export const Lifestyle: React.FC = () => {
                 </div>
                 
                 <div className="absolute bottom-24 left-24 hidden lg:flex items-center gap-16 text-text-muted">
-                    <div className="flex items-center gap-6"><Zap size={24} className="text-accent" /><span className="text-[11px] font-bold tracking-tight font-semibold">Atmosphere Sync Active</span></div>
-                    <div className="flex items-center gap-6"><Globe size={24} /><span className="text-[11px] font-bold tracking-tight font-semibold">400-Acre structural mesh</span></div>
+                    <div className="flex items-center gap-3"><Zap size={24} className="text-accent" /><span className="text-[11px] font-bold tracking-tight font-semibold">Atmosphere Sync Active</span></div>
+                    <div className="flex items-center gap-3"><Globe size={24} /><span className="text-[11px] font-bold tracking-tight font-semibold">400-Acre structural mesh</span></div>
                 </div>
                 <div className="absolute bottom-24 right-24 animate-bounce">
                     <div className="w-px h-32 bg-gradient-to-b from-accent to-transparent"></div>
@@ -133,14 +133,14 @@ export const Lifestyle: React.FC = () => {
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <div className="max-w-7xl mx-auto">
                         <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
-                            <div className="inline-flex items-center gap-6 px-10 py-4 bg-accent/20 border border-accent/30 rounded-full mb-8 shadow-2xl">
+                            <div className="inline-flex items-center gap-3 px-10 py-4 bg-accent/20 border border-accent/30 rounded-full mb-4 shadow-2xl">
                                 <Cpu size={24} className="text-accent" />
                                 <span className="text-[12px] font-bold text-accent tracking-tight font-semibold">Citizenship Synthesis v6.5</span>
                             </div>
-                            <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.75]">Join the <br /> <span className="text-accent italic">Republic.</span></h2>
+                            <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-white mb-4 tracking-tighter leading-[0.75]">Join the <br /> <span className="text-accent italic">Republic.</span></h2>
                         </motion.div>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-16">
                             {[
                                 { label: 'Active Citizens', val: '12,500+', icon: Users, color: 'text-blue-400' },
                                 { label: 'Parks & Avenues', val: '45+', icon: Trees, color: 'text-emerald-400' },
@@ -160,7 +160,7 @@ export const Lifestyle: React.FC = () => {
                         <div className="mt-64 text-center">
                             <button 
                                 onClick={() => window.dispatchEvent(new CustomEvent('open-sovereign-concierge'))}
-                                className="bg-[#151822] border border-white/10 text-white px-28 py-14 rounded-full font-bold text-3xl md:text-4xl hover:bg-accent transition-all shadow-[0_60px_120px_-30px_rgba(0,0,0,0.6)] flex items-center gap-10 mx-auto group hover:scale-[1.05]"
+                                className="bg-[#151822] border border-white/10 text-white px-28 py-14 rounded-full font-bold text-3xl md:text-4xl hover:bg-accent transition-all shadow-[0_60px_120px_-30px_rgba(0,0,0,0.6)] flex items-center gap-4 mx-auto group hover:scale-[1.05]"
                             >
                                 Initiate Citizenship Synthesis <ArrowUpRight size={54} className="group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform" />
                             </button>
