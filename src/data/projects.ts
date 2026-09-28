@@ -126,7 +126,7 @@ export const projectsRegistry: Project[] = [
         title: 'Kolte Patil Life Republic Echoes | New Launch 2, 2.5 & 3 BHK Hinjewadi',
         category: 'New Launch',
         location: 'Sector R17/R18 (Echoes)',
-        price: '₹85 Lakhs*',
+        price: '₹92 Lakhs*',
         image: '/images/projects/1774005462Top_Banner-1795x930.jpg.jpeg',
         description: 'Echoes at Kolte Patil Life Republic Hinjewadi. The latest architectural monograph by Hafeez Contractor, featuring premium 2, 2.5 & 3 BHK homes.',
         features: ['2, 2.5 & 3 BHK', 'MahaRERA: P52100079424', 'Near Urban Park'],
@@ -148,7 +148,7 @@ export const projectsRegistry: Project[] = [
         title: 'Kolte Patil Life Republic Duet | Premium 2 BHK Hinjewadi',
         category: 'Compact',
         location: 'Sector R10 (Duet)',
-        price: '₹55 Lakhs*',
+        price: '₹68 Lakhs*',
         image: '/images/projects/1747221568duet_banner.jpg',
         description: 'Compact luxury at Duet, Kolte Patil Life Republic Hinjewadi. Premium 2 BHK apartments designed for couples and young families.',
         features: ['2 BHK', 'MahaRERA: P52100018539', 'High Rental Yield'],
@@ -156,8 +156,8 @@ export const projectsRegistry: Project[] = [
         amenities: ['Rooftop Gym', 'Community Garden', 'Smart Entrance', 'Library', 'EV Charging'],
         masterLayout: '/images/projects/1747304746duet_mplan.png',
         floorPlans: [
-            { type: '2 BHK Smart', size: '550 sq.ft.', image: '/images/projects/1747304746duet_mplan.png', details: ['Carpet Area: 550 sq.ft.', 'Minimalist Design Flow'] },
-            { type: '2 BHK Plus', size: '660 sq.ft.', image: '/images/projects/1747304746duet_mplan.png', details: ['Carpet Area: 660 sq.ft.', 'Extended Balcony Space'] }
+            { type: '2 BHK Smart', size: '660 sq.ft.', image: '/images/projects/1747304746duet_mplan.png', details: ['Carpet Area: 660 sq.ft.', 'Minimalist Design Flow'] },
+            { type: '2 BHK Plus', size: '835 sq.ft.', image: '/images/projects/1747304746duet_mplan.png', details: ['Carpet Area: 835 sq.ft.', 'Extended Balcony Space'] }
         ],
         specifications: [
             { title: 'Efficient Synthesis', items: ['Standard vitrified tiles', 'Branded sanitary fittings', 'Quality electric switches'] }
