@@ -70,8 +70,8 @@ const Home: React.FC = () => {
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2">
                             <motion.span initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-accent text-xs font-bold uppercase tracking-[0.5em] block mb-6">The Masterplan</motion.span>
-                            <motion.h2 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-serif font-bold text-white leading-[1.1] mb-8">A 390-Acre <br /><span className="text-golden-gradient">Vision</span></motion.h2>
-                            <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-white/60 text-lg font-light leading-relaxed mb-10"><strong>Kolte Patil Life Republic</strong> is a premium integrated township located in the heart of <strong>Hinjewadi, Pune</strong>. Designed around the principles of spatial harmony and sustainable community flow, it offers an unparalleled holistic lifestyle near Rajiv Gandhi Infotech Park.</motion.p>
+                            <motion.h2 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-serif font-bold text-secondary leading-[1.1] mb-8">A 390-Acre <br /><span className="text-golden-gradient">Vision</span></motion.h2>
+                            <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-text-muted text-lg font-light leading-relaxed mb-10"><strong>Kolte Patil Life Republic</strong> is a premium integrated township located in the heart of <strong>Hinjewadi, Pune</strong>. Designed around the principles of spatial harmony and sustainable community flow, it offers an unparalleled holistic lifestyle near Rajiv Gandhi Infotech Park.</motion.p>
                             
                             <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex flex-col gap-8">
                                 {[
@@ -82,9 +82,9 @@ const Home: React.FC = () => {
                                     <div key={idx} className="group cursor-pointer hover:pl-2 transition-all duration-300">
                                         <div className="flex items-center gap-4 mb-2">
                                             <span className="text-accent font-bold text-xs font-sans tracking-tighter opacity-50 group-hover:opacity-100 transition-opacity">{vol.label}</span>
-                                            <h4 className="text-white font-bold uppercase text-xs tracking-widest">{vol.title}</h4>
+                                            <h4 className="text-secondary font-bold uppercase text-xs tracking-widest">{vol.title}</h4>
                                         </div>
-                                        <p className="text-white/50 text-sm pl-8 group-hover:text-white/80 transition-colors">{vol.desc}</p>
+                                        <p className="text-text-muted text-sm pl-8 group-hover:text-text-muted transition-colors">{vol.desc}</p>
                                     </div>
                                 ))}
                             </motion.div>
@@ -93,17 +93,17 @@ const Home: React.FC = () => {
                             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="aspect-[4/5] rounded-3xl overflow-hidden relative group shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
                                 <img loading="lazy" src="/images/home/canvas-thumb.jpg" alt="Infrastructure" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-colors duration-500"></div>
-                                <div className="absolute bottom-6 left-6 text-white transform group-hover:-translate-y-2 transition-transform duration-500">
+                                <div className="absolute bottom-6 left-6 text-secondary transform group-hover:-translate-y-2 transition-transform duration-500">
                                     <h3 className="text-2xl font-serif font-bold">The Park</h3>
-                                    <p className="text-[10px] uppercase tracking-widest text-white/70 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">3.5 Acre Urban Lung</p>
+                                    <p className="text-[10px] uppercase tracking-widest text-secondary/70 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">3.5 Acre Urban Lung</p>
                                 </div>
                             </motion.div>
                             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="aspect-[4/5] rounded-3xl overflow-hidden relative group shadow-[0_8px_32px_rgba(0,0,0,0.5)] md:mt-16">
                                 <img loading="lazy" src="/images/home/sound-of-soul-thumb.jpg" alt="Community" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-colors duration-500"></div>
-                                <div className="absolute bottom-6 left-6 text-white transform group-hover:-translate-y-2 transition-transform duration-500">
+                                <div className="absolute bottom-6 left-6 text-secondary transform group-hover:-translate-y-2 transition-transform duration-500">
                                     <h3 className="text-2xl font-serif font-bold">The Club</h3>
-                                    <p className="text-[10px] uppercase tracking-widest text-white/70 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Social Synthesis</p>
+                                    <p className="text-[10px] uppercase tracking-widest text-secondary/70 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Social Synthesis</p>
                                 </div>
                             </motion.div>
                         </div>
@@ -116,11 +116,11 @@ const Home: React.FC = () => {
                 <div className="container mx-auto px-4">
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
                         <span className="text-accent text-xs font-bold uppercase tracking-[0.5em] block mb-4">The Collection</span>
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-white">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-secondary">
                             Life Republic <span className="text-golden-gradient">Properties</span>
                         </h2>
                         <div className="w-16 h-1 bg-accent mx-auto mb-8 rounded-full"></div>
-                        <p className="text-white/60 max-w-2xl mx-auto text-lg mb-10 font-light">
+                        <p className="text-text-muted max-w-2xl mx-auto text-lg mb-10 font-light">
                             Discover our diverse range of premium properties, from ultra-luxury villas and bespoke bungalow plots to state-of-the-art smart apartments.
                         </p>
                     </motion.div>
@@ -135,7 +135,7 @@ const Home: React.FC = () => {
 
                     <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mt-20">
                         <Link to="/projects">
-                            <Button variant="outline" size="lg" className="gap-2 px-10 py-4 text-sm tracking-[0.2em] border-secondary text-white hover:bg-secondary hover:text-white transition-all duration-300">
+                            <Button variant="outline" size="lg" className="gap-2 px-10 py-4 text-sm tracking-[0.2em] border-secondary text-secondary hover:bg-secondary hover:text-secondary transition-all duration-300">
                                 View Entire Collection <ArrowRight size={18} />
                             </Button>
                         </Link>
@@ -147,7 +147,7 @@ const Home: React.FC = () => {
             <AmenitiesCarousel />
 
             {/* Phase 5: Location Authority */}
-            <section className="py-16 md:py-24 bg-background text-white border-y-2 border-strong relative overflow-hidden" aria-label="Hinjewadi Investment Location Advantage">
+            <section className="py-16 md:py-24 bg-background text-secondary border-y-2 border-strong relative overflow-hidden" aria-label="Hinjewadi Investment Location Advantage">
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                     <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[100px]"></div>
                     <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-orange-500/10 rounded-full blur-[100px]"></div>
@@ -161,9 +161,9 @@ const Home: React.FC = () => {
                         viewport={{ once: true }}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-white bg-clip-text text-transparent">Hinjewadi: A Real Estate Investment Hotspot</h2>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-secondary bg-clip-text text-transparent">Hinjewadi: A Real Estate Investment Hotspot</h2>
                         <div className="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
-                        <p className="text-white/50 max-w-2xl mx-auto text-lg font-light leading-relaxed">
+                        <p className="text-text-muted max-w-2xl mx-auto text-lg font-light leading-relaxed">
                             Connected to the world, yet a world of its own. Located in the heart of Hinjewadi, a prime real estate corridor, Kolte Patil Life Republic Township offers unmatched connectivity and property value appreciation.
                         </p>
                     </motion.div>
@@ -188,8 +188,8 @@ const Home: React.FC = () => {
                                 <div className={`w-14 h-14 rounded-3xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 ${item.bgIcon}`}>
                                     <item.icon size={28} strokeWidth={1.5} />
                                 </div>
-                                <h3 className="text-xl font-bold mb-2 text-white group-hover:text-white transition-colors">{item.title}</h3>
-                                <p className="text-white/50 mb-4 font-light text-sm">{item.desc}</p>
+                                <h3 className="text-xl font-bold mb-2 text-secondary group-hover:text-secondary transition-colors">{item.title}</h3>
+                                <p className="text-text-muted mb-4 font-light text-sm">{item.desc}</p>
                                 <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-black/30 border border-white/10 ${item.text}`}>
                                     {item.time}
                                 </div>
@@ -214,11 +214,11 @@ const Home: React.FC = () => {
             {/* Phase 9: SEO & Discovery */}
             <section className="py-12 bg-transparent border-t border-gray-200" aria-label="Popular Real Estate Searches">
                 <div className="container mx-auto px-4">
-                    <h3 className="text-sm font-bold text-white/60 uppercase tracking-widest mb-6">Popular Searches</h3>
+                    <h3 className="text-sm font-bold text-text-muted uppercase tracking-widest mb-6">Popular Searches</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                         <div className="space-y-2">
                             <h4 className="font-semibold text-gray-700">By Configuration</h4>
-                            <ul className="space-y-1 text-white/60">
+                            <ul className="space-y-1 text-text-muted">
                                 <li><Link to="/2-bhk-flats-in-hinjewadi" className="hover:text-accent">2 BHK Flats in Hinjewadi</Link></li>
                                 <li><Link to="/3-bhk-flats-in-hinjewadi" className="hover:text-accent">3 BHK Flats in Hinjewadi</Link></li>
                                 <li><Link to="/4-bhk-flats-in-hinjewadi" className="hover:text-accent">4 BHK Villas in Hinjewadi</Link></li>
@@ -226,7 +226,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="space-y-2">
                             <h4 className="font-semibold text-gray-700">By Location</h4>
-                            <ul className="space-y-1 text-white/60">
+                            <ul className="space-y-1 text-text-muted">
                                 <li><Link to="/location/flats-near-marunji" className="hover:text-accent">Flats in Marunji</Link></li>
                                 <li><Link to="/location/flats-near-wakad" className="hover:text-accent">Flats near Wakad</Link></li>
                             </ul>
