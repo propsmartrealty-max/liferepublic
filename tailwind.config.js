@@ -4,19 +4,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#0066CC', // Apple Blue
-        background: '#F5F5F7', // Apple Light Gray background
-        surface: '#FFFFFF', // Pure White for cards
-        'text-main': '#1D1D1F', // Apple Dark Text
-        'text-muted': '#86868B', // Apple Gray Text
-        'border-strong': '#D2D2D7', // Apple Border
+        primary: '#1a73e8', // Google Blue
+        'primary-hover': '#1557b0',
+        background: '#FFFFFF', // Pure White
+        surface: '#F8F9FA', // Google Light Gray
+        'surface-variant': '#F1F3F4',
+        'text-main': '#202124', // Google Dark Text
+        'text-muted': '#5F6368', // Google Gray Text
+        border: '#DADCE0', // Google Border
       },
       fontFamily: {
-        sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        sans: ['"Google Sans Flex"', '"Google Sans"', 'sans-serif'],
+        symbols: ['"Google Symbols"', 'sans-serif'],
       },
       boxShadow: {
-        'apple': '0 4px 24px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.04)',
-        'apple-hover': '0 10px 40px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04)',
+        'google': '0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15)',
+        'google-hover': '0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15)',
       }
     },
   },

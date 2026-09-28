@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,slnt,wdth,wght,ROND@8..144,-10..0,25..150,400..700,0..100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Symbols:opsz,wght,FILL,GRAD,ROND@20..48,100..700,0..1,-50..200,0..100&display=block');
 
 @tailwind base;
 @tailwind components;
@@ -7,36 +8,41 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #F5F5F7;
-    color: #1D1D1F;
+    background-color: #FFFFFF;
+    color: #202124;
   }
   
   body {
     @apply font-sans antialiased overflow-x-hidden;
-    background-color: #F5F5F7;
-    color: #1D1D1F;
+    background-color: #FFFFFF;
+    color: #202124;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    @apply font-medium tracking-tight text-[#202124];
   }
 }
 
 @layer components {
-  .apple-card {
-    @apply bg-white rounded-3xl shadow-apple transition-shadow duration-300 hover:shadow-apple-hover overflow-hidden;
+  .google-card {
+    @apply bg-[#F8F9FA] rounded-[24px] border border-[#DADCE0] transition-shadow duration-300 hover:shadow-google overflow-hidden;
   }
   
-  .apple-btn {
-    @apply bg-[#1D1D1F] text-white rounded-full px-6 py-2.5 font-medium text-sm transition-transform hover:scale-105 active:scale-95;
+  .google-btn {
+    @apply bg-[#1a73e8] text-white rounded-full px-6 py-2.5 font-medium text-sm transition-colors hover:bg-[#1557b0] active:bg-[#174ea6] flex items-center justify-center gap-2;
   }
   
-  .apple-btn-secondary {
-    @apply bg-[#E8E8ED] text-[#1D1D1F] rounded-full px-6 py-2.5 font-medium text-sm transition-all hover:bg-[#D2D2D7] active:scale-95;
+  .google-btn-secondary {
+    @apply bg-white border border-[#DADCE0] text-[#1a73e8] rounded-full px-6 py-2.5 font-medium text-sm transition-colors hover:bg-[#F8F9FA] active:bg-[#F1F3F4] flex items-center justify-center gap-2;
+  }
+
+  .material-symbol {
+    font-family: 'Google Symbols', sans-serif;
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   }
 }
 
-/* Very subtle scrollbar */
+/* Subtle scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -44,9 +50,9 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D2D2D7;
+  background: #DADCE0;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #86868B;
+  background: #BDC1C6;
 }
