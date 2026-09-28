@@ -72,8 +72,9 @@ export const Home = () => {
                 </div>
                 <div className="z-10 text-center px-4 max-w-5xl flex flex-col items-center">
                     <KineticText 
-                        text="Life Republic." 
-                        className="text-5xl md:text-5xl font-sans font-bold text-white tracking-tight mb-6 justify-center rainbow-aura"
+                        as="h1"
+                        text="Kolte Patil Life Republic Township Hinjewadi" 
+                        className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-white tracking-tighter mb-6 justify-center rainbow-aura leading-[1.1]"
                     />
                     <motion.p 
                         initial={{ opacity: 0 }}

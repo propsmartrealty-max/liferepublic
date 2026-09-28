@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-export const KineticText = ({ text, className, delay = 0 }: { text: string; className?: string; delay?: number }) => {
+export const KineticText = ({ text, className, delay = 0, as: Component = 'div' }: { text: string; className?: string; delay?: number; as?: any }) => {
+    const MotionComponent = motion(Component);
     // Split text into characters, but preserve words to prevent awkward wrapping
     const words = text.split(" ");
 
@@ -30,7 +31,7 @@ export const KineticText = ({ text, className, delay = 0 }: { text: string; clas
     };
 
     return (
-        <motion.div
+        <MotionComponent
             style={{ overflow: "hidden", display: "flex", flexWrap: "wrap", justifyContent: "inherit" }}
             variants={container}
             initial="hidden"
@@ -47,6 +48,6 @@ export const KineticText = ({ text, className, delay = 0 }: { text: string; clas
                     ))}
                 </span>
             ))}
-        </motion.div>
+        </MotionComponent>
     );
 };
