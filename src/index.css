@@ -12,7 +12,9 @@
   }
   
   body {
-    @apply font-sans antialiased overflow-x-hidden bg-background text-text-main;
+    @apply font-sans antialiased overflow-x-hidden;
+    background-color: #F5F5F7;
+    color: #1D1D1F;
   }
 
   h1, h2, h3, h4, h5, h6 {
