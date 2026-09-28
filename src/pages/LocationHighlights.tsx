@@ -103,7 +103,7 @@ export const LocationHighlights: React.FC = () => {
                                 ].map((m, i) => (
                                     <div key={i} className="flex items-center justify-between p-8 bg-[#F8F9FA] rounded-[24px] border border-white/20 group hover:border-accent transition-all shadow-sm">
                                         <div className="flex items-center gap-5">
-                                            <div className="w-12 h-12 bg-[#151822] border border-white/20 rounded-2xl flex items-center justify-center rainbow-text-clip font-bold shadow-sm group-hover:scale-110 transition-transform">
+                                            <div className="w-12 h-12 bg-white border border-black/10 rounded-2xl flex items-center justify-center rainbow-text-clip font-bold shadow-sm group-hover:scale-110 transition-transform">
                                                 <m.icon size={20} />
                                             </div>
                                             <span className="text-[11px] font-bold text-[#202124] tracking-tight font-semibold">{m.label}</span>
@@ -139,7 +139,7 @@ export const LocationHighlights: React.FC = () => {
                                     </div>
                                 </div>
 
-                                <div className="absolute bottom-12 right-12 z-20 p-8 bg-[#151822] border border-white/20/10 backdrop-blur-2xl rounded-[24px] border border-white/20 text-[#202124] flex items-center gap-6 group">
+                                <div className="absolute bottom-12 right-12 z-20 p-8 bg-white/90 backdrop-blur-2xl rounded-[24px] border border-black/10 text-[#202124] shadow-2xl flex items-center gap-6 group">
                                     <BarChart3 size={32} className="rainbow-text-clip font-bold group-hover:rotate-12 transition-transform" />
                                     <div>
                                         <p className="text-[10px] font-bold tracking-tight font-medium opacity-60">ROI Catalyst</p>
@@ -171,11 +171,14 @@ export const LocationHighlights: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="bg-[#151822] border border-white/20 p-16 rounded-[24px] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.05)] border border-white/20 group hover:border-accent transition-all flex flex-col justify-between"
+                                className="bg-white/80 backdrop-blur-2xl border-t border-l border-white/60 p-16 rounded-[2rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] group hover:shadow-[0_40px_80px_-10px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between relative overflow-hidden"
                             >
                                 <div>
-                                    <div className="w-20 h-20 bg-white rainbow-text-clip font-bold rounded-[1.5rem] flex items-center justify-center mb-12 group-hover:bg-accent group-hover:text-[#202124] transition-all shadow-xl shadow-secondary/10">
-                                        <group.icon size={32} />
+                                    <div className="relative mb-12">
+                                        <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-[1.5rem] blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                                        <div className="relative w-20 h-20 bg-white rounded-[1.5rem] flex items-center justify-center border border-black/5 shadow-lg shadow-black/5 group-hover:scale-110 transition-transform duration-500 text-black">
+                                            <group.icon size={32} />
+                                        </div>
                                     </div>
                                     <h3 className="text-3xl font-sans font-bold text-[#202124] mb-12 tracking-tight">{group.category}</h3>
                                     <div className="space-y-10">
@@ -192,7 +195,7 @@ export const LocationHighlights: React.FC = () => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="mt-16 pt-8 border-t border-white/20 flex items-center justify-between text-[10px] font-bold tracking-tight font-medium text-[#5F6368]">
+                                <div className="mt-16 pt-8 border-t border-black/5 flex items-center justify-between text-[10px] font-bold tracking-tight font-medium text-[#5F6368]">
                                     <span>Verified 2026</span>
                                     <ArrowUpRight size={16} className="rainbow-text-clip font-bold" />
                                 </div>
@@ -221,7 +224,7 @@ export const LocationHighlights: React.FC = () => {
                             </p>
                             <div className="flex flex-col md:flex-row gap-8 justify-center">
                                 <a href="/roi-calculator">
-                                    <button className="bg-[#151822] border border-white/20 text-[#202124] px-16 py-7 rounded-full font-bold text-lg hover:bg-accent hover:text-[#202124] transition-all shadow-2xl flex items-center gap-4">
+                                    <button className="bg-black text-white px-16 py-7 rounded-full font-bold text-lg hover:bg-accent hover:text-[#202124] transition-all shadow-2xl flex items-center gap-4">
                                         Synthesize ROI <ArrowUpRight size={24} />
                                     </button>
                                 </a>
