@@ -112,92 +112,74 @@ const Home: React.FC = () => {
             </section>
 
             {/* Phase 3: The Core Offering (Projects) */}
-            <section className="py-16 md:py-32 bg-transparent" aria-label="Featured Township Projects">
-                <div className="container mx-auto px-4">
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-                        <span className="text-[#E5C07B] text-[10px] font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 mb-4"><span className="text-xl">✦</span> SOVEREIGN PROJECT PORTFOLIO</span>
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-white">
-                            Explore Life Republic <span className="text-[#E5C07B]">Complete Enclaves</span>
-                        </h2>
-                        
-                        <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base mb-10 font-light">390 Acres of master-planned luxury NA plots, private villas, hillside apartments, and senior retirement enclaves.</p>
-                    {/* Category Filter Pills (Static representation) */}
-                    <div className="flex flex-wrap justify-center gap-4 mb-16 max-w-4xl mx-auto border border-white/10 p-2 rounded-full bg-[#151822]/50 backdrop-blur-md">
-                        <button className="bg-[#7F1D1D] text-white px-6 py-2 rounded-full text-xs font-bold tracking-wider uppercase border border-red-900/50 flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#151822] border border-white/10 rounded-full animate-pulse"></span> All Enclaves <span className="bg-black/20 px-2 py-0.5 rounded-full ml-1">16</span></button>
-                        <button className="text-gray-400 hover:text-white px-4 py-2 text-xs font-bold tracking-wider uppercase transition-colors">🏡 NA Plots <span className="bg-[#151822] border border-white/10/5 px-2 py-0.5 rounded-full ml-1">1</span></button>
-                        <button className="text-gray-400 hover:text-white px-4 py-2 text-xs font-bold tracking-wider uppercase transition-colors">🏰 Luxury Villas <span className="bg-[#151822] border border-white/10/5 px-2 py-0.5 rounded-full ml-1">2</span></button>
-                        <button className="text-gray-400 hover:text-white px-4 py-2 text-xs font-bold tracking-wider uppercase transition-colors">🏢 Apartments <span className="bg-[#151822] border border-white/10/5 px-2 py-0.5 rounded-full ml-1">12</span></button>
+            
+            <section id="projects" className="py-32 bg-black relative z-10" aria-label="Featured Projects">
+                <div className="container mx-auto px-4 max-w-7xl">
+                    <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                        <div className="max-w-2xl">
+                            <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 tracking-tighter">
+                                Architectural <br/> <span className="text-gray-500">Masterpieces.</span>
+                            </h2>
+                            <p className="text-gray-400 text-lg font-light leading-relaxed">
+                                Discover a curated portfolio of spatial environments engineered for modern sovereignty.
+                            </p>
+                        </div>
+                        <Link to="/projects" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white hover:text-black transition-all flex items-center gap-2">
+                            View All <ArrowRight size={16} />
+                        </Link>
                     </div>
 
-                    </motion.div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {featuredProjects.map((project, index) => (
-                            <motion.div key={project.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="hover:-translate-y-2 transition-transform duration-500">
-                                <ProjectCard project={project} priority={index < 3} />
-                            </motion.div>
+                    {/* Bento Grid Layout */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {featuredProjects.slice(0, 6).map((project, index) => (
+                            <div key={project.id} className={`${index === 0 ? 'md:col-span-2 lg:col-span-2' : ''}`}>
+                                <ProjectCard project={project} priority={index < 2} />
+                            </div>
                         ))}
                     </div>
-
-                    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mt-20">
-                        <Link to="/projects">
-                            <Button variant="outline" size="lg" className="gap-2 px-10 py-4 text-sm tracking-[0.2em] border-secondary text-white hover:bg-[#0B0D14] hover:text-white transition-all duration-300">
-                                View Entire Collection <ArrowRight size={18} />
-                            </Button>
-                        </Link>
-                    </motion.div>
                 </div>
             </section>
+
 
             {/* Phase 4: Lifestyle */}
             <AmenitiesCarousel />
 
             
             {/* Phase 5: Location Authority */}
-            <section className="py-24 bg-[#0B0D14] text-white border-y border-white/5 relative overflow-hidden" aria-label="Hinjewadi Investment Location Advantage">
-                <div className="container mx-auto px-4 relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center mb-16"
-                    >
-                        <span className="inline-block py-1 px-4 rounded-full border border-[#E5C07B]/30 text-[#E5C07B] text-[10px] font-bold tracking-[0.2em] uppercase mb-8">
-                            📍 STRATEGIC CONNECTIVITY & PROXIMITY
-                        </span>
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4 text-white">
-                            Minutes From Everywhere, <span className="text-[#E5C07B]">Miles From Chaos</span>
+            
+            <section className="py-32 bg-[#050505] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent pointer-events-none blur-3xl"></div>
+                <div className="container mx-auto px-4 max-w-7xl relative z-10">
+                    <div className="text-center max-w-3xl mx-auto mb-20">
+                        <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 tracking-tighter">
+                            Hyperconnected <span className="text-primary">Ecosystem.</span>
                         </h2>
-                        <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base font-light leading-relaxed">
-                            Seamless access to Hinjewadi IT Park, Wakad, and Pune-Mumbai Expressway via the multi-level Wakad junction.
+                        <p className="text-gray-400 text-lg font-light">
+                            Seamless velocity. Strategically positioned 10 minutes from Hinjewadi Phase 1 via the multi-level transit corridor.
                         </p>
-                    </motion.div>
+                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
-                        {[
-                            { time: '5 Mins', title: 'Hinjewadi IT Park', desc: 'Phase 1 • Direct IT Hub Access' },
-                            { time: '10 Mins', title: 'Wakad Junction', desc: '4.5 km • Mumbai-Bengaluru Hwy' },
-                            { time: '15 Mins', title: 'Ruby Hall Clinic', desc: '7 km • Multi-Specialty Healthcare' },
-                            { time: 'On-Campus', title: 'Anisha Global', desc: '0 km • Inside 390-Acre Township' },
-                            { time: 'Walking Dist', title: 'High Street', desc: '100 m • Premium Retail Hub' }
-                        ].map((item, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                whileHover={{ y: -5 }}
-                                className="p-6 rounded-xl border border-white/10 bg-[#151822]/50 hover:bg-[#151822] hover:border-[#E5C07B]/30 transition-all duration-300 text-center flex flex-col justify-center min-h-[140px]"
-                            >
-                                <h3 className="text-[#E5C07B] text-xl font-serif font-bold mb-2">{item.time}</h3>
-                                <h4 className="text-white text-sm font-bold mb-1">{item.title}</h4>
-                                <p className="text-gray-500 text-[10px] uppercase tracking-wider">{item.desc}</p>
-                            </motion.div>
-                        ))}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="bento-card p-8 md:col-span-2 min-h-[300px] flex flex-col justify-between">
+                            <div>
+                                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white mb-6">📍</div>
+                                <h3 className="text-3xl font-display font-bold text-white mb-2">Hinjewadi IT Park</h3>
+                                <p className="text-gray-400">Direct access to Pune's largest tech cluster.</p>
+                            </div>
+                            <div className="text-6xl font-display font-bold text-white/20 mt-8">10 MINS</div>
+                        </div>
+                        <div className="bento-card p-8 min-h-[300px] flex flex-col justify-between bg-gradient-to-br from-surface to-primary/10">
+                            <div>
+                                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary mb-6">🚇</div>
+                                <h3 className="text-2xl font-display font-bold text-white mb-2">Metro Line 3</h3>
+                                <p className="text-gray-400">Upcoming massive connectivity upgrade.</p>
+                            </div>
+                            <div className="text-5xl font-display font-bold text-primary/30 mt-8">5 KM</div>
+                        </div>
                     </div>
                 </div>
             </section>
+
 {/* Phase 6: Interactive Depth */}
             <NeuralErrorBoundary>
                 <MasterPlan />
