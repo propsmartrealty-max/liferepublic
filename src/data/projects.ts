@@ -31,7 +31,7 @@ export const projectsRegistry: Project[] = [
         title: 'Kolte Patil Life Republic Atmos | Modern 2, 2.5 & 3 BHK Hinjewadi',
         category: 'Lifestyle',
         location: 'Sector R22 (Atmos)',
-        price: '₹82 Lakhs*',
+        price: '₹65 Lakhs*',
         image: '/images/projects/1718284587atmosb.webp',
         description: 'Experience the Atmos lifestyle at Kolte Patil Life Republic Township Hinjewadi. Modern 2, 2.5 & 3 BHK apartments with high-rise luxury and smart amenities.',
         features: ['2, 2.5 & 3 BHK', 'Sector R22', 'Smart Home Ready'],
@@ -61,7 +61,7 @@ export const projectsRegistry: Project[] = [
         title: 'Kolte Patil Life Republic Aros | Premium 2 & 3 BHK Hinjewadi',
         category: 'Executive',
         location: 'Sector R13 (Aros)',
-        price: '₹85 Lakhs*',
+        price: '₹75 Lakhs*',
         image: '/images/projects/17523100953-bhk-flats-in-pune-hinjewadi-aros-life-republic.webp',
         description: 'Discover Aros at Kolte Patil Life Republic Township Hinjewadi. Premium 2 & 3 BHK homes adjacent to the 3.5-acre Urban Park and jogging spine.',
         features: ['2 & 3 BHK', 'MahaRERA: P52100079623', 'Premium Sector R13'],
@@ -69,8 +69,8 @@ export const projectsRegistry: Project[] = [
         amenities: ['Private Clubhouse', 'Olympic Size Pool', 'Urban Park Access', 'Pet Park', 'Amphitheatre', 'Co-working Space'],
         masterLayout: '/images/projects/1724406503master.webp',
         floorPlans: [
-            { type: '2 BHK Executive', size: '718 sq.ft.', image: '/images/projects/1724406503master.webp', virtualTourUrl: 'https://my.matterport.com/show/?m=JvwN82W8Xq1', details: ['Carpet Area: 718 sq.ft.', 'Optimized Living-Dining', 'Large Master Bedroom'] },
-            { type: '3 BHK Royal', size: '1176 sq.ft.', image: '/images/projects/1724406503master.webp', virtualTourUrl: 'https://my.matterport.com/show/?m=JvwN82W8Xq1', details: ['Carpet Area: 1176 sq.ft.', 'Wrap-around Balcony', 'Premium Bath Fittings'] }
+            { type: '2 BHK', size: '718 sq.ft.', image: '/images/projects/1724406503master.webp', virtualTourUrl: 'https://my.matterport.com/show/?m=JvwN82W8Xq1', details: ['Carpet Area: 718 sq.ft.', 'Optimized Living-Dining', 'Large Master Bedroom'] },
+            { type: '3 BHK', size: '920 - 1176 sq.ft.', image: '/images/projects/1724406503master.webp', virtualTourUrl: 'https://my.matterport.com/show/?m=JvwN82W8Xq1', details: ['Carpet Area: 920-1176 sq.ft.', 'Wrap-around Balcony', 'Premium Bath Fittings'] }
         ],
         specifications: [
             { title: 'Architectural Synthesis', items: ['R.C.C. frame with blockwork', 'Smooth internal gypsum finish', 'External acrylic texture paint'] },
@@ -102,10 +102,10 @@ export const projectsRegistry: Project[] = [
     },
     {
         id: 'kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi',
-        title: 'Kolte Patil Life Republic Universe | Luxury 1 & 2 BHK Hinjewadi',
+        title: 'Kolte Patil Life Republic Universe | Smart 1 & 2 BHK Hinjewadi',
         category: 'Modern',
         location: 'Sector R10 (Universe)',
-        price: 'Sold Out (₹72 Lakhs*)',
+        price: '₹40 Lakhs*',
         image: '/images/projects/1719304446unnn1795-930.webp',
         description: 'Modern living at Universe, Kolte Patil Life Republic Hinjewadi. Planet-themed luxury 1 & 2 BHK homes near the upcoming Metro Phase 3.',
         features: ['1 & 2 BHK', 'MahaRERA: P52100027629', 'Metro Connectivity'],
@@ -113,7 +113,8 @@ export const projectsRegistry: Project[] = [
         amenities: ['Central Planet Park', 'Digital Library', 'EV Charging Station', 'Multi-sport Courts', 'Sunset Deck'],
         masterLayout: '/images/projects/1724418593small5.webp',
         floorPlans: [
-            { type: '2 BHK Smart', size: '629 sq.ft.', image: '/images/projects/1724418593small5.webp', details: ['Carpet Area: 629 sq.ft.', 'Dual Balcony Layout', 'Optimized Master Bedroom'] }
+            { type: '1 BHK', size: '393 - 444 sq.ft.', image: '/images/projects/1724418593small5.webp', details: ['Carpet Area: 393-444 sq.ft.', 'Smart Layout', 'Premium Bath Fittings'] },
+            { type: '2 BHK', size: '560 - 629 sq.ft.', image: '/images/projects/1724418593small5.webp', details: ['Carpet Area: 560-629 sq.ft.', 'Dual Balcony Layout', 'Optimized Master Bedroom'] }
         ],
         specifications: [
             { title: 'Modern Synthesis', items: ['Quality vitrified tiles', 'Aluminum sliding windows', 'Branded electrical switches'] }
@@ -147,7 +148,7 @@ export const projectsRegistry: Project[] = [
         title: 'Kolte Patil Life Republic Duet | Premium 2 BHK Hinjewadi',
         category: 'Compact',
         location: 'Sector R10 (Duet)',
-        price: '₹75 Lakhs*',
+        price: '₹55 Lakhs*',
         image: '/images/projects/1747221568duet_banner.jpg',
         description: 'Compact luxury at Duet, Kolte Patil Life Republic Hinjewadi. Premium 2 BHK apartments designed for couples and young families.',
         features: ['2 BHK', 'MahaRERA: P52100018539', 'High Rental Yield'],
@@ -155,8 +156,8 @@ export const projectsRegistry: Project[] = [
         amenities: ['Rooftop Gym', 'Community Garden', 'Smart Entrance', 'Library', 'EV Charging'],
         masterLayout: '/images/projects/1747304746duet_mplan.png',
         floorPlans: [
-            { type: '2 BHK Smart', size: '660 sq.ft.', image: '/images/projects/1747304746duet_mplan.png', details: ['Carpet Area: 660 sq.ft.', 'Minimalist Design Flow'] },
-            { type: '2 BHK Plus', size: '766 sq.ft.', image: '/images/projects/1747304746duet_mplan.png', details: ['Carpet Area: 766 sq.ft.', 'Extended Balcony Space'] }
+            { type: '2 BHK Smart', size: '550 sq.ft.', image: '/images/projects/1747304746duet_mplan.png', details: ['Carpet Area: 550 sq.ft.', 'Minimalist Design Flow'] },
+            { type: '2 BHK Plus', size: '660 sq.ft.', image: '/images/projects/1747304746duet_mplan.png', details: ['Carpet Area: 660 sq.ft.', 'Extended Balcony Space'] }
         ],
         specifications: [
             { title: 'Efficient Synthesis', items: ['Standard vitrified tiles', 'Branded sanitary fittings', 'Quality electric switches'] }
