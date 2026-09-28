@@ -12,9 +12,9 @@ export const projectsRegistry: Project[] = [
         features: ['Bungalow Plots', 'Sector R17', 'Customizable Luxury'],
         overview: 'Nora at Kolte Patil Life Republic Township offers an exclusive opportunity to build your own masterpiece. These premium bungalow plots provide the perfect canvas for your bespoke residence with world-class township infrastructure.',
         amenities: ['Exclusive Gated Community', 'Lush Green Landscapes', 'Wide Internal Roads', 'Dedicated Utilities Infrastructure', 'Clubhouse Access', '24/7 Security'],
-        masterLayout: '/images/projects/better-living-img.jpg',
+        masterLayout: '/images/home/overview-img.jpg',
         floorPlans: [
-            { type: 'Premium Plot', size: 'Various Sizes', image: '/images/projects/better-living-img.jpg', details: ['Build to Suit', 'Vastu Compliant Layouts', 'Premium Location'] }
+            { type: 'Premium Plot', size: 'Various Sizes', image: '/images/projects/overview-img.jpg', details: ['Build to Suit', 'Vastu Compliant Layouts', 'Premium Location'] }
         ],
         specifications: [
             { title: 'Infrastructure', items: ['Concrete Internal Roads', 'Underground Cabling', 'Water Supply Connection'] },
@@ -89,10 +89,10 @@ export const projectsRegistry: Project[] = [
         features: ['4 & 5 BHK', 'MahaRERA: P52100002646', '24K Signature Club'],
         overview: '24K Espada at Kolte Patil Life Republic Township Hinjewadi is the ultimate statement of sovereignty. These limited-edition row houses offer private terraces, internal lifts, and the exclusive 24K lifestyle.',
         amenities: ['Exclusive 24K Club', 'Internal Private Lift', 'Private Garden', 'Home Automation', 'Valet Service', 'Concierge'],
-        masterLayout: '/images/projects/better-living-img.jpg',
+        masterLayout: '/images/home/24k-espada-thumb.jpg',
         floorPlans: [
-            { type: '4 BHK Row House', size: '1876 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Carpet Area: 1876 sq.ft.', 'G+2 Structure', 'Private Backyard'] },
-            { type: '5 BHK Estate', size: '2274 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Carpet Area: 2274 sq.ft.', 'Double Height Living', 'Private Terrace Garden'] }
+            { type: '4 BHK Row House', size: '1876 sq.ft.', image: '/images/home/24k-espada-thumb.jpg', details: ['Carpet Area: 1876 sq.ft.', 'G+2 Structure', 'Private Backyard'] },
+            { type: '5 BHK Estate', size: '2274 sq.ft.', image: '/images/home/24k-espada-thumb.jpg', details: ['Carpet Area: 2274 sq.ft.', 'Double Height Living', 'Private Terrace Garden'] }
         ],
         specifications: [
             { title: '24K Premium Synthesis', items: ['Imported Marble flooring in Living Room', 'Premium UPVC Windows', 'Modular Kitchen with Hob & Chimney'] },
@@ -170,7 +170,7 @@ export const projectsRegistry: Project[] = [
         category: 'Premium',
         location: 'Sector R16 (Arezo)',
         price: 'Sold Out (₹78 Lakhs*)',
-        image: '/images/projects/1719301346arrrr1795-930.webp',
+        image: '/images/home/1719301346arrrr1795-930.webp',
         description: 'Modern 2 BHK flats at Arezo, Kolte Patil Life Republic Hinjewadi. 16th Avenue architectural luxury with multi-tier security.',
         features: ['2 BHK', 'MahaRERA: P52100018539', 'Sector R16'],
         overview: 'Arezo at Kolte Patil Life Republic Township Hinjewadi is the embodiment of efficient architectural luxury. Located in Sector R16, these 2 BHK units offer the best value-to-luxury ratio in the township.',
@@ -195,9 +195,9 @@ export const projectsRegistry: Project[] = [
         features: ['4 & 5 BHK', 'MahaRERA: P52100002646', 'Private Lawns'],
         overview: 'The Villas at Kolte Patil Life Republic Township Hinjewadi are the crowning jewels of the 390-acre ecosystem. Each villa is a standalone architectural monograph, offering privacy, luxury, and infinite space.',
         amenities: ['Private Pool (Select)', 'Signature Clubhouse', 'Personal Concierge', 'Estate Management', 'Organic Kitchen Garden'],
-        masterLayout: '/images/projects/better-living-img.jpg',
+        masterLayout: '/images/projects/arezo-thumb.jpg',
         floorPlans: [
-            { type: '5 BHK Grand Villa', size: '3200 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Private Driveway', 'Double Height Living', 'Private Home Theatre Space'] }
+            { type: '5 BHK Grand Villa', size: '3200 sq.ft.', image: '/images/projects/overview-img.jpg', details: ['Private Driveway', 'Double Height Living', 'Private Home Theatre Space'] }
         ],
         specifications: [
             { title: 'Elite Synthesis', items: ['Imported Italian Marble', 'Premium German Kitchen Fittings', 'Full Home Automation'] }
@@ -215,9 +215,9 @@ export const projectsRegistry: Project[] = [
         features: ['4 BHK Row Houses', 'MahaRERA: P52100079424', 'Zen Tectonic Design'],
         overview: 'Sound of Soul at Kolte Patil Life Republic Township Hinjewadi is designed to offer a peaceful residential synthesis. These row houses feature architecture that harmonizes with the surrounding landscape and curated acoustic environments.',
         amenities: ['Zen Garden', 'Acoustic Lounge', 'Community Plaza', 'Wellness Center', 'Library'],
-        masterLayout: '/images/projects/better-living-img.jpg',
+        masterLayout: '/images/home/sound-of-soul-thumb.jpg',
         floorPlans: [
-            { type: '4 BHK Row House', size: '1650 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Carpet Area: 1650 sq.ft.', 'Private Garden Pocket'] }
+            { type: '4 BHK Row House', size: '1650 sq.ft.', image: '/images/home/sound-of-soul-thumb.jpg', details: ['Carpet Area: 1650 sq.ft.', 'Private Garden Pocket'] }
         ],
         specifications: [
             { title: 'Zen Synthesis', items: ['Sound-insulated windows', 'Premium natural stone flooring'] }
@@ -235,10 +235,10 @@ export const projectsRegistry: Project[] = [
         features: ['2 & 3 BHK', 'MahaRERA: P52100051765', 'Prime Sector R1'],
         overview: 'First Avenue at Kolte Patil Life Republic Township Hinjewadi is one of the most established sectors, offering immediate possession and a vibrant community life.',
         amenities: ['Clubhouse', 'Swimming Pool', 'Gymnasium', 'Landscaped Gardens', 'Children\'s Play Area', '24/7 Security'],
-        masterLayout: '/images/projects/better-living-img.jpg',
+        masterLayout: '/images/projects/overview-img.jpg',
         floorPlans: [
-            { type: '2 BHK Ready', size: '780 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Ready to Move', 'Spacious Living Area'] },
-            { type: '3 BHK Ready', size: '1050 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Immediate Possession', 'Premium Finishes'] }
+            { type: '2 BHK Ready', size: '780 sq.ft.', image: '/images/projects/overview-img.jpg', details: ['Ready to Move', 'Spacious Living Area'] },
+            { type: '3 BHK Ready', size: '1050 sq.ft.', image: '/images/projects/overview-img.jpg', details: ['Immediate Possession', 'Premium Finishes'] }
         ],
         specifications: [
             { title: 'Standard Synthesis', items: ['Vitrified flooring in all rooms', 'Granite kitchen platform', 'Branded sanitary ware'] }
@@ -256,9 +256,9 @@ export const projectsRegistry: Project[] = [
         features: ['1 & 2 BHK', 'MahaRERA: P52100017116', 'Sector R9'],
         overview: 'ORO Avenue at Kolte Patil Life Republic Township Hinjewadi offers smart urban apartments with high rental demand in the growing Sector R9.',
         amenities: ['Gymnasium', 'Walking Track', 'Retail Plaza', 'CCTV Security', 'Power Backup', 'Landscaped Garden'],
-        masterLayout: '/images/projects/better-living-img.jpg',
+        masterLayout: '/images/projects/overview-img.jpg',
         floorPlans: [
-            { type: '2 BHK Smart', size: '610 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Carpet Area: 610 sq.ft.', 'Dual Balcony', 'Smart Room Layout'] }
+            { type: '2 BHK Smart', size: '610 sq.ft.', image: '/images/projects/overview-img.jpg', details: ['Carpet Area: 610 sq.ft.', 'Dual Balcony', 'Smart Room Layout'] }
         ],
         specifications: [
             { title: 'Smart Engineering', items: ['Vitrified tiles in all rooms', 'Concealed copper wiring', 'Quality CP fittings'] }
@@ -276,9 +276,9 @@ export const projectsRegistry: Project[] = [
         features: ['2 & 3 BHK', 'MahaRERA: P52100022154', 'Sector R7'],
         overview: 'i-Towers at Kolte Patil Life Republic Township Hinjewadi is designed for the modern professional, featuring smart home features and active sports infrastructure.',
         amenities: ['Sports Arena', 'Digital Clubhouse', 'Smart Security', 'Yoga Deck', 'Swimming Pool', 'Co-working Space'],
-        masterLayout: '/images/projects/better-living-img.jpg',
+        masterLayout: '/images/projects/overview-img.jpg',
         floorPlans: [
-            { type: '2 BHK Tech', size: '785 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Smart Lock Integration', 'Voice Command Ready'] }
+            { type: '2 BHK Tech', size: '785 sq.ft.', image: '/images/projects/overview-img.jpg', details: ['Smart Lock Integration', 'Voice Command Ready'] }
         ],
         specifications: [
             { title: 'Digital Synthesis', items: ['Fiber-to-the-home connectivity', 'Modular switches with automation support'] }
@@ -318,15 +318,15 @@ export const projectsRegistry: Project[] = [
         category: 'Lifestyle',
         location: 'Sector R (Qrious)',
         price: '₹78 Lakhs*',
-        image: '/images/projects/better-living-img.jpg',
+        image: '/images/projects/1727356856project_banner___1795-930.jpg',
         description: 'Discover Qrious at Kolte Patil Life Republic Township. A premium 7.58-acre residential enclave offering high-rise luxury towers and an exclusive 19,000 sq.ft. Q Club.',
         features: ['2 & 3 BHK', 'Under Construction', '19,000 sq.ft. Club'],
         overview: 'Kolte Patil Life Republic Qrious offers an unparalleled living experience with G+25/26 high-rise towers. Enjoy panoramic views, 50+ lifestyle amenities, and intelligent floor layouts.',
         amenities: ['Q Club (19,000 sq.ft.)', 'Infinity Edge Swimming Pool', 'Yoga Deck', 'Sports Courts', 'Kids Play Area', 'Gymnasium'],
         masterLayout: '/images/projects/walkthrough.jpg',
         floorPlans: [
-            { type: '2 BHK', size: '796 - 900 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Carpet Area: 796-900 sq.ft.', 'Modern Layout', 'Spacious Balcony'] },
-            { type: '3 BHK', size: '1100 - 1231 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Carpet Area: 1100-1231 sq.ft.', 'Grand Living Space', 'Premium Finishes'] }
+            { type: '2 BHK', size: '796 - 900 sq.ft.', image: '/images/projects/1727356856project_banner___1795-930.jpg', details: ['Carpet Area: 796-900 sq.ft.', 'Modern Layout', 'Spacious Balcony'] },
+            { type: '3 BHK', size: '1100 - 1231 sq.ft.', image: '/images/projects/1727356856project_banner___1795-930.jpg', details: ['Carpet Area: 1100-1231 sq.ft.', 'Grand Living Space', 'Premium Finishes'] }
         ],
         specifications: [
             { title: 'Structure', items: ['G+26 Storey High-Rise', 'Earthquake Resistant', '5 High Speed Lifts per tower'] },
@@ -345,15 +345,15 @@ export const projectsRegistry: Project[] = [
         category: 'Lifestyle',
         location: 'Sector R3 (3rd Avenue)',
         price: 'Sold Out',
-        image: '/images/projects/better-living-img.jpg',
+        image: '/images/home/box-img-01.jpg',
         description: 'Explore 3rd Avenue at Kolte Patil Life Republic Township. Established 1 and 2 BHK residences featuring robust community living and immediate access to township amenities.',
         features: ['1 & 2 BHK', 'Ready to Move', 'Established Community'],
         overview: '3rd Avenue is one of the foundational sectors of the Kolte Patil Life Republic Township, providing residents with fully established infrastructural benefits and an active community lifestyle.',
         amenities: ['Clubhouse', 'Swimming Pool', 'Landscaped Gardens', 'Children Play Area', '24/7 Security'],
         masterLayout: '/images/projects/walkthrough.jpg',
         floorPlans: [
-            { type: '1 BHK', size: '450 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Carpet Area: 450 sq.ft.', 'Compact Design'] },
-            { type: '2 BHK', size: '650 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Carpet Area: 650 sq.ft.', 'Standard Layout'] }
+            { type: '1 BHK', size: '450 sq.ft.', image: '/images/home/box-img-01.jpg', details: ['Carpet Area: 450 sq.ft.', 'Compact Design'] },
+            { type: '2 BHK', size: '650 sq.ft.', image: '/images/home/box-img-01.jpg', details: ['Carpet Area: 650 sq.ft.', 'Standard Layout'] }
         ],
         specifications: [
             { title: 'Standard Finishes', items: ['Vitrified Tiles', 'Powder Coated Windows'] },
