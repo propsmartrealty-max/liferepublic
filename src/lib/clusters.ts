@@ -9,13 +9,13 @@ export const CLUSTERS = [
         slug: "kolte-patil-life-republic-echoes",
         category: "Premium Residences",
         description: "Echoes is the newest residential phase at Life Republic (Sector R31/31st Avenue). Offering meticulously planned 2 & 2.5 BHK homes with 40+ amenities across a 5.89-acre development.",
-        price: "₹86 Lacs*",
+        price: "₹92 Lakhs*",
         rera: "PM1261012502409",
         image: "https://liferepublic.in/images/webp/popup/echoes-desktop-kpdl.jpeg", 
         masterLayout: "https://life-republic.in/images/gallery/eros/master-layout.webp",
         configurations: [
-            { type: "2 BHK", size: "735 - 840 sq.ft.", price: "₹86 Lacs*" },
-            { type: "2.5 BHK", size: "866 - 1,086 sq.ft.", price: "₹1.02 Cr*" }
+            { type: "2 BHK", size: "837 sq.ft.", price: "₹92 - 99 Lakhs*" },
+            { type: "2.5 BHK", size: "963 - 978 sq.ft.", price: "₹1.02 - 1.10 Cr*" }
         ],
         gallery: [
         "https://liferepublic.in/images/project/gallery/1774005843Elevation 01 A.jpg",
