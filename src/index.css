@@ -127,3 +127,38 @@
 }
 
 }
+
+
+/* ==========================================
+   GOOGLE MOBILE STANDARD & WEB VITALS LOCKDOWN
+   ========================================== */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-text-size-adjust: 100%; /* Prevent iOS text size adjustment CLS */
+  text-size-adjust: 100%;
+  overscroll-behavior-y: none; /* Prevent pull-to-refresh reload glitches */
+}
+
+/* Enforce Google's strict 48x48px minimum touch target for accessibility */
+button, 
+a, 
+input, 
+select, 
+textarea {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* Exempt small inline links from the 48px rule to prevent weird text spacing */
+p a, span a {
+  min-height: auto;
+  min-width: auto;
+}
+
+/* Mobile image optimization constraints */
+img {
+  max-width: 100%;
+  height: auto;
+  content-visibility: auto; /* Defer off-screen rendering */
+}
