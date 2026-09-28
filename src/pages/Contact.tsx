@@ -160,7 +160,9 @@ const ContactForm: React.FC = () => {
             });
 
             if (response.ok) {
-                alert('Thank you! We have received your enquiry and will contact you shortly.');
+                alert('Thank you! We have received your enquiry. Redirecting you to our official WhatsApp desk for an instant E-Brochure...');
+                const message = encodeURIComponent(`Hi, I'm ${formData.name}. I'm interested in ${formData.cluster || formData.project || 'your project'} ${formData.configuration}. Please share the E-Brochure.`);
+                window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
                 setFormData({ name: '', phone: '', email: '', cluster: '', configuration: '', message: '' });
             } else {
                 throw new Error("Form submission failed");
