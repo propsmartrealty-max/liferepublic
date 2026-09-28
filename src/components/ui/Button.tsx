@@ -15,28 +15,28 @@ export const Button: React.FC<ButtonProps> = ({
     className = '',
     ...props
 }) => {
-    const baseStyles = "inline-flex items-center justify-center font-bold tracking-wide transition-all duration-300 focus:outline-none disabled:opacity-50 disabled:pointer-events-none rounded-full";
+    const baseStyles = "inline-flex items-center justify-center font-sans tracking-[0.2em] uppercase transition-all duration-500 focus:outline-none disabled:opacity-50 disabled:pointer-events-none rounded-none";
 
     const variants = {
-        primary: "bg-white text-black hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.3)]",
-        secondary: "bg-surface border border-white/10 text-white hover:bg-white/10",
-        whatsapp: "bg-primary text-black hover:bg-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.4)]",
-        outline: "bg-transparent text-white border border-white/20 hover:bg-white/5",
-        ghost: "text-gray-400 hover:text-white hover:bg-white/5",
-        glass: "bg-white/5 text-white backdrop-blur-xl border border-white/10 hover:bg-white/10"
+        primary: "bg-primary text-black hover:bg-white hover:text-black",
+        secondary: "bg-[#141414] border border-white/10 text-white hover:border-primary",
+        whatsapp: "bg-[#10B981] text-white hover:bg-white hover:text-[#10B981]",
+        outline: "bg-transparent text-white border border-white/30 hover:border-white",
+        ghost: "text-white/50 hover:text-white hover:bg-white/5",
+        glass: "bg-black/50 text-white backdrop-blur-md border border-white/10 hover:border-primary"
     };
 
     const sizes = {
-        sm: "h-8 px-4 text-xs",
-        md: "h-10 px-6 text-sm",
-        lg: "h-12 px-8 text-base",
-        icon: "h-10 w-10 rounded-full border border-white/10 bg-white/5 backdrop-blur-md"
+        sm: "h-10 px-6 text-[9px]",
+        md: "h-12 px-8 text-[10px]",
+        lg: "h-14 px-10 text-[11px]",
+        icon: "h-12 w-12 border border-white/10 bg-black/50 backdrop-blur-md"
     };
 
     return (
         <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={{ y: -2 }}
+            whileTap={{ y: 0 }}
             className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
             {...props}
         >
