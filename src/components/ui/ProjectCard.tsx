@@ -25,7 +25,6 @@ interface ProjectData {
 export const ProjectCard = ({ project, priority }: { project: ProjectData, priority?: boolean }) => {
     const cardRef = useRef<HTMLDivElement>(null);
     
-    // Safety Fallbacks (Hardening)
     if (!project) return null;
     
     const displaySlug = project.slug || project.id || '';
@@ -76,9 +75,8 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                     rotateY,
                     transformStyle: "preserve-3d"
                 }}
-                className="relative overflow-hidden rounded-[24px] bg-black border border-white/10 h-[550px] w-full flex flex-col justify-end transition-shadow duration-700 hover:border-white/30 hover:glow-rainbow hover:border-transparent group"
+                className="relative overflow-hidden rounded-[24px] bg-black border border-white/10 h-[600px] w-full flex flex-col justify-end transition-shadow duration-700 hover:border-white/30 hover:glow-rainbow group"
             >
-                {/* Background Image with Parallax/Zoom */}
                 <div className="absolute inset-0 z-0" style={{ transform: "translateZ(-20px)" }}>
                     <img
                         loading={priority ? "eager" : "lazy"}
@@ -87,11 +85,9 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                         alt={displayName}
                         className="w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-110 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
                     />
-                    {/* Gradient Overlay for Text Readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/10 transition-colors duration-700 group-hover:from-black"></div>
                 </div>
 
-                {/* Top Badges */}
                 <div className="absolute top-6 left-6 right-6 z-10 flex justify-between items-start" style={{ transform: "translateZ(30px)" }}>
                     <span className="px-4 py-1.5 bg-black/60 backdrop-blur-md border border-white/10 text-white/90 text-xs tracking-widest uppercase rounded-full">
                         {displayCategory}
@@ -103,13 +99,11 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                     )}
                 </div>
 
-                {/* Content Section (Bottom) */}
                 <div className="relative z-10 p-8 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" style={{ transform: "translateZ(50px)" }}>
                     <h3 className="text-3xl font-sans font-medium text-white tracking-tight mb-3">
                         {displayName}
                     </h3>
                     
-                    {/* Precize Configuration Data */}
                     {configurations.length > 0 && (
                         <div className="flex flex-wrap gap-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-75">
                             {configurations.slice(0, 3).map((config, idx) => (
@@ -124,14 +118,32 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                         {displayDesc}
                     </p>
                     
-                    <div className="flex items-end justify-between border-t border-white/10 pt-5">
-                        <div>
-                            <p className="text-white/40 text-[10px] tracking-widest uppercase mb-1">Starting at</p>
-                            <p className="text-white text-lg font-medium">{displayPrice}</p>
+                    <div className="border-t border-white/10 pt-5 mt-4">
+                        <div className="flex items-center justify-between mb-4">
+                            <div>
+                                <p className="text-white/40 text-[10px] tracking-widest uppercase mb-1">Pricing Structure</p>
+                                <p className="text-white text-lg font-medium">{displayPrice}</p>
+                            </div>
+                            <div className="flex items-center gap-2 text-white opacity-0 group-hover:opacity-100 transition-all duration-700 delay-150 group-hover:text-rainbow">
+                                <span className="text-xs uppercase tracking-widest font-medium">Full Overview</span>
+                                <span className="material-symbol text-sm">arrow_forward</span>
+                            </div>
                         </div>
-                        <div className="flex items-center gap-2 text-white opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700 delay-150 group-hover:text-rainbow">
-                            <span className="text-xs uppercase tracking-widest font-medium">Explore</span>
-                            <span className="material-symbol text-sm">arrow_forward</span>
+                        
+                        {/* Quick Access Links (Reveals on Hover) */}
+                        <div className="flex flex-wrap gap-2 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-200 -translate-y-2 group-hover:translate-y-0">
+                            {['Master Plan', 'Floor Plans', 'Location', 'Sizes'].map(link => (
+                                <button 
+                                    key={link}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: displayName, type: link } }));
+                                    }}
+                                    className="px-3 py-1.5 bg-white/5 hover:bg-rainbow-hover border border-white/10 rounded-md text-[10px] text-white/80 tracking-widest uppercase transition-colors"
+                                >
+                                    {link}
+                                </button>
+                            ))}
                         </div>
                     </div>
                 </div>
