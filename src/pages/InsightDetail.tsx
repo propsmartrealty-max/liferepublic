@@ -43,7 +43,7 @@ export const InsightDetail: React.FC = () => {
                     <ChevronRight size={12} />
                     <Link to="/insights" className="hover:text-accent transition-colors">Insights</Link>
                     <ChevronRight size={12} />
-                    <span className="text-primary-dark">{article.title}</span>
+                    <span className="text-[#E5C07B]">{article.title}</span>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -53,10 +53,10 @@ export const InsightDetail: React.FC = () => {
                             <span className="text-accent text-xs font-bold tracking-tight font-semibold block mb-4">
                                 {article.category}
                             </span>
-                            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary-dark mb-6 leading-tight">
+                            <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#E5C07B] mb-6 leading-tight">
                                 {article.title}
                             </h1>
-                            <div className="flex items-center gap-6 text-sm text-secondary">
+                            <div className="flex items-center gap-6 text-sm text-white">
                                 <div className="flex items-center gap-2">
                                     <Calendar size={16} className="text-accent" />
                                     <span>{new Date(article.publishDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
@@ -66,14 +66,14 @@ export const InsightDetail: React.FC = () => {
 
                         {/* Article Content */}
                         <article 
-                            className="prose prose-lg prose-headings:font-serif prose-headings:text-primary-dark prose-p:text-secondary prose-a:text-accent hover:prose-a:text-accent-dark max-w-none mb-12"
+                            className="prose prose-lg prose-headings:font-serif prose-headings:text-[#E5C07B] prose-p:text-white prose-a:text-accent hover:prose-a:text-accent-dark max-w-none mb-12"
                             dangerouslySetInnerHTML={{ __html: article.content }}
                         />
 
                         {/* Tags */}
-                        <div className="flex flex-wrap gap-3 mt-12 pt-8 border-t border-gray-200">
+                        <div className="flex flex-wrap gap-3 mt-12 pt-8 border-t border-white/10">
                             {article.tags.map(tag => (
-                                <div key={tag} className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-100 rounded-full text-xs font-bold text-gray-500">
+                                <div key={tag} className="flex items-center gap-2 px-4 py-2 bg-[#0B0D14] border border-white/5 rounded-full text-xs font-bold text-gray-500">
                                     <Tag size={12} className="text-accent" />
                                     {tag}
                                 </div>
@@ -84,10 +84,10 @@ export const InsightDetail: React.FC = () => {
                     {/* Sidebar */}
                     <div className="lg:col-span-4">
                         <div className="sticky top-32 space-y-8">
-                            <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100 relative overflow-hidden">
+                            <div className="bg-[#151822] border border-white/10 rounded-3xl p-8 shadow-2xl border border-white/5 relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-[100%] pointer-events-none"></div>
-                                <h3 className="text-2xl font-serif font-bold text-primary-dark mb-2">Interested in {article.title.split('|')[0].trim()}?</h3>
-                                <p className="text-sm text-secondary mb-6">Schedule a virtual tour or get the latest price sheet.</p>
+                                <h3 className="text-2xl font-serif font-bold text-[#E5C07B] mb-2">Interested in {article.title.split('|')[0].trim()}?</h3>
+                                <p className="text-sm text-white mb-6">Schedule a virtual tour or get the latest price sheet.</p>
                                 <Button 
                                     className="w-full shadow-lg" 
                                     onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}

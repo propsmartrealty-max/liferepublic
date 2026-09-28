@@ -15,12 +15,12 @@ export const About: React.FC = () => {
                 canonical="/about"
                 schema={generateAboutPageSchema()}
             />
-            <section className="bg-primary pt-20 pb-16">
+            <section className="bg-[#E5C07B] pt-20 pb-16">
                 <div className="container mx-auto px-4 text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-5xl font-serif font-bold text-secondary mb-6"
+                        className="text-4xl md:text-5xl font-serif font-bold text-white mb-6"
                     >
                         About Kolte Patil Life Republic Township Hinjewadi
                     </motion.h1>
@@ -32,7 +32,7 @@ export const About: React.FC = () => {
 
             <section className="py-16">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto space-y-8 text-gray-700 leading-relaxed text-lg">
+                    <div className="max-w-4xl mx-auto space-y-8 text-gray-300 leading-relaxed text-lg">
                         <p>
                             <strong>Kolte Patil Life Republic Township Hinjewadi</strong> is a 390+ acre integrated township located in the heart of Pune's IT hub. It is a community being built for thinking minds. It is built with the core values of creativity, sensitivity, and sustainability.
                         </p>

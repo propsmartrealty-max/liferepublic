@@ -102,21 +102,21 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
     return (
         <AnimatePresence>
             {isOpen && (
-                <div className="fixed inset-0 z-[100] flex sm:items-center items-end justify-center sm:p-4 p-0 bg-secondary/95 backdrop-blur-3xl">
+                <div className="fixed inset-0 z-[100] flex sm:items-center items-end justify-center sm:p-4 p-0 bg-[#0B0D14]/95 backdrop-blur-3xl">
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0" onClick={onClose} />
                     
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95, y: 150 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95, y: 150 }}
-                        className="bg-white rounded-t-[4rem] sm:rounded-[5rem] shadow-[0_100px_200px_-50px_rgba(0,0,0,0.5)] w-full sm:max-w-2xl max-h-[90vh] overflow-hidden relative z-10 border border-white/20"
+                        className="bg-[#151822] border border-white/10 rounded-t-[4rem] sm:rounded-[5rem] shadow-[0_100px_200px_-50px_rgba(0,0,0,0.5)] w-full sm:max-w-2xl max-h-[90vh] overflow-hidden relative z-10 border border-white/20"
                     >
                         {/* Sovereign Progress HUD Overlay */}
                         <AnimatePresence>
                             {isSubmitting && (
                                 <motion.div 
                                     initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-                                    className="absolute inset-0 bg-secondary z-50 flex flex-col items-center justify-center p-16 text-center"
+                                    className="absolute inset-0 bg-[#0B0D14] z-50 flex flex-col items-center justify-center p-16 text-center"
                                 >
                                     <div className="relative w-48 h-48 mb-16">
                                         <motion.div 
@@ -130,7 +130,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                     <div className="space-y-8">
                                         <h3 className="text-4xl font-serif font-bold text-white italic tracking-tighter">Synthesizing...</h3>
                                         <p className="text-accent font-bold tracking-[0.4em] uppercase text-[10px] h-6">{steps[synthesisStep]}</p>
-                                        <div className="w-64 h-1.5 bg-white/5 rounded-full mx-auto overflow-hidden">
+                                        <div className="w-64 h-1.5 bg-[#151822] border border-white/10/5 rounded-full mx-auto overflow-hidden">
                                             <motion.div initial={{ width: 0 }} animate={{ width: "100%" }} transition={{ duration: 4, ease: "linear" }} className="h-full bg-accent shadow-[0_0_20px_rgba(197,160,89,0.8)]" />
                                         </div>
                                     </div>
@@ -139,17 +139,17 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                         </AnimatePresence>
 
                         {/* Sovereign Header */}
-                        <div className="p-10 sm:p-16 border-b border-gray-100 flex items-center justify-between bg-white relative z-50">
+                        <div className="p-10 sm:p-16 border-b border-white/5 flex items-center justify-between bg-transparent relative z-50">
                             <div>
                                 <div className="flex items-center gap-4 mb-4">
-                                    <div className={`w-10 h-10 ${isHighIntent ? 'bg-accent text-secondary' : 'bg-secondary text-white'} rounded-2xl flex items-center justify-center shadow-2xl`}>
+                                    <div className={`w-10 h-10 ${isHighIntent ? 'bg-accent text-white' : 'bg-[#0B0D14] text-white'} rounded-2xl flex items-center justify-center shadow-2xl`}>
                                         {isHighIntent ? <Zap size={20} className="animate-pulse" /> : <ShieldCheck size={20} />}
                                     </div>
                                     <span className="text-[11px] font-bold text-accent tracking-tight font-semibold">
                                         {isHighIntent ? 'Priority Protocol v6.0' : 'Sovereign Dispatch Hub'}
                                     </span>
                                 </div>
-                                <h3 className="text-4xl md:text-5xl font-serif font-bold text-secondary tracking-tighter leading-none">
+                                <h3 className="text-4xl md:text-5xl font-serif font-bold text-white tracking-tighter leading-none">
                                     {isHighIntent ? (
                                         <>Platinum Portfolio <br /> Synthesis.</>
                                     ) : (
@@ -157,7 +157,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                     )}
                                 </h3>
                             </div>
-                            <button onClick={(e) => { e.preventDefault(); e.stopPropagation(); onClose(); }} className="p-4 bg-gray-100 hover:bg-red-100 hover:text-red-600 rounded-full transition-all text-gray-600 cursor-pointer relative z-[60] shadow-sm">
+                            <button onClick={(e) => { e.preventDefault(); e.stopPropagation(); onClose(); }} className="p-4 bg-[#151822] hover:bg-red-100 hover:text-red-600 rounded-full transition-all text-gray-600 cursor-pointer relative z-[60] shadow-sm">
                                 <X size={32} />
                             </button>
                         </div>
@@ -166,8 +166,8 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                             {!isSubmitted ? (
                                 <div className="space-y-12">
                                     {isHighIntent && (
-                                        <div className="bg-secondary p-8 rounded-[2.5rem] border border-white/5 flex items-center gap-6 group">
-                                            <div className="p-4 bg-white/10 rounded-2xl text-accent group-hover:scale-110 transition-transform">
+                                        <div className="bg-[#0B0D14] p-8 rounded-[2.5rem] border border-white/5 flex items-center gap-6 group">
+                                            <div className="p-4 bg-[#151822] border border-white/10/10 rounded-2xl text-accent group-hover:scale-110 transition-transform">
                                                 <Target size={32} />
                                             </div>
                                             <p className="text-sm font-medium text-white/70 leading-relaxed">
@@ -179,12 +179,12 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                     <form onSubmit={handleSubmit} className="space-y-8">
                                         <div className="hidden" aria-hidden="true"><input type="text" ref={honeyRef} tabIndex={-1} /></div>
                                         <div className="space-y-6">
-                                            <input required id="enquiry-name" aria-label="Full Legal Name" name="name" placeholder="Full Legal Name" className="w-full px-10 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-secondary text-xl placeholder:text-gray-300" />
-                                            <input required id="enquiry-phone" aria-label="10-Digit Mobile Number" name="phone" pattern="[0-9]{10}" placeholder="10-Digit Mobile Matrix" className="w-full px-10 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-secondary text-xl placeholder:text-gray-300" />
-                                            <input required id="enquiry-email" aria-label="Email Address" name="email" type="email" placeholder="Sovereign Email Address" className="w-full px-10 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-secondary text-xl placeholder:text-gray-300" />
+                                            <input required id="enquiry-name" aria-label="Full Legal Name" name="name" placeholder="Full Legal Name" className="w-full px-10 py-6 bg-[#1A1C23] border border-white/5 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-white text-xl placeholder:text-gray-300" />
+                                            <input required id="enquiry-phone" aria-label="10-Digit Mobile Number" name="phone" pattern="[0-9]{10}" placeholder="10-Digit Mobile Matrix" className="w-full px-10 py-6 bg-[#1A1C23] border border-white/5 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-white text-xl placeholder:text-gray-300" />
+                                            <input required id="enquiry-email" aria-label="Email Address" name="email" type="email" placeholder="Sovereign Email Address" className="w-full px-10 py-6 bg-[#1A1C23] border border-white/5 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-white text-xl placeholder:text-gray-300" />
                                             
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                <select required name="cluster" defaultValue={projectName !== "Life Republic" ? projectName : ""} className="w-full px-8 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-secondary text-lg appearance-none cursor-pointer">
+                                                <select required name="cluster" defaultValue={projectName !== "Life Republic" ? projectName : ""} className="w-full px-8 py-6 bg-[#1A1C23] border border-white/5 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-white text-lg appearance-none cursor-pointer">
                                                     <option value="" disabled>Select Cluster</option>
                                                     <option value="Qrious">Qrious</option>
                                                     <option value="Canvas">Canvas</option>
@@ -195,7 +195,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                                     <option value="Duet">Duet</option>
 
                                                 </select>
-                                                <select required name="configuration" defaultValue="" className="w-full px-8 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-secondary text-lg appearance-none cursor-pointer">
+                                                <select required name="configuration" defaultValue="" className="w-full px-8 py-6 bg-[#1A1C23] border border-white/5 rounded-[2rem] focus:ring-8 focus:ring-accent/10 outline-none transition-all font-bold text-white text-lg appearance-none cursor-pointer">
                                                     <option value="" disabled>Select Configuration</option>
                                                     <option value="2 BHK">2 BHK</option>
                                                     <option value="3 BHK">3 BHK</option>
@@ -208,7 +208,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
 
                                         {error && <p className="text-red-500 text-xs font-bold tracking-tight font-medium text-center animate-bounce">{error}</p>}
 
-                                        <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-[2rem] border border-gray-100">
+                                        <div className="flex items-start gap-4 p-6 bg-[#1A1C23] rounded-[2rem] border border-white/5">
                                             <Globe size={24} className="text-accent shrink-0 mt-1" />
                                             <p className="text-[10px] text-gray-500 font-medium leading-relaxed tracking-tight font-medium">
                                                 By authorizing, you agree to our <a href="/privacy-policy" className="text-accent underline" target="_blank">Privacy Policy</a> and <a href="/terms-of-service" className="text-accent underline" target="_blank">Terms of Service</a>. You consent to receive updates via Phone, SMS, or WhatsApp overriding your NDNC registration.
@@ -223,12 +223,12 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                 </div>
                             ) : (
                                 <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="py-24 text-center space-y-12">
-                                    <div className="w-32 h-32 bg-accent text-secondary rounded-full flex items-center justify-center mx-auto shadow-2xl relative">
+                                    <div className="w-32 h-32 bg-accent text-white rounded-full flex items-center justify-center mx-auto shadow-2xl relative">
                                         <CheckCircle size={64} className="animate-bounce" />
                                         <motion.div animate={{ scale: [1, 1.5], opacity: [0.5, 0] }} transition={{ duration: 2, repeat: Infinity }} className="absolute inset-0 bg-accent rounded-full" />
                                     </div>
                                     <div className="space-y-6">
-                                        <h4 className="text-5xl font-serif font-bold text-secondary tracking-tighter">Monograph <br /><span className="text-accent italic">Synthesized.</span></h4>
+                                        <h4 className="text-5xl font-serif font-bold text-white tracking-tighter">Monograph <br /><span className="text-accent italic">Synthesized.</span></h4>
                                         <p className="text-gray-400 font-medium text-xl leading-relaxed max-w-sm mx-auto">
                                             Your request is production-locked in the **Sovereign Vault**. Expert synchronization initiating within 15 minutes.
                                         </p>
@@ -237,7 +237,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                             )}
                         </div>
 
-                        <div className="p-8 bg-gray-50/50 border-t border-gray-100 text-center relative overflow-hidden">
+                        <div className="p-8 bg-[#1A1C23]/50 border-t border-white/5 text-center relative overflow-hidden">
                             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-20"></div>
                             <p className="text-[10px] font-bold text-gray-400 tracking-tight font-semibold">
                                 Sovereign Protocol v6.0 • 2026 Production Ready

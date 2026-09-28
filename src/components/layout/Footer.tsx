@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
 
     return (
         <>
-        <footer className="relative bg-primary-dark text-white font-bold pt-24 pb-12 overflow-hidden">
+        <footer className="relative bg-[#0B0D14] text-white font-bold pt-24 pb-12 overflow-hidden">
             {/* Fluid Curve Top */}
             <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(113%+1.3px)] h-[60px] md:h-[100px] fill-primary">
@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
                     {/* Brand Column (Span 3) */}
                     <div className="lg:col-span-3 space-y-8">
                         <div className="flex flex-col gap-6">
-                            <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center p-2 shadow-2xl overflow-hidden group-hover:scale-110 transition-transform duration-500">
+                            <div className="w-16 h-16 bg-[#151822] border border-white/10 rounded-2xl flex items-center justify-center p-2 shadow-2xl overflow-hidden group-hover:scale-110 transition-transform duration-500">
                                 <img loading="lazy" src="/images/brand/logo.webp" alt="Life Republic" className="w-full h-full object-contain" />
                             </div>
                             <div className="flex flex-col">

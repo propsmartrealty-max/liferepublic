@@ -15,7 +15,7 @@ export const PersonalizedDashboard: React.FC = () => {
         history.intentScore > 50 ? 'Township Explorer' : 'Active Visitor';
 
     return (
-        <section className="py-20 bg-secondary overflow-hidden relative">
+        <section className="py-20 bg-[#0B0D14] overflow-hidden relative">
             <div className="absolute inset-0 opacity-10"></div>
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div 
@@ -50,7 +50,7 @@ export const PersonalizedDashboard: React.FC = () => {
 
                     <div className="w-full max-w-2xl grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Recently Viewed */}
-                        <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-[2.5rem] hover:bg-white/10 transition-all">
+                        <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-[2.5rem] hover:bg-[#151822] border border-white/10/10 transition-all">
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="p-2 bg-accent/20 rounded-lg text-accent">
                                     <MapPin size={20} />
@@ -70,7 +70,7 @@ export const PersonalizedDashboard: React.FC = () => {
                         </div>
 
                         {/* Search Intelligence */}
-                        <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-[2.5rem] hover:bg-white/10 transition-all">
+                        <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-[2.5rem] hover:bg-[#151822] border border-white/10/10 transition-all">
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="p-2 bg-blue-500/20 rounded-lg text-blue-400">
                                     <Search size={20} />
@@ -82,7 +82,7 @@ export const PersonalizedDashboard: React.FC = () => {
                                     <button 
                                         key={i} 
                                         onClick={() => window.dispatchEvent(new CustomEvent('open-neural-search'))}
-                                        className="px-3 py-1.5 bg-white/5 rounded-lg text-[10px] text-gray-400 hover:bg-accent hover:text-secondary transition-all font-bold tracking-tight font-medium"
+                                        className="px-3 py-1.5 bg-[#0B0D14]/5 rounded-lg text-[10px] text-gray-400 hover:bg-accent hover:text-white transition-all font-bold tracking-tight font-medium"
                                     >
                                         {q}
                                     </button>
@@ -93,19 +93,19 @@ export const PersonalizedDashboard: React.FC = () => {
                         </div>
 
                         {/* Intent Progress */}
-                        <div className="md:col-span-2 bg-accent p-8 rounded-[2.5rem] text-secondary flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div className="md:col-span-2 bg-accent p-8 rounded-[2.5rem] text-white flex flex-col md:flex-row items-center justify-between gap-8">
                             <div className="flex items-center gap-4">
-                                <div className="w-16 h-16 bg-secondary text-accent rounded-2xl flex items-center justify-center shadow-xl">
+                                <div className="w-16 h-16 bg-[#0B0D14] text-accent rounded-2xl flex items-center justify-center shadow-xl">
                                     <TrendingUp size={32} />
                                 </div>
                                 <div>
                                     <h4 className="text-xl font-bold">Sovereignty Level: {history.intentScore}</h4>
-                                    <p className="text-xs font-bold text-secondary/60 tracking-tight font-medium">Next Milestone: Unlock Priority Site Visit</p>
+                                    <p className="text-xs font-bold text-white/60 tracking-tight font-medium">Next Milestone: Unlock Priority Site Visit</p>
                                 </div>
                             </div>
                             <button 
                                 onClick={() => window.dispatchEvent(new CustomEvent('open-sovereign-concierge'))}
-                                className="px-8 py-4 bg-secondary text-white rounded-full font-bold hover:bg-white hover:text-secondary transition-all shadow-2xl"
+                                className="px-8 py-4 bg-[#0B0D14] text-white rounded-full font-bold hover:bg-[#0B0D14] hover:text-white transition-all shadow-2xl"
                             >
                                 Re-Sync with Concierge
                             </button>

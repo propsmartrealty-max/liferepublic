@@ -49,13 +49,13 @@ export const LocalInfrastructure: React.FC = () => {
   };
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-24 bg-[#0B0D14] overflow-hidden">
       <script type="application/ld+json">{JSON.stringify(schema)}</script>
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-xl">
             <span className="text-accent font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Global Connectivity</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-secondary mb-4 leading-tight">The Hinjewadi 5km Radius</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 leading-tight">The Hinjewadi 5km Radius</h2>
             <p className="text-gray-500">
               Strategic location at the heart of Pune's technology corridor. Life Republic offers unmatched access to the world's leading IT ecosystems and essential services.
             </p>
@@ -66,7 +66,7 @@ export const LocalInfrastructure: React.FC = () => {
             </div>
             <div>
               <p className="text-xs font-bold text-accent tracking-tight font-medium leading-none mb-1">Central Hub</p>
-              <p className="text-sm font-bold text-secondary">Hinjewadi Phase 1 & 2</p>
+              <p className="text-sm font-bold text-white">Hinjewadi Phase 1 & 2</p>
             </div>
           </div>
         </div>
@@ -79,16 +79,16 @@ export const LocalInfrastructure: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
-              className="group bg-gray-50/50 hover:bg-white border border-gray-100 p-6 rounded-[2rem] transition-all hover:shadow-xl hover:border-accent/30"
+              className="group bg-[#1A1C23]/50 hover:bg-[#151822] border border-white/10 border border-white/5 p-6 rounded-[2rem] transition-all hover:shadow-xl hover:border-accent/30"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-white border border-gray-100 flex items-center justify-center text-accent shadow-sm group-hover:bg-accent group-hover:text-white transition-all">
+                <div className="w-10 h-10 rounded-xl bg-[#151822] border border-white/10 border border-white/5 flex items-center justify-center text-accent shadow-sm group-hover:bg-accent group-hover:text-white transition-all">
                   {React.cloneElement(poi.icon as React.ReactElement, { size: 18 } as any)}
                 </div>
                 <div className="w-px h-6 bg-gray-200" />
                 <span className="text-[10px] font-bold text-gray-400 tracking-tight font-semibold">{poi.category}</span>
               </div>
-              <h3 className="text-lg font-bold text-secondary mb-1 group-hover:text-accent transition-colors">{poi.name}</h3>
+              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-accent transition-colors">{poi.name}</h3>
               <p className="text-xs font-medium text-gray-500 flex items-center gap-1">
                 <MapPin size={10} className="text-accent" /> {poi.distance}
               </p>
@@ -99,7 +99,7 @@ export const LocalInfrastructure: React.FC = () => {
         <div className="mt-24">
           <div className="text-center mb-12">
             <span className="text-accent font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Efficiency & Flow</span>
-            <h3 className="text-3xl font-serif font-bold text-secondary">The Pulse of Hinjewadi</h3>
+            <h3 className="text-3xl font-serif font-bold text-white">The Pulse of Hinjewadi</h3>
           </div>
           
           <div className="relative max-w-4xl mx-auto px-4">
@@ -122,12 +122,12 @@ export const LocalInfrastructure: React.FC = () => {
                   <div className="flex-1 text-center md:text-left">
                     <div className={`flex flex-col ${step.side === 'right' ? 'md:items-start' : 'md:items-end'}`}>
                       <span className="text-3xl font-serif font-bold text-accent mb-2">{step.time}</span>
-                      <h4 className="text-xl font-bold text-secondary mb-2">{step.destination}</h4>
+                      <h4 className="text-xl font-bold text-white mb-2">{step.destination}</h4>
                       <p className="text-gray-500 text-sm max-w-xs">{step.desc}</p>
                     </div>
                   </div>
                   
-                  <div className="relative z-10 w-12 h-12 rounded-full bg-white border-4 border-gray-50 shadow-xl flex items-center justify-center">
+                  <div className="relative z-10 w-12 h-12 rounded-full bg-[#151822] border border-white/10 border-4 border-gray-50 shadow-xl flex items-center justify-center">
                     {step.icon}
                   </div>
                   

@@ -14,7 +14,7 @@ export const AerialTour: React.FC = () => {
     const blur = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [10, 0, 0, 10]);
 
     return (
-        <section ref={containerRef} className="h-[300vh] relative bg-secondary">
+        <section ref={containerRef} className="h-[300vh] relative bg-[#0B0D14]">
             <div className="sticky top-0 h-screen w-full overflow-hidden">
                 <motion.div 
                     style={{ scale, filter: `blur(${blur}px)` }}
@@ -61,7 +61,7 @@ export const AerialTour: React.FC = () => {
                     </div>
                     <div className="text-left sm:text-right w-full sm:w-auto">
                         <div className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-2">Live Rendering</div>
-                        <div className="w-full sm:w-48 h-1 bg-white/10 rounded-full overflow-hidden">
+                        <div className="w-full sm:w-48 h-1 bg-[#151822] border border-white/10/10 rounded-full overflow-hidden">
                             <motion.div 
                                 style={{ width: useTransform(scrollYProgress, [0, 1], ["0%", "100%"]) }}
                                 className="h-full bg-accent"

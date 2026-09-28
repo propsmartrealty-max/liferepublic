@@ -38,7 +38,7 @@ export const RecommendedProjects: React.FC = () => {
     if (loading || recommended.length === 0) return null;
 
     return (
-        <section className="py-20 bg-primary/30 relative overflow-hidden">
+        <section className="py-20 bg-[#E5C07B]/30 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[100px] -mr-48 -mt-48" />
             
             <div className="container mx-auto px-4 relative z-10">
@@ -51,7 +51,7 @@ export const RecommendedProjects: React.FC = () => {
                         >
                             <Sparkles size={14} /> Curated For You
                         </motion.span>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-secondary">
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-white">
                             Tailored Selection
                         </h2>
                     </div>

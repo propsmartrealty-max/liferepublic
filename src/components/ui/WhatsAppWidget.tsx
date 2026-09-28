@@ -22,10 +22,10 @@ export const WhatsAppWidget: React.FC = () => {
                         initial={{ opacity: 0, y: 20, scale: 0.9 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.9 }}
-                        className="bg-white rounded-2xl bg-white/10 backdrop-blur-2xl border border-white/20 shadow-glass text-white p-6 mb-4 w-[320px]"
+                        className="bg-white rounded-2xl bg-[#151822] border border-white/10/10 backdrop-blur-2xl border border-white/20 shadow-glass text-white p-6 mb-4 w-[320px]"
                     >
                         <div className="flex justify-between items-center mb-4">
-                            <h3 className="font-bold text-secondary text-lg">Life Republic Desk</h3>
+                            <h3 className="font-bold text-white text-lg">Life Republic Desk</h3>
                             <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-gray-600 transition-colors">
                                 <X size={20} />
                             </button>
@@ -34,7 +34,7 @@ export const WhatsAppWidget: React.FC = () => {
                             Connect with our platinum advisors instantly via WhatsApp for priority service.
                         </p>
                         <textarea
-                            className="w-full bg-gray-50 border border-gray-100 rounded-2xl p-3 outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none text-sm mb-4 text-secondary"
+                            className="w-full bg-[#1A1C23] border border-white/5 rounded-2xl p-3 outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none text-sm mb-4 text-white"
                             rows={3}
                             placeholder="Type your message here..."
                             value={message}

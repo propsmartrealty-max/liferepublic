@@ -71,12 +71,12 @@ export const ShareButtons: React.FC<ShareButtonsProps> = ({ url, title, classNam
                 <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center text-accent animate-pulse border border-accent/20">
                     <Zap size={14} />
                 </div>
-                <span className="text-[11px] font-bold text-secondary tracking-tight font-semibold hidden md:block">
+                <span className="text-[11px] font-bold text-white tracking-tight font-semibold hidden md:block">
                     Synthesis Hub
                 </span>
             </div>
             
-            <div className="flex items-center gap-3 p-2 bg-gray-50/50 backdrop-blur-xl border border-gray-100 rounded-full shadow-inner group/hub">
+            <div className="flex items-center gap-3 p-2 bg-[#1A1C23]/50 backdrop-blur-xl border border-white/5 rounded-full shadow-inner group/hub">
                 {shareLinks.map((link) => (
                     <motion.a
                         key={link.name}
@@ -98,7 +98,7 @@ export const ShareButtons: React.FC<ShareButtonsProps> = ({ url, title, classNam
                     whileHover={{ y: -4, scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={copyToClipboard}
-                    className={`w-12 h-12 rounded-full flex items-center justify-center transition-all relative overflow-hidden group/copy ${copied ? 'bg-emerald-500 text-white' : 'bg-white border border-gray-100 text-gray-400 hover:bg-accent hover:text-secondary hover:border-transparent'} hover:shadow-xl`}
+                    className={`w-12 h-12 rounded-full flex items-center justify-center transition-all relative overflow-hidden group/copy ${copied ? 'bg-emerald-500 text-white' : 'bg-white border border-white/5 text-gray-400 hover:bg-accent hover:text-white hover:border-transparent'} hover:shadow-xl`}
                     title="Copy Synthesis Link"
                 >
                     <AnimatePresence mode="wait">

@@ -51,25 +51,25 @@ export const ExitIntentModal: React.FC = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={handleClose}
-                        className="absolute inset-0 bg-secondary/98 backdrop-blur-3xl"
+                        className="absolute inset-0 bg-[#0B0D14]/98 backdrop-blur-3xl"
                     />
 
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9, y: 100 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 100 }}
-                        className="relative bg-white rounded-t-[4rem] sm:rounded-[5rem] shadow-[0_100px_200px_-50px_rgba(0,0,0,0.6)] w-full max-w-5xl overflow-hidden border border-white/10"
+                        className="relative bg-[#151822] border border-white/10 rounded-t-[4rem] sm:rounded-[5rem] shadow-[0_100px_200px_-50px_rgba(0,0,0,0.6)] w-full max-w-5xl overflow-hidden border border-white/10"
                     >
                         <button
                             onClick={handleClose}
-                            className="absolute top-12 right-12 p-5 bg-gray-100 hover:bg-accent rounded-full transition-all z-20 group hover:rotate-90"
+                            className="absolute top-12 right-12 p-5 bg-[#151822] hover:bg-accent rounded-full transition-all z-20 group hover:rotate-90"
                         >
-                            <X size={28} className="text-secondary" />
+                            <X size={28} className="text-white" />
                         </button>
 
                         <div className="flex flex-col lg:flex-row min-h-[650px]">
                             {/* Visual Tectonic Side */}
-                            <div className="w-full lg:w-[40%] bg-secondary p-16 md:p-20 text-white relative overflow-hidden flex flex-col justify-center">
+                            <div className="w-full lg:w-[40%] bg-[#0B0D14] p-16 md:p-20 text-white relative overflow-hidden flex flex-col justify-center">
                                 <div className="absolute inset-0 bg-[url('/images/aerial-sunset.png')] bg-cover bg-center grayscale opacity-10 scale-110 group-hover:scale-125 transition-transform duration-[2s]"></div>
                                 <div className="relative z-10 space-y-16">
                                     <div className="w-28 h-28 bg-accent/20 rounded-[3rem] flex items-center justify-center text-accent border border-accent/30 shadow-2xl relative">
@@ -90,7 +90,7 @@ export const ExitIntentModal: React.FC = () => {
                                             <span>Portfolio Completeness</span>
                                             <span className="text-accent text-3xl font-serif">{completeness}%</span>
                                         </div>
-                                        <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                                        <div className="w-full h-2 bg-[#151822] border border-white/10/10 rounded-full overflow-hidden">
                                             <motion.div 
                                                 initial={{ width: 0 }} 
                                                 animate={{ width: `${completeness}%` }} 
@@ -104,15 +104,15 @@ export const ExitIntentModal: React.FC = () => {
                             </div>
 
                             {/* Conversion Context Side */}
-                            <div className="w-full lg:w-[60%] p-16 md:p-24 flex flex-col justify-center bg-white relative">
+                            <div className="w-full lg:w-[60%] p-16 md:p-24 flex flex-col justify-center bg-transparent relative">
                                 <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
-                                    <Sparkles size={200} className="text-secondary" />
+                                    <Sparkles size={200} className="text-white" />
                                 </div>
                                 <div className="flex items-center gap-4 text-accent mb-12">
                                     <Cpu size={24} className="animate-pulse" />
                                     <span className="text-[12px] font-bold tracking-tight font-semibold">Behavioral Anchor Protocol</span>
                                 </div>
-                                <h2 className="text-6xl md:text-8xl font-serif font-bold text-secondary mb-10 tracking-tighter leading-[0.8] italic">
+                                <h2 className="text-6xl md:text-8xl font-serif font-bold text-white mb-10 tracking-tighter leading-[0.8] italic">
                                     Secure the <br /> <span className="text-accent">Thesis.</span>
                                 </h2>
                                 <p className="text-2xl text-gray-400 font-medium leading-relaxed mb-16 max-w-2xl">
@@ -122,7 +122,7 @@ export const ExitIntentModal: React.FC = () => {
                                 <div className="space-y-8">
                                     <button 
                                         onClick={handleFastTrack}
-                                        className="w-full py-10 bg-secondary text-white rounded-full font-bold text-2xl flex items-center justify-center gap-6 hover:bg-accent hover:text-secondary transition-all shadow-[0_60px_120px_-30px_rgba(0,0,0,0.5)] group hover:scale-[1.02]"
+                                        className="w-full py-10 bg-[#0B0D14] text-white rounded-full font-bold text-2xl flex items-center justify-center gap-6 hover:bg-accent hover:text-white transition-all shadow-[0_60px_120px_-30px_rgba(0,0,0,0.5)] group hover:scale-[1.02]"
                                     >
                                         <ShieldCheck size={32} />
                                         Synthesize Sovereign Portfolio

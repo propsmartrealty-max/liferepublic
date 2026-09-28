@@ -20,15 +20,15 @@ export const DemandHeatmap: React.FC = () => {
     }, []);
 
     return (
-        <div className="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-xl relative overflow-hidden group">
+        <div className="bg-[#151822] border border-white/10 rounded-[2rem] p-8 border border-white/5 shadow-xl relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-accent/10 transition-colors" />
             
             <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-12 bg-secondary text-white rounded-2xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#0B0D14] text-white rounded-2xl flex items-center justify-center">
                     <Zap size={20} className="animate-pulse" />
                 </div>
                 <div>
-                    <h3 className="font-serif font-bold text-xl text-secondary">Live Velocity Hub</h3>
+                    <h3 className="font-serif font-bold text-xl text-white">Live Velocity Hub</h3>
                     <p className="text-[10px] tracking-tight font-medium text-gray-400">Sector R7 Status</p>
                 </div>
             </div>
@@ -42,7 +42,7 @@ export const DemandHeatmap: React.FC = () => {
                     </div>
                     <div className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-green-500 rounded-full animate-ping" />
-                        <span className="font-bold text-secondary">{stats.visits} Browsing Now</span>
+                        <span className="font-bold text-white">{stats.visits} Browsing Now</span>
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@ export const DemandHeatmap: React.FC = () => {
                         <span className="text-gray-400">Inventory Status</span>
                         <span className="text-accent">{stats.unitsLeft} Units Remaining</span>
                     </div>
-                    <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="w-full h-1.5 bg-[#151822] rounded-full overflow-hidden">
                         <motion.div 
                             initial={{ width: '100%' }}
                             animate={{ width: '15%' }}
@@ -63,12 +63,12 @@ export const DemandHeatmap: React.FC = () => {
                 </div>
 
                 {/* Last Booking */}
-                <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100 flex items-center justify-between">
+                <div className="p-4 bg-[#1A1C23] rounded-2xl border border-white/5 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                        <TrendingUp size={16} className="text-secondary" />
+                        <TrendingUp size={16} className="text-white" />
                         <span className="text-xs font-medium text-gray-600">Last Token Confirmed</span>
                     </div>
-                    <span className="text-xs font-bold text-secondary">{stats.lastBooking}</span>
+                    <span className="text-xs font-bold text-white">{stats.lastBooking}</span>
                 </div>
 
                 <div className="pt-4 flex items-center gap-3 text-red-500">

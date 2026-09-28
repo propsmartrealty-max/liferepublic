@@ -30,7 +30,7 @@ export const ROICalculator: React.FC = () => {
     };
 
     return (
-        <section className="py-24 bg-white overflow-hidden relative">
+        <section className="py-24 bg-[#0B0D14] overflow-hidden relative">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row items-end justify-between gap-8 mb-16">
                     <div className="max-w-2xl text-left">
@@ -42,7 +42,7 @@ export const ROICalculator: React.FC = () => {
                             <Target size={14} className="text-accent" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold text-accent">Tectonic ROI Engine v2.0</span>
                         </motion.div>
-                        <h2 className="text-4xl md:text-6xl font-serif font-bold text-secondary mb-6 leading-tight">
+                        <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
                             Project Your <br /> <span className="text-accent italic">Wealth Velocity.</span>
                         </h2>
                         <p className="text-gray-500 text-lg leading-relaxed font-medium">
@@ -53,15 +53,15 @@ export const ROICalculator: React.FC = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                     {/* Controls */}
-                    <div className="lg:col-span-5 bg-gray-50 rounded-[3rem] p-10 md:p-14 border border-gray-100 flex flex-col justify-between">
+                    <div className="lg:col-span-5 bg-[#1A1C23] rounded-[3rem] p-10 md:p-14 border border-white/5 flex flex-col justify-between">
                         <div className="space-y-16">
                             <div>
                                 <div className="flex justify-between items-center mb-6">
-                                    <label className="text-sm font-bold text-secondary tracking-tight font-medium flex items-center gap-2">
+                                    <label className="text-sm font-bold text-white tracking-tight font-medium flex items-center gap-2">
                                         <TrendingUp className="text-accent" size={18} />
                                         Capital Input
                                     </label>
-                                    <span className="text-2xl font-serif font-bold text-secondary">{formatCurrency(investment)}</span>
+                                    <span className="text-2xl font-serif font-bold text-white">{formatCurrency(investment)}</span>
                                 </div>
                                 <input 
                                     type="range"
@@ -80,11 +80,11 @@ export const ROICalculator: React.FC = () => {
 
                             <div>
                                 <div className="flex justify-between items-center mb-6">
-                                    <label className="text-sm font-bold text-secondary tracking-tight font-medium flex items-center gap-2">
-                                        <Calculator className="text-secondary" size={18} />
+                                    <label className="text-sm font-bold text-white tracking-tight font-medium flex items-center gap-2">
+                                        <Calculator className="text-white" size={18} />
                                         Time Horizon
                                     </label>
-                                    <span className="text-2xl font-serif font-bold text-secondary">{years} Years</span>
+                                    <span className="text-2xl font-serif font-bold text-white">{years} Years</span>
                                 </div>
                                 <input 
                                     type="range"
@@ -104,20 +104,20 @@ export const ROICalculator: React.FC = () => {
                             <div className="flex items-center gap-4 pt-4">
                                 <button 
                                     onClick={() => setStrategy('conservative')}
-                                    className={`flex-1 py-3 px-4 rounded-xl text-[10px] font-bold tracking-tight font-medium transition-all ${strategy === 'conservative' ? 'bg-secondary text-white shadow-lg' : 'bg-white border border-gray-100 text-gray-400 hover:bg-gray-50'}`}
+                                    className={`flex-1 py-3 px-4 rounded-xl text-[10px] font-bold tracking-tight font-medium transition-all ${strategy === 'conservative' ? 'bg-[#0B0D14] text-white shadow-lg' : 'bg-white border border-white/5 text-gray-400 hover:bg-[#1A1C23]'}`}
                                 >
                                     Conservative (8%)
                                 </button>
                                 <button 
                                     onClick={() => setStrategy('aggressive')}
-                                    className={`flex-1 py-3 px-4 rounded-xl text-[10px] font-bold tracking-tight font-medium transition-all ${strategy === 'aggressive' ? 'bg-accent text-secondary shadow-lg' : 'bg-white border border-gray-100 text-gray-400 hover:bg-gray-50'}`}
+                                    className={`flex-1 py-3 px-4 rounded-xl text-[10px] font-bold tracking-tight font-medium transition-all ${strategy === 'aggressive' ? 'bg-accent text-white shadow-lg' : 'bg-white border border-white/5 text-gray-400 hover:bg-[#1A1C23]'}`}
                                 >
                                     Metro Adjusted (12%)
                                 </button>
                             </div>
                         </div>
 
-                        <div className="mt-12 p-6 bg-white rounded-3xl border border-gray-100 shadow-sm flex items-start gap-4">
+                        <div className="mt-12 p-6 bg-[#151822] border border-white/10 rounded-3xl border border-white/5 shadow-sm flex items-start gap-4">
                             <ShieldCheck className="text-accent shrink-0" size={20} />
                             <p className="text-xs text-gray-500 leading-relaxed font-bold tracking-tight font-medium">
                                 Projections account for the 2026 Metro Correction and IT Phase 3 cluster delivery.
@@ -126,7 +126,7 @@ export const ROICalculator: React.FC = () => {
                     </div>
 
                     {/* Results Display */}
-                    <div className="lg:col-span-7 bg-secondary rounded-[3.5rem] p-10 md:p-16 text-white shadow-2xl relative overflow-hidden flex flex-col justify-between group">
+                    <div className="lg:col-span-7 bg-[#0B0D14] rounded-[3.5rem] p-10 md:p-16 text-white shadow-2xl relative overflow-hidden flex flex-col justify-between group">
                         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none group-hover:scale-110 transition-transform duration-1000"></div>
                         
                         <div className="relative z-10 space-y-12">
@@ -166,10 +166,10 @@ export const ROICalculator: React.FC = () => {
                             <div className="pt-12">
                                 <button 
                                     onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}
-                                    className="w-full py-6 px-10 bg-white text-secondary rounded-[2rem] flex items-center justify-between font-bold hover:bg-accent hover:scale-[1.02] transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] group"
+                                    className="w-full py-6 px-10 bg-[#0B0D14] text-white rounded-[2rem] flex items-center justify-between font-bold hover:bg-accent hover:scale-[1.02] transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] group"
                                 >
                                     <span className="text-lg">Enquire Now for Detailed Monograph</span>
-                                    <div className="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all">
+                                    <div className="w-12 h-12 bg-[#0B0D14] text-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all">
                                         <ChevronRight size={24} />
                                     </div>
                                 </button>

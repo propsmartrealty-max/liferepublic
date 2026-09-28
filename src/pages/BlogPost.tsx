@@ -80,7 +80,7 @@ export const BlogPostPage: React.FC = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-white flex items-center justify-center">
+            <div className="min-h-screen bg-[#0B0D14] flex items-center justify-center">
                 <div className="w-12 h-12 border-4 border-accent border-t-transparent rounded-full animate-spin"></div>
             </div>
         );
@@ -89,7 +89,7 @@ export const BlogPostPage: React.FC = () => {
     if (error || !post) {
         return (
             <div className="min-h-screen pt-32 flex flex-col items-center justify-center text-center px-4">
-                <h1 className="text-4xl font-serif font-bold text-secondary mb-4">Article Displaced</h1>
+                <h1 className="text-4xl font-serif font-bold text-white mb-4">Article Displaced</h1>
                 <p className="text-gray-500 mb-8 max-w-md">{error || "The requested insights could not be retrieved from the Sovereign Archive."}</p>
                 <Link to="/media-center">
                     <Button variant="primary" className="rounded-full px-8">Return to Media Center</Button>
@@ -99,7 +99,7 @@ export const BlogPostPage: React.FC = () => {
     }
 
     return (
-        <div className="bg-white">
+        <div className="bg-transparent">
             <SEO
                 title={`${post.title} | Sovereign Insights | Life Republic`}
                 description={post.meta_description || post.excerpt || post.content.substring(0, 160)}
@@ -109,7 +109,7 @@ export const BlogPostPage: React.FC = () => {
             />
 
             {/* Editorial Header */}
-            <header className="relative pt-32 pb-20 bg-secondary overflow-hidden">
+            <header className="relative pt-32 pb-20 bg-[#0B0D14] overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-secondary z-10"></div>
                 {post.image && (
                     <motion.div 
@@ -141,7 +141,7 @@ export const BlogPostPage: React.FC = () => {
                         {post.tags && post.tags.length > 0 && (
                             <div className="flex flex-wrap gap-3">
                                 {post.tags.map(tag => (
-                                    <span key={tag} className="bg-white/10 backdrop-blur-md text-white/70 border border-white/20 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-tight font-medium">
+                                    <span key={tag} className="bg-[#151822] border border-white/10/10 backdrop-blur-md text-white/70 border border-white/20 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-tight font-medium">
                                         #{tag}
                                     </span>
                                 ))}
@@ -151,19 +151,19 @@ export const BlogPostPage: React.FC = () => {
                 </div>
             </header>
 
-            <article className="relative bg-white -mt-12 rounded-t-[4rem] z-30 shadow-2xl">
+            <article className="relative bg-[#151822] border border-white/10 -mt-12 rounded-t-[4rem] z-30 shadow-2xl">
                 <div className="max-w-4xl mx-auto px-6 py-24">
-                    <div className="prose prose-xl max-w-none prose-headings:font-serif prose-headings:text-secondary prose-headings:font-bold prose-p:text-gray-600 prose-p:leading-relaxed prose-a:text-accent prose-strong:text-secondary prose-img:rounded-[2rem] prose-img:shadow-2xl font-medium">
+                    <div className="prose prose-xl max-w-none prose-headings:font-serif prose-headings:text-white prose-headings:font-bold prose-p:text-gray-600 prose-p:leading-relaxed prose-a:text-accent prose-strong:text-white prose-img:rounded-[2rem] prose-img:shadow-2xl font-medium">
                         <div dangerouslySetInnerHTML={{ __html: post.content }} />
                     </div>
 
-                    <div className="mt-24 pt-12 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div className="mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-secondary text-accent rounded-full flex items-center justify-center">
+                            <div className="w-12 h-12 bg-[#0B0D14] text-accent rounded-full flex items-center justify-center">
                                 <Target size={24} />
                             </div>
                             <div>
-                                <p className="text-secondary font-bold">Life Republic Media Desk</p>
+                                <p className="text-white font-bold">Life Republic Media Desk</p>
                                 <p className="text-xs text-gray-400 font-medium tracking-widest uppercase">Sovereign Publication</p>
                             </div>
                         </div>
@@ -180,19 +180,19 @@ export const BlogPostPage: React.FC = () => {
 
             {/* Related Insights */}
             {related.length > 0 && (
-                <section className="py-24 bg-gray-50/50">
+                <section className="py-24 bg-[#1A1C23]/50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
                             <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-4 block text-center md:text-left">Complementary Synthesis</span>
-                            <h2 className="text-3xl md:text-5xl font-serif font-bold text-secondary mb-12 text-center md:text-left">Related <span className="text-accent italic">Sovereign Insights.</span></h2>
+                            <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-12 text-center md:text-left">Related <span className="text-accent italic">Sovereign Insights.</span></h2>
                             
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 {related.map((item, idx) => (
                                     <Link key={item.id} to={`/media-center/${item.slug}`} className="group">
-                                        <div className="bg-white rounded-[2rem] border border-gray-100 p-8 h-full flex flex-col hover:border-accent transition-all hover:shadow-xl hover:shadow-accent/5">
+                                        <div className="bg-[#151822] border border-white/10 rounded-[2rem] border border-white/5 p-8 h-full flex flex-col hover:border-accent transition-all hover:shadow-xl hover:shadow-accent/5">
                                             <div className="text-[9px] font-bold text-accent tracking-tight font-medium mb-4">{formatDate(item.published_at)}</div>
-                                            <h3 className="text-lg font-serif font-bold text-secondary mb-4 line-clamp-2 group-hover:text-accent transition-colors">{item.title}</h3>
-                                            <div className="mt-auto flex items-center gap-2 text-[9px] font-bold text-secondary tracking-tight font-semibold">
+                                            <h3 className="text-lg font-serif font-bold text-white mb-4 line-clamp-2 group-hover:text-accent transition-colors">{item.title}</h3>
+                                            <div className="mt-auto flex items-center gap-2 text-[9px] font-bold text-white tracking-tight font-semibold">
                                                 View Article <ChevronRight size={14} />
                                             </div>
                                         </div>
@@ -205,9 +205,9 @@ export const BlogPostPage: React.FC = () => {
             )}
 
             {/* Final CTA */}
-            <section className="py-24 bg-white overflow-hidden">
+            <section className="py-24 bg-[#0B0D14] overflow-hidden">
                 <div className="container mx-auto px-4 text-center">
-                    <div className="max-w-3xl mx-auto bg-secondary rounded-[3rem] p-12 md:p-20 shadow-2xl relative overflow-hidden group">
+                    <div className="max-w-3xl mx-auto bg-[#0B0D14] rounded-[3rem] p-12 md:p-20 shadow-2xl relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px] pointer-events-none group-hover:scale-110 transition-transform duration-1000"></div>
                         <Sparkles size={48} className="text-accent mx-auto mb-8 animate-pulse" />
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Deepen Your <span className="text-accent italic">Sovereign Knowledge.</span></h2>
@@ -215,7 +215,7 @@ export const BlogPostPage: React.FC = () => {
                             Synthesize your personal investment portfolio using our AI-driven Thesis engine.
                         </p>
                         <Link to="/township-intelligence">
-                            <button className="bg-white text-secondary px-12 py-5 rounded-full font-bold shadow-2xl hover:bg-accent transition-all">
+                            <button className="bg-[#151822] border border-white/10 text-white px-12 py-5 rounded-full font-bold shadow-2xl hover:bg-accent transition-all">
                                 Initiate Portfolio Synthesis
                             </button>
                         </Link>

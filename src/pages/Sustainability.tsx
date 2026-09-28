@@ -12,7 +12,7 @@ const metrics = [
 
 export const Sustainability: React.FC = () => {
     return (
-        <div className="bg-white pt-32 pb-40 relative overflow-hidden">
+        <div className="bg-transparent pt-32 pb-40 relative overflow-hidden">
             <SEO 
                 title="Sovereign ESG & Sustainability Monograph | Life Republic"
                 description="Explore the environmental structuralism at Kolte Patil Life Republic. 15,000+ trees, 2.5 MLD water recycling, and 750kW solar sync in Hinjewadi's premier green township."
@@ -26,12 +26,12 @@ export const Sustainability: React.FC = () => {
                         <motion.div 
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="inline-flex items-center gap-4 px-6 py-3 bg-secondary text-white rounded-full mb-10 shadow-xl"
+                            className="inline-flex items-center gap-4 px-6 py-3 bg-[#0B0D14] text-white rounded-full mb-10 shadow-xl"
                         >
                             <ShieldCheck size={16} className="text-emerald-400 animate-pulse" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold">Sovereign ESG Protocol v6.0</span>
                         </motion.div>
-                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-secondary mb-10 tracking-tighter leading-[0.8]">
+                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.8]">
                             Environmental <br /><span className="text-emerald-500 italic">Structuralism.</span>
                         </h1>
                         <p className="text-2xl md:text-3xl text-gray-400 leading-relaxed font-medium max-w-3xl">
@@ -39,13 +39,13 @@ export const Sustainability: React.FC = () => {
                         </p>
                     </div>
                     
-                    <div className="flex items-center gap-6 p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 shadow-inner group">
-                        <div className="p-4 bg-white rounded-2xl shadow-sm text-emerald-500 group-hover:rotate-12 transition-transform">
+                    <div className="flex items-center gap-6 p-8 bg-[#1A1C23] rounded-[2.5rem] border border-white/5 shadow-inner group">
+                        <div className="p-4 bg-[#151822] border border-white/10 rounded-2xl shadow-sm text-emerald-500 group-hover:rotate-12 transition-transform">
                             <Zap size={28} />
                         </div>
                         <div>
                             <span className="text-[10px] font-bold text-gray-400 tracking-tight font-medium block">ESG Benchmark</span>
-                            <span className="text-xl font-bold text-secondary tracking-tight">2026 Net-Positive Ready</span>
+                            <span className="text-xl font-bold text-white tracking-tight">2026 Net-Positive Ready</span>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ export const Sustainability: React.FC = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="bg-white p-12 rounded-[3.5rem] border border-gray-100 hover:shadow-[0_40px_80px_-20px_rgba(16,185,129,0.1)] hover:border-emerald-500/20 transition-all group relative overflow-hidden"
+                            className="bg-[#151822] border border-white/10 p-12 rounded-[3.5rem] border border-white/5 hover:shadow-[0_40px_80px_-20px_rgba(16,185,129,0.1)] hover:border-emerald-500/20 transition-all group relative overflow-hidden"
                         >
                             <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-125 transition-transform">
                                 <metric.icon size={80} />
@@ -66,7 +66,7 @@ export const Sustainability: React.FC = () => {
                             <div className={`${metric.color} mb-10 transform group-hover:scale-110 transition-transform`}>
                                 <metric.icon size={48} strokeWidth={1.5} />
                             </div>
-                            <div className="text-5xl font-bold text-secondary mb-3 tracking-tighter italic">{metric.value}</div>
+                            <div className="text-5xl font-bold text-white mb-3 tracking-tighter italic">{metric.value}</div>
                             <div className="text-[10px] font-bold text-gray-400 tracking-tight font-semibold mb-6">{metric.label}</div>
                             <p className="text-gray-500 text-base font-medium leading-relaxed italic">"{metric.description}"</p>
                         </motion.div>
@@ -76,7 +76,7 @@ export const Sustainability: React.FC = () => {
                 <motion.div 
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    className="bg-secondary rounded-[5rem] p-16 md:p-28 text-white relative overflow-hidden shadow-[0_80px_160px_-40px_rgba(0,0,0,0.5)] group"
+                    className="bg-[#0B0D14] rounded-[5rem] p-16 md:p-28 text-white relative overflow-hidden shadow-[0_80px_160px_-40px_rgba(0,0,0,0.5)] group"
                 >
                     <div className="absolute inset-0 bg-[url('/images/aerial-sunset.png')] bg-cover bg-center opacity-5 grayscale pointer-events-none group-hover:scale-110 transition-transform duration-1000"></div>
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-emerald-500/5 skew-x-12 transform translate-x-32 group-hover:translate-x-24 transition-transform duration-[2s]"></div>
@@ -92,16 +92,16 @@ export const Sustainability: React.FC = () => {
                                 Our central spine road is a massive 400-acre green filter. Lined with thousands of native trees, it creates a micro-climate that reduces ambient temperatures by up to 3°C across all residential clusters.
                             </p>
                             <div className="flex flex-wrap gap-8">
-                                <div className="bg-white/5 backdrop-blur-xl px-10 py-6 rounded-[2.5rem] border border-white/10 group/stat">
+                                <div className="bg-[#151822] border border-white/10/5 backdrop-blur-xl px-10 py-6 rounded-[2.5rem] border border-white/10 group/stat">
                                     <div className="text-4xl font-bold text-emerald-400 group-hover:scale-110 transition-transform">3.5 Acres</div>
                                     <div className="text-[10px] text-white/30 uppercase font-bold tracking-[0.4em] mt-2">Sovereign Urban Park</div>
                                 </div>
-                                <div className="bg-white/5 backdrop-blur-xl px-10 py-6 rounded-[2.5rem] border border-white/10 group/stat">
+                                <div className="bg-[#151822] border border-white/10/5 backdrop-blur-xl px-10 py-6 rounded-[2.5rem] border border-white/10 group/stat">
                                     <div className="text-4xl font-bold text-emerald-400 group-hover:scale-110 transition-transform">Zero</div>
                                     <div className="text-[10px] text-white/30 uppercase font-bold tracking-[0.4em] mt-2">Liquid Discharge</div>
                                 </div>
                             </div>
-                            <button className="flex items-center gap-4 px-10 py-5 bg-white text-secondary rounded-full font-bold text-xl hover:bg-emerald-400 transition-all shadow-2xl group/btn">
+                            <button className="flex items-center gap-4 px-10 py-5 bg-[#0B0D14] text-white rounded-full font-bold text-xl hover:bg-emerald-400 transition-all shadow-2xl group/btn">
                                 Download ESG Manifesto <ArrowUpRight size={24} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </button>
                         </div>
@@ -113,11 +113,11 @@ export const Sustainability: React.FC = () => {
                                 className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-[3s]"
                             />
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="bg-white/10 backdrop-blur-2xl p-16 rounded-full border border-white/20 shadow-[0_0_80px_rgba(16,185,129,0.3)]">
+                                <div className="bg-[#151822] border border-white/10/10 backdrop-blur-2xl p-16 rounded-full border border-white/20 shadow-[0_0_80px_rgba(16,185,129,0.3)]">
                                     <Globe size={80} className="text-emerald-400 animate-spin-slow" />
                                 </div>
                             </div>
-                            <div className="absolute bottom-10 left-10 right-10 p-8 bg-secondary/80 backdrop-blur-3xl rounded-[2.5rem] border border-white/10">
+                            <div className="absolute bottom-10 left-10 right-10 p-8 bg-[#0B0D14]/80 backdrop-blur-3xl rounded-[2.5rem] border border-white/10">
                                 <p className="text-xs text-white font-bold leading-relaxed italic">"Verified 2026 Bio-Sovereignty Index: Top 1% of Integrated Townships in India."</p>
                             </div>
                         </div>

@@ -37,7 +37,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
     const keywords = `${generateLocationKeywords(locationName)}, flats near Hinjewadi Phase 3, life republic vs ${locationName}, Hinjewadi Phase 3 growth 2026`;
 
     return (
-        <div className="bg-white selection:bg-accent selection:text-secondary">
+        <div className="bg-transparent selection:bg-accent selection:text-white">
             <SEO
                 title={title}
                 description={description}
@@ -46,7 +46,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
             />
 
             {/* Sovereign Location Hero v6.5 */}
-            <section className="relative h-[80vh] flex items-center bg-secondary text-white overflow-hidden">
+            <section className="relative h-[80vh] flex items-center bg-[#0B0D14] text-white overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/60 to-transparent z-10"></div>
                 <div className="absolute inset-0 bg-[url('/images/aerial-night.png')] bg-cover bg-center opacity-30 grayscale blur-[2px] scale-110"></div>
                 <div className="absolute top-0 right-0 w-[1000px] h-full bg-accent/5 rounded-full blur-[200px] pointer-events-none -mr-96"></div>
@@ -71,11 +71,11 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                         <div className="flex flex-wrap gap-10">
                             <button 
                                 onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}
-                                className="bg-white text-secondary px-20 py-10 rounded-full font-bold text-2xl shadow-[0_50px_100px_-20px_rgba(0,0,0,0.4)] hover:bg-accent hover:text-secondary transition-all flex items-center gap-6 group hover:scale-[1.05]"
+                                className="bg-[#151822] border border-white/10 text-white px-20 py-10 rounded-full font-bold text-2xl shadow-[0_50px_100px_-20px_rgba(0,0,0,0.4)] hover:bg-accent hover:text-white transition-all flex items-center gap-6 group hover:scale-[1.05]"
                             >
                                 Enquire Now <ArrowUpRight size={32} className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
                             </button>
-                            <a href="#matrix" className="bg-transparent border-2 border-white/20 text-white hover:bg-white/5 rounded-full px-20 py-10 font-bold text-2xl flex items-center gap-6 transition-all group">
+                            <a href="#matrix" className="bg-transparent border-2 border-white/20 text-white hover:bg-[#151822] border border-white/10/5 rounded-full px-20 py-10 font-bold text-2xl flex items-center gap-6 transition-all group">
                                 View Transit Matrix <BarChart3 size={32} className="group-hover:rotate-12 transition-transform" />
                             </a>
                         </div>
@@ -89,9 +89,9 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
             </section>
 
             {/* Commute Delta Matrix v6.5 */}
-            <section id="matrix" className="py-64 bg-gray-50/50 relative overflow-hidden">
+            <section id="matrix" className="py-64 bg-[#1A1C23]/50 relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-40 opacity-5 pointer-events-none">
-                    <Compass size={400} className="text-secondary animate-spin-slow" />
+                    <Compass size={400} className="text-white animate-spin-slow" />
                 </div>
                 
                 <div className="container mx-auto px-4 relative z-10">
@@ -102,7 +102,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                                     <Cpu size={24} />
                                     <span className="text-[12px] tracking-tight font-semibold">The Transit Synthesis</span>
                                 </div>
-                                <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-secondary tracking-tighter leading-[0.85]">The Superior <br /><span className="text-accent italic">Commute Delta.</span></h2>
+                                <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-white tracking-tighter leading-[0.85]">The Superior <br /><span className="text-accent italic">Commute Delta.</span></h2>
                             </div>
                             <p className="text-2xl md:text-3xl text-gray-500 leading-relaxed font-medium italic">
                                 standalone properties in {locationName} often lack dedicated infrastructure. Life Republic residents enjoy the 150ft Spine Road advantage, bypassing all local bottlenecks.
@@ -116,13 +116,13 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                                     <motion.div 
                                         key={i} 
                                         whileHover={{ x: 20 }}
-                                        className="flex gap-8 p-10 bg-white rounded-[3.5rem] border border-gray-100 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] group hover:border-accent transition-all"
+                                        className="flex gap-8 p-10 bg-[#151822] border border-white/10 rounded-[3.5rem] border border-white/5 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] group hover:border-accent transition-all"
                                     >
-                                        <div className="w-20 h-20 bg-accent/10 text-accent rounded-[2rem] flex items-center justify-center group-hover:bg-accent group-hover:text-secondary transition-all shadow-inner">
+                                        <div className="w-20 h-20 bg-accent/10 text-accent rounded-[2rem] flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all shadow-inner">
                                             <item.icon size={36} strokeWidth={1.5} />
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-secondary text-2xl tracking-tight mb-2 italic">{item.title}</h4>
+                                            <h4 className="font-bold text-white text-2xl tracking-tight mb-2 italic">{item.title}</h4>
                                             <p className="text-base text-gray-400 font-medium leading-relaxed italic">"{item.desc}"</p>
                                         </div>
                                     </motion.div>
@@ -130,10 +130,10 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                             </div>
                         </div>
                         
-                        <div className="lg:col-span-7 bg-white rounded-[5rem] p-16 md:p-24 shadow-[0_80px_160px_-40px_rgba(0,0,0,0.1)] border border-gray-100 relative overflow-hidden group">
+                        <div className="lg:col-span-7 bg-[#151822] border border-white/10 rounded-[5rem] p-16 md:p-24 shadow-[0_80px_160px_-40px_rgba(0,0,0,0.1)] border border-white/5 relative overflow-hidden group">
                             <div className="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full -mr-40 -mt-40 blur-[100px] group-hover:scale-150 transition-transform duration-[3s]"></div>
                             <div className="flex items-center justify-between mb-24">
-                                <h3 className="text-5xl font-serif font-bold text-secondary tracking-tighter italic">Sovereign Proximity Analysis</h3>
+                                <h3 className="text-5xl font-serif font-bold text-white tracking-tighter italic">Sovereign Proximity Analysis</h3>
                                 <div className="flex items-center gap-4 text-[11px] font-bold text-accent tracking-tight font-semibold bg-accent/10 px-8 py-4 rounded-full border border-accent/20">
                                     <Navigation size={16} className="animate-pulse" /> Live Sync Active
                                 </div>
@@ -141,7 +141,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                             <div className="overflow-x-auto">
                                 <table className="w-full text-left">
                                     <thead>
-                                        <tr className="border-b border-gray-100">
+                                        <tr className="border-b border-white/5">
                                             <th className="pb-12 text-[12px] font-bold tracking-tight font-semibold text-gray-300">Destination Hub</th>
                                             <th className="pb-12 text-[12px] font-bold tracking-tight font-semibold text-gray-300">Standalone {locationName}</th>
                                             <th className="pb-12 text-[12px] font-bold tracking-tight font-semibold text-accent">Sovereign Sync</th>
@@ -155,10 +155,10 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                                             { dest: "Anisha Global School", fromLoc: "20 mins", fromLR: "1 min", delta: "Integrated" },
                                             { dest: "Embassy Tech Zone", fromLoc: "30 mins", fromLR: "12 mins", delta: "Zero Bottleneck" }
                                         ].map((row, i) => (
-                                            <tr key={i} className="group/row hover:bg-gray-50/80 transition-all">
-                                                <td className="py-12 font-serif font-bold text-secondary text-4xl tracking-tighter italic">{row.dest}</td>
+                                            <tr key={i} className="group/row hover:bg-[#1A1C23]/80 transition-all">
+                                                <td className="py-12 font-serif font-bold text-white text-4xl tracking-tighter italic">{row.dest}</td>
                                                 <td className="py-12 text-gray-300 font-bold text-xl">{row.fromLoc}</td>
-                                                <td className="py-12 text-secondary font-bold text-2xl flex items-center gap-4">
+                                                <td className="py-12 text-white font-bold text-2xl flex items-center gap-4">
                                                     <div className="w-3 h-3 bg-accent rounded-full animate-pulse shadow-[0_0_15px_var(--accent)]"></div> {row.fromLR}
                                                 </td>
                                                 <td className="py-12 text-accent font-bold italic text-xl tracking-tight">{row.delta}</td>
@@ -173,11 +173,11 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
             </section>
 
             {/* Clusters Grid v6.5 */}
-            <section id="projects" className="py-64 bg-white relative">
+            <section id="projects" className="py-64 bg-[#0B0D14] relative">
                 <div className="container mx-auto px-4 text-center">
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}>
                         <span className="text-[11px] font-bold text-accent tracking-tight font-semibold mb-6 block">Personalized Synthesis</span>
-                        <h2 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-secondary mb-32 tracking-tighter leading-none italic">The Sovereign <span className="text-accent">Clusters.</span></h2>
+                        <h2 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-32 tracking-tighter leading-none italic">The Sovereign <span className="text-accent">Clusters.</span></h2>
                     </motion.div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
                         {featuredProjects.map((project) => (
@@ -188,7 +188,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
             </section>
 
             {/* Hyper-Local SEO Content v6.5 */}
-            <section className="py-64 bg-secondary text-white/40 text-2xl leading-[1.6] border-t border-white/5 relative overflow-hidden">
+            <section className="py-64 bg-[#0B0D14] text-white/40 text-2xl leading-[1.6] border-t border-white/5 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/aerial-night.png')] bg-cover bg-center opacity-5 grayscale pointer-events-none"></div>
                 <div className="container mx-auto px-4 max-w-6xl text-center relative z-10 space-y-16">
                     <h3 className="text-4xl md:text-5xl font-serif font-bold text-white tracking-tighter italic">Property Market Synthesis: {locationName} vs Hinjewadi 2026</h3>

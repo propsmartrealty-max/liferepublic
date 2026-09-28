@@ -56,7 +56,7 @@ export const Contact: React.FC = () => {
                 schema={localBusinessSchema}
             />
             <Breadcrumbs />
-            <section className="bg-secondary text-white py-20">
+            <section className="bg-[#0B0D14] text-white py-20">
                 <div className="container mx-auto px-4 text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
@@ -76,7 +76,7 @@ export const Contact: React.FC = () => {
                     {/* Contact Info */}
                     <div className="space-y-8">
                         <div>
-                            <h2 className="text-3xl font-serif font-bold text-secondary mb-6">Get in Touch</h2>
+                            <h2 className="text-3xl font-serif font-bold text-white mb-6">Get in Touch</h2>
                             <p className="text-gray-600 text-lg">
                                 Have questions? Our experts are here to help you navigate your home buying journey.
                             </p>
@@ -88,7 +88,7 @@ export const Contact: React.FC = () => {
                                     <MapPin size={24} />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-secondary mb-2">Visit Us</h3>
+                                    <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
                                     <p className="text-gray-600">Life Republic Township, Marunji, Hinjawadi, Pune, Maharashtra 411057</p>
                                 </div>
                             </div>
@@ -98,14 +98,14 @@ export const Contact: React.FC = () => {
                                     <Phone size={24} />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-secondary mb-2">Digital Sales Desk</h3>
+                                    <h3 className="text-xl font-bold text-white mb-2">Digital Sales Desk</h3>
                                     <p className="text-gray-600">Submit an enquiry to request an instant callback from our advisors.</p>
                                     <p className="text-gray-500 text-sm mt-2">Mon - Sun: 9:00 AM - 7:00 PM</p>
                                 </div>
                             </div>
 
 
-                            <div className="mt-8 rounded-xl overflow-hidden shadow-lg border border-gray-100 h-[300px]">
+                            <div className="mt-8 rounded-xl overflow-hidden shadow-lg border border-white/5 h-[300px]">
                                 <iframe 
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.996160105342!2d73.71261537446698!3d18.57416346752763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc6e326466f%3A0xc07c3905cf6ce12a!2sKolte%20Patil%20Life%20Republic!5e0!3m2!1sen!2sin!4v1704100000000!5m2!1sen!2sin" 
                                     width="100%" 
@@ -121,7 +121,7 @@ export const Contact: React.FC = () => {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div className="bg-[#1A1C23] p-8 rounded-xl shadow-lg border border-white/5">
                         <ContactForm />
                     </div>
                 </div>
@@ -167,7 +167,7 @@ const ContactForm: React.FC = () => {
     return (
         <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
-                <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                <label htmlFor="contact-name" className="block text-sm font-medium text-gray-300 mb-2">Name</label>
                 <input
                     id="contact-name"
                     aria-label="Name"
@@ -180,7 +180,7 @@ const ContactForm: React.FC = () => {
                 />
             </div>
             <div>
-                <label htmlFor="contact-phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                <label htmlFor="contact-phone" className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
                 <input
                     id="contact-phone"
                     aria-label="Phone Number"
@@ -193,7 +193,7 @@ const ContactForm: React.FC = () => {
                 />
             </div>
             <div>
-                <label htmlFor="contact-email" className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                <label htmlFor="contact-email" className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
                 <input
                     id="contact-email"
                     aria-label="Email Address"
@@ -208,7 +208,7 @@ const ContactForm: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Cluster Name</label>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Cluster Name</label>
                     <select
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent"
@@ -227,7 +227,7 @@ const ContactForm: React.FC = () => {
                     </select>
                 </div>
                 <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Configuration</label>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Configuration</label>
                     <select
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent"
@@ -245,7 +245,7 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
                 <textarea
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent h-32"
                     placeholder="I am interested in..."

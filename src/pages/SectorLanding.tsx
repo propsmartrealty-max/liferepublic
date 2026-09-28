@@ -81,7 +81,7 @@ export const SectorLanding: React.FC = () => {
     ];
 
     return (
-        <div className="pt-20 bg-white">
+        <div className="pt-20 bg-transparent">
             <SEO 
                 title={pageTitle}
                 description={pageDesc}
@@ -92,7 +92,7 @@ export const SectorLanding: React.FC = () => {
             <Breadcrumbs />
 
             {/* Hero Section */}
-            <section className="relative py-24 bg-secondary overflow-hidden">
+            <section className="relative py-24 bg-[#0B0D14] overflow-hidden">
                 <div className="absolute inset-0 opacity-5"></div>
                 <div className="container mx-auto px-4 relative">
                     <motion.div
@@ -124,40 +124,40 @@ export const SectorLanding: React.FC = () => {
             </section>
 
             {/* Intelligence Grid */}
-            <section className="py-24 border-b border-gray-100">
+            <section className="py-24 border-b border-white/5">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-secondary mb-8">{sectorData.segment} Hub Infrastructure</h2>
+                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8">{sectorData.segment} Hub Infrastructure</h2>
                             <div className="space-y-8">
                                 <div className="flex gap-6">
-                                    <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center flex-shrink-0 text-accent border border-gray-100">
+                                    <div className="w-16 h-16 bg-[#1A1C23] rounded-2xl flex items-center justify-center flex-shrink-0 text-accent border border-white/5">
                                         <Zap size={32} />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-secondary mb-2">Smart Connectivity</h3>
+                                        <h3 className="text-xl font-bold text-white mb-2">Smart Connectivity</h3>
                                         <p className="text-gray-600 leading-relaxed">
                                             {sectorData.branding || data.name} is strategically positioned {data.distance} from the main IT spine, ensuring effortless daily commutes to Hinjewadi Phase 1, 2, and 3.
                                         </p>
                                     </div>
                                 </div>
                                 <div className="flex gap-6">
-                                    <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center flex-shrink-0 text-accent border border-gray-100">
+                                    <div className="w-16 h-16 bg-[#1A1C23] rounded-2xl flex items-center justify-center flex-shrink-0 text-accent border border-white/5">
                                         <Building2 size={32} />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-secondary mb-2">Strategic Deployment</h3>
+                                        <h3 className="text-xl font-bold text-white mb-2">Strategic Deployment</h3>
                                         <p className="text-gray-600 leading-relaxed">
                                             {data.infrastructure}. {sectorData.branding} benefits from the township's 150ft wide spine roads and professional-grade security.
                                         </p>
                                     </div>
                                 </div>
                                 <div className="flex gap-6">
-                                    <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center flex-shrink-0 text-accent border border-gray-100">
+                                    <div className="w-16 h-16 bg-[#1A1C23] rounded-2xl flex items-center justify-center flex-shrink-0 text-accent border border-white/5">
                                         {isLocality ? <Navigation size={32} /> : <CheckCircle2 size={32} />}
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-secondary mb-2">
+                                        <h3 className="text-xl font-bold text-white mb-2">
                                             {isLocality ? 'Proximity Advantage' : 'Segment Excellence'}
                                         </h3>
                                         <p className="text-gray-600 leading-relaxed">
@@ -171,14 +171,14 @@ export const SectorLanding: React.FC = () => {
                             </div>
                         </div>
                         <div className="relative">
-                            <div className="aspect-square bg-gray-100 rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
+                            <div className="aspect-square bg-[#151822] rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
                                 <img loading="lazy" 
                                     src="/images/home/master-layout-full.jpg" 
                                     alt={`${data.name} Layout`}
                                     className="w-full h-full object-cover opacity-80"
                                 />
                             </div>
-                            <div className="absolute top-8 right-8 bg-secondary p-6 rounded-2xl shadow-xl border border-white/20 max-w-[200px]">
+                            <div className="absolute top-8 right-8 bg-[#0B0D14] p-6 rounded-2xl shadow-xl border border-white/20 max-w-[200px]">
                                 <p className="text-sm font-bold text-accent">{data.distance}</p>
                                 <p className="text-xs text-white/40 tracking-tight font-medium mt-1">To Metro Access</p>
                             </div>
@@ -188,7 +188,7 @@ export const SectorLanding: React.FC = () => {
             </section>
 
             {/* Micro-Amenities Intelligence Layer */}
-            <section className="py-24 bg-secondary text-white relative overflow-hidden">
+            <section className="py-24 bg-[#0B0D14] text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[120px] -mr-48 -mt-48"></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="max-w-2xl mb-16">
@@ -204,7 +204,7 @@ export const SectorLanding: React.FC = () => {
                             { label: 'Greenery', val: 'Urban Park', sub: 'Central Access', icon: '🌳' },
                             { label: 'Security', val: 'Fire Station', sub: 'Township Internal', icon: '🛡️' }
                         ].map((item, idx) => (
-                            <div key={idx} className="p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
+                            <div key={idx} className="p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-[#151822] border border-white/10/10 transition-all group">
                                 <div className="text-3xl mb-6 grayscale group-hover:grayscale-0 transition-all">{item.icon}</div>
                                 <p className="text-accent text-[10px] font-bold tracking-tight font-medium mb-1">{item.label}</p>
                                 <h4 className="text-xl font-bold mb-1">{item.val}</h4>
@@ -216,10 +216,10 @@ export const SectorLanding: React.FC = () => {
             </section>
 
             {/* Recommendations */}
-            <section className="py-24 bg-gray-50">
+            <section className="py-24 bg-[#1A1C23]">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-secondary mb-4">Available Projects in {sectorData.branding || data.name}</h2>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4">Available Projects in {sectorData.branding || data.name}</h2>
                         <div className="w-24 h-1 bg-accent mx-auto"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -234,24 +234,24 @@ export const SectorLanding: React.FC = () => {
             <InfraTracker />
 
             {/* Deep Web Content Block */}
-            <section className="py-20 bg-white border-t border-gray-100">
+            <section className="py-20 bg-[#0B0D14] border-t border-white/5">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
-                        <h3 className="text-2xl font-serif font-bold text-secondary mb-6">Sovereign Infrastructure Intelligence: {sectorData.branding || data.name}</h3>
+                        <h3 className="text-2xl font-serif font-bold text-white mb-6">Sovereign Infrastructure Intelligence: {sectorData.branding || data.name}</h3>
                         <p className="mb-6">
                             Home-seekers evaluating <strong>{data.name}</strong> often compare it to standalone developments in Hinjewadi. However, the <strong>{sectorData.branding}</strong> precinct within Kolte Patil Life Republic offers a distinct "Township Advantage" that is currently driving its high ROI potential.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                <h4 className="font-bold text-secondary mb-2">Logistics Metrics</h4>
+                            <div className="p-6 bg-[#1A1C23] rounded-2xl border border-white/5">
+                                <h4 className="font-bold text-white mb-2">Logistics Metrics</h4>
                                 <ul className="text-sm space-y-2">
                                     <li>• <span className="text-gray-500">Distance:</span> {data.distance} from Main Spine</li>
                                     <li>• <span className="text-gray-500">Infrastructure:</span> {data.infrastructure}</li>
                                     <li>• <span className="text-gray-500">Access:</span> Automated Township Entry/Exit</li>
                                 </ul>
                             </div>
-                            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                <h4 className="font-bold text-secondary mb-2">Demand Analysis</h4>
+                            <div className="p-6 bg-[#1A1C23] rounded-2xl border border-white/5">
+                                <h4 className="font-bold text-white mb-2">Demand Analysis</h4>
                                 <ul className="text-sm space-y-2">
                                     <li>• <span className="text-gray-500">Segment:</span> {sectorData.segment} Sector</li>
                                     <li>• <span className="text-gray-500">Target Group:</span> {sectorData.target}</li>
@@ -263,10 +263,10 @@ export const SectorLanding: React.FC = () => {
                             *This {sectorData.segment} cluster is strictly RERA compliant and integrated into the 400-acre managed ecosystem of Life Republic.
                         </p>
                     </div>
-                    <div className="mt-12 p-8 bg-accent rounded-3xl text-secondary flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+                    <div className="mt-12 p-8 bg-accent rounded-3xl text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
                         <div>
                             <h4 className="text-2xl font-bold mb-2">Request {sectorData.segment} Brochure</h4>
-                            <p className="text-secondary/60">Get the full technical ledger and availability for {data.name}.</p>
+                            <p className="text-white/60">Get the full technical ledger and availability for {data.name}.</p>
                         </div>
                         <Button 
                             variant="secondary" 

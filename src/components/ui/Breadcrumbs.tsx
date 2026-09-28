@@ -14,7 +14,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = () => {
     if (pathnames.length === 0) return null;
 
     return (
-        <nav aria-label="Breadcrumb" className="bg-gray-100/50 backdrop-blur-sm py-4 px-4 border-b border-gray-200">
+        <nav aria-label="Breadcrumb" className="bg-[#151822]/50 backdrop-blur-sm py-4 px-4 border-b border-white/10">
             <ol className="flex items-center space-x-2 text-sm text-gray-500 container mx-auto overflow-x-auto whitespace-nowrap scrollbar-hide">
                 <li className="flex-shrink-0">
                     <Link to="/" className="hover:text-accent flex items-center transition-colors">
@@ -31,7 +31,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = () => {
                         <li key={name} className="flex items-center flex-shrink-0">
                             <ChevronRight size={14} className="mx-2 text-gray-400" />
                             {isLast ? (
-                                <span className="font-semibold text-secondary truncate max-w-[200px]" aria-current="page">
+                                <span className="font-semibold text-white truncate max-w-[200px]" aria-current="page">
                                     {name}
                                 </span>
                             ) : (

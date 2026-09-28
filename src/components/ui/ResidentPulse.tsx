@@ -14,7 +14,7 @@ const activities = [
 
 export const ResidentPulse: React.FC = () => {
     return (
-        <div className="bg-white border-y border-gray-100 py-6 overflow-hidden relative group w-full">
+        <div className="bg-transparent border-y border-white/5 py-6 overflow-hidden relative group w-full">
             {/* Background Synthesis HUD Overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white z-10 pointer-events-none"></div>
             
@@ -25,7 +25,7 @@ export const ResidentPulse: React.FC = () => {
                         <motion.div 
                             key={idx} 
                             whileHover={{ scale: 1.05 }}
-                            className="flex items-center gap-6 px-10 border-r border-gray-100 last:border-r-0 group/item cursor-pointer"
+                            className="flex items-center gap-6 px-10 border-r border-white/5 last:border-r-0 group/item cursor-pointer"
                         >
                             <div className={`${activity.bg} ${activity.color} p-4 rounded-2xl shadow-sm group-hover/item:shadow-xl transition-all duration-500 border border-transparent group-hover/item:border-current/20`}>
                                 <activity.icon size={24} className="group-hover/item:rotate-12 transition-transform" />
@@ -38,7 +38,7 @@ export const ResidentPulse: React.FC = () => {
                                     <div className="w-1 h-1 rounded-full bg-gray-200"></div>
                                     <span className="text-[9px] font-bold text-gray-400 tracking-tight font-medium">{activity.time}</span>
                                 </div>
-                                <span className="text-sm font-bold text-secondary tracking-tight group-hover/item:text-accent transition-colors">
+                                <span className="text-sm font-bold text-white tracking-tight group-hover/item:text-accent transition-colors">
                                     {activity.message}
                                 </span>
                             </div>

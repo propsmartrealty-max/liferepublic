@@ -69,17 +69,17 @@ export const HeroSlider = () => {
                 <p className="text-white font-serif text-2xl font-bold mb-1">390 Acres</p>
                 <p className="text-[#E5C07B] text-[10px] uppercase tracking-widest font-bold">SMART TOWNSHIP</p>
             </div>
-            <div className="w-px bg-white/20 hidden md:block"></div>
+            <div className="w-px bg-transparent/20 hidden md:block"></div>
             <div>
                 <p className="text-white font-serif text-2xl font-bold mb-1">Apts & Villas</p>
                 <p className="text-[#E5C07B] text-[10px] uppercase tracking-widest font-bold">FROM ₹65 LAKHS*</p>
             </div>
-            <div className="w-px bg-white/20 hidden md:block"></div>
+            <div className="w-px bg-transparent/20 hidden md:block"></div>
             <div>
                 <p className="text-white font-serif text-2xl font-bold mb-1">Anisha Global</p>
                 <p className="text-[#E5C07B] text-[10px] uppercase tracking-widest font-bold">INTERNATIONAL SCHOOL</p>
             </div>
-            <div className="w-px bg-white/20 hidden lg:block"></div>
+            <div className="w-px bg-transparent/20 hidden lg:block"></div>
             <div className="hidden lg:block">
                 <p className="text-white font-serif text-2xl font-bold mb-1">Retail Hub</p>
                 <p className="text-[#E5C07B] text-[10px] uppercase tracking-widest font-bold">HIGH STREET</p>
@@ -100,7 +100,7 @@ export const HeroSlider = () => {
                 <span className="text-[#E5C07B] text-lg leading-none">✦</span> ENQUIRE NOW
             </button>
             <button 
-                className="bg-transparent hover:bg-white/5 text-white border border-white/20 px-10 py-4 rounded-full text-sm font-bold tracking-[0.2em] uppercase transition-all flex items-center justify-center gap-3"
+                className="bg-transparent hover:bg-[#151822] border border-white/10/5 text-white border border-white/20 px-10 py-4 rounded-full text-sm font-bold tracking-[0.2em] uppercase transition-all flex items-center justify-center gap-3"
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
                 EXPLORE TOWNSHIP <span className="rotate-90">➔</span>

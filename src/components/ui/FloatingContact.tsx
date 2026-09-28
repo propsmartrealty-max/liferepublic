@@ -20,7 +20,7 @@ export const FloatingContact: React.FC = () => {
     return (
         <>
             <div className="fixed sm:bottom-8 bottom-6 sm:right-8 right-6 z-50 flex flex-col items-end gap-3">
-                <div className="flex flex-col gap-3 bg-white/10 backdrop-blur-2xl p-2 rounded-full border border-white/20 shadow-glass rounded-full shadow-glass">
+                <div className="flex flex-col gap-3 bg-[#151822] border border-white/10/10 backdrop-blur-2xl p-2 rounded-full border border-white/20 shadow-glass rounded-full shadow-glass">
                     <motion.a
                         href={`https://wa.me/917744009295?text=${encodeURIComponent("Hi, I am interested in Kolte Patil Life Republic. Please share the brochure and project details.")}`}
                         target="_blank"
@@ -30,7 +30,7 @@ export const FloatingContact: React.FC = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className={`sm:p-4 p-3 rounded-full border-2 border-primary shadow-none transition-all duration-300 flex items-center justify-center ${
-                            !isLive ? 'bg-accent text-white shadow-none' : 'bg-white text-[#25D366] hover:bg-gray-50'
+                            !isLive ? 'bg-accent text-white shadow-none' : 'bg-white text-[#25D366] hover:bg-[#1A1C23]'
                         }`}
                         aria-label="WhatsApp Enquiry"
                     >
@@ -51,7 +51,7 @@ export const FloatingContact: React.FC = () => {
                         whileTap={{ scale: 0.95 }}
                         transition={{ delay: 0.1 }}
                         className={`sm:p-4 p-3 rounded-full border-2 border-primary shadow-none transition-all duration-300 flex items-center justify-center ${
-                            isLive ? 'bg-accent text-white shadow-none' : 'bg-white text-secondary hover:bg-gray-50'
+                            isLive ? 'bg-accent text-white shadow-none' : 'bg-white text-white hover:bg-[#1A1C23]'
                         }`}
                         aria-label="Request Instant Callback"
                     >

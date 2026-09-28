@@ -9,7 +9,7 @@ export const TownshipIntelligence: React.FC = () => {
     const { township } = townshipData;
 
     return (
-        <div className="pt-32 pb-20 bg-white">
+        <div className="pt-32 pb-20 bg-transparent">
             <SEO 
                 title="Township Intelligence | Kolte Patil Life Republic"
                 description="Explore the infrastructure, connectivity, and community intelligence of Kolte Patil Life Republic, Hinjewadi. The definitive guide to Pune's most integrated township."
@@ -26,7 +26,7 @@ export const TownshipIntelligence: React.FC = () => {
                     >
                         The Masterplan Intelligence
                     </motion.span>
-                    <h1 className="text-6xl md:text-7xl font-serif font-bold text-secondary mb-10 leading-[1.1]">
+                    <h1 className="text-6xl md:text-7xl font-serif font-bold text-white mb-10 leading-[1.1]">
                         Integrated <br />Ecosystem
                     </h1>
                     <p className="text-gray-500 text-xl font-light leading-relaxed max-w-2xl">
@@ -47,10 +47,10 @@ export const TownshipIntelligence: React.FC = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: idx * 0.1 }}
-                            className="border-l border-gray-100 pl-8"
+                            className="border-l border-white/5 pl-8"
                         >
                             <span className="text-gray-400 text-[10px] font-bold tracking-tight font-medium block mb-2">{stat.label}</span>
-                            <span className="text-3xl font-serif font-bold text-secondary">{stat.value}</span>
+                            <span className="text-3xl font-serif font-bold text-white">{stat.value}</span>
                         </motion.div>
                     ))}
                 </div>
@@ -60,23 +60,23 @@ export const TownshipIntelligence: React.FC = () => {
                     {/* Module 1: Infrastructure */}
                     <section className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2">
-                            <div className="aspect-video bg-gray-100 rounded-[2rem] overflow-hidden relative shadow-2xl">
+                            <div className="aspect-video bg-[#151822] rounded-[2rem] overflow-hidden relative shadow-2xl">
                                 <img loading="lazy" src="/images/gallery/eros/master-layout.webp" alt="Infrastructure" className="absolute inset-0 w-full h-full object-cover" />
-                                <div className="absolute inset-0 bg-secondary/20 mix-blend-multiply"></div>
+                                <div className="absolute inset-0 bg-[#0B0D14]/20 mix-blend-multiply"></div>
                             </div>
                         </div>
                         <div className="lg:w-1/2">
-                            <h2 className="text-4xl font-serif font-bold text-secondary mb-8">Infrastructure <br />Neural Network</h2>
+                            <h2 className="text-4xl font-serif font-bold text-white mb-8">Infrastructure <br />Neural Network</h2>
                             <div className="space-y-8">
                                 {township.key_infrastructure.map((infra, idx) => (
                                     <div key={idx} className="flex gap-6 items-start">
-                                        <div className="w-12 h-12 bg-primary/20 rounded-2xl flex items-center justify-center flex-shrink-0 text-accent">
+                                        <div className="w-12 h-12 bg-[#E5C07B]/20 rounded-2xl flex items-center justify-center flex-shrink-0 text-accent">
                                             {infra.type === 'School' && <School size={20} />}
                                             {infra.type === 'Emergency' && <Shield size={20} />}
                                             {infra.type === 'Infrastructure' && <Zap size={20} />}
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-secondary text-lg mb-1">{infra.name}</h4>
+                                            <h4 className="font-bold text-white text-lg mb-1">{infra.name}</h4>
                                             <p className="text-gray-500 text-sm leading-relaxed">{infra.description}</p>
                                         </div>
                                     </div>
@@ -86,8 +86,8 @@ export const TownshipIntelligence: React.FC = () => {
                     </section>
 
                     {/* Module 2: Connectivity Distance Matrix */}
-                    <section className="bg-secondary rounded-[3rem] p-12 md:p-24 text-white relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-[50%] h-full bg-white/5 skew-x-12 translate-x-20"></div>
+                    <section className="bg-[#0B0D14] rounded-[3rem] p-12 md:p-24 text-white relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-[50%] h-full bg-transparent/5 skew-x-12 translate-x-20"></div>
                         
                         <div className="relative z-10">
                             <h2 className="text-4xl font-serif font-bold mb-16">Velocity Matrix</h2>
@@ -116,13 +116,13 @@ export const TownshipIntelligence: React.FC = () => {
                                     </div>
                                 </div>
 
-                                <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/10">
+                                <div className="bg-[#151822] border border-white/10/10 backdrop-blur-xl rounded-3xl p-8 border border-white/10">
                                     <Car size={32} className="text-accent mb-6" />
                                     <h4 className="text-xl font-bold mb-4">Upcoming Mobility</h4>
                                     <p className="text-white/60 text-sm leading-relaxed mb-6">
                                         Integration with the upcoming Hinjewadi-Shivajinagar Metro Line will slash commute times to the city center by 60%.
                                     </p>
-                                    <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white hover:text-secondary">
+                                    <Button variant="outline" className="w-full border-white/20 text-white hover:bg-transparent hover:text-white">
                                         View Road Network
                                     </Button>
                                 </div>

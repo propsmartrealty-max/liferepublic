@@ -53,7 +53,7 @@ export const PageLoader = () => (
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
     transition={{ duration: 0.8, ease: "easeInOut" }}
-    className="min-h-screen flex flex-col items-center justify-center bg-primary fixed inset-0 z-[1000]"
+    className="min-h-screen flex flex-col items-center justify-center bg-[#E5C07B] fixed inset-0 z-[1000]"
   >
     <div className="w-full max-w-xs px-8">
       {/* Premium minimal expanding line loader */}
@@ -71,7 +71,7 @@ export const PageLoader = () => (
           initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-[10px] font-bold text-secondary tracking-tight font-semibold"
+          className="text-[10px] font-bold text-white tracking-tight font-semibold"
         >
           Kolte Patil
         </motion.div>

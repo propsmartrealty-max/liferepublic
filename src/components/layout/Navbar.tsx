@@ -29,10 +29,10 @@ export const Navbar = () => {
                     
                     {/* Logo Section */}
                     <Link to="/" className="flex items-center z-50">
-                        <div className="bg-white rounded-md px-4 py-2 border border-[#E5C07B]/50 flex items-center shadow-[0_0_15px_rgba(229,192,123,0.15)]">
+                        <div className="bg-[#151822] border border-white/10 rounded-md px-4 py-2 border border-[#E5C07B]/50 flex items-center shadow-[0_0_15px_rgba(229,192,123,0.15)]">
                             <span className="text-xl font-serif font-bold text-[#7F1D1D] tracking-tight">KOLTE PATIL</span>
                             <span className="w-px h-6 bg-gray-300 mx-3"></span>
-                            <span className="text-xs font-bold text-gray-800 tracking-widest uppercase">Life Republic</span>
+                            <span className="text-xs font-bold text-white tracking-widest uppercase">Life Republic</span>
                         </div>
                     </Link>
 

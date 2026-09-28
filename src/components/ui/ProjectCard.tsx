@@ -73,7 +73,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, delay = 0 }) 
                 </p>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-2 gap-4 border border-white/10 rounded-lg p-4 mb-4 bg-white/[0.02]">
+                <div className="grid grid-cols-2 gap-4 border border-white/10 rounded-lg p-4 mb-4 bg-[#151822] border border-white/10/[0.02]">
                     <div className="text-center border-r border-white/10">
                         <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Configuration</p>
                         <p className="text-sm font-bold text-white">

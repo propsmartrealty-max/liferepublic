@@ -51,7 +51,7 @@ export const ConnectivityHub: React.FC = () => {
             <Breadcrumbs />
 
             {/* Sovereign Location Hero */}
-            <section className="relative py-24 bg-secondary overflow-hidden">
+            <section className="relative py-24 bg-[#0B0D14] overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-secondary to-black/50 z-10"></div>
                 <div className="absolute inset-0 bg-[url('/images/gallery/eros/master-layout.webp')] bg-cover bg-center opacity-20"></div>
                 <div className="container mx-auto px-4 relative z-20">
@@ -75,7 +75,7 @@ export const ConnectivityHub: React.FC = () => {
             </section>
 
             {/* Distance Matrix */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-[#0B0D14]">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                         {locationNodes.map((cat, idx) => (
@@ -85,21 +85,21 @@ export const ConnectivityHub: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="p-8 bg-gray-50 rounded-[2rem] border border-gray-100"
+                                className="p-8 bg-[#1A1C23] rounded-[2rem] border border-white/5"
                             >
-                                <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-accent mb-8">
+                                <div className="w-14 h-14 bg-[#151822] border border-white/10 rounded-2xl shadow-sm flex items-center justify-center text-accent mb-8">
                                     <cat.icon size={28} />
                                 </div>
-                                <h2 className="text-2xl font-bold text-secondary mb-8">{cat.title}</h2>
+                                <h2 className="text-2xl font-bold text-white mb-8">{cat.title}</h2>
                                 <div className="space-y-6">
                                     {cat.nodes.map((node, nIdx) => (
                                         <div key={nIdx} className="flex items-center justify-between group">
                                             <div>
-                                                <div className="font-bold text-secondary group-hover:text-accent transition-colors">{node.name}</div>
+                                                <div className="font-bold text-white group-hover:text-accent transition-colors">{node.name}</div>
                                                 <div className="text-xs text-gray-400 uppercase font-medium mt-1">{node.time} Drive</div>
                                             </div>
                                             <div className="text-right">
-                                                <div className="text-lg font-serif font-bold text-secondary">{node.distance}</div>
+                                                <div className="text-lg font-serif font-bold text-white">{node.distance}</div>
                                             </div>
                                         </div>
                                     ))}
@@ -114,25 +114,25 @@ export const ConnectivityHub: React.FC = () => {
             <InfraTracker />
 
             {/* Connectivity Specific Content */}
-            <section className="py-24 bg-gray-50">
+            <section className="py-24 bg-[#1A1C23]">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
-                        <div className="bg-white p-12 rounded-[3.5rem] shadow-xl border border-gray-100">
-                            <h2 className="text-3xl font-serif font-bold text-secondary mb-8">Marunji-Hinjewadi Corridor Analysis</h2>
+                        <div className="bg-[#151822] border border-white/10 p-12 rounded-[3.5rem] shadow-xl border border-white/5">
+                            <h2 className="text-3xl font-serif font-bold text-white mb-8">Marunji-Hinjewadi Corridor Analysis</h2>
                             <div className="prose prose-lg text-gray-600">
                                 <p className="mb-6 leading-relaxed">
                                     The <strong>Marunji Road expansion</strong> is a pivotal infrastructure project for Life Republic. Upgrading to a 150ft spine road ensures that even with 12,000+ families, the internal transit remains fluid.
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
                                     <div className="p-6 bg-accent/5 rounded-2xl border border-accent/10">
-                                        <h4 className="font-bold text-secondary mb-2 flex items-center gap-2">
+                                        <h4 className="font-bold text-white mb-2 flex items-center gap-2">
                                             <Info size={18} className="text-accent" /> Metro Impact
                                         </h4>
                                         <p className="text-sm italic">Property values within 3km of Metro Line 3 (Maan Station) are projected to appreciate by 15-18% upon launch.</p>
                                     </div>
-                                    <div className="p-6 bg-secondary/5 rounded-2xl border border-secondary/10">
-                                        <h4 className="font-bold text-secondary mb-2 flex items-center gap-2">
-                                            <Info size={18} className="text-secondary" /> Ring Road Link
+                                    <div className="p-6 bg-[#0B0D14]/5 rounded-2xl border border-secondary/10">
+                                        <h4 className="font-bold text-white mb-2 flex items-center gap-2">
+                                            <Info size={18} className="text-white" /> Ring Road Link
                                         </h4>
                                         <p className="text-sm italic">The upcoming PMRDA Ring Road will provide a bypass to Chakan and Talegaon MIDCs, making it a logistics hub.</p>
                                     </div>
@@ -147,12 +147,12 @@ export const ConnectivityHub: React.FC = () => {
             </section>
 
             {/* Semantic Mesh */}
-            <div className="py-12 border-t border-gray-100">
+            <div className="py-12 border-t border-white/5">
                 <SectorLinkMesh />
             </div>
 
             {/* High Conversion Footer */}
-            <section className="py-24 bg-secondary">
+            <section className="py-24 bg-[#0B0D14]">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-4xl font-serif font-bold text-white mb-8">Optimize Your Commute</h2>
                     <p className="text-white/60 mb-12 max-w-xl mx-auto">Request a personalized route optimization map and see how much time you'll save living at Life Republic.</p>

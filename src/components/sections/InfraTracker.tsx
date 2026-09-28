@@ -35,14 +35,14 @@ const infraItems = [
 
 export const InfraTracker: React.FC = () => {
     return (
-        <section className="py-24 bg-white overflow-hidden">
+        <section className="py-24 bg-[#0B0D14] overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
                     <div className="max-w-2xl">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-bold mb-4 tracking-tight font-medium">
                             <TrendingUp size={16} /> Sovereign Growth Monitor
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-secondary mb-6">Hinjewadi Infrastructure & Appreciation Tracker</h2>
+                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Hinjewadi Infrastructure & Appreciation Tracker</h2>
                         <p className="text-gray-600 text-lg leading-relaxed">
                             Track the real-time development of critical infrastructure projects driving property value appreciation in the <strong>Life Republic</strong> ecosystem.
                         </p>
@@ -57,27 +57,27 @@ export const InfraTracker: React.FC = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:border-accent hover:shadow-xl transition-all group"
+                            className="p-8 bg-[#1A1C23] rounded-3xl border border-white/5 hover:border-accent hover:shadow-xl transition-all group"
                         >
-                            <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-accent mb-6 shadow-sm group-hover:bg-accent group-hover:text-white transition-all">
+                            <div className="w-14 h-14 bg-[#151822] border border-white/10 rounded-2xl flex items-center justify-center text-accent mb-6 shadow-sm group-hover:bg-accent group-hover:text-white transition-all">
                                 <item.icon size={28} />
                             </div>
-                            <h3 className="text-xl font-bold text-secondary mb-2">{item.title}</h3>
-                            <div className="inline-block px-2 py-1 bg-white border border-gray-100 rounded text-[10px] font-bold text-accent uppercase tracking-tighter mb-4">
+                            <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                            <div className="inline-block px-2 py-1 bg-[#0B0D14] border border-white/5 rounded text-[10px] font-bold text-accent uppercase tracking-tighter mb-4">
                                 {item.status}
                             </div>
                             <p className="text-gray-500 text-sm leading-relaxed mb-6">
                                 {item.impact}
                             </p>
-                            <div className="pt-6 border-t border-gray-200 flex items-center justify-between">
+                            <div className="pt-6 border-t border-white/10 flex items-center justify-between">
                                 <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Est. Delivery</span>
-                                <span className="text-sm font-bold text-secondary">{item.completion}</span>
+                                <span className="text-sm font-bold text-white">{item.completion}</span>
                             </div>
                         </motion.div>
                     ))}
                 </div>
 
-                <div className="mt-16 p-8 bg-secondary rounded-[2rem] text-white relative overflow-hidden group">
+                <div className="mt-16 p-8 bg-[#0B0D14] rounded-[2rem] text-white relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -mr-32 -mt-32"></div>
                     <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="max-w-xl">
@@ -86,7 +86,7 @@ export const InfraTracker: React.FC = () => {
                         </div>
                         <button 
                             onClick={() => window.dispatchEvent(new CustomEvent('open-sovereign-concierge'))}
-                            className="px-10 py-4 bg-accent text-white rounded-full font-bold flex items-center gap-3 hover:bg-white hover:text-secondary transition-all shadow-xl shadow-accent/20"
+                            className="px-10 py-4 bg-accent text-white rounded-full font-bold flex items-center gap-3 hover:bg-[#0B0D14] hover:text-white transition-all shadow-xl shadow-accent/20"
                         >
                             <MousePointer2 size={18} /> Download Strategy PDF
                         </button>

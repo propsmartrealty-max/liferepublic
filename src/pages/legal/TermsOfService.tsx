@@ -4,19 +4,19 @@ import { FileText } from 'lucide-react';
 
 export const TermsOfService: React.FC = () => {
     return (
-        <div className="pt-32 pb-24 bg-gray-50 min-h-screen">
+        <div className="pt-32 pb-24 bg-[#1A1C23] min-h-screen">
             <Helmet>
                 <title>Terms of Service | Kolte Patil Life Republic Hinjewadi</title>
                 <meta name="description" content="Terms of Service and Conditions of Use for the Kolte Patil Life Republic website." />
             </Helmet>
             <div className="container mx-auto px-6 max-w-4xl">
-                <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100">
+                <div className="bg-[#151822] border border-white/10 rounded-3xl p-8 md:p-12 shadow-sm border border-white/5">
                     <div className="flex items-center gap-4 mb-8 text-accent">
                         <FileText size={32} />
-                        <h1 className="text-3xl md:text-4xl font-serif font-bold text-secondary">Terms of Service</h1>
+                        <h1 className="text-3xl md:text-4xl font-serif font-bold text-white">Terms of Service</h1>
                     </div>
                     
-                    <div className="prose prose-lg prose-headings:font-serif prose-headings:text-secondary max-w-none text-gray-600">
+                    <div className="prose prose-lg prose-headings:font-serif prose-headings:text-white max-w-none text-gray-600">
                         <p>Last updated: {new Date().toLocaleDateString()}</p>
                         
                         <h2>1. Agreement to Terms</h2>

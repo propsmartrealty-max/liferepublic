@@ -28,18 +28,18 @@ export const TownshipMap: React.FC = () => {
   const [activeCluster, setActiveCluster] = useState<ClusterPoint | null>(null);
 
   return (
-    <section className="py-24 bg-gray-50 overflow-hidden">
+    <section className="py-24 bg-[#1A1C23] overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="text-accent font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Perspective & Scale</span>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-secondary mb-4">Interactive Masterplan</h2>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Interactive Masterplan</h2>
           <p className="text-gray-500 max-w-2xl mx-auto">
             Explore 390+ acres of integrated community living. Hover over the sectors to view cluster details and project timelines.
           </p>
         </div>
 
-        <div className="relative max-w-5xl mx-auto bg-white rounded-[2.5rem] shadow-2xl p-4 md:p-8 border border-gray-100">
-          <div className="relative aspect-[16/9] w-full bg-gray-100 rounded-3xl overflow-hidden group">
+        <div className="relative max-w-5xl mx-auto bg-[#151822] border border-white/10 rounded-[2.5rem] shadow-2xl p-4 md:p-8 border border-white/5">
+          <div className="relative aspect-[16/9] w-full bg-[#151822] rounded-3xl overflow-hidden group">
             {/* Base stylized map (SVG) */}
             <svg viewBox="0 0 100 100" className="w-full h-full text-gray-200">
               {/* Simplified roads and layout */}
@@ -64,7 +64,7 @@ export const TownshipMap: React.FC = () => {
               >
                 <div className="absolute inset-0 rounded-full animate-ping opacity-20" style={{ backgroundColor: cluster.color }}></div>
                 <MapPin className="text-white" size={16} />
-                <span className="absolute top-full mt-2 bg-white px-2 py-0.5 rounded text-[10px] font-bold shadow-sm text-gray-600 whitespace-nowrap">
+                <span className="absolute top-full mt-2 bg-[#151822] border border-white/10 px-2 py-0.5 rounded text-[10px] font-bold shadow-sm text-gray-600 whitespace-nowrap">
                   {cluster.name}
                 </span>
               </motion.button>
@@ -77,26 +77,26 @@ export const TownshipMap: React.FC = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
-                  className="absolute bottom-6 right-6 z-30 w-72 bg-white/90 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/20"
+                  className="absolute bottom-6 right-6 z-30 w-72 bg-[#151822] border border-white/10/90 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/20"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <span className="bg-gray-100 text-gray-500 px-3 py-1 rounded-full text-[10px] font-bold tracking-tight font-medium leading-none">
+                    <span className="bg-[#151822] text-gray-500 px-3 py-1 rounded-full text-[10px] font-bold tracking-tight font-medium leading-none">
                       Sector {activeCluster.id}
                     </span>
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: activeCluster.color }}></div>
                   </div>
-                  <h3 className="text-2xl font-serif font-bold text-secondary mb-1">{activeCluster.name}</h3>
+                  <h3 className="text-2xl font-serif font-bold text-white mb-1">{activeCluster.name}</h3>
                   <p className="text-gray-600 text-sm font-medium mb-4">{activeCluster.type}</p>
                   
                   <div className="space-y-3 mb-6">
                     <div className="flex justify-between items-center text-xs">
                       <span className="text-gray-400">Possession:</span>
-                      <span className="font-bold text-secondary">{activeCluster.status}</span>
+                      <span className="font-bold text-white">{activeCluster.status}</span>
                     </div>
                   </div>
 
                   <Link to={`/location/${activeCluster.slug}`}>
-                    <Button variant="primary" className="w-full rounded-full bg-secondary hover:bg-black border-none gap-2">
+                    <Button variant="primary" className="w-full rounded-full bg-[#0B0D14] hover:bg-black border-none gap-2">
                       Explore Cluster <ArrowRight size={16} />
                     </Button>
                   </Link>
@@ -106,9 +106,9 @@ export const TownshipMap: React.FC = () => {
 
             {/* Static Map Elements */}
             <div className="absolute top-6 left-6 z-10 pointer-events-none">
-              <div className="flex items-center gap-2 bg-white/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
-                <Info size={14} className="text-secondary" />
-                <span className="text-[10px] font-bold tracking-tight font-medium text-secondary">Life Republic 390-Acre Domain</span>
+              <div className="flex items-center gap-2 bg-[#151822] border border-white/10/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+                <Info size={14} className="text-white" />
+                <span className="text-[10px] font-bold tracking-tight font-medium text-white">Life Republic 390-Acre Domain</span>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@ export const TownshipMap: React.FC = () => {
                 className={`flex items-center gap-2 transition-all ${activeCluster?.id === cluster.id ? 'opacity-100 scale-105' : 'opacity-40 hover:opacity-100'}`}
               >
                 <div className="w-3 h-3 rounded-full" style={{ backgroundColor: cluster.color }}></div>
-                <span className="text-xs font-bold text-secondary uppercase tracking-tighter">{cluster.name}</span>
+                <span className="text-xs font-bold text-white uppercase tracking-tighter">{cluster.name}</span>
               </button>
             ))}
           </div>

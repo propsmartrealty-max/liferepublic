@@ -43,7 +43,7 @@ export const Amenities: React.FC = () => {
                 keywords="Life Republic Amenities, Clubhouse in Hinjewadi, School in Life Republic, Integrated Township Amenities, Swimming Pool, Gymnasium, Parks in Hinjewadi, Gated Community Facilities, Better Living in Hinjewadi Pune, Sustainable & Progressive Spaces Pune, 400 Acres of Community Living"
                 canonical="/amenities"
             />
-            <section className="bg-primary-dark text-white py-28 relative overflow-hidden">
+            <section className="bg-[#0B0D14] text-white py-28 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/slider/1.jpg')] bg-cover bg-center opacity-30"></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
@@ -60,7 +60,7 @@ export const Amenities: React.FC = () => {
                 </div>
             </section>
 
-            <section className="py-20 bg-gray-50">
+            <section className="py-20 bg-[#1A1C23]">
                 <div className="container mx-auto px-4">
                     {loading ? (
                         <div className="flex justify-center p-12">
@@ -77,12 +77,12 @@ export const Amenities: React.FC = () => {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: index * 0.1 }}
-                                        className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100 group"
+                                        className="bg-[#151822] border border-white/10 p-8 rounded-xl shadow-sm hover:shadow-md transition-all border border-white/5 group"
                                     >
                                         <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition-transform">
                                             <IconComponent size={24} />
                                         </div>
-                                        <h3 className="text-xl font-bold font-serif text-secondary mb-3">{item.title}</h3>
+                                        <h3 className="text-xl font-bold font-serif text-white mb-3">{item.title}</h3>
                                         <p className="text-gray-600 leading-relaxed text-sm">{item.description}</p>
                                     </motion.div>
                                 );

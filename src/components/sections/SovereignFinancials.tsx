@@ -18,7 +18,7 @@ export const SovereignFinancials: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-secondary text-white rounded-[3rem] my-16 overflow-hidden relative shadow-2xl">
+    <section className="py-24 bg-[#0B0D14] text-white rounded-[3rem] my-16 overflow-hidden relative shadow-2xl">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] -mr-64 -mt-64"></div>
       
       <div className="container mx-auto px-8 relative z-10">
@@ -40,7 +40,7 @@ export const SovereignFinancials: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-sm"
+                className="bg-[#151822] border border-white/10/5 border border-white/10 p-6 rounded-3xl backdrop-blur-sm"
               >
                 <div className={`w-10 h-10 ${stat.color} rounded-xl flex items-center justify-center text-white mb-4 shadow-lg`}>
                    {React.cloneElement(stat.icon as React.ReactElement, { size: 18 } as any)}
@@ -52,13 +52,13 @@ export const SovereignFinancials: React.FC = () => {
           </div>
 
           {/* Price Tracking Timeline */}
-          <div className="bg-white/5 border border-white/10 p-8 md:p-12 rounded-[2.5rem] backdrop-blur-sm relative overflow-hidden">
+          <div className="bg-[#151822] border border-white/10/5 border border-white/10 p-8 md:p-12 rounded-[2.5rem] backdrop-blur-sm relative overflow-hidden">
             <h4 className="text-xl font-bold mb-8 flex items-center gap-3">
               <TrendingUp className="text-accent" /> Base Rate Trajectory (₹ / sqft)
             </h4>
             
             <div className="space-y-8 relative">
-                <div className="absolute left-[7px] top-2 bottom-2 w-px bg-white/10"></div>
+                <div className="absolute left-[7px] top-2 bottom-2 w-px bg-transparent/10"></div>
                 {appreciation.map((point, i) => (
                     <div key={i} className="flex gap-6 relative group">
                         <div className="w-4 h-4 rounded-full bg-accent border-4 border-secondary z-10 mt-1 group-hover:scale-125 transition-transform"></div>

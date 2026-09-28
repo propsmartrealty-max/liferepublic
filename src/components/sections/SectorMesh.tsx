@@ -10,7 +10,7 @@ export const SectorMesh: React.FC = () => {
     const activeSector = sectorsData.sectors.find(s => s.id === hoveredSectorId);
 
     return (
-        <section className="py-48 bg-secondary overflow-hidden relative">
+        <section className="py-48 bg-[#0B0D14] overflow-hidden relative">
             {/* Background Neural Matrix Synthesis v6.5 */}
             <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <svg width="100%" height="100%" className="w-full h-full">
@@ -62,7 +62,7 @@ export const SectorMesh: React.FC = () => {
                     </div>
 
                     {/* Global Proximity HUD v6.5 */}
-                    <div className="bg-white/5 backdrop-blur-3xl p-12 rounded-[3.5rem] border border-white/10 w-full lg:w-[450px] relative group overflow-hidden shadow-2xl">
+                    <div className="bg-[#151822] border border-white/10/5 backdrop-blur-3xl p-12 rounded-[3.5rem] border border-white/10 w-full lg:w-[450px] relative group overflow-hidden shadow-2xl">
                         <div className="absolute top-0 right-0 w-48 h-48 bg-accent/10 rounded-full blur-[80px] group-hover:scale-150 transition-transform duration-1000"></div>
                         <div className="relative z-10">
                             <div className="flex items-center gap-4 mb-10">
@@ -87,7 +87,7 @@ export const SectorMesh: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     {/* Residential Node Matrix */}
                     <div className="lg:col-span-1 space-y-12 h-[700px] overflow-y-auto pr-4 custom-scrollbar">
-                        <div className="bg-white/5 backdrop-blur-3xl rounded-[3.5rem] p-10 border border-white/10 shadow-2xl">
+                        <div className="bg-[#151822] border border-white/10/5 backdrop-blur-3xl rounded-[3.5rem] p-10 border border-white/10 shadow-2xl">
                             <div className="flex items-center gap-4 mb-12">
                                 <Target size={24} className="text-accent" />
                                 <h3 className="font-bold text-white tracking-tight font-semibold text-[11px]">Residential Nodes</h3>
@@ -124,7 +124,7 @@ export const SectorMesh: React.FC = () => {
                                     initial={{ opacity: 0, scale: 0.95, y: 30 }}
                                     animate={{ opacity: 1, scale: 1, y: 0 }}
                                     exit={{ opacity: 0, scale: 0.95, y: 30 }}
-                                    className="absolute inset-0 bg-white/5 backdrop-blur-3xl rounded-[4rem] border border-accent/20 p-16 flex flex-col items-center justify-center text-center overflow-hidden shadow-2xl"
+                                    className="absolute inset-0 bg-[#151822] border border-white/10/5 backdrop-blur-3xl rounded-[4rem] border border-accent/20 p-16 flex flex-col items-center justify-center text-center overflow-hidden shadow-2xl"
                                 >
                                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--accent)_0%,transparent_70%)] opacity-20 animate-pulse"></div>
                                     
@@ -134,11 +134,11 @@ export const SectorMesh: React.FC = () => {
                                                 <div className="absolute inset-0 border-2 border-accent/30 rounded-3xl animate-ping"></div>
                                                 <Layers size={40} />
                                             </div>
-                                            <div className="h-16 w-px bg-white/10"></div>
+                                            <div className="h-16 w-px bg-transparent/10"></div>
                                             <div className="text-left">
                                                 <span className="text-[10px] font-bold text-accent tracking-tight font-semibold block mb-2">Investment Velocity</span>
                                                 <div className="flex items-center gap-3">
-                                                    <div className="h-2 w-32 bg-white/10 rounded-full overflow-hidden">
+                                                    <div className="h-2 w-32 bg-[#151822] border border-white/10/10 rounded-full overflow-hidden">
                                                         <motion.div 
                                                             initial={{ width: 0 }}
                                                             animate={{ width: `${activeSector.investment_velocity * 100}%` }}
@@ -166,7 +166,7 @@ export const SectorMesh: React.FC = () => {
                                                 { label: 'Occupancy', val: activeSector.occupancy, icon: Activity },
                                                 { label: 'Infrastructure', val: activeSector.distance, icon: Route }
                                             ].map((m, i) => (
-                                                <div key={i} className="bg-white/5 p-6 rounded-3xl border border-white/5 flex flex-col items-center gap-3">
+                                                <div key={i} className="bg-[#151822] border border-white/10/5 p-6 rounded-3xl border border-white/5 flex flex-col items-center gap-3">
                                                     <m.icon size={20} className="text-accent/60" />
                                                     <span className="text-[9px] font-bold text-white/20 tracking-tight font-medium">{m.label}</span>
                                                     <span className="text-sm font-bold text-white text-center">{m.val}</span>
@@ -174,7 +174,7 @@ export const SectorMesh: React.FC = () => {
                                             ))}
                                         </div>
 
-                                        <Link to={`/projects/${activeSector.slug}`} className="inline-flex items-center gap-4 bg-accent text-secondary px-10 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-2xl">
+                                        <Link to={`/projects/${activeSector.slug}`} className="inline-flex items-center gap-4 bg-accent text-white px-10 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-2xl">
                                             Access Project Monograph <Zap size={18} />
                                         </Link>
                                     </div>
@@ -202,7 +202,7 @@ export const SectorMesh: React.FC = () => {
 
                     {/* Infrastructure Spines v6.5 */}
                     <div className="lg:col-span-1 space-y-12">
-                        <div className="bg-white/5 backdrop-blur-3xl rounded-[3.5rem] p-10 border border-white/10 shadow-2xl group">
+                        <div className="bg-[#151822] border border-white/10/5 backdrop-blur-3xl rounded-[3.5rem] p-10 border border-white/10 shadow-2xl group">
                             <div className="flex items-center gap-4 mb-12">
                                 <Zap size={24} className="text-blue-400 animate-pulse" />
                                 <h3 className="font-bold text-white tracking-tight font-semibold text-[11px]">Infrastructure Backbones</h3>
@@ -212,7 +212,7 @@ export const SectorMesh: React.FC = () => {
                                     <li key={a.id}>
                                         <Link to={`/location/${a.slug}`} className="flex items-center justify-between group/link">
                                             <span className="text-gray-400 group-hover/link:text-blue-400 text-lg font-bold transition-all tracking-tight">{a.name}</span>
-                                            <div className="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-white/20 group-hover/link:text-blue-400 group-hover/link:border-blue-400/50 transition-all">
+                                            <div className="w-10 h-10 bg-[#151822] border border-white/10/5 border border-white/10 rounded-xl flex items-center justify-center text-white/20 group-hover/link:text-blue-400 group-hover/link:border-blue-400/50 transition-all">
                                                 <Route size={18} />
                                             </div>
                                         </Link>
@@ -221,7 +221,7 @@ export const SectorMesh: React.FC = () => {
                             </ul>
                         </div>
                         
-                        <div className="bg-secondary p-10 rounded-[3rem] border border-accent/20 shadow-2xl relative overflow-hidden group">
+                        <div className="bg-[#0B0D14] p-10 rounded-[3rem] border border-accent/20 shadow-2xl relative overflow-hidden group">
                             <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform">
                                 <ShieldCheck size={80} />
                             </div>

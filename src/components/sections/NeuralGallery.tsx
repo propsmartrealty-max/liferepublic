@@ -68,14 +68,14 @@ export const NeuralGallery: React.FC<NeuralGalleryProps> = ({ images, title }) =
                 <div className={`absolute inset-0 bg-gradient-to-t ${overlayStyles[mode]} pointer-events-none transition-all duration-1000`} />
 
                 {/* Atmospheric Controls */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 p-2 bg-white/10 backdrop-blur-2xl rounded-full border border-white/20 shadow-xl z-20">
+                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 p-2 bg-[#151822] border border-white/10/10 backdrop-blur-2xl rounded-full border border-white/20 shadow-xl z-20">
                     {modes.map((m) => (
                         <button
                             key={m.id}
                             onClick={() => setMode(m.id as any)}
                             className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-500 ${
                                 mode === m.id 
-                                ? 'bg-white text-secondary shadow-lg' 
+                                ? 'bg-white text-white shadow-lg' 
                                 : 'text-white hover:bg-white/10'
                             }`}
                         >
@@ -98,7 +98,7 @@ export const NeuralGallery: React.FC<NeuralGalleryProps> = ({ images, title }) =
 
             {/* Reflection Layer */}
             <div className="mt-8 text-center">
-                <h4 className="text-secondary font-serif font-bold text-2xl mb-2">{title}</h4>
+                <h4 className="text-white font-serif font-bold text-2xl mb-2">{title}</h4>
                 <p className="text-gray-400 text-xs tracking-tight font-semibold">Experience the Tectonic Flow</p>
             </div>
         </div>

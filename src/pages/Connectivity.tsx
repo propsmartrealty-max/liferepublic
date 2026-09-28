@@ -23,7 +23,7 @@ export const Connectivity: React.FC = () => {
     ];
 
     return (
-        <div className="bg-white">
+        <div className="bg-transparent">
             <SEO 
                 title="Connectivity & Metro 2026 Roadmap | Life Republic Hinjewadi"
                 description="Experience the Sovereign Transit advantage. 150ft wide spine road, direct access to Hinjewadi Metro Line 3 (Operational 2026), and 10-minute commute to IT clusters."
@@ -31,7 +31,7 @@ export const Connectivity: React.FC = () => {
             />
 
             {/* Hero Section */}
-            <section className="relative py-32 bg-secondary overflow-hidden">
+            <section className="relative py-32 bg-[#0B0D14] overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/aerial-night.png')] bg-cover bg-center opacity-10 grayscale"></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
@@ -54,29 +54,29 @@ export const Connectivity: React.FC = () => {
             </section>
 
             {/* Metro 2026 Roadmap */}
-            <section className="py-24 bg-gray-50 overflow-hidden">
+            <section className="py-24 bg-[#1A1C23] overflow-hidden">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
                         <div className="lg:w-1/2">
-                            <h2 className="text-4xl md:text-5xl font-serif font-bold text-secondary mb-8">Metro Line 3 <br /> <span className="text-accent italic">The Value Catalyst.</span></h2>
+                            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-8">Metro Line 3 <br /> <span className="text-accent italic">The Value Catalyst.</span></h2>
                             <div className="space-y-8">
                                 {metroTimeline.map((item, idx) => (
                                     <div key={idx} className="flex gap-6 relative group">
                                         {idx !== metroTimeline.length - 1 && (
                                             <div className="absolute left-[27px] top-12 bottom-0 w-px bg-gray-200 group-hover:bg-accent transition-colors"></div>
                                         )}
-                                        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 border transition-all ${item.status === 'Active' ? 'bg-secondary text-white border-secondary' : 'bg-white text-gray-400 border-gray-100'}`}>
+                                        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 border transition-all ${item.status === 'Active' ? 'bg-[#0B0D14] text-white border-secondary' : 'bg-white text-gray-400 border-white/5'}`}>
                                             <span className="font-bold text-sm">{item.phase}</span>
                                         </div>
                                         <div className="pt-2">
-                                            <h4 className="font-bold text-secondary text-lg mb-1">{item.milestone}</h4>
+                                            <h4 className="font-bold text-white text-lg mb-1">{item.milestone}</h4>
                                             <span className={`text-[10px] font-bold tracking-tight font-medium ${item.status === 'Active' ? 'text-green-500' : 'text-accent'}`}>{item.status} Status</span>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className="lg:w-1/2 bg-secondary p-12 rounded-[3.5rem] text-white shadow-2xl relative overflow-hidden">
+                        <div className="lg:w-1/2 bg-[#0B0D14] p-12 rounded-[3.5rem] text-white shadow-2xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[100px]"></div>
                             <div className="relative z-10">
                                 <Zap size={48} className="text-accent mb-8 animate-pulse" />
@@ -84,12 +84,12 @@ export const Connectivity: React.FC = () => {
                                 <p className="text-gray-400 text-lg leading-relaxed mb-8">
                                     Property values within a 1.5km radius of Metro Stations have historically seen a **25-40% premium**. Life Republic's gate is situated 1.2km from the upcoming Phase 3 station.
                                 </p>
-                                <div className="p-6 bg-white/5 rounded-3xl border border-white/10">
+                                <div className="p-6 bg-[#151822] border border-white/10/5 rounded-3xl border border-white/10">
                                     <div className="flex justify-between items-center mb-4">
                                         <span className="text-xs font-bold text-gray-400 uppercase">Station Access</span>
                                         <span className="text-accent font-bold">1.2 KM</span>
                                     </div>
-                                    <div className="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
+                                    <div className="w-full h-1.5 bg-[#151822] border border-white/10/10 rounded-full overflow-hidden">
                                         <motion.div initial={{ width: 0 }} whileInView={{ width: "90%" }} className="h-full bg-accent" />
                                     </div>
                                 </div>
@@ -104,22 +104,22 @@ export const Connectivity: React.FC = () => {
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
                         <div>
-                            <h2 className="text-4xl md:text-6xl font-serif font-bold text-secondary mb-4">The Transit Matrix.</h2>
+                            <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-4">The Transit Matrix.</h2>
                             <p className="text-gray-500 text-xl font-medium">Real-time travel synthesis for the 2026 infrastructure roadmap.</p>
                         </div>
-                        <div className="flex items-center gap-4 bg-gray-50 p-3 rounded-2xl border border-gray-100 shadow-sm">
+                        <div className="flex items-center gap-4 bg-[#1A1C23] p-3 rounded-2xl border border-white/5 shadow-sm">
                             <div className="flex items-center gap-2">
                                 <Clock size={16} className={!isPeakHour ? 'text-green-500' : 'text-gray-300'} />
-                                <span className={`text-[10px] font-bold tracking-tight font-medium transition-colors ${!isPeakHour ? 'text-secondary' : 'text-gray-400'}`}>Normal</span>
+                                <span className={`text-[10px] font-bold tracking-tight font-medium transition-colors ${!isPeakHour ? 'text-white' : 'text-gray-400'}`}>Normal</span>
                             </div>
                             <button 
                                 onClick={() => setIsPeakHour(!isPeakHour)}
-                                className={`w-12 h-6 rounded-full relative transition-all duration-500 ${isPeakHour ? 'bg-accent' : 'bg-secondary'}`}
+                                className={`w-12 h-6 rounded-full relative transition-all duration-500 ${isPeakHour ? 'bg-accent' : 'bg-[#0B0D14]'}`}
                             >
-                                <motion.div animate={{ x: isPeakHour ? 26 : 4 }} className="absolute top-1 w-4 h-4 bg-white rounded-full shadow-lg" />
+                                <motion.div animate={{ x: isPeakHour ? 26 : 4 }} className="absolute top-1 w-4 h-4 bg-[#151822] border border-white/10 rounded-full shadow-lg" />
                             </button>
                             <div className="flex items-center gap-2">
-                                <span className={`text-[10px] font-bold tracking-tight font-medium transition-colors ${isPeakHour ? 'text-secondary' : 'text-gray-400'}`}>Peak</span>
+                                <span className={`text-[10px] font-bold tracking-tight font-medium transition-colors ${isPeakHour ? 'text-white' : 'text-gray-400'}`}>Peak</span>
                                 <Zap size={16} className={isPeakHour ? 'text-accent' : 'text-gray-300'} />
                             </div>
                         </div>
@@ -132,21 +132,21 @@ export const Connectivity: React.FC = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: idx * 0.05 }}
-                                className="p-10 rounded-[2.5rem] border border-gray-100 bg-white hover:border-accent hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all group"
+                                className="p-10 rounded-[2.5rem] border border-white/5 bg-[#151822] border border-white/10 hover:border-accent hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all group"
                             >
                                 <div className="flex justify-between items-center mb-8">
                                     <span className="text-[10px] font-bold text-accent tracking-tight font-semibold">{landmark.type}</span>
-                                    <div className="px-3 py-1 bg-gray-50 rounded-full text-[10px] font-bold text-secondary border border-gray-100">{landmark.impact}</div>
+                                    <div className="px-3 py-1 bg-[#1A1C23] rounded-full text-[10px] font-bold text-white border border-white/5">{landmark.impact}</div>
                                 </div>
-                                <h4 className="text-2xl font-serif font-bold text-secondary mb-6 group-hover:text-accent transition-colors">{landmark.name}</h4>
+                                <h4 className="text-2xl font-serif font-bold text-white mb-6 group-hover:text-accent transition-colors">{landmark.name}</h4>
                                 <div className="space-y-4">
                                     <div className="flex justify-between text-sm">
                                         <span className="text-gray-400 font-medium tracking-tight font-medium text-[10px]">Distance</span>
-                                        <span className="font-bold text-secondary">{landmark.distance}</span>
+                                        <span className="font-bold text-white">{landmark.distance}</span>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <span className="text-gray-400 font-medium tracking-tight font-medium text-[10px]">Est. Time</span>
-                                        <span className={`text-2xl font-serif font-bold ${isPeakHour ? 'text-accent' : 'text-secondary'}`}>
+                                        <span className={`text-2xl font-serif font-bold ${isPeakHour ? 'text-accent' : 'text-white'}`}>
                                             {isPeakHour ? landmark.peak : landmark.offPeak}
                                         </span>
                                     </div>
@@ -160,7 +160,7 @@ export const Connectivity: React.FC = () => {
             <SectorComparison />
 
             {/* CTA */}
-            <section className="py-32 bg-secondary relative overflow-hidden">
+            <section className="py-32 bg-[#0B0D14] relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/aerial-night.png')] bg-cover bg-center opacity-10"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-8">Synthesize Your Commute.</h2>
@@ -169,7 +169,7 @@ export const Connectivity: React.FC = () => {
                     </p>
                     <a 
                         href="/contact" 
-                        className="inline-flex items-center gap-4 bg-white text-secondary px-12 py-6 rounded-full font-bold text-lg hover:bg-accent transition-all hover:scale-105 shadow-2xl"
+                        className="inline-flex items-center gap-4 bg-[#151822] border border-white/10 text-white px-12 py-6 rounded-full font-bold text-lg hover:bg-accent transition-all hover:scale-105 shadow-2xl"
                     >
                         Schedule a Sovereign Tour
                         <ArrowRight size={20} />

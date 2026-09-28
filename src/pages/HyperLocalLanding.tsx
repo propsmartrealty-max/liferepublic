@@ -38,7 +38,7 @@ export const HyperLocalLanding: React.FC = () => {
     );
 
     return (
-        <div className="pt-32 pb-20 bg-white">
+        <div className="pt-32 pb-20 bg-transparent">
             <SEO 
                 title={config.title}
                 description={config.description}
@@ -57,7 +57,7 @@ export const HyperLocalLanding: React.FC = () => {
                         >
                             <Target size={14} /> Market Intelligence Report 2026
                         </motion.div>
-                        <h1 className="text-5xl md:text-7xl font-serif font-bold text-secondary mb-10 leading-[1.1]">
+                        <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-10 leading-[1.1]">
                             {config.title.split('|')[0]}
                         </h1>
                         <p className="text-gray-500 text-xl font-light leading-relaxed max-w-2xl mb-12">
@@ -70,17 +70,17 @@ export const HyperLocalLanding: React.FC = () => {
                     </div>
 
                     <div className="lg:w-1/3 grid grid-cols-1 gap-6">
-                        <div className="bg-gray-50 p-8 rounded-[2rem] border border-gray-100">
+                        <div className="bg-[#1A1C23] p-8 rounded-[2rem] border border-white/5">
                             <div className="flex items-center justify-between mb-4">
                                 <span className="text-[10px] font-bold tracking-tight font-medium text-gray-400">Infra Score</span>
                                 <Zap size={16} className="text-accent" />
                             </div>
-                            <div className="text-4xl font-serif font-bold text-secondary">{config.infraScore}/100</div>
+                            <div className="text-4xl font-serif font-bold text-white">{config.infraScore}/100</div>
                             <div className="w-full h-1 bg-gray-200 mt-4 rounded-full overflow-hidden">
                                 <div className="h-full bg-accent" style={{ width: `${config.infraScore}%` }}></div>
                             </div>
                         </div>
-                        <div className="bg-secondary p-8 rounded-[2rem] text-white">
+                        <div className="bg-[#0B0D14] p-8 rounded-[2rem] text-white">
                             <div className="flex items-center justify-between mb-4">
                                 <span className="text-[10px] font-bold tracking-tight font-medium text-white/40">Rental Yield</span>
                                 <TrendingUp size={16} className="text-accent" />
@@ -94,27 +94,27 @@ export const HyperLocalLanding: React.FC = () => {
                 {/* Intelligence Matrix */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-40">
                     <div className="space-y-6">
-                        <div className="w-12 h-12 bg-primary/20 rounded-2xl flex items-center justify-center text-accent">
+                        <div className="w-12 h-12 bg-[#E5C07B]/20 rounded-2xl flex items-center justify-center text-accent">
                             <Clock size={20} />
                         </div>
-                        <h3 className="text-xl font-serif font-bold text-secondary">Velocity Matrix</h3>
+                        <h3 className="text-xl font-serif font-bold text-white">Velocity Matrix</h3>
                         <div className="space-y-4">
-                            <div className="flex justify-between border-b border-gray-100 pb-2">
+                            <div className="flex justify-between border-b border-white/5 pb-2">
                                 <span className="text-gray-500 text-sm">Hinjewadi Phase 1</span>
-                                <span className="font-bold text-secondary">{config.commutePhase1}</span>
+                                <span className="font-bold text-white">{config.commutePhase1}</span>
                             </div>
-                            <div className="flex justify-between border-b border-gray-100 pb-2">
+                            <div className="flex justify-between border-b border-white/5 pb-2">
                                 <span className="text-gray-500 text-sm">Mumbai-Pune Expy</span>
-                                <span className="font-bold text-secondary">12 mins</span>
+                                <span className="font-bold text-white">12 mins</span>
                             </div>
                         </div>
                     </div>
 
                     <div className="space-y-6">
-                        <div className="w-12 h-12 bg-primary/20 rounded-2xl flex items-center justify-center text-accent">
+                        <div className="w-12 h-12 bg-[#E5C07B]/20 rounded-2xl flex items-center justify-center text-accent">
                             <Shield size={20} />
                         </div>
-                        <h3 className="text-xl font-serif font-bold text-secondary">Sovereign Safety</h3>
+                        <h3 className="text-xl font-serif font-bold text-white">Sovereign Safety</h3>
                         <ul className="space-y-3">
                             {config.highlights.map((h, i) => (
                                 <li key={i} className="flex gap-2 text-sm text-gray-500">
@@ -140,7 +140,7 @@ export const HyperLocalLanding: React.FC = () => {
                 {/* Relevant Projects Section */}
                 <div className="mb-32">
                     <div className="flex items-end justify-between mb-16">
-                        <h2 className="text-4xl font-serif font-bold text-secondary">Matching Inventory</h2>
+                        <h2 className="text-4xl font-serif font-bold text-white">Matching Inventory</h2>
                         <Link to="/projects" className="text-accent font-bold border-b border-accent/20 pb-1">View All Sectors</Link>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

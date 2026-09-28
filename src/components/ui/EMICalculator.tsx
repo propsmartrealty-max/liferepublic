@@ -24,14 +24,14 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
     }, [emi, tenure, amount]);
 
     return (
-        <div className="bg-white rounded-[2.5rem] border border-gray-100 shadow-2xl overflow-hidden">
+        <div className="bg-[#151822] border border-white/10 rounded-[2.5rem] border border-white/5 shadow-2xl overflow-hidden">
             <div className="p-8 md:p-12">
                 <div className="flex items-center gap-3 mb-10">
                     <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center text-accent">
                         <Calculator size={20} />
                     </div>
                     <div>
-                        <h3 className="text-2xl font-serif font-bold text-secondary">Financial Planner</h3>
+                        <h3 className="text-2xl font-serif font-bold text-white">Financial Planner</h3>
                         <p className="text-gray-400 text-xs tracking-tight font-medium font-bold">Life Republic Investment Hub</p>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
                     <div className="space-y-10">
                         <div className="space-y-4">
                             <div className="flex justify-between items-end">
-                                <label className="text-sm font-bold text-secondary tracking-tight font-medium">Loan Amount</label>
+                                <label className="text-sm font-bold text-white tracking-tight font-medium">Loan Amount</label>
                                 <span className="text-lg font-bold text-accent">₹{(amount / 100000).toFixed(2)} Lakhs</span>
                             </div>
                             <input 
@@ -51,13 +51,13 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
                                 step={100000}
                                 value={amount} 
                                 onChange={(e) => setAmount(Number(e.target.value))}
-                                className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-accent"
+                                className="w-full h-1.5 bg-[#151822] rounded-lg appearance-none cursor-pointer accent-accent"
                             />
                         </div>
 
                         <div className="space-y-4">
                             <div className="flex justify-between items-end">
-                                <label className="text-sm font-bold text-secondary tracking-tight font-medium">Tenure (Years)</label>
+                                <label className="text-sm font-bold text-white tracking-tight font-medium">Tenure (Years)</label>
                                 <span className="text-lg font-bold text-accent">{tenure} Yrs</span>
                             </div>
                             <input 
@@ -67,13 +67,13 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
                                 step={1}
                                 value={tenure} 
                                 onChange={(e) => setTenure(Number(e.target.value))}
-                                className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-accent"
+                                className="w-full h-1.5 bg-[#151822] rounded-lg appearance-none cursor-pointer accent-accent"
                             />
                         </div>
 
                         <div className="space-y-4">
                             <div className="flex justify-between items-end">
-                                <label className="text-sm font-bold text-secondary tracking-tight font-medium">Interest Rate (%)</label>
+                                <label className="text-sm font-bold text-white tracking-tight font-medium">Interest Rate (%)</label>
                                 <span className="text-lg font-bold text-accent">{rate}%</span>
                             </div>
                             <input 
@@ -83,14 +83,14 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
                                 step={0.1}
                                 value={rate} 
                                 onChange={(e) => setRate(Number(e.target.value))}
-                                className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-accent"
+                                className="w-full h-1.5 bg-[#151822] rounded-lg appearance-none cursor-pointer accent-accent"
                             />
                         </div>
                     </div>
 
                     {/* Results Display */}
-                    <div className="bg-secondary rounded-[2rem] p-10 text-white relative overflow-hidden flex flex-col justify-between">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+                    <div className="bg-[#0B0D14] rounded-[2rem] p-10 text-white relative overflow-hidden flex flex-col justify-between">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#151822] border border-white/10/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
                         
                         <div>
                             <span className="text-white/40 text-[10px] font-bold tracking-tight font-semibold block mb-4">Estimated Monthly Installment</span>
@@ -115,7 +115,7 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
                 </div>
             </div>
 
-            <div className="bg-gray-50 p-6 flex items-center gap-3 border-t border-gray-100">
+            <div className="bg-[#1A1C23] p-6 flex items-center gap-3 border-t border-white/5">
                 <Info size={14} className="text-gray-400" />
                 <p className="text-[10px] text-gray-400 font-medium">
                     *Estimates are indicative. Actual bank rates may vary based on credit score and bank policy.

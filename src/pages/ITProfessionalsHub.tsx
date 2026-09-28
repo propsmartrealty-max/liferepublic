@@ -16,7 +16,7 @@ export const ITProfessionalsHub: React.FC = () => {
             />
 
             {/* Hero Section */}
-            <section className="relative h-[80vh] flex items-center bg-primary-dark overflow-hidden">
+            <section className="relative h-[80vh] flex items-center bg-[#0B0D14] overflow-hidden">
                 <div className="absolute inset-0">
                     <img loading="lazy" src="/images/projects/atmos/Atmos-1.jpg" alt="Life Republic Aerial View" className="w-full h-full object-cover opacity-40" />
                     <div className="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary-dark/80 to-transparent" />
@@ -48,11 +48,11 @@ export const ITProfessionalsHub: React.FC = () => {
             </section>
 
             {/* Strategic Advantage */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-[#0B0D14]">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="text-center mb-16">
                         <span className="text-[10px] font-bold text-accent tracking-tight font-semibold block mb-4">Strategic Location</span>
-                        <h2 className="text-4xl md:text-6xl font-serif font-bold text-secondary tracking-tighter">Minutes from <br /><span className="text-accent italic">Innovation.</span></h2>
+                        <h2 className="text-4xl md:text-6xl font-serif font-bold text-white tracking-tighter">Minutes from <br /><span className="text-accent italic">Innovation.</span></h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -67,13 +67,13 @@ export const ITProfessionalsHub: React.FC = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 hover:shadow-2xl hover:bg-white transition-all duration-300 group"
+                                className="p-8 bg-[#1A1C23] rounded-[2.5rem] border border-white/5 hover:shadow-2xl hover:bg-[#151822] border border-white/10 transition-all duration-300 group"
                             >
-                                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-accent shadow-lg group-hover:bg-accent group-hover:text-white transition-colors mb-8">
+                                <div className="w-16 h-16 bg-[#151822] border border-white/10 rounded-2xl flex items-center justify-center text-accent shadow-lg group-hover:bg-accent group-hover:text-white transition-colors mb-8">
                                     <item.icon size={28} />
                                 </div>
-                                <h3 className="text-4xl font-serif font-bold text-secondary mb-2">{item.time}</h3>
-                                <p className="text-lg font-bold text-primary-dark mb-2">{item.location}</p>
+                                <h3 className="text-4xl font-serif font-bold text-white mb-2">{item.time}</h3>
+                                <p className="text-lg font-bold text-[#E5C07B] mb-2">{item.location}</p>
                                 <p className="text-sm text-gray-500 font-medium">{item.desc}</p>
                             </motion.div>
                         ))}
@@ -82,7 +82,7 @@ export const ITProfessionalsHub: React.FC = () => {
             </section>
 
             {/* Tech-Enabled Living */}
-            <section className="py-24 bg-secondary text-white rounded-[4rem] mx-4 lg:mx-12 overflow-hidden relative">
+            <section className="py-24 bg-[#0B0D14] text-white rounded-[4rem] mx-4 lg:mx-12 overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
@@ -119,9 +119,9 @@ export const ITProfessionalsHub: React.FC = () => {
             </section>
 
             {/* Call to Action */}
-            <section className="py-24 bg-white text-center">
+            <section className="py-24 bg-[#0B0D14] text-center">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-secondary mb-8">Ready to upgrade your lifestyle?</h2>
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8">Ready to upgrade your lifestyle?</h2>
                     <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto font-medium">
                         Join thousands of IT professionals who have already made Life Republic their home.
                     </p>

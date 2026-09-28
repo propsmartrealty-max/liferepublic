@@ -14,7 +14,7 @@ export const Concierge: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={toggleEnquiry}
-                className="flex items-center gap-2 px-6 py-4 rounded-full shadow-2xl transition-all relative bg-secondary text-white"
+                className="flex items-center gap-2 px-6 py-4 rounded-full shadow-2xl transition-all relative bg-[#0B0D14] text-white"
             >
                 <Sparkles size={24} />
                 <span className="font-bold tracking-wide">ASSIST</span>

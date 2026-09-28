@@ -45,10 +45,10 @@ export const ProjectComparison: React.FC = () => {
     if (loading) return <div className="py-24 text-center">Loading comparisons...</div>;
 
     return (
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-[#0B0D14]">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-serif font-bold text-secondary mb-4">Sovereign Project Comparison Hub</h2>
+                    <h2 className="text-4xl font-serif font-bold text-white mb-4">Sovereign Project Comparison Hub</h2>
                     <p className="text-gray-500 max-w-2xl mx-auto">Select up to 3 projects to compare configurations, amenities, and investment potential side-by-side.</p>
                 </div>
 
@@ -60,8 +60,8 @@ export const ProjectComparison: React.FC = () => {
                             onClick={() => toggleProject(p.id)}
                             className={`px-4 py-2 rounded-full text-xs font-bold transition-all border ${
                                 selectedIds.includes(p.id)
-                                    ? 'bg-secondary text-white border-secondary shadow-lg'
-                                    : 'bg-white text-gray-400 border-gray-100 hover:border-accent'
+                                    ? 'bg-[#0B0D14] text-white border-secondary shadow-lg'
+                                    : 'bg-white text-gray-400 border-white/5 hover:border-accent'
                             }`}
                         >
                             {p.title}
@@ -79,7 +79,7 @@ export const ProjectComparison: React.FC = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0.95 }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="bg-gray-50 rounded-[2.5rem] border border-gray-100 overflow-hidden group hover:shadow-2xl transition-all"
+                                className="bg-[#1A1C23] rounded-[2.5rem] border border-white/5 overflow-hidden group hover:shadow-2xl transition-all"
                             >
                                 <div className="relative h-48">
                                     <img loading="lazy" src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
@@ -90,9 +90,9 @@ export const ProjectComparison: React.FC = () => {
                                 </div>
 
                                 <div className="p-8 space-y-6">
-                                    <div className="flex justify-between items-center text-sm border-b border-gray-200 pb-4">
+                                    <div className="flex justify-between items-center text-sm border-b border-white/10 pb-4">
                                         <span className="text-gray-400 uppercase font-bold tracking-tighter">Starting Price</span>
-                                        <span className="text-secondary font-bold flex items-center gap-1">
+                                        <span className="text-white font-bold flex items-center gap-1">
                                             <IndianRupee size={14} /> {p.price}
                                         </span>
                                     </div>
@@ -106,7 +106,7 @@ export const ProjectComparison: React.FC = () => {
                                         ))}
                                     </div>
 
-                                    <div className="space-y-4 pt-4 border-t border-gray-200">
+                                    <div className="space-y-4 pt-4 border-t border-white/10">
                                         <div className="text-[10px] text-gray-400 font-bold tracking-tight font-medium">Investment Rating</div>
                                         <div className="flex gap-1">
                                             {[...Array(5)].map((_, i) => (
@@ -130,8 +130,8 @@ export const ProjectComparison: React.FC = () => {
 
                     {/* Empty Slots */}
                     {[...Array(3 - comparedProjects.length)].map((_, i) => (
-                        <div key={`empty-${i}`} className="hidden md:flex flex-col items-center justify-center border-2 border-dashed border-gray-200 rounded-[2.5rem] bg-gray-50/50 p-12 text-center">
-                            <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-gray-200 mb-4">
+                        <div key={`empty-${i}`} className="hidden md:flex flex-col items-center justify-center border-2 border-dashed border-white/10 rounded-[2.5rem] bg-[#1A1C23]/50 p-12 text-center">
+                            <div className="w-16 h-16 bg-[#151822] border border-white/10 rounded-2xl flex items-center justify-center text-gray-200 mb-4">
                                 <Home size={32} />
                             </div>
                             <h4 className="text-gray-400 font-bold mb-2">Compare Another Project</h4>

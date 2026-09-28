@@ -23,14 +23,14 @@ export const NRIInvestment: React.FC = () => {
             <Breadcrumbs />
             
             {/* Hero Section */}
-            <section className="relative py-24 bg-white overflow-hidden">
+            <section className="relative py-24 bg-[#0B0D14] overflow-hidden">
                 <div className="container mx-auto px-4 relative">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
                             <motion.span
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                className="text-secondary font-bold tracking-widest uppercase text-sm flex items-center gap-2 mb-4"
+                                className="text-white font-bold tracking-widest uppercase text-sm flex items-center gap-2 mb-4"
                             >
                                 <Plane size={16} /> Global Investor Portfolio
                             </motion.span>
@@ -38,7 +38,7 @@ export const NRIInvestment: React.FC = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.1 }}
-                                className="text-4xl md:text-6xl font-serif font-bold text-secondary mb-6 leading-tight"
+                                className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight"
                             >
                                 The NRI Gateway to <br />
                                 <span className="text-accent underline-offset-8 underline decoration-double">Pune Real Estate</span>
@@ -48,7 +48,7 @@ export const NRIInvestment: React.FC = () => {
                             </p>
                             <div className="flex gap-4">
                                 <Button size="lg" className="rounded-full px-12">Download Investor Kit</Button>
-                                <Button variant="outline" size="lg" className="rounded-full px-12 border-gray-200">Talk to NRI Desk</Button>
+                                <Button variant="outline" size="lg" className="rounded-full px-12 border-white/10">Talk to NRI Desk</Button>
                             </div>
                         </div>
                         <div className="relative">
@@ -64,16 +64,16 @@ export const NRIInvestment: React.FC = () => {
             </section>
 
             {/* Stats Summary from investmentStats */}
-            <section className="py-12 bg-gray-50 border-y border-gray-100">
+            <section className="py-12 bg-[#1A1C23] border-y border-white/5">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {investmentStats.map((stat, idx) => (
                             <div key={idx} className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-accent">
+                                <div className="w-12 h-12 bg-[#151822] border border-white/10 rounded-xl shadow-sm flex items-center justify-center text-accent">
                                     <stat.icon size={24} />
                                 </div>
                                 <div>
-                                    <div className="text-xl font-bold text-secondary">{stat.value}</div>
+                                    <div className="text-xl font-bold text-white">{stat.value}</div>
                                     <div className="text-xs text-gray-500 tracking-tight font-medium font-bold">{stat.label}</div>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@ export const NRIInvestment: React.FC = () => {
             </section>
 
             {/* Why Invest Section */}
-            <section className="py-24 bg-secondary">
+            <section className="py-24 bg-[#0B0D14]">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-20">
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Why Choice Life Republic?</h2>
@@ -91,22 +91,22 @@ export const NRIInvestment: React.FC = () => {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         <div className="text-center group">
-                            <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-accent group-hover:border-accent transition-all duration-500">
-                                <DollarSign size={32} className="text-accent group-hover:text-secondary transition-colors" />
+                            <div className="w-20 h-20 bg-[#151822] border border-white/10/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-accent group-hover:border-accent transition-all duration-500">
+                                <DollarSign size={32} className="text-accent group-hover:text-white transition-colors" />
                             </div>
                             <h3 className="text-2xl font-bold text-white mb-4">Capital Appreciation</h3>
                             <p className="text-gray-400">Hinjewadi real estate has consistently outperformed other Pune micro-markets over the last decade.</p>
                         </div>
                         <div className="text-center group">
-                            <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-accent group-hover:border-accent transition-all duration-500">
-                                <PieChart size={32} className="text-accent group-hover:text-secondary transition-colors" />
+                            <div className="w-20 h-20 bg-[#151822] border border-white/10/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-accent group-hover:border-accent transition-all duration-500">
+                                <PieChart size={32} className="text-accent group-hover:text-white transition-colors" />
                             </div>
                             <h3 className="text-2xl font-bold text-white mb-4">Rental Yield</h3>
                             <p className="text-gray-400">Proximity to IT Phase 1, 2, and 3 ensures a robust tenant pool from top-tier tech firms.</p>
                         </div>
                         <div className="text-center group">
-                            <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-accent group-hover:border-accent transition-all duration-500">
-                                <ShieldCheck size={32} className="text-accent group-hover:text-secondary transition-colors" />
+                            <div className="w-20 h-20 bg-[#151822] border border-white/10/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-accent group-hover:border-accent transition-all duration-500">
+                                <ShieldCheck size={32} className="text-accent group-hover:text-white transition-colors" />
                             </div>
                             <h3 className="text-2xl font-bold text-white mb-4">RERA Verification</h3>
                             <p className="text-gray-400">Every cluster at Life Republic is RERA certified, giving global investors peace of mind and total transparency.</p>
@@ -116,11 +116,11 @@ export const NRIInvestment: React.FC = () => {
             </section>
 
             {/* NRI Services Desk */}
-            <section className="py-24 bg-gray-50">
+            <section className="py-24 bg-[#1A1C23]">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto rounded-3xl bg-white shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                    <div className="max-w-4xl mx-auto rounded-3xl bg-[#151822] border border-white/10 shadow-2xl overflow-hidden flex flex-col md:flex-row">
                         <div className="p-12 md:w-1/2">
-                            <h2 className="text-3xl font-serif font-bold text-secondary mb-6">Dedicated NRI Support</h2>
+                            <h2 className="text-3xl font-serif font-bold text-white mb-6">Dedicated NRI Support</h2>
                             <ul className="space-y-4 mb-8">
                                 <li className="flex items-center gap-3 text-gray-600">
                                     <div className="w-2 h-2 bg-accent rounded-full"></div> Virtual Site Tours
@@ -140,8 +140,8 @@ export const NRIInvestment: React.FC = () => {
                         <div className="md:w-1/2 bg-accent/10 p-12 flex items-center justify-center">
                             <div className="text-center">
                                 <Globe size={80} className="text-accent mx-auto mb-6 opacity-50" />
-                                <div className="text-4xl font-serif font-bold text-secondary mb-2">2500+</div>
-                                <div className="text-secondary/60 tracking-tight font-medium text-sm font-bold">NRI Families Onboarded</div>
+                                <div className="text-4xl font-serif font-bold text-white mb-2">2500+</div>
+                                <div className="text-white/60 tracking-tight font-medium text-sm font-bold">NRI Families Onboarded</div>
                             </div>
                         </div>
                     </div>

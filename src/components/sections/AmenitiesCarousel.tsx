@@ -60,14 +60,14 @@ export const AmenitiesCarousel: React.FC = () => {
     if (loading) return null; // Or a spinner
 
     return (
-        <section className="py-24 bg-primary overflow-hidden">
+        <section className="py-24 bg-[#E5C07B] overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="text-4xl lg:text-5xl font-serif font-bold mb-4 text-secondary"
+                        className="text-4xl lg:text-5xl font-serif font-bold mb-4 text-white"
                     >
                         World-Class Amenities
                     </motion.h2>
@@ -108,7 +108,7 @@ export const AmenitiesCarousel: React.FC = () => {
                 >
                     {displayAmenities.map((item, index) => (
                         <SwiperSlide key={index}>
-                            <div className="group relative h-[400px] rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                            <div className="group relative h-[400px] rounded-2xl overflow-hidden shadow-lg border border-white/5">
                                 <img
                                     src={item.image_url}
                                     alt={item.title}
