@@ -76,7 +76,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                     rotateY,
                     transformStyle: "preserve-3d"
                 }}
-                className="relative overflow-hidden rounded-[24px] bg-black border border-white/10 h-[550px] w-full flex flex-col justify-end transition-shadow duration-700 hover:border-white/30 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] group"
+                className="relative overflow-hidden rounded-[24px] bg-black border border-white/10 h-[550px] w-full flex flex-col justify-end transition-shadow duration-700 hover:border-white/30 hover:glow-rainbow hover:border-transparent group"
             >
                 {/* Background Image with Parallax/Zoom */}
                 <div className="absolute inset-0 z-0" style={{ transform: "translateZ(-20px)" }}>
@@ -129,7 +129,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                             <p className="text-white/40 text-[10px] tracking-widest uppercase mb-1">Starting at</p>
                             <p className="text-white text-lg font-medium">{displayPrice}</p>
                         </div>
-                        <div className="flex items-center gap-2 text-white opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700 delay-150">
+                        <div className="flex items-center gap-2 text-white opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700 delay-150 group-hover:text-rainbow">
                             <span className="text-xs uppercase tracking-widest font-medium">Explore</span>
                             <span className="material-symbol text-sm">arrow_forward</span>
                         </div>

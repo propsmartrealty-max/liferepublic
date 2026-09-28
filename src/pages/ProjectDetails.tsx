@@ -78,7 +78,7 @@ const ProjectDetails: React.FC = () => {
                                         <div className="text-2xl text-white mb-6">{config.price}</div>
                                         <button 
                                             onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: project.name, type: config.type } }))}
-                                            className="w-full py-3 border border-white/20 rounded-full text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors"
+                                            className="w-full py-3 border border-white/20 rounded-full text-sm uppercase tracking-widest bg-rainbow-hover hover:border-transparent transition-colors"
                                         >
                                             Request Floor Plan
                                         </button>
@@ -129,7 +129,7 @@ const ProjectDetails: React.FC = () => {
 
                             <button 
                                 onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}
-                                className="w-full mt-8 py-4 bg-white text-black rounded-full text-sm font-bold uppercase tracking-widest hover:bg-white/90 transition-colors"
+                                className="w-full mt-8 py-4 bg-white text-black rounded-full text-sm font-bold uppercase tracking-widest bg-rainbow-hover hover:border-transparent transition-colors"
                             >
                                 Schedule Site Visit
                             </button>

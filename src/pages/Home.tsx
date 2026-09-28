@@ -77,7 +77,7 @@ export const Home = () => {
                 <div className="z-10 text-center px-4 max-w-5xl flex flex-col items-center">
                     <KineticText 
                         text="Life Republic." 
-                        className="text-6xl md:text-8xl font-sans font-medium text-white tracking-tight mb-6 justify-center"
+                        className="text-6xl md:text-8xl font-sans font-bold text-transparent bg-clip-text bg-rainbow tracking-tight mb-6 justify-center"
                     />
                     <motion.p 
                         initial={{ opacity: 0 }}
@@ -118,7 +118,7 @@ export const Home = () => {
                     >
                         <MagneticButton 
                             onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))} 
-                            className="text-white border border-white/30 rounded-full px-10 py-5 hover:bg-white hover:text-black tracking-[0.2em] text-xs uppercase"
+                            className="text-white border border-white/30 rounded-full px-10 py-5 bg-rainbow-hover transition-all duration-500 tracking-[0.2em] text-xs uppercase"
                         >
                             Schedule a Private Tour
                         </MagneticButton>

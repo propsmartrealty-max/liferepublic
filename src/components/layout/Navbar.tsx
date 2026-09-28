@@ -48,7 +48,7 @@ export const Navbar = () => {
                 <div className="hidden md:flex items-center z-50">
                     <button 
                         onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}
-                        className="border border-white rounded-full px-6 py-2 uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-colors cursor-interactive"
+                        className="border border-white rounded-full px-6 py-2 uppercase tracking-widest text-xs bg-rainbow-hover transition-all duration-500 border-white/50 hover:border-transparent transition-colors cursor-interactive"
                     >
                         Enquire
                     </button>
