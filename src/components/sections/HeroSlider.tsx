@@ -1,9 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { MorphingBackground } from '../ui/MorphingBackground';
 
 export const HeroSlider = () => {
     return (
-        <section className="pt-28 pb-12 px-4 bg-white min-h-[70vh] flex flex-col items-center text-center overflow-hidden">
+        <section className="pt-28 pb-12 px-4 bg-white min-h-[70vh] flex flex-col items-center text-center overflow-hidden relative">
+            <MorphingBackground />
             <div className="max-w-4xl mx-auto z-10 mb-10">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}

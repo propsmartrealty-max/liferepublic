@@ -40,6 +40,7 @@ import { FloatingContact } from './components/ui/FloatingContact';
 import { CookieConsent } from './components/ui/CookieConsent';
 import { Layout } from './components/layout/Layout';
 import { SmoothScrolling } from './components/layout/SmoothScrolling';
+import { CustomCursor } from './components/ui/CustomCursor';
 import { ExitIntentOffer } from './components/ui/ExitIntentOffer';
 import { useEffect } from 'react';
 
@@ -99,6 +100,7 @@ function App() {
 
   return (
     <SmoothScrolling>
+      <CustomCursor />
       <ExitIntentOffer />
       <FloatingContact />
       <CookieConsent />

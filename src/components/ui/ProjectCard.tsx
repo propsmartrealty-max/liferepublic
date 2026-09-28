@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const ProjectCard = ({ project, priority }: { project: any, priority?: boolean }) => {
     return (
-        <Link to={`/projects/${project.slug || project.id}`} className="block group h-full">
+        <Link to={`/projects/${project.slug || project.id}`} className="block group h-full cursor-interactive">
             <motion.div className="google-card flex flex-col h-full bg-[#F8F9FA]">
                 
                 {/* Image Section */}
