@@ -43,24 +43,67 @@ export const onRequest: PagesFunction = async (context) => {
 
         
         // Google Policy Compliant JSON-LD Schema (Zero-Spam Structured Data)
+        
         const schema = {
             "@context": "https://schema.org",
-            "@type": "RealEstateAgent",
-            "name": "Kolte-Patil Life Republic Pune - Independent Review Platform",
-            "image": "https://liferepublic.com/logo.webp",
-            "description": "Independent property information, floor plans, pricing, and project reviews for Kolte Patil Life Republic township in Marunji near Hinjewadi, Pune.",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Survey No. 74, Marunji, Hinjawadi-Marunji-Kasarsai Road, Taluka Mulshi",
-                "addressLocality": "Pune",
-                "postalCode": "411057",
-                "addressRegion": "Maharashtra",
-                "addressCountry": "IN"
-            },
-            "url": "https://" + url.hostname,
-            "telephone": "+910000000000",
-            "priceRange": "₹"
+            "@graph": [
+                {
+                    "@type": "RealEstateAgent",
+                    "@id": "https://" + url.hostname + "/#organization",
+                    "name": "Life Republic by Kolte-Patil",
+                    "legalName": "Kolte-Patil Developers Ltd",
+                    "description": "Life Republic is a 390-acre integrated township by Kolte-Patil Developers, located near Hinjewadi IT Park, Pune. Offering premium 2, 3, and 4 BHK residences.",
+                    "url": "https://" + url.hostname,
+                    "logo": "https://" + url.hostname + "/logo.webp",
+                    "image": "https://" + url.hostname + "/hero-new.jpg",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Survey No. 74, Marunji, Hinjawadi-Marunji-Kasarsai Road, Taluka Mulshi",
+                        "addressLocality": "Pune",
+                        "postalCode": "411057",
+                        "addressRegion": "Maharashtra",
+                        "addressCountry": "IN"
+                    },
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": "18.6185",
+                        "longitude": "73.7106"
+                    },
+                    "telephone": "+91-9579250011",
+                    "priceRange": "₹75 Lakhs - ₹2.8 Cr",
+                    "sameAs": [
+                        "https://www.facebook.com/KoltePatilDevelopers",
+                        "https://www.instagram.com/koltepatil",
+                        "https://www.youtube.com/user/koltepatil"
+                    ]
+                },
+                {
+                    "@type": "Place",
+                    "@id": "https://" + url.hostname + "/#place",
+                    "name": "Life Republic Township",
+                    "description": "390 Acres of Global Lifestyle featuring residential clusters Canvas, Qrious, Duet, and Echoes.",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Hinjewadi",
+                        "addressRegion": "Pune"
+                    },
+                    "containedInPlace": {
+                        "@type": "City",
+                        "name": "Pune"
+                    }
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://" + url.hostname + "/#website",
+                    "url": "https://" + url.hostname,
+                    "name": "Kolte Patil Life Republic Hinjewadi",
+                    "publisher": {
+                        "@id": "https://" + url.hostname + "/#organization"
+                    }
+                }
+            ]
         };
+
 
         let schemaHtml = `\n<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n</script>\n`;
         
