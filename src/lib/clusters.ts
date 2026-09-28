@@ -242,15 +242,17 @@ export const CLUSTERS = [
         usp: "Pune's Tallest Residential Tower",
         name: "Canvas",
         slug: "kolte-patil-life-republic-canvas",
-        category: "Premium 3 & 4 BHK",
+        category: "Premium 3, 3.5 & 4 BHK",
         description: "Pune's Tallest Residential Tower reaching ~120M high. Canvas offers ultra-premium 3 & 4 BHK residences with 50+ curated amenities across a 6+ acre estate. Each unit features 2 master bedrooms.",
-        price: "₹1.49 Cr*",
+        price: "₹1.55 Cr*",
         rera: "P52100077008",
         image: "https://liferepublic.in/images/project/gallery/1727440628GATE SCULPTURE.webp",
         masterLayout: "https://liferepublic.in/images/project/plan/172846001957.webp",
         configurations: [
-            { type: "3 BHK", size: "1,151 - 1,330 sq.ft.", price: "₹1.49 Cr*" },
-            { type: "4 BHK", size: "1,700 - 2,023 sq.ft.", price: "₹2.20 Cr*" }
+            { type: "3 BHK", size: "1,330+ sq.ft.", price: "₹1.55 Cr*" },
+            { type: "3 BHK XL", size: "1,450+ sq.ft.", price: "₹1.69 Cr*" },
+            { type: "3.5 BHK", size: "1,700+ sq.ft.", price: "₹1.99 Cr*" },
+            { type: "4 BHK", size: "2,023+ sq.ft.", price: "₹2.45 Cr*" }
         ],
         gallery: [
             "https://liferepublic.in/images/project/gallery/1727440628GATE SCULPTURE.webp",
