@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,43 +7,44 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #030508;
-    color: #FFFFFF;
+    background-color: #F5F5F7;
+    color: #1D1D1F;
   }
   
   body {
-    @apply font-sans font-light antialiased overflow-x-hidden bg-background;
+    @apply font-sans antialiased overflow-x-hidden bg-background text-text-main;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
   }
 }
 
 @layer components {
-  /* Wireframe Glassmorphism */
-  .glass-panel {
-    @apply bg-white/[0.02] backdrop-blur-3xl border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.36)];
+  .apple-card {
+    @apply bg-white rounded-3xl shadow-apple transition-shadow duration-300 hover:shadow-apple-hover overflow-hidden;
   }
   
-  .glass-pill {
-    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.1] rounded-full;
+  .apple-btn {
+    @apply bg-[#1D1D1F] text-white rounded-full px-6 py-2.5 font-medium text-sm transition-transform hover:scale-105 active:scale-95;
   }
   
-  /* Fluid glowing mesh */
-  .fluid-bg {
-    @apply absolute inset-0 overflow-hidden pointer-events-none z-0;
-  }
-  
-  .fluid-orb {
-    @apply absolute rounded-full mix-blend-screen filter blur-[120px] opacity-40;
-    animation: blob 15s infinite alternate;
-  }
-  
-  .slim-text {
-    @apply font-sans font-extralight tracking-widest text-white/60;
+  .apple-btn-secondary {
+    @apply bg-[#E8E8ED] text-[#1D1D1F] rounded-full px-6 py-2.5 font-medium text-sm transition-all hover:bg-[#D2D2D7] active:scale-95;
   }
 }
 
-@keyframes blob {
-  0% { transform: translate(0px, 0px) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
-  100% { transform: translate(0px, 0px) scale(1); }
+/* Very subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D2D2D7;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #86868B;
 }

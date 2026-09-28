@@ -4,36 +4,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#E5C07B', // Muted Gold
-        'primary-light': '#FCEBB6',
-        background: '#030508', // Deep space blue/black
-        surface: 'rgba(255, 255, 255, 0.02)', // Ultra sheer glass
-        'border-glass': 'rgba(255, 255, 255, 0.08)',
+        primary: '#0066CC', // Apple Blue
+        background: '#F5F5F7', // Apple Light Gray background
+        surface: '#FFFFFF', // Pure White for cards
+        'text-main': '#1D1D1F', // Apple Dark Text
+        'text-muted': '#86868B', // Apple Gray Text
+        'border-strong': '#D2D2D7', // Apple Border
       },
       fontFamily: {
-        sans: ['"Outfit"', 'sans-serif'], // Very round, fluid, thin
-        serif: ['"Playfair Display"', 'serif'],
+        sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
-      animation: {
-        'blob': 'blob 15s infinite alternate',
-        'float': 'float 8s ease-in-out infinite',
-        'flow': 'flow 20s linear infinite',
-      },
-      keyframes: {
-        blob: {
-          '0%': { transform: 'translate(0px, 0px) scale(1)' },
-          '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-          '100%': { transform: 'translate(0px, 0px) scale(1)' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        flow: {
-          '0%': { backgroundPosition: '0% 50%' },
-          '100%': { backgroundPosition: '100% 50%' },
-        }
+      boxShadow: {
+        'apple': '0 4px 24px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.04)',
+        'apple-hover': '0 10px 40px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04)',
       }
     },
   },
