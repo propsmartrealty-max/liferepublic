@@ -3,84 +3,67 @@ import { motion } from 'framer-motion';
 
 export const HeroSlider = () => {
     return (
-        <section className="relative h-screen w-full overflow-hidden bg-[#0A0A0A]">
-            {/* Background Image */}
-            <div className="absolute inset-0 z-0">
-                <img
-                    src="/images/home/slider-1.webp"
-                    alt="Life Republic Luxury Township"
-                    className="w-full h-full object-cover opacity-70"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-[#0A0A0A] z-10" />
+        <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030508]">
+            
+            {/* Fluid Water/Aurora Background */}
+            <div className="fluid-bg">
+                <div className="fluid-orb bg-[#2DD4BF] w-[600px] h-[600px] -top-40 -left-20 animation-delay-2000"></div>
+                <div className="fluid-orb bg-[#3B82F6] w-[500px] h-[500px] top-40 right-10 animation-delay-4000"></div>
+                <div className="fluid-orb bg-[#8B5CF6] w-[700px] h-[700px] -bottom-40 left-1/4"></div>
             </div>
 
-            {/* Content Container */}
-            <div className="relative z-20 h-full container mx-auto px-6 lg:px-12 flex flex-col justify-end pb-24 md:pb-32">
-                <div className="max-w-4xl">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, delay: 0.2 }}
-                        className="mb-6 flex items-center gap-4"
-                    >
-                        <div className="w-12 h-px bg-primary"></div>
-                        <span className="text-primary text-[10px] md:text-xs font-sans font-semibold tracking-[0.3em] uppercase">
-                            Kolte Patil Developers
-                        </span>
-                    </motion.div>
+            {/* Wireframe Glass Overlay Pattern */}
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwaGF0IGQ9Ik00MCAwaC0xdjQwTTAgNDBWMzl0NDAtMXYtMUgwdjFINDBWMEgwdi0xIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDMpIi8+PC9zdmc+')] opacity-50 z-0"></div>
 
-                    <motion.h1 
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.2, delay: 0.4 }}
-                        className="text-5xl md:text-7xl lg:text-[6rem] font-serif text-white leading-[1.1] mb-8"
-                    >
-                        A Masterpiece of <br/>
-                        <span className="text-primary italic font-normal">Modern Living.</span>
-                    </motion.h1>
+            <div className="relative z-20 container mx-auto px-6 text-center flex flex-col items-center">
+                
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9, filter: 'blur(10px)' }}
+                    animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+                    transition={{ duration: 2, ease: "easeOut" }}
+                    className="glass-pill px-6 py-2 mb-8 flex items-center gap-3 animate-float"
+                >
+                    <div className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"></div>
+                    <span className="slim-text text-[10px]">Life Republic Township • Hinjewadi</span>
+                </motion.div>
 
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1, delay: 0.8 }}
-                        className="text-lg md:text-xl text-white/70 font-sans font-light leading-relaxed max-w-2xl mb-12"
-                    >
-                        Discover 390 acres of meticulously crafted spatial design. Premium residences, 
-                        villas, and high-street luxury seamlessly integrated in Hinjewadi.
-                    </motion.p>
+                <motion.h1 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 2, delay: 0.3, ease: "easeOut" }}
+                    className="text-6xl md:text-8xl font-sans font-thin text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/40 leading-tight mb-8"
+                >
+                    Fluid <span className="font-serif italic text-white">Living.</span>
+                </motion.h1>
 
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1, delay: 1 }}
-                        className="flex flex-col sm:flex-row gap-6"
+                <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 2, delay: 0.6 }}
+                    className="text-lg md:text-xl font-sans font-extralight text-white/50 max-w-2xl mx-auto mb-16 leading-relaxed"
+                >
+                    An architectural ecosystem that flows seamlessly with your lifestyle. 
+                    390 acres of unbounded, wireframe-precision design.
+                </motion.p>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 2, delay: 0.9 }}
+                    className="flex flex-col sm:flex-row gap-6"
+                >
+                    <button 
+                        onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}
+                        className="glass-pill px-10 py-4 text-white hover:bg-white/10 hover:border-white/30 transition-all duration-500 font-sans font-light tracking-[0.2em] text-[11px] uppercase group flex items-center justify-center gap-4"
                     >
-                        <button 
-                            onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}
-                            className="px-10 py-4 bg-primary text-black font-sans text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-white transition-colors duration-500"
-                        >
-                            Schedule a Private Tour
-                        </button>
-                        <button 
-                            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="px-10 py-4 bg-transparent border border-white/30 text-white font-sans text-[11px] font-bold tracking-[0.2em] uppercase hover:border-white transition-colors duration-500"
-                        >
-                            Explore Residences
-                        </button>
-                    </motion.div>
-                </div>
+                        <span>Experience the Flow</span>
+                        <div className="w-8 h-px bg-white/30 group-hover:bg-white transition-colors duration-500"></div>
+                    </button>
+                </motion.div>
             </div>
             
-            {/* Elegant Scroll Indicator */}
-            <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5, duration: 1 }}
-                className="absolute bottom-8 right-12 z-20 hidden md:flex flex-col items-center gap-4"
-            >
-                <span className="text-white/50 text-[9px] uppercase tracking-[0.3em] font-sans" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
-                <div className="w-px h-16 bg-gradient-to-b from-white/50 to-transparent"></div>
-            </motion.div>
+            {/* Soft fade at bottom */}
+            <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#030508] to-transparent z-10"></div>
         </section>
     );
 };

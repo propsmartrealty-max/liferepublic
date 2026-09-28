@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,37 +7,35 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #0A0A0A;
-    color: #E5E5E5;
+    background-color: #030508;
+    color: #FFFFFF;
   }
   
   body {
-    @apply font-sans antialiased overflow-x-hidden bg-background selection:bg-primary/30 selection:text-white;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-normal;
+    @apply font-sans font-light antialiased overflow-x-hidden bg-background;
   }
 }
 
 @layer components {
-  /* Architectural luxury card - No rounded corners, very flat, very clean */
-  .arch-card {
-    @apply bg-surface border border-white/5 relative overflow-hidden transition-all duration-700 hover:border-primary/50;
+  /* Wireframe Glassmorphism */
+  .glass-panel {
+    @apply bg-white/[0.02] backdrop-blur-3xl border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.36)];
   }
   
-  .text-gold {
-    @apply text-[#C5A059];
+  .glass-pill {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.1] rounded-full;
   }
-}
-
-/* Elegant scrollbar */
-::-webkit-scrollbar {
-  width: 4px;
-}
-::-webkit-scrollbar-track {
-  background: #0A0A0A;
-}
-::-webkit-scrollbar-thumb {
-  background: #C5A059;
+  
+  /* Fluid glowing mesh */
+  .fluid-bg {
+    @apply absolute inset-0 overflow-hidden pointer-events-none z-0;
+  }
+  
+  .fluid-orb {
+    @apply absolute rounded-full mix-blend-screen filter blur-[120px] opacity-40 animate-blob;
+  }
+  
+  .slim-text {
+    @apply font-sans font-extralight tracking-widest text-white/60;
+  }
 }
