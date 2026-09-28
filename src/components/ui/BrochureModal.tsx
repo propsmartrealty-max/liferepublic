@@ -62,9 +62,9 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose, p
                         initial={{ opacity: 0, scale: 0.95, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                        className="fixed z-[70] bg-[#151822] border border-[#DADCE0] rounded-2xl shadow-2xl w-full max-w-md overflow-hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                        className="fixed z-[70] bg-[#151822] border border-white/20 rounded-2xl shadow-2xl w-full max-w-md overflow-hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                     >
-                        <div className="bg-[#E5C07B]/30 p-6 border-b border-[#DADCE0] flex justify-between items-center">
+                        <div className="bg-[#E5C07B]/30 p-6 border-b border-white/20 flex justify-between items-center">
                             <h3 className="text-xl font-sans font-bold text-[#202124]">
                                 Download Brochure
                             </h3>
@@ -89,7 +89,7 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose, p
                                                 name="name"
                                                 type="text"
                                                 required
-                                                className="w-full px-4 py-3 border border-[#DADCE0] rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all"
+                                                className="w-full px-4 py-3 border border-white/20 rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all"
                                                 placeholder="Your Name"
                                             />
                                         </div>
@@ -100,7 +100,7 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose, p
                                                 type="tel"
                                                 required
                                                 pattern="[0-9]{10}"
-                                                className="w-full px-4 py-3 border border-[#DADCE0] rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all"
+                                                className="w-full px-4 py-3 border border-white/20 rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all"
                                                 placeholder="10-digit Mobile Number"
                                             />
                                         </div>
@@ -110,7 +110,7 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose, p
                                                 name="email"
                                                 type="email"
                                                 required
-                                                className="w-full px-4 py-3 border border-[#DADCE0] rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all"
+                                                className="w-full px-4 py-3 border border-white/20 rounded-lg focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all"
                                                 placeholder="your@email.com"
                                             />
                                         </div>

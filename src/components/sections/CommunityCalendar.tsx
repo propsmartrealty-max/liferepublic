@@ -65,7 +65,7 @@ export const CommunityCalendar: React.FC = () => {
                         <motion.span 
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            className="text-[#1a73e8] text-[10px] font-bold tracking-tight font-semibold block mb-6"
+                            className="rainbow-text-clip font-bold text-[10px] font-bold tracking-tight font-semibold block mb-6"
                         >
                             The Sovereign Social
                         </motion.span>
@@ -90,16 +90,16 @@ export const CommunityCalendar: React.FC = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: idx * 0.1 }}
-                            className="group p-8 rounded-[24px] border border-[#DADCE0] bg-[#F8F9FA]/50 hover:bg-[#151822] border border-[#DADCE0] hover:shadow-2xl hover:border-transparent transition-all duration-500 cursor-pointer"
+                            className="group p-8 rounded-[24px] border border-white/20 bg-[#F8F9FA]/50 hover:bg-[#151822] border border-white/20 hover:shadow-2xl hover:border-transparent transition-all duration-500 cursor-pointer"
                         >
                             <div className="flex justify-between items-start mb-8">
-                                <div className="text-[#1a73e8] font-sans font-bold text-xl">{event.date}</div>
-                                <div className="w-12 h-12 bg-[#151822] border border-[#DADCE0] rounded-2xl shadow-sm flex items-center justify-center text-[#202124] group-hover:bg-accent group-hover:text-[#202124] transition-colors">
+                                <div className="rainbow-text-clip font-bold font-sans font-bold text-xl">{event.date}</div>
+                                <div className="w-12 h-12 bg-[#151822] border border-white/20 rounded-2xl shadow-sm flex items-center justify-center text-[#202124] group-hover:bg-accent group-hover:text-[#202124] transition-colors">
                                     <event.icon size={20} />
                                 </div>
                             </div>
                             <span className="text-[10px] font-bold tracking-tight font-medium text-[#5F6368] block mb-2">{event.category}</span>
-                            <h4 className="text-xl font-bold text-[#202124] mb-4 group-hover:text-[#1a73e8] transition-colors">{event.title}</h4>
+                            <h4 className="text-xl font-bold text-[#202124] mb-4 group-hover:rainbow-text-clip font-bold transition-colors">{event.title}</h4>
                             <p className="text-[#5F6368] text-sm leading-relaxed mb-6">
                                 {event.desc}
                             </p>
@@ -116,7 +116,7 @@ export const CommunityCalendar: React.FC = () => {
                 </div>
 
                 {/* Social Proof Layer */}
-                <div className="mt-32 border-t border-[#DADCE0] pt-20">
+                <div className="mt-32 border-t border-white/20 pt-20">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             { label: 'Families', value: '12,000+' },
@@ -126,7 +126,7 @@ export const CommunityCalendar: React.FC = () => {
                         ].map((stat, idx) => (
                             <div key={idx} className="text-center">
                                 <span className="text-3xl md:text-4xl font-sans font-bold text-[#202124] block mb-2">{stat.value}</span>
-                                <span className="text-[10px] font-bold tracking-tight font-medium text-[#1a73e8]">{stat.label}</span>
+                                <span className="text-[10px] font-bold tracking-tight font-medium rainbow-text-clip font-bold">{stat.label}</span>
                             </div>
                         ))}
                     </div>

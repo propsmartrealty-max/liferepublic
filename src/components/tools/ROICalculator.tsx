@@ -67,7 +67,7 @@ export const ROICalculator: React.FC = () => {
     const maxPrice = Math.max(...priceTrends.map(t => t.Price));
 
     return (
-        <div className="bg-[#151822] border border-[#DADCE0] rounded-[24px] shadow-[0_80px_160px_-40px_rgba(0,0,0,0.1)] p-10 md:p-20 border border-[#DADCE0] relative overflow-hidden">
+        <div className="bg-[#151822] border border-white/20 rounded-[24px] shadow-[0_80px_160px_-40px_rgba(0,0,0,0.1)] p-10 md:p-20 border border-white/20 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full -mr-48 -mt-48 blur-[120px] pointer-events-none"></div>
             
             <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-8">
@@ -77,7 +77,7 @@ export const ROICalculator: React.FC = () => {
                         <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full animate-pulse border-4 border-white"></div>
                     </div>
                     <div>
-                        <h3 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter leading-tight">Investment Thesis <br /><span className="text-[#1a73e8] italic">v6.0</span></h3>
+                        <h3 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter leading-tight">Investment Thesis <br /><span className="rainbow-text-clip font-bold italic">v6.0</span></h3>
                         <p className="text-[10px] text-[#5F6368] font-bold tracking-tight font-semibold mt-2">Hinjewadi ROI Synthesis 2026</p>
                     </div>
                 </div>
@@ -95,12 +95,12 @@ export const ROICalculator: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
                 {/* Inputs & Parameters */}
                 <div className="lg:col-span-7 space-y-12">
-                    <div className="space-y-12 p-12 bg-[#F8F9FA] rounded-[24px] border border-[#DADCE0] shadow-inner">
+                    <div className="space-y-12 p-12 bg-[#F8F9FA] rounded-[24px] border border-white/20 shadow-inner">
                         {/* Property Value */}
                         <div className="group">
                             <div className="flex justify-between mb-6">
                                 <label className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold">Principal Asset Value</label>
-                                <span className="text-2xl font-bold text-[#202124] group-hover:text-[#1a73e8] transition-colors">{formatCurrency(propertyValue)}</span>
+                                <span className="text-2xl font-bold text-[#202124] group-hover:rainbow-text-clip font-bold transition-colors">{formatCurrency(propertyValue)}</span>
                             </div>
                             <input
                                 type="range" min="4000000" max="30000000" step="100000"
@@ -113,7 +113,7 @@ export const ROICalculator: React.FC = () => {
                         <div className="group">
                             <div className="flex justify-between mb-6">
                                 <label className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold">Projected Monthly Yield</label>
-                                <span className="text-2xl font-bold text-[#202124] group-hover:text-[#1a73e8] transition-colors">{formatCurrency(monthlyRent)}</span>
+                                <span className="text-2xl font-bold text-[#202124] group-hover:rainbow-text-clip font-bold transition-colors">{formatCurrency(monthlyRent)}</span>
                             </div>
                             <input
                                 type="range" min="15000" max="150000" step="1000"
@@ -126,7 +126,7 @@ export const ROICalculator: React.FC = () => {
                         <div className="group">
                             <div className="flex justify-between mb-6">
                                 <label className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold">Holding Horizon</label>
-                                <span className="text-2xl font-bold text-[#202124] group-hover:text-[#1a73e8] transition-colors">{holdingPeriod} Years</span>
+                                <span className="text-2xl font-bold text-[#202124] group-hover:rainbow-text-clip font-bold transition-colors">{holdingPeriod} Years</span>
                             </div>
                             <input
                                 type="range" min="3" max="20" step="1"
@@ -138,10 +138,10 @@ export const ROICalculator: React.FC = () => {
                         {/* Metro Delta Toggle */}
                         <button 
                             onClick={() => setIncludeMetroDelta(!includeMetroDelta)}
-                            className={`w-full p-6 rounded-2xl border transition-all flex items-center justify-between group ${includeMetroDelta ? 'bg-white border-secondary text-[#202124]' : 'bg-white border-[#DADCE0] text-[#5F6368] hover:border-accent'}`}
+                            className={`w-full p-6 rounded-2xl border transition-all flex items-center justify-between group ${includeMetroDelta ? 'bg-white border-secondary text-[#202124]' : 'bg-white border-white/20 text-[#5F6368] hover:border-accent'}`}
                         >
                             <div className="flex items-center gap-4">
-                                <Zap size={20} className={includeMetroDelta ? 'text-[#1a73e8]' : 'text-gray-300'} />
+                                <Zap size={20} className={includeMetroDelta ? 'rainbow-text-clip font-bold' : 'text-gray-300'} />
                                 <div className="text-left">
                                     <p className="text-[10px] font-bold tracking-tight font-medium">Metro Multiplier 2026</p>
                                     <p className={`text-xs ${includeMetroDelta ? 'text-[#202124]/60' : 'text-[#5F6368]'}`}>Include +3.5% infrastructure scarcity delta</p>
@@ -160,7 +160,7 @@ export const ROICalculator: React.FC = () => {
                         </div>
                         <div className="flex justify-between items-center mb-12">
                             <h4 className="text-xl font-sans font-bold flex items-center gap-3">
-                                <BarChart3 size={24} className="text-[#1a73e8]" /> Tectonic Price Index
+                                <BarChart3 size={24} className="rainbow-text-clip font-bold" /> Tectonic Price Index
                             </h4>
                             <span className="text-[9px] font-bold tracking-tight font-semibold opacity-40">Hinjewadi Ph 3 Corridor</span>
                         </div>
@@ -173,7 +173,7 @@ export const ROICalculator: React.FC = () => {
                                         className={`w-full rounded-t-xl transition-all duration-700 ${idx === priceTrends.length - 1 ? 'bg-accent shadow-[0_0_30px_rgba(197,160,89,0.5)]' : 'bg-white/10 group-hover/bar:bg-white/20'}`}
                                     />
                                     <span className="text-[9px] text-[#202124]/30 mt-4 font-bold tracking-widest">{trend.year}</span>
-                                    <div className="absolute bottom-full mb-3 bg-[#151822] border border-[#DADCE0] text-[#202124] text-[10px] font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover/bar:opacity-100 transition-all scale-90 group-hover/bar:scale-100 whitespace-nowrap shadow-2xl">
+                                    <div className="absolute bottom-full mb-3 bg-[#151822] border border-white/20 text-[#202124] text-[10px] font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover/bar:opacity-100 transition-all scale-90 group-hover/bar:scale-100 whitespace-nowrap shadow-2xl">
                                         ₹{trend.Price}/sqft
                                     </div>
                                 </div>
@@ -184,34 +184,34 @@ export const ROICalculator: React.FC = () => {
 
                 {/* Synthesis Card */}
                 <div className="lg:col-span-5 flex flex-col gap-8">
-                    <div className="flex-1 bg-white rounded-[24px] p-12 text-[#202124] relative overflow-hidden flex flex-col justify-between shadow-[0_60px_120px_-30px_rgba(0,0,0,0.5)] border border-[#DADCE0]">
+                    <div className="flex-1 bg-white rounded-[24px] p-12 text-[#202124] relative overflow-hidden flex flex-col justify-between shadow-[0_60px_120px_-30px_rgba(0,0,0,0.5)] border border-white/20">
                         <div className="absolute inset-0 bg-[url('/images/aerial-sunset.png')] bg-cover bg-center opacity-5 grayscale pointer-events-none"></div>
                         
                         <div>
                             <div className="flex items-center justify-between mb-12">
                                 <div className="flex items-center gap-3">
-                                    <PieChart size={24} className="text-[#1a73e8]" />
+                                    <PieChart size={24} className="rainbow-text-clip font-bold" />
                                     <span className="text-[10px] font-bold tracking-tight font-semibold text-[#202124]/40">Sovereign Thesis</span>
                                 </div>
-                                <div className="p-3 bg-[#151822] border border-[#DADCE0]/5 rounded-full">
-                                    <ShieldCheck size={20} className="text-[#1a73e8]" />
+                                <div className="p-3 bg-[#151822] border border-white/20/5 rounded-full">
+                                    <ShieldCheck size={20} className="rainbow-text-clip font-bold" />
                                 </div>
                             </div>
                             
                             <div className="space-y-12">
                                 <div className="group cursor-help">
                                     <p className="text-[10px] font-bold text-[#202124]/30 tracking-tight font-semibold mb-3">Projected Asset Valuation</p>
-                                    <p className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter group-hover:text-[#1a73e8] transition-colors">{formatCurrency(finalValue)}</p>
+                                    <p className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter group-hover:rainbow-text-clip font-bold transition-colors">{formatCurrency(finalValue)}</p>
                                 </div>
                                 
                                 <div className="group cursor-help">
                                     <p className="text-[10px] font-bold text-[#202124]/30 tracking-tight font-semibold mb-3">Total Wealth Synthesis</p>
-                                    <p className="text-5xl md:text-5xl font-sans font-bold text-[#1a73e8] tracking-tighter">+{formatCurrency(totalROI)}</p>
+                                    <p className="text-5xl md:text-5xl font-sans font-bold rainbow-text-clip font-bold tracking-tighter">+{formatCurrency(totalROI)}</p>
                                     <div className="mt-4 flex flex-wrap gap-3">
-                                        <div className="px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full text-[10px] font-bold text-[#1a73e8] tracking-tight font-medium">
+                                        <div className="px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-medium">
                                             ~{((totalROI / propertyValue) * 100).toFixed(1)}% Absolute ROI
                                         </div>
-                                        <div className="px-4 py-1.5 bg-white/5 border border-[#DADCE0] rounded-full text-[10px] font-bold text-[#202124]/60 tracking-tight font-medium">
+                                        <div className="px-4 py-1.5 bg-white/5 border border-white/20 rounded-full text-[10px] font-bold text-[#202124]/60 tracking-tight font-medium">
                                             {annualYield}% Annual Yield
                                         </div>
                                     </div>
@@ -219,10 +219,10 @@ export const ROICalculator: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="mt-16 pt-10 border-t border-[#DADCE0] space-y-8">
-                             <div className="bg-[#151822] border border-[#DADCE0]/5 p-6 rounded-[2rem] border border-[#DADCE0]">
+                        <div className="mt-16 pt-10 border-t border-white/20 space-y-8">
+                             <div className="bg-[#151822] border border-white/20/5 p-6 rounded-[2rem] border border-white/20">
                                 <div className="flex items-start gap-4">
-                                    <Info size={16} className="text-[#1a73e8] mt-1 shrink-0" />
+                                    <Info size={16} className="rainbow-text-clip font-bold mt-1 shrink-0" />
                                     <p className="text-[11px] leading-relaxed text-[#202124]/40 italic font-medium">
                                         Synthesized using **Tectonic Scarcity Algorithms**. Assumes effective appreciation of {BASE_APPRECIATION + (includeMetroDelta ? METRO_DELTA : 0)}% anchored to 2026 infrastructure maturity.
                                     </p>
@@ -231,7 +231,7 @@ export const ROICalculator: React.FC = () => {
                              
                              <button 
                                 onClick={() => window.dispatchEvent(new CustomEvent('open-sovereign-concierge', { detail: { project: 'Sovereign Investment Thesis' } }))}
-                                className="w-full group bg-accent text-[#202124] hover:bg-[#151822] border border-[#DADCE0] py-8 rounded-[2rem] font-bold flex items-center justify-center gap-4 transition-all shadow-[0_40px_80px_-20px_rgba(197,160,89,0.4)] text-xl"
+                                className="w-full group bg-accent text-[#202124] hover:bg-[#151822] border border-white/20 py-8 rounded-[2rem] font-bold flex items-center justify-center gap-4 transition-all shadow-[0_40px_80px_-20px_rgba(197,160,89,0.4)] text-xl"
                              >
                                 Synthesize Custom Ledger <Download size={24} className="group-hover:translate-y-1 transition-transform" />
                              </button>
@@ -239,7 +239,7 @@ export const ROICalculator: React.FC = () => {
                     </div>
 
                     <div className="p-10 bg-accent/5 border border-accent/10 rounded-[24px] flex items-center gap-8 group hover:bg-accent/10 transition-all">
-                        <div className="w-16 h-16 bg-white text-[#1a73e8] rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                        <div className="w-16 h-16 bg-white rainbow-text-clip font-bold rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
                             <Landmark size={32} />
                         </div>
                         <div>

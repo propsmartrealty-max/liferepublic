@@ -59,13 +59,13 @@ export const ConnectivityHub: React.FC = () => {
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 text-[#1a73e8] rounded-full text-xs font-bold tracking-tight font-medium mb-6"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 rainbow-text-clip font-bold rounded-full text-xs font-bold tracking-tight font-medium mb-6"
                         >
                             <MapPin size={14} /> Township Connectivity Ledger
                         </motion.div>
                         <h1 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-6 leading-tight">
                             Strategic Connectivity & <br />
-                            <span className="text-[#1a73e8]">Urban Mobility Matrix</span>
+                            <span className="rainbow-text-clip font-bold">Urban Mobility Matrix</span>
                         </h1>
                         <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8">
                             Kolte Patil Life Republic is architected at the geographic center of Pune's West growth corridor, providing seamless access to the global IT hub and critical transit arteries.
@@ -85,9 +85,9 @@ export const ConnectivityHub: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="p-8 bg-[#F8F9FA] rounded-[2rem] border border-[#DADCE0]"
+                                className="p-8 bg-[#F8F9FA] rounded-[2rem] border border-white/20"
                             >
-                                <div className="w-14 h-14 bg-[#151822] border border-[#DADCE0] rounded-2xl shadow-sm flex items-center justify-center text-[#1a73e8] mb-8">
+                                <div className="w-14 h-14 bg-[#151822] border border-white/20 rounded-2xl shadow-sm flex items-center justify-center rainbow-text-clip font-bold mb-8">
                                     <cat.icon size={28} />
                                 </div>
                                 <h2 className="text-2xl font-bold text-[#202124] mb-8">{cat.title}</h2>
@@ -95,7 +95,7 @@ export const ConnectivityHub: React.FC = () => {
                                     {cat.nodes.map((node, nIdx) => (
                                         <div key={nIdx} className="flex items-center justify-between group">
                                             <div>
-                                                <div className="font-bold text-[#202124] group-hover:text-[#1a73e8] transition-colors">{node.name}</div>
+                                                <div className="font-bold text-[#202124] group-hover:rainbow-text-clip font-bold transition-colors">{node.name}</div>
                                                 <div className="text-xs text-[#5F6368] uppercase font-medium mt-1">{node.time} Drive</div>
                                             </div>
                                             <div className="text-right">
@@ -117,7 +117,7 @@ export const ConnectivityHub: React.FC = () => {
             <section className="py-12 bg-[#F8F9FA]">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
-                        <div className="bg-[#151822] border border-[#DADCE0] p-12 rounded-[3.5rem] shadow-xl border border-[#DADCE0]">
+                        <div className="bg-[#151822] border border-white/20 p-12 rounded-[3.5rem] shadow-xl border border-white/20">
                             <h2 className="text-3xl font-sans font-bold text-[#202124] mb-8">Marunji-Hinjewadi Corridor Analysis</h2>
                             <div className="prose prose-lg text-gray-600">
                                 <p className="mb-6 leading-relaxed">
@@ -126,7 +126,7 @@ export const ConnectivityHub: React.FC = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
                                     <div className="p-6 bg-accent/5 rounded-2xl border border-accent/10">
                                         <h4 className="font-bold text-[#202124] mb-2 flex items-center gap-2">
-                                            <Info size={18} className="text-[#1a73e8]" /> Metro Impact
+                                            <Info size={18} className="rainbow-text-clip font-bold" /> Metro Impact
                                         </h4>
                                         <p className="text-sm italic">Property values within 3km of Metro Line 3 (Maan Station) are projected to appreciate by 15-18% upon launch.</p>
                                     </div>
@@ -147,7 +147,7 @@ export const ConnectivityHub: React.FC = () => {
             </section>
 
             {/* Semantic Mesh */}
-            <div className="py-12 border-t border-[#DADCE0]">
+            <div className="py-12 border-t border-white/20">
                 <SectorLinkMesh />
             </div>
 

@@ -72,7 +72,7 @@ const SectorMarker = React.memo(({ sector, activeSector, onSelect }: { sector: a
                 className={`w-16 h-16 rounded-[1.5rem] flex items-center justify-center transition-all shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4)] border-2 ${
                     activeSector?.id === sector.id 
                         ? 'bg-accent text-[#202124] scale-125 border-white shadow-accent/50' 
-                        : 'bg-white/40 backdrop-blur-3xl text-[#202124] border-[#DADCE0] hover:bg-white hover:text-[#202124] hover:border-white'
+                        : 'bg-white/40 backdrop-blur-3xl text-[#202124] border-white/20 hover:bg-white hover:text-[#202124] hover:border-white'
                 }`}
             >
                 {sector.intensity === 'High' ? <Sparkles size={28} /> : <Target size={28} />}
@@ -84,7 +84,7 @@ const SectorMarker = React.memo(({ sector, activeSector, onSelect }: { sector: a
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0 }}
-                        className="absolute top-full mt-6 bg-white/90 backdrop-blur-2xl px-6 py-2 rounded-full border border-[#DADCE0] shadow-2xl pointer-events-none whitespace-nowrap"
+                        className="absolute top-full mt-6 bg-white/90 backdrop-blur-2xl px-6 py-2 rounded-full border border-white/20 shadow-2xl pointer-events-none whitespace-nowrap"
                     >
                         <span className="text-[10px] font-bold text-[#202124] tracking-tight font-semibold">{sector.name.split(':')[1] || sector.name}</span>
                     </motion.div>
@@ -113,13 +113,13 @@ export const MasterPlan: React.FC = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="inline-flex items-center gap-6 px-10 py-4 bg-white text-[#202124] rounded-full mb-12 shadow-2xl border border-[#DADCE0]"
+                        className="inline-flex items-center gap-6 px-10 py-4 bg-white text-[#202124] rounded-full mb-12 shadow-2xl border border-white/20"
                     >
-                        <Navigation size={20} className="text-[#1a73e8] animate-pulse" />
+                        <Navigation size={20} className="rainbow-text-clip font-bold animate-pulse" />
                         <span className="text-[11px] font-bold tracking-tight font-semibold">The Master Blueprint v6.0</span>
                     </motion.div>
                     <h2 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-12 tracking-tighter leading-[0.85]">
-                        Spatial <br /> <span className="text-[#1a73e8] italic">Sovereignty.</span>
+                        Spatial <br /> <span className="rainbow-text-clip font-bold italic">Sovereignty.</span>
                     </h2>
                     <p className="text-2xl md:text-3xl text-[#5F6368] max-w-4xl mx-auto leading-relaxed font-medium">
                         Navigate the 390-acre tectonic landscape. Every sector is programmatically synchronized with the 150ft Spine Road infrastructure.
@@ -171,13 +171,13 @@ export const MasterPlan: React.FC = () => {
                                 initial={{ opacity: 0, y: 50, scale: 0.9 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 exit={{ opacity: 0, y: 50, scale: 0.9 }}
-                                className="absolute left-4 right-4 sm:left-auto sm:right-16 bottom-4 sm:bottom-16 sm:w-[550px] bg-[#151822] border border-[#DADCE0] rounded-[24px] sm:rounded-[5rem] shadow-[0_100px_200px_-50px_rgba(0,0,0,0.5)] p-8 sm:p-16 border border-white z-40 overflow-hidden group/hud"
+                                className="absolute left-4 right-4 sm:left-auto sm:right-16 bottom-4 sm:bottom-16 sm:w-[550px] bg-[#151822] border border-white/20 rounded-[24px] sm:rounded-[5rem] shadow-[0_100px_200px_-50px_rgba(0,0,0,0.5)] p-8 sm:p-16 border border-white z-40 overflow-hidden group/hud"
                             >
                                 <div className="absolute top-0 right-0 p-12 opacity-5">
                                     <Globe size={150} />
                                 </div>
                                 <div className="flex justify-between items-start mb-8 relative z-10">
-                                    <div className="w-24 h-24 bg-white text-[#1a73e8] rounded-[24px] flex items-center justify-center shadow-2xl group-hover/hud:rotate-12 transition-transform duration-500">
+                                    <div className="w-24 h-24 bg-white rainbow-text-clip font-bold rounded-[24px] flex items-center justify-center shadow-2xl group-hover/hud:rotate-12 transition-transform duration-500">
                                         <Info size={48} />
                                     </div>
                                     <button 
@@ -215,8 +215,8 @@ export const MasterPlan: React.FC = () => {
                 <div className="mt-32 flex flex-wrap justify-center gap-24">
                     {[
                         { color: 'bg-accent shadow-[0_0_30px_rgba(197,160,89,0.5)]', label: 'Sovereign Pulse Clusters' },
-                        { color: 'bg-white border border-[#DADCE0]', label: '150ft Spine Road Backbone' },
-                        { color: 'bg-white border-2 border-[#DADCE0]', label: 'IT Connectivity Radius' }
+                        { color: 'bg-white border border-white/20', label: '150ft Spine Road Backbone' },
+                        { color: 'bg-white border-2 border-white/20', label: 'IT Connectivity Radius' }
                     ].map((item, i) => (
                         <motion.div 
                             key={i} 

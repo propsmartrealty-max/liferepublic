@@ -57,11 +57,11 @@ export const LocationHighlights: React.FC = () => {
                             animate={{ opacity: 1, x: 0 }}
                             className="inline-flex items-center gap-4 px-6 py-3 bg-accent/20 border border-accent/30 rounded-full mb-12 backdrop-blur-xl"
                         >
-                            <Compass size={16} className="text-[#1a73e8] animate-spin-slow" />
-                            <span className="text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8]">Infrastructure Synthesis 2026</span>
+                            <Compass size={16} className="rainbow-text-clip font-bold animate-spin-slow" />
+                            <span className="text-[10px] font-bold tracking-tight font-semibold rainbow-text-clip font-bold">Infrastructure Synthesis 2026</span>
                         </motion.div>
                         <h1 className="text-5xl md:text-9xl font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-none">
-                            The Strategic <br /> <span className="text-[#1a73e8] italic">Epicenter.</span>
+                            The Strategic <br /> <span className="rainbow-text-clip font-bold italic">Epicenter.</span>
                         </h1>
                         <p className="text-2xl text-[#5F6368] font-medium max-w-3xl leading-relaxed mb-12">
                             Synthesizing the Rajiv Gandhi Infotech Park's economic velocity with the 2026 Metro expansion. A 390-acre structural masterclass.
@@ -70,12 +70,12 @@ export const LocationHighlights: React.FC = () => {
                         <div className="flex gap-8">
                             <div className="flex flex-col">
                                 <span className="text-4xl font-sans font-bold text-[#202124]">1.2km</span>
-                                <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-medium mt-1">To Metro Ph 3</span>
+                                <span className="text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-medium mt-1">To Metro Ph 3</span>
                             </div>
                             <div className="w-px h-12 bg-transparent/10"></div>
                             <div className="flex flex-col">
                                 <span className="text-4xl font-sans font-bold text-[#202124]">0 min</span>
-                                <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-medium mt-1">To Spine Road</span>
+                                <span className="text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-medium mt-1">To Spine Road</span>
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ export const LocationHighlights: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
                         <div className="lg:col-span-4 space-y-16">
                             <div className="space-y-6">
-                                <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold">Spatial Metrics</span>
+                                <span className="text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold">Spatial Metrics</span>
                                 <h2 className="text-5xl font-sans font-bold text-[#202124] tracking-tighter">The Sector <br />Mesh Analysis.</h2>
                                 <p className="text-xl text-[#5F6368] font-medium leading-relaxed">
                                     Our 390-acre master plan is mathematically positioned to leverage the Hinjewadi Phase 3 expansion.
@@ -101,9 +101,9 @@ export const LocationHighlights: React.FC = () => {
                                     { label: 'Expressway Sync', val: '15 mins', icon: Navigation },
                                     { label: 'Retail Proximity', val: '20 mins', icon: ShoppingBag }
                                 ].map((m, i) => (
-                                    <div key={i} className="flex items-center justify-between p-8 bg-[#F8F9FA] rounded-[24px] border border-[#DADCE0] group hover:border-accent transition-all shadow-sm">
+                                    <div key={i} className="flex items-center justify-between p-8 bg-[#F8F9FA] rounded-[24px] border border-white/20 group hover:border-accent transition-all shadow-sm">
                                         <div className="flex items-center gap-5">
-                                            <div className="w-12 h-12 bg-[#151822] border border-[#DADCE0] rounded-2xl flex items-center justify-center text-[#1a73e8] shadow-sm group-hover:scale-110 transition-transform">
+                                            <div className="w-12 h-12 bg-[#151822] border border-white/20 rounded-2xl flex items-center justify-center rainbow-text-clip font-bold shadow-sm group-hover:scale-110 transition-transform">
                                                 <m.icon size={20} />
                                             </div>
                                             <span className="text-[11px] font-bold text-[#202124] tracking-tight font-semibold">{m.label}</span>
@@ -119,7 +119,7 @@ export const LocationHighlights: React.FC = () => {
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
-                                className="relative rounded-[3.5rem] overflow-hidden shadow-2xl border border-[#DADCE0] h-[750px] group-hover:border-accent/20 transition-all duration-1000"
+                                className="relative rounded-[3.5rem] overflow-hidden shadow-2xl border border-white/20 h-[750px] group-hover:border-accent/20 transition-all duration-1000"
                             >
                                 <React.Suspense fallback={<div className="h-full w-full bg-[#151822] animate-pulse flex items-center justify-center font-sans text-2xl text-[#5F6368]">Synthesizing Location Nexus...</div>}>
                                     <SovereignMap />
@@ -127,8 +127,8 @@ export const LocationHighlights: React.FC = () => {
                                 
                                 {/* HUD Overlay */}
                                 <div className="absolute top-12 left-12 z-20 pointer-events-none">
-                                    <div className="bg-white/90 backdrop-blur-3xl p-8 rounded-[24px] border border-[#DADCE0] shadow-2xl">
-                                        <div className="flex items-center gap-4 text-[#1a73e8] mb-4">
+                                    <div className="bg-white/90 backdrop-blur-3xl p-8 rounded-[24px] border border-white/20 shadow-2xl">
+                                        <div className="flex items-center gap-4 rainbow-text-clip font-bold mb-4">
                                             <Target size={20} className="animate-pulse" />
                                             <span className="text-[10px] font-bold tracking-tight font-semibold">Target Nexus Lock</span>
                                         </div>
@@ -139,8 +139,8 @@ export const LocationHighlights: React.FC = () => {
                                     </div>
                                 </div>
 
-                                <div className="absolute bottom-12 right-12 z-20 p-8 bg-[#151822] border border-[#DADCE0]/10 backdrop-blur-2xl rounded-[24px] border border-[#DADCE0] text-[#202124] flex items-center gap-6 group">
-                                    <BarChart3 size={32} className="text-[#1a73e8] group-hover:rotate-12 transition-transform" />
+                                <div className="absolute bottom-12 right-12 z-20 p-8 bg-[#151822] border border-white/20/10 backdrop-blur-2xl rounded-[24px] border border-white/20 text-[#202124] flex items-center gap-6 group">
+                                    <BarChart3 size={32} className="rainbow-text-clip font-bold group-hover:rotate-12 transition-transform" />
                                     <div>
                                         <p className="text-[10px] font-bold tracking-tight font-medium opacity-60">ROI Catalyst</p>
                                         <p className="text-xl font-sans font-bold">15-Min Radius</p>
@@ -159,8 +159,8 @@ export const LocationHighlights: React.FC = () => {
                 </div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="text-center mb-10">
-                        <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-4 block">The 2026 Forecast</span>
-                        <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter">Infrastructure <span className="text-[#1a73e8] italic">Hardening.</span></h2>
+                        <span className="text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold mb-4 block">The 2026 Forecast</span>
+                        <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter">Infrastructure <span className="rainbow-text-clip font-bold italic">Hardening.</span></h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -171,10 +171,10 @@ export const LocationHighlights: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="bg-[#151822] border border-[#DADCE0] p-16 rounded-[24px] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.05)] border border-[#DADCE0] group hover:border-accent transition-all flex flex-col justify-between"
+                                className="bg-[#151822] border border-white/20 p-16 rounded-[24px] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.05)] border border-white/20 group hover:border-accent transition-all flex flex-col justify-between"
                             >
                                 <div>
-                                    <div className="w-20 h-20 bg-white text-[#1a73e8] rounded-[1.5rem] flex items-center justify-center mb-12 group-hover:bg-accent group-hover:text-[#202124] transition-all shadow-xl shadow-secondary/10">
+                                    <div className="w-20 h-20 bg-white rainbow-text-clip font-bold rounded-[1.5rem] flex items-center justify-center mb-12 group-hover:bg-accent group-hover:text-[#202124] transition-all shadow-xl shadow-secondary/10">
                                         <group.icon size={32} />
                                     </div>
                                     <h3 className="text-3xl font-sans font-bold text-[#202124] mb-12 tracking-tight">{group.category}</h3>
@@ -182,19 +182,19 @@ export const LocationHighlights: React.FC = () => {
                                         {group.items.map((item, i) => (
                                             <div key={i} className="flex items-center justify-between group/item">
                                                 <div>
-                                                    <p className="text-lg font-bold text-[#202124] group-hover/item:text-[#1a73e8] transition-colors">{item.name}</p>
+                                                    <p className="text-lg font-bold text-[#202124] group-hover/item:rainbow-text-clip font-bold transition-colors">{item.name}</p>
                                                     <p className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold mt-1">{item.status}</p>
                                                 </div>
                                                 <div className="text-right">
-                                                    <p className="text-lg font-bold text-[#1a73e8]">{item.time}</p>
+                                                    <p className="text-lg font-bold rainbow-text-clip font-bold">{item.time}</p>
                                                 </div>
                                             </div>
                                         ))}
                                     </div>
                                 </div>
-                                <div className="mt-16 pt-8 border-t border-[#DADCE0] flex items-center justify-between text-[10px] font-bold tracking-tight font-medium text-[#5F6368]">
+                                <div className="mt-16 pt-8 border-t border-white/20 flex items-center justify-between text-[10px] font-bold tracking-tight font-medium text-[#5F6368]">
                                     <span>Verified 2026</span>
-                                    <ArrowUpRight size={16} className="text-[#1a73e8]" />
+                                    <ArrowUpRight size={16} className="rainbow-text-clip font-bold" />
                                 </div>
                             </motion.div>
                         ))}
@@ -214,19 +214,19 @@ export const LocationHighlights: React.FC = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             className="relative z-10"
                         >
-                            <Zap size={72} className="text-[#1a73e8] mx-auto mb-12 animate-pulse" />
-                            <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] mb-12 tracking-tighter leading-tight">The Investment <br /><span className="text-[#1a73e8] italic text-5xl md:text-9xl">Conclusion.</span></h2>
+                            <Zap size={72} className="rainbow-text-clip font-bold mx-auto mb-12 animate-pulse" />
+                            <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] mb-12 tracking-tighter leading-tight">The Investment <br /><span className="rainbow-text-clip font-bold italic text-5xl md:text-9xl">Conclusion.</span></h2>
                             <p className="text-2xl text-[#5F6368] leading-relaxed font-medium mb-8 max-w-3xl mx-auto">
                                 Hinjewadi Phase 3 is the fastest-growing real estate cluster in Pune West. Life Republic's 390-acre scale ensures that your asset is not just a home, but a sovereign stake in the city's IT future.
                             </p>
                             <div className="flex flex-col md:flex-row gap-8 justify-center">
                                 <a href="/roi-calculator">
-                                    <button className="bg-[#151822] border border-[#DADCE0] text-[#202124] px-16 py-7 rounded-full font-bold text-lg hover:bg-accent hover:text-[#202124] transition-all shadow-2xl flex items-center gap-4">
+                                    <button className="bg-[#151822] border border-white/20 text-[#202124] px-16 py-7 rounded-full font-bold text-lg hover:bg-accent hover:text-[#202124] transition-all shadow-2xl flex items-center gap-4">
                                         Synthesize ROI <ArrowUpRight size={24} />
                                     </button>
                                 </a>
                                 <a href="/contact">
-                                    <button className="bg-transparent border-2 border-[#DADCE0] text-[#202124] px-16 py-7 rounded-full font-bold text-lg hover:bg-white/5 transition-all">
+                                    <button className="bg-transparent border-2 border-white/20 text-[#202124] px-16 py-7 rounded-full font-bold text-lg hover:bg-white/5 transition-all">
                                         Secure Site Visit
                                     </button>
                                 </a>

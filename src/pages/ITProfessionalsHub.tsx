@@ -29,11 +29,11 @@ export const ITProfessionalsHub: React.FC = () => {
                         transition={{ duration: 0.8 }}
                         className="max-w-3xl space-y-8"
                     >
-                        <span className="text-[#1a73e8] text-sm font-bold tracking-tight font-semibold block">
+                        <span className="rainbow-text-clip font-bold text-sm font-bold tracking-tight font-semibold block">
                             Rajiv Gandhi IT Park
                         </span>
                         <h1 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter leading-[1.1]">
-                            The Ultimate <br /><span className="text-[#1a73e8] italic">Work-Life</span> Synthesis.
+                            The Ultimate <br /><span className="rainbow-text-clip font-bold italic">Work-Life</span> Synthesis.
                         </h1>
                         <p className="text-xl text-gray-300 leading-relaxed font-medium">
                             Designed exclusively for the visionaries shaping the future in Pune's IT Corridor. Reduce your commute, elevate your lifestyle, and secure your financial future in a 390-acre smart township.
@@ -51,8 +51,8 @@ export const ITProfessionalsHub: React.FC = () => {
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="text-center mb-8">
-                        <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold block mb-4">Strategic Location</span>
-                        <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter">Minutes from <br /><span className="text-[#1a73e8] italic">Innovation.</span></h2>
+                        <span className="text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold block mb-4">Strategic Location</span>
+                        <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter">Minutes from <br /><span className="rainbow-text-clip font-bold italic">Innovation.</span></h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -67,9 +67,9 @@ export const ITProfessionalsHub: React.FC = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="p-8 bg-[#F8F9FA] rounded-[24px] border border-[#DADCE0] hover:shadow-2xl hover:bg-[#151822] border border-[#DADCE0] transition-all duration-300 group"
+                                className="p-8 bg-[#F8F9FA] rounded-[24px] border border-white/20 hover:shadow-2xl hover:bg-[#151822] border border-white/20 transition-all duration-300 group"
                             >
-                                <div className="w-16 h-16 bg-[#151822] border border-[#DADCE0] rounded-2xl flex items-center justify-center text-[#1a73e8] shadow-lg group-hover:bg-accent group-hover:text-[#202124] transition-colors mb-8">
+                                <div className="w-16 h-16 bg-[#151822] border border-white/20 rounded-2xl flex items-center justify-center rainbow-text-clip font-bold shadow-lg group-hover:bg-accent group-hover:text-[#202124] transition-colors mb-8">
                                     <item.icon size={28} />
                                 </div>
                                 <h3 className="text-4xl font-sans font-bold text-[#202124] mb-2">{item.time}</h3>
@@ -87,9 +87,9 @@ export const ITProfessionalsHub: React.FC = () => {
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2 space-y-10">
-                            <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold block">Smart Homes</span>
+                            <span className="text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold block">Smart Homes</span>
                             <h2 className="text-4xl md:text-5xl font-sans font-bold tracking-tighter leading-tight">
-                                Engineered for <br /><span className="text-[#1a73e8] italic">Digital Nomads.</span>
+                                Engineered for <br /><span className="rainbow-text-clip font-bold italic">Digital Nomads.</span>
                             </h2>
                             <p className="text-xl text-[#5F6368] font-medium leading-relaxed">
                                 Experience 40+ lifestyle amenities including dedicated co-working hubs, high-speed fiber connectivity, and smart home automation natively built into your living space.
@@ -102,7 +102,7 @@ export const ITProfessionalsHub: React.FC = () => {
                                     "24/7 power backup and enterprise-grade security"
                                 ].map((feature, idx) => (
                                     <li key={idx} className="flex items-center gap-4 text-gray-300 font-medium">
-                                        <Wifi size={18} className="text-[#1a73e8]" />
+                                        <Wifi size={18} className="rainbow-text-clip font-bold" />
                                         {feature}
                                     </li>
                                 ))}

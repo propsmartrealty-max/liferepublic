@@ -18,10 +18,10 @@ export const Button: React.FC<ButtonProps> = ({
     const baseStyles = "inline-flex items-center justify-center font-medium rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#1a73e8] focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none gap-2";
 
     const variants = {
-        primary: "bg-[#1a73e8] text-white hover:bg-[#1557b0] shadow-sm",
-        secondary: "bg-white border border-[#DADCE0] text-[#1a73e8] hover:bg-[#F8F9FA]",
+        primary: "bg-rainbow text-white hover:bg-[#1557b0] shadow-sm",
+        secondary: "bg-white border border-white/20 rainbow-text-clip font-bold hover:bg-[#F8F9FA]",
         whatsapp: "bg-[#188038] text-white hover:bg-[#137333] shadow-sm",
-        outline: "bg-transparent text-[#1a73e8] border border-[#1a73e8] hover:bg-[#1a73e8]/10",
+        outline: "bg-transparent rainbow-text-clip font-bold border border-white/20 hover:bg-rainbow/10",
         ghost: "text-[#5F6368] hover:bg-[#F1F3F4] hover:text-[#202124]"
     };
 

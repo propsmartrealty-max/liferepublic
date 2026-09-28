@@ -42,7 +42,7 @@ export const InvestmentLedger: React.FC = () => {
                 <motion.div 
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    className="mb-32 bg-white rounded-[24px] p-10 flex flex-col md:flex-row items-center justify-between border border-[#DADCE0] relative overflow-hidden group shadow-[0_60px_120px_-30px_rgba(0,0,0,0.5)]"
+                    className="mb-32 bg-white rounded-[24px] p-10 flex flex-col md:flex-row items-center justify-between border border-white/20 relative overflow-hidden group shadow-[0_60px_120px_-30px_rgba(0,0,0,0.5)]"
                 >
                     <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-transparent pointer-events-none"></div>
                     
@@ -64,7 +64,7 @@ export const InvestmentLedger: React.FC = () => {
                                     <span className={`text-lg font-bold ${liveTicker[tickerIndex].units > 0 ? 'text-[#202124]/60' : 'text-red-400'}`}>
                                         {liveTicker[tickerIndex].units} Sovereign Units Left
                                     </span>
-                                    <span className={`text-[10px] px-6 py-2 rounded-full font-bold tracking-tight font-semibold border ${liveTicker[tickerIndex].urgency === 'Sovereign Scarcity' ? 'bg-red-500/20 text-red-400 border-red-500/40' : 'bg-white/10 text-[#1a73e8] border-[#DADCE0]'}`}>
+                                    <span className={`text-[10px] px-6 py-2 rounded-full font-bold tracking-tight font-semibold border ${liveTicker[tickerIndex].urgency === 'Sovereign Scarcity' ? 'bg-red-500/20 text-red-400 border-red-500/40' : 'bg-white/10 rainbow-text-clip font-bold border-white/20'}`}>
                                         {liveTicker[tickerIndex].urgency}
                                     </span>
                                 </div>
@@ -73,7 +73,7 @@ export const InvestmentLedger: React.FC = () => {
                     </div>
 
                     <div className="hidden lg:flex items-center gap-6 text-[10px] font-bold text-[#202124]/30 tracking-tight font-semibold whitespace-nowrap">
-                        <Network size={20} className="text-[#1a73e8]" /> Neural Sync Active
+                        <Network size={20} className="rainbow-text-clip font-bold" /> Neural Sync Active
                     </div>
                 </motion.div>
 
@@ -82,13 +82,13 @@ export const InvestmentLedger: React.FC = () => {
                         <motion.div 
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            className="inline-flex items-center gap-4 px-6 py-3 bg-[#151822] rounded-full mb-10 border border-[#DADCE0]"
+                            className="inline-flex items-center gap-4 px-6 py-3 bg-[#151822] rounded-full mb-10 border border-white/20"
                         >
-                            <Cpu size={16} className="text-[#1a73e8]" />
+                            <Cpu size={16} className="rainbow-text-clip font-bold" />
                             <span className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold">Financial Synthesis Protocol v6.5</span>
                         </motion.div>
                         <h2 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-12 tracking-tighter leading-[0.8]">
-                            The Financial <br /> <span className="text-[#1a73e8] italic">Authority.</span>
+                            The Financial <br /> <span className="rainbow-text-clip font-bold italic">Authority.</span>
                         </h2>
                         <p className="text-2xl md:text-3xl text-[#5F6368] font-medium leading-relaxed max-w-3xl">
                             Mapping the 14-year appreciation lifecycle of Hinjewadi's premier township. The upcoming 2026 Metro activation is the final high-velocity price trigger.
@@ -109,7 +109,7 @@ export const InvestmentLedger: React.FC = () => {
                     <motion.div 
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="lg:col-span-2 bg-[#151822] border border-[#DADCE0] rounded-[5rem] shadow-[0_100px_200px_-50px_rgba(0,0,0,0.15)] border border-[#DADCE0] overflow-hidden"
+                        className="lg:col-span-2 bg-[#151822] border border-white/20 rounded-[5rem] shadow-[0_100px_200px_-50px_rgba(0,0,0,0.15)] border border-white/20 overflow-hidden"
                     >
                         <div className="overflow-x-auto">
                             <table className="w-full text-left border-collapse">
@@ -128,13 +128,13 @@ export const InvestmentLedger: React.FC = () => {
                                             <td className="px-12 py-12">
                                                 <div className="font-sans font-bold text-[#202124] text-4xl flex items-center gap-4">
                                                     {row.year}
-                                                    {row.projected && <Sparkles size={24} className="text-[#1a73e8] animate-pulse" />}
+                                                    {row.projected && <Sparkles size={24} className="rainbow-text-clip font-bold animate-pulse" />}
                                                 </div>
                                             </td>
                                             <td className="px-12 py-12">
                                                 <div className="flex items-baseline gap-2">
                                                     <span className="text-gray-300 font-bold text-xl">₹</span>
-                                                    <span className={`text-4xl font-bold tracking-tighter ${row.projected ? 'text-[#1a73e8]' : 'text-[#202124]'}`}>{row.avgPrice}</span>
+                                                    <span className={`text-4xl font-bold tracking-tighter ${row.projected ? 'rainbow-text-clip font-bold' : 'text-[#202124]'}`}>{row.avgPrice}</span>
                                                 </div>
                                             </td>
                                             <td className="px-12 py-12">
@@ -142,11 +142,11 @@ export const InvestmentLedger: React.FC = () => {
                                                     {row.inventory}
                                                 </span>
                                             </td>
-                                            <td className={`px-12 py-12 font-bold text-sm leading-relaxed max-w-[200px] ${row.projected ? 'text-[#1a73e8] italic' : 'text-[#202124]/60'}`}>
+                                            <td className={`px-12 py-12 font-bold text-sm leading-relaxed max-w-[200px] ${row.projected ? 'rainbow-text-clip font-bold italic' : 'text-[#202124]/60'}`}>
                                                 {row.milestones}
                                             </td>
                                             <td className="px-12 py-12">
-                                                <div className={`flex items-center gap-2 font-bold text-2xl ${row.projected ? 'text-[#1a73e8]' : 'text-green-600'}`}>
+                                                <div className={`flex items-center gap-2 font-bold text-2xl ${row.projected ? 'rainbow-text-clip font-bold' : 'text-green-600'}`}>
                                                     {row.roi}
                                                     <TrendingUp size={24} className={row.projected ? 'animate-bounce' : ''} />
                                                 </div>
@@ -162,16 +162,16 @@ export const InvestmentLedger: React.FC = () => {
                     <motion.div 
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        className="bg-white rounded-[5rem] p-16 text-[#202124] border border-[#DADCE0] shadow-2xl relative overflow-hidden flex flex-col justify-between"
+                        className="bg-white rounded-[5rem] p-16 text-[#202124] border border-white/20 shadow-2xl relative overflow-hidden flex flex-col justify-between"
                     >
                         <div className="absolute top-0 right-0 p-12 opacity-10">
-                            <Calculator size={120} className="text-[#1a73e8]" />
+                            <Calculator size={120} className="rainbow-text-clip font-bold" />
                         </div>
                         
                         <div className="relative z-10">
                             <div className="flex items-center gap-4 mb-12">
-                                <Coins size={24} className="text-[#1a73e8]" />
-                                <h3 className="font-bold tracking-tight font-semibold text-[11px] text-[#1a73e8]">Yield Projection Calculator</h3>
+                                <Coins size={24} className="rainbow-text-clip font-bold" />
+                                <h3 className="font-bold tracking-tight font-semibold text-[11px] rainbow-text-clip font-bold">Yield Projection Calculator</h3>
                             </div>
                             
                             <div className="space-y-12">
@@ -185,7 +185,7 @@ export const InvestmentLedger: React.FC = () => {
                                                     setCalcConfig(c);
                                                     setInvestmentAmount(c === '2 BHK' ? 8500000 : c === '3 BHK' ? 12500000 : 25000000);
                                                 }}
-                                                className={`py-4 rounded-2xl text-xs font-bold transition-all border ${calcConfig === c ? 'bg-accent text-[#202124] border-accent' : 'bg-white/5 border-[#DADCE0] text-[#202124]/60 hover:border-[#DADCE0]'}`}
+                                                className={`py-4 rounded-2xl text-xs font-bold transition-all border ${calcConfig === c ? 'bg-accent text-[#202124] border-accent' : 'bg-white/5 border-white/20 text-[#202124]/60 hover:border-white/20'}`}
                                             >
                                                 {c}
                                             </button>
@@ -205,16 +205,16 @@ export const InvestmentLedger: React.FC = () => {
                                         step={500000}
                                         value={investmentAmount}
                                         onChange={(e) => setInvestmentAmount(Number(e.target.value))}
-                                        className="w-full h-1.5 bg-[#151822] border border-[#DADCE0]/10 rounded-full appearance-none cursor-pointer accent-accent"
+                                        className="w-full h-1.5 bg-[#151822] border border-white/20/10 rounded-full appearance-none cursor-pointer accent-accent"
                                     />
                                 </div>
 
-                                <div className="space-y-8 bg-[#151822] border border-[#DADCE0]/5 p-10 rounded-[24px] border border-[#DADCE0]">
+                                <div className="space-y-8 bg-[#151822] border border-white/20/5 p-10 rounded-[24px] border border-white/20">
                                     <div className="flex justify-between items-center">
                                         <span className="text-xs text-[#202124]/40 font-bold tracking-tight font-medium flex items-center gap-2">
                                             <TrendingUp size={14} className="text-green-400" /> 2026 Proj. Value
                                         </span>
-                                        <span className="text-3xl font-mono font-bold text-[#1a73e8]">₹{(projectedValue / 1000000).toFixed(2)}Cr</span>
+                                        <span className="text-3xl font-mono font-bold rainbow-text-clip font-bold">₹{(projectedValue / 1000000).toFixed(2)}Cr</span>
                                     </div>
                                     <div className="h-px bg-transparent/10"></div>
                                     <div className="flex justify-between items-center">
@@ -227,7 +227,7 @@ export const InvestmentLedger: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="pt-12 text-[10px] text-[#202124]/20 font-medium leading-relaxed italic border-t border-[#DADCE0] mt-12">
+                        <div className="pt-12 text-[10px] text-[#202124]/20 font-medium leading-relaxed italic border-t border-white/20 mt-12">
                             *Projections based on 14-year historical CAGR and 2026 infrastructure milestones. Verified data source active.
                         </div>
                     </motion.div>
@@ -244,15 +244,15 @@ export const InvestmentLedger: React.FC = () => {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.1 }}
-                            className="p-16 bg-[#F8F9FA]/50 rounded-[5rem] border border-[#DADCE0] flex flex-col gap-10 group hover:border-accent hover:bg-[#151822] border border-[#DADCE0] hover:shadow-2xl transition-all"
+                            className="p-16 bg-[#F8F9FA]/50 rounded-[5rem] border border-white/20 flex flex-col gap-10 group hover:border-accent hover:bg-[#151822] border border-white/20 hover:shadow-2xl transition-all"
                         >
-                            <div className="w-20 h-20 bg-[#151822] border border-[#DADCE0] rounded-3xl flex items-center justify-center text-[#1a73e8] shadow-xl group-hover:rotate-12 transition-transform">
+                            <div className="w-20 h-20 bg-[#151822] border border-white/20 rounded-3xl flex items-center justify-center rainbow-text-clip font-bold shadow-xl group-hover:rotate-12 transition-transform">
                                 <card.icon size={40} />
                             </div>
                             <div className="space-y-6">
-                                <h4 className="text-3xl font-bold text-[#202124] tracking-tight group-hover:text-[#1a73e8] transition-colors">{card.title}</h4>
+                                <h4 className="text-3xl font-bold text-[#202124] tracking-tight group-hover:rainbow-text-clip font-bold transition-colors">{card.title}</h4>
                                 <p className="text-xl text-[#5F6368] font-medium leading-relaxed italic">"{card.desc}"</p>
-                                <div className="flex items-center gap-3 text-[11px] font-bold text-[#1a73e8] tracking-tight font-medium pt-4">
+                                <div className="flex items-center gap-3 text-[11px] font-bold rainbow-text-clip font-bold tracking-tight font-medium pt-4">
                                     <ArrowRight size={16} /> Audit Data Source
                                 </div>
                             </div>

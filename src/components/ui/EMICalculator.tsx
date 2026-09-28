@@ -24,10 +24,10 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
     }, [emi, tenure, amount]);
 
     return (
-        <div className="bg-[#151822] border border-[#DADCE0] rounded-[24px] border border-[#DADCE0] shadow-2xl overflow-hidden">
+        <div className="bg-[#151822] border border-white/20 rounded-[24px] border border-white/20 shadow-2xl overflow-hidden">
             <div className="p-8 md:p-12">
                 <div className="flex items-center gap-3 mb-10">
-                    <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center text-[#1a73e8]">
+                    <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center rainbow-text-clip font-bold">
                         <Calculator size={20} />
                     </div>
                     <div>
@@ -42,7 +42,7 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
                         <div className="space-y-4">
                             <div className="flex justify-between items-end">
                                 <label className="text-sm font-bold text-[#202124] tracking-tight font-medium">Loan Amount</label>
-                                <span className="text-lg font-bold text-[#1a73e8]">₹{(amount / 100000).toFixed(2)} Lakhs</span>
+                                <span className="text-lg font-bold rainbow-text-clip font-bold">₹{(amount / 100000).toFixed(2)} Lakhs</span>
                             </div>
                             <input 
                                 type="range" 
@@ -58,7 +58,7 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
                         <div className="space-y-4">
                             <div className="flex justify-between items-end">
                                 <label className="text-sm font-bold text-[#202124] tracking-tight font-medium">Tenure (Years)</label>
-                                <span className="text-lg font-bold text-[#1a73e8]">{tenure} Yrs</span>
+                                <span className="text-lg font-bold rainbow-text-clip font-bold">{tenure} Yrs</span>
                             </div>
                             <input 
                                 type="range" 
@@ -74,7 +74,7 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
                         <div className="space-y-4">
                             <div className="flex justify-between items-end">
                                 <label className="text-sm font-bold text-[#202124] tracking-tight font-medium">Interest Rate (%)</label>
-                                <span className="text-lg font-bold text-[#1a73e8]">{rate}%</span>
+                                <span className="text-lg font-bold rainbow-text-clip font-bold">{rate}%</span>
                             </div>
                             <input 
                                 type="range" 
@@ -90,19 +90,19 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
 
                     {/* Results Display */}
                     <div className="bg-white rounded-[2rem] p-10 text-[#202124] relative overflow-hidden flex flex-col justify-between">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#151822] border border-[#DADCE0]/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#151822] border border-white/20/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
                         
                         <div>
                             <span className="text-[#202124]/40 text-[10px] font-bold tracking-tight font-semibold block mb-4">Estimated Monthly Installment</span>
                             <div className="text-5xl md:text-5xl font-sans font-bold mb-4">
                                 ₹{emi.toLocaleString('en-IN')}
                             </div>
-                            <div className="flex items-center gap-2 text-[#1a73e8] text-sm font-bold">
+                            <div className="flex items-center gap-2 rainbow-text-clip font-bold text-sm font-bold">
                                 <TrendingUp size={16} /> ROI Projection Available
                             </div>
                         </div>
 
-                        <div className="pt-10 border-t border-[#DADCE0] space-y-6">
+                        <div className="pt-10 border-t border-white/20 space-y-6">
                             <div className="flex justify-between items-center text-sm">
                                 <span className="text-[#202124]/60">Total Interest Payable</span>
                                 <span className="font-bold">₹{Math.round(totalInterest / 100000).toFixed(2)} L</span>
@@ -115,7 +115,7 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
                 </div>
             </div>
 
-            <div className="bg-[#F8F9FA] p-6 flex items-center gap-3 border-t border-[#DADCE0]">
+            <div className="bg-[#F8F9FA] p-6 flex items-center gap-3 border-t border-white/20">
                 <Info size={14} className="text-[#5F6368]" />
                 <p className="text-[10px] text-[#5F6368] font-medium">
                     *Estimates are indicative. Actual bank rates may vary based on credit score and bank policy.

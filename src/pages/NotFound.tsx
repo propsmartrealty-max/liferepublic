@@ -24,26 +24,26 @@ export const NotFound: React.FC = () => {
                         It seems you've wandered off the map. But don't worry, finding your dream home is easier than finding this page.
                     </p>
 
-                    <div className="bg-[#151822] border border-[#DADCE0] p-8 rounded-2xl shadow-sm border border-[#DADCE0] mb-12">
+                    <div className="bg-[#151822] border border-white/20 p-8 rounded-2xl shadow-sm border border-white/20 mb-12">
                         <h3 className="text-lg font-bold text-[#202124] mb-4">What were you looking for?</h3>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <Link to="/" className="flex flex-col items-center p-4 rounded-lg bg-[#F8F9FA] hover:bg-accent/10 hover:text-[#1a73e8] transition-colors group">
-                                <Home className="w-8 h-8 mb-2 text-[#5F6368] group-hover:text-[#1a73e8]" />
+                            <Link to="/" className="flex flex-col items-center p-4 rounded-lg bg-[#F8F9FA] hover:bg-accent/10 hover:rainbow-text-clip font-bold transition-colors group">
+                                <Home className="w-8 h-8 mb-2 text-[#5F6368] group-hover:rainbow-text-clip font-bold" />
                                 <span className="font-semibold">Homepage</span>
                             </Link>
-                            <Link to="/projects" className="flex flex-col items-center p-4 rounded-lg bg-[#F8F9FA] hover:bg-accent/10 hover:text-[#1a73e8] transition-colors group">
-                                <Search className="w-8 h-8 mb-2 text-[#5F6368] group-hover:text-[#1a73e8]" />
+                            <Link to="/projects" className="flex flex-col items-center p-4 rounded-lg bg-[#F8F9FA] hover:bg-accent/10 hover:rainbow-text-clip font-bold transition-colors group">
+                                <Search className="w-8 h-8 mb-2 text-[#5F6368] group-hover:rainbow-text-clip font-bold" />
                                 <span className="font-semibold">Browse Projects</span>
                             </Link>
-                            <Link to="/contact" className="flex flex-col items-center p-4 rounded-lg bg-[#F8F9FA] hover:bg-accent/10 hover:text-[#1a73e8] transition-colors group">
-                                <Phone className="w-8 h-8 mb-2 text-[#5F6368] group-hover:text-[#1a73e8]" />
+                            <Link to="/contact" className="flex flex-col items-center p-4 rounded-lg bg-[#F8F9FA] hover:bg-accent/10 hover:rainbow-text-clip font-bold transition-colors group">
+                                <Phone className="w-8 h-8 mb-2 text-[#5F6368] group-hover:rainbow-text-clip font-bold" />
                                 <span className="font-semibold">Contact Us</span>
                             </Link>
                         </div>
                     </div>
 
                     <div className="text-sm text-[#5F6368]">
-                        Top Searches: <Link to="/2-bhk-flats-in-hinjewadi" className="underline hover:text-[#1a73e8]">2 BHK Flats</Link>, <Link to="/nri-corner" className="underline hover:text-[#1a73e8]">NRI Investment</Link>
+                        Top Searches: <Link to="/2-bhk-flats-in-hinjewadi" className="underline hover:rainbow-text-clip font-bold">2 BHK Flats</Link>, <Link to="/nri-corner" className="underline hover:rainbow-text-clip font-bold">NRI Investment</Link>
                     </div>
                 </div>
             </main>

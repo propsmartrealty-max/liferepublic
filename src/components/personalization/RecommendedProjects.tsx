@@ -47,7 +47,7 @@ export const RecommendedProjects: React.FC = () => {
                         <motion.span 
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            className="text-[#1a73e8] text-xs font-bold tracking-tight font-semibold flex items-center gap-2 mb-3"
+                            className="rainbow-text-clip font-bold text-xs font-bold tracking-tight font-semibold flex items-center gap-2 mb-3"
                         >
                             <Sparkles size={14} /> Curated For You
                         </motion.span>

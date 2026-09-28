@@ -70,11 +70,11 @@ export const MediaCenter: React.FC = () => {
                         transition={{ duration: 1 }}
                     >
                         <div className="inline-flex items-center gap-4 px-6 py-3 bg-accent/20 border border-accent/30 rounded-full mb-12 backdrop-blur-xl">
-                            <Newspaper size={16} className="text-[#1a73e8]" />
-                            <span className="text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8]">Sovereign Archive v5.5</span>
+                            <Newspaper size={16} className="rainbow-text-clip font-bold" />
+                            <span className="text-[10px] font-bold tracking-tight font-semibold rainbow-text-clip font-bold">Sovereign Archive v5.5</span>
                         </div>
                         <h1 className="text-5xl md:text-9xl font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-none">
-                            The Media <br /> <span className="text-[#1a73e8] italic text-5xl md:text-[5rem] lg:text-[6rem]">Nexus.</span>
+                            The Media <br /> <span className="rainbow-text-clip font-bold italic text-5xl md:text-[5rem] lg:text-[6rem]">Nexus.</span>
                         </h1>
                         <p className="text-2xl text-[#5F6368] font-medium max-w-3xl mx-auto leading-relaxed">
                             Synthesizing the structural evolution of Pune's premier township. Access the definitive monograph of our 2026 Hinjewadi transformation.
@@ -83,7 +83,7 @@ export const MediaCenter: React.FC = () => {
                 </div>
 
                 {/* Sovereign News Ticker */}
-                <div className="absolute bottom-0 left-0 w-full bg-transparent/5 backdrop-blur-3xl border-t border-[#DADCE0] py-6 z-20 overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-full bg-transparent/5 backdrop-blur-3xl border-t border-white/20 py-6 z-20 overflow-hidden">
                     <div className="flex animate-marquee whitespace-nowrap">
                         {[
                             "METRO LINE 3: Ph 3 Structural Synthesis at 92% Completion",
@@ -92,7 +92,7 @@ export const MediaCenter: React.FC = () => {
                             "LIFE REPUBLIC: 12,000+ Citizens Now Part of the Monograph",
                             "QRIOUS SMART HOMES: Neural Integration Phase 1 Commencing"
                         ].map((news, i) => (
-                            <span key={`news-ticker-${i}`} className="text-[11px] font-bold text-[#1a73e8] tracking-tight font-semibold mx-16 flex items-center gap-4 group">
+                            <span key={`news-ticker-${i}`} className="text-[11px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold mx-16 flex items-center gap-4 group">
                                 <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div> {news}
                             </span>
                         ))}
@@ -102,9 +102,9 @@ export const MediaCenter: React.FC = () => {
 
             <section className="py-16 bg-[#F8F9FA]/30">
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col md:flex-row items-end justify-between mb-8 gap-8 border-b border-[#DADCE0] pb-12">
+                    <div className="flex flex-col md:flex-row items-end justify-between mb-8 gap-8 border-b border-white/20 pb-12">
                         <div className="max-w-2xl">
-                            <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-4 block">Feed</span>
+                            <span className="text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold mb-4 block">Feed</span>
                             <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter">Architectural Insights.</h2>
                         </div>
                         <div className="flex gap-6">
@@ -113,8 +113,8 @@ export const MediaCenter: React.FC = () => {
                                 { label: 'Construction', icon: Building2 },
                                 { label: 'Market ROI', icon: TrendingUp }
                             ].map((tab, i) => (
-                                <button key={i} className="flex items-center gap-3 px-6 py-3 bg-white border border-[#DADCE0] rounded-full text-[10px] font-bold tracking-tight font-medium text-[#202124] hover:border-accent transition-all shadow-sm">
-                                    <tab.icon size={14} className="text-[#1a73e8]" /> {tab.label}
+                                <button key={i} className="flex items-center gap-3 px-6 py-3 bg-white border border-white/20 rounded-full text-[10px] font-bold tracking-tight font-medium text-[#202124] hover:border-accent transition-all shadow-sm">
+                                    <tab.icon size={14} className="rainbow-text-clip font-bold" /> {tab.label}
                                 </button>
                             ))}
                         </div>
@@ -138,7 +138,7 @@ export const MediaCenter: React.FC = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className="bg-[#151822] border border-[#DADCE0] rounded-[24px] overflow-hidden border border-[#DADCE0] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] transition-all group flex flex-col"
+                                    className="bg-[#151822] border border-white/20 rounded-[24px] overflow-hidden border border-white/20 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] transition-all group flex flex-col"
                                 >
                                     <Link to={`/media-center/${post.slug}`} className="relative block h-80 overflow-hidden bg-gray-200">
                                         <div className="absolute inset-0 bg-white/30 group-hover:bg-transparent transition-all z-10"></div>
@@ -147,27 +147,27 @@ export const MediaCenter: React.FC = () => {
                                             alt={post.title}
                                             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0"
                                         />
-                                        <div className="absolute bottom-8 left-8 flex items-center gap-3 px-4 py-2 bg-white/10 backdrop-blur-xl rounded-xl border border-[#DADCE0] text-[#202124] z-20">
+                                        <div className="absolute bottom-8 left-8 flex items-center gap-3 px-4 py-2 bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 text-[#202124] z-20">
                                             <Play size={16} fill="currentColor" />
                                             <span className="text-[10px] font-bold tracking-tight font-medium">View Monograph</span>
                                         </div>
                                     </Link>
                                     
                                     <div className="p-12 flex flex-col flex-grow">
-                                        <div className="flex items-center gap-3 text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-6">
+                                        <div className="flex items-center gap-3 text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold mb-6">
                                             <Calendar size={12} />
                                             {formatDate(post.published_at || post.created_at)}
                                         </div>
                                         <Link to={`/media-center/${post.slug}`}>
-                                            <h2 className="text-3xl font-sans font-bold mb-6 text-[#202124] line-clamp-2 hover:text-[#1a73e8] transition-colors leading-tight tracking-tighter">{post.title}</h2>
+                                            <h2 className="text-3xl font-sans font-bold mb-6 text-[#202124] line-clamp-2 hover:rainbow-text-clip font-bold transition-colors leading-tight tracking-tighter">{post.title}</h2>
                                         </Link>
                                         <p className="text-[#5F6368] mb-10 flex-grow line-clamp-3 font-medium leading-relaxed text-lg">{post.excerpt || post.content.substring(0, 150)}...</p>
                                         
-                                        <div className="flex items-center justify-between pt-10 border-t border-[#DADCE0]">
+                                        <div className="flex items-center justify-between pt-10 border-t border-white/20">
                                             <Link to={`/media-center/${post.slug}`}>
                                                 <button className="flex items-center gap-3 text-[10px] font-bold text-[#202124] tracking-tight font-semibold group/btn">
                                                     Read Full Thesis 
-                                                    <ArrowRight size={16} className="text-[#1a73e8] group-hover/btn:translate-x-2 transition-transform" />
+                                                    <ArrowRight size={16} className="rainbow-text-clip font-bold group-hover/btn:translate-x-2 transition-transform" />
                                                 </button>
                                             </Link>
                                             <ShareButtons
@@ -193,13 +193,13 @@ export const MediaCenter: React.FC = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             className="relative z-10"
                         >
-                            <Sparkles size={64} className="text-[#1a73e8] mx-auto mb-10 animate-pulse" />
-                            <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-10 tracking-tighter">Subscribe to the <br /><span className="text-[#1a73e8] italic">Sovereign Pulse.</span></h2>
+                            <Sparkles size={64} className="rainbow-text-clip font-bold mx-auto mb-10 animate-pulse" />
+                            <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-10 tracking-tighter">Subscribe to the <br /><span className="rainbow-text-clip font-bold italic">Sovereign Pulse.</span></h2>
                             <p className="text-[#5F6368] text-2xl mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
                                 Join 12,000+ citizens and investors. Receive direct architectural insights and 2026 infrastructure synthesis once a month.
                             </p>
                             <div className="flex flex-col md:flex-row gap-6 max-w-2xl mx-auto">
-                                <input type="email" placeholder="Sovereign Email Address" className="flex-1 bg-[#151822] border border-[#DADCE0]/5 border border-[#DADCE0] rounded-full px-10 py-6 text-[#202124] placeholder-gray-500 focus:outline-none focus:border-accent font-bold text-lg" />
+                                <input type="email" placeholder="Sovereign Email Address" className="flex-1 bg-[#151822] border border-white/20/5 border border-white/20 rounded-full px-10 py-6 text-[#202124] placeholder-gray-500 focus:outline-none focus:border-accent font-bold text-lg" />
                                 <button className="bg-accent text-[#202124] px-16 py-6 rounded-full font-bold text-lg hover:bg-white hover:text-[#202124] transition-all shadow-xl shadow-accent/20">
                                     Join the Nexus
                                 </button>

@@ -13,7 +13,7 @@ const guidelines = [
         title: 'Global Capital Flow',
         desc: 'FEMA-synchronized guidelines for repatriation of sale proceeds via NRE/NRO accounts for zero-latency capital mobility.',
         icon: Network,
-        color: 'bg-blue-50 rainbow-text-clip font-bold'
+        color: 'bg-white/5 rainbow-text-clip font-bold'
     },
     {
         title: 'TDS & Tax Synthesis',
@@ -42,11 +42,11 @@ export const NRIInvestorHub: React.FC = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             className="inline-flex items-center gap-4 px-6 py-3 bg-white text-[#202124] rounded-full mb-10 shadow-xl"
                         >
-                            <Globe size={16} className="text-[#1a73e8] animate-pulse" />
+                            <Globe size={16} className="rainbow-text-clip font-bold animate-pulse" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold">Global Investment Authority v6.0</span>
                         </motion.div>
                         <h2 className="text-5xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] mb-12 tracking-tighter leading-[0.8]">
-                            NRI Legal & <br /><span className="text-[#1a73e8] italic">Tax Synthesis.</span>
+                            NRI Legal & <br /><span className="rainbow-text-clip font-bold italic">Tax Synthesis.</span>
                         </h2>
                         <p className="text-2xl text-[#5F6368] font-medium leading-relaxed mb-8 max-w-2xl">
                             Investing in Indian real estate from abroad requires architectural precision. Our dedicated NRI cell provides the legal and financial clarity needed for secure capital placement at Life Republic.
@@ -59,7 +59,7 @@ export const NRIInvestorHub: React.FC = () => {
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className="p-10 rounded-[3.5rem] border border-[#DADCE0] hover:border-accent hover:bg-[#F8F9FA]/50 transition-all group relative overflow-hidden"
+                                    className="p-10 rounded-[3.5rem] border border-white/20 hover:border-accent hover:bg-[#F8F9FA]/50 transition-all group relative overflow-hidden"
                                 >
                                     <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-125 transition-transform">
                                         <item.icon size={60} />
@@ -78,7 +78,7 @@ export const NRIInvestorHub: React.FC = () => {
                         <motion.div 
                             initial={{ scale: 0.95, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
-                            className="bg-white rounded-[5rem] p-16 md:p-24 text-[#202124] relative z-10 overflow-hidden shadow-[0_100px_200px_-50px_rgba(0,0,0,0.6)] border border-[#DADCE0]"
+                            className="bg-white rounded-[5rem] p-16 md:p-24 text-[#202124] relative z-10 overflow-hidden shadow-[0_100px_200px_-50px_rgba(0,0,0,0.6)] border border-white/20"
                         >
                             <div className="absolute inset-0 bg-[url('/images/aerial-sunset.png')] bg-cover bg-center opacity-5 grayscale pointer-events-none group-hover:scale-110 transition-transform duration-[3s]"></div>
                             <div className="absolute -top-32 -right-32 w-80 h-80 bg-accent/20 rounded-full blur-[100px]"></div>
@@ -87,7 +87,7 @@ export const NRIInvestorHub: React.FC = () => {
                                 <div className="w-16 h-16 bg-accent text-[#202124] rounded-[2rem] flex items-center justify-center shadow-2xl">
                                     <FileText size={32} />
                                 </div>
-                                <span className="font-bold tracking-[0.5em] uppercase text-[11px] text-[#1a73e8]">Sovereign Knowledge Base</span>
+                                <span className="font-bold tracking-[0.5em] uppercase text-[11px] rainbow-text-clip font-bold">Sovereign Knowledge Base</span>
                             </div>
                             
                             <h3 className="text-4xl md:text-5xl font-sans font-bold mb-10 tracking-tighter">Technical Resources</h3>
@@ -100,10 +100,10 @@ export const NRIInvestorHub: React.FC = () => {
                                 ].map((doc, i) => (
                                     <button 
                                         key={i}
-                                        className="w-full flex items-center justify-between p-8 rounded-[24px] bg-white/5 hover:bg-[#151822] border border-[#DADCE0]/10 border border-[#DADCE0] transition-all group/btn text-left"
+                                        className="w-full flex items-center justify-between p-8 rounded-[24px] bg-white/5 hover:bg-[#151822] border border-white/20/10 border border-white/20 transition-all group/btn text-left"
                                     >
-                                        <span className="text-lg font-bold group-hover/btn:text-[#1a73e8] transition-colors">{doc}</span>
-                                        <div className="w-12 h-12 rounded-2xl bg-[#151822] border border-[#DADCE0]/10 flex items-center justify-center group-hover/btn:bg-accent group-hover/btn:text-[#202124] transition-all shadow-xl">
+                                        <span className="text-lg font-bold group-hover/btn:rainbow-text-clip font-bold transition-colors">{doc}</span>
+                                        <div className="w-12 h-12 rounded-2xl bg-[#151822] border border-white/20/10 flex items-center justify-center group-hover/btn:bg-accent group-hover/btn:text-[#202124] transition-all shadow-xl">
                                             <ArrowUpRight size={24} />
                                         </div>
                                     </button>
@@ -111,11 +111,11 @@ export const NRIInvestorHub: React.FC = () => {
                             </div>
                             
                             <div className="mt-16 flex items-center gap-8 p-10 bg-accent/10 border border-accent/20 rounded-[24px] relative z-10">
-                                <div className="p-5 bg-accent/20 rounded-2xl text-[#1a73e8] animate-pulse">
+                                <div className="p-5 bg-accent/20 rounded-2xl rainbow-text-clip font-bold animate-pulse">
                                     <Cpu size={36} />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8] mb-2">Expert Concierge Cell</p>
+                                    <p className="text-[10px] font-bold tracking-tight font-semibold rainbow-text-clip font-bold mb-2">Expert Concierge Cell</p>
                                     <p className="text-lg text-[#202124]/60 font-medium">Speak to our dedicated Sovereign Global Investment Consultant.</p>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@ export const NRIInvestorHub: React.FC = () => {
                         <motion.div 
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            className="absolute -bottom-12 -right-12 bg-[#151822] border border-[#DADCE0] p-12 rounded-[24px] shadow-[0_60px_120px_-30px_rgba(0,0,0,0.3)] z-20 border border-[#DADCE0] group/stat hover:scale-105 transition-transform"
+                            className="absolute -bottom-12 -right-12 bg-[#151822] border border-white/20 p-12 rounded-[24px] shadow-[0_60px_120px_-30px_rgba(0,0,0,0.3)] z-20 border border-white/20 group/stat hover:scale-105 transition-transform"
                         >
                             <div className="flex items-center gap-4 mb-3">
                                 <div className="w-2 h-2 rounded-full bg-accent animate-ping"></div>

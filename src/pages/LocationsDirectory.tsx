@@ -55,8 +55,8 @@ const LocationsDirectory: React.FC = () => {
 
                 <div className="space-y-16">
                     {Object.entries(groupedLinks).map(([location, slugs]) => (
-                        <div key={location} className="bg-[#151822] border border-[#DADCE0] rounded-3xl p-8 shadow-sm border border-[#DADCE0]">
-                            <h2 className="text-2xl font-sans font-bold text-[#1a73e8] mb-6 capitalize border-b border-[#DADCE0] pb-4">
+                        <div key={location} className="bg-[#151822] border border-white/20 rounded-3xl p-8 shadow-sm border border-white/20">
+                            <h2 className="text-2xl font-sans font-bold rainbow-text-clip font-bold mb-6 capitalize border-b border-white/20 pb-4">
                                 Properties in {formatTitle(location)}
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -64,7 +64,7 @@ const LocationsDirectory: React.FC = () => {
                                     <Link 
                                         key={slug} 
                                         to={`/search/${slug}`}
-                                        className="text-sm text-[#5F6368] hover:text-[#1a73e8] transition-colors flex items-center gap-2 group"
+                                        className="text-sm text-[#5F6368] hover:rainbow-text-clip font-bold transition-colors flex items-center gap-2 group"
                                     >
                                         <span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-accent transition-colors" />
                                         {formatTitle(slug.replace('-kolte-patil-life-republic', ''))}
@@ -77,7 +77,7 @@ const LocationsDirectory: React.FC = () => {
                 
                 {/* Full Index Note */}
                 <div className="mt-16 text-center text-xs text-[#5F6368]">
-                    Showing top property combinations. For our complete catalog of 3,000+ configurations, please use our <Link to="/projects" className="text-[#1a73e8] hover:underline">Project Finder</Link>.
+                    Showing top property combinations. For our complete catalog of 3,000+ configurations, please use our <Link to="/projects" className="rainbow-text-clip font-bold hover:underline">Project Finder</Link>.
                 </div>
             </div>
         </div>

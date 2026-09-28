@@ -33,7 +33,7 @@ export class NeuralErrorBoundary extends Component<Props, State> {
     public render() {
         if (this.state.hasError) {
             return this.props.fallback || (
-                <div className="w-full h-[500px] flex items-center justify-center bg-[#F8F9FA] rounded-[24px] border border-[#DADCE0] p-12">
+                <div className="w-full h-[500px] flex items-center justify-center bg-[#F8F9FA] rounded-[24px] border border-white/20 p-12">
                     <div className="max-w-md text-center">
                         <motion.div 
                             initial={{ scale: 0.9, opacity: 0 }}

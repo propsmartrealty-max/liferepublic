@@ -43,7 +43,7 @@ export const EMICalculator: React.FC = () => {
     };
 
     return (
-        <div className="bg-[#151822] border border-[#DADCE0] rounded-[24px] shadow-[0_80px_160px_-40px_rgba(0,0,0,0.1)] p-10 md:p-20 border border-[#DADCE0] relative overflow-hidden">
+        <div className="bg-[#151822] border border-white/20 rounded-[24px] shadow-[0_80px_160px_-40px_rgba(0,0,0,0.1)] p-10 md:p-20 border border-white/20 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full -mr-48 -mt-48 blur-[120px] pointer-events-none"></div>
             <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-8">
                 <div className="flex items-center gap-6">
@@ -52,57 +52,57 @@ export const EMICalculator: React.FC = () => {
                         <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full animate-pulse border-4 border-white"></div>
                     </div>
                     <div>
-                        <h3 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter leading-tight">EMI Strategist <br /><span className="text-[#1a73e8] italic">v6.0</span></h3>
+                        <h3 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter leading-tight">EMI Strategist <br /><span className="rainbow-text-clip font-bold italic">v6.0</span></h3>
                         <p className="text-[10px] text-[#5F6368] font-bold tracking-tight font-semibold mt-2">Operational Precision Synthesis</p>
                     </div>
                 </div>
                 <div className="flex flex-col items-end gap-3">
-                    <div className="px-6 py-3 bg-blue-50 border border-blue-100 rounded-full flex items-center gap-3 shadow-sm">
-                        <div className="w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse"></div>
+                    <div className="px-6 py-3 bg-white/5 border border-white/20 rounded-full flex items-center gap-3 shadow-sm">
+                        <div className="w-2.5 h-2.5 bg-white/5 rounded-full animate-pulse"></div>
                         <span className="text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-medium">2026 Rate Benchmark Active</span>
                     </div>
                 </div>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
                 <div className="lg:col-span-7 space-y-12">
-                    <div className="space-y-12 p-12 bg-[#F8F9FA] rounded-[24px] border border-[#DADCE0] shadow-inner">
+                    <div className="space-y-12 p-12 bg-[#F8F9FA] rounded-[24px] border border-white/20 shadow-inner">
                         <div className="group">
                             <div className="flex justify-between mb-6">
                                 <label className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold">Loan Principal</label>
-                                <span className="text-2xl font-bold text-[#202124] group-hover:text-[#1a73e8] transition-colors">{formatCurrency(loanAmount)}</span>
+                                <span className="text-2xl font-bold text-[#202124] group-hover:rainbow-text-clip font-bold transition-colors">{formatCurrency(loanAmount)}</span>
                             </div>
                             <input type="range" min="1000000" max="30000000" step="100000" value={loanAmount} onChange={(e) => setLoanAmount(Number(e.target.value))} className="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer accent-accent" />
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="group">
-                                <div className="flex justify-between mb-6"><label className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold">Rate (% p.a)</label><span className="text-2xl font-bold text-[#202124] group-hover:text-[#1a73e8] transition-colors">{interestRate}%</span></div>
+                                <div className="flex justify-between mb-6"><label className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold">Rate (% p.a)</label><span className="text-2xl font-bold text-[#202124] group-hover:rainbow-text-clip font-bold transition-colors">{interestRate}%</span></div>
                                 <input type="range" min="6" max="15" step="0.05" value={interestRate} onChange={(e) => setInterestRate(Number(e.target.value))} className="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer accent-accent" />
                             </div>
                             <div className="group">
-                                <div className="flex justify-between mb-6"><label className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold">Tenure (Years)</label><span className="text-2xl font-bold text-[#202124] group-hover:text-[#1a73e8] transition-colors">{loanTenure} Yrs</span></div>
+                                <div className="flex justify-between mb-6"><label className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold">Tenure (Years)</label><span className="text-2xl font-bold text-[#202124] group-hover:rainbow-text-clip font-bold transition-colors">{loanTenure} Yrs</span></div>
                                 <input type="range" min="5" max="30" step="1" value={loanTenure} onChange={(e) => setLoanTenure(Number(e.target.value))} className="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer accent-accent" />
                             </div>
                         </div>
                     </div>
                     <div className="p-10 bg-white rounded-[24px] text-[#202124] relative overflow-hidden shadow-2xl">
-                        <div className="flex justify-between items-center mb-10"><h4 className="text-xl font-sans font-bold flex items-center gap-3"><TrendingDown size={24} className="text-[#1a73e8]" /> Tax Benefit Synthesis</h4></div>
+                        <div className="flex justify-between items-center mb-10"><h4 className="text-xl font-sans font-bold flex items-center gap-3"><TrendingDown size={24} className="rainbow-text-clip font-bold" /> Tax Benefit Synthesis</h4></div>
                         <div className="grid grid-cols-2 gap-8">
-                            <div className="p-6 bg-[#151822] border border-[#DADCE0]/5 rounded-[2rem] border border-[#DADCE0]"><p className="text-[10px] font-bold text-[#202124]/40 tracking-tight font-medium mb-2">Interest Offset</p><p className="text-2xl font-sans font-bold text-[#1a73e8]">₹2,00,000</p></div>
-                            <div className="p-6 bg-[#151822] border border-[#DADCE0]/5 rounded-[2rem] border border-[#DADCE0]"><p className="text-[10px] font-bold text-[#202124]/40 tracking-tight font-medium mb-2">Principal Offset</p><p className="text-2xl font-sans font-bold text-[#1a73e8]">₹1,50,000</p></div>
+                            <div className="p-6 bg-[#151822] border border-white/20/5 rounded-[2rem] border border-white/20"><p className="text-[10px] font-bold text-[#202124]/40 tracking-tight font-medium mb-2">Interest Offset</p><p className="text-2xl font-sans font-bold rainbow-text-clip font-bold">₹2,00,000</p></div>
+                            <div className="p-6 bg-[#151822] border border-white/20/5 rounded-[2rem] border border-white/20"><p className="text-[10px] font-bold text-[#202124]/40 tracking-tight font-medium mb-2">Principal Offset</p><p className="text-2xl font-sans font-bold rainbow-text-clip font-bold">₹1,50,000</p></div>
                         </div>
                     </div>
                 </div>
                 <div className="lg:col-span-5 flex flex-col gap-8">
-                    <div className="flex-1 bg-white rounded-[24px] p-12 text-[#202124] relative overflow-hidden flex flex-col justify-between shadow-2xl border border-[#DADCE0]">
+                    <div className="flex-1 bg-white rounded-[24px] p-12 text-[#202124] relative overflow-hidden flex flex-col justify-between shadow-2xl border border-white/20">
                         <div className="space-y-12">
-                            <div><p className="text-[10px] font-bold text-[#202124]/30 tracking-tight font-semibold mb-4">Projected Sovereign EMI</p><div className="flex items-center gap-4 text-5xl font-sans font-bold text-[#202124] tracking-tighter"><IndianRupee size={48} className="text-[#1a73e8]" />{emi.toLocaleString('en-IN')}</div></div>
+                            <div><p className="text-[10px] font-bold text-[#202124]/30 tracking-tight font-semibold mb-4">Projected Sovereign EMI</p><div className="flex items-center gap-4 text-5xl font-sans font-bold text-[#202124] tracking-tighter"><IndianRupee size={48} className="rainbow-text-clip font-bold" />{emi.toLocaleString('en-IN')}</div></div>
                             <div className="space-y-6">
-                                <div className="flex justify-between items-center"><span className="text-[10px] text-[#202124]/30 font-bold tracking-tight font-semibold">Total Interest Cost</span><span className="text-xl font-bold text-[#1a73e8]">{formatCurrency(totalInterest)}</span></div>
+                                <div className="flex justify-between items-center"><span className="text-[10px] text-[#202124]/30 font-bold tracking-tight font-semibold">Total Interest Cost</span><span className="text-xl font-bold rainbow-text-clip font-bold">{formatCurrency(totalInterest)}</span></div>
                                 <div className="w-full h-px bg-transparent/10"></div>
                                 <div className="flex justify-between items-center"><span className="text-[10px] text-[#202124]/30 font-bold tracking-tight font-semibold">Total Payable Synthesis</span><span className="text-xl font-bold text-[#202124]">{formatCurrency(loanAmount + totalInterest)}</span></div>
                             </div>
                         </div>
-                        <div className="mt-12"><button onClick={() => window.dispatchEvent(new CustomEvent('open-sovereign-concierge', { detail: { project: 'Sovereign Pre-Approval' } }))} className="w-full group bg-accent text-[#202124] hover:bg-[#151822] border border-[#DADCE0] py-8 rounded-[2rem] font-bold flex items-center justify-center gap-4 transition-all text-xl">Apply for Sovereign Rate <ArrowRight size={24} /></button></div>
+                        <div className="mt-12"><button onClick={() => window.dispatchEvent(new CustomEvent('open-sovereign-concierge', { detail: { project: 'Sovereign Pre-Approval' } }))} className="w-full group bg-accent text-[#202124] hover:bg-[#151822] border border-white/20 py-8 rounded-[2rem] font-bold flex items-center justify-center gap-4 transition-all text-xl">Apply for Sovereign Rate <ArrowRight size={24} /></button></div>
                     </div>
                 </div>
             </div>

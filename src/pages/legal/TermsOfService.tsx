@@ -10,8 +10,8 @@ export const TermsOfService: React.FC = () => {
                 <meta name="description" content="Terms of Service and Conditions of Use for the Kolte Patil Life Republic website." />
             </Helmet>
             <div className="container mx-auto px-6 max-w-4xl">
-                <div className="bg-[#151822] border border-[#DADCE0] rounded-3xl p-8 md:p-12 shadow-sm border border-[#DADCE0]">
-                    <div className="flex items-center gap-4 mb-8 text-[#1a73e8]">
+                <div className="bg-[#151822] border border-white/20 rounded-3xl p-8 md:p-12 shadow-sm border border-white/20">
+                    <div className="flex items-center gap-4 mb-8 rainbow-text-clip font-bold">
                         <FileText size={32} />
                         <h1 className="text-3xl md:text-4xl font-sans font-bold text-[#202124]">Terms of Service</h1>
                     </div>

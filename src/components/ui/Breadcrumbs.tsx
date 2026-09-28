@@ -14,10 +14,10 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = () => {
     if (pathnames.length === 0) return null;
 
     return (
-        <nav aria-label="Breadcrumb" className="bg-[#151822]/50 backdrop-blur-sm py-4 px-4 border-b border-[#DADCE0]">
+        <nav aria-label="Breadcrumb" className="bg-[#151822]/50 backdrop-blur-sm py-4 px-4 border-b border-white/20">
             <ol className="flex items-center space-x-2 text-sm text-[#5F6368] container mx-auto overflow-x-auto whitespace-nowrap scrollbar-hide">
                 <li className="flex-shrink-0">
-                    <Link to="/" className="hover:text-[#1a73e8] flex items-center transition-colors">
+                    <Link to="/" className="hover:rainbow-text-clip font-bold flex items-center transition-colors">
                         <Home size={14} className="mr-1" />
                         <span className="hidden sm:inline">Home</span>
                     </Link>
@@ -35,7 +35,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = () => {
                                     {name}
                                 </span>
                             ) : (
-                                <Link to={routeTo} className="hover:text-[#1a73e8] transition-colors">
+                                <Link to={routeTo} className="hover:rainbow-text-clip font-bold transition-colors">
                                     {name}
                                 </Link>
                             )}

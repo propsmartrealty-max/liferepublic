@@ -47,7 +47,7 @@ export const CustomCursor = () => {
             }}
         >
             <motion.div 
-                className="flex items-center gap-2 bg-white border border-[#DADCE0] text-[#202124] shadow-[0_4px_12px_rgba(0,0,0,0.1)] rounded-full overflow-hidden"
+                className="flex items-center gap-2 bg-white border border-white/20 text-[#202124] shadow-[0_4px_12px_rgba(0,0,0,0.1)] rounded-full overflow-hidden"
                 initial={{ width: 12, height: 12, borderRadius: '50%' }}
                 animate={{ 
                     width: isHovering ? 'auto' : 16, 

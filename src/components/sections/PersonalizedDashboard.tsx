@@ -25,12 +25,12 @@ export const PersonalizedDashboard: React.FC = () => {
                 >
                     <div className="max-w-xl text-[#202124]">
                         <div className="inline-flex items-center gap-3 px-4 py-2 bg-accent/20 border border-accent/30 rounded-full mb-6">
-                            <Sparkles size={16} className="text-[#1a73e8]" />
-                            <span className="text-[10px] font-bold tracking-tight font-medium text-[#1a73e8]">Personalized Discovery Hub</span>
+                            <Sparkles size={16} className="rainbow-text-clip font-bold" />
+                            <span className="text-[10px] font-bold tracking-tight font-medium rainbow-text-clip font-bold">Personalized Discovery Hub</span>
                         </div>
                         <h2 className="text-4xl md:text-5xl font-sans font-bold mb-6 leading-tight">
                             Welcome Back, <br /> 
-                            <span className="text-[#1a73e8]">Future Citizen.</span>
+                            <span className="rainbow-text-clip font-bold">Future Citizen.</span>
                         </h2>
                         <p className="text-[#5F6368] text-lg leading-relaxed mb-8">
                             Based on your browsing activity, we've synthesized a custom township overview. You are currently indexed as an <strong className="text-[#202124]">{intentLevel}</strong>.
@@ -50,9 +50,9 @@ export const PersonalizedDashboard: React.FC = () => {
 
                     <div className="w-full max-w-2xl grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Recently Viewed */}
-                        <div className="bg-white/5 backdrop-blur-xl border border-[#DADCE0] p-8 rounded-[24px] hover:bg-[#151822] border border-[#DADCE0]/10 transition-all">
+                        <div className="bg-white/5 backdrop-blur-xl border border-white/20 p-8 rounded-[24px] hover:bg-[#151822] border border-white/20/10 transition-all">
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="p-2 bg-accent/20 rounded-lg text-[#1a73e8]">
+                                <div className="p-2 bg-accent/20 rounded-lg rainbow-text-clip font-bold">
                                     <MapPin size={20} />
                                 </div>
                                 <h4 className="text-[#202124] font-bold">Your Interest Map</h4>
@@ -61,7 +61,7 @@ export const PersonalizedDashboard: React.FC = () => {
                                 {history.recentlyViewed.length > 0 ? history.recentlyViewed.slice(0, 3).map((slug, i) => (
                                     <Link key={i} to={`/projects/${slug}`} className="flex items-center justify-between group">
                                         <span className="text-sm text-[#5F6368] group-hover:text-[#202124] transition-colors capitalize">{slug.split('-').slice(0, 2).join(' ')}</span>
-                                        <ArrowRight size={14} className="text-[#1a73e8] opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
+                                        <ArrowRight size={14} className="rainbow-text-clip font-bold opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
                                     </Link>
                                 )) : (
                                     <p className="text-xs text-[#5F6368] italic">No sectors viewed yet.</p>
@@ -70,9 +70,9 @@ export const PersonalizedDashboard: React.FC = () => {
                         </div>
 
                         {/* Search Intelligence */}
-                        <div className="bg-white/5 backdrop-blur-xl border border-[#DADCE0] p-8 rounded-[24px] hover:bg-[#151822] border border-[#DADCE0]/10 transition-all">
+                        <div className="bg-white/5 backdrop-blur-xl border border-white/20 p-8 rounded-[24px] hover:bg-[#151822] border border-white/20/10 transition-all">
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="p-2 bg-blue-500/20 rounded-lg rainbow-text-clip font-bold">
+                                <div className="p-2 bg-white/5 rounded-lg rainbow-text-clip font-bold">
                                     <Search size={20} />
                                 </div>
                                 <h4 className="text-[#202124] font-bold">Search History</h4>
@@ -95,7 +95,7 @@ export const PersonalizedDashboard: React.FC = () => {
                         {/* Intent Progress */}
                         <div className="md:col-span-2 bg-accent p-8 rounded-[24px] text-[#202124] flex flex-col md:flex-row items-center justify-between gap-8">
                             <div className="flex items-center gap-4">
-                                <div className="w-16 h-16 bg-white text-[#1a73e8] rounded-2xl flex items-center justify-center shadow-xl">
+                                <div className="w-16 h-16 bg-white rainbow-text-clip font-bold rounded-2xl flex items-center justify-center shadow-xl">
                                     <TrendingUp size={32} />
                                 </div>
                                 <div>

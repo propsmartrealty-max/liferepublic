@@ -41,7 +41,7 @@ export const ExitIntentOffer: React.FC = () => {
                     initial={{ scale: 0.9, opacity: 0, y: 20 }}
                     animate={{ scale: 1, opacity: 1, y: 0 }}
                     exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                    className="relative bg-[#151822] border border-[#DADCE0] w-full max-w-4xl rounded-[24px] overflow-hidden shadow-2xl flex flex-col md:flex-row"
+                    className="relative bg-[#151822] border border-white/20 w-full max-w-4xl rounded-[24px] overflow-hidden shadow-2xl flex flex-col md:flex-row"
                 >
                     <button 
                         onClick={() => setIsVisible(false)}
@@ -62,7 +62,7 @@ export const ExitIntentOffer: React.FC = () => {
                                 Unlock the <strong>2026 pricing</strong> and inventory availability before the next market surge.
                             </p>
                         </div>
-                        <div className="relative z-10 flex items-center gap-2 text-[#1a73e8] text-xs font-bold tracking-tight font-medium">
+                        <div className="relative z-10 flex items-center gap-2 rainbow-text-clip font-bold text-xs font-bold tracking-tight font-medium">
                             <ShieldCheck size={16} /> Sales Desk Verified
                         </div>
                     </div>

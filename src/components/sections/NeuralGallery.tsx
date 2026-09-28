@@ -24,7 +24,7 @@ const atmosphereStyles: Record<string, React.CSSProperties> = {
 const overlayStyles: Record<string, string> = {
     day: 'from-black/50 via-transparent to-transparent',
     sunset: 'from-orange-900/60 via-amber-900/20 to-transparent',
-    night: 'from-indigo-950/80 via-blue-900/30 to-transparent',
+    night: 'from-indigo-950/80 via-black/50 to-transparent',
 };
 
 export const NeuralGallery: React.FC<NeuralGalleryProps> = ({ images, title }) => {
@@ -45,7 +45,7 @@ export const NeuralGallery: React.FC<NeuralGalleryProps> = ({ images, title }) =
     return (
         <div className="relative group">
             {/* Main Display */}
-            <div className="aspect-[16/9] rounded-[24px] overflow-hidden relative shadow-2xl bg-gray-900 border border-[#DADCE0]">
+            <div className="aspect-[16/9] rounded-[24px] overflow-hidden relative shadow-2xl bg-gray-900 border border-white/20">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={mode}
@@ -68,7 +68,7 @@ export const NeuralGallery: React.FC<NeuralGalleryProps> = ({ images, title }) =
                 <div className={`absolute inset-0 bg-gradient-to-t ${overlayStyles[mode]} pointer-events-none transition-all duration-1000`} />
 
                 {/* Atmospheric Controls */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 p-2 bg-[#151822] border border-[#DADCE0]/10 backdrop-blur-2xl rounded-full border border-[#DADCE0] shadow-xl z-20">
+                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 p-2 bg-[#151822] border border-white/20/10 backdrop-blur-2xl rounded-full border border-white/20 shadow-xl z-20">
                     {modes.map((m) => (
                         <button
                             key={m.id}
@@ -88,8 +88,8 @@ export const NeuralGallery: React.FC<NeuralGalleryProps> = ({ images, title }) =
                 </div>
 
                 {/* Status Indicator */}
-                <div className="absolute top-8 left-8 flex items-center gap-3 bg-black/40 backdrop-blur-md px-4 py-2 rounded-xl border border-[#DADCE0]">
-                    <Sparkles size={14} className="text-[#1a73e8] animate-pulse" />
+                <div className="absolute top-8 left-8 flex items-center gap-3 bg-black/40 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20">
+                    <Sparkles size={14} className="rainbow-text-clip font-bold animate-pulse" />
                     <span className="text-[10px] text-[#202124]/80 font-bold tracking-tight font-medium italic">
                         Neural Synthesis Active
                     </span>

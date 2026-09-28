@@ -38,7 +38,7 @@ export const TestimonialCarousel: React.FC = () => {
             <div className="absolute inset-0 opacity-5 pointer-events-none"></div>
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-8">
-                    <span className="text-[#1a73e8] text-[10px] font-bold tracking-tight font-semibold block mb-4 italic">Social Synthesis</span>
+                    <span className="rainbow-text-clip font-bold text-[10px] font-bold tracking-tight font-semibold block mb-4 italic">Social Synthesis</span>
                     <h2 className="text-4xl md:text-5xl font-sans font-bold mb-6">Resident Stories</h2>
                     <div className="w-24 h-1 bg-accent mx-auto"></div>
                 </div>
@@ -54,11 +54,11 @@ export const TestimonialCarousel: React.FC = () => {
                         <SwiperSlide key={idx}>
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-12">
                                 <div className="relative order-2 lg:order-1">
-                                    <div className="absolute -left-8 -top-8 text-[#1a73e8]/20">
+                                    <div className="absolute -left-8 -top-8 rainbow-text-clip font-bold/20">
                                         <Quote size={120} />
                                     </div>
                                     <div className="relative z-10">
-                                        <div className="flex gap-1 text-[#1a73e8] mb-8">
+                                        <div className="flex gap-1 rainbow-text-clip font-bold mb-8">
                                             {[...Array(5)].map((_, i) => (
                                                 <Star key={i} size={18} fill="currentColor" />
                                             ))}
@@ -67,12 +67,12 @@ export const TestimonialCarousel: React.FC = () => {
                                             "{t.text}"
                                         </p>
                                         <div className="flex items-center gap-6">
-                                            <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center font-sans text-2xl text-[#1a73e8] font-bold">
+                                            <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center font-sans text-2xl rainbow-text-clip font-bold font-bold">
                                                 {t.name.charAt(0)}
                                             </div>
                                             <div>
                                                 <h4 className="text-xl font-bold tracking-wider">{t.name}</h4>
-                                                <div className="flex items-center gap-2 text-[#1a73e8] text-xs font-bold tracking-tight font-medium mt-1">
+                                                <div className="flex items-center gap-2 rainbow-text-clip font-bold text-xs font-bold tracking-tight font-medium mt-1">
                                                     <CheckCircle2 size={12} />
                                                     {t.location}
                                                 </div>
@@ -84,7 +84,7 @@ export const TestimonialCarousel: React.FC = () => {
                                     <motion.div 
                                         initial={{ scale: 0.9, opacity: 0 }}
                                         whileInView={{ scale: 1, opacity: 1 }}
-                                        className="relative aspect-[4/5] rounded-[24px] overflow-hidden shadow-2xl border border-[#DADCE0]"
+                                        className="relative aspect-[4/5] rounded-[24px] overflow-hidden shadow-2xl border border-white/20"
                                     >
                                         <img loading="lazy" src={t.image} alt={t.name} className="absolute inset-0 w-full h-full object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent opacity-60"></div>

@@ -53,7 +53,7 @@ export const HyperLocalLanding: React.FC = () => {
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="flex items-center gap-2 text-[#1a73e8] text-[10px] font-bold tracking-tight font-semibold mb-8"
+                            className="flex items-center gap-2 rainbow-text-clip font-bold text-[10px] font-bold tracking-tight font-semibold mb-8"
                         >
                             <Target size={14} /> Market Intelligence Report 2026
                         </motion.div>
@@ -70,10 +70,10 @@ export const HyperLocalLanding: React.FC = () => {
                     </div>
 
                     <div className="lg:w-1/3 grid grid-cols-1 gap-6">
-                        <div className="bg-[#F8F9FA] p-8 rounded-[2rem] border border-[#DADCE0]">
+                        <div className="bg-[#F8F9FA] p-8 rounded-[2rem] border border-white/20">
                             <div className="flex items-center justify-between mb-4">
                                 <span className="text-[10px] font-bold tracking-tight font-medium text-[#5F6368]">Infra Score</span>
-                                <Zap size={16} className="text-[#1a73e8]" />
+                                <Zap size={16} className="rainbow-text-clip font-bold" />
                             </div>
                             <div className="text-4xl font-sans font-bold text-[#202124]">{config.infraScore}/100</div>
                             <div className="w-full h-1 bg-gray-200 mt-4 rounded-full overflow-hidden">
@@ -83,7 +83,7 @@ export const HyperLocalLanding: React.FC = () => {
                         <div className="bg-white p-8 rounded-[2rem] text-[#202124]">
                             <div className="flex items-center justify-between mb-4">
                                 <span className="text-[10px] font-bold tracking-tight font-medium text-[#202124]/40">Rental Yield</span>
-                                <TrendingUp size={16} className="text-[#1a73e8]" />
+                                <TrendingUp size={16} className="rainbow-text-clip font-bold" />
                             </div>
                             <div className="text-4xl font-sans font-bold">{config.rentalYield}</div>
                             <p className="text-[#202124]/40 text-[10px] mt-4 tracking-tight font-medium">Projected for Hinjewadi West</p>
@@ -94,16 +94,16 @@ export const HyperLocalLanding: React.FC = () => {
                 {/* Intelligence Matrix */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-40">
                     <div className="space-y-6">
-                        <div className="w-12 h-12 bg-[#E5C07B]/20 rounded-2xl flex items-center justify-center text-[#1a73e8]">
+                        <div className="w-12 h-12 bg-[#E5C07B]/20 rounded-2xl flex items-center justify-center rainbow-text-clip font-bold">
                             <Clock size={20} />
                         </div>
                         <h3 className="text-xl font-sans font-bold text-[#202124]">Velocity Matrix</h3>
                         <div className="space-y-4">
-                            <div className="flex justify-between border-b border-[#DADCE0] pb-2">
+                            <div className="flex justify-between border-b border-white/20 pb-2">
                                 <span className="text-[#5F6368] text-sm">Hinjewadi Phase 1</span>
                                 <span className="font-bold text-[#202124]">{config.commutePhase1}</span>
                             </div>
-                            <div className="flex justify-between border-b border-[#DADCE0] pb-2">
+                            <div className="flex justify-between border-b border-white/20 pb-2">
                                 <span className="text-[#5F6368] text-sm">Mumbai-Pune Expy</span>
                                 <span className="font-bold text-[#202124]">12 mins</span>
                             </div>
@@ -111,14 +111,14 @@ export const HyperLocalLanding: React.FC = () => {
                     </div>
 
                     <div className="space-y-6">
-                        <div className="w-12 h-12 bg-[#E5C07B]/20 rounded-2xl flex items-center justify-center text-[#1a73e8]">
+                        <div className="w-12 h-12 bg-[#E5C07B]/20 rounded-2xl flex items-center justify-center rainbow-text-clip font-bold">
                             <Shield size={20} />
                         </div>
                         <h3 className="text-xl font-sans font-bold text-[#202124]">Sovereign Safety</h3>
                         <ul className="space-y-3">
                             {config.highlights.map((h, i) => (
                                 <li key={i} className="flex gap-2 text-sm text-[#5F6368]">
-                                    <span className="text-[#1a73e8]">•</span> {h}
+                                    <span className="rainbow-text-clip font-bold">•</span> {h}
                                 </li>
                             ))}
                         </ul>
@@ -131,7 +131,7 @@ export const HyperLocalLanding: React.FC = () => {
                                 Demand for premium housing near {slug?.split('-')[0]} has spiked by 18% in the last quarter due to the Hinjewadi-Shivajinagar Metro progress.
                             </p>
                         </div>
-                        <Link to="/township-intelligence" className="flex items-center gap-2 text-[#1a73e8] text-xs font-bold tracking-tight font-medium group">
+                        <Link to="/township-intelligence" className="flex items-center gap-2 rainbow-text-clip font-bold text-xs font-bold tracking-tight font-medium group">
                             Explore Stats <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                         </Link>
                     </div>
@@ -141,7 +141,7 @@ export const HyperLocalLanding: React.FC = () => {
                 <div className="mb-32">
                     <div className="flex items-end justify-between mb-8">
                         <h2 className="text-4xl font-sans font-bold text-[#202124]">Matching Inventory</h2>
-                        <Link to="/projects" className="text-[#1a73e8] font-bold border-b border-accent/20 pb-1">View All Sectors</Link>
+                        <Link to="/projects" className="rainbow-text-clip font-bold font-bold border-b border-accent/20 pb-1">View All Sectors</Link>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projects.map((p) => (

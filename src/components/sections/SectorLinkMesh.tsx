@@ -22,7 +22,7 @@ export const SectorLinkMesh: React.FC = () => {
         .slice(0, 3);
 
     return (
-        <section className="py-16 bg-white border-t border-[#DADCE0] relative overflow-hidden">
+        <section className="py-16 bg-white border-t border-white/20 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] pointer-events-none -mr-48 -mt-48"></div>
             
             <div className="container mx-auto px-4 relative z-10">
@@ -33,19 +33,19 @@ export const SectorLinkMesh: React.FC = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             className="inline-flex items-center gap-3 px-4 py-2 bg-white text-[#202124] rounded-full mb-6 shadow-xl"
                         >
-                            <Network size={14} className="text-[#1a73e8] animate-pulse" />
+                            <Network size={14} className="rainbow-text-clip font-bold animate-pulse" />
                             <span className="text-[10px] font-bold tracking-tight font-semibold">Sovereign Connectivity Matrix v6.0</span>
                         </motion.div>
                         <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter leading-none mb-6">
-                            Infrastructure <br /><span className="text-[#1a73e8] italic">Synergy.</span>
+                            Infrastructure <br /><span className="rainbow-text-clip font-bold italic">Synergy.</span>
                         </h2>
                         <p className="text-xl text-[#5F6368] font-medium leading-relaxed">
                             Navigate the structural mesh of Life Republic. Every cluster is programmatically linked to the 150ft Spine Road backbone.
                         </p>
                     </div>
                     
-                    <div className="flex items-center gap-6 p-6 bg-[#F8F9FA] rounded-[2rem] border border-[#DADCE0] shadow-inner group">
-                        <div className="p-4 bg-[#151822] border border-[#DADCE0] rounded-2xl shadow-sm text-[#1a73e8] group-hover:rotate-12 transition-transform">
+                    <div className="flex items-center gap-6 p-6 bg-[#F8F9FA] rounded-[2rem] border border-white/20 shadow-inner group">
+                        <div className="p-4 bg-[#151822] border border-white/20 rounded-2xl shadow-sm rainbow-text-clip font-bold group-hover:rotate-12 transition-transform">
                             <ShieldCheck size={28} />
                         </div>
                         <div>
@@ -58,7 +58,7 @@ export const SectorLinkMesh: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Residential Cluster Matrix */}
                     <div className="space-y-10">
-                        <div className="flex items-center gap-4 text-[#1a73e8] font-bold tracking-tight font-semibold text-[10px]">
+                        <div className="flex items-center gap-4 rainbow-text-clip font-bold font-bold tracking-tight font-semibold text-[10px]">
                             <Building2 size={16} /> Residential Cluster Mesh
                         </div>
                         <div className="flex flex-col gap-6">
@@ -66,13 +66,13 @@ export const SectorLinkMesh: React.FC = () => {
                                 <motion.div key={sector.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}>
                                     <Link 
                                         to={`/projects/${sector.slug}`}
-                                        className="group flex items-center justify-between p-8 bg-[#F8F9FA]/50 rounded-[24px] border border-[#DADCE0] hover:bg-[#151822] border border-[#DADCE0] hover:border-accent hover:shadow-2xl transition-all"
+                                        className="group flex items-center justify-between p-8 bg-[#F8F9FA]/50 rounded-[24px] border border-white/20 hover:bg-[#151822] border border-white/20 hover:border-accent hover:shadow-2xl transition-all"
                                     >
                                         <div className="space-y-1">
-                                            <span className="text-lg font-bold text-[#202124] group-hover:text-[#1a73e8] tracking-tight">{sector.name.split('(')[0]}</span>
+                                            <span className="text-lg font-bold text-[#202124] group-hover:rainbow-text-clip font-bold tracking-tight">{sector.name.split('(')[0]}</span>
                                             <span className="text-[9px] text-[#5F6368] font-bold tracking-tight font-medium block">{sector.id} Portfolio</span>
                                         </div>
-                                        <ArrowUpRight size={24} className="text-gray-200 group-hover:text-[#1a73e8] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                                        <ArrowUpRight size={24} className="text-gray-200 group-hover:rainbow-text-clip font-bold group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                                     </Link>
                                 </motion.div>
                             ))}
@@ -81,7 +81,7 @@ export const SectorLinkMesh: React.FC = () => {
 
                     {/* Infrastructure Spine Matrix */}
                     <div className="space-y-10">
-                        <div className="flex items-center gap-4 text-[#1a73e8] font-bold tracking-tight font-semibold text-[10px]">
+                        <div className="flex items-center gap-4 rainbow-text-clip font-bold font-bold tracking-tight font-semibold text-[10px]">
                             <Zap size={16} /> Infrastructure Backbones
                         </div>
                         <div className="flex flex-col gap-6">
@@ -89,16 +89,16 @@ export const SectorLinkMesh: React.FC = () => {
                                 <motion.div key={ave.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}>
                                     <Link 
                                         to={`/location/${ave.slug}`}
-                                        className="group flex items-center justify-between p-8 bg-[#F8F9FA]/50 rounded-[24px] border border-[#DADCE0] hover:bg-[#151822] border border-[#DADCE0] hover:border-accent hover:shadow-2xl transition-all"
+                                        className="group flex items-center justify-between p-8 bg-[#F8F9FA]/50 rounded-[24px] border border-white/20 hover:bg-[#151822] border border-white/20 hover:border-accent hover:shadow-2xl transition-all"
                                     >
                                         <div className="space-y-2">
-                                            <span className="text-lg font-bold text-[#202124] group-hover:text-[#1a73e8] tracking-tight">{ave.name}</span>
+                                            <span className="text-lg font-bold text-[#202124] group-hover:rainbow-text-clip font-bold tracking-tight">{ave.name}</span>
                                             <div className="flex items-center gap-2">
                                                 <div className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></div>
                                                 <span className="text-[10px] text-[#5F6368] font-bold tracking-tight font-medium">{ave.infrastructure}</span>
                                             </div>
                                         </div>
-                                        <ArrowUpRight size={24} className="text-gray-200 group-hover:text-[#1a73e8] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                                        <ArrowUpRight size={24} className="text-gray-200 group-hover:rainbow-text-clip font-bold group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                                     </Link>
                                 </motion.div>
                             ))}
@@ -107,7 +107,7 @@ export const SectorLinkMesh: React.FC = () => {
 
                     {/* Regional Connectivity Matrix */}
                     <div className="space-y-10">
-                        <div className="flex items-center gap-4 text-[#1a73e8] font-bold tracking-tight font-semibold text-[10px]">
+                        <div className="flex items-center gap-4 rainbow-text-clip font-bold font-bold tracking-tight font-semibold text-[10px]">
                             <Globe size={16} /> Regional Macro-Hubs
                         </div>
                         <div className="flex flex-col gap-6">
@@ -115,16 +115,16 @@ export const SectorLinkMesh: React.FC = () => {
                                 <motion.div key={loc.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}>
                                     <Link 
                                         to={`/location/${loc.slug}`}
-                                        className="group flex items-center justify-between p-8 bg-[#F8F9FA]/50 rounded-[24px] border border-[#DADCE0] hover:bg-[#151822] border border-[#DADCE0] hover:border-accent hover:shadow-2xl transition-all"
+                                        className="group flex items-center justify-between p-8 bg-[#F8F9FA]/50 rounded-[24px] border border-white/20 hover:bg-[#151822] border border-white/20 hover:border-accent hover:shadow-2xl transition-all"
                                     >
                                         <div className="space-y-2">
-                                            <span className="text-lg font-bold text-[#202124] group-hover:text-[#1a73e8] tracking-tight">{loc.name} Hub</span>
+                                            <span className="text-lg font-bold text-[#202124] group-hover:rainbow-text-clip font-bold tracking-tight">{loc.name} Hub</span>
                                             <div className="flex items-center gap-3">
-                                                <MapPin size={12} className="text-[#1a73e8]" />
+                                                <MapPin size={12} className="rainbow-text-clip font-bold" />
                                                 <span className="text-[10px] text-[#5F6368] font-bold tracking-tight font-medium">{loc.distance} Synthesis</span>
                                             </div>
                                         </div>
-                                        <ArrowUpRight size={24} className="text-gray-200 group-hover:text-[#1a73e8] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                                        <ArrowUpRight size={24} className="text-gray-200 group-hover:rainbow-text-clip font-bold group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                                     </Link>
                                 </motion.div>
                             ))}
@@ -141,7 +141,7 @@ export const SectorLinkMesh: React.FC = () => {
                         <Cpu size={150} />
                     </div>
                     <div className="space-y-4 relative z-10 text-center lg:text-left">
-                        <h4 className="text-3xl md:text-5xl font-sans font-bold tracking-tighter leading-tight italic">Secure Your <br /> <span className="text-[#1a73e8]">Sovereign Thesis.</span></h4>
+                        <h4 className="text-3xl md:text-5xl font-sans font-bold tracking-tighter leading-tight italic">Secure Your <br /> <span className="rainbow-text-clip font-bold">Sovereign Thesis.</span></h4>
                         <p className="text-[#202124]/50 text-xl font-medium tracking-tight">Download the 2026 Hinjewadi Infrastructure & ROI appreciation monograph.</p>
                     </div>
                     <button 

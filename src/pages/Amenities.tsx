@@ -77,9 +77,9 @@ export const Amenities: React.FC = () => {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: index * 0.1 }}
-                                        className="bg-[#151822] border border-[#DADCE0] p-8 rounded-xl shadow-sm hover:shadow-md transition-all border border-[#DADCE0] group"
+                                        className="bg-[#151822] border border-white/20 p-8 rounded-xl shadow-sm hover:shadow-md transition-all border border-white/20 group"
                                     >
-                                        <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-6 text-[#1a73e8] group-hover:scale-110 transition-transform">
+                                        <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-6 rainbow-text-clip font-bold group-hover:scale-110 transition-transform">
                                             <IconComponent size={24} />
                                         </div>
                                         <h3 className="text-xl font-bold font-sans text-[#202124] mb-3">{item.title}</h3>

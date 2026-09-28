@@ -100,7 +100,7 @@ export const SectorLanding: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="max-w-3xl"
                     >
-                        <div className="flex items-center gap-3 text-[#1a73e8] mb-6">
+                        <div className="flex items-center gap-3 rainbow-text-clip font-bold mb-6">
                             <div className="p-2 bg-accent/10 rounded-lg">
                                 {typeIcon()}
                             </div>
@@ -108,7 +108,7 @@ export const SectorLanding: React.FC = () => {
                         </div>
                         <h1 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-6 leading-tight">
                             {sectorData.branding || data.name} <br />
-                            <span className="text-[#1a73e8] underline decoration-accent/30">Life Republic</span>
+                            <span className="rainbow-text-clip font-bold underline decoration-accent/30">Life Republic</span>
                         </h1>
                         <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8">
                             {data.usp} Ideally positioned for <strong>{sectorData.target}</strong>, located approximately {data.distance} within the sovereign domain of Hinjewadi.
@@ -124,14 +124,14 @@ export const SectorLanding: React.FC = () => {
             </section>
 
             {/* Intelligence Grid */}
-            <section className="py-12 border-b border-[#DADCE0]">
+            <section className="py-12 border-b border-white/20">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                         <div>
                             <h2 className="text-3xl md:text-4xl font-sans font-bold text-[#202124] mb-8">{sectorData.segment} Hub Infrastructure</h2>
                             <div className="space-y-8">
                                 <div className="flex gap-6">
-                                    <div className="w-16 h-16 bg-[#F8F9FA] rounded-2xl flex items-center justify-center flex-shrink-0 text-[#1a73e8] border border-[#DADCE0]">
+                                    <div className="w-16 h-16 bg-[#F8F9FA] rounded-2xl flex items-center justify-center flex-shrink-0 rainbow-text-clip font-bold border border-white/20">
                                         <Zap size={32} />
                                     </div>
                                     <div>
@@ -142,7 +142,7 @@ export const SectorLanding: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className="flex gap-6">
-                                    <div className="w-16 h-16 bg-[#F8F9FA] rounded-2xl flex items-center justify-center flex-shrink-0 text-[#1a73e8] border border-[#DADCE0]">
+                                    <div className="w-16 h-16 bg-[#F8F9FA] rounded-2xl flex items-center justify-center flex-shrink-0 rainbow-text-clip font-bold border border-white/20">
                                         <Building2 size={32} />
                                     </div>
                                     <div>
@@ -153,7 +153,7 @@ export const SectorLanding: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className="flex gap-6">
-                                    <div className="w-16 h-16 bg-[#F8F9FA] rounded-2xl flex items-center justify-center flex-shrink-0 text-[#1a73e8] border border-[#DADCE0]">
+                                    <div className="w-16 h-16 bg-[#F8F9FA] rounded-2xl flex items-center justify-center flex-shrink-0 rainbow-text-clip font-bold border border-white/20">
                                         {isLocality ? <Navigation size={32} /> : <CheckCircle2 size={32} />}
                                     </div>
                                     <div>
@@ -178,8 +178,8 @@ export const SectorLanding: React.FC = () => {
                                     className="w-full h-full object-cover opacity-80"
                                 />
                             </div>
-                            <div className="absolute top-8 right-8 bg-white p-6 rounded-2xl shadow-xl border border-[#DADCE0] max-w-[200px]">
-                                <p className="text-sm font-bold text-[#1a73e8]">{data.distance}</p>
+                            <div className="absolute top-8 right-8 bg-white p-6 rounded-2xl shadow-xl border border-white/20 max-w-[200px]">
+                                <p className="text-sm font-bold rainbow-text-clip font-bold">{data.distance}</p>
                                 <p className="text-xs text-[#202124]/40 tracking-tight font-medium mt-1">To Metro Access</p>
                             </div>
                         </div>
@@ -192,7 +192,7 @@ export const SectorLanding: React.FC = () => {
                 <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[120px] -mr-48 -mt-48"></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="max-w-2xl mb-8">
-                        <span className="text-[#1a73e8] text-xs font-bold tracking-tight font-semibold block mb-4">Hyper-Local Radius</span>
+                        <span className="rainbow-text-clip font-bold text-xs font-bold tracking-tight font-semibold block mb-4">Hyper-Local Radius</span>
                         <h2 className="text-4xl font-sans font-bold mb-6">Localized Intelligence Hub</h2>
                         <p className="text-[#5F6368]">Deep-dive into the specific advantages of living in <strong>{data.name}</strong>. From walking distances to school gates to internal shuttle frequency.</p>
                     </div>
@@ -204,9 +204,9 @@ export const SectorLanding: React.FC = () => {
                             { label: 'Greenery', val: 'Urban Park', sub: 'Central Access', icon: '🌳' },
                             { label: 'Security', val: 'Fire Station', sub: 'Township Internal', icon: '🛡️' }
                         ].map((item, idx) => (
-                            <div key={idx} className="p-8 rounded-[2rem] bg-white/5 border border-[#DADCE0] hover:bg-[#151822] border border-[#DADCE0]/10 transition-all group">
+                            <div key={idx} className="p-8 rounded-[2rem] bg-white/5 border border-white/20 hover:bg-[#151822] border border-white/20/10 transition-all group">
                                 <div className="text-3xl mb-6 grayscale group-hover:grayscale-0 transition-all">{item.icon}</div>
-                                <p className="text-[#1a73e8] text-[10px] font-bold tracking-tight font-medium mb-1">{item.label}</p>
+                                <p className="rainbow-text-clip font-bold text-[10px] font-bold tracking-tight font-medium mb-1">{item.label}</p>
                                 <h4 className="text-xl font-bold mb-1">{item.val}</h4>
                                 <p className="text-xs text-[#5F6368] font-medium">{item.sub}</p>
                             </div>
@@ -234,7 +234,7 @@ export const SectorLanding: React.FC = () => {
             <InfraTracker />
 
             {/* Deep Web Content Block */}
-            <section className="py-20 bg-white border-t border-[#DADCE0]">
+            <section className="py-20 bg-white border-t border-white/20">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
                         <h3 className="text-2xl font-sans font-bold text-[#202124] mb-6">Sovereign Infrastructure Intelligence: {sectorData.branding || data.name}</h3>
@@ -242,7 +242,7 @@ export const SectorLanding: React.FC = () => {
                             Home-seekers evaluating <strong>{data.name}</strong> often compare it to standalone developments in Hinjewadi. However, the <strong>{sectorData.branding}</strong> precinct within Kolte Patil Life Republic offers a distinct "Township Advantage" that is currently driving its high ROI potential.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                            <div className="p-6 bg-[#F8F9FA] rounded-2xl border border-[#DADCE0]">
+                            <div className="p-6 bg-[#F8F9FA] rounded-2xl border border-white/20">
                                 <h4 className="font-bold text-[#202124] mb-2">Logistics Metrics</h4>
                                 <ul className="text-sm space-y-2">
                                     <li>• <span className="text-[#5F6368]">Distance:</span> {data.distance} from Main Spine</li>
@@ -250,7 +250,7 @@ export const SectorLanding: React.FC = () => {
                                     <li>• <span className="text-[#5F6368]">Access:</span> Automated Township Entry/Exit</li>
                                 </ul>
                             </div>
-                            <div className="p-6 bg-[#F8F9FA] rounded-2xl border border-[#DADCE0]">
+                            <div className="p-6 bg-[#F8F9FA] rounded-2xl border border-white/20">
                                 <h4 className="font-bold text-[#202124] mb-2">Demand Analysis</h4>
                                 <ul className="text-sm space-y-2">
                                     <li>• <span className="text-[#5F6368]">Segment:</span> {sectorData.segment} Sector</li>

@@ -108,7 +108,7 @@ export const AmenitiesCarousel: React.FC = () => {
                 >
                     {displayAmenities.map((item, index) => (
                         <SwiperSlide key={index}>
-                            <div className="group relative h-[400px] rounded-2xl overflow-hidden shadow-lg border border-[#DADCE0]">
+                            <div className="group relative h-[400px] rounded-2xl overflow-hidden shadow-lg border border-white/20">
                                 <img
                                     src={item.image_url}
                                     alt={item.title}

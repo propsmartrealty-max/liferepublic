@@ -44,7 +44,7 @@ export const ShareButtons: React.FC<ShareButtonsProps> = ({ url, title, classNam
             icon: <Linkedin size={16} strokeWidth={2} />,
             href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
             color: 'hover:bg-blue-700',
-            bg: 'bg-blue-50 rainbow-text-clip font-bold'
+            bg: 'bg-white/5 rainbow-text-clip font-bold'
         },
         {
             name: 'Twitter',
@@ -68,7 +68,7 @@ export const ShareButtons: React.FC<ShareButtonsProps> = ({ url, title, classNam
     return (
         <div className={`flex items-center gap-6 ${className}`}>
             <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center text-[#1a73e8] animate-pulse border border-accent/20">
+                <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center rainbow-text-clip font-bold animate-pulse border border-accent/20">
                     <Zap size={14} />
                 </div>
                 <span className="text-[11px] font-bold text-[#202124] tracking-tight font-semibold hidden md:block">
@@ -76,7 +76,7 @@ export const ShareButtons: React.FC<ShareButtonsProps> = ({ url, title, classNam
                 </span>
             </div>
             
-            <div className="flex items-center gap-3 p-2 bg-[#F8F9FA]/50 backdrop-blur-xl border border-[#DADCE0] rounded-full shadow-inner group/hub">
+            <div className="flex items-center gap-3 p-2 bg-[#F8F9FA]/50 backdrop-blur-xl border border-white/20 rounded-full shadow-inner group/hub">
                 {shareLinks.map((link) => (
                     <motion.a
                         key={link.name}
@@ -98,7 +98,7 @@ export const ShareButtons: React.FC<ShareButtonsProps> = ({ url, title, classNam
                     whileHover={{ y: -4, scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={copyToClipboard}
-                    className={`w-12 h-12 rounded-full flex items-center justify-center transition-all relative overflow-hidden group/copy ${copied ? 'bg-emerald-500 text-[#202124]' : 'bg-white border border-[#DADCE0] text-[#5F6368] hover:bg-accent hover:text-[#202124] hover:border-transparent'} hover:shadow-xl`}
+                    className={`w-12 h-12 rounded-full flex items-center justify-center transition-all relative overflow-hidden group/copy ${copied ? 'bg-emerald-500 text-[#202124]' : 'bg-white border border-white/20 text-[#5F6368] hover:bg-accent hover:text-[#202124] hover:border-transparent'} hover:shadow-xl`}
                     title="Copy Synthesis Link"
                 >
                     <AnimatePresence mode="wait">

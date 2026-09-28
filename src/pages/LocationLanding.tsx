@@ -59,11 +59,11 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                         className="max-w-6xl"
                     >
                         <div className="inline-flex items-center gap-6 px-10 py-4 bg-accent/10 border border-accent/20 rounded-full mb-8 backdrop-blur-3xl shadow-2xl">
-                            <Target size={24} className="text-[#1a73e8] animate-pulse" />
-                            <span className="text-[12px] font-bold tracking-tight font-semibold text-[#1a73e8]">Strategic Epicenter Sync 2026</span>
+                            <Target size={24} className="rainbow-text-clip font-bold animate-pulse" />
+                            <span className="text-[12px] font-bold tracking-tight font-semibold rainbow-text-clip font-bold">Strategic Epicenter Sync 2026</span>
                         </div>
                         <h1 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold mb-8 leading-[0.75] tracking-tighter">
-                            Beyond <br /> <span className="text-[#1a73e8] italic">{locationName}.</span>
+                            Beyond <br /> <span className="rainbow-text-clip font-bold italic">{locationName}.</span>
                         </h1>
                         <p className="text-3xl md:text-4xl text-[#5F6368] max-w-4xl mb-8 leading-relaxed font-medium italic">
                             Standalone constraints belong to the past. Life Republic offers a 400-acre sovereign ecosystem just {distance} from {locationName}. Experience the **Spine Road Advantage**.
@@ -71,11 +71,11 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                         <div className="flex flex-wrap gap-10">
                             <button 
                                 onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}
-                                className="bg-[#151822] border border-[#DADCE0] text-[#202124] px-20 py-10 rounded-full font-bold text-2xl shadow-[0_50px_100px_-20px_rgba(0,0,0,0.4)] hover:bg-accent hover:text-[#202124] transition-all flex items-center gap-6 group hover:scale-[1.05]"
+                                className="bg-[#151822] border border-white/20 text-[#202124] px-20 py-10 rounded-full font-bold text-2xl shadow-[0_50px_100px_-20px_rgba(0,0,0,0.4)] hover:bg-accent hover:text-[#202124] transition-all flex items-center gap-6 group hover:scale-[1.05]"
                             >
                                 Enquire Now <ArrowUpRight size={32} className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
                             </button>
-                            <a href="#matrix" className="bg-transparent border-2 border-[#DADCE0] text-[#202124] hover:bg-[#151822] border border-[#DADCE0]/5 rounded-full px-20 py-10 font-bold text-2xl flex items-center gap-6 transition-all group">
+                            <a href="#matrix" className="bg-transparent border-2 border-white/20 text-[#202124] hover:bg-[#151822] border border-white/20/5 rounded-full px-20 py-10 font-bold text-2xl flex items-center gap-6 transition-all group">
                                 View Transit Matrix <BarChart3 size={32} className="group-hover:rotate-12 transition-transform" />
                             </a>
                         </div>
@@ -83,7 +83,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                 </div>
                 
                 <div className="absolute bottom-20 left-20 hidden lg:flex items-center gap-6 text-[#202124]/30">
-                    <div className="flex items-center gap-4"><Network size={20} className="text-[#1a73e8]" /><span className="text-[11px] font-bold tracking-tight font-semibold">2026 Metro Sync Active</span></div>
+                    <div className="flex items-center gap-4"><Network size={20} className="rainbow-text-clip font-bold" /><span className="text-[11px] font-bold tracking-tight font-semibold">2026 Metro Sync Active</span></div>
                     <div className="flex items-center gap-4"><Globe size={20} /><span className="text-[11px] font-bold tracking-tight font-semibold">Hinjewadi ph 3 Hub</span></div>
                 </div>
             </section>
@@ -98,11 +98,11 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-32 items-center">
                         <div className="lg:col-span-5 space-y-16">
                             <div className="space-y-8">
-                                <div className="inline-flex items-center gap-4 text-[#1a73e8] font-bold mb-4">
+                                <div className="inline-flex items-center gap-4 rainbow-text-clip font-bold font-bold mb-4">
                                     <Cpu size={24} />
                                     <span className="text-[12px] tracking-tight font-semibold">The Transit Synthesis</span>
                                 </div>
-                                <h2 className="text-5xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] tracking-tighter leading-[0.85]">The Superior <br /><span className="text-[#1a73e8] italic">Commute Delta.</span></h2>
+                                <h2 className="text-5xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] tracking-tighter leading-[0.85]">The Superior <br /><span className="rainbow-text-clip font-bold italic">Commute Delta.</span></h2>
                             </div>
                             <p className="text-2xl md:text-3xl text-[#5F6368] leading-relaxed font-medium italic">
                                 standalone properties in {locationName} often lack dedicated infrastructure. Life Republic residents enjoy the 150ft Spine Road advantage, bypassing all local bottlenecks.
@@ -116,9 +116,9 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                                     <motion.div 
                                         key={i} 
                                         whileHover={{ x: 20 }}
-                                        className="flex gap-8 p-10 bg-[#151822] border border-[#DADCE0] rounded-[3.5rem] border border-[#DADCE0] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] group hover:border-accent transition-all"
+                                        className="flex gap-8 p-10 bg-[#151822] border border-white/20 rounded-[3.5rem] border border-white/20 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] group hover:border-accent transition-all"
                                     >
-                                        <div className="w-20 h-20 bg-accent/10 text-[#1a73e8] rounded-[2rem] flex items-center justify-center group-hover:bg-accent group-hover:text-[#202124] transition-all shadow-inner">
+                                        <div className="w-20 h-20 bg-accent/10 rainbow-text-clip font-bold rounded-[2rem] flex items-center justify-center group-hover:bg-accent group-hover:text-[#202124] transition-all shadow-inner">
                                             <item.icon size={36} strokeWidth={1.5} />
                                         </div>
                                         <div>
@@ -130,21 +130,21 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                             </div>
                         </div>
                         
-                        <div className="lg:col-span-7 bg-[#151822] border border-[#DADCE0] rounded-[5rem] p-16 md:p-24 shadow-[0_80px_160px_-40px_rgba(0,0,0,0.1)] border border-[#DADCE0] relative overflow-hidden group">
+                        <div className="lg:col-span-7 bg-[#151822] border border-white/20 rounded-[5rem] p-16 md:p-24 shadow-[0_80px_160px_-40px_rgba(0,0,0,0.1)] border border-white/20 relative overflow-hidden group">
                             <div className="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full -mr-40 -mt-40 blur-[100px] group-hover:scale-150 transition-transform duration-[3s]"></div>
                             <div className="flex items-center justify-between mb-10">
                                 <h3 className="text-5xl font-sans font-bold text-[#202124] tracking-tighter italic">Sovereign Proximity Analysis</h3>
-                                <div className="flex items-center gap-4 text-[11px] font-bold text-[#1a73e8] tracking-tight font-semibold bg-accent/10 px-8 py-4 rounded-full border border-accent/20">
+                                <div className="flex items-center gap-4 text-[11px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold bg-accent/10 px-8 py-4 rounded-full border border-accent/20">
                                     <Navigation size={16} className="animate-pulse" /> Live Sync Active
                                 </div>
                             </div>
                             <div className="overflow-x-auto">
                                 <table className="w-full text-left">
                                     <thead>
-                                        <tr className="border-b border-[#DADCE0]">
+                                        <tr className="border-b border-white/20">
                                             <th className="pb-12 text-[12px] font-bold tracking-tight font-semibold text-gray-300">Destination Hub</th>
                                             <th className="pb-12 text-[12px] font-bold tracking-tight font-semibold text-gray-300">Standalone {locationName}</th>
-                                            <th className="pb-12 text-[12px] font-bold tracking-tight font-semibold text-[#1a73e8]">Sovereign Sync</th>
+                                            <th className="pb-12 text-[12px] font-bold tracking-tight font-semibold rainbow-text-clip font-bold">Sovereign Sync</th>
                                             <th className="pb-12 text-[12px] font-bold tracking-tight font-semibold text-gray-300">ROI Delta</th>
                                         </tr>
                                     </thead>
@@ -161,7 +161,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                                                 <td className="py-12 text-[#202124] font-bold text-2xl flex items-center gap-4">
                                                     <div className="w-3 h-3 bg-accent rounded-full animate-pulse shadow-[0_0_15px_var(--accent)]"></div> {row.fromLR}
                                                 </td>
-                                                <td className="py-12 text-[#1a73e8] font-bold italic text-xl tracking-tight">{row.delta}</td>
+                                                <td className="py-12 rainbow-text-clip font-bold font-bold italic text-xl tracking-tight">{row.delta}</td>
                                             </tr>
                                         ))}
                                     </tbody>
@@ -176,8 +176,8 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
             <section id="projects" className="py-64 bg-white relative">
                 <div className="container mx-auto px-4 text-center">
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}>
-                        <span className="text-[11px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-6 block">Personalized Synthesis</span>
-                        <h2 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-32 tracking-tighter leading-none italic">The Sovereign <span className="text-[#1a73e8]">Clusters.</span></h2>
+                        <span className="text-[11px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold mb-6 block">Personalized Synthesis</span>
+                        <h2 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-32 tracking-tighter leading-none italic">The Sovereign <span className="rainbow-text-clip font-bold">Clusters.</span></h2>
                     </motion.div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {featuredProjects.map((project) => (
@@ -188,7 +188,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
             </section>
 
             {/* Hyper-Local SEO Content v6.5 */}
-            <section className="py-64 bg-white text-[#202124]/40 text-2xl leading-[1.6] border-t border-[#DADCE0] relative overflow-hidden">
+            <section className="py-64 bg-white text-[#202124]/40 text-2xl leading-[1.6] border-t border-white/20 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/aerial-night.png')] bg-cover bg-center opacity-5 grayscale pointer-events-none"></div>
                 <div className="container mx-auto px-4 max-w-6xl text-center relative z-10 space-y-16">
                     <h3 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter italic">Property Market Synthesis: {locationName} vs Hinjewadi 2026</h3>

@@ -5,7 +5,7 @@ import { TrendingUp, PieChart, ArrowUpRight, Wallet } from 'lucide-react';
 export const SovereignFinancials: React.FC = () => {
   const stats = [
     { label: "5-Year Appreciation", value: "48%", icon: <TrendingUp />, color: "bg-emerald-500" },
-    { label: "Avg. Rental Yield", value: "4.2%", icon: <PieChart />, color: "bg-blue-500" },
+    { label: "Avg. Rental Yield", value: "4.2%", icon: <PieChart />, color: "bg-white/5" },
     { label: "Yearly Demand Growth", value: "15%", icon: <ArrowUpRight />, color: "bg-orange-500" },
     { label: "Hinjewadi IT Footprint", value: "80M sqft", icon: <Wallet />, color: "bg-accent" }
   ];
@@ -23,7 +23,7 @@ export const SovereignFinancials: React.FC = () => {
       
       <div className="container mx-auto px-8 relative z-10">
         <div className="max-w-3xl mb-8">
-          <span className="text-[#1a73e8] font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Financial Intelligence</span>
+          <span className="rainbow-text-clip font-bold font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Financial Intelligence</span>
           <h2 className="text-4xl md:text-5xl font-sans font-bold mb-6">The Sovereign ROI Thesis</h2>
           <p className="text-[#5F6368] text-lg leading-relaxed">
             Hinjewadi is the engine of Pune's economy. Life Republic is its residential cockpit. Explore the momentum that has turned an integrated township into Hinjewadi's premier capital appreciation zone.
@@ -40,7 +40,7 @@ export const SovereignFinancials: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-[#151822] border border-[#DADCE0]/5 border border-[#DADCE0] p-6 rounded-3xl backdrop-blur-sm"
+                className="bg-[#151822] border border-white/20/5 border border-white/20 p-6 rounded-3xl backdrop-blur-sm"
               >
                 <div className={`w-10 h-10 ${stat.color} rounded-xl flex items-center justify-center text-[#202124] mb-4 shadow-lg`}>
                    {React.cloneElement(stat.icon as React.ReactElement, { size: 18 } as any)}
@@ -52,9 +52,9 @@ export const SovereignFinancials: React.FC = () => {
           </div>
 
           {/* Price Tracking Timeline */}
-          <div className="bg-[#151822] border border-[#DADCE0]/5 border border-[#DADCE0] p-8 md:p-12 rounded-[24px] backdrop-blur-sm relative overflow-hidden">
+          <div className="bg-[#151822] border border-white/20/5 border border-white/20 p-8 md:p-12 rounded-[24px] backdrop-blur-sm relative overflow-hidden">
             <h4 className="text-xl font-bold mb-8 flex items-center gap-3">
-              <TrendingUp className="text-[#1a73e8]" /> Base Rate Trajectory (₹ / sqft)
+              <TrendingUp className="rainbow-text-clip font-bold" /> Base Rate Trajectory (₹ / sqft)
             </h4>
             
             <div className="space-y-8 relative">
@@ -74,7 +74,7 @@ export const SovereignFinancials: React.FC = () => {
             </div>
 
             <div className="mt-12 p-6 bg-accent/10 border border-accent/20 rounded-2xl">
-                <p className="text-xs italic text-[#1a73e8] font-medium leading-relaxed">
+                <p className="text-xs italic rainbow-text-clip font-bold font-medium leading-relaxed">
                     "Consistent 12%+ YoY growth in Hinjewadi Phase 1 properties over the last 48 months as per market analysis."
                 </p>
             </div>

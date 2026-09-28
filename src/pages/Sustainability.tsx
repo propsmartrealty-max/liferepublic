@@ -39,8 +39,8 @@ export const Sustainability: React.FC = () => {
                         </p>
                     </div>
                     
-                    <div className="flex items-center gap-6 p-8 bg-[#F8F9FA] rounded-[24px] border border-[#DADCE0] shadow-inner group">
-                        <div className="p-4 bg-[#151822] border border-[#DADCE0] rounded-2xl shadow-sm text-emerald-500 group-hover:rotate-12 transition-transform">
+                    <div className="flex items-center gap-6 p-8 bg-[#F8F9FA] rounded-[24px] border border-white/20 shadow-inner group">
+                        <div className="p-4 bg-[#151822] border border-white/20 rounded-2xl shadow-sm text-emerald-500 group-hover:rotate-12 transition-transform">
                             <Zap size={28} />
                         </div>
                         <div>
@@ -58,7 +58,7 @@ export const Sustainability: React.FC = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="bg-[#151822] border border-[#DADCE0] p-12 rounded-[3.5rem] border border-[#DADCE0] hover:shadow-[0_40px_80px_-20px_rgba(16,185,129,0.1)] hover:border-emerald-500/20 transition-all group relative overflow-hidden"
+                            className="bg-[#151822] border border-white/20 p-12 rounded-[3.5rem] border border-white/20 hover:shadow-[0_40px_80px_-20px_rgba(16,185,129,0.1)] hover:border-emerald-500/20 transition-all group relative overflow-hidden"
                         >
                             <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-125 transition-transform">
                                 <metric.icon size={80} />
@@ -92,11 +92,11 @@ export const Sustainability: React.FC = () => {
                                 Our central spine road is a massive 400-acre green filter. Lined with thousands of native trees, it creates a micro-climate that reduces ambient temperatures by up to 3°C across all residential clusters.
                             </p>
                             <div className="flex flex-wrap gap-8">
-                                <div className="bg-[#151822] border border-[#DADCE0]/5 backdrop-blur-xl px-10 py-6 rounded-[24px] border border-[#DADCE0] group/stat">
+                                <div className="bg-[#151822] border border-white/20/5 backdrop-blur-xl px-10 py-6 rounded-[24px] border border-white/20 group/stat">
                                     <div className="text-4xl font-bold text-emerald-400 group-hover:scale-110 transition-transform">3.5 Acres</div>
                                     <div className="text-[10px] text-[#202124]/30 uppercase font-bold tracking-[0.4em] mt-2">Sovereign Urban Park</div>
                                 </div>
-                                <div className="bg-[#151822] border border-[#DADCE0]/5 backdrop-blur-xl px-10 py-6 rounded-[24px] border border-[#DADCE0] group/stat">
+                                <div className="bg-[#151822] border border-white/20/5 backdrop-blur-xl px-10 py-6 rounded-[24px] border border-white/20 group/stat">
                                     <div className="text-4xl font-bold text-emerald-400 group-hover:scale-110 transition-transform">Zero</div>
                                     <div className="text-[10px] text-[#202124]/30 uppercase font-bold tracking-[0.4em] mt-2">Liquid Discharge</div>
                                 </div>
@@ -106,18 +106,18 @@ export const Sustainability: React.FC = () => {
                             </button>
                         </div>
                         
-                        <div className="relative aspect-square rounded-[24px] overflow-hidden border border-[#DADCE0] shadow-2xl">
+                        <div className="relative aspect-square rounded-[24px] overflow-hidden border border-white/20 shadow-2xl">
                             <img loading="lazy" 
                                 src="/images/aerial-sunset.png" 
                                 alt="Sovereign Greenery" 
                                 className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-[3s]"
                             />
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="bg-[#151822] border border-[#DADCE0]/10 backdrop-blur-2xl p-16 rounded-full border border-[#DADCE0] shadow-[0_0_80px_rgba(16,185,129,0.3)]">
+                                <div className="bg-[#151822] border border-white/20/10 backdrop-blur-2xl p-16 rounded-full border border-white/20 shadow-[0_0_80px_rgba(16,185,129,0.3)]">
                                     <Globe size={80} className="text-emerald-400 animate-spin-slow" />
                                 </div>
                             </div>
-                            <div className="absolute bottom-10 left-10 right-10 p-8 bg-white/80 backdrop-blur-3xl rounded-[24px] border border-[#DADCE0]">
+                            <div className="absolute bottom-10 left-10 right-10 p-8 bg-white/80 backdrop-blur-3xl rounded-[24px] border border-white/20">
                                 <p className="text-xs text-[#202124] font-bold leading-relaxed italic">"Verified 2026 Bio-Sovereignty Index: Top 1% of Integrated Townships in India."</p>
                             </div>
                         </div>

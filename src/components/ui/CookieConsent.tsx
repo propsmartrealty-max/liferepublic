@@ -36,10 +36,10 @@ export const CookieConsent: React.FC = () => {
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     className="fixed bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:max-w-md z-[9999]"
                 >
-                    <div className="bg-[#151822] border border-[#DADCE0] rounded-2xl shadow-2xl border border-[#DADCE0] p-6 flex flex-col gap-4">
+                    <div className="bg-[#151822] border border-white/20 rounded-2xl shadow-2xl border border-white/20 p-6 flex flex-col gap-4">
                         <div className="flex items-start justify-between gap-4">
                             <div className="flex items-center gap-3">
-                                <div className="p-2 bg-accent/10 rounded-full text-[#1a73e8]">
+                                <div className="p-2 bg-accent/10 rounded-full rainbow-text-clip font-bold">
                                     <Cookie size={20} />
                                 </div>
                                 <h3 className="font-bold text-[#202124] text-sm">We Value Your Privacy</h3>
@@ -50,13 +50,13 @@ export const CookieConsent: React.FC = () => {
                         </div>
                         
                         <p className="text-xs text-[#5F6368] leading-relaxed font-medium">
-                            We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our <Link to="/privacy-policy" className="text-[#1a73e8] hover:underline">Privacy Policy</Link>.
+                            We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our <Link to="/privacy-policy" className="rainbow-text-clip font-bold hover:underline">Privacy Policy</Link>.
                         </p>
 
                         <div className="flex gap-3 mt-2">
                             <Button 
                                 variant="outline" 
-                                className="flex-1 rounded-xl py-3 text-[10px] font-bold tracking-tight font-medium border-[#DADCE0]"
+                                className="flex-1 rounded-xl py-3 text-[10px] font-bold tracking-tight font-medium border-white/20"
                                 onClick={declineCookies}
                             >
                                 Decline

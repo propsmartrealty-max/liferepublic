@@ -27,7 +27,7 @@ export const FAQ: React.FC = () => {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <div className="container mx-auto px-4 max-w-4xl">
                 <div className="text-center mb-12">
-                    <div className="inline-flex items-center justify-center p-3 bg-accent/10 rounded-full mb-4 text-[#1a73e8]">
+                    <div className="inline-flex items-center justify-center p-3 bg-accent/10 rounded-full mb-4 rainbow-text-clip font-bold">
                         <HelpCircle size={24} />
                     </div>
                     <h2 className="text-4xl font-sans font-bold mb-4 text-[#202124]">Frequently Asked Questions</h2>
@@ -38,16 +38,16 @@ export const FAQ: React.FC = () => {
 
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
-                        <div key={index} className="border border-[#DADCE0] rounded-xl overflow-hidden hover:border-accent/30 transition-colors bg-[#F8F9FA]/50">
+                        <div key={index} className="border border-white/20 rounded-xl overflow-hidden hover:border-accent/30 transition-colors bg-[#F8F9FA]/50">
                             <button
                                 onClick={() => setActiveIndex(activeIndex === index ? null : index)}
                                 className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
                             >
-                                <span className={`font-semibold text-lg ${activeIndex === index ? 'text-[#1a73e8]' : 'text-[#202124]'}`}>
+                                <span className={`font-semibold text-lg ${activeIndex === index ? 'rainbow-text-clip font-bold' : 'text-[#202124]'}`}>
                                     {faq.question}
                                 </span>
                                 <ChevronDown
-                                    className={`text-[#5F6368] transition-transform duration-300 ${activeIndex === index ? 'rotate-180 text-[#1a73e8]' : ''}`}
+                                    className={`text-[#5F6368] transition-transform duration-300 ${activeIndex === index ? 'rotate-180 rainbow-text-clip font-bold' : ''}`}
                                 />
                             </button>
                             <AnimatePresence>
@@ -58,7 +58,7 @@ export const FAQ: React.FC = () => {
                                         exit={{ height: 0, opacity: 0 }}
                                         transition={{ duration: 0.3 }}
                                     >
-                                        <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-[#DADCE0] pt-4">
+                                        <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-white/20 pt-4">
                                             {faq.answer}
                                         </div>
                                     </motion.div>

@@ -31,14 +31,14 @@ export const TownshipMap: React.FC = () => {
     <section className="py-12 bg-[#F8F9FA] overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <span className="text-[#1a73e8] font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Perspective & Scale</span>
+          <span className="rainbow-text-clip font-bold font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Perspective & Scale</span>
           <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-4">Interactive Masterplan</h2>
           <p className="text-[#5F6368] max-w-2xl mx-auto">
             Explore 390+ acres of integrated community living. Hover over the sectors to view cluster details and project timelines.
           </p>
         </div>
 
-        <div className="relative max-w-5xl mx-auto bg-[#151822] border border-[#DADCE0] rounded-[24px] shadow-2xl p-4 md:p-8 border border-[#DADCE0]">
+        <div className="relative max-w-5xl mx-auto bg-[#151822] border border-white/20 rounded-[24px] shadow-2xl p-4 md:p-8 border border-white/20">
           <div className="relative aspect-[16/9] w-full bg-[#151822] rounded-3xl overflow-hidden group">
             {/* Base stylized map (SVG) */}
             <svg viewBox="0 0 100 100" className="w-full h-full text-gray-200">
@@ -64,7 +64,7 @@ export const TownshipMap: React.FC = () => {
               >
                 <div className="absolute inset-0 rounded-full animate-ping opacity-20" style={{ backgroundColor: cluster.color }}></div>
                 <MapPin className="text-[#202124]" size={16} />
-                <span className="absolute top-full mt-2 bg-[#151822] border border-[#DADCE0] px-2 py-0.5 rounded text-[10px] font-bold shadow-sm text-gray-600 whitespace-nowrap">
+                <span className="absolute top-full mt-2 bg-[#151822] border border-white/20 px-2 py-0.5 rounded text-[10px] font-bold shadow-sm text-gray-600 whitespace-nowrap">
                   {cluster.name}
                 </span>
               </motion.button>
@@ -77,7 +77,7 @@ export const TownshipMap: React.FC = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
-                  className="absolute bottom-6 right-6 z-30 w-72 bg-[#151822] border border-[#DADCE0]/90 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-[#DADCE0]"
+                  className="absolute bottom-6 right-6 z-30 w-72 bg-[#151822] border border-white/20/90 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/20"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <span className="bg-[#151822] text-[#5F6368] px-3 py-1 rounded-full text-[10px] font-bold tracking-tight font-medium leading-none">
@@ -106,7 +106,7 @@ export const TownshipMap: React.FC = () => {
 
             {/* Static Map Elements */}
             <div className="absolute top-6 left-6 z-10 pointer-events-none">
-              <div className="flex items-center gap-2 bg-[#151822] border border-[#DADCE0]/50 backdrop-blur-md px-4 py-2 rounded-full border border-[#DADCE0]">
+              <div className="flex items-center gap-2 bg-[#151822] border border-white/20/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
                 <Info size={14} className="text-[#202124]" />
                 <span className="text-[10px] font-bold tracking-tight font-medium text-[#202124]">Life Republic 390-Acre Domain</span>
               </div>

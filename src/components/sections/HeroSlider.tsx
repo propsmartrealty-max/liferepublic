@@ -11,7 +11,7 @@ export const HeroSlider = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E8F0FE] text-[#1a73e8] text-sm font-medium"
+                    className="mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E8F0FE] rainbow-text-clip font-bold text-sm font-medium"
                 >
                     <span className="material-symbol text-lg">new_releases</span>
                     New Sector Launch
@@ -61,7 +61,7 @@ export const HeroSlider = () => {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="w-full max-w-6xl mx-auto rounded-[24px] overflow-hidden shadow-google border border-[#DADCE0]"
+                className="w-full max-w-6xl mx-auto rounded-[24px] overflow-hidden shadow-google border border-white/20"
             >
                 <img 
                     src="/images/home/slider-1.webp" 

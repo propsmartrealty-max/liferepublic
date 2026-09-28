@@ -20,7 +20,7 @@ export const DemandHeatmap: React.FC = () => {
     }, []);
 
     return (
-        <div className="bg-[#151822] border border-[#DADCE0] rounded-[2rem] p-8 border border-[#DADCE0] shadow-xl relative overflow-hidden group">
+        <div className="bg-[#151822] border border-white/20 rounded-[2rem] p-8 border border-white/20 shadow-xl relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-accent/10 transition-colors" />
             
             <div className="flex items-center gap-4 mb-8">
@@ -50,7 +50,7 @@ export const DemandHeatmap: React.FC = () => {
                 <div className="space-y-2">
                     <div className="flex justify-between text-xs font-bold tracking-tight font-medium">
                         <span className="text-[#5F6368]">Inventory Status</span>
-                        <span className="text-[#1a73e8]">{stats.unitsLeft} Units Remaining</span>
+                        <span className="rainbow-text-clip font-bold">{stats.unitsLeft} Units Remaining</span>
                     </div>
                     <div className="w-full h-1.5 bg-[#151822] rounded-full overflow-hidden">
                         <motion.div 
@@ -63,7 +63,7 @@ export const DemandHeatmap: React.FC = () => {
                 </div>
 
                 {/* Last Booking */}
-                <div className="p-4 bg-[#F8F9FA] rounded-2xl border border-[#DADCE0] flex items-center justify-between">
+                <div className="p-4 bg-[#F8F9FA] rounded-2xl border border-white/20 flex items-center justify-between">
                     <div className="flex items-center gap-3">
                         <TrendingUp size={16} className="text-[#202124]" />
                         <span className="text-xs font-medium text-gray-600">Last Token Confirmed</span>

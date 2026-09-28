@@ -39,7 +39,7 @@ export const InfraTracker: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row items-end justify-between mb-8 gap-6">
                     <div className="max-w-2xl">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 text-[#1a73e8] rounded-full text-sm font-bold mb-4 tracking-tight font-medium">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rainbow-text-clip font-bold rounded-full text-sm font-bold mb-4 tracking-tight font-medium">
                             <TrendingUp size={16} /> Sovereign Growth Monitor
                         </div>
                         <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-6">Hinjewadi Infrastructure & Appreciation Tracker</h2>
@@ -57,19 +57,19 @@ export const InfraTracker: React.FC = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="p-8 bg-[#F8F9FA] rounded-3xl border border-[#DADCE0] hover:border-accent hover:shadow-xl transition-all group"
+                            className="p-8 bg-[#F8F9FA] rounded-3xl border border-white/20 hover:border-accent hover:shadow-xl transition-all group"
                         >
-                            <div className="w-14 h-14 bg-[#151822] border border-[#DADCE0] rounded-2xl flex items-center justify-center text-[#1a73e8] mb-6 shadow-sm group-hover:bg-accent group-hover:text-[#202124] transition-all">
+                            <div className="w-14 h-14 bg-[#151822] border border-white/20 rounded-2xl flex items-center justify-center rainbow-text-clip font-bold mb-6 shadow-sm group-hover:bg-accent group-hover:text-[#202124] transition-all">
                                 <item.icon size={28} />
                             </div>
                             <h3 className="text-xl font-bold text-[#202124] mb-2">{item.title}</h3>
-                            <div className="inline-block px-2 py-1 bg-white border border-[#DADCE0] rounded text-[10px] font-bold text-[#1a73e8] uppercase tracking-tighter mb-4">
+                            <div className="inline-block px-2 py-1 bg-white border border-white/20 rounded text-[10px] font-bold rainbow-text-clip font-bold uppercase tracking-tighter mb-4">
                                 {item.status}
                             </div>
                             <p className="text-[#5F6368] text-sm leading-relaxed mb-6">
                                 {item.impact}
                             </p>
-                            <div className="pt-6 border-t border-[#DADCE0] flex items-center justify-between">
+                            <div className="pt-6 border-t border-white/20 flex items-center justify-between">
                                 <span className="text-[10px] text-[#5F6368] uppercase font-bold tracking-widest">Est. Delivery</span>
                                 <span className="text-sm font-bold text-[#202124]">{item.completion}</span>
                             </div>

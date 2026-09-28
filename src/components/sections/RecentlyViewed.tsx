@@ -75,7 +75,7 @@ export const RecentlyViewed: React.FC = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         className="max-w-3xl"
                     >
-                        <div className="flex items-center gap-4 text-[#1a73e8] mb-8">
+                        <div className="flex items-center gap-4 rainbow-text-clip font-bold mb-8">
                             <BrainCircuit size={24} className="animate-pulse" />
                             <span className="text-[11px] font-bold tracking-tight font-semibold">{sentimentLabel}</span>
                         </div>
@@ -90,14 +90,14 @@ export const RecentlyViewed: React.FC = () => {
                     <motion.div 
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        className="flex gap-10 items-center bg-[#F8F9FA]/50 backdrop-blur-xl px-12 py-6 rounded-[24px] border border-[#DADCE0] shadow-inner group"
+                        className="flex gap-10 items-center bg-[#F8F9FA]/50 backdrop-blur-xl px-12 py-6 rounded-[24px] border border-white/20 shadow-inner group"
                     >
                         <div className="text-right">
                             <span className="text-[10px] font-bold text-[#5F6368] tracking-tight font-medium block mb-1">Intent Multiplier</span>
-                            <span className="text-4xl font-sans font-bold text-[#202124] tracking-tighter group-hover:text-[#1a73e8] transition-colors">{history.intentScore}</span>
+                            <span className="text-4xl font-sans font-bold text-[#202124] tracking-tighter group-hover:rainbow-text-clip font-bold transition-colors">{history.intentScore}</span>
                         </div>
                         <div className="w-px h-12 bg-gray-200"></div>
-                        <div className="p-4 bg-[#151822] border border-[#DADCE0] rounded-2xl shadow-sm text-[#1a73e8] group-hover:rotate-12 transition-transform">
+                        <div className="p-4 bg-[#151822] border border-white/20 rounded-2xl shadow-sm rainbow-text-clip font-bold group-hover:rotate-12 transition-transform">
                             <TrendingUp size={32} />
                         </div>
                     </motion.div>
@@ -125,19 +125,19 @@ export const RecentlyViewed: React.FC = () => {
                                         
                                         <div className="absolute bottom-16 left-16 right-16 text-[#202124] space-y-6">
                                             <div className="flex items-center gap-4">
-                                                <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center text-[#1a73e8]">
+                                                <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center rainbow-text-clip font-bold">
                                                     <Zap size={14} />
                                                 </div>
                                                 <span className="text-[11px] font-bold tracking-tight font-semibold text-[#202124]/50">
                                                     {project.category} Synthesis
                                                 </span>
                                             </div>
-                                            <h3 className="text-4xl md:text-5xl font-sans font-bold leading-[0.9] group-hover:text-[#1a73e8] transition-colors tracking-tighter">
+                                            <h3 className="text-4xl md:text-5xl font-sans font-bold leading-[0.9] group-hover:rainbow-text-clip font-bold transition-colors tracking-tighter">
                                                 {project.title}
                                             </h3>
                                         </div>
 
-                                        <div className="absolute top-12 right-12 w-20 h-20 rounded-[2rem] bg-[#151822] border border-[#DADCE0] text-[#202124] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all translate-x-12 group-hover:translate-x-0 shadow-[0_30px_60px_-10px_rgba(0,0,0,0.5)]">
+                                        <div className="absolute top-12 right-12 w-20 h-20 rounded-[2rem] bg-[#151822] border border-white/20 text-[#202124] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all translate-x-12 group-hover:translate-x-0 shadow-[0_30px_60px_-10px_rgba(0,0,0,0.5)]">
                                             <ArrowUpRight size={36} />
                                         </div>
                                     </div>
@@ -160,8 +160,8 @@ export const RecentlyViewed: React.FC = () => {
                 </div>
 
                 <div className="mt-20 flex items-center justify-center gap-6">
-                    <div className="px-8 py-3 bg-[#F8F9FA] border border-[#DADCE0] rounded-full flex items-center gap-4">
-                        <Cpu size={16} className="text-[#1a73e8]" />
+                    <div className="px-8 py-3 bg-[#F8F9FA] border border-white/20 rounded-full flex items-center gap-4">
+                        <Cpu size={16} className="rainbow-text-clip font-bold" />
                         <span className="text-[10px] font-bold text-[#5F6368] tracking-tight font-semibold">Sovereign Memory Active</span>
                     </div>
                 </div>

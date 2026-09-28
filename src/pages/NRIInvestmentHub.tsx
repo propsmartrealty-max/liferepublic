@@ -44,12 +44,12 @@ export const NRIInvestmentHub: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                     >
-                        <span className="px-6 py-2 bg-accent/20 text-[#1a73e8] rounded-full text-xs font-bold tracking-tight font-semibold mb-8 inline-block border border-accent/20">
+                        <span className="px-6 py-2 bg-accent/20 rainbow-text-clip font-bold rounded-full text-xs font-bold tracking-tight font-semibold mb-8 inline-block border border-accent/20">
                             Global Investors Portal
                         </span>
                         <h1 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] mb-8 leading-tight">
                             Invest in Pune's <br />
-                            <span className="text-[#1a73e8] underline decoration-white/10 underline-offset-8">Sovereign Growth Corridor</span>
+                            <span className="rainbow-text-clip font-bold underline decoration-white/10 underline-offset-8">Sovereign Growth Corridor</span>
                         </h1>
                         <p className="text-[#202124]/60 text-xl max-w-3xl mx-auto leading-relaxed mb-12">
                             Secure your future in India's most resilient integrated township. Professional-grade ROI analytics for the cross-border investor.
@@ -58,7 +58,7 @@ export const NRIInvestmentHub: React.FC = () => {
                             <Button variant="primary" size="lg" className="rounded-full px-12" onClick={() => document.getElementById('ledger')?.scrollIntoView({ behavior: 'smooth' })}>
                                 View Performance Ledger
                             </Button>
-                            <Button variant="outline" size="lg" className="rounded-full px-12 border-[#DADCE0] text-[#202124] hover:bg-[#151822] border border-[#DADCE0]/10">
+                            <Button variant="outline" size="lg" className="rounded-full px-12 border-white/20 text-[#202124] hover:bg-[#151822] border border-white/20/10">
                                 Download NRI Guide PDF
                             </Button>
                         </div>
@@ -78,7 +78,7 @@ export const NRIInvestmentHub: React.FC = () => {
             <ProjectComparison />
 
             {/* NRI Trust Elements */}
-            <section className="py-12 bg-white border-t border-[#DADCE0]">
+            <section className="py-12 bg-white border-t border-white/20">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="space-y-4">

@@ -66,12 +66,12 @@ export const NeuralSearch: React.FC<{ isOpen: boolean; onClose: () => void }> = 
                         initial={{ opacity: 0, y: -20, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -20, scale: 0.95 }}
-                        className="w-full max-w-2xl bg-[#151822] border border-[#DADCE0] rounded-[2rem] shadow-2xl overflow-hidden border border-[#DADCE0]"
+                        className="w-full max-w-2xl bg-[#151822] border border-white/20 rounded-[2rem] shadow-2xl overflow-hidden border border-white/20"
                         onKeyDown={handleKeyDown}
                     >
                         {/* Search Input */}
-                        <div className="relative p-6 border-b border-[#DADCE0] flex items-center gap-4">
-                            <Search className={`${isSearching ? 'animate-pulse text-[#1a73e8]' : 'text-[#5F6368]'}`} size={24} />
+                        <div className="relative p-6 border-b border-white/20 flex items-center gap-4">
+                            <Search className={`${isSearching ? 'animate-pulse rainbow-text-clip font-bold' : 'text-[#5F6368]'}`} size={24} />
                             <input
                                 ref={inputRef}
                                 type="text"
@@ -80,7 +80,7 @@ export const NeuralSearch: React.FC<{ isOpen: boolean; onClose: () => void }> = 
                                 placeholder="Search Township (e.g. '3 BHK near School', 'Echoes')..."
                                 className="flex-1 bg-transparent border-none outline-none text-xl font-medium text-[#202124] placeholder:text-gray-300"
                             />
-                            <div className="flex items-center gap-2 px-2 py-1 bg-[#F8F9FA] rounded-lg border border-[#DADCE0] text-[10px] font-bold text-[#5F6368] tracking-tight font-medium">
+                            <div className="flex items-center gap-2 px-2 py-1 bg-[#F8F9FA] rounded-lg border border-white/20 text-[10px] font-bold text-[#5F6368] tracking-tight font-medium">
                                 <Command size={10} /> K
                             </div>
                             <button onClick={onClose} className="p-2 hover:bg-[#F8F9FA] rounded-full text-[#5F6368]">
@@ -128,7 +128,7 @@ export const NeuralSearch: React.FC<{ isOpen: boolean; onClose: () => void }> = 
                                             <button 
                                                 key={i}
                                                 onClick={() => setQuery(q)}
-                                                className="flex items-center gap-3 text-sm text-[#5F6368] hover:text-[#1a73e8] transition-colors"
+                                                className="flex items-center gap-3 text-sm text-[#5F6368] hover:rainbow-text-clip font-bold transition-colors"
                                             >
                                                 <Search size={14} /> {q}
                                             </button>
@@ -139,12 +139,12 @@ export const NeuralSearch: React.FC<{ isOpen: boolean; onClose: () => void }> = 
 
                                     <div className="mt-10 grid grid-cols-2 gap-4">
                                         <div className="p-6 rounded-3xl bg-white/5 border border-secondary/10">
-                                            <Sparkles className="text-[#1a73e8] mb-3" size={20} />
+                                            <Sparkles className="rainbow-text-clip font-bold mb-3" size={20} />
                                             <h6 className="font-bold text-[#202124] text-sm mb-1">PSEO Hubs</h6>
                                             <p className="text-[10px] text-[#5F6368] leading-relaxed">Instantly access 73+ hyper-local sector landing pages.</p>
                                         </div>
                                         <div className="p-6 rounded-3xl bg-accent/5 border border-accent/10">
-                                            <Command className="text-[#1a73e8] mb-3" size={20} />
+                                            <Command className="rainbow-text-clip font-bold mb-3" size={20} />
                                             <h6 className="font-bold text-[#202124] text-sm mb-1">Power Queries</h6>
                                             <p className="text-[10px] text-[#5F6368] leading-relaxed">Search by configuration, price bracket, or infrastructure layer.</p>
                                         </div>
@@ -154,14 +154,14 @@ export const NeuralSearch: React.FC<{ isOpen: boolean; onClose: () => void }> = 
                         </div>
 
                         {/* Footer Info */}
-                        <div className="p-4 bg-[#F8F9FA] border-t border-[#DADCE0] flex justify-between items-center text-[10px] font-medium text-[#5F6368]">
+                        <div className="p-4 bg-[#F8F9FA] border-t border-white/20 flex justify-between items-center text-[10px] font-medium text-[#5F6368]">
                             <div className="flex gap-4">
-                                <span><kbd className="px-1.5 py-0.5 rounded border border-[#DADCE0] bg-white">↑↓</kbd> Navigate</span>
-                                <span><kbd className="px-1.5 py-0.5 rounded border border-[#DADCE0] bg-white">Enter</kbd> Select</span>
-                                <span><kbd className="px-1.5 py-0.5 rounded border border-[#DADCE0] bg-white">Esc</kbd> Close</span>
+                                <span><kbd className="px-1.5 py-0.5 rounded border border-white/20 bg-white">↑↓</kbd> Navigate</span>
+                                <span><kbd className="px-1.5 py-0.5 rounded border border-white/20 bg-white">Enter</kbd> Select</span>
+                                <span><kbd className="px-1.5 py-0.5 rounded border border-white/20 bg-white">Esc</kbd> Close</span>
                             </div>
                             <div className="flex items-center gap-1">
-                                <Sparkles size={10} className="text-[#1a73e8]" />
+                                <Sparkles size={10} className="rainbow-text-clip font-bold" />
                                 Neural Search v1.0
                             </div>
                         </div>

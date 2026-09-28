@@ -84,7 +84,7 @@ export const Contact: React.FC = () => {
 
                         <div className="space-y-6">
                             <div className="flex items-start gap-4">
-                                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-[#1a73e8] flex-shrink-0">
+                                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center rainbow-text-clip font-bold flex-shrink-0">
                                     <MapPin size={24} />
                                 </div>
                                 <div>
@@ -94,7 +94,7 @@ export const Contact: React.FC = () => {
                             </div>
 
                             <div className="flex items-start gap-4">
-                                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-[#1a73e8] flex-shrink-0">
+                                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center rainbow-text-clip font-bold flex-shrink-0">
                                     <Phone size={24} />
                                 </div>
                                 <div>
@@ -105,7 +105,7 @@ export const Contact: React.FC = () => {
                             </div>
 
 
-                            <div className="mt-8 rounded-xl overflow-hidden shadow-lg border border-[#DADCE0] h-[300px]">
+                            <div className="mt-8 rounded-xl overflow-hidden shadow-lg border border-white/20 h-[300px]">
                                 <iframe 
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.996160105342!2d73.71261537446698!3d18.57416346752763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc6e326466f%3A0xc07c3905cf6ce12a!2sKolte%20Patil%20Life%20Republic!5e0!3m2!1sen!2sin!4v1704100000000!5m2!1sen!2sin" 
                                     width="100%" 
@@ -121,7 +121,7 @@ export const Contact: React.FC = () => {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="bg-[#F8F9FA] p-8 rounded-xl shadow-lg border border-[#DADCE0]">
+                    <div className="bg-[#F8F9FA] p-8 rounded-xl shadow-lg border border-white/20">
                         <ContactForm />
                     </div>
                 </div>

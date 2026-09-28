@@ -18,19 +18,19 @@ export const ConstructionUpdates: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-8 gap-8">
                     <div className="max-w-2xl">
-                        <span className="text-[#1a73e8] text-[10px] font-bold tracking-tight font-semibold block mb-4">Real-Time Transparency</span>
+                        <span className="rainbow-text-clip font-bold text-[10px] font-bold tracking-tight font-semibold block mb-4">Real-Time Transparency</span>
                         <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-6">Construction Ledger 2026</h2>
                         <p className="text-[#5F6368] text-lg leading-relaxed mb-4">
                             Monitor the tectonic pulse of your future home. We maintain a transparent digital ledger of every structural milestone across the 390-acre ecosystem.
                         </p>
-                        <div className="flex items-center gap-2 text-[10px] font-bold text-[#1a73e8] tracking-tight font-medium">
+                        <div className="flex items-center gap-2 text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-medium">
                             <span className="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
                             Last Site Sync: {new Date().toLocaleDateString('en-IN', { day: '2-digit', month: 'long', year: 'numeric' })}
                         </div>
                     </div>
                     <Button 
                         variant="outline" 
-                        className="rounded-full border-[#DADCE0] group"
+                        className="rounded-full border-white/20 group"
                         onClick={() => window.dispatchEvent(new CustomEvent('open-sovereign-concierge'))}
                     >
                         Request Site Progress Report <Camera size={18} className="ml-2 group-hover:scale-110 transition-transform" />
@@ -44,7 +44,7 @@ export const ConstructionUpdates: React.FC = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: idx * 0.1 }}
-                            className="p-8 rounded-3xl bg-[#F8F9FA] border border-[#DADCE0] hover:shadow-2xl hover:shadow-secondary/5 transition-all group"
+                            className="p-8 rounded-3xl bg-[#F8F9FA] border border-white/20 hover:shadow-2xl hover:shadow-secondary/5 transition-all group"
                         >
                             <div className="flex justify-between items-start mb-6">
                                 <div>
@@ -71,12 +71,12 @@ export const ConstructionUpdates: React.FC = () => {
                                 </div>
                             </div>
 
-                            <div className="mt-8 flex items-center justify-between pt-6 border-t border-[#DADCE0]/50">
+                            <div className="mt-8 flex items-center justify-between pt-6 border-t border-white/20/50">
                                 <div className="flex items-center gap-2 text-[#5F6368]">
                                     <Clock size={14} />
                                     <span className="text-xs">Est. Possession: <strong>{update.date}</strong></span>
                                 </div>
-                                <CheckCircle2 size={18} className="text-[#1a73e8] opacity-20 group-hover:opacity-100 transition-opacity" />
+                                <CheckCircle2 size={18} className="rainbow-text-clip font-bold opacity-20 group-hover:opacity-100 transition-opacity" />
                             </div>
                         </motion.div>
                     ))}

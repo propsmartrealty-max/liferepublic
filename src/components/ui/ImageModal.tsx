@@ -33,7 +33,7 @@ export const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, imageSr
                         transition={{ type: "spring", damping: 25, stiffness: 300 }}
                         className="relative z-10 max-w-5xl w-full max-h-[90vh] flex flex-col items-center justify-center pointer-events-none"
                     >
-                        <div className="relative pointer-events-auto shadow-2xl rounded-lg overflow-hidden bg-[#151822] border border-[#DADCE0]/5 p-1 backdrop-blur-md border border-[#DADCE0]">
+                        <div className="relative pointer-events-auto shadow-2xl rounded-lg overflow-hidden bg-[#151822] border border-white/20/5 p-1 backdrop-blur-md border border-white/20">
                             <button
                                 onClick={onClose}
                                 className="absolute -top-12 right-0 text-[#202124]/80 hover:text-[#202124] transition-colors p-2 bg-black/50 rounded-full backdrop-blur-md"

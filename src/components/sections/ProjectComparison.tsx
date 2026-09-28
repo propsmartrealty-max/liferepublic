@@ -61,7 +61,7 @@ export const ProjectComparison: React.FC = () => {
                             className={`px-4 py-2 rounded-full text-xs font-bold transition-all border ${
                                 selectedIds.includes(p.id)
                                     ? 'bg-white text-[#202124] border-secondary shadow-lg'
-                                    : 'bg-white text-[#5F6368] border-[#DADCE0] hover:border-accent'
+                                    : 'bg-white text-[#5F6368] border-white/20 hover:border-accent'
                             }`}
                         >
                             {p.title}
@@ -79,18 +79,18 @@ export const ProjectComparison: React.FC = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0.95 }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="bg-[#F8F9FA] rounded-[24px] border border-[#DADCE0] overflow-hidden group hover:shadow-2xl transition-all"
+                                className="bg-[#F8F9FA] rounded-[24px] border border-white/20 overflow-hidden group hover:shadow-2xl transition-all"
                             >
                                 <div className="relative h-48">
                                     <img loading="lazy" src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
                                         <h3 className="text-xl font-bold text-[#202124]">{p.title}</h3>
-                                        <div className="text-[#1a73e8] text-sm font-bold tracking-tight font-medium">{p.category}</div>
+                                        <div className="rainbow-text-clip font-bold text-sm font-bold tracking-tight font-medium">{p.category}</div>
                                     </div>
                                 </div>
 
                                 <div className="p-8 space-y-6">
-                                    <div className="flex justify-between items-center text-sm border-b border-[#DADCE0] pb-4">
+                                    <div className="flex justify-between items-center text-sm border-b border-white/20 pb-4">
                                         <span className="text-[#5F6368] uppercase font-bold tracking-tighter">Starting Price</span>
                                         <span className="text-[#202124] font-bold flex items-center gap-1">
                                             <IndianRupee size={14} /> {p.price}
@@ -101,12 +101,12 @@ export const ProjectComparison: React.FC = () => {
                                         <div className="text-[10px] text-[#5F6368] font-bold tracking-tight font-medium">Core Features</div>
                                         {p.features.slice(0, 4).map((f, i) => (
                                             <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                                                <CheckCircle2 size={16} className="text-[#1a73e8]" /> {f}
+                                                <CheckCircle2 size={16} className="rainbow-text-clip font-bold" /> {f}
                                             </div>
                                         ))}
                                     </div>
 
-                                    <div className="space-y-4 pt-4 border-t border-[#DADCE0]">
+                                    <div className="space-y-4 pt-4 border-t border-white/20">
                                         <div className="text-[10px] text-[#5F6368] font-bold tracking-tight font-medium">Investment Rating</div>
                                         <div className="flex gap-1">
                                             {[...Array(5)].map((_, i) => (
@@ -130,8 +130,8 @@ export const ProjectComparison: React.FC = () => {
 
                     {/* Empty Slots */}
                     {[...Array(3 - comparedProjects.length)].map((_, i) => (
-                        <div key={`empty-${i}`} className="hidden md:flex flex-col items-center justify-center border-2 border-dashed border-[#DADCE0] rounded-[24px] bg-[#F8F9FA]/50 p-12 text-center">
-                            <div className="w-16 h-16 bg-[#151822] border border-[#DADCE0] rounded-2xl flex items-center justify-center text-gray-200 mb-4">
+                        <div key={`empty-${i}`} className="hidden md:flex flex-col items-center justify-center border-2 border-dashed border-white/20 rounded-[24px] bg-[#F8F9FA]/50 p-12 text-center">
+                            <div className="w-16 h-16 bg-[#151822] border border-white/20 rounded-2xl flex items-center justify-center text-gray-200 mb-4">
                                 <Home size={32} />
                             </div>
                             <h4 className="text-[#5F6368] font-bold mb-2">Compare Another Project</h4>

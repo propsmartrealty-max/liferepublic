@@ -12,7 +12,7 @@ const volumes = [
         metrics: ['400m to Anisha Global', 'CBSE / IGCSE Curriculum', '5-Acre Sports Matrix'],
         icon: School,
         img: '/images/aerial-sunset.png',
-        color: 'from-blue-500/30 to-transparent'
+        color: 'from-black/30 to-transparent'
     },
     {
         id: 'leisure',
@@ -54,13 +54,13 @@ const VolumeItem = ({ vol, idx }: { vol: any, idx: number }) => {
             </div>
             <div className="lg:w-1/2 space-y-16">
                 <div className="flex items-center gap-4">
-                    <div className="p-8 bg-white text-[#1a73e8] rounded-[24px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-border-strong group-hover:rotate-12 transition-transform">
+                    <div className="p-8 bg-white rainbow-text-clip font-bold rounded-[24px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-border-strong group-hover:rotate-12 transition-transform">
                         <vol.icon size={48} strokeWidth={1.5} />
                     </div>
                     <div>
                         <div className="flex items-center gap-3 mb-2">
                             <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
-                            <h4 className="text-[12px] font-bold text-[#1a73e8] tracking-tight font-semibold">{vol.subtitle}</h4>
+                            <h4 className="text-[12px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold">{vol.subtitle}</h4>
                         </div>
                         <h3 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter leading-none">{vol.title}</h3>
                     </div>
@@ -68,9 +68,9 @@ const VolumeItem = ({ vol, idx }: { vol: any, idx: number }) => {
                 <p className="text-2xl md:text-3xl text-[#5F6368] font-medium leading-relaxed italic max-w-2xl">"{vol.desc}"</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {vol.metrics.map((m: string, i: number) => (
-                        <div key={i} className="p-8 bg-[#F8F9FA] rounded-[24px] border border-[#DADCE0] group/metric hover:bg-[#151822] border border-[#DADCE0] hover:shadow-2xl transition-all">
+                        <div key={i} className="p-8 bg-[#F8F9FA] rounded-[24px] border border-white/20 group/metric hover:bg-[#151822] border border-white/20 hover:shadow-2xl transition-all">
                             <div className="flex items-center gap-4">
-                                <Zap size={20} className="text-[#1a73e8] opacity-20 group-hover/metric:opacity-100 transition-opacity" />
+                                <Zap size={20} className="rainbow-text-clip font-bold opacity-20 group-hover/metric:opacity-100 transition-opacity" />
                                 <p className="text-sm font-bold text-[#202124] tracking-tight font-medium leading-relaxed">{m}</p>
                             </div>
                         </div>
@@ -99,11 +99,11 @@ export const Lifestyle: React.FC = () => {
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.8, ease: "circOut" }}>
                         <div className="inline-flex items-center gap-4 px-12 py-5 bg-accent/10 border border-accent/20 rounded-full mb-4 backdrop-blur-3xl shadow-2xl">
-                            <Wind size={24} className="text-[#1a73e8] animate-pulse" />
-                            <span className="text-[12px] font-bold tracking-tight font-semibold text-[#1a73e8]">The Lifestyle Monograph v6.5</span>
+                            <Wind size={24} className="rainbow-text-clip font-bold animate-pulse" />
+                            <span className="text-[12px] font-bold tracking-tight font-semibold rainbow-text-clip font-bold">The Lifestyle Monograph v6.5</span>
                         </div>
                         <h1 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-4 tracking-tighter leading-[0.75]">
-                            Atmospheric <br /> <span className="italic text-[#1a73e8]">Sovereignty.</span>
+                            Atmospheric <br /> <span className="italic rainbow-text-clip font-bold">Sovereignty.</span>
                         </h1>
                         <p className="text-3xl md:text-4xl text-text-muted max-w-6xl mx-auto leading-relaxed font-medium italic">
                             Synthesizing nature, infrastructure, and community into a high-fidelity resident experience. Welcome to the **15-Minute Sovereign City**.
@@ -112,7 +112,7 @@ export const Lifestyle: React.FC = () => {
                 </div>
                 
                 <div className="absolute bottom-24 left-24 hidden lg:flex items-center gap-8 text-text-muted">
-                    <div className="flex items-center gap-3"><Zap size={24} className="text-[#1a73e8]" /><span className="text-[11px] font-bold tracking-tight font-semibold">Atmosphere Sync Active</span></div>
+                    <div className="flex items-center gap-3"><Zap size={24} className="rainbow-text-clip font-bold" /><span className="text-[11px] font-bold tracking-tight font-semibold">Atmosphere Sync Active</span></div>
                     <div className="flex items-center gap-3"><Globe size={24} /><span className="text-[11px] font-bold tracking-tight font-semibold">400-Acre structural mesh</span></div>
                 </div>
                 <div className="absolute bottom-24 right-24 animate-bounce">
@@ -134,17 +134,17 @@ export const Lifestyle: React.FC = () => {
                     <div className="max-w-7xl mx-auto">
                         <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
                             <div className="inline-flex items-center gap-3 px-10 py-4 bg-accent/20 border border-accent/30 rounded-full mb-4 shadow-2xl">
-                                <Cpu size={24} className="text-[#1a73e8]" />
-                                <span className="text-[12px] font-bold text-[#1a73e8] tracking-tight font-semibold">Citizenship Synthesis v6.5</span>
+                                <Cpu size={24} className="rainbow-text-clip font-bold" />
+                                <span className="text-[12px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold">Citizenship Synthesis v6.5</span>
                             </div>
-                            <h2 className="text-5xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] mb-4 tracking-tighter leading-[0.75]">Join the <br /> <span className="text-[#1a73e8] italic">Republic.</span></h2>
+                            <h2 className="text-5xl md:text-[4rem] lg:text-[5rem] font-sans font-bold text-[#202124] mb-4 tracking-tighter leading-[0.75]">Join the <br /> <span className="rainbow-text-clip font-bold italic">Republic.</span></h2>
                         </motion.div>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
                             {[
                                 { label: 'Active Citizens', val: '12,500+', icon: Users, color: 'rainbow-text-clip font-bold' },
                                 { label: 'Parks & Avenues', val: '45+', icon: Trees, color: 'text-emerald-400' },
-                                { label: 'Native Trees', val: '7,700+', icon: Wind, color: 'text-[#1a73e8]' },
+                                { label: 'Native Trees', val: '7,700+', icon: Wind, color: 'rainbow-text-clip font-bold' },
                                 { label: 'Infrastructure', val: '2026', icon: Zap, color: 'text-orange-400' }
                             ].map((stat, i) => (
                                 <motion.div key={i} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.15 }} className="space-y-12 group/stat">
@@ -160,13 +160,13 @@ export const Lifestyle: React.FC = () => {
                         <div className="mt-64 text-center">
                             <button 
                                 onClick={() => window.dispatchEvent(new CustomEvent('open-sovereign-concierge'))}
-                                className="bg-[#151822] border border-[#DADCE0] text-[#202124] px-28 py-14 rounded-full font-bold text-3xl md:text-4xl hover:bg-accent transition-all shadow-[0_60px_120px_-30px_rgba(0,0,0,0.6)] flex items-center gap-4 mx-auto group hover:scale-[1.05]"
+                                className="bg-[#151822] border border-white/20 text-[#202124] px-28 py-14 rounded-full font-bold text-3xl md:text-4xl hover:bg-accent transition-all shadow-[0_60px_120px_-30px_rgba(0,0,0,0.6)] flex items-center gap-4 mx-auto group hover:scale-[1.05]"
                             >
                                 Initiate Citizenship Synthesis <ArrowUpRight size={54} className="group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform" />
                             </button>
                             <div className="mt-24 space-y-4">
                                 <p className="text-[12px] font-bold text-[#202124]/20 tracking-tight font-semibold block">Secure Residency Protocol v6.5</p>
-                                <div className="flex items-center justify-center gap-3 text-[10px] text-[#1a73e8]/40 font-bold tracking-tight font-medium">
+                                <div className="flex items-center justify-center gap-3 text-[10px] rainbow-text-clip font-bold/40 font-bold tracking-tight font-medium">
                                     <ShieldCheck size={14} /> Encrypted Session Active
                                 </div>
                             </div>

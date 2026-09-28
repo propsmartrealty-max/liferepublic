@@ -58,7 +58,7 @@ export const ExitIntentModal: React.FC = () => {
                         initial={{ opacity: 0, scale: 0.9, y: 100 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 100 }}
-                        className="relative bg-[#151822] border border-[#DADCE0] rounded-t-[4rem] sm:rounded-[5rem] shadow-[0_100px_200px_-50px_rgba(0,0,0,0.6)] w-full max-w-5xl overflow-hidden border border-[#DADCE0]"
+                        className="relative bg-[#151822] border border-white/20 rounded-t-[4rem] sm:rounded-[5rem] shadow-[0_100px_200px_-50px_rgba(0,0,0,0.6)] w-full max-w-5xl overflow-hidden border border-white/20"
                     >
                         <button
                             onClick={handleClose}
@@ -72,14 +72,14 @@ export const ExitIntentModal: React.FC = () => {
                             <div className="w-full lg:w-[40%] bg-white p-16 md:p-20 text-[#202124] relative overflow-hidden flex flex-col justify-center">
                                 <div className="absolute inset-0 bg-[url('/images/aerial-sunset.png')] bg-cover bg-center grayscale opacity-10 scale-110 group-hover:scale-125 transition-transform duration-[2s]"></div>
                                 <div className="relative z-10 space-y-16">
-                                    <div className="w-28 h-28 bg-accent/20 rounded-[24px] flex items-center justify-center text-[#1a73e8] border border-accent/30 shadow-2xl relative">
+                                    <div className="w-28 h-28 bg-accent/20 rounded-[24px] flex items-center justify-center rainbow-text-clip font-bold border border-accent/30 shadow-2xl relative">
                                         <div className="absolute inset-0 bg-accent/20 blur-2xl animate-pulse rounded-full"></div>
                                         <Target size={54} className="relative z-10" />
                                     </div>
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-3">
                                             <div className="w-2 h-2 rounded-full bg-accent animate-ping"></div>
-                                            <p className="text-[11px] font-bold tracking-tight font-semibold text-[#1a73e8]">Neural Calibration v6.0</p>
+                                            <p className="text-[11px] font-bold tracking-tight font-semibold rainbow-text-clip font-bold">Neural Calibration v6.0</p>
                                         </div>
                                         <h3 className="text-5xl md:text-5xl font-sans font-bold leading-[0.9] tracking-tighter">
                                             Synthesis <br />Locked.
@@ -88,9 +88,9 @@ export const ExitIntentModal: React.FC = () => {
                                     <div className="space-y-6">
                                         <div className="flex justify-between items-end text-[12px] font-bold tracking-tight font-semibold text-[#202124]/40">
                                             <span>Portfolio Completeness</span>
-                                            <span className="text-[#1a73e8] text-3xl font-sans">{completeness}%</span>
+                                            <span className="rainbow-text-clip font-bold text-3xl font-sans">{completeness}%</span>
                                         </div>
-                                        <div className="w-full h-2 bg-[#151822] border border-[#DADCE0]/10 rounded-full overflow-hidden">
+                                        <div className="w-full h-2 bg-[#151822] border border-white/20/10 rounded-full overflow-hidden">
                                             <motion.div 
                                                 initial={{ width: 0 }} 
                                                 animate={{ width: `${completeness}%` }} 
@@ -108,12 +108,12 @@ export const ExitIntentModal: React.FC = () => {
                                 <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
                                     <Sparkles size={200} className="text-[#202124]" />
                                 </div>
-                                <div className="flex items-center gap-4 text-[#1a73e8] mb-12">
+                                <div className="flex items-center gap-4 rainbow-text-clip font-bold mb-12">
                                     <Cpu size={24} className="animate-pulse" />
                                     <span className="text-[12px] font-bold tracking-tight font-semibold">Behavioral Anchor Protocol</span>
                                 </div>
                                 <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.8] italic">
-                                    Secure the <br /> <span className="text-[#1a73e8]">Thesis.</span>
+                                    Secure the <br /> <span className="rainbow-text-clip font-bold">Thesis.</span>
                                 </h2>
                                 <p className="text-2xl text-[#5F6368] font-medium leading-relaxed mb-8 max-w-2xl">
                                     Our engine has synthesized your {lastSector} journey across {uniqueSectors} sectors. Exiting now will interrupt the final 2026 ROI calibration for your portfolio journey.
@@ -134,7 +134,7 @@ export const ExitIntentModal: React.FC = () => {
                                             <ShieldCheck size={20} className="text-green-500" />
                                             <span className="text-[11px] font-bold text-green-600 tracking-tight font-semibold">Vault Protection Active</span>
                                         </div>
-                                        <div className="flex items-center gap-3 px-6 py-2 bg-blue-50 rounded-full border border-blue-100">
+                                        <div className="flex items-center gap-3 px-6 py-2 bg-white/5 rounded-full border border-white/20">
                                             <Network size={20} className="rainbow-text-clip font-bold" />
                                             <span className="text-[11px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold">Neural Handover Ready</span>
                                         </div>
@@ -143,7 +143,7 @@ export const ExitIntentModal: React.FC = () => {
                                 
                                 <button 
                                     onClick={handleClose}
-                                    className="mt-20 text-center text-[11px] font-bold text-gray-300 tracking-tight font-semibold hover:text-[#1a73e8] transition-colors block w-full"
+                                    className="mt-20 text-center text-[11px] font-bold text-gray-300 tracking-tight font-semibold hover:rainbow-text-clip font-bold transition-colors block w-full"
                                 >
                                     Dismiss & Preserve Current Synthesis Session
                                 </button>

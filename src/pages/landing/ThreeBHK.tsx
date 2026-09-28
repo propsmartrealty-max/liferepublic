@@ -46,11 +46,11 @@ export const ThreeBHK: React.FC = () => {
                             animate={{ opacity: 1, x: 0 }}
                             className="inline-flex items-center gap-4 px-6 py-3 bg-accent/20 border border-accent/30 rounded-full mb-12 backdrop-blur-xl"
                         >
-                            <Sparkles size={16} className="text-[#1a73e8] animate-pulse" />
-                            <span className="text-[10px] font-bold tracking-tight font-semibold text-[#1a73e8]">The Premium Collection v5.5</span>
+                            <Sparkles size={16} className="rainbow-text-clip font-bold animate-pulse" />
+                            <span className="text-[10px] font-bold tracking-tight font-semibold rainbow-text-clip font-bold">The Premium Collection v5.5</span>
                         </motion.div>
                         <h1 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-[0.8]">
-                            Synthesizing <br /> <span className="text-[#1a73e8] italic">Grandeur.</span>
+                            Synthesizing <br /> <span className="rainbow-text-clip font-bold italic">Grandeur.</span>
                         </h1>
                         <p className="text-2xl md:text-3xl text-[#5F6368] max-w-4xl leading-relaxed font-medium">
                             The Life Republic 3 BHK collection is engineered for those who demand uncompromising spatial depth, tectonic integrity, and atmospheric luxury.
@@ -73,9 +73,9 @@ export const ThreeBHK: React.FC = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="p-12 bg-[#F8F9FA] rounded-[3.5rem] border border-[#DADCE0] hover:border-accent transition-all group shadow-sm hover:shadow-2xl hover:shadow-accent/5"
+                            className="p-12 bg-[#F8F9FA] rounded-[3.5rem] border border-white/20 hover:border-accent transition-all group shadow-sm hover:shadow-2xl hover:shadow-accent/5"
                         >
-                            <div className="w-16 h-16 bg-[#151822] border border-[#DADCE0] rounded-2xl flex items-center justify-center text-[#1a73e8] mb-10 shadow-md group-hover:scale-110 transition-transform">
+                            <div className="w-16 h-16 bg-[#151822] border border-white/20 rounded-2xl flex items-center justify-center rainbow-text-clip font-bold mb-10 shadow-md group-hover:scale-110 transition-transform">
                                 <item.icon size={32} />
                             </div>
                             <h3 className="text-2xl font-sans font-bold text-[#202124] mb-4 tracking-tight">{item.title}</h3>
@@ -86,13 +86,13 @@ export const ThreeBHK: React.FC = () => {
 
                 {/* Project Clusters */}
                 <div className="mb-40">
-                    <div className="flex items-end justify-between mb-10 border-b border-[#DADCE0] pb-12">
+                    <div className="flex items-end justify-between mb-10 border-b border-white/20 pb-12">
                         <div className="max-w-2xl">
-                            <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold mb-4 block">Active Synthesis</span>
-                            <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter">The 3 BHK <span className="text-[#1a73e8] italic">Portfolio.</span></h2>
+                            <span className="text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold mb-4 block">Active Synthesis</span>
+                            <h2 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] tracking-tighter">The 3 BHK <span className="rainbow-text-clip font-bold italic">Portfolio.</span></h2>
                         </div>
-                        <div className="flex items-center gap-4 text-[10px] font-bold text-[#5F6368] tracking-tight font-medium bg-[#F8F9FA] px-6 py-3 rounded-full border border-[#DADCE0]">
-                            <Building2 size={14} className="text-[#1a73e8]" /> {projects.length} Active Clusters
+                        <div className="flex items-center gap-4 text-[10px] font-bold text-[#5F6368] tracking-tight font-medium bg-[#F8F9FA] px-6 py-3 rounded-full border border-white/20">
+                            <Building2 size={14} className="rainbow-text-clip font-bold" /> {projects.length} Active Clusters
                         </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -109,14 +109,14 @@ export const ThreeBHK: React.FC = () => {
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
                         <div className="lg:col-span-5 space-y-12">
                             <div className="space-y-6">
-                                <span className="text-[10px] font-bold text-[#1a73e8] tracking-tight font-semibold">Spatial Intelligence</span>
-                                <h2 className="text-5xl md:text-5xl font-sans font-bold tracking-tighter leading-tight">The Space <br /><span className="text-[#1a73e8] italic">Synthesis Delta.</span></h2>
+                                <span className="text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold">Spatial Intelligence</span>
+                                <h2 className="text-5xl md:text-5xl font-sans font-bold tracking-tighter leading-tight">The Space <br /><span className="rainbow-text-clip font-bold italic">Synthesis Delta.</span></h2>
                             </div>
                             <p className="text-2xl text-[#5F6368] leading-relaxed font-medium">
                                 Standalone 3 BHK units in Hinjewadi often compromise on peripheral depth. Life Republic's township infrastructure adds 390-acres of "Extended Living Room" to your private residence.
                             </p>
-                            <div className="p-8 bg-white/5 rounded-[24px] border border-[#DADCE0] group-hover:bg-[#151822] border border-[#DADCE0]/10 transition-all">
-                                <div className="flex items-center gap-4 text-[#1a73e8] mb-3">
+                            <div className="p-8 bg-white/5 rounded-[24px] border border-white/20 group-hover:bg-[#151822] border border-white/20/10 transition-all">
+                                <div className="flex items-center gap-4 rainbow-text-clip font-bold mb-3">
                                     <Target size={20} className="animate-pulse" />
                                     <span className="text-[11px] font-bold tracking-tight font-semibold">Growth Multiplier</span>
                                 </div>
@@ -124,13 +124,13 @@ export const ThreeBHK: React.FC = () => {
                             </div>
                         </div>
                         
-                        <div className="lg:col-span-7 bg-[#151822] border border-[#DADCE0]/5 backdrop-blur-3xl rounded-[24px] p-12 md:p-20 border border-[#DADCE0] shadow-2xl">
+                        <div className="lg:col-span-7 bg-[#151822] border border-white/20/5 backdrop-blur-3xl rounded-[24px] p-12 md:p-20 border border-white/20 shadow-2xl">
                             <table className="w-full text-left">
                                 <thead>
-                                    <tr className="border-b border-[#DADCE0]">
+                                    <tr className="border-b border-white/20">
                                         <th className="pb-10 text-[11px] font-bold tracking-tight font-semibold text-[#202124]/40">Technical Feature</th>
                                         <th className="pb-10 text-[11px] font-bold tracking-tight font-semibold text-[#202124]/40">Standalone Tower</th>
-                                        <th className="pb-10 text-[11px] font-bold tracking-tight font-semibold text-[#1a73e8]">Sovereign 3 BHK</th>
+                                        <th className="pb-10 text-[11px] font-bold tracking-tight font-semibold rainbow-text-clip font-bold">Sovereign 3 BHK</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-white/5">
@@ -143,7 +143,7 @@ export const ThreeBHK: React.FC = () => {
                                         <tr key={i} className="group/row hover:bg-transparent/5 transition-colors">
                                             <td className="py-8 font-sans font-bold text-[#202124]/80 text-2xl tracking-tighter">{row.f}</td>
                                             <td className="py-8 text-[#202124]/30 text-lg font-medium">{row.s}</td>
-                                            <td className="py-8 text-[#1a73e8] font-bold italic text-xl flex items-center gap-3">
+                                            <td className="py-8 rainbow-text-clip font-bold font-bold italic text-xl flex items-center gap-3">
                                                 <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div> {row.l}
                                             </td>
                                         </tr>
@@ -156,12 +156,12 @@ export const ThreeBHK: React.FC = () => {
 
                 {/* Final Call to Synthesis */}
                 <section className="text-center">
-                    <div className="max-w-5xl mx-auto p-20 bg-[#F8F9FA] rounded-[5rem] border border-[#DADCE0] shadow-inner relative overflow-hidden">
+                    <div className="max-w-5xl mx-auto p-20 bg-[#F8F9FA] rounded-[5rem] border border-white/20 shadow-inner relative overflow-hidden">
                         <div className="absolute top-0 right-0 p-12 opacity-5">
                             <Zap size={100} />
                         </div>
-                        <Zap size={64} className="text-[#1a73e8] mx-auto mb-10 animate-pulse" />
-                        <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-10 tracking-tighter">Secure Your <br /> <span className="text-[#1a73e8] italic">Sovereign Space.</span></h2>
+                        <Zap size={64} className="rainbow-text-clip font-bold mx-auto mb-10 animate-pulse" />
+                        <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#202124] mb-10 tracking-tighter">Secure Your <br /> <span className="rainbow-text-clip font-bold italic">Sovereign Space.</span></h2>
                         <p className="text-2xl text-[#5F6368] font-medium leading-relaxed max-w-2xl mx-auto mb-8">
                             Join the elite collection of homeowners who demand tectonic permanence and global standards.
                         </p>

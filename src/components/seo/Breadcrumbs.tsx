@@ -70,7 +70,7 @@ export const Breadcrumbs: React.FC = () => {
                         <li key={item.path} className="flex items-center gap-1" itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
                             {index < breadcrumbs.length - 1 ? (
                                 <>
-                                    <Link to={item.path} className="hover:text-[#1a73e8] transition-colors" itemProp="item">
+                                    <Link to={item.path} className="hover:rainbow-text-clip font-bold transition-colors" itemProp="item">
                                         {index === 0 ? <Home size={12} /> : <span itemProp="name">{item.label}</span>}
                                     </Link>
                                     <ChevronRight size={10} className="text-gray-300" />
