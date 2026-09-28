@@ -2,9 +2,41 @@ import React, { useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-export const ProjectCard = ({ project, priority }: { project: any, priority?: boolean }) => {
+interface Configuration {
+    type: string;
+    size: string;
+    price: string;
+    image?: string;
+}
+
+interface ProjectData {
+    id: string;
+    slug?: string;
+    name?: string;
+    title?: string;
+    category?: string;
+    description?: string;
+    price?: string;
+    rera?: string;
+    image?: string;
+    configurations?: Configuration[];
+}
+
+export const ProjectCard = ({ project, priority }: { project: ProjectData, priority?: boolean }) => {
     const cardRef = useRef<HTMLDivElement>(null);
     
+    // Safety Fallbacks (Hardening)
+    if (!project) return null;
+    
+    const displaySlug = project.slug || project.id || '';
+    const displayName = project.name || project.title || 'Exclusive Project';
+    const displayCategory = project.category || 'Premium Residences';
+    const displayDesc = project.description || 'Unparalleled architectural symmetry designed for maximum living comfort.';
+    const displayPrice = project.price || 'Price on Request';
+    const displayRera = project.rera || '';
+    const displayImage = project.image || (project.configurations?.[0]?.image) || 'https://images.unsplash.com/photo-1600607687931-cece5ce21448?q=80&w=2000&auto=format&fit=crop';
+    const configurations = project.configurations || [];
+
     // 3D Parallax Tilt setup
     const x = useMotionValue(0);
     const y = useMotionValue(0);
@@ -34,7 +66,7 @@ export const ProjectCard = ({ project, priority }: { project: any, priority?: bo
     };
 
     return (
-        <Link to={`/projects/${project.slug || project.id}`} className="block h-full cursor-interactive" style={{ perspective: 1000 }}>
+        <Link to={`/projects/${displaySlug}`} className="block h-full cursor-interactive" style={{ perspective: 1000 }}>
             <motion.div 
                 ref={cardRef}
                 onMouseMove={handleMouseMove}
@@ -44,43 +76,60 @@ export const ProjectCard = ({ project, priority }: { project: any, priority?: bo
                     rotateY,
                     transformStyle: "preserve-3d"
                 }}
-                className="relative overflow-hidden rounded-[24px] bg-black border border-white/10 h-[500px] w-full flex flex-col justify-end transition-shadow duration-700 hover:border-white/30 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] group"
+                className="relative overflow-hidden rounded-[24px] bg-black border border-white/10 h-[550px] w-full flex flex-col justify-end transition-shadow duration-700 hover:border-white/30 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] group"
             >
                 {/* Background Image with Parallax/Zoom */}
                 <div className="absolute inset-0 z-0" style={{ transform: "translateZ(-20px)" }}>
                     <img
-                        loading="lazy"
+                        loading={priority ? "eager" : "lazy"}
                         decoding="async"
-                        src={project.image || project.configurations?.[0]?.image}
-                        alt={project.name || project.title}
+                        src={displayImage}
+                        alt={displayName}
                         className="w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-110 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
                     />
                     {/* Gradient Overlay for Text Readability */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/10 transition-colors duration-700 group-hover:from-black"></div>
                 </div>
 
                 {/* Top Badges */}
-                <div className="absolute top-6 left-6 z-10 flex gap-2" style={{ transform: "translateZ(30px)" }}>
-                    <span className="px-4 py-1.5 bg-black/40 backdrop-blur-md border border-white/10 text-white/90 text-xs tracking-widest uppercase rounded-full">
-                        {project.category}
+                <div className="absolute top-6 left-6 right-6 z-10 flex justify-between items-start" style={{ transform: "translateZ(30px)" }}>
+                    <span className="px-4 py-1.5 bg-black/60 backdrop-blur-md border border-white/10 text-white/90 text-xs tracking-widest uppercase rounded-full">
+                        {displayCategory}
                     </span>
+                    {displayRera && (
+                        <span className="px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 text-white/80 text-[10px] tracking-wider uppercase rounded-md font-mono">
+                            MahaRERA: {displayRera}
+                        </span>
+                    )}
                 </div>
 
                 {/* Content Section (Bottom) */}
-                <div className="relative z-10 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" style={{ transform: "translateZ(50px)" }}>
-                    <h3 className="text-3xl font-sans font-medium text-white tracking-tight mb-2">
-                        {project.name || project.title}
+                <div className="relative z-10 p-8 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" style={{ transform: "translateZ(50px)" }}>
+                    <h3 className="text-3xl font-sans font-medium text-white tracking-tight mb-3">
+                        {displayName}
                     </h3>
-                    <p className="text-white/60 text-sm font-light leading-relaxed mb-6 line-clamp-2 max-w-[90%] opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
-                        {project.description || "Unparalleled architectural symmetry designed for maximum living comfort."}
+                    
+                    {/* Precize Configuration Data */}
+                    {configurations.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-75">
+                            {configurations.slice(0, 3).map((config, idx) => (
+                                <span key={idx} className="px-2 py-1 bg-white/5 border border-white/10 rounded text-[11px] text-white/70 tracking-wide whitespace-nowrap">
+                                    {config.type} • {config.size}
+                                </span>
+                            ))}
+                        </div>
+                    )}
+
+                    <p className="text-white/60 text-sm font-light leading-relaxed mb-6 line-clamp-2 max-w-[95%] opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                        {displayDesc}
                     </p>
                     
-                    <div className="flex items-end justify-between border-t border-white/10 pt-4">
+                    <div className="flex items-end justify-between border-t border-white/10 pt-5">
                         <div>
                             <p className="text-white/40 text-[10px] tracking-widest uppercase mb-1">Starting at</p>
-                            <p className="text-white text-lg font-medium">{project.price}</p>
+                            <p className="text-white text-lg font-medium">{displayPrice}</p>
                         </div>
-                        <div className="flex items-center gap-2 text-white opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700 delay-100">
+                        <div className="flex items-center gap-2 text-white opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700 delay-150">
                             <span className="text-xs uppercase tracking-widest font-medium">Explore</span>
                             <span className="material-symbol text-sm">arrow_forward</span>
                         </div>
