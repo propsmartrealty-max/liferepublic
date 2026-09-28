@@ -1,24 +1,21 @@
 const fs = require('fs');
-const file = 'src/components/ui/Button.tsx';
+let file = 'src/components/ui/Button.tsx';
 let content = fs.readFileSync(file, 'utf8');
 
-// Harden Base Styles
-content = content.replace(/rounded-full/g, 'rounded-none');
-content = content.replace(/transition-all duration-300/, 'transition-all duration-100');
+// Ensure Buttons are huge, readable, and highly animated
+content = content.replace(
+  /primary: "bg-accent\/80 text-white backdrop-blur-xl border border-white\/20 shadow-glass hover:bg-accent hover:shadow-glass-hover hover:-translate-y-1"/,
+  'primary: "bg-accent text-white border-2 border-transparent shadow-glass hover:bg-white hover:text-accent hover:shadow-glass-hover hover:-translate-y-1"'
+);
 
-// Harden Variants
-content = content.replace(/primary: ".*?"/, 'primary: "bg-primary text-white border-2 border-primary shadow-hard hover:bg-white hover:text-primary hover:shadow-hard-hover"');
-content = content.replace(/secondary: ".*?"/, 'secondary: "bg-background text-primary border-2 border-primary shadow-hard hover:bg-primary hover:text-white hover:shadow-hard-hover"');
-content = content.replace(/outline: ".*?"/, 'outline: "bg-transparent text-primary border-2 border-primary shadow-hard hover:bg-primary hover:text-white hover:shadow-hard-hover"');
-content = content.replace(/ghost: ".*?"/, 'ghost: "text-primary hover:bg-primary hover:text-white border-2 border-transparent hover:border-primary"');
-content = content.replace(/glass: ".*?"/, 'glass: "bg-surface text-primary border-2 border-primary shadow-hard hover:shadow-hard-hover"');
+content = content.replace(
+  /outline: "bg-transparent text-white border border-white\/30 backdrop-blur-sm hover:bg-white\/10"/,
+  'outline: "bg-white/10 text-white border-2 border-white backdrop-blur-md shadow-glass hover:bg-white hover:text-black hover:-translate-y-1"'
+);
 
-// Harden Sizes (remove rounded-full from icon)
-content = content.replace(/icon: "h-12 w-12 rounded-none"/, 'icon: "h-12 w-12 rounded-none border-2 border-primary"');
-
-// Remove soft bouncy animations
-content = content.replace(/whileHover=\{\{ scale: 1.03, y: -2 \}\}/, 'whileHover={{ x: -2, y: -2 }}');
-content = content.replace(/whileTap=\{\{ scale: 0.97 \}\}/, 'whileTap={{ x: 0, y: 0 }}');
-content = content.replace(/transition=\{\{ type: "spring", stiffness: 400, damping: 25 \}\}/, 'transition={{ duration: 0.1 }}');
+content = content.replace(
+  /glass: "bg-white\/5 text-white backdrop-blur-2xl border border-white\/10 shadow-glass hover:bg-white\/10"/,
+  'glass: "bg-white/20 text-white backdrop-blur-2xl border-2 border-white/50 shadow-glass hover:bg-white/40 hover:-translate-y-1 font-bold"'
+);
 
 fs.writeFileSync(file, content);

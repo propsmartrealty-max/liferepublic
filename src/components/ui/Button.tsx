@@ -18,11 +18,11 @@ export const Button: React.FC<ButtonProps> = ({
     const baseStyles = "inline-flex items-center justify-center font-bold tracking-wider transition-all duration-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent disabled:opacity-50 disabled:pointer-events-none rounded-full";
 
     const variants = {
-        primary: "bg-accent/80 text-white backdrop-blur-xl border border-white/20 shadow-glass hover:bg-accent hover:shadow-glass-hover hover:-translate-y-1",
+        primary: "bg-accent text-white border-2 border-transparent shadow-glass hover:bg-white hover:text-accent hover:shadow-glass-hover hover:-translate-y-1",
         secondary: "bg-white/10 text-white backdrop-blur-xl border border-white/20 shadow-glass hover:bg-white/20",
-        outline: "bg-transparent text-white border border-white/30 backdrop-blur-sm hover:bg-white/10",
+        outline: "bg-white/10 text-white border-2 border-white backdrop-blur-md shadow-glass hover:bg-white hover:text-black hover:-translate-y-1",
         ghost: "text-primary hover:bg-primary hover:text-white border-2 border-transparent hover:border-primary",
-        glass: "bg-white/5 text-white backdrop-blur-2xl border border-white/10 shadow-glass hover:bg-white/10"
+        glass: "bg-white/20 text-white backdrop-blur-2xl border-2 border-white/50 shadow-glass hover:bg-white/40 hover:-translate-y-1 font-bold"
     };
 
     const sizes = {

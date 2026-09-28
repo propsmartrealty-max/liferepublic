@@ -12,7 +12,6 @@ import { BrochureEngine } from '../components/ui/BrochureEngine';
 import { AmenitiesCarousel } from '../components/sections/AmenitiesCarousel';
 import { FAQ } from '../components/sections/FAQ';
 import { SEO } from '../components/seo/SEO';
-import { ResidentPulse } from '../components/ui/ResidentPulse';
 import { generateCollectionSchema, generateGlobalSchema, generateLocalBusinessSchema, generateReviewSchema } from '../utils/schemaGenerator';
 
 import { TestimonialCarousel } from '../components/sections/TestimonialCarousel';
@@ -61,8 +60,7 @@ const Home: React.FC = () => {
 
             {/* Phase 1: Captivation */}
             <HeroSlider />
-            <ResidentPulse />
-
+            
             {/* Phase 2: Introduction & Scale */}
             <section className="py-16 md:py-32 bg-gray-50 overflow-hidden relative" aria-label="Township Architecture and Volumes">
                 <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-accent/5 rounded-bl-[100%] pointer-events-none"></div>

@@ -33,9 +33,9 @@ export const Navbar: React.FC = () => {
     };
 
     return (
-        <header className={'fixed top-0 left-0 w-full z-[100] bg-surface border-b-2 border-white/10 transition-all duration-300 ' + (scrolled ? 'py-2 shadow-hard' : 'py-4')}>
+        <header className="fixed top-6 left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl z-[100] transition-all duration-700">
             <nav className="w-full" aria-label="Main Navigation">
-                <div className="relative flex items-center justify-between px-6 lg:px-12 w-full">
+                <div className="relative flex items-center justify-between px-8 py-4 bg-black/40 backdrop-blur-3xl border border-white/20 shadow-glass rounded-full transition-all">
                     <Link to="/" className="flex items-center group">
                         <img loading="lazy" src="/images/brand/logo.webp" alt="Life Republic" className="h-10 md:h-12 w-auto object-contain transition-transform duration-700 group-hover:scale-105 filter drop-shadow-xl" />
                     </Link>
@@ -68,10 +68,10 @@ export const Navbar: React.FC = () => {
                     </div>
 
                     <div className="flex items-center gap-6">
-                        <Button variant="primary" size="lg" className="hidden sm:flex rounded-2xl px-8 py-3.5 font-bold text-xs tracking-[0.25em] uppercase gap-2.5 shadow-hard hover:scale-105 transition-all" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
+                        <Button variant="primary" size="lg" className="hidden sm:flex rounded-full bg-accent text-white px-8 py-3.5 font-bold text-xs tracking-[0.25em] uppercase gap-2.5 shadow-glass hover:bg-white hover:text-accent hover:scale-105 transition-all border-none" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
                             Enquire Now <Sparkles size={14} />
                         </Button>
-                        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-3 bg-transparent border border-white/10 rounded-2xl text-white hover:text-accent transition-all border border-white/10" aria-label="Toggle Menu">
+                        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-3 bg-transparent border border-white/10 rounded-full text-white hover:text-accent transition-all border border-white/20" aria-label="Toggle Menu">
                             {isOpen ? <X size={28} /> : <Menu size={28} />}
                         </button>
                     </div>

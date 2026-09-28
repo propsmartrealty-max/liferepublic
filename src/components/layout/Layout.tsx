@@ -8,7 +8,6 @@ import { WhatsAppWidget } from '../ui/WhatsAppWidget';
 import { Breadcrumbs } from '../seo/Breadcrumbs';
 import { EnquiryModal } from '../ui/EnquiryModal';
 import { NeuralSearch } from '../ui/NeuralSearch';
-import { ResidentPulse } from '../ui/ResidentPulse';
 import { ExitIntentModal } from '../ui/ExitIntentModal';
 import { RecentlyViewed } from '../sections/RecentlyViewed';
 
@@ -55,8 +54,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
   return (
     <div className="min-h-screen bg-white flex flex-col font-sans selection:bg-accent selection:text-secondary overflow-x-hidden">
       {/* Sovereign Residents Pulse Ticker */}
-      <ResidentPulse />
-      
+            
       <Navbar />
       
       <main className={`flex-grow ${location.pathname === '/' ? '' : 'pt-32 sm:pt-40'}`} aria-label={ariaLabel}>
