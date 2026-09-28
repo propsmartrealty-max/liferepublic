@@ -1,145 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Phone, MapPin } from 'lucide-react';
-import { Button } from '../components/ui/Button';
-import { SEO } from '../components/seo/SEO';
+with open('src/pages/Contact.tsx', 'r') as f:
+    content = f.read()
 
+import re
 
-export const Contact: React.FC = () => {
-    const startOfWeek = new Date();
-    startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay() + 1); // Monday
-    const endOfWeek = new Date(startOfWeek);
-    endOfWeek.setDate(endOfWeek.getDate() + 6); // Sunday
-
-    const localBusinessSchema = {
-        "@context": "https://schema.org",
-        "@type": "RealEstateAgent",
-        "name": "Kolte Patil Life Republic Sales Office",
-        "image": "/images/gallery/eros/master-layout.webp",
-        "url": "https://life-republic.in/contact",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Life Republic Township, Marunji",
-            "addressLocality": "Hinjawadi, Pune",
-            "postalCode": "411057",
-            "addressCountry": "IN"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 18.5995,
-            "longitude": 73.7153
-        },
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday",
-                "Sunday"
-            ],
-            "opens": "09:00",
-            "closes": "19:00"
-        }
-    };
-
-    return (
-        <div className="pt-4">
-            <SEO
-                title="Contact Kolte Patil Life Republic Sales Office | Hinjewadi"
-                description="Get in touch with the sales team for Life Republic by Kolte Patil. Schedule a VIP site visit, request a brochure, or request a callback for best deals."
-                keywords="Life Republic Contact No, Kolte Patil Sales Office Hinjewadi, Life Republic Address, Site Visit Life Republic, Booking Office Hinjewadi, Kolte Patil Customer Care"
-                canonical="/contact"
-                schema={localBusinessSchema}
-            />
-                        <section className="bg-white text-[#202124] py-20">
-                <div className="container mx-auto px-4 text-center">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-5xl font-sans font-bold mb-6"
-                    >
-                        Contact Kolte Patil Life Republic Sales
-                    </motion.h1>
-                    <p className="text-xl max-w-2xl mx-auto text-gray-300">
-                        Get in touch with us to find your dream home at Life Republic.
-                    </p>
-                </div>
-            </section>
-
-            <section className="py-20">
-                <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    {/* Contact Info */}
-                    <div className="space-y-8">
-                        <div>
-                            <h2 className="text-3xl font-sans font-bold text-[#202124] mb-6">Get in Touch</h2>
-                            <p className="text-gray-600 text-lg">
-                                Have questions? Our experts are here to help you navigate your home buying journey.
-                            </p>
-                        </div>
-
-                        <div className="space-y-6">
-                            <div className="flex items-start gap-4">
-                                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center rainbow-text-clip font-bold flex-shrink-0">
-                                    <MapPin size={24} />
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-[#202124] mb-2">Visit Us</h3>
-                                    <p className="text-gray-600">Life Republic Township, Marunji, Hinjawadi, Pune, Maharashtra 411057</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4">
-                                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center rainbow-text-clip font-bold flex-shrink-0">
-                                    <Phone size={24} />
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-[#202124] mb-2">Digital Sales Desk</h3>
-                                    <p className="text-gray-600">Submit an enquiry to request an instant callback from our advisors.</p>
-                                    <p className="text-[#5F6368] text-sm mt-2">Mon - Sun: 9:00 AM - 7:00 PM</p>
-                                </div>
-                            </div>
-
-
-                            <div className="mt-8 rounded-xl overflow-hidden shadow-lg border border-white/20 h-[300px]">
-                                <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.996160105342!2d73.71261537446698!3d18.57416346752763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc6e326466f%3A0xc07c3905cf6ce12a!2sKolte%20Patil%20Life%20Republic!5e0!3m2!1sen!2sin!4v1704100000000!5m2!1sen!2sin" 
-                                    width="100%" 
-                                    height="100%" 
-                                    style={{ border: 0 }} 
-                                    allowFullScreen={true} 
-                                    loading="lazy" 
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    title="Google Maps Location of Kolte Patil Life Republic"
-                                ></iframe>
-                            </div>
-                            <div className="mt-4">
-                                <a 
-                                    href="https://www.google.com/maps/dir//Life+Republic+Sales+Office+Or+Main+Office,+Survey+No.+74+Hinjawadi+-+Marunji,+Hinjawadi+-+Kasarsai+Rd,+Taluka,+Mulshi,+Maharashtra+411033/@18.6459725,73.7360171,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bc2ba5053b55b4b:0x14d3205e23f3f5f7!2m2!1d73.7093735!2d18.6182576?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center gap-3 w-full bg-[#1A73E8] hover:bg-[#1557B0] text-white py-4 rounded-xl font-bold transition-colors shadow-lg"
-                                >
-                                    <span className="material-symbol">directions</span>
-                                    Get Directions to Sales Office
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Contact Form */}
-                    <div className="p-0">
-                        <ContactForm />
-                    </div>
-                </div>
-            </section>
-        </div>
-    );
-};
-
-const ContactForm: React.FC = () => {
+# We need to replace the entire ContactForm component with a sleek glassmorphic version.
+new_contact_form = """const ContactForm: React.FC = () => {
     const [formData, setFormData] = React.useState({
         name: '',
         phone: '',
@@ -298,4 +163,10 @@ const ContactForm: React.FC = () => {
             </button>
         </form>
     );
-};
+};"""
+
+content = re.sub(r'const ContactForm: React\.FC = \(\) => \{.*', new_contact_form, content, flags=re.DOTALL)
+
+with open('src/pages/Contact.tsx', 'w') as f:
+    f.write(content)
+
