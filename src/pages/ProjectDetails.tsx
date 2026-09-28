@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import QRCode from 'react-qr-code';
 import { CLUSTERS } from '../lib/clusters';
@@ -10,16 +10,19 @@ const ProjectDetails: React.FC = () => {
     const { slug } = useParams<{ slug: string }>();
     const [project, setProject] = useState<any>(null);
 
+    const navigate = useNavigate();
+    
     useEffect(() => {
         window.scrollTo(0, 0);
-        // Find cluster in our highly accurate hardcoded array
         const found = CLUSTERS.find(c => c.slug === slug);
-        setProject(found);
-    }, [slug]);
+        if (!found) {
+            navigate('/projects', { replace: true });
+        } else {
+            setProject(found);
+        }
+    }, [slug, navigate]);
 
-    if (!project) {
-        return <div className="pt-32 text-center text-white min-h-screen bg-black">Loading precision data...</div>;
-    }
+    if (!project) return null; // Prevent flicker before redirect
 
     // MahaRERA verification URL structure
     const reraVerificationUrl = `https://maharerait.mahaonline.gov.in/PrintPreview/PrintPreview/?q=${project.rera}`;

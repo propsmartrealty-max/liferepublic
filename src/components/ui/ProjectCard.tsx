@@ -49,6 +49,8 @@ export const ProjectCard = ({ project, priority }: { project: any, priority?: bo
                 {/* Background Image with Parallax/Zoom */}
                 <div className="absolute inset-0 z-0" style={{ transform: "translateZ(-20px)" }}>
                     <img
+                        loading="lazy"
+                        decoding="async"
                         src={project.image || project.configurations?.[0]?.image}
                         alt={project.name || project.title}
                         className="w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-110 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"

@@ -99,6 +99,7 @@ function App() {
 
   return (
     <>
+      <GlobalErrorBoundary>
       <CustomCursor />
       <ExitIntentOffer />
       <FloatingContact />
@@ -352,6 +353,7 @@ function App() {
         </Routes>
         </Suspense>
       </AnimatePresence>
+      </GlobalErrorBoundary>
     </>
   );
 }
