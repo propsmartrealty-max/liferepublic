@@ -1,43 +1,9 @@
-# Block aggressive scraper bots
-User-agent: AhrefsBot
-Disallow: /
-User-agent: MJ12bot
-Disallow: /
-User-agent: Rogerbot
-Disallow: /
-User-agent: SemrushBot
-Disallow: /
-User-agent: DotBot
-Disallow: /
-
-# Aggressive Crawl Budget Allocation for Major Bots
-User-agent: Googlebot
-Allow: /projects/
-Allow: /location/
-Allow: /assets/
-Allow: /images/
-Disallow: /admin
-Disallow: /api/
-Disallow: /*?*
-Disallow: /*_escaped_fragment_
-
-User-agent: Bingbot
-Allow: /projects/
-Allow: /location/
-Allow: /assets/
-Allow: /images/
-Disallow: /admin
-Disallow: /api/
-Disallow: /*?*
-
-# Default rules for all other crawlers
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /api/
-Disallow: /search?*
-Disallow: /?*
 
-Sitemap: https://life-republic.in/sitemap.xml
+# Disallow crawling of internal or protected paths
+Disallow: /api/
+Disallow: /*?*
+Disallow: /cdn-cgi/
+
 Sitemap: https://life-republic.in/sitemap-silos-index.xml
-Host: https://life-republic.in

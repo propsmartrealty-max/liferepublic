@@ -1,19 +1,8 @@
-# Legacy Project Redirects (301 Permanent)
-/projects/duet /projects/kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi 301
-/projects/arezo /projects/kolte-patil-life-republic-arezo-efficient-2-bhk-flats-hinjewadi 301
-/projects/canvas /projects/kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi 301
-/projects/atmos /projects/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi 301
-/projects/24k-espada /projects/kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi 301
-/projects/sound-of-soul /projects/kolte-patil-life-republic-sound-of-soul-luxury-4-bhk-row-houses-hinjewadi 301
-/projects/aros /projects/kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi 301
-/projects/universe /projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi 301
-/projects/qrious /projects/kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi 301
-/projects/first-avenue /projects/kolte-patil-life-republic-first-avenue-premium-2-3-bhk-hinjewadi 301
-/projects/villas /projects/kolte-patil-life-republic-villas-hinjewadi 301
-/projects/bungalows /projects/kolte-patil-life-republic-bungalows-hinjewadi 301
-/projects/echoes /projects/kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi 301
-/projects/oro-avenue /projects/kolte-patil-life-republic-oro-avenue-smart-1-2-bhk-hinjewadi 301
-/projects/i-towers /projects/kolte-patil-life-republic-i-towers-smart-homes-hinjewadi 301
+# Domain Canonicalization (Force non-www) - Example
+# https://www.life-republic.in/* https://life-republic.in/:splat 301
 
-# SPA Fallback (Must be at the very bottom)
-/* /index.html 200
+# Clean URL enforcement (Remove trailing slashes) - Handled natively by Cloudflare Pages now, but we can set specific legacy redirects if needed.
+
+# Legacy routes mapping to new Silos
+/projects/kolte-patil-life-republic-echoes-hinjewadi /projects/kolte-patil-life-republic-echoes 301
+/master-plan /township-guide 301
