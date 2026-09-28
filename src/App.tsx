@@ -25,6 +25,9 @@ import { ITProfessionalsHub } from './pages/ITProfessionalsHub';
 import { Sustainability } from './pages/Sustainability';
 import { CommunityForum } from './pages/CommunityForum';
 import { LocationLanding } from './pages/LocationLanding';
+import Insights from './pages/Insights';
+import Article from './pages/Article';
+
 import LocationsDirectory from './pages/LocationsDirectory';
 import { NotFound } from './pages/NotFound';
 import HTMLSitemap from './pages/HTMLSitemap';
@@ -240,6 +243,19 @@ function App() {
           <Route path="/location/:slug" element={
             <Layout ariaLabel="Sovereign Sector Landing Page">
               <HyperLocalLanding />
+            </Layout>
+          } />
+
+          
+          {/* Real Estate Market Reports / Long Form Content */}
+          <Route path="/market-reports" element={
+            <Layout ariaLabel="Pune Real Estate Market Reports">
+              <Insights />
+            </Layout>
+          } />
+          <Route path="/market-reports/:slug" element={
+            <Layout ariaLabel="Real Estate Market Analysis">
+              <Article />
             </Layout>
           } />
 
