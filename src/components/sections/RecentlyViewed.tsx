@@ -104,7 +104,7 @@ export const RecentlyViewed: React.FC = () => {
                 </div>
 
                 <div className="relative group">
-                    <div className="flex gap-6 overflow-x-auto pb-20 snap-x no-scrollbar scroll-smooth">
+                    <div className="flex gap-6 overflow-x-auto mb-20 pb-4 snap-x no-scrollbar scroll-smooth">
                         {recentProjects.map((project, index) => (
                             <motion.div
                                 key={project.id}

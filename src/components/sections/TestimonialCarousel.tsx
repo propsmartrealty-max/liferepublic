@@ -104,7 +104,7 @@ export const TestimonialCarousel: React.FC = () => {
                 .swiper-pagination-bullet-active {
                     background: #C5A059 !important;
                     opacity: 1;
-                    width: 20px;
+                    width: 20px; margin: 0 4px !important;
                     border-radius: 4px;
                 }
             `}} />

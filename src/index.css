@@ -176,3 +176,20 @@ img {
   height: auto;
   content-visibility: auto; /* Defer off-screen rendering */
 }
+
+/* Utility for hiding scrollbars on specific horizontal lists/carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -9,6 +9,11 @@ export const onRequest: PagesFunction = async (context) => {
     headers.set('X-XSS-Protection', '1; mode=block');
     headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
     
+    // Enterprise Hardening: HSTS and CSP
+    headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+    headers.set('Content-Security-Policy', "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; font-src 'self' https: data:;");
+    headers.set('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
+    
     // SEO Hardening: Force Google to Index & Allow Large Image Previews for Discover
     headers.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
     

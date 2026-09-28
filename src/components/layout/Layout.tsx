@@ -9,7 +9,7 @@ import { Breadcrumbs } from '../seo/Breadcrumbs';
 import { EnquiryModal } from '../ui/EnquiryModal';
 import { NeuralSearch } from '../ui/NeuralSearch';
 import { ExitIntentModal } from '../ui/ExitIntentModal';
-import { RecentlyViewed } from '../sections/RecentlyViewed';
+
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -75,7 +75,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
         </AnimatePresence>
 
         {/* Neural Path Personalization Overlay */}
-        <RecentlyViewed />
+        
       </main>
 
       <Footer />
