@@ -52,13 +52,13 @@ export const Navbar: React.FC = () => {
                                     <button 
                                         onMouseEnter={() => setShowQuickSwitch(true)} 
                                         onClick={() => setShowQuickSwitch(!showQuickSwitch)} 
-                                        className="flex items-center gap-3 text-[15px] font-medium text-secondary/80 capitalize tracking-normal hover:text-secondary transition-all"
+                                        className="flex items-center gap-3 text-[15px] font-medium text-secondary/80 uppercase tracking-[0.15em] hover:text-secondary transition-all"
                                     >
                                         {link.name} 
                                         <ChevronDown size={16} className={`transition-transform duration-500 ${showQuickSwitch ? 'rotate-180 text-accent' : ''}`} />
                                     </button>
                                 ) : (
-                                    <Link to={link.path} className={`text-sm font-bold capitalize tracking-normal transition-all ${location.pathname === link.path ? 'text-secondary' : 'text-secondary/70 hover:text-secondary'}`}>
+                                    <Link to={link.path} className={`text-sm font-bold uppercase tracking-[0.15em] transition-all ${location.pathname === link.path ? 'text-secondary' : 'text-secondary/70 hover:text-secondary'}`}>
                                         {link.name}
                                     </Link>
                                 )}
@@ -68,7 +68,7 @@ export const Navbar: React.FC = () => {
                     </div>
 
                     <div className="flex items-center gap-6">
-                        <Button variant="primary" size="lg" className="hidden sm:flex rounded-[2rem] bg-primary text-white px-8 py-3 font-semibold text-[15px] tracking-tight gap-2 shadow-[0_4px_14px_rgba(54,168,73,0.3)] hover:scale-105 transition-all duration-300 border-none" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
+                        <Button variant="primary" size="lg" className="hidden sm:flex rounded-[2rem] bg-primary text-white px-8 py-3 font-bold text-[13px] uppercase tracking-[0.2em] gap-2 shadow-[0_4px_14px_rgba(54,168,73,0.3)] hover:scale-105 transition-all duration-300 border-none" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
                             Enquire Now <Sparkles size={14} />
                         </Button>
                         <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-3 bg-transparent border border-white/10 rounded-full text-secondary hover:text-accent transition-all border border-white/20" aria-label="Toggle Menu">
