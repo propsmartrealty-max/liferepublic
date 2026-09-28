@@ -5,11 +5,11 @@ export const projectsRegistry: Project[] = [
         id: 'kolte-patil-life-republic-nora-bungalow-plots-hinjewadi',
         title: 'Kolte Patil Life Republic Nora | Premium Bungalow Plots Hinjewadi',
         category: 'Plots',
-        location: 'Sector R11 (Nora)',
+        location: 'Sector R17 (Nora)',
         price: '₹1.80Cr*',
         image: '/images/projects/walkthrough.jpg',
         description: 'Build your dream home at Nora in Kolte Patil Life Republic Township. Exclusive premium bungalow plots offering the ultimate luxury of customizing your own space in Hinjewadi.',
-        features: ['Bungalow Plots', 'Sector R11', 'Customizable Luxury'],
+        features: ['Bungalow Plots', 'Sector R17', 'Customizable Luxury'],
         overview: 'Nora at Kolte Patil Life Republic Township offers an exclusive opportunity to build your own masterpiece. These premium bungalow plots provide the perfect canvas for your bespoke residence with world-class township infrastructure.',
         amenities: ['Exclusive Gated Community', 'Lush Green Landscapes', 'Wide Internal Roads', 'Dedicated Utilities Infrastructure', 'Clubhouse Access', '24/7 Security'],
         masterLayout: '/images/projects/better-living-img.jpg',
@@ -310,5 +310,58 @@ export const projectsRegistry: Project[] = [
             { question: "How tall are the Canvas towers?", answer: "Canvas features 4 high-rise towers reaching G+4P+40 floors." }
         ],
         themeColor: '#9b59b6'
+    }
+,
+    {
+        id: 'kolte-patil-life-republic-qrious',
+        title: 'Kolte Patil Life Republic Qrious | Premium 2 & 3 BHK Hinjewadi',
+        category: 'Lifestyle',
+        location: 'Sector R (Qrious)',
+        price: '₹78 Lakhs*',
+        image: '/images/projects/better-living-img.jpg',
+        description: 'Discover Qrious at Kolte Patil Life Republic Township. A premium 7.58-acre residential enclave offering high-rise luxury towers and an exclusive 19,000 sq.ft. Q Club.',
+        features: ['2 & 3 BHK', 'Under Construction', '19,000 sq.ft. Club'],
+        overview: 'Kolte Patil Life Republic Qrious offers an unparalleled living experience with G+25/26 high-rise towers. Enjoy panoramic views, 50+ lifestyle amenities, and intelligent floor layouts.',
+        amenities: ['Q Club (19,000 sq.ft.)', 'Infinity Edge Swimming Pool', 'Yoga Deck', 'Sports Courts', 'Kids Play Area', 'Gymnasium'],
+        masterLayout: '/images/projects/walkthrough.jpg',
+        floorPlans: [
+            { type: '2 BHK', size: '796 - 900 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Carpet Area: 796-900 sq.ft.', 'Modern Layout', 'Spacious Balcony'] },
+            { type: '3 BHK', size: '1100 - 1231 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Carpet Area: 1100-1231 sq.ft.', 'Grand Living Space', 'Premium Finishes'] }
+        ],
+        specifications: [
+            { title: 'Structure', items: ['G+26 Storey High-Rise', 'Earthquake Resistant', '5 High Speed Lifts per tower'] },
+            { title: 'Finishes', items: ['Premium Vitrified Tiles', 'Anti-skid flooring in baths', 'Branded Sanitaryware'] }
+        ],
+        faqs: [
+            { question: "What is the starting price of Qrious?", answer: "Prices at Qrious start from approximately ₹78 Lakhs* for a 2 BHK." },
+            { question: "When is the possession?", answer: "The targeted possession for Qrious is December 2029." }
+        ],
+        themeColor: '#4f46e5'
+    }
+,
+    {
+        id: 'kolte-patil-life-republic-3rd-avenue',
+        title: 'Kolte Patil Life Republic 3rd Avenue | 1 & 2 BHK Hinjewadi',
+        category: 'Lifestyle',
+        location: 'Sector R3 (3rd Avenue)',
+        price: 'Sold Out',
+        image: '/images/projects/better-living-img.jpg',
+        description: 'Explore 3rd Avenue at Kolte Patil Life Republic Township. Established 1 and 2 BHK residences featuring robust community living and immediate access to township amenities.',
+        features: ['1 & 2 BHK', 'Ready to Move', 'Established Community'],
+        overview: '3rd Avenue is one of the foundational sectors of the Kolte Patil Life Republic Township, providing residents with fully established infrastructural benefits and an active community lifestyle.',
+        amenities: ['Clubhouse', 'Swimming Pool', 'Landscaped Gardens', 'Children Play Area', '24/7 Security'],
+        masterLayout: '/images/projects/walkthrough.jpg',
+        floorPlans: [
+            { type: '1 BHK', size: '450 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Carpet Area: 450 sq.ft.', 'Compact Design'] },
+            { type: '2 BHK', size: '650 sq.ft.', image: '/images/projects/better-living-img.jpg', details: ['Carpet Area: 650 sq.ft.', 'Standard Layout'] }
+        ],
+        specifications: [
+            { title: 'Standard Finishes', items: ['Vitrified Tiles', 'Powder Coated Windows'] },
+            { title: 'Infrastructure', items: ['Piped Gas', 'Generator Backup for Common Areas'] }
+        ],
+        faqs: [
+            { question: "Are units available in 3rd Avenue?", answer: "Primary units are sold out, but resale properties might be available." }
+        ],
+        themeColor: '#3b82f6'
     }
 ];
