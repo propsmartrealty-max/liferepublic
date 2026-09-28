@@ -18,7 +18,7 @@ export const TownshipIntelligence: React.FC = () => {
 
             <div className="container mx-auto px-4">
                 {/* Header Section */}
-                <div className="max-w-4xl mb-24">
+                <div className="max-w-4xl mb-10">
                     <motion.span 
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ export const TownshipIntelligence: React.FC = () => {
                         <div className="absolute top-0 right-0 w-[50%] h-full bg-transparent/5 skew-x-12 translate-x-20"></div>
                         
                         <div className="relative z-10">
-                            <h2 className="text-4xl font-serif font-bold mb-16">Velocity Matrix</h2>
+                            <h2 className="text-4xl font-serif font-bold mb-8">Velocity Matrix</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                                 <div>
                                     <h3 className="text-accent text-[10px] font-bold tracking-tight font-medium mb-8 border-b border-white/10 pb-4">Major Nodes</h3>

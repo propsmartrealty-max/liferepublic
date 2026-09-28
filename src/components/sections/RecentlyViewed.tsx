@@ -65,11 +65,11 @@ export const RecentlyViewed: React.FC = () => {
     const history = personalizationStore.getHistory();
 
     return (
-        <section className="py-40 bg-[#0B0D14] overflow-hidden relative">
+        <section className="py-16 bg-[#0B0D14] overflow-hidden relative">
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-100 to-transparent"></div>
             
             <div className="container mx-auto px-4">
-                <div className="flex flex-col lg:flex-row items-end justify-between mb-24 gap-16">
+                <div className="flex flex-col lg:flex-row items-end justify-between mb-10 gap-16">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}

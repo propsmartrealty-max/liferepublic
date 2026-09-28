@@ -26,7 +26,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-[#1A1C23] flex items-center justify-center p-4">
+        <div className="min-h-[75vh] bg-[#1A1C23] flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-[#151822] border border-white/10 rounded-[2.5rem] p-12 text-center shadow-2xl border border-white/5">
             <div className="w-20 h-20 bg-red-50 text-red-500 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-inner">
               <AlertTriangle size={40} />

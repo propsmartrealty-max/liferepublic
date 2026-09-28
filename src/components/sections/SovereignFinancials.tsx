@@ -18,11 +18,11 @@ export const SovereignFinancials: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-[#0B0D14] text-white rounded-[3rem] my-16 overflow-hidden relative shadow-2xl">
+    <section className="py-12 bg-[#0B0D14] text-white rounded-[3rem] my-16 overflow-hidden relative shadow-2xl">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] -mr-64 -mt-64"></div>
       
       <div className="container mx-auto px-8 relative z-10">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-8">
           <span className="text-accent font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Financial Intelligence</span>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">The Sovereign ROI Thesis</h2>
           <p className="text-gray-400 text-lg leading-relaxed">

@@ -115,7 +115,7 @@ export const ExitIntentModal: React.FC = () => {
                                 <h2 className="text-6xl md:text-8xl font-serif font-bold text-white mb-10 tracking-tighter leading-[0.8] italic">
                                     Secure the <br /> <span className="text-accent">Thesis.</span>
                                 </h2>
-                                <p className="text-2xl text-gray-400 font-medium leading-relaxed mb-16 max-w-2xl">
+                                <p className="text-2xl text-gray-400 font-medium leading-relaxed mb-8 max-w-2xl">
                                     Our engine has synthesized your {lastSector} journey across {uniqueSectors} sectors. Exiting now will interrupt the final 2026 ROI calibration for your portfolio journey.
                                 </p>
 

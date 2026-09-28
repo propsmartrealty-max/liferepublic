@@ -48,9 +48,9 @@ export const ITProfessionalsHub: React.FC = () => {
             </section>
 
             {/* Strategic Advantage */}
-            <section className="py-24 bg-[#0B0D14]">
+            <section className="py-12 bg-[#0B0D14]">
                 <div className="container mx-auto px-6 max-w-7xl">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-8">
                         <span className="text-[10px] font-bold text-accent tracking-tight font-semibold block mb-4">Strategic Location</span>
                         <h2 className="text-4xl md:text-6xl font-serif font-bold text-white tracking-tighter">Minutes from <br /><span className="text-accent italic">Innovation.</span></h2>
                     </div>
@@ -82,7 +82,7 @@ export const ITProfessionalsHub: React.FC = () => {
             </section>
 
             {/* Tech-Enabled Living */}
-            <section className="py-24 bg-[#0B0D14] text-white rounded-[4rem] mx-4 lg:mx-12 overflow-hidden relative">
+            <section className="py-12 bg-[#0B0D14] text-white rounded-[4rem] mx-4 lg:mx-12 overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
@@ -119,7 +119,7 @@ export const ITProfessionalsHub: React.FC = () => {
             </section>
 
             {/* Call to Action */}
-            <section className="py-24 bg-[#0B0D14] text-center">
+            <section className="py-12 bg-[#0B0D14] text-center">
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8">Ready to upgrade your lifestyle?</h2>
                     <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto font-medium">

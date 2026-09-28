@@ -30,7 +30,7 @@ export const CommunityCalendar: React.FC = () => {
     ];
 
     return (
-        <section className="py-24 bg-[#0B0D14] overflow-hidden">
+        <section className="py-12 bg-[#0B0D14] overflow-hidden">
             <Helmet>
                 <script type="application/ld+json">
                     {JSON.stringify(events.map(event => ({
@@ -60,7 +60,7 @@ export const CommunityCalendar: React.FC = () => {
                 </script>
             </Helmet>
             <div className="container mx-auto px-4">
-                <div className="flex flex-col lg:flex-row gap-20 items-end mb-20">
+                <div className="flex flex-col lg:flex-row gap-20 items-end mb-8">
                     <div className="lg:w-2/3">
                         <motion.span 
                             initial={{ opacity: 0 }}

@@ -102,7 +102,7 @@ export const TownshipGuide: React.FC = () => {
             <Breadcrumbs />
 
             {/* Hero Section */}
-            <section className="relative py-24 bg-[#0B0D14] overflow-hidden">
+            <section className="relative py-12 bg-[#0B0D14] overflow-hidden">
                 <div className="absolute inset-0 opacity-5"></div>
                 <div className="container mx-auto px-4 relative">
                     <motion.div
@@ -129,7 +129,7 @@ export const TownshipGuide: React.FC = () => {
             </section>
 
             {/* Pillar Content Body */}
-            <article className="py-24 max-w-5xl mx-auto px-4">
+            <article className="py-12 max-w-5xl mx-auto px-4">
                 <div className="prose prose-lg prose-headings:font-serif prose-headings:text-white max-w-none text-gray-300 leading-relaxed">
                     <p className="lead text-2xl text-gray-500 font-light mb-12 border-l-4 border-accent pl-8">
                         Kolte Patil Life Republic is not just a real estate project; it is a meticulously engineered ecosystem designed to support the next generation of global citizens. Situated in the technology heartland of Hinjewadi, Pune, this 390-acre township integrates residential, commercial, and educational infrastructure into a single, cohesive sovereign domain.
@@ -197,7 +197,7 @@ export const TownshipGuide: React.FC = () => {
                     <div className="mt-24 overflow-x-auto">
                         <div className="min-w-[800px]">
                             <h2 id="comparison" className="text-4xl font-serif font-bold mb-10 text-white text-center">The Sovereign Comparison Ledger</h2>
-                            <table className="w-full border-collapse rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5 mb-16">
+                            <table className="w-full border-collapse rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5 mb-8">
                                 <thead>
                                     <tr className="bg-[#0B0D14] text-white">
                                         <th className="p-8 text-left font-serif tracking-tight font-semibold text-xs font-bold border-b border-white/10">Sector Cluster</th>
@@ -275,7 +275,7 @@ export const TownshipGuide: React.FC = () => {
                     <p className="mb-8">
                         Homebuyers in <strong>Pune</strong> are increasingly looking at Marunji and Hinjewadi through a lens of capital appreciation. Life Republic’s strategic positioning offers a dual advantage of proximity to massive employment hubs and internal lifestyle appreciation.
                     </p>
-                    <div className="bg-[#0B0D14] p-12 rounded-[2rem] text-white shadow-2xl relative overflow-hidden mb-16">
+                    <div className="bg-[#0B0D14] p-12 rounded-[2rem] text-white shadow-2xl relative overflow-hidden mb-8">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
                         <h4 className="text-2xl font-bold mb-6 text-accent">Connectivity Metrics 2026:</h4>
                         <div className="space-y-6">
@@ -299,7 +299,7 @@ export const TownshipGuide: React.FC = () => {
                     <LocalInfrastructure />
 
                     {/* Operational Sovereignty proof-grid */}
-                    <div className="mt-24 mb-16">
+                    <div className="mt-24 mb-8">
                         <div className="text-center mb-12">
                             <h3 className="text-3xl font-serif font-bold text-white mb-4">Operational Sovereignty</h3>
                             <p className="text-gray-500 max-w-2xl mx-auto">Life Republic is a mature ecosystem with fully functional critical infrastructure serving 5,000+ resident families.</p>
@@ -323,7 +323,7 @@ export const TownshipGuide: React.FC = () => {
                     </div>
 
                     <h2 id="conclusion" className="text-4xl font-bold mb-8">4. Why Choose Life Republic?</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                         {[
                             "400+ Acres Managed Township",
                             "RERA Registered Components",
@@ -380,7 +380,7 @@ export const TownshipGuide: React.FC = () => {
             </article>
             
             {/* Silo Mesh: Latest from Media Center */}
-            <section className="py-24 bg-[#1A1C23] border-t border-white/5">
+            <section className="py-12 bg-[#1A1C23] border-t border-white/5">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                         <div>
@@ -443,7 +443,7 @@ export const TownshipGuide: React.FC = () => {
             </section>
 
             {/* Newsletter / CTA Section */}
-            <section className="bg-[#1A1C23] py-24">
+            <section className="bg-[#1A1C23] py-12">
                 <div className="container mx-auto px-4 text-center max-w-3xl">
                     <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8">Receive the Sovereign Technical Ledger</h2>
                     <p className="text-gray-600 text-lg mb-10">

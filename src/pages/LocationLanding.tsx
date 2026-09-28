@@ -58,14 +58,14 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                         transition={{ duration: 1.5, ease: "circOut" }}
                         className="max-w-6xl"
                     >
-                        <div className="inline-flex items-center gap-6 px-10 py-4 bg-accent/10 border border-accent/20 rounded-full mb-16 backdrop-blur-3xl shadow-2xl">
+                        <div className="inline-flex items-center gap-6 px-10 py-4 bg-accent/10 border border-accent/20 rounded-full mb-8 backdrop-blur-3xl shadow-2xl">
                             <Target size={24} className="text-accent animate-pulse" />
                             <span className="text-[12px] font-bold tracking-tight font-semibold text-accent">Strategic Epicenter Sync 2026</span>
                         </div>
-                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold mb-16 leading-[0.75] tracking-tighter">
+                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold mb-8 leading-[0.75] tracking-tighter">
                             Beyond <br /> <span className="text-accent italic">{locationName}.</span>
                         </h1>
-                        <p className="text-3xl md:text-4xl text-gray-400 max-w-4xl mb-20 leading-relaxed font-medium italic">
+                        <p className="text-3xl md:text-4xl text-gray-400 max-w-4xl mb-8 leading-relaxed font-medium italic">
                             Standalone constraints belong to the past. Life Republic offers a 400-acre sovereign ecosystem just {distance} from {locationName}. Experience the **Spine Road Advantage**.
                         </p>
                         <div className="flex flex-wrap gap-10">
@@ -132,7 +132,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                         
                         <div className="lg:col-span-7 bg-[#151822] border border-white/10 rounded-[5rem] p-16 md:p-24 shadow-[0_80px_160px_-40px_rgba(0,0,0,0.1)] border border-white/5 relative overflow-hidden group">
                             <div className="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full -mr-40 -mt-40 blur-[100px] group-hover:scale-150 transition-transform duration-[3s]"></div>
-                            <div className="flex items-center justify-between mb-24">
+                            <div className="flex items-center justify-between mb-10">
                                 <h3 className="text-5xl font-serif font-bold text-white tracking-tighter italic">Sovereign Proximity Analysis</h3>
                                 <div className="flex items-center gap-4 text-[11px] font-bold text-accent tracking-tight font-semibold bg-accent/10 px-8 py-4 rounded-full border border-accent/20">
                                     <Navigation size={16} className="animate-pulse" /> Live Sync Active

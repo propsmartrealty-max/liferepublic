@@ -34,10 +34,10 @@ const testimonials = [
 
 export const TestimonialCarousel: React.FC = () => {
     return (
-        <section className="py-32 bg-[#0B0D14] text-white overflow-hidden relative">
+        <section className="py-16 bg-[#0B0D14] text-white overflow-hidden relative">
             <div className="absolute inset-0 opacity-5 pointer-events-none"></div>
             <div className="container mx-auto px-4 relative z-10">
-                <div className="text-center mb-20">
+                <div className="text-center mb-8">
                     <span className="text-accent text-[10px] font-bold tracking-tight font-semibold block mb-4 italic">Social Synthesis</span>
                     <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6">Resident Stories</h2>
                     <div className="w-24 h-1 bg-accent mx-auto"></div>

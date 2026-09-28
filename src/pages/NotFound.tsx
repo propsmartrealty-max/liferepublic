@@ -7,7 +7,7 @@ import { Search, Home, Phone } from 'lucide-react';
 
 export const NotFound: React.FC = () => {
     return (
-        <div className="min-h-screen bg-[#1A1C23] flex flex-col font-sans">
+        <div className="min-h-[75vh] bg-[#1A1C23] flex flex-col font-sans">
             <Navbar />
             <SEO
                 title="Page Not Found | Kolte Patil Life Republic"

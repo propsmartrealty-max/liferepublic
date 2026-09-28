@@ -80,7 +80,7 @@ export const BlogPostPage: React.FC = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-[#0B0D14] flex items-center justify-center">
+            <div className="min-h-[75vh] bg-[#0B0D14] flex items-center justify-center">
                 <div className="w-12 h-12 border-4 border-accent border-t-transparent rounded-full animate-spin"></div>
             </div>
         );
@@ -88,7 +88,7 @@ export const BlogPostPage: React.FC = () => {
 
     if (error || !post) {
         return (
-            <div className="min-h-screen pt-32 flex flex-col items-center justify-center text-center px-4">
+            <div className="min-h-[75vh] pt-32 flex flex-col items-center justify-center text-center px-4">
                 <h1 className="text-4xl font-serif font-bold text-white mb-4">Article Displaced</h1>
                 <p className="text-gray-500 mb-8 max-w-md">{error || "The requested insights could not be retrieved from the Sovereign Archive."}</p>
                 <Link to="/media-center">
@@ -152,7 +152,7 @@ export const BlogPostPage: React.FC = () => {
             </header>
 
             <article className="relative bg-[#151822] border border-white/10 -mt-12 rounded-t-[4rem] z-30 shadow-2xl">
-                <div className="max-w-4xl mx-auto px-6 py-24">
+                <div className="max-w-4xl mx-auto px-6 py-12">
                     <div className="prose prose-xl max-w-none prose-headings:font-serif prose-headings:text-white prose-headings:font-bold prose-p:text-gray-600 prose-p:leading-relaxed prose-a:text-accent prose-strong:text-white prose-img:rounded-[2rem] prose-img:shadow-2xl font-medium">
                         <div dangerouslySetInnerHTML={{ __html: post.content }} />
                     </div>
@@ -180,7 +180,7 @@ export const BlogPostPage: React.FC = () => {
 
             {/* Related Insights */}
             {related.length > 0 && (
-                <section className="py-24 bg-[#1A1C23]/50">
+                <section className="py-12 bg-[#1A1C23]/50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
                             <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-4 block text-center md:text-left">Complementary Synthesis</span>
@@ -205,7 +205,7 @@ export const BlogPostPage: React.FC = () => {
             )}
 
             {/* Final CTA */}
-            <section className="py-24 bg-[#0B0D14] overflow-hidden">
+            <section className="py-12 bg-[#0B0D14] overflow-hidden">
                 <div className="container mx-auto px-4 text-center">
                     <div className="max-w-3xl mx-auto bg-[#0B0D14] rounded-[3rem] p-12 md:p-20 shadow-2xl relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px] pointer-events-none group-hover:scale-110 transition-transform duration-1000"></div>

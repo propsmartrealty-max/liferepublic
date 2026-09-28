@@ -10,7 +10,7 @@ export const SiloLanding: React.FC = () => {
     const siloData = siloSlug ? extractSiloData(siloSlug) : null;
 
     if (!siloData) {
-        return <div className="min-h-screen pt-32 text-center">Silo not found.</div>;
+        return <div className="min-h-[75vh] pt-32 text-center">Silo not found.</div>;
     }
 
     // Schema Generator for this silo
@@ -53,7 +53,7 @@ export const SiloLanding: React.FC = () => {
             </div>
 
             {/* Hero Section */}
-            <section className="bg-transparent py-16 md:py-24">
+            <section className="bg-transparent py-16 md:py-12">
                 <div className="container mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
                         {/* Main Content */}

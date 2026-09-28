@@ -75,11 +75,11 @@ export const FourBHK: React.FC = () => {
             </section>
 
             {/* Spatial Matrix */}
-            <section className="py-40 bg-[#0B0D14] relative overflow-hidden">
+            <section className="py-16 bg-[#0B0D14] relative overflow-hidden">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
                         <div className="lg:col-span-8">
-                            <div className="mb-24">
+                            <div className="mb-10">
                                 <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-6 block">Structural Synthesis</span>
                                 <h2 className="text-5xl md:text-8xl font-serif font-bold text-white mb-10 tracking-tighter">Spatial <br /><span className="text-accent italic">Superiority.</span></h2>
                                 <p className="text-2xl text-gray-500 font-medium leading-relaxed max-w-3xl">

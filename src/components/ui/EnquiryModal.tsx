@@ -118,7 +118,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                     initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                                     className="absolute inset-0 bg-[#0B0D14] z-50 flex flex-col items-center justify-center p-16 text-center"
                                 >
-                                    <div className="relative w-48 h-48 mb-16">
+                                    <div className="relative w-48 h-48 mb-8">
                                         <motion.div 
                                             animate={{ rotate: 360 }} transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
                                             className="absolute inset-0 border-[6px] border-accent/20 border-t-accent rounded-full"
@@ -222,7 +222,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                     </form>
                                 </div>
                             ) : (
-                                <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="py-24 text-center space-y-12">
+                                <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="py-12 text-center space-y-12">
                                     <div className="w-32 h-32 bg-accent text-white rounded-full flex items-center justify-center mx-auto shadow-2xl relative">
                                         <CheckCircle size={64} className="animate-bounce" />
                                         <motion.div animate={{ scale: [1, 1.5], opacity: [0.5, 0] }} transition={{ duration: 2, repeat: Infinity }} className="absolute inset-0 bg-accent rounded-full" />

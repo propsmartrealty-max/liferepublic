@@ -76,12 +76,12 @@ export const Testimonials: React.FC = () => {
                         <motion.div 
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="inline-flex items-center gap-6 px-10 py-4 bg-accent/10 border border-accent/20 rounded-full mb-16 backdrop-blur-3xl shadow-2xl"
+                            className="inline-flex items-center gap-6 px-10 py-4 bg-accent/10 border border-accent/20 rounded-full mb-8 backdrop-blur-3xl shadow-2xl"
                         >
                             <ShieldCheck size={20} className="text-accent animate-pulse" />
                             <span className="text-[12px] font-bold tracking-tight font-semibold text-accent">Verified Social Monograph v6.5</span>
                         </motion.div>
-                        <h1 className="text-8xl md:text-[5rem] lg:text-[6rem] font-serif font-bold mb-16 tracking-tighter leading-[0.8] italic">
+                        <h1 className="text-8xl md:text-[5rem] lg:text-[6rem] font-serif font-bold mb-8 tracking-tighter leading-[0.8] italic">
                             The Collective <br /> <span className="text-accent">Authority.</span>
                         </h1>
                         <p className="text-3xl md:text-4xl text-white/40 max-w-5xl mx-auto leading-relaxed font-medium italic">
@@ -144,7 +144,7 @@ export const Testimonials: React.FC = () => {
                                 <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none group-hover:scale-125 transition-transform">
                                     <Globe size={150} />
                                 </div>
-                                <div className="flex justify-between items-start mb-16 relative z-10">
+                                <div className="flex justify-between items-start mb-8 relative z-10">
                                     <div className="p-8 bg-accent/10 text-accent rounded-[2.5rem] group-hover:bg-accent group-hover:text-white transition-all shadow-inner border border-accent/20 group-hover:rotate-12">
                                         <Quote size={40} />
                                     </div>
@@ -159,7 +159,7 @@ export const Testimonials: React.FC = () => {
                                 </div>
 
                                 {review.video && (
-                                    <div className="relative mb-16 group/video cursor-pointer overflow-hidden rounded-[4rem] aspect-video bg-[#151822] shadow-2xl border-4 border-white">
+                                    <div className="relative mb-8 group/video cursor-pointer overflow-hidden rounded-[4rem] aspect-video bg-[#151822] shadow-2xl border-4 border-white">
                                         <div className="absolute inset-0 bg-[#0B0D14]/40 group-hover/video:bg-[#0B0D14]/10 transition-all z-10 flex items-center justify-center">
                                             <div className="w-24 h-24 bg-[#151822] border border-white/10/10 backdrop-blur-3xl rounded-full flex items-center justify-center border border-white/20 group-hover/video:scale-110 transition-transform shadow-[0_0_50px_rgba(255,255,255,0.3)]">
                                                 <PlayCircle size={64} className="text-white" />
@@ -173,7 +173,7 @@ export const Testimonials: React.FC = () => {
                                     </div>
                                 )}
 
-                                <p className="text-gray-500 text-3xl md:text-4xl mb-16 leading-relaxed font-medium italic tracking-tight relative z-10 max-w-2xl">"{review.text}"</p>
+                                <p className="text-gray-500 text-3xl md:text-4xl mb-8 leading-relaxed font-medium italic tracking-tight relative z-10 max-w-2xl">"{review.text}"</p>
                                 
                                 <div className="mt-auto pt-12 border-t border-white/5 flex items-center justify-between relative z-10">
                                     <div className="flex items-center gap-8">

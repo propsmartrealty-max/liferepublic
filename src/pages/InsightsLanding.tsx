@@ -13,7 +13,7 @@ export const InsightsLanding: React.FC = () => {
     ];
 
     return (
-        <div className="bg-surface min-h-screen pt-32 pb-24">
+        <div className="bg-surface min-h-[75vh] pt-32 pb-24">
             <Helmet>
                 <title>Pune Real Estate Insights & Market Trends | Life Republic</title>
                 <meta name="description" content="Explore the latest trends, configuration details, and location highlights for premium real estate in Pune West, Hinjewadi, and Mahalunge." />
@@ -26,7 +26,7 @@ export const InsightsLanding: React.FC = () => {
             </Helmet>
 
             <div className="container mx-auto px-4">
-                <div className="max-w-4xl mx-auto text-center mb-16">
+                <div className="max-w-4xl mx-auto text-center mb-8">
                     <span className="text-accent text-sm font-bold tracking-tight font-semibold block mb-4">Market Knowledge Hub</span>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#E5C07B] mb-6">Pune Real Estate Insights</h1>
                     <p className="text-lg text-white leading-relaxed">

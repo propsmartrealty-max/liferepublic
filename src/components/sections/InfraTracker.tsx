@@ -35,9 +35,9 @@ const infraItems = [
 
 export const InfraTracker: React.FC = () => {
     return (
-        <section className="py-24 bg-[#0B0D14] overflow-hidden">
+        <section className="py-12 bg-[#0B0D14] overflow-hidden">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+                <div className="flex flex-col md:flex-row items-end justify-between mb-8 gap-6">
                     <div className="max-w-2xl">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-bold mb-4 tracking-tight font-medium">
                             <TrendingUp size={16} /> Sovereign Growth Monitor

@@ -4,7 +4,7 @@ import { AlertTriangle } from 'lucide-react';
 
 export const Disclaimer: React.FC = () => {
     return (
-        <div className="pt-32 pb-24 bg-[#1A1C23] min-h-screen">
+        <div className="pt-32 pb-24 bg-[#1A1C23] min-h-[75vh]">
             <Helmet>
                 <title>Legal Disclaimer & MahaRERA Compliance | Kolte Patil Life Republic</title>
                 <meta name="description" content="Legal Disclaimer and MahaRERA details for Kolte Patil Life Republic Township projects in Hinjewadi, Pune." />

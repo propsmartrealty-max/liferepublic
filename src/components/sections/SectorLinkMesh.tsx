@@ -22,11 +22,11 @@ export const SectorLinkMesh: React.FC = () => {
         .slice(0, 3);
 
     return (
-        <section className="py-32 bg-[#0B0D14] border-t border-white/5 relative overflow-hidden">
+        <section className="py-16 bg-[#0B0D14] border-t border-white/5 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] pointer-events-none -mr-48 -mt-48"></div>
             
             <div className="container mx-auto px-4 relative z-10">
-                <div className="flex flex-col md:flex-row items-end justify-between gap-12 mb-20">
+                <div className="flex flex-col md:flex-row items-end justify-between gap-12 mb-8">
                     <div className="max-w-2xl">
                         <motion.div 
                             initial={{ opacity: 0, x: -20 }}

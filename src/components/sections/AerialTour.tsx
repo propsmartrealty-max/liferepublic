@@ -15,7 +15,7 @@ export const AerialTour: React.FC = () => {
 
     return (
         <section ref={containerRef} className="h-[300vh] relative bg-[#0B0D14]">
-            <div className="sticky top-0 h-screen w-full overflow-hidden">
+            <div className="sticky top-0 h-[75vh] w-full overflow-hidden">
                 <motion.div 
                     style={{ scale, filter: `blur(${blur}px)` }}
                     className="absolute inset-0"

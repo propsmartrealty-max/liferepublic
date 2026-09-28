@@ -49,10 +49,10 @@ export const LocalInfrastructure: React.FC = () => {
   };
 
   return (
-    <section className="py-24 bg-[#0B0D14] overflow-hidden">
+    <section className="py-12 bg-[#0B0D14] overflow-hidden">
       <script type="application/ld+json">{JSON.stringify(schema)}</script>
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-8 gap-6">
           <div className="max-w-xl">
             <span className="text-accent font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Global Connectivity</span>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 leading-tight">The Hinjewadi 5km Radius</h2>

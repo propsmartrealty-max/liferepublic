@@ -54,7 +54,7 @@ const ProjectDetails: React.FC = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-[#0B0D14]">
+            <div className="min-h-[75vh] flex items-center justify-center bg-[#0B0D14]">
                 <div className="flex flex-col items-center gap-6">
                     <div className="w-12 h-12 border-4 border-accent border-t-transparent rounded-full animate-spin"></div>
                     <span className="text-[10px] font-bold tracking-tight font-semibold text-gray-400">Synthesizing Project Monograph</span>
@@ -65,7 +65,7 @@ const ProjectDetails: React.FC = () => {
 
     if (!project) {
         return (
-            <div className="min-h-screen flex flex-col items-center justify-center bg-[#1A1C23] p-6">
+            <div className="min-h-[75vh] flex flex-col items-center justify-center bg-[#1A1C23] p-6">
                 <div className="text-center space-y-8 max-w-md">
                     <div className="w-24 h-24 bg-[#151822] border border-white/10 rounded-[2.5rem] shadow-2xl flex items-center justify-center mx-auto text-accent">
                         <FileText size={48} />
@@ -89,7 +89,7 @@ const ProjectDetails: React.FC = () => {
     const projectSlug = ID_TO_SLUG[project.id] || project.id;
 
     return (
-        <div className="min-h-screen bg-[#0B0D14]">
+        <div className="min-h-[75vh] bg-[#0B0D14]">
             <SEO 
                 title={`${project.title} | Kolte Patil Life Republic Hinjewadi`}
                 description={project.description}
@@ -134,7 +134,7 @@ const ProjectDetails: React.FC = () => {
             </section>
 
             {/* Architectural Monograph Content */}
-            <section className="py-24 container mx-auto px-6 max-w-7xl">
+            <section className="py-12 container mx-auto px-6 max-w-7xl">
                 <div className="space-y-32">
                     
                     {/* Section 1: Tectonic Overview */}
@@ -329,11 +329,11 @@ const ProjectDetails: React.FC = () => {
                 </div>
             </section>
 
-            <section className="py-24 bg-[#1A1C23] border-t border-white/5">
+            <section className="py-12 bg-[#1A1C23] border-t border-white/5">
                 <RecentlyViewed />
             </section>
             
-            <section className="py-24 bg-[#0B0D14]">
+            <section className="py-12 bg-[#0B0D14]">
                 <SectorMesh />
             </section>
 

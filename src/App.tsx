@@ -53,7 +53,7 @@ export const PageLoader = () => (
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
     transition={{ duration: 0.8, ease: "easeInOut" }}
-    className="min-h-screen flex flex-col items-center justify-center bg-[#E5C07B] fixed inset-0 z-[1000]"
+    className="min-h-[75vh] flex flex-col items-center justify-center bg-[#E5C07B] fixed inset-0 z-[1000]"
   >
     <div className="w-full max-w-xs px-8">
       {/* Premium minimal expanding line loader */}

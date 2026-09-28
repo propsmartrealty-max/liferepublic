@@ -40,7 +40,7 @@ export const NRICorner: React.FC = () => {
             {/* Why Invest */}
             <section className="py-20 bg-[#1A1C23]">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-8">
                         <h2 className="text-3xl font-serif font-bold text-white mb-4">Why NRIs Choose Life Republic?</h2>
                         <div className="w-24 h-1 bg-accent mx-auto"></div>
                     </div>
@@ -82,7 +82,7 @@ export const NRICorner: React.FC = () => {
             {/* Remote Buying Process Step-by-Step */}
             <section className="py-20 bg-[#0B0D14] text-white">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-8">
                         <h2 className="text-3xl font-serif font-bold mb-4">Seamless Remote Buying Process</h2>
                         <p className="text-gray-300">Own a home in India without stepping out of your country.</p>
                     </div>

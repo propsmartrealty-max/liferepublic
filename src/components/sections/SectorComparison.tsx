@@ -17,9 +17,9 @@ export const SectorComparison: React.FC = () => {
     ];
 
     return (
-        <section className="py-32 bg-[#0B0D14] overflow-hidden">
+        <section className="py-16 bg-[#0B0D14] overflow-hidden">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
+                <div className="flex flex-col md:flex-row items-end justify-between mb-8 gap-8">
                     <div className="max-w-3xl">
                         <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-4 block">Product Intelligence v6.5</span>
                         <h2 className="text-4xl md:text-7xl font-serif font-bold text-white mb-8 tracking-tighter leading-tight">

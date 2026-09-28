@@ -139,7 +139,7 @@ export const HyperLocalLanding: React.FC = () => {
 
                 {/* Relevant Projects Section */}
                 <div className="mb-32">
-                    <div className="flex items-end justify-between mb-16">
+                    <div className="flex items-end justify-between mb-8">
                         <h2 className="text-4xl font-serif font-bold text-white">Matching Inventory</h2>
                         <Link to="/projects" className="text-accent font-bold border-b border-accent/20 pb-1">View All Sectors</Link>
                     </div>

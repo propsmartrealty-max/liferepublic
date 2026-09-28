@@ -92,7 +92,7 @@ export const SectorLanding: React.FC = () => {
             <Breadcrumbs />
 
             {/* Hero Section */}
-            <section className="relative py-24 bg-[#0B0D14] overflow-hidden">
+            <section className="relative py-12 bg-[#0B0D14] overflow-hidden">
                 <div className="absolute inset-0 opacity-5"></div>
                 <div className="container mx-auto px-4 relative">
                     <motion.div
@@ -124,7 +124,7 @@ export const SectorLanding: React.FC = () => {
             </section>
 
             {/* Intelligence Grid */}
-            <section className="py-24 border-b border-white/5">
+            <section className="py-12 border-b border-white/5">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
@@ -188,10 +188,10 @@ export const SectorLanding: React.FC = () => {
             </section>
 
             {/* Micro-Amenities Intelligence Layer */}
-            <section className="py-24 bg-[#0B0D14] text-white relative overflow-hidden">
+            <section className="py-12 bg-[#0B0D14] text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[120px] -mr-48 -mt-48"></div>
                 <div className="container mx-auto px-4 relative z-10">
-                    <div className="max-w-2xl mb-16">
+                    <div className="max-w-2xl mb-8">
                         <span className="text-accent text-xs font-bold tracking-tight font-semibold block mb-4">Hyper-Local Radius</span>
                         <h2 className="text-4xl font-serif font-bold mb-6">Localized Intelligence Hub</h2>
                         <p className="text-gray-400">Deep-dive into the specific advantages of living in <strong>{data.name}</strong>. From walking distances to school gates to internal shuttle frequency.</p>
@@ -216,9 +216,9 @@ export const SectorLanding: React.FC = () => {
             </section>
 
             {/* Recommendations */}
-            <section className="py-24 bg-[#1A1C23]">
+            <section className="py-12 bg-[#1A1C23]">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-8">
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4">Available Projects in {sectorData.branding || data.name}</h2>
                         <div className="w-24 h-1 bg-accent mx-auto"></div>
                     </div>

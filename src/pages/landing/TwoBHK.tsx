@@ -51,7 +51,7 @@ export const TwoBHK: React.FC = () => {
                     </div>
                 </div>
             </section>
-            <div className="container mx-auto px-4 py-32">
+            <div className="container mx-auto px-4 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-40">
                     {[
                         { title: 'Rental Yield Alpha', desc: 'Commanding 3-4.5% annual yields driven by 300,000+ IT professionals in proximity.', icon: TrendingUp },
@@ -66,7 +66,7 @@ export const TwoBHK: React.FC = () => {
                     ))}
                 </div>
                 <div className="mb-40">
-                    <div className="flex items-end justify-between mb-24 border-b border-white/5 pb-12">
+                    <div className="flex items-end justify-between mb-10 border-b border-white/5 pb-12">
                         <div className="max-w-2xl"><span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-4 block">Volume Synthesis</span><h2 className="text-5xl md:text-7xl font-serif font-bold text-white tracking-tighter">The 2 BHK <span className="text-accent italic">Portfolio.</span></h2></div>
                     </div>
                     {loading ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">{[1, 2, 3].map(i => (<div key={i} className="bg-[#1A1C23] rounded-[3.5rem] h-[500px] animate-pulse" />))}</div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">{projects.map((project) => (<ProjectCard key={project.id} project={project} />))}</div>)}

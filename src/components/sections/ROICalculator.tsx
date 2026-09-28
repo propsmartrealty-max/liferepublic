@@ -30,9 +30,9 @@ export const ROICalculator: React.FC = () => {
     };
 
     return (
-        <section className="py-24 bg-[#0B0D14] overflow-hidden relative">
+        <section className="py-12 bg-[#0B0D14] overflow-hidden relative">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col lg:flex-row items-end justify-between gap-8 mb-16">
+                <div className="flex flex-col lg:flex-row items-end justify-between gap-8 mb-8">
                     <div className="max-w-2xl text-left">
                         <motion.div 
                             initial={{ opacity: 0, x: -20 }}

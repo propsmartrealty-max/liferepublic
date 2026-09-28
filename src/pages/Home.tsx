@@ -64,7 +64,7 @@ const Home: React.FC = () => {
       <div className="relative z-20 -mt-[100px] bg-[#0A0A0A]/80 backdrop-blur-[50px] rounded-t-[3rem] border-t border-white/[0.05] shadow-[0_-20px_60px_rgba(0,0,0,0.6)]">
             
             {/* Phase 2: Introduction & Scale */}
-            <section className="py-16 md:py-32 bg-transparent overflow-hidden relative" aria-label="Township Architecture and Volumes">
+            <section className="py-16 md:py-16 bg-transparent overflow-hidden relative" aria-label="Township Architecture and Volumes">
                 <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-accent/5 rounded-bl-[100%] pointer-events-none"></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
@@ -115,13 +115,13 @@ const Home: React.FC = () => {
             
             
             
-            <section id="projects" className="py-40 bg-[#030508] relative" aria-label="Featured Projects">
+            <section id="projects" className="py-16 bg-[#030508] relative" aria-label="Featured Projects">
                 
                 {/* Fluid background orb */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-teal-500/5 rounded-full blur-[150px] pointer-events-none animate-pulse"></div>
 
                 <div className="container mx-auto px-6 lg:px-12 max-w-7xl relative z-10">
-                    <div className="flex flex-col items-center text-center mb-24">
+                    <div className="flex flex-col items-center text-center mb-10">
                         <div className="glass-pill px-6 py-2 mb-6">
                             <span className="slim-text text-[9px] uppercase">The Portfolio</span>
                         </div>
@@ -144,7 +144,7 @@ const Home: React.FC = () => {
                         ))}
                     </div>
                     
-                    <div className="mt-20 flex justify-center">
+                    <div className="mt-10 flex justify-center">
                         <Link to="/projects" className="glass-pill px-10 py-4 text-white hover:bg-white/10 transition-colors duration-500 flex items-center gap-4 group">
                             <span className="font-sans font-light tracking-[0.2em] text-[10px] uppercase">View All Projects</span>
                             <div className="w-8 h-[0.5px] bg-white/30 group-hover:bg-white transition-colors duration-500"></div>
@@ -164,7 +164,7 @@ const Home: React.FC = () => {
             
             
             
-            <section className="py-40 bg-[#030508] relative overflow-hidden">
+            <section className="py-16 bg-[#030508] relative overflow-hidden">
                 <div className="absolute right-0 bottom-0 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-[150px] pointer-events-none animate-float"></div>
 
                 <div className="container mx-auto px-6 lg:px-12 max-w-7xl relative z-10">
@@ -172,7 +172,7 @@ const Home: React.FC = () => {
                         {/* Inner fluid effect */}
                         <div className="absolute -top-40 -left-40 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px]"></div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center relative z-10">
                             <div>
                                 <div className="glass-pill px-6 py-2 mb-8 inline-block">
                                     <span className="slim-text text-[9px] uppercase">Fluid Connectivity</span>
@@ -180,7 +180,7 @@ const Home: React.FC = () => {
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-thin text-white leading-tight mb-8">
                                     Flow into the <br/> <span className="font-serif italic text-white/60">City Center.</span>
                                 </h2>
-                                <p className="slim-text text-sm leading-relaxed mb-16 max-w-lg">
+                                <p className="slim-text text-sm leading-relaxed mb-8 max-w-lg">
                                     A frictionless transit experience. Seamlessly glide from the serenity of your enclave to the heart of the Hinjewadi tech ecosystem.
                                 </p>
                                 

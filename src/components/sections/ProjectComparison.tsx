@@ -42,12 +42,12 @@ export const ProjectComparison: React.FC = () => {
 
     const comparedProjects = projects.filter(p => selectedIds.includes(p.id));
 
-    if (loading) return <div className="py-24 text-center">Loading comparisons...</div>;
+    if (loading) return <div className="py-12 text-center">Loading comparisons...</div>;
 
     return (
-        <section className="py-24 bg-[#0B0D14]">
+        <section className="py-12 bg-[#0B0D14]">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
+                <div className="text-center mb-8">
                     <h2 className="text-4xl font-serif font-bold text-white mb-4">Sovereign Project Comparison Hub</h2>
                     <p className="text-gray-500 max-w-2xl mx-auto">Select up to 3 projects to compare configurations, amenities, and investment potential side-by-side.</p>
                 </div>

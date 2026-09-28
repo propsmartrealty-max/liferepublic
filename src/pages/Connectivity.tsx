@@ -31,7 +31,7 @@ export const Connectivity: React.FC = () => {
             />
 
             {/* Hero Section */}
-            <section className="relative py-32 bg-[#0B0D14] overflow-hidden">
+            <section className="relative py-16 bg-[#0B0D14] overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/aerial-night.png')] bg-cover bg-center opacity-10 grayscale"></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
@@ -54,7 +54,7 @@ export const Connectivity: React.FC = () => {
             </section>
 
             {/* Metro 2026 Roadmap */}
-            <section className="py-24 bg-[#1A1C23] overflow-hidden">
+            <section className="py-12 bg-[#1A1C23] overflow-hidden">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
                         <div className="lg:w-1/2">
@@ -100,9 +100,9 @@ export const Connectivity: React.FC = () => {
             </section>
 
             {/* Proximity Matrix */}
-            <section className="py-24">
+            <section className="py-12">
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+                    <div className="flex flex-col md:flex-row items-end justify-between mb-8 gap-8">
                         <div>
                             <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-4">The Transit Matrix.</h2>
                             <p className="text-gray-500 text-xl font-medium">Real-time travel synthesis for the 2026 infrastructure roadmap.</p>
@@ -160,7 +160,7 @@ export const Connectivity: React.FC = () => {
             <SectorComparison />
 
             {/* CTA */}
-            <section className="py-32 bg-[#0B0D14] relative overflow-hidden">
+            <section className="py-16 bg-[#0B0D14] relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/aerial-night.png')] bg-cover bg-center opacity-10"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-8">Synthesize Your Commute.</h2>

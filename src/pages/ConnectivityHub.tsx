@@ -51,7 +51,7 @@ export const ConnectivityHub: React.FC = () => {
             <Breadcrumbs />
 
             {/* Sovereign Location Hero */}
-            <section className="relative py-24 bg-[#0B0D14] overflow-hidden">
+            <section className="relative py-12 bg-[#0B0D14] overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-secondary to-black/50 z-10"></div>
                 <div className="absolute inset-0 bg-[url('/images/gallery/eros/master-layout.webp')] bg-cover bg-center opacity-20"></div>
                 <div className="container mx-auto px-4 relative z-20">
@@ -75,7 +75,7 @@ export const ConnectivityHub: React.FC = () => {
             </section>
 
             {/* Distance Matrix */}
-            <section className="py-24 bg-[#0B0D14]">
+            <section className="py-12 bg-[#0B0D14]">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                         {locationNodes.map((cat, idx) => (
@@ -114,7 +114,7 @@ export const ConnectivityHub: React.FC = () => {
             <InfraTracker />
 
             {/* Connectivity Specific Content */}
-            <section className="py-24 bg-[#1A1C23]">
+            <section className="py-12 bg-[#1A1C23]">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <div className="bg-[#151822] border border-white/10 p-12 rounded-[3.5rem] shadow-xl border border-white/5">
@@ -152,7 +152,7 @@ export const ConnectivityHub: React.FC = () => {
             </div>
 
             {/* High Conversion Footer */}
-            <section className="py-24 bg-[#0B0D14]">
+            <section className="py-12 bg-[#0B0D14]">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-4xl font-serif font-bold text-white mb-8">Optimize Your Commute</h2>
                     <p className="text-white/60 mb-12 max-w-xl mx-auto">Request a personalized route optimization map and see how much time you'll save living at Life Republic.</p>

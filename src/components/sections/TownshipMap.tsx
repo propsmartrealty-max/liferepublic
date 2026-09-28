@@ -28,9 +28,9 @@ export const TownshipMap: React.FC = () => {
   const [activeCluster, setActiveCluster] = useState<ClusterPoint | null>(null);
 
   return (
-    <section className="py-24 bg-[#1A1C23] overflow-hidden">
+    <section className="py-12 bg-[#1A1C23] overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <span className="text-accent font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Perspective & Scale</span>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Interactive Masterplan</h2>
           <p className="text-gray-500 max-w-2xl mx-auto">

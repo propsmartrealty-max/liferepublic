@@ -44,7 +44,7 @@ const VolumeItem = ({ vol, idx }: { vol: any, idx: number }) => {
     const scale = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.8, 1, 1, 0.8]);
 
     return (
-        <motion.div ref={ref} style={{ opacity, scale }} className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-32 items-center py-32`}>
+        <motion.div ref={ref} style={{ opacity, scale }} className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-32 items-center py-16`}>
             <div className="lg:w-1/2 relative group">
                 <div className={`absolute inset-0 bg-gradient-to-br ${vol.color} rounded-[5rem] blur-[120px] opacity-0 group-hover:opacity-100 transition-all duration-1000`}></div>
                 <div className="relative aspect-[16/10] rounded-[5rem] overflow-hidden shadow-[0_80px_160px_-40px_rgba(0,0,0,0.4)] border-8 border-gray-50/50 backdrop-blur-xl">
@@ -90,7 +90,7 @@ export const Lifestyle: React.FC = () => {
         <div ref={containerRef} className="bg-transparent">
             <SEO title="Sovereign Lifestyle & Community Monograph | Life Republic 2026" description="Experience the 15-Minute City at Life Republic. Integrated schooling, 7,700+ trees, and a community of 12,000+ families in Hinjewadi's premier township." />
             
-            <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#0B0D14]">
+            <section className="relative h-[75vh] flex items-center justify-center overflow-hidden bg-[#0B0D14]">
                 <motion.div style={{ scale: useTransform(smoothScroll, [0, 0.2], [1, 1.3]), y: useTransform(smoothScroll, [0, 0.2], [0, 100]) }} className="absolute inset-0">
                     <img loading="lazy" src={volumes[0].img} alt="Sovereign Life" className="w-full h-full object-cover grayscale opacity-20" />
                 </motion.div>
@@ -98,11 +98,11 @@ export const Lifestyle: React.FC = () => {
                 
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.8, ease: "circOut" }}>
-                        <div className="inline-flex items-center gap-8 px-12 py-5 bg-accent/10 border border-accent/20 rounded-full mb-16 backdrop-blur-3xl shadow-2xl">
+                        <div className="inline-flex items-center gap-8 px-12 py-5 bg-accent/10 border border-accent/20 rounded-full mb-8 backdrop-blur-3xl shadow-2xl">
                             <Wind size={24} className="text-accent animate-pulse" />
                             <span className="text-[12px] font-bold tracking-tight font-semibold text-accent">The Lifestyle Monograph v6.5</span>
                         </div>
-                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-16 tracking-tighter leading-[0.75]">
+                        <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-8 tracking-tighter leading-[0.75]">
                             Atmospheric <br /> <span className="italic text-accent">Sovereignty.</span>
                         </h1>
                         <p className="text-3xl md:text-4xl text-text-muted max-w-6xl mx-auto leading-relaxed font-medium italic">
@@ -133,11 +133,11 @@ export const Lifestyle: React.FC = () => {
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <div className="max-w-7xl mx-auto">
                         <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
-                            <div className="inline-flex items-center gap-6 px-10 py-4 bg-accent/20 border border-accent/30 rounded-full mb-20 shadow-2xl">
+                            <div className="inline-flex items-center gap-6 px-10 py-4 bg-accent/20 border border-accent/30 rounded-full mb-8 shadow-2xl">
                                 <Cpu size={24} className="text-accent" />
                                 <span className="text-[12px] font-bold text-accent tracking-tight font-semibold">Citizenship Synthesis v6.5</span>
                             </div>
-                            <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-white mb-24 tracking-tighter leading-[0.75]">Join the <br /> <span className="text-accent italic">Republic.</span></h2>
+                            <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.75]">Join the <br /> <span className="text-accent italic">Republic.</span></h2>
                         </motion.div>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16">

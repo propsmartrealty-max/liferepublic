@@ -4,7 +4,7 @@ import { Shield } from 'lucide-react';
 
 export const PrivacyPolicy: React.FC = () => {
     return (
-        <div className="pt-32 pb-24 bg-[#1A1C23] min-h-screen">
+        <div className="pt-32 pb-24 bg-[#1A1C23] min-h-[75vh]">
             <Helmet>
                 <title>Privacy Policy | Kolte Patil Life Republic Hinjewadi</title>
                 <meta name="description" content="Privacy Policy and Data Protection guidelines for Kolte Patil Life Republic. Read how we protect your information." />

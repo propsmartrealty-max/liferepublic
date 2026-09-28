@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const HeroSlider = () => {
     return (
-        <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030508]">
+        <section className="relative min-h-[80vh] w-full flex items-center justify-center overflow-hidden bg-[#030508]">
             
             {/* Fluid Water/Aurora Background */}
             <div className="fluid-bg">
@@ -40,7 +40,7 @@ export const HeroSlider = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 0.6 }}
-                    className="text-lg md:text-xl font-sans font-extralight text-white/50 max-w-2xl mx-auto mb-16 leading-relaxed"
+                    className="text-lg md:text-xl font-sans font-extralight text-white/50 max-w-2xl mx-auto mb-8 leading-relaxed"
                 >
                     An architectural ecosystem that flows seamlessly with your lifestyle. 
                     390 acres of unbounded, wireframe-precision design.

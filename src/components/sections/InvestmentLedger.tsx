@@ -34,7 +34,7 @@ export const InvestmentLedger: React.FC = () => {
     const monthlyRent = calcConfig === '2 BHK' ? 28000 : calcConfig === '3 BHK' ? 38000 : 55000;
 
     return (
-        <section className="py-40 bg-[#0B0D14] overflow-hidden relative">
+        <section className="py-16 bg-[#0B0D14] overflow-hidden relative">
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[200px] pointer-events-none -mr-48 -mt-48"></div>
             
             <div className="container mx-auto px-4 relative z-10">

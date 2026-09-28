@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-24 pb-20 bg-[#1A1C23] min-h-screen">
+        <div className="pt-24 pb-20 bg-[#1A1C23] min-h-[75vh]">
             <Breadcrumbs />
             <SEO
                 title="Projects in Kolte Patil Life Republic Township Hinjewadi | 1, 2, 3 BHK & Villas"

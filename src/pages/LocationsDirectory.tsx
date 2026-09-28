@@ -35,7 +35,7 @@ const LocationsDirectory: React.FC = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#1A1C23] pt-24 pb-20">
+        <div className="min-h-[75vh] bg-[#1A1C23] pt-24 pb-20">
             <SEO 
                 title="Pune Real Estate Locations Directory | Kolte Patil Life Republic"
                 description="Browse our comprehensive directory of premium real estate options across Pune West, including Hinjewadi, Wakad, and Baner."
@@ -44,7 +44,7 @@ const LocationsDirectory: React.FC = () => {
             <Breadcrumbs />
             
             <div className="container mx-auto px-4 max-w-7xl">
-                <div className="text-center mb-16">
+                <div className="text-center mb-8">
                     <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
                         Pune Real Estate Directory
                     </h1>

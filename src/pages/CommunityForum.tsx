@@ -45,7 +45,7 @@ export const CommunityForum: React.FC = () => {
                         className="w-full max-w-xl aspect-[1.6/1] bg-[#0B0D14] p-16 text-white relative overflow-hidden shadow-[0_100px_200px_-50px_rgba(0,0,0,0.5)] border border-white/10 rounded-[4rem] group"
                     >
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-[100px] pointer-events-none group-hover:scale-150 transition-transform duration-1000"></div>
-                        <div className="flex justify-between items-start mb-16">
+                        <div className="flex justify-between items-start mb-8">
                             <div className="space-y-2">
                                 <h4 className="text-[12px] font-bold tracking-tight font-semibold text-accent">Sovereign Pass</h4>
                                 <p className="text-[10px] text-white/40 uppercase font-bold tracking-[0.2em]">Hinjewadi Citizen Registry</p>
@@ -77,7 +77,7 @@ export const CommunityForum: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
                     {/* Forum Feed v6.0 */}
                     <div className="lg:col-span-8 space-y-12">
-                        <div className="flex items-center justify-between mb-16 bg-[#1A1C23]/50 backdrop-blur-xl px-12 py-8 rounded-[3.5rem] border border-white/5 shadow-inner">
+                        <div className="flex items-center justify-between mb-8 bg-[#1A1C23]/50 backdrop-blur-xl px-12 py-8 rounded-[3.5rem] border border-white/5 shadow-inner">
                             <h2 className="text-2xl font-serif font-bold text-white flex items-center gap-6">
                                 <MessageSquare size={32} className="text-accent" />
                                 Community Synthesis Feed
@@ -213,11 +213,11 @@ export const CommunityForum: React.FC = () => {
                 <div className="mt-48 text-center bg-[#0B0D14] p-32 md:p-48 rounded-[7rem] relative overflow-hidden group shadow-[0_120px_240px_-60px_rgba(0,0,0,0.6)] border border-white/5">
                     <div className="absolute inset-0 bg-[url('/images/aerial-sunset.png')] bg-cover bg-center opacity-10 grayscale pointer-events-none group-hover:scale-105 transition-transform duration-1000"></div>
                     <div className="relative z-10 max-w-5xl mx-auto">
-                        <div className="w-32 h-32 bg-accent text-white rounded-[3.5rem] flex items-center justify-center mx-auto mb-16 shadow-2xl group-hover:scale-110 transition-transform">
+                        <div className="w-32 h-32 bg-accent text-white rounded-[3.5rem] flex items-center justify-center mx-auto mb-8 shadow-2xl group-hover:scale-110 transition-transform">
                             <Heart size={64} className="animate-pulse" />
                         </div>
-                        <h2 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-16 tracking-tighter leading-[0.8] italic">Join the <span className="text-accent">Citizenship.</span></h2>
-                        <p className="text-3xl text-white/50 mb-24 font-medium leading-relaxed max-w-4xl mx-auto">Secure your place in Hinjewadi's most active integrated township. Join 12,000+ families already in residence.</p>
+                        <h2 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-8 tracking-tighter leading-[0.8] italic">Join the <span className="text-accent">Citizenship.</span></h2>
+                        <p className="text-3xl text-white/50 mb-10 font-medium leading-relaxed max-w-4xl mx-auto">Secure your place in Hinjewadi's most active integrated township. Join 12,000+ families already in residence.</p>
                         <a href="/projects" className="inline-flex items-center gap-8 bg-[#151822] border border-white/10 text-white px-24 py-12 rounded-full font-bold text-3xl hover:bg-accent hover:scale-[1.05] transition-all shadow-2xl group/btn">
                             Browse Sovereign Portfolio
                             <ArrowRight size={40} className="group-hover/btn:translate-x-4 transition-transform" />

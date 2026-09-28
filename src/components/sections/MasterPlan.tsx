@@ -176,7 +176,7 @@ export const MasterPlan: React.FC = () => {
                                 <div className="absolute top-0 right-0 p-12 opacity-5">
                                     <Globe size={150} />
                                 </div>
-                                <div className="flex justify-between items-start mb-16 relative z-10">
+                                <div className="flex justify-between items-start mb-8 relative z-10">
                                     <div className="w-24 h-24 bg-[#0B0D14] text-accent rounded-[3rem] flex items-center justify-center shadow-2xl group-hover/hud:rotate-12 transition-transform duration-500">
                                         <Info size={48} />
                                     </div>
@@ -197,7 +197,7 @@ export const MasterPlan: React.FC = () => {
                                         {activeSector.type}
                                     </span>
                                 </div>
-                                <p className="text-2xl text-gray-500 font-medium leading-relaxed mb-16 relative z-10">
+                                <p className="text-2xl text-gray-500 font-medium leading-relaxed mb-8 relative z-10">
                                     A curated architectural masterpiece within the 390-acre ecosystem. Designed for high-velocity lifestyle and absolute sovereignty.
                                 </p>
                                 <Link 

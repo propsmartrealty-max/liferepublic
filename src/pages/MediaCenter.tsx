@@ -100,9 +100,9 @@ export const MediaCenter: React.FC = () => {
                 </div>
             </section>
 
-            <section className="py-32 bg-[#1A1C23]/30">
+            <section className="py-16 bg-[#1A1C23]/30">
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8 border-b border-white/5 pb-12">
+                    <div className="flex flex-col md:flex-row items-end justify-between mb-8 gap-8 border-b border-white/5 pb-12">
                         <div className="max-w-2xl">
                             <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-4 block">Feed</span>
                             <h2 className="text-4xl md:text-6xl font-serif font-bold text-white tracking-tighter">Architectural Insights.</h2>
@@ -121,11 +121,11 @@ export const MediaCenter: React.FC = () => {
                     </div>
 
                     {loading ? (
-                        <div className="flex items-center justify-center py-40">
+                        <div className="flex items-center justify-center py-16">
                             <div className="w-16 h-16 border-4 border-accent border-t-transparent rounded-full animate-spin"></div>
                         </div>
                     ) : error ? (
-                        <div className="text-center py-40">
+                        <div className="text-center py-16">
                             <ShieldCheck size={48} className="text-red-400 mx-auto mb-6" />
                             <p className="text-white font-bold text-xl font-serif">{error}</p>
                         </div>
@@ -184,7 +184,7 @@ export const MediaCenter: React.FC = () => {
             </section>
 
             {/* Newsletter CTA */}
-            <section className="py-32 bg-[#0B0D14]">
+            <section className="py-16 bg-[#0B0D14]">
                 <div className="container mx-auto px-4">
                     <div className="bg-[#0B0D14] rounded-[4rem] p-16 md:p-32 text-center relative overflow-hidden group shadow-2xl">
                         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none group-hover:scale-110 transition-transform duration-1000"></div>
@@ -195,7 +195,7 @@ export const MediaCenter: React.FC = () => {
                         >
                             <Sparkles size={64} className="text-accent mx-auto mb-10 animate-pulse" />
                             <h2 className="text-4xl md:text-7xl font-serif font-bold text-white mb-10 tracking-tighter">Subscribe to the <br /><span className="text-accent italic">Sovereign Pulse.</span></h2>
-                            <p className="text-gray-400 text-2xl mb-16 max-w-2xl mx-auto font-medium leading-relaxed">
+                            <p className="text-gray-400 text-2xl mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
                                 Join 12,000+ citizens and investors. Receive direct architectural insights and 2026 infrastructure synthesis once a month.
                             </p>
                             <div className="flex flex-col md:flex-row gap-6 max-w-2xl mx-auto">

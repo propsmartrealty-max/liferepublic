@@ -31,7 +31,7 @@ const guidelines = [
 
 export const NRIInvestorHub: React.FC = () => {
     return (
-        <section className="py-40 bg-[#0B0D14] overflow-hidden relative">
+        <section className="py-16 bg-[#0B0D14] overflow-hidden relative">
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-100 to-transparent"></div>
             
             <div className="container mx-auto px-4 relative z-10">
@@ -48,7 +48,7 @@ export const NRIInvestorHub: React.FC = () => {
                         <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-white mb-12 tracking-tighter leading-[0.8]">
                             NRI Legal & <br /><span className="text-accent italic">Tax Synthesis.</span>
                         </h2>
-                        <p className="text-2xl text-gray-400 font-medium leading-relaxed mb-16 max-w-2xl">
+                        <p className="text-2xl text-gray-400 font-medium leading-relaxed mb-8 max-w-2xl">
                             Investing in Indian real estate from abroad requires architectural precision. Our dedicated NRI cell provides the legal and financial clarity needed for secure capital placement at Life Republic.
                         </p>
                         

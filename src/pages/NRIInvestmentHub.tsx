@@ -37,7 +37,7 @@ export const NRIInvestmentHub: React.FC = () => {
             <Breadcrumbs />
 
             {/* Global Authority Hero */}
-            <section className="relative py-32 bg-[#0B0D14] overflow-hidden">
+            <section className="relative py-16 bg-[#0B0D14] overflow-hidden">
                 <div className="absolute inset-0 opacity-5"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <motion.div
@@ -78,7 +78,7 @@ export const NRIInvestmentHub: React.FC = () => {
             <ProjectComparison />
 
             {/* NRI Trust Elements */}
-            <section className="py-24 bg-[#0B0D14] border-t border-white/5">
+            <section className="py-12 bg-[#0B0D14] border-t border-white/5">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         <div className="space-y-4">
@@ -113,7 +113,7 @@ export const NRIInvestmentHub: React.FC = () => {
             </section>
 
             {/* Final CTA */}
-            <section className="py-24 bg-accent relative overflow-hidden">
+            <section className="py-12 bg-accent relative overflow-hidden">
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-8">Ready to Expand Your Portfolio?</h2>
                     <p className="text-white/60 max-w-2xl mx-auto mb-12 text-lg">

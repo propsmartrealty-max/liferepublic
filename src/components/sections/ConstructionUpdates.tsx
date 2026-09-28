@@ -14,9 +14,9 @@ const updates = [
 
 export const ConstructionUpdates: React.FC = () => {
     return (
-        <section className="py-24 bg-[#0B0D14]">
+        <section className="py-12 bg-[#0B0D14]">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-8 gap-8">
                     <div className="max-w-2xl">
                         <span className="text-accent text-[10px] font-bold tracking-tight font-semibold block mb-4">Real-Time Transparency</span>
                         <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Construction Ledger 2026</h2>

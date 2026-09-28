@@ -23,7 +23,7 @@ export const NRIInvestment: React.FC = () => {
             <Breadcrumbs />
             
             {/* Hero Section */}
-            <section className="relative py-24 bg-[#0B0D14] overflow-hidden">
+            <section className="relative py-12 bg-[#0B0D14] overflow-hidden">
                 <div className="container mx-auto px-4 relative">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
@@ -83,9 +83,9 @@ export const NRIInvestment: React.FC = () => {
             </section>
 
             {/* Why Invest Section */}
-            <section className="py-24 bg-[#0B0D14]">
+            <section className="py-12 bg-[#0B0D14]">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-8">
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Why Choice Life Republic?</h2>
                         <div className="w-24 h-1 bg-accent mx-auto"></div>
                     </div>
@@ -116,7 +116,7 @@ export const NRIInvestment: React.FC = () => {
             </section>
 
             {/* NRI Services Desk */}
-            <section className="py-24 bg-[#1A1C23]">
+            <section className="py-12 bg-[#1A1C23]">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto rounded-3xl bg-[#151822] border border-white/10 shadow-2xl overflow-hidden flex flex-col md:flex-row">
                         <div className="p-12 md:w-1/2">

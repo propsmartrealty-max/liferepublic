@@ -83,7 +83,7 @@ export const LocationHighlights: React.FC = () => {
             </section>
 
             {/* Interactive Map Ledger */}
-            <section className="py-32 bg-[#0B0D14] relative">
+            <section className="py-16 bg-[#0B0D14] relative">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
                         <div className="lg:col-span-4 space-y-16">
@@ -153,12 +153,12 @@ export const LocationHighlights: React.FC = () => {
             </section>
 
             {/* Infrastructure Roadmap Matrix */}
-            <section className="py-40 bg-[#1A1C23]/50 relative overflow-hidden">
+            <section className="py-16 bg-[#1A1C23]/50 relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-20 opacity-5">
                     <Train size={300} className="text-white" />
                 </div>
                 <div className="container mx-auto px-4 relative z-10">
-                    <div className="text-center mb-24">
+                    <div className="text-center mb-10">
                         <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-4 block">The 2026 Forecast</span>
                         <h2 className="text-5xl md:text-8xl font-serif font-bold text-white tracking-tighter">Infrastructure <span className="text-accent italic">Hardening.</span></h2>
                     </div>
@@ -203,7 +203,7 @@ export const LocationHighlights: React.FC = () => {
             </section>
 
             {/* Sovereign Verdict */}
-            <section className="py-40 bg-[#0B0D14]">
+            <section className="py-16 bg-[#0B0D14]">
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto p-20 md:p-32 bg-[#0B0D14] rounded-[5rem] text-center relative overflow-hidden shadow-2xl">
                         <div className="absolute inset-0 bg-[url('/images/aerial-sunset.png')] bg-cover bg-center grayscale opacity-5"></div>
@@ -216,7 +216,7 @@ export const LocationHighlights: React.FC = () => {
                         >
                             <Zap size={72} className="text-accent mx-auto mb-12 animate-pulse" />
                             <h2 className="text-5xl md:text-8xl font-serif font-bold text-white mb-12 tracking-tighter leading-tight">The Investment <br /><span className="text-accent italic text-7xl md:text-9xl">Conclusion.</span></h2>
-                            <p className="text-2xl text-gray-400 leading-relaxed font-medium mb-16 max-w-3xl mx-auto">
+                            <p className="text-2xl text-gray-400 leading-relaxed font-medium mb-8 max-w-3xl mx-auto">
                                 Hinjewadi Phase 3 is the fastest-growing real estate cluster in Pune West. Life Republic's 390-acre scale ensures that your asset is not just a home, but a sovereign stake in the city's IT future.
                             </p>
                             <div className="flex flex-col md:flex-row gap-8 justify-center">

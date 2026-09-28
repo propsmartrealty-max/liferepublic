@@ -31,7 +31,7 @@ export const HTMLSitemap: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-20 pb-24 bg-[#1A1C23] min-h-screen">
+        <div className="pt-20 pb-24 bg-[#1A1C23] min-h-[75vh]">
             <Breadcrumbs />
             <SEO
                 title="Sitemap | Kolte Patil Life Republic Hinjewadi Pune"

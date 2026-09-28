@@ -70,7 +70,7 @@ export const ROICalculator: React.FC = () => {
         <div className="bg-[#151822] border border-white/10 rounded-[4rem] shadow-[0_80px_160px_-40px_rgba(0,0,0,0.1)] p-10 md:p-20 border border-white/5 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full -mr-48 -mt-48 blur-[120px] pointer-events-none"></div>
             
-            <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-8">
                 <div className="flex items-center gap-6">
                     <div className="p-6 bg-[#0B0D14] text-white rounded-[2rem] shadow-2xl relative group">
                         <TrendingUp size={40} className="group-hover:rotate-12 transition-transform" />

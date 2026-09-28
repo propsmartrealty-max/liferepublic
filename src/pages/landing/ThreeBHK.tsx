@@ -59,7 +59,7 @@ export const ThreeBHK: React.FC = () => {
                 </div>
             </section>
 
-            <div className="container mx-auto px-4 py-32">
+            <div className="container mx-auto px-4 py-16">
                 {/* Spatial Monograph Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-40">
                     {[
@@ -86,7 +86,7 @@ export const ThreeBHK: React.FC = () => {
 
                 {/* Project Clusters */}
                 <div className="mb-40">
-                    <div className="flex items-end justify-between mb-24 border-b border-white/5 pb-12">
+                    <div className="flex items-end justify-between mb-10 border-b border-white/5 pb-12">
                         <div className="max-w-2xl">
                             <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-4 block">Active Synthesis</span>
                             <h2 className="text-5xl md:text-7xl font-serif font-bold text-white tracking-tighter">The 3 BHK <span className="text-accent italic">Portfolio.</span></h2>
@@ -162,7 +162,7 @@ export const ThreeBHK: React.FC = () => {
                         </div>
                         <Zap size={64} className="text-accent mx-auto mb-10 animate-pulse" />
                         <h2 className="text-4xl md:text-7xl font-serif font-bold text-white mb-10 tracking-tighter">Secure Your <br /> <span className="text-accent italic">Sovereign Space.</span></h2>
-                        <p className="text-2xl text-gray-500 font-medium leading-relaxed max-w-2xl mx-auto mb-16">
+                        <p className="text-2xl text-gray-500 font-medium leading-relaxed max-w-2xl mx-auto mb-8">
                             Join the elite collection of homeowners who demand tectonic permanence and global standards.
                         </p>
                         <div className="flex flex-col md:flex-row gap-8 justify-center">
