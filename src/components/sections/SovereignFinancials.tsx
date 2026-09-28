@@ -46,7 +46,7 @@ export const SovereignFinancials: React.FC = () => {
                    {React.cloneElement(stat.icon as React.ReactElement, { size: 18 } as any)}
                 </div>
                 <p className="text-3xl font-bold mb-1">{stat.value}</p>
-                <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">{stat.label}</p>
+                <p className="text-xs font-bold text-gray-500 tracking-tight font-medium">{stat.label}</p>
               </motion.div>
             ))}
           </div>

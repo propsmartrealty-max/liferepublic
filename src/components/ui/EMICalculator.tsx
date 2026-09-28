@@ -32,7 +32,7 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
                     </div>
                     <div>
                         <h3 className="text-2xl font-serif font-bold text-secondary">Financial Planner</h3>
-                        <p className="text-gray-400 text-xs uppercase tracking-widest font-bold">Life Republic Investment Hub</p>
+                        <p className="text-gray-400 text-xs tracking-tight font-medium font-bold">Life Republic Investment Hub</p>
                     </div>
                 </div>
 
@@ -41,7 +41,7 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
                     <div className="space-y-10">
                         <div className="space-y-4">
                             <div className="flex justify-between items-end">
-                                <label className="text-sm font-bold text-secondary uppercase tracking-wider">Loan Amount</label>
+                                <label className="text-sm font-bold text-secondary tracking-tight font-medium">Loan Amount</label>
                                 <span className="text-lg font-bold text-accent">₹{(amount / 100000).toFixed(2)} Lakhs</span>
                             </div>
                             <input 
@@ -57,7 +57,7 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
 
                         <div className="space-y-4">
                             <div className="flex justify-between items-end">
-                                <label className="text-sm font-bold text-secondary uppercase tracking-wider">Tenure (Years)</label>
+                                <label className="text-sm font-bold text-secondary tracking-tight font-medium">Tenure (Years)</label>
                                 <span className="text-lg font-bold text-accent">{tenure} Yrs</span>
                             </div>
                             <input 
@@ -73,7 +73,7 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
 
                         <div className="space-y-4">
                             <div className="flex justify-between items-end">
-                                <label className="text-sm font-bold text-secondary uppercase tracking-wider">Interest Rate (%)</label>
+                                <label className="text-sm font-bold text-secondary tracking-tight font-medium">Interest Rate (%)</label>
                                 <span className="text-lg font-bold text-accent">{rate}%</span>
                             </div>
                             <input 
@@ -93,7 +93,7 @@ export const EMICalculator: React.FC<EMICalculatorProps> = ({ basePrice = 750000
                         <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
                         
                         <div>
-                            <span className="text-white/40 text-[10px] font-bold uppercase tracking-[0.3em] block mb-4">Estimated Monthly Installment</span>
+                            <span className="text-white/40 text-[10px] font-bold tracking-tight font-semibold block mb-4">Estimated Monthly Installment</span>
                             <div className="text-5xl md:text-6xl font-serif font-bold mb-4">
                                 ₹{emi.toLocaleString('en-IN')}
                             </div>

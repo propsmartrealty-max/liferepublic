@@ -20,7 +20,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif tracking-tight text-secondary uppercase;
+    @apply font-serif tracking-tight text-secondary;
   }
 }
 
@@ -34,13 +34,11 @@
   }
 
   .heading-hero {
-    text-transform: uppercase;
-    @apply text-6xl md:text-8xl lg:text-[4rem] lg:text-[5rem] font-serif font-medium tracking-[-0.04em] leading-[1.05] text-white;
+        @apply text-6xl md:text-8xl lg:text-[4rem] lg:text-[5rem] font-serif font-medium tracking-[-0.04em] leading-[1.05] text-white;
   }
   
   .heading-section {
-    text-transform: uppercase;
-    @apply text-5xl md:text-6xl lg:text-7xl font-serif font-medium tracking-[-0.03em] leading-[1.1] text-secondary mb-8;
+        @apply text-5xl md:text-6xl lg:text-7xl font-serif font-medium tracking-[-0.03em] leading-[1.1] text-secondary mb-8;
   }
 
   .text-golden-gradient {

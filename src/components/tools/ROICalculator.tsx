@@ -78,15 +78,15 @@ export const ROICalculator: React.FC = () => {
                     </div>
                     <div>
                         <h3 className="text-4xl md:text-5xl font-serif font-bold text-secondary tracking-tighter leading-tight">Investment Thesis <br /><span className="text-accent italic">v6.0</span></h3>
-                        <p className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.5em] mt-2">Hinjewadi ROI Synthesis 2026</p>
+                        <p className="text-[10px] text-gray-400 font-bold tracking-tight font-semibold mt-2">Hinjewadi ROI Synthesis 2026</p>
                     </div>
                 </div>
                 <div className="flex flex-col items-end gap-3">
                     <div className="px-6 py-3 bg-green-50 border border-green-100 rounded-full flex items-center gap-3 shadow-sm">
                         <div className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></div>
-                        <span className="text-[10px] font-bold text-green-700 uppercase tracking-widest">Market Alpha: Scarcity Active</span>
+                        <span className="text-[10px] font-bold text-green-700 tracking-tight font-medium">Market Alpha: Scarcity Active</span>
                     </div>
-                    <div className="flex items-center gap-2 text-[9px] font-bold text-gray-300 uppercase tracking-widest">
+                    <div className="flex items-center gap-2 text-[9px] font-bold text-gray-300 tracking-tight font-medium">
                         <Landmark size={12} /> Verified by Sovereign Intelligence
                     </div>
                 </div>
@@ -99,7 +99,7 @@ export const ROICalculator: React.FC = () => {
                         {/* Property Value */}
                         <div className="group">
                             <div className="flex justify-between mb-6">
-                                <label className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.4em]">Principal Asset Value</label>
+                                <label className="text-[10px] font-bold text-gray-500 tracking-tight font-semibold">Principal Asset Value</label>
                                 <span className="text-2xl font-bold text-secondary group-hover:text-accent transition-colors">{formatCurrency(propertyValue)}</span>
                             </div>
                             <input
@@ -112,7 +112,7 @@ export const ROICalculator: React.FC = () => {
                         {/* Monthly Rent */}
                         <div className="group">
                             <div className="flex justify-between mb-6">
-                                <label className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.4em]">Projected Monthly Yield</label>
+                                <label className="text-[10px] font-bold text-gray-500 tracking-tight font-semibold">Projected Monthly Yield</label>
                                 <span className="text-2xl font-bold text-secondary group-hover:text-accent transition-colors">{formatCurrency(monthlyRent)}</span>
                             </div>
                             <input
@@ -125,7 +125,7 @@ export const ROICalculator: React.FC = () => {
                         {/* Holding Period */}
                         <div className="group">
                             <div className="flex justify-between mb-6">
-                                <label className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.4em]">Holding Horizon</label>
+                                <label className="text-[10px] font-bold text-gray-500 tracking-tight font-semibold">Holding Horizon</label>
                                 <span className="text-2xl font-bold text-secondary group-hover:text-accent transition-colors">{holdingPeriod} Years</span>
                             </div>
                             <input
@@ -143,7 +143,7 @@ export const ROICalculator: React.FC = () => {
                             <div className="flex items-center gap-4">
                                 <Zap size={20} className={includeMetroDelta ? 'text-accent' : 'text-gray-300'} />
                                 <div className="text-left">
-                                    <p className="text-[10px] font-bold uppercase tracking-widest">Metro Multiplier 2026</p>
+                                    <p className="text-[10px] font-bold tracking-tight font-medium">Metro Multiplier 2026</p>
                                     <p className={`text-xs ${includeMetroDelta ? 'text-white/60' : 'text-gray-400'}`}>Include +3.5% infrastructure scarcity delta</p>
                                 </div>
                             </div>
@@ -162,7 +162,7 @@ export const ROICalculator: React.FC = () => {
                             <h4 className="text-xl font-serif font-bold flex items-center gap-3">
                                 <BarChart3 size={24} className="text-accent" /> Tectonic Price Index
                             </h4>
-                            <span className="text-[9px] font-bold uppercase tracking-[0.4em] opacity-40">Hinjewadi Ph 3 Corridor</span>
+                            <span className="text-[9px] font-bold tracking-tight font-semibold opacity-40">Hinjewadi Ph 3 Corridor</span>
                         </div>
                         <div className="flex items-end justify-between h-48 gap-3">
                             {priceTrends.map((trend, idx) => (
@@ -191,7 +191,7 @@ export const ROICalculator: React.FC = () => {
                             <div className="flex items-center justify-between mb-12">
                                 <div className="flex items-center gap-3">
                                     <PieChart size={24} className="text-accent" />
-                                    <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-white/40">Sovereign Thesis</span>
+                                    <span className="text-[10px] font-bold tracking-tight font-semibold text-white/40">Sovereign Thesis</span>
                                 </div>
                                 <div className="p-3 bg-white/5 rounded-full">
                                     <ShieldCheck size={20} className="text-accent" />
@@ -200,18 +200,18 @@ export const ROICalculator: React.FC = () => {
                             
                             <div className="space-y-12">
                                 <div className="group cursor-help">
-                                    <p className="text-[10px] font-bold text-white/30 uppercase tracking-[0.5em] mb-3">Projected Asset Valuation</p>
+                                    <p className="text-[10px] font-bold text-white/30 tracking-tight font-semibold mb-3">Projected Asset Valuation</p>
                                     <p className="text-5xl md:text-6xl font-serif font-bold text-white tracking-tighter group-hover:text-accent transition-colors">{formatCurrency(finalValue)}</p>
                                 </div>
                                 
                                 <div className="group cursor-help">
-                                    <p className="text-[10px] font-bold text-white/30 uppercase tracking-[0.5em] mb-3">Total Wealth Synthesis</p>
+                                    <p className="text-[10px] font-bold text-white/30 tracking-tight font-semibold mb-3">Total Wealth Synthesis</p>
                                     <p className="text-5xl md:text-6xl font-serif font-bold text-accent tracking-tighter">+{formatCurrency(totalROI)}</p>
                                     <div className="mt-4 flex flex-wrap gap-3">
-                                        <div className="px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full text-[10px] font-bold text-accent uppercase tracking-widest">
+                                        <div className="px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full text-[10px] font-bold text-accent tracking-tight font-medium">
                                             ~{((totalROI / propertyValue) * 100).toFixed(1)}% Absolute ROI
                                         </div>
-                                        <div className="px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-[10px] font-bold text-white/60 uppercase tracking-widest">
+                                        <div className="px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-[10px] font-bold text-white/60 tracking-tight font-medium">
                                             {annualYield}% Annual Yield
                                         </div>
                                     </div>

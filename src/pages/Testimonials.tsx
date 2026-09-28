@@ -79,7 +79,7 @@ export const Testimonials: React.FC = () => {
                             className="inline-flex items-center gap-6 px-10 py-4 bg-accent/10 border border-accent/20 rounded-full mb-16 backdrop-blur-3xl shadow-2xl"
                         >
                             <ShieldCheck size={20} className="text-accent animate-pulse" />
-                            <span className="text-[12px] font-bold uppercase tracking-[0.7em] text-accent">Verified Social Monograph v6.5</span>
+                            <span className="text-[12px] font-bold tracking-tight font-semibold text-accent">Verified Social Monograph v6.5</span>
                         </motion.div>
                         <h1 className="text-8xl md:text-[5rem] lg:text-[6rem] font-serif font-bold mb-16 tracking-tighter leading-[0.8] italic">
                             The Collective <br /> <span className="text-accent">Authority.</span>
@@ -103,7 +103,7 @@ export const Testimonials: React.FC = () => {
                                 </div>
                                 <div>
                                     <div className="text-8xl font-serif font-bold tracking-tighter mb-2 italic group-hover:text-accent transition-colors">{stat.value}</div>
-                                    <div className="text-[14px] font-bold uppercase tracking-[0.6em] text-white/20">{stat.label}</div>
+                                    <div className="text-[14px] font-bold tracking-tight font-semibold text-white/20">{stat.label}</div>
                                 </div>
                             </motion.div>
                         ))}
@@ -118,13 +118,13 @@ export const Testimonials: React.FC = () => {
                         <div className="max-w-3xl">
                             <div className="flex items-center gap-4 mb-6">
                                 <Cpu size={24} className="text-accent" />
-                                <span className="text-[11px] font-bold text-accent uppercase tracking-[0.6em]">Community Narratives</span>
+                                <span className="text-[11px] font-bold text-accent tracking-tight font-semibold">Community Narratives</span>
                             </div>
                             <h2 className="text-7xl md:text-9xl font-serif font-bold text-secondary tracking-tighter leading-none italic">Citizen <br />Monographs.</h2>
                         </div>
                         <div className="flex flex-wrap gap-6">
                             {['Connectivity', 'Safety', 'Nature', 'ROI Synthesis'].map((tag, i) => (
-                                <button key={i} className="px-10 py-4 bg-white border border-gray-100 rounded-full text-[11px] font-bold uppercase tracking-[0.4em] text-gray-400 hover:border-accent hover:text-accent transition-all hover:scale-105 shadow-sm">
+                                <button key={i} className="px-10 py-4 bg-white border border-gray-100 rounded-full text-[11px] font-bold tracking-tight font-semibold text-gray-400 hover:border-accent hover:text-accent transition-all hover:scale-105 shadow-sm">
                                     {tag}
                                 </button>
                             ))}
@@ -154,7 +154,7 @@ export const Testimonials: React.FC = () => {
                                                 <Star key={i} size={24} fill="currentColor" />
                                             ))}
                                         </div>
-                                        <span className="text-[10px] font-bold text-accent uppercase tracking-[0.5em] px-6 py-2 bg-accent/10 rounded-full border border-accent/20">{review.impact} Synthesis</span>
+                                        <span className="text-[10px] font-bold text-accent tracking-tight font-semibold px-6 py-2 bg-accent/10 rounded-full border border-accent/20">{review.impact} Synthesis</span>
                                     </div>
                                 </div>
 
@@ -185,15 +185,15 @@ export const Testimonials: React.FC = () => {
                                                 <h4 className="font-serif font-bold text-secondary text-3xl tracking-tighter italic">{review.name}</h4>
                                                 <div className="w-3 h-3 bg-accent rounded-full animate-pulse shadow-[0_0_15px_var(--accent)]"></div>
                                             </div>
-                                            <p className="text-[12px] text-gray-400 font-bold uppercase tracking-[0.4em]">{review.role}</p>
+                                            <p className="text-[12px] text-gray-400 font-bold tracking-tight font-semibold">{review.role}</p>
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        <div className="flex items-center gap-3 px-6 py-2 bg-emerald-50 text-emerald-600 rounded-full text-[10px] font-bold uppercase tracking-[0.5em] border border-emerald-100 mb-3 shadow-sm">
+                                        <div className="flex items-center gap-3 px-6 py-2 bg-emerald-50 text-emerald-600 rounded-full text-[10px] font-bold tracking-tight font-semibold border border-emerald-100 mb-3 shadow-sm">
                                             <ShieldCheck size={16} />
                                             Verified Citizen
                                         </div>
-                                        <p className="text-[10px] font-bold text-gray-300 uppercase tracking-[0.4em]">Since {review.tenure} • Sector {review.sector}</p>
+                                        <p className="text-[10px] font-bold text-gray-300 tracking-tight font-semibold">Since {review.tenure} • Sector {review.sector}</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -229,7 +229,7 @@ export const Testimonials: React.FC = () => {
                                 The Lifestyle Monograph <Globe size={32} className="group-hover/btn2:rotate-12 transition-transform text-accent" />
                             </a>
                         </div>
-                        <p className="text-[12px] font-bold text-gray-200 uppercase tracking-[1em] mt-24 block">Citizenship Handshake v6.5 • 2026 Synchronized</p>
+                        <p className="text-[12px] font-bold text-gray-200 tracking-tight font-semibold mt-24 block">Citizenship Handshake v6.5 • 2026 Synchronized</p>
                     </motion.div>
                 </div>
             </section>

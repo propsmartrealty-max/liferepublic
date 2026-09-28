@@ -31,7 +31,7 @@ export const YieldCalculator: React.FC = () => {
             <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-[120px] -mr-48 -mt-48 transition-all duration-1000"></div>
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-16">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-white rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-white/5">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-white rounded-full text-xs font-bold tracking-tight font-medium mb-6 border border-white/5">
                         <Percent size={14} className="text-accent" /> Sovereign Yield Analytics
                     </div>
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Investment Yield & ROI Simulator</h2>
@@ -44,7 +44,7 @@ export const YieldCalculator: React.FC = () => {
                     {/* Controls */}
                     <div className="bg-white/5 backdrop-blur-xl p-10 rounded-[3rem] border border-white/10 space-y-8">
                         <div>
-                            <label className="block text-white/60 text-sm font-bold uppercase tracking-widest mb-4 flex justify-between">
+                            <label className="block text-white/60 text-sm font-bold tracking-tight font-medium mb-4 flex justify-between">
                                 Capital Investment <span>₹ {(investment / 100000).toFixed(1)} L</span>
                             </label>
                             <input 
@@ -59,7 +59,7 @@ export const YieldCalculator: React.FC = () => {
                         </div>
 
                         <div>
-                            <label className="block text-white/60 text-sm font-bold uppercase tracking-widest mb-4 flex justify-between">
+                            <label className="block text-white/60 text-sm font-bold tracking-tight font-medium mb-4 flex justify-between">
                                 Monthly Rental Projection <span>₹ {monthlyRent.toLocaleString()}</span>
                             </label>
                             <input 
@@ -74,7 +74,7 @@ export const YieldCalculator: React.FC = () => {
                         </div>
 
                         <div>
-                            <label className="block text-white/60 text-sm font-bold uppercase tracking-widest mb-4 flex justify-between">
+                            <label className="block text-white/60 text-sm font-bold tracking-tight font-medium mb-4 flex justify-between">
                                 Annual Appreciation <span>{appreciation}%</span>
                             </label>
                             <input 
@@ -89,7 +89,7 @@ export const YieldCalculator: React.FC = () => {
                         </div>
 
                         <div>
-                            <label className="block text-white/60 text-sm font-bold uppercase tracking-widest mb-4 flex justify-between">
+                            <label className="block text-white/60 text-sm font-bold tracking-tight font-medium mb-4 flex justify-between">
                                 Horizon (Years) <span>{years} Yrs</span>
                             </label>
                             <input 
@@ -111,10 +111,10 @@ export const YieldCalculator: React.FC = () => {
                                 <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-4 group-hover:bg-accent group-hover:text-white transition-all">
                                     <Percent size={24} />
                                 </div>
-                                <div className="text-secondary/60 text-xs font-bold uppercase tracking-widest mb-2">Annual Rental Yield</div>
+                                <div className="text-secondary/60 text-xs font-bold tracking-tight font-medium mb-2">Annual Rental Yield</div>
                                 <div className="text-4xl font-serif font-bold text-secondary">{metrics.grossYield}%</div>
                             </div>
-                            <div className="pt-4 border-t border-gray-100 mt-4 text-[10px] text-gray-400 font-bold uppercase tracking-widest flex items-center gap-2">
+                            <div className="pt-4 border-t border-gray-100 mt-4 text-[10px] text-gray-400 font-bold tracking-tight font-medium flex items-center gap-2">
                                 <Info size={12} /> Target: 4.5%+
                             </div>
                         </div>
@@ -124,10 +124,10 @@ export const YieldCalculator: React.FC = () => {
                                 <div className="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center text-white mb-4">
                                     <Home size={24} />
                                 </div>
-                                <div className="text-white/60 text-xs font-bold uppercase tracking-widest mb-2">Capital Gains</div>
+                                <div className="text-white/60 text-xs font-bold tracking-tight font-medium mb-2">Capital Gains</div>
                                 <div className="text-3xl font-serif font-bold">₹ {metrics.capitalGains}</div>
                             </div>
-                            <div className="pt-4 border-t border-white/20 mt-4 text-[10px] text-white/40 font-bold uppercase tracking-widest">
+                            <div className="pt-4 border-t border-white/20 mt-4 text-[10px] text-white/40 font-bold tracking-tight font-medium">
                                 Est. Appreciation
                             </div>
                         </div>
@@ -135,12 +135,12 @@ export const YieldCalculator: React.FC = () => {
                         <div className="p-8 bg-white rounded-[2.5rem] flex flex-col justify-between md:col-span-2 shadow-xl">
                             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                                 <div>
-                                    <div className="text-secondary/60 text-xs font-bold uppercase tracking-widest mb-2">Total Estimated Profit</div>
+                                    <div className="text-secondary/60 text-xs font-bold tracking-tight font-medium mb-2">Total Estimated Profit</div>
                                     <div className="text-5xl font-serif font-bold text-secondary">₹ {metrics.totalReturn}</div>
                                 </div>
                                 <div className="text-center">
                                     <div className="text-accent text-5xl font-serif font-bold mb-1">{metrics.overallROI}%</div>
-                                    <div className="text-secondary/40 text-[10px] font-bold uppercase tracking-widest">Growth Over {years} Yrs</div>
+                                    <div className="text-secondary/40 text-[10px] font-bold tracking-tight font-medium">Growth Over {years} Yrs</div>
                                 </div>
                             </div>
                             <button 

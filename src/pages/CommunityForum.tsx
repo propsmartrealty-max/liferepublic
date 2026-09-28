@@ -31,7 +31,7 @@ export const CommunityForum: React.FC = () => {
                             className="inline-flex items-center gap-6 px-8 py-4 bg-secondary text-white rounded-full mb-12 backdrop-blur-3xl shadow-2xl"
                         >
                             <Network size={20} className="text-accent animate-pulse" />
-                            <span className="text-[11px] font-bold uppercase tracking-[0.6em]">Social Synthesis Matrix v6.0</span>
+                            <span className="text-[11px] font-bold tracking-tight font-semibold">Social Synthesis Matrix v6.0</span>
                         </motion.div>
                         <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-secondary mb-12 tracking-tighter leading-[0.8]">Resident <br /><span className="text-accent italic">Authority.</span></h1>
                         <p className="text-2xl md:text-3xl text-gray-400 leading-relaxed font-medium max-w-3xl">
@@ -47,7 +47,7 @@ export const CommunityForum: React.FC = () => {
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-[100px] pointer-events-none group-hover:scale-150 transition-transform duration-1000"></div>
                         <div className="flex justify-between items-start mb-16">
                             <div className="space-y-2">
-                                <h4 className="text-[12px] font-bold uppercase tracking-[0.5em] text-accent">Sovereign Pass</h4>
+                                <h4 className="text-[12px] font-bold tracking-tight font-semibold text-accent">Sovereign Pass</h4>
                                 <p className="text-[10px] text-white/40 uppercase font-bold tracking-[0.2em]">Hinjewadi Citizen Registry</p>
                             </div>
                             <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-3xl flex items-center justify-center font-serif text-4xl font-bold italic text-accent shadow-2xl group-hover:rotate-12 transition-transform">LR</div>
@@ -64,10 +64,10 @@ export const CommunityForum: React.FC = () => {
                         </div>
                         <div className="mt-16 flex justify-between items-end">
                             <div>
-                                <p className="text-[10px] text-white/20 uppercase tracking-[0.4em] font-bold">Protocol Active</p>
+                                <p className="text-[10px] text-white/20 tracking-tight font-semibold font-bold">Protocol Active</p>
                                 <p className="text-xl font-bold text-white tracking-[0.2em]">EST. 2026</p>
                             </div>
-                            <div className="flex items-center gap-4 px-8 py-3 bg-accent text-secondary rounded-2xl text-[12px] font-bold uppercase tracking-[0.2em] shadow-2xl">
+                            <div className="flex items-center gap-4 px-8 py-3 bg-accent text-secondary rounded-2xl text-[12px] font-bold tracking-tight font-semibold shadow-2xl">
                                 <ShieldCheck size={20} /> Verified
                             </div>
                         </div>
@@ -82,7 +82,7 @@ export const CommunityForum: React.FC = () => {
                                 <MessageSquare size={32} className="text-accent" />
                                 Community Synthesis Feed
                             </h2>
-                            <button className="text-[11px] font-bold text-accent uppercase tracking-[0.5em] border-b-2 border-accent pb-1 hover:text-secondary hover:border-secondary transition-all">Audit Global Discussions</button>
+                            <button className="text-[11px] font-bold text-accent tracking-tight font-semibold border-b-2 border-accent pb-1 hover:text-secondary hover:border-secondary transition-all">Audit Global Discussions</button>
                         </div>
                         
                         <div className="space-y-8">
@@ -96,7 +96,7 @@ export const CommunityForum: React.FC = () => {
                                 >
                                     {post.trending && (
                                         <div className="absolute top-0 right-0">
-                                            <div className="bg-accent text-secondary text-[11px] font-bold px-8 py-3 rounded-bl-[2.5rem] uppercase tracking-[0.4em] shadow-2xl animate-pulse">
+                                            <div className="bg-accent text-secondary text-[11px] font-bold px-8 py-3 rounded-bl-[2.5rem] tracking-tight font-semibold shadow-2xl animate-pulse">
                                                 Trending
                                             </div>
                                         </div>
@@ -105,7 +105,7 @@ export const CommunityForum: React.FC = () => {
                                         <div className="space-y-6">
                                             <div className="flex items-center gap-6">
                                                 <span className="bg-accent/10 text-accent px-6 py-2 rounded-full text-[11px] font-bold tracking-[0.3em] uppercase border border-accent/20">{post.sector}</span>
-                                                <span className="text-[11px] font-bold text-gray-300 uppercase tracking-widest">{post.time} Synergy</span>
+                                                <span className="text-[11px] font-bold text-gray-300 tracking-tight font-medium">{post.time} Synergy</span>
                                             </div>
                                             <h3 className="text-3xl md:text-4xl font-serif font-bold text-secondary group-hover:text-accent transition-colors tracking-tighter leading-tight">{post.title}</h3>
                                         </div>
@@ -125,7 +125,7 @@ export const CommunityForum: React.FC = () => {
                                             </div>
                                             <div className="flex items-center gap-3 bg-green-50 px-6 py-2 rounded-full border border-green-100">
                                                 <div className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></div>
-                                                <span className="text-[11px] text-green-600 font-bold uppercase tracking-widest">{Math.floor(Math.random() * 50) + 15} residents live</span>
+                                                <span className="text-[11px] text-green-600 font-bold tracking-tight font-medium">{Math.floor(Math.random() * 50) + 15} residents live</span>
                                             </div>
                                         </div>
                                     </div>
@@ -150,8 +150,8 @@ export const CommunityForum: React.FC = () => {
                                 ].map((item, i) => (
                                     <div key={i} className="group/item">
                                         <div className="flex justify-between items-start mb-3">
-                                            <span className="text-xs font-bold text-accent uppercase tracking-[0.5em]">{item.date}</span>
-                                            <span className="text-[10px] font-bold text-white/30 uppercase tracking-[0.3em]">{item.status}</span>
+                                            <span className="text-xs font-bold text-accent tracking-tight font-semibold">{item.date}</span>
+                                            <span className="text-[10px] font-bold text-white/30 tracking-tight font-semibold">{item.status}</span>
                                         </div>
                                         <p className="text-xl font-bold group-hover/item:text-accent transition-colors tracking-tight leading-tight">{item.event}</p>
                                     </div>
@@ -174,15 +174,15 @@ export const CommunityForum: React.FC = () => {
                             <div className="grid grid-cols-2 gap-10 relative z-10">
                                 <div className="bg-gray-50/50 p-8 rounded-[3rem] border border-gray-100 shadow-inner group/stat">
                                     <div className="text-4xl font-serif font-bold text-secondary group-hover/stat:text-accent transition-colors">12k+</div>
-                                    <div className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.5em] mt-3">Sovereign Families</div>
+                                    <div className="text-[11px] font-bold text-gray-400 tracking-tight font-semibold mt-3">Sovereign Families</div>
                                 </div>
                                 <div className="bg-gray-50/50 p-8 rounded-[3rem] border border-gray-100 shadow-inner group/stat">
                                     <div className="text-4xl font-serif font-bold text-secondary group-hover/stat:text-accent transition-colors">45+</div>
-                                    <div className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.5em] mt-3">Active Avenues</div>
+                                    <div className="text-[11px] font-bold text-gray-400 tracking-tight font-semibold mt-3">Active Avenues</div>
                                 </div>
                             </div>
                             <div className="mt-12 p-8 bg-accent/5 rounded-[2.5rem] border border-accent/10">
-                                <div className="flex items-center gap-4 text-accent font-bold mb-5 text-[11px] uppercase tracking-[0.5em]">
+                                <div className="flex items-center gap-4 text-accent font-bold mb-5 text-[11px] tracking-tight font-semibold">
                                     <Zap size={20} className="animate-pulse" /> Live Intensity Matrix
                                 </div>
                                 <div className="flex items-center gap-2 h-2.5 w-full bg-gray-100 rounded-full overflow-hidden">
@@ -201,7 +201,7 @@ export const CommunityForum: React.FC = () => {
                             </div>
                             <div className="flex items-center gap-4 text-blue-600 font-bold mb-6">
                                 <ShieldCheck size={28} />
-                                <span className="text-[11px] uppercase tracking-[0.6em]">Township Authority Hub</span>
+                                <span className="text-[11px] tracking-tight font-semibold">Township Authority Hub</span>
                             </div>
                             <p className="text-lg text-blue-900 leading-relaxed font-medium">
                                 Sovereign shuttle synchronization for Hinjewadi Phase 3 initiating April 1st. Access real-time schedules via Resident Matrix v6.0.
@@ -222,7 +222,7 @@ export const CommunityForum: React.FC = () => {
                             Browse Sovereign Portfolio
                             <ArrowRight size={40} className="group-hover/btn:translate-x-4 transition-transform" />
                         </a>
-                        <p className="text-[12px] font-bold text-white/20 uppercase tracking-[0.8em] mt-32 block">Resident Onboarding Protocol v6.0 • 2026 Ready</p>
+                        <p className="text-[12px] font-bold text-white/20 tracking-tight font-semibold mt-32 block">Resident Onboarding Protocol v6.0 • 2026 Ready</p>
                     </div>
                 </div>
             </div>

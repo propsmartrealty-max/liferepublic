@@ -1,12 +1,15 @@
 const fs = require('fs');
-const file = 'src/components/sections/HeroSlider.tsx';
+
+let file = 'src/components/sections/HeroSlider.tsx';
 let content = fs.readFileSync(file, 'utf8');
 
-// Give it the stark architectural border look
-content = content.replace(/rounded-full/g, 'rounded-none');
-content = content.replace(/rounded-3xl/g, 'rounded-none');
-content = content.replace(/rounded-2xl/g, 'rounded-none');
-content = content.replace(/bg-black\/50/g, 'bg-black/60 border-4 border-white'); 
-content = content.replace(/text-white\/90/g, 'text-white font-bold tracking-widest uppercase');
+// Fix subtitle
+content = content.replace(/font-bold tracking-widest uppercase font-light/g, "text-white/90 font-medium tracking-tight");
+
+// Fix Kolte Patil span
+content = content.replace(/tracking-widest uppercase/g, "tracking-tight");
+
+// Fix buttons (remove rounded-none, let them inherit Button.tsx rounded-2xl)
+content = content.replace(/rounded-none/g, "");
 
 fs.writeFileSync(file, content);

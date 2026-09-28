@@ -65,7 +65,7 @@ export const CommunityCalendar: React.FC = () => {
                         <motion.span 
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            className="text-accent text-[10px] font-bold uppercase tracking-[0.4em] block mb-6"
+                            className="text-accent text-[10px] font-bold tracking-tight font-semibold block mb-6"
                         >
                             The Sovereign Social
                         </motion.span>
@@ -98,7 +98,7 @@ export const CommunityCalendar: React.FC = () => {
                                     <event.icon size={20} />
                                 </div>
                             </div>
-                            <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 block mb-2">{event.category}</span>
+                            <span className="text-[10px] font-bold tracking-tight font-medium text-gray-400 block mb-2">{event.category}</span>
                             <h4 className="text-xl font-bold text-secondary mb-4 group-hover:text-accent transition-colors">{event.title}</h4>
                             <p className="text-gray-500 text-sm leading-relaxed mb-6">
                                 {event.desc}
@@ -126,7 +126,7 @@ export const CommunityCalendar: React.FC = () => {
                         ].map((stat, idx) => (
                             <div key={idx} className="text-center">
                                 <span className="text-3xl md:text-4xl font-serif font-bold text-secondary block mb-2">{stat.value}</span>
-                                <span className="text-[10px] font-bold uppercase tracking-widest text-accent">{stat.label}</span>
+                                <span className="text-[10px] font-bold tracking-tight font-medium text-accent">{stat.label}</span>
                             </div>
                         ))}
                     </div>

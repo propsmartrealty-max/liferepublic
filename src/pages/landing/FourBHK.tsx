@@ -62,7 +62,7 @@ export const FourBHK: React.FC = () => {
                     >
                         <div className="inline-flex items-center gap-4 px-8 py-3 bg-accent/20 border border-accent/30 rounded-full mb-12 backdrop-blur-xl">
                             <Crown size={16} className="text-accent animate-pulse" />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent">The 24K Sovereign Monograph v5.5</span>
+                            <span className="text-[10px] font-bold tracking-tight font-semibold text-accent">The 24K Sovereign Monograph v5.5</span>
                         </div>
                         <h1 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.8]">
                             The 4BHK <br /> <span className="text-accent italic">Authority.</span>
@@ -80,7 +80,7 @@ export const FourBHK: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
                         <div className="lg:col-span-8">
                             <div className="mb-24">
-                                <span className="text-[10px] font-bold text-accent uppercase tracking-[0.6em] mb-6 block">Structural Synthesis</span>
+                                <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-6 block">Structural Synthesis</span>
                                 <h2 className="text-5xl md:text-8xl font-serif font-bold text-secondary mb-10 tracking-tighter">Spatial <br /><span className="text-accent italic">Superiority.</span></h2>
                                 <p className="text-2xl text-gray-500 font-medium leading-relaxed max-w-3xl">
                                     Owning a 4BHK at Life Republic is a statement of architectural and financial wisdom. Our villas (24K Espada, Sound of Soul) synthesize land ownership with the elite security of a managed township.
@@ -128,7 +128,7 @@ export const FourBHK: React.FC = () => {
                                             <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-accent group-hover/item:bg-accent group-hover/item:text-secondary transition-all shadow-inner border border-white/5">
                                                 <item.icon size={28} />
                                             </div>
-                                            <span className="text-[11px] font-bold text-white/70 uppercase tracking-[0.3em] group-hover/item:text-white transition-colors">{item.text}</span>
+                                            <span className="text-[11px] font-bold text-white/70 tracking-tight font-semibold group-hover/item:text-white transition-colors">{item.text}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -145,16 +145,16 @@ export const FourBHK: React.FC = () => {
 
                             {/* Financial Superiority Matrix */}
                             <div className="mt-16 p-12 bg-gray-50 rounded-[4rem] border border-gray-100 shadow-inner group">
-                                <h4 className="text-[11px] font-bold text-secondary uppercase tracking-[0.5em] mb-10 flex items-center gap-3">
+                                <h4 className="text-[11px] font-bold text-secondary tracking-tight font-semibold mb-10 flex items-center gap-3">
                                     <TrendingUp size={20} className="text-accent animate-pulse" /> Financial Scarcity Delta
                                 </h4>
                                 <div className="space-y-10">
                                     <div className="flex justify-between items-center group/stat">
-                                        <span className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.4em]">Villa Appreciation</span>
+                                        <span className="text-[10px] text-gray-400 font-bold tracking-tight font-semibold">Villa Appreciation</span>
                                         <span className="text-2xl font-serif font-bold text-accent">+15% YoY</span>
                                     </div>
                                     <div className="flex justify-between items-center group/stat">
-                                        <span className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.4em]">Inventory Scarcity</span>
+                                        <span className="text-[10px] text-gray-400 font-bold tracking-tight font-semibold">Inventory Scarcity</span>
                                         <span className="text-2xl font-serif font-bold text-accent">Tier 1</span>
                                     </div>
                                     <div className="w-full h-px bg-gray-200 opacity-60"></div>

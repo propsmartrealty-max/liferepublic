@@ -85,7 +85,7 @@ export const ProjectComparison: React.FC = () => {
                                     <img loading="lazy" src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
                                         <h3 className="text-xl font-bold text-white">{p.title}</h3>
-                                        <div className="text-accent text-sm font-bold uppercase tracking-widest">{p.category}</div>
+                                        <div className="text-accent text-sm font-bold tracking-tight font-medium">{p.category}</div>
                                     </div>
                                 </div>
 
@@ -98,7 +98,7 @@ export const ProjectComparison: React.FC = () => {
                                     </div>
 
                                     <div className="space-y-4">
-                                        <div className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Core Features</div>
+                                        <div className="text-[10px] text-gray-400 font-bold tracking-tight font-medium">Core Features</div>
                                         {p.features.slice(0, 4).map((f, i) => (
                                             <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
                                                 <CheckCircle2 size={16} className="text-accent" /> {f}
@@ -107,7 +107,7 @@ export const ProjectComparison: React.FC = () => {
                                     </div>
 
                                     <div className="space-y-4 pt-4 border-t border-gray-200">
-                                        <div className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Investment Rating</div>
+                                        <div className="text-[10px] text-gray-400 font-bold tracking-tight font-medium">Investment Rating</div>
                                         <div className="flex gap-1">
                                             {[...Array(5)].map((_, i) => (
                                                 <div key={i} className={`w-8 h-1 rounded-full ${i < 4 ? 'bg-accent' : 'bg-gray-200'}`}></div>

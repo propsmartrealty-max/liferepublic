@@ -22,7 +22,7 @@ export const TownshipIntelligence: React.FC = () => {
                     <motion.span 
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-accent text-[10px] font-bold uppercase tracking-[0.5em] block mb-6"
+                        className="text-accent text-[10px] font-bold tracking-tight font-semibold block mb-6"
                     >
                         The Masterplan Intelligence
                     </motion.span>
@@ -49,7 +49,7 @@ export const TownshipIntelligence: React.FC = () => {
                             transition={{ delay: idx * 0.1 }}
                             className="border-l border-gray-100 pl-8"
                         >
-                            <span className="text-gray-400 text-[10px] font-bold uppercase tracking-widest block mb-2">{stat.label}</span>
+                            <span className="text-gray-400 text-[10px] font-bold tracking-tight font-medium block mb-2">{stat.label}</span>
                             <span className="text-3xl font-serif font-bold text-secondary">{stat.value}</span>
                         </motion.div>
                     ))}
@@ -93,7 +93,7 @@ export const TownshipIntelligence: React.FC = () => {
                             <h2 className="text-4xl font-serif font-bold mb-16">Velocity Matrix</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                                 <div>
-                                    <h3 className="text-accent text-[10px] font-bold uppercase tracking-widest mb-8 border-b border-white/10 pb-4">Major Nodes</h3>
+                                    <h3 className="text-accent text-[10px] font-bold tracking-tight font-medium mb-8 border-b border-white/10 pb-4">Major Nodes</h3>
                                     <div className="space-y-6">
                                         {Object.entries(township.connectivity).map(([key, val], idx) => (
                                             <div key={idx} className="flex justify-between items-center group">
@@ -105,7 +105,7 @@ export const TownshipIntelligence: React.FC = () => {
                                 </div>
 
                                 <div>
-                                    <h3 className="text-accent text-[10px] font-bold uppercase tracking-widest mb-8 border-b border-white/10 pb-4">Medical Response</h3>
+                                    <h3 className="text-accent text-[10px] font-bold tracking-tight font-medium mb-8 border-b border-white/10 pb-4">Medical Response</h3>
                                     <div className="space-y-6">
                                         {township.hospitals_nearby.map((hosp, idx) => (
                                             <div key={idx} className="flex justify-between items-center group">

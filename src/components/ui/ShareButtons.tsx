@@ -71,7 +71,7 @@ export const ShareButtons: React.FC<ShareButtonsProps> = ({ url, title, classNam
                 <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center text-accent animate-pulse border border-accent/20">
                     <Zap size={14} />
                 </div>
-                <span className="text-[11px] font-bold text-secondary uppercase tracking-[0.4em] hidden md:block">
+                <span className="text-[11px] font-bold text-secondary tracking-tight font-semibold hidden md:block">
                     Synthesis Hub
                 </span>
             </div>
@@ -133,7 +133,7 @@ export const ShareButtons: React.FC<ShareButtonsProps> = ({ url, title, classNam
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: 10 }}
-                        className="text-[10px] font-bold text-emerald-500 uppercase tracking-[0.3em] flex items-center gap-2"
+                        className="text-[10px] font-bold text-emerald-500 tracking-tight font-semibold flex items-center gap-2"
                     >
                         <Check size={12} /> Synthesis Copied
                     </motion.div>

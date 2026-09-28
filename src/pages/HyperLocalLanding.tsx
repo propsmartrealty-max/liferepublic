@@ -53,7 +53,7 @@ export const HyperLocalLanding: React.FC = () => {
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="flex items-center gap-2 text-accent text-[10px] font-bold uppercase tracking-[0.4em] mb-8"
+                            className="flex items-center gap-2 text-accent text-[10px] font-bold tracking-tight font-semibold mb-8"
                         >
                             <Target size={14} /> Market Intelligence Report 2026
                         </motion.div>
@@ -72,7 +72,7 @@ export const HyperLocalLanding: React.FC = () => {
                     <div className="lg:w-1/3 grid grid-cols-1 gap-6">
                         <div className="bg-gray-50 p-8 rounded-[2rem] border border-gray-100">
                             <div className="flex items-center justify-between mb-4">
-                                <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Infra Score</span>
+                                <span className="text-[10px] font-bold tracking-tight font-medium text-gray-400">Infra Score</span>
                                 <Zap size={16} className="text-accent" />
                             </div>
                             <div className="text-4xl font-serif font-bold text-secondary">{config.infraScore}/100</div>
@@ -82,11 +82,11 @@ export const HyperLocalLanding: React.FC = () => {
                         </div>
                         <div className="bg-secondary p-8 rounded-[2rem] text-white">
                             <div className="flex items-center justify-between mb-4">
-                                <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">Rental Yield</span>
+                                <span className="text-[10px] font-bold tracking-tight font-medium text-white/40">Rental Yield</span>
                                 <TrendingUp size={16} className="text-accent" />
                             </div>
                             <div className="text-4xl font-serif font-bold">{config.rentalYield}</div>
-                            <p className="text-white/40 text-[10px] mt-4 uppercase tracking-widest">Projected for Hinjewadi West</p>
+                            <p className="text-white/40 text-[10px] mt-4 tracking-tight font-medium">Projected for Hinjewadi West</p>
                         </div>
                     </div>
                 </div>
@@ -131,7 +131,7 @@ export const HyperLocalLanding: React.FC = () => {
                                 Demand for premium housing near {slug?.split('-')[0]} has spiked by 18% in the last quarter due to the Hinjewadi-Shivajinagar Metro progress.
                             </p>
                         </div>
-                        <Link to="/township-intelligence" className="flex items-center gap-2 text-accent text-xs font-bold uppercase tracking-widest group">
+                        <Link to="/township-intelligence" className="flex items-center gap-2 text-accent text-xs font-bold tracking-tight font-medium group">
                             Explore Stats <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                         </Link>
                     </div>

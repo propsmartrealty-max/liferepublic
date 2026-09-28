@@ -58,7 +58,7 @@ export const LocationHighlights: React.FC = () => {
                             className="inline-flex items-center gap-4 px-6 py-3 bg-accent/20 border border-accent/30 rounded-full mb-12 backdrop-blur-xl"
                         >
                             <Compass size={16} className="text-accent animate-spin-slow" />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent">Infrastructure Synthesis 2026</span>
+                            <span className="text-[10px] font-bold tracking-tight font-semibold text-accent">Infrastructure Synthesis 2026</span>
                         </motion.div>
                         <h1 className="text-6xl md:text-9xl font-serif font-bold text-white mb-10 tracking-tighter leading-none">
                             The Strategic <br /> <span className="text-accent italic">Epicenter.</span>
@@ -70,12 +70,12 @@ export const LocationHighlights: React.FC = () => {
                         <div className="flex gap-8">
                             <div className="flex flex-col">
                                 <span className="text-4xl font-serif font-bold text-white">1.2km</span>
-                                <span className="text-[10px] font-bold text-accent uppercase tracking-widest mt-1">To Metro Ph 3</span>
+                                <span className="text-[10px] font-bold text-accent tracking-tight font-medium mt-1">To Metro Ph 3</span>
                             </div>
                             <div className="w-px h-12 bg-white/10"></div>
                             <div className="flex flex-col">
                                 <span className="text-4xl font-serif font-bold text-white">0 min</span>
-                                <span className="text-[10px] font-bold text-accent uppercase tracking-widest mt-1">To Spine Road</span>
+                                <span className="text-[10px] font-bold text-accent tracking-tight font-medium mt-1">To Spine Road</span>
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ export const LocationHighlights: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
                         <div className="lg:col-span-4 space-y-16">
                             <div className="space-y-6">
-                                <span className="text-[10px] font-bold text-accent uppercase tracking-[0.5em]">Spatial Metrics</span>
+                                <span className="text-[10px] font-bold text-accent tracking-tight font-semibold">Spatial Metrics</span>
                                 <h2 className="text-5xl font-serif font-bold text-secondary tracking-tighter">The Sector <br />Mesh Analysis.</h2>
                                 <p className="text-xl text-gray-500 font-medium leading-relaxed">
                                     Our 390-acre master plan is mathematically positioned to leverage the Hinjewadi Phase 3 expansion.
@@ -106,7 +106,7 @@ export const LocationHighlights: React.FC = () => {
                                             <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-accent shadow-sm group-hover:scale-110 transition-transform">
                                                 <m.icon size={20} />
                                             </div>
-                                            <span className="text-[11px] font-bold text-secondary uppercase tracking-[0.2em]">{m.label}</span>
+                                            <span className="text-[11px] font-bold text-secondary tracking-tight font-semibold">{m.label}</span>
                                         </div>
                                         <span className="text-xl font-bold text-secondary">{m.val}</span>
                                     </div>
@@ -130,7 +130,7 @@ export const LocationHighlights: React.FC = () => {
                                     <div className="bg-secondary/90 backdrop-blur-3xl p-8 rounded-[2.5rem] border border-white/10 shadow-2xl">
                                         <div className="flex items-center gap-4 text-accent mb-4">
                                             <Target size={20} className="animate-pulse" />
-                                            <span className="text-[10px] font-bold uppercase tracking-[0.4em]">Target Nexus Lock</span>
+                                            <span className="text-[10px] font-bold tracking-tight font-semibold">Target Nexus Lock</span>
                                         </div>
                                         <div className="space-y-1">
                                             <div className="text-2xl font-serif font-bold text-white tracking-tighter">HINJEWADI_PH3</div>
@@ -142,7 +142,7 @@ export const LocationHighlights: React.FC = () => {
                                 <div className="absolute bottom-12 right-12 z-20 p-8 bg-white/10 backdrop-blur-2xl rounded-[2.5rem] border border-white/20 text-white flex items-center gap-6 group">
                                     <BarChart3 size={32} className="text-accent group-hover:rotate-12 transition-transform" />
                                     <div>
-                                        <p className="text-[10px] font-bold uppercase tracking-widest opacity-60">ROI Catalyst</p>
+                                        <p className="text-[10px] font-bold tracking-tight font-medium opacity-60">ROI Catalyst</p>
                                         <p className="text-xl font-serif font-bold">15-Min Radius</p>
                                     </div>
                                 </div>
@@ -159,7 +159,7 @@ export const LocationHighlights: React.FC = () => {
                 </div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="text-center mb-24">
-                        <span className="text-[10px] font-bold text-accent uppercase tracking-[0.6em] mb-4 block">The 2026 Forecast</span>
+                        <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-4 block">The 2026 Forecast</span>
                         <h2 className="text-5xl md:text-8xl font-serif font-bold text-secondary tracking-tighter">Infrastructure <span className="text-accent italic">Hardening.</span></h2>
                     </div>
 
@@ -183,7 +183,7 @@ export const LocationHighlights: React.FC = () => {
                                             <div key={i} className="flex items-center justify-between group/item">
                                                 <div>
                                                     <p className="text-lg font-bold text-secondary group-hover/item:text-accent transition-colors">{item.name}</p>
-                                                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em] mt-1">{item.status}</p>
+                                                    <p className="text-[10px] font-bold text-gray-400 tracking-tight font-semibold mt-1">{item.status}</p>
                                                 </div>
                                                 <div className="text-right">
                                                     <p className="text-lg font-bold text-accent">{item.time}</p>
@@ -192,7 +192,7 @@ export const LocationHighlights: React.FC = () => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="mt-16 pt-8 border-t border-gray-100 flex items-center justify-between text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                                <div className="mt-16 pt-8 border-t border-gray-100 flex items-center justify-between text-[10px] font-bold tracking-tight font-medium text-gray-400">
                                     <span>Verified 2026</span>
                                     <ArrowUpRight size={16} className="text-accent" />
                                 </div>

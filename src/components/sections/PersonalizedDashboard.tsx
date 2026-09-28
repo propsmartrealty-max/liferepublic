@@ -26,7 +26,7 @@ export const PersonalizedDashboard: React.FC = () => {
                     <div className="max-w-xl text-white">
                         <div className="inline-flex items-center gap-3 px-4 py-2 bg-accent/20 border border-accent/30 rounded-full mb-6">
                             <Sparkles size={16} className="text-accent" />
-                            <span className="text-[10px] font-bold uppercase tracking-widest text-accent">Personalized Discovery Hub</span>
+                            <span className="text-[10px] font-bold tracking-tight font-medium text-accent">Personalized Discovery Hub</span>
                         </div>
                         <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight">
                             Welcome Back, <br /> 
@@ -82,7 +82,7 @@ export const PersonalizedDashboard: React.FC = () => {
                                     <button 
                                         key={i} 
                                         onClick={() => window.dispatchEvent(new CustomEvent('open-neural-search'))}
-                                        className="px-3 py-1.5 bg-white/5 rounded-lg text-[10px] text-gray-400 hover:bg-accent hover:text-secondary transition-all font-bold uppercase tracking-wider"
+                                        className="px-3 py-1.5 bg-white/5 rounded-lg text-[10px] text-gray-400 hover:bg-accent hover:text-secondary transition-all font-bold tracking-tight font-medium"
                                     >
                                         {q}
                                     </button>
@@ -100,7 +100,7 @@ export const PersonalizedDashboard: React.FC = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-xl font-bold">Sovereignty Level: {history.intentScore}</h4>
-                                    <p className="text-xs font-bold text-secondary/60 uppercase tracking-widest">Next Milestone: Unlock Priority Site Visit</p>
+                                    <p className="text-xs font-bold text-secondary/60 tracking-tight font-medium">Next Milestone: Unlock Priority Site Visit</p>
                                 </div>
                             </div>
                             <button 

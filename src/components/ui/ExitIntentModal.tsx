@@ -79,14 +79,14 @@ export const ExitIntentModal: React.FC = () => {
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-3">
                                             <div className="w-2 h-2 rounded-full bg-accent animate-ping"></div>
-                                            <p className="text-[11px] font-bold uppercase tracking-[0.6em] text-accent">Neural Calibration v6.0</p>
+                                            <p className="text-[11px] font-bold tracking-tight font-semibold text-accent">Neural Calibration v6.0</p>
                                         </div>
                                         <h3 className="text-6xl md:text-7xl font-serif font-bold leading-[0.9] tracking-tighter">
                                             Synthesis <br />Locked.
                                         </h3>
                                     </div>
                                     <div className="space-y-6">
-                                        <div className="flex justify-between items-end text-[12px] font-bold uppercase tracking-[0.5em] text-white/40">
+                                        <div className="flex justify-between items-end text-[12px] font-bold tracking-tight font-semibold text-white/40">
                                             <span>Portfolio Completeness</span>
                                             <span className="text-accent text-3xl font-serif">{completeness}%</span>
                                         </div>
@@ -98,7 +98,7 @@ export const ExitIntentModal: React.FC = () => {
                                                 className="h-full bg-accent shadow-[0_0_30px_var(--accent)]" 
                                             />
                                         </div>
-                                        <p className="text-[10px] text-white/20 font-bold uppercase tracking-[0.4em] text-center">Protocol LR-2026-ZENITH Active</p>
+                                        <p className="text-[10px] text-white/20 font-bold tracking-tight font-semibold text-center">Protocol LR-2026-ZENITH Active</p>
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@ export const ExitIntentModal: React.FC = () => {
                                 </div>
                                 <div className="flex items-center gap-4 text-accent mb-12">
                                     <Cpu size={24} className="animate-pulse" />
-                                    <span className="text-[12px] font-bold uppercase tracking-[0.7em]">Behavioral Anchor Protocol</span>
+                                    <span className="text-[12px] font-bold tracking-tight font-semibold">Behavioral Anchor Protocol</span>
                                 </div>
                                 <h2 className="text-6xl md:text-8xl font-serif font-bold text-secondary mb-10 tracking-tighter leading-[0.8] italic">
                                     Secure the <br /> <span className="text-accent">Thesis.</span>
@@ -132,18 +132,18 @@ export const ExitIntentModal: React.FC = () => {
                                     <div className="flex items-center gap-6 justify-center pt-8">
                                         <div className="flex items-center gap-3 px-6 py-2 bg-green-50 rounded-full border border-green-100">
                                             <ShieldCheck size={20} className="text-green-500" />
-                                            <span className="text-[11px] font-bold text-green-600 uppercase tracking-[0.5em]">Vault Protection Active</span>
+                                            <span className="text-[11px] font-bold text-green-600 tracking-tight font-semibold">Vault Protection Active</span>
                                         </div>
                                         <div className="flex items-center gap-3 px-6 py-2 bg-blue-50 rounded-full border border-blue-100">
                                             <Network size={20} className="text-blue-500" />
-                                            <span className="text-[11px] font-bold text-blue-600 uppercase tracking-[0.5em]">Neural Handover Ready</span>
+                                            <span className="text-[11px] font-bold text-blue-600 tracking-tight font-semibold">Neural Handover Ready</span>
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <button 
                                     onClick={handleClose}
-                                    className="mt-20 text-center text-[11px] font-bold text-gray-300 uppercase tracking-[0.6em] hover:text-accent transition-colors block w-full"
+                                    className="mt-20 text-center text-[11px] font-bold text-gray-300 tracking-tight font-semibold hover:text-accent transition-colors block w-full"
                                 >
                                     Dismiss & Preserve Current Synthesis Session
                                 </button>

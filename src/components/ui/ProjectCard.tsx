@@ -91,7 +91,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, priority = fa
                         >
                             {project?.title ? project.title.split('|')[0] : 'Sovereign Project'}
                         </h3>
-                        <div className="flex items-center text-gray-400 text-[10px] font-bold uppercase tracking-widest">
+                        <div className="flex items-center text-gray-400 text-[10px] font-bold tracking-tight font-medium">
                             <MapPin size={12} className="mr-1.5 text-accent" />
                             {project?.location || 'Pune West'}
                         </div>
@@ -132,7 +132,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, priority = fa
                                             {(project?.features || []).slice(0, 3).map((feature, index) => (
                                                 <span
                                                     key={index}
-                                                    className="px-3 py-1 bg-accent/5 text-accent text-[9px] rounded-lg border border-accent/10 font-bold uppercase tracking-wider"
+                                                    className="px-3 py-1 bg-accent/5 text-accent text-[9px] rounded-lg border border-accent/10 font-bold tracking-tight font-medium"
                                                 >
                                                     {feature}
                                                 </span>
@@ -224,7 +224,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, priority = fa
                         <Button
                             variant="primary"
                             size="lg"
-                            className="w-full justify-center rounded-2xl py-6 font-bold shadow-2xl uppercase tracking-widest text-[10px]"
+                            className="w-full justify-center rounded-2xl py-6 font-bold shadow-2xl tracking-tight font-medium text-[10px]"
                             onClick={handleProjectClick}
                         >
                             Details <ChevronRight size={14} className="ml-1" />
@@ -232,7 +232,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, priority = fa
                         <Button
                             variant="outline"
                             size="lg"
-                            className="w-full justify-center rounded-2xl py-6 font-bold uppercase tracking-widest text-[10px] border-accent/20 text-accent hover:bg-accent hover:text-secondary shadow-xl transition-all"
+                            className="w-full justify-center rounded-2xl py-6 font-bold tracking-tight font-medium text-[10px] border-accent/20 text-accent hover:bg-accent hover:text-secondary shadow-xl transition-all"
                             onClick={openEnquiry}
                         >
                             Enquire Now

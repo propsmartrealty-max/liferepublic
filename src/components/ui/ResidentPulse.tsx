@@ -32,11 +32,11 @@ export const ResidentPulse: React.FC = () => {
                             </div>
                             <div className="flex flex-col gap-1">
                                 <div className="flex items-center gap-3">
-                                    <span className={`text-[10px] font-bold ${activity.color} uppercase tracking-[0.3em] leading-none`}>
+                                    <span className={`text-[10px] font-bold ${activity.color} tracking-tight font-semibold leading-none`}>
                                         {activity.type}
                                     </span>
                                     <div className="w-1 h-1 rounded-full bg-gray-200"></div>
-                                    <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">{activity.time}</span>
+                                    <span className="text-[9px] font-bold text-gray-400 tracking-tight font-medium">{activity.time}</span>
                                 </div>
                                 <span className="text-sm font-bold text-secondary tracking-tight group-hover/item:text-accent transition-colors">
                                     {activity.message}

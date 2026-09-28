@@ -61,20 +61,20 @@ export const HeroSlider = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="max-w-4xl"
         >
-          <span className="inline-block py-1.5 px-4 rounded-none bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-semibold tracking-widest uppercase mb-6">
+          <span className="inline-block py-1.5 px-4  bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-semibold tracking-tight mb-6">
             Kolte Patil Developers
           </span>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tighter text-white leading-[1.05] mb-6 drop-shadow-lg">
             {slides[current].title}
           </h1>
-          <p className="text-xl md:text-2xl text-white font-bold tracking-widest uppercase font-light mb-10 max-w-2xl drop-shadow-md">
+          <p className="text-xl md:text-2xl text-white text-white/90 font-medium tracking-tight mb-10 max-w-2xl drop-shadow-md">
             {slides[current].subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="rounded-none px-8 bg-white text-primary hover:bg-white/90 glow-effect" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry'))}>
+            <Button size="lg" className=" px-8 bg-white text-primary hover:bg-white/90 glow-effect" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry'))}>
               Schedule a Visit
             </Button>
-            <Button size="lg" variant="outline" className="rounded-none px-8 border-white/30 text-white hover:bg-white/10 glass-panel" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button size="lg" variant="outline" className=" px-8 border-white/30 text-white hover:bg-white/10 glass-panel" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
               Explore Clusters
             </Button>
           </div>
@@ -87,7 +87,7 @@ export const HeroSlider = () => {
           <button
             key={idx}
             onClick={() => setCurrent(idx)}
-            className={`h-1 rounded-none transition-all duration-500 ${current === idx ? 'w-12 bg-white' : 'w-4 bg-white/30 hover:bg-white/50'}`}
+            className={`h-1  transition-all duration-500 ${current === idx ? 'w-12 bg-white' : 'w-4 bg-white/30 hover:bg-white/50'}`}
             aria-label={`Go to slide ${idx + 1}`}
           />
         ))}

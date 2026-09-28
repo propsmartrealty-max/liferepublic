@@ -47,7 +47,7 @@ export const InvestmentLedger: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-transparent pointer-events-none"></div>
                     
                     <div className="flex items-center gap-12 relative z-10 w-full">
-                        <div className="flex items-center gap-4 bg-accent text-secondary px-8 py-4 rounded-full font-bold text-[11px] uppercase tracking-[0.5em] shadow-2xl animate-pulse whitespace-nowrap">
+                        <div className="flex items-center gap-4 bg-accent text-secondary px-8 py-4 rounded-full font-bold text-[11px] tracking-tight font-semibold shadow-2xl animate-pulse whitespace-nowrap">
                             <Timer size={18} /> Live Scarcity Ledger
                         </div>
                         <AnimatePresence mode="wait">
@@ -64,7 +64,7 @@ export const InvestmentLedger: React.FC = () => {
                                     <span className={`text-lg font-bold ${liveTicker[tickerIndex].units > 0 ? 'text-white/60' : 'text-red-400'}`}>
                                         {liveTicker[tickerIndex].units} Sovereign Units Left
                                     </span>
-                                    <span className={`text-[10px] px-6 py-2 rounded-full font-bold uppercase tracking-[0.4em] border ${liveTicker[tickerIndex].urgency === 'Sovereign Scarcity' ? 'bg-red-500/20 text-red-400 border-red-500/40' : 'bg-white/10 text-accent border-white/20'}`}>
+                                    <span className={`text-[10px] px-6 py-2 rounded-full font-bold tracking-tight font-semibold border ${liveTicker[tickerIndex].urgency === 'Sovereign Scarcity' ? 'bg-red-500/20 text-red-400 border-red-500/40' : 'bg-white/10 text-accent border-white/20'}`}>
                                         {liveTicker[tickerIndex].urgency}
                                     </span>
                                 </div>
@@ -72,7 +72,7 @@ export const InvestmentLedger: React.FC = () => {
                         </AnimatePresence>
                     </div>
 
-                    <div className="hidden lg:flex items-center gap-6 text-[10px] font-bold text-white/30 uppercase tracking-[0.6em] whitespace-nowrap">
+                    <div className="hidden lg:flex items-center gap-6 text-[10px] font-bold text-white/30 tracking-tight font-semibold whitespace-nowrap">
                         <Network size={20} className="text-accent" /> Neural Sync Active
                     </div>
                 </motion.div>
@@ -85,7 +85,7 @@ export const InvestmentLedger: React.FC = () => {
                             className="inline-flex items-center gap-4 px-6 py-3 bg-gray-100 rounded-full mb-10 border border-gray-200"
                         >
                             <Cpu size={16} className="text-accent" />
-                            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.6em]">Financial Synthesis Protocol v6.5</span>
+                            <span className="text-[10px] font-bold text-gray-400 tracking-tight font-semibold">Financial Synthesis Protocol v6.5</span>
                         </motion.div>
                         <h2 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-secondary mb-12 tracking-tighter leading-[0.8]">
                             The Financial <br /> <span className="text-accent italic">Authority.</span>
@@ -115,11 +115,11 @@ export const InvestmentLedger: React.FC = () => {
                             <table className="w-full text-left border-collapse">
                                 <thead>
                                     <tr className="bg-secondary text-white">
-                                        <th className="px-12 py-12 text-[10px] font-bold uppercase tracking-[0.6em]">Lifecycle Phase</th>
-                                        <th className="px-12 py-12 text-[10px] font-bold uppercase tracking-[0.6em]">Market PSF Synthesis</th>
-                                        <th className="px-12 py-12 text-[10px] font-bold uppercase tracking-[0.6em]">Inventory State</th>
-                                        <th className="px-12 py-12 text-[10px] font-bold uppercase tracking-[0.6em]">Structural Catalyst</th>
-                                        <th className="px-12 py-12 text-[10px] font-bold uppercase tracking-[0.6em]">ROI</th>
+                                        <th className="px-12 py-12 text-[10px] font-bold tracking-tight font-semibold">Lifecycle Phase</th>
+                                        <th className="px-12 py-12 text-[10px] font-bold tracking-tight font-semibold">Market PSF Synthesis</th>
+                                        <th className="px-12 py-12 text-[10px] font-bold tracking-tight font-semibold">Inventory State</th>
+                                        <th className="px-12 py-12 text-[10px] font-bold tracking-tight font-semibold">Structural Catalyst</th>
+                                        <th className="px-12 py-12 text-[10px] font-bold tracking-tight font-semibold">ROI</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-50">
@@ -138,7 +138,7 @@ export const InvestmentLedger: React.FC = () => {
                                                 </div>
                                             </td>
                                             <td className="px-12 py-12">
-                                                <span className={`px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.4em] ${row.projected ? 'bg-accent text-white shadow-xl shadow-accent/30' : 'bg-gray-100 text-gray-400'}`}>
+                                                <span className={`px-6 py-2 rounded-full text-[10px] font-bold tracking-tight font-semibold ${row.projected ? 'bg-accent text-white shadow-xl shadow-accent/30' : 'bg-gray-100 text-gray-400'}`}>
                                                     {row.inventory}
                                                 </span>
                                             </td>
@@ -171,12 +171,12 @@ export const InvestmentLedger: React.FC = () => {
                         <div className="relative z-10">
                             <div className="flex items-center gap-4 mb-12">
                                 <Coins size={24} className="text-accent" />
-                                <h3 className="font-bold uppercase tracking-[0.4em] text-[11px] text-accent">Yield Projection Calculator</h3>
+                                <h3 className="font-bold tracking-tight font-semibold text-[11px] text-accent">Yield Projection Calculator</h3>
                             </div>
                             
                             <div className="space-y-12">
                                 <div>
-                                    <label className="text-[10px] font-bold text-white/30 uppercase tracking-[0.4em] block mb-6">Select Configuration</label>
+                                    <label className="text-[10px] font-bold text-white/30 tracking-tight font-semibold block mb-6">Select Configuration</label>
                                     <div className="grid grid-cols-3 gap-4">
                                         {['2 BHK', '3 BHK', 'Villas'].map(c => (
                                             <button 
@@ -195,7 +195,7 @@ export const InvestmentLedger: React.FC = () => {
 
                                 <div>
                                     <div className="flex justify-between items-end mb-4">
-                                        <label className="text-[10px] font-bold text-white/30 uppercase tracking-[0.4em]">Investment Base</label>
+                                        <label className="text-[10px] font-bold text-white/30 tracking-tight font-semibold">Investment Base</label>
                                         <span className="text-2xl font-mono font-bold text-white">₹{(investmentAmount / 100000).toFixed(1)}L</span>
                                     </div>
                                     <input 
@@ -211,14 +211,14 @@ export const InvestmentLedger: React.FC = () => {
 
                                 <div className="space-y-8 bg-white/5 p-10 rounded-[3rem] border border-white/5">
                                     <div className="flex justify-between items-center">
-                                        <span className="text-xs text-white/40 font-bold uppercase tracking-widest flex items-center gap-2">
+                                        <span className="text-xs text-white/40 font-bold tracking-tight font-medium flex items-center gap-2">
                                             <TrendingUp size={14} className="text-green-400" /> 2026 Proj. Value
                                         </span>
                                         <span className="text-3xl font-mono font-bold text-accent">₹{(projectedValue / 1000000).toFixed(2)}Cr</span>
                                     </div>
                                     <div className="h-px bg-white/10"></div>
                                     <div className="flex justify-between items-center">
-                                        <span className="text-xs text-white/40 font-bold uppercase tracking-widest flex items-center gap-2">
+                                        <span className="text-xs text-white/40 font-bold tracking-tight font-medium flex items-center gap-2">
                                             <PieChart size={14} className="text-blue-400" /> Est. Monthly Rent
                                         </span>
                                         <span className="text-2xl font-mono font-bold text-white">₹{(monthlyRent / 1000).toFixed(0)}K</span>
@@ -252,7 +252,7 @@ export const InvestmentLedger: React.FC = () => {
                             <div className="space-y-6">
                                 <h4 className="text-3xl font-bold text-secondary tracking-tight group-hover:text-accent transition-colors">{card.title}</h4>
                                 <p className="text-xl text-gray-500 font-medium leading-relaxed italic">"{card.desc}"</p>
-                                <div className="flex items-center gap-3 text-[11px] font-bold text-accent uppercase tracking-widest pt-4">
+                                <div className="flex items-center gap-3 text-[11px] font-bold text-accent tracking-tight font-medium pt-4">
                                     <ArrowRight size={16} /> Audit Data Source
                                 </div>
                             </div>

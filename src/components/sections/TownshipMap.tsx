@@ -80,7 +80,7 @@ export const TownshipMap: React.FC = () => {
                   className="absolute bottom-6 right-6 z-30 w-72 bg-white/90 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/20"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <span className="bg-gray-100 text-gray-500 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest leading-none">
+                    <span className="bg-gray-100 text-gray-500 px-3 py-1 rounded-full text-[10px] font-bold tracking-tight font-medium leading-none">
                       Sector {activeCluster.id}
                     </span>
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: activeCluster.color }}></div>
@@ -108,7 +108,7 @@ export const TownshipMap: React.FC = () => {
             <div className="absolute top-6 left-6 z-10 pointer-events-none">
               <div className="flex items-center gap-2 bg-white/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
                 <Info size={14} className="text-secondary" />
-                <span className="text-[10px] font-bold uppercase tracking-widest text-secondary">Life Republic 390-Acre Domain</span>
+                <span className="text-[10px] font-bold tracking-tight font-medium text-secondary">Life Republic 390-Acre Domain</span>
               </div>
             </div>
           </div>

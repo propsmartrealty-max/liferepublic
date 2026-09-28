@@ -71,7 +71,7 @@ export const MediaCenter: React.FC = () => {
                     >
                         <div className="inline-flex items-center gap-4 px-6 py-3 bg-accent/20 border border-accent/30 rounded-full mb-12 backdrop-blur-xl">
                             <Newspaper size={16} className="text-accent" />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent">Sovereign Archive v5.5</span>
+                            <span className="text-[10px] font-bold tracking-tight font-semibold text-accent">Sovereign Archive v5.5</span>
                         </div>
                         <h1 className="text-6xl md:text-9xl font-serif font-bold text-white mb-10 tracking-tighter leading-none">
                             The Media <br /> <span className="text-accent italic text-7xl md:text-[5rem] lg:text-[6rem]">Nexus.</span>
@@ -92,7 +92,7 @@ export const MediaCenter: React.FC = () => {
                             "LIFE REPUBLIC: 12,000+ Citizens Now Part of the Monograph",
                             "QRIOUS SMART HOMES: Neural Integration Phase 1 Commencing"
                         ].map((news, i) => (
-                            <span key={`news-ticker-${i}`} className="text-[11px] font-bold text-accent uppercase tracking-[0.4em] mx-16 flex items-center gap-4 group">
+                            <span key={`news-ticker-${i}`} className="text-[11px] font-bold text-accent tracking-tight font-semibold mx-16 flex items-center gap-4 group">
                                 <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div> {news}
                             </span>
                         ))}
@@ -104,7 +104,7 @@ export const MediaCenter: React.FC = () => {
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8 border-b border-gray-100 pb-12">
                         <div className="max-w-2xl">
-                            <span className="text-[10px] font-bold text-accent uppercase tracking-[0.4em] mb-4 block">Feed</span>
+                            <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-4 block">Feed</span>
                             <h2 className="text-4xl md:text-6xl font-serif font-bold text-secondary tracking-tighter">Architectural Insights.</h2>
                         </div>
                         <div className="flex gap-6">
@@ -113,7 +113,7 @@ export const MediaCenter: React.FC = () => {
                                 { label: 'Construction', icon: Building2 },
                                 { label: 'Market ROI', icon: TrendingUp }
                             ].map((tab, i) => (
-                                <button key={i} className="flex items-center gap-3 px-6 py-3 bg-white border border-gray-100 rounded-full text-[10px] font-bold uppercase tracking-widest text-secondary hover:border-accent transition-all shadow-sm">
+                                <button key={i} className="flex items-center gap-3 px-6 py-3 bg-white border border-gray-100 rounded-full text-[10px] font-bold tracking-tight font-medium text-secondary hover:border-accent transition-all shadow-sm">
                                     <tab.icon size={14} className="text-accent" /> {tab.label}
                                 </button>
                             ))}
@@ -149,12 +149,12 @@ export const MediaCenter: React.FC = () => {
                                         />
                                         <div className="absolute bottom-8 left-8 flex items-center gap-3 px-4 py-2 bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 text-white z-20">
                                             <Play size={16} fill="currentColor" />
-                                            <span className="text-[10px] font-bold uppercase tracking-widest">View Monograph</span>
+                                            <span className="text-[10px] font-bold tracking-tight font-medium">View Monograph</span>
                                         </div>
                                     </Link>
                                     
                                     <div className="p-12 flex flex-col flex-grow">
-                                        <div className="flex items-center gap-3 text-[10px] font-bold text-accent uppercase tracking-[0.4em] mb-6">
+                                        <div className="flex items-center gap-3 text-[10px] font-bold text-accent tracking-tight font-semibold mb-6">
                                             <Calendar size={12} />
                                             {formatDate(post.published_at || post.created_at)}
                                         </div>
@@ -165,7 +165,7 @@ export const MediaCenter: React.FC = () => {
                                         
                                         <div className="flex items-center justify-between pt-10 border-t border-gray-100">
                                             <Link to={`/media-center/${post.slug}`}>
-                                                <button className="flex items-center gap-3 text-[10px] font-bold text-secondary uppercase tracking-[0.4em] group/btn">
+                                                <button className="flex items-center gap-3 text-[10px] font-bold text-secondary tracking-tight font-semibold group/btn">
                                                     Read Full Thesis 
                                                     <ArrowRight size={16} className="text-accent group-hover/btn:translate-x-2 transition-transform" />
                                                 </button>

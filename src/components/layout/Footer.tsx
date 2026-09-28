@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
                                 <span className="text-3xl font-serif font-bold tracking-wider text-white font-bold">
                                     LIFE REPUBLIC
                                 </span>
-                                <span className="text-xs uppercase tracking-[0.3em] text-accent/80 mt-1">
+                                <span className="text-xs tracking-tight font-semibold text-accent/80 mt-1">
                                     By Kolte Patil
                                 </span>
                             </div>
@@ -169,7 +169,7 @@ export const Footer: React.FC = () => {
                 <div className="border-t border-strong py-12 mt-12">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div>
-                            <h5 className="text-sm font-bold text-white uppercase tracking-widest mb-6">Popular Configurations in Pune West</h5>
+                            <h5 className="text-sm font-bold text-white tracking-tight font-medium mb-6">Popular Configurations in Pune West</h5>
                             <div className="flex flex-col gap-y-3">
                                 {seoClusters.configurations.map((item) => (
                                     <Link
@@ -184,7 +184,7 @@ export const Footer: React.FC = () => {
                             </div>
                         </div>
                         <div>
-                            <h5 className="text-sm font-bold text-white uppercase tracking-widest mb-6">Top Locations & Micro-Markets</h5>
+                            <h5 className="text-sm font-bold text-white tracking-tight font-medium mb-6">Top Locations & Micro-Markets</h5>
                             <div className="flex flex-col gap-y-3">
                                 {seoClusters.locations.map((item) => (
                                     <Link
@@ -209,7 +209,7 @@ export const Footer: React.FC = () => {
                             </div>
                         </div>
                         <div>
-                            <h5 className="text-sm font-bold text-white uppercase tracking-widest mb-6">Real Estate Investment Themes</h5>
+                            <h5 className="text-sm font-bold text-white tracking-tight font-medium mb-6">Real Estate Investment Themes</h5>
                             <div className="flex flex-col gap-y-3">
                                 {seoClusters.themes.map((item) => (
                                     <Link
@@ -228,7 +228,7 @@ export const Footer: React.FC = () => {
 
                 {/* RERA Numbers Section */}
                 <div className="border-t border-strong py-8">
-                    <h5 className="text-sm font-bold text-white uppercase tracking-widest mb-4">RERA Registration Numbers</h5>
+                    <h5 className="text-sm font-bold text-white tracking-tight font-medium mb-4">RERA Registration Numbers</h5>
                     <div className="flex flex-wrap gap-x-6 gap-y-2 text-[10px] text-text-muted hover:text-white">
                         {RERA_REGISTRY.map((item: { title: string, rera: string }, index: number) => (
                             <span key={index} className="flex items-center gap-1">

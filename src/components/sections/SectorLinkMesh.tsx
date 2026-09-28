@@ -34,7 +34,7 @@ export const SectorLinkMesh: React.FC = () => {
                             className="inline-flex items-center gap-3 px-4 py-2 bg-secondary text-white rounded-full mb-6 shadow-xl"
                         >
                             <Network size={14} className="text-accent animate-pulse" />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.4em]">Sovereign Connectivity Matrix v6.0</span>
+                            <span className="text-[10px] font-bold tracking-tight font-semibold">Sovereign Connectivity Matrix v6.0</span>
                         </motion.div>
                         <h2 className="text-5xl md:text-7xl font-serif font-bold text-secondary tracking-tighter leading-none mb-6">
                             Infrastructure <br /><span className="text-accent italic">Synergy.</span>
@@ -49,7 +49,7 @@ export const SectorLinkMesh: React.FC = () => {
                             <ShieldCheck size={28} />
                         </div>
                         <div>
-                            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">Transit Benchmark</span>
+                            <span className="text-[10px] font-bold text-gray-400 tracking-tight font-medium block">Transit Benchmark</span>
                             <span className="text-lg font-bold text-secondary tracking-tight">2026 Deployment Ready</span>
                         </div>
                     </div>
@@ -58,7 +58,7 @@ export const SectorLinkMesh: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                     {/* Residential Cluster Matrix */}
                     <div className="space-y-10">
-                        <div className="flex items-center gap-4 text-accent font-bold uppercase tracking-[0.3em] text-[10px]">
+                        <div className="flex items-center gap-4 text-accent font-bold tracking-tight font-semibold text-[10px]">
                             <Building2 size={16} /> Residential Cluster Mesh
                         </div>
                         <div className="flex flex-col gap-6">
@@ -70,7 +70,7 @@ export const SectorLinkMesh: React.FC = () => {
                                     >
                                         <div className="space-y-1">
                                             <span className="text-lg font-bold text-secondary group-hover:text-accent tracking-tight">{sector.name.split('(')[0]}</span>
-                                            <span className="text-[9px] text-gray-400 font-bold uppercase tracking-widest block">{sector.id} Portfolio</span>
+                                            <span className="text-[9px] text-gray-400 font-bold tracking-tight font-medium block">{sector.id} Portfolio</span>
                                         </div>
                                         <ArrowUpRight size={24} className="text-gray-200 group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                                     </Link>
@@ -81,7 +81,7 @@ export const SectorLinkMesh: React.FC = () => {
 
                     {/* Infrastructure Spine Matrix */}
                     <div className="space-y-10">
-                        <div className="flex items-center gap-4 text-accent font-bold uppercase tracking-[0.3em] text-[10px]">
+                        <div className="flex items-center gap-4 text-accent font-bold tracking-tight font-semibold text-[10px]">
                             <Zap size={16} /> Infrastructure Backbones
                         </div>
                         <div className="flex flex-col gap-6">
@@ -95,7 +95,7 @@ export const SectorLinkMesh: React.FC = () => {
                                             <span className="text-lg font-bold text-secondary group-hover:text-accent tracking-tight">{ave.name}</span>
                                             <div className="flex items-center gap-2">
                                                 <div className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></div>
-                                                <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">{ave.infrastructure}</span>
+                                                <span className="text-[10px] text-gray-400 font-bold tracking-tight font-medium">{ave.infrastructure}</span>
                                             </div>
                                         </div>
                                         <ArrowUpRight size={24} className="text-gray-200 group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
@@ -107,7 +107,7 @@ export const SectorLinkMesh: React.FC = () => {
 
                     {/* Regional Connectivity Matrix */}
                     <div className="space-y-10">
-                        <div className="flex items-center gap-4 text-accent font-bold uppercase tracking-[0.3em] text-[10px]">
+                        <div className="flex items-center gap-4 text-accent font-bold tracking-tight font-semibold text-[10px]">
                             <Globe size={16} /> Regional Macro-Hubs
                         </div>
                         <div className="flex flex-col gap-6">
@@ -121,7 +121,7 @@ export const SectorLinkMesh: React.FC = () => {
                                             <span className="text-lg font-bold text-secondary group-hover:text-accent tracking-tight">{loc.name} Hub</span>
                                             <div className="flex items-center gap-3">
                                                 <MapPin size={12} className="text-accent" />
-                                                <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">{loc.distance} Synthesis</span>
+                                                <span className="text-[10px] text-gray-400 font-bold tracking-tight font-medium">{loc.distance} Synthesis</span>
                                             </div>
                                         </div>
                                         <ArrowUpRight size={24} className="text-gray-200 group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />

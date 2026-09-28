@@ -59,7 +59,7 @@ export const ConnectivityHub: React.FC = () => {
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 text-accent rounded-full text-xs font-bold uppercase tracking-widest mb-6"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 text-accent rounded-full text-xs font-bold tracking-tight font-medium mb-6"
                         >
                             <MapPin size={14} /> Township Connectivity Ledger
                         </motion.div>

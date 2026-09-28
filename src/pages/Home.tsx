@@ -69,7 +69,7 @@ const Home: React.FC = () => {
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2">
-                            <motion.span initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-accent text-xs font-bold uppercase tracking-[0.5em] block mb-6">The Masterplan</motion.span>
+                            <motion.span initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-accent text-xs font-bold tracking-tight font-semibold block mb-6">The Masterplan</motion.span>
                             <motion.h2 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-serif font-bold text-secondary leading-[1.1] mb-8">A 390-Acre <br /><span className="text-golden-gradient">Vision</span></motion.h2>
                             <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-text-muted text-lg font-light leading-relaxed mb-10"><strong>Kolte Patil Life Republic</strong> is a premium integrated township located in the heart of <strong>Hinjewadi, Pune</strong>. Designed around the principles of spatial harmony and sustainable community flow, it offers an unparalleled holistic lifestyle near Rajiv Gandhi Infotech Park.</motion.p>
                             
@@ -95,7 +95,7 @@ const Home: React.FC = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-colors duration-500"></div>
                                 <div className="absolute bottom-6 left-6 text-secondary transform group-hover:-translate-y-2 transition-transform duration-500">
                                     <h3 className="text-2xl font-serif font-bold">The Park</h3>
-                                    <p className="text-[10px] uppercase tracking-widest text-secondary/70 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">3.5 Acre Urban Lung</p>
+                                    <p className="text-[10px] tracking-tight font-medium text-secondary/70 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">3.5 Acre Urban Lung</p>
                                 </div>
                             </motion.div>
                             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="aspect-[4/5] rounded-3xl overflow-hidden relative group shadow-[0_8px_32px_rgba(0,0,0,0.5)] md:mt-16">
@@ -103,7 +103,7 @@ const Home: React.FC = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-colors duration-500"></div>
                                 <div className="absolute bottom-6 left-6 text-secondary transform group-hover:-translate-y-2 transition-transform duration-500">
                                     <h3 className="text-2xl font-serif font-bold">The Club</h3>
-                                    <p className="text-[10px] uppercase tracking-widest text-secondary/70 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Social Synthesis</p>
+                                    <p className="text-[10px] tracking-tight font-medium text-secondary/70 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Social Synthesis</p>
                                 </div>
                             </motion.div>
                         </div>
@@ -115,7 +115,7 @@ const Home: React.FC = () => {
             <section className="py-16 md:py-32 bg-transparent" aria-label="Featured Township Projects">
                 <div className="container mx-auto px-4">
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-                        <span className="text-accent text-xs font-bold uppercase tracking-[0.5em] block mb-4">The Collection</span>
+                        <span className="text-accent text-xs font-bold tracking-tight font-semibold block mb-4">The Collection</span>
                         <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-secondary">
                             Life Republic <span className="text-golden-gradient">Properties</span>
                         </h2>
@@ -170,10 +170,10 @@ const Home: React.FC = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
-                            { icon: Briefcase, title: 'Work', desc: 'Rajiv Gandhi IT Park', time: '10 Mins', gradient: 'from-blue-500/20 to-cyan-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-blue-400', bgIcon: 'bg-blue-500/20 text-blue-400', glow: 'bg-blue-500/20', glowHover: 'group-hover:bg-blue-500/30' },
-                            { icon: Plane, title: 'Connect', desc: 'Mumbai-Pune Expy', time: '15 Mins', gradient: 'from-orange-500/20 to-amber-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-orange-400', bgIcon: 'bg-orange-500/20 text-orange-400', glow: 'bg-orange-500/20', glowHover: 'group-hover:bg-orange-500/30' },
-                            { icon: GraduationCap, title: 'Learn', desc: 'Anisha Global School', time: 'Inside', gradient: 'from-green-500/20 to-emerald-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-green-400', bgIcon: 'bg-green-500/20 text-green-400', glow: 'bg-green-500/20', glowHover: 'group-hover:bg-green-500/30' },
-                            { icon: HeartPulse, title: 'Care', desc: 'Ruby Hall Clinic', time: '15 Mins', gradient: 'from-rose-500/20 to-pink-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-rose-400', bgIcon: 'bg-rose-500/20 text-rose-400', glow: 'bg-rose-500/20', glowHover: 'group-hover:bg-rose-500/30' }
+                            { icon: Briefcase, title: 'Work', desc: 'Rajiv Gandhi IT Park', time: '10 Mins', gradient: 'from-blue-500/20 to-cyan-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-blue-700 bg-blue-50 border-blue-100', bgIcon: 'bg-blue-500/20 text-blue-400', glow: 'bg-blue-500/20', glowHover: 'group-hover:bg-blue-500/30' },
+                            { icon: Plane, title: 'Connect', desc: 'Mumbai-Pune Expy', time: '15 Mins', gradient: 'from-orange-500/20 to-amber-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-orange-700 bg-orange-50 border-orange-100', bgIcon: 'bg-orange-500/20 text-orange-400', glow: 'bg-orange-500/20', glowHover: 'group-hover:bg-orange-500/30' },
+                            { icon: GraduationCap, title: 'Learn', desc: 'Anisha Global School', time: 'Inside', gradient: 'from-green-500/20 to-emerald-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-green-700 bg-green-50 border-green-100', bgIcon: 'bg-green-500/20 text-green-400', glow: 'bg-green-500/20', glowHover: 'group-hover:bg-green-500/30' },
+                            { icon: HeartPulse, title: 'Care', desc: 'Ruby Hall Clinic', time: '15 Mins', gradient: 'from-rose-500/20 to-pink-500/5', border: 'border-2 border-strong shadow-[0_8px_32px_rgba(0,0,0,0.5)]', text: 'text-rose-700 bg-rose-50 border-rose-100', bgIcon: 'bg-rose-500/20 text-rose-400', glow: 'bg-rose-500/20', glowHover: 'group-hover:bg-rose-500/30' }
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
@@ -190,7 +190,7 @@ const Home: React.FC = () => {
                                 </div>
                                 <h3 className="text-xl font-bold mb-2 text-secondary group-hover:text-secondary transition-colors">{item.title}</h3>
                                 <p className="text-text-muted mb-4 font-light text-sm">{item.desc}</p>
-                                <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-black/30 border border-white/10 ${item.text}`}>
+                                <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-white border border-gray-200 text-gray-700 shadow-sm`}>
                                     {item.time}
                                 </div>
                             </motion.div>
@@ -214,7 +214,7 @@ const Home: React.FC = () => {
             {/* Phase 9: SEO & Discovery */}
             <section className="py-12 bg-transparent border-t border-gray-200" aria-label="Popular Real Estate Searches">
                 <div className="container mx-auto px-4">
-                    <h3 className="text-sm font-bold text-text-muted uppercase tracking-widest mb-6">Popular Searches</h3>
+                    <h3 className="text-sm font-bold text-text-muted tracking-tight font-medium mb-6">Popular Searches</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                         <div className="space-y-2">
                             <h4 className="font-semibold text-gray-700">By Configuration</h4>

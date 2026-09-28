@@ -41,7 +41,7 @@ export const Connectivity: React.FC = () => {
                             className="inline-flex items-center gap-3 px-4 py-2 bg-accent/20 border border-accent/30 rounded-full mb-8"
                         >
                             <Route size={14} className="text-accent" />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent">Sovereign Transit Protocol</span>
+                            <span className="text-[10px] font-bold tracking-tight font-semibold text-accent">Sovereign Transit Protocol</span>
                         </motion.div>
                         <h1 className="text-5xl md:text-8xl font-serif font-bold text-white mb-8 leading-tight">
                             The Spine of <br /> <span className="text-accent italic">Future Mobility.</span>
@@ -70,7 +70,7 @@ export const Connectivity: React.FC = () => {
                                         </div>
                                         <div className="pt-2">
                                             <h4 className="font-bold text-secondary text-lg mb-1">{item.milestone}</h4>
-                                            <span className={`text-[10px] font-bold uppercase tracking-widest ${item.status === 'Active' ? 'text-green-500' : 'text-accent'}`}>{item.status} Status</span>
+                                            <span className={`text-[10px] font-bold tracking-tight font-medium ${item.status === 'Active' ? 'text-green-500' : 'text-accent'}`}>{item.status} Status</span>
                                         </div>
                                     </div>
                                 ))}
@@ -110,7 +110,7 @@ export const Connectivity: React.FC = () => {
                         <div className="flex items-center gap-4 bg-gray-50 p-3 rounded-2xl border border-gray-100 shadow-sm">
                             <div className="flex items-center gap-2">
                                 <Clock size={16} className={!isPeakHour ? 'text-green-500' : 'text-gray-300'} />
-                                <span className={`text-[10px] font-bold uppercase tracking-widest transition-colors ${!isPeakHour ? 'text-secondary' : 'text-gray-400'}`}>Normal</span>
+                                <span className={`text-[10px] font-bold tracking-tight font-medium transition-colors ${!isPeakHour ? 'text-secondary' : 'text-gray-400'}`}>Normal</span>
                             </div>
                             <button 
                                 onClick={() => setIsPeakHour(!isPeakHour)}
@@ -119,7 +119,7 @@ export const Connectivity: React.FC = () => {
                                 <motion.div animate={{ x: isPeakHour ? 26 : 4 }} className="absolute top-1 w-4 h-4 bg-white rounded-full shadow-lg" />
                             </button>
                             <div className="flex items-center gap-2">
-                                <span className={`text-[10px] font-bold uppercase tracking-widest transition-colors ${isPeakHour ? 'text-secondary' : 'text-gray-400'}`}>Peak</span>
+                                <span className={`text-[10px] font-bold tracking-tight font-medium transition-colors ${isPeakHour ? 'text-secondary' : 'text-gray-400'}`}>Peak</span>
                                 <Zap size={16} className={isPeakHour ? 'text-accent' : 'text-gray-300'} />
                             </div>
                         </div>
@@ -135,17 +135,17 @@ export const Connectivity: React.FC = () => {
                                 className="p-10 rounded-[2.5rem] border border-gray-100 bg-white hover:border-accent hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all group"
                             >
                                 <div className="flex justify-between items-center mb-8">
-                                    <span className="text-[10px] font-bold text-accent uppercase tracking-[0.3em]">{landmark.type}</span>
+                                    <span className="text-[10px] font-bold text-accent tracking-tight font-semibold">{landmark.type}</span>
                                     <div className="px-3 py-1 bg-gray-50 rounded-full text-[10px] font-bold text-secondary border border-gray-100">{landmark.impact}</div>
                                 </div>
                                 <h4 className="text-2xl font-serif font-bold text-secondary mb-6 group-hover:text-accent transition-colors">{landmark.name}</h4>
                                 <div className="space-y-4">
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-gray-400 font-medium uppercase tracking-widest text-[10px]">Distance</span>
+                                        <span className="text-gray-400 font-medium tracking-tight font-medium text-[10px]">Distance</span>
                                         <span className="font-bold text-secondary">{landmark.distance}</span>
                                     </div>
                                     <div className="flex justify-between items-center">
-                                        <span className="text-gray-400 font-medium uppercase tracking-widest text-[10px]">Est. Time</span>
+                                        <span className="text-gray-400 font-medium tracking-tight font-medium text-[10px]">Est. Time</span>
                                         <span className={`text-2xl font-serif font-bold ${isPeakHour ? 'text-accent' : 'text-secondary'}`}>
                                             {isPeakHour ? landmark.peak : landmark.offPeak}
                                         </span>

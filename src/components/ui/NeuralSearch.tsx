@@ -80,7 +80,7 @@ export const NeuralSearch: React.FC<{ isOpen: boolean; onClose: () => void }> = 
                                 placeholder="Search Township (e.g. '3 BHK near School', 'Echoes')..."
                                 className="flex-1 bg-transparent border-none outline-none text-xl font-medium text-secondary placeholder:text-gray-300"
                             />
-                            <div className="flex items-center gap-2 px-2 py-1 bg-gray-50 rounded-lg border border-gray-100 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                            <div className="flex items-center gap-2 px-2 py-1 bg-gray-50 rounded-lg border border-gray-100 text-[10px] font-bold text-gray-400 tracking-tight font-medium">
                                 <Command size={10} /> K
                             </div>
                             <button onClick={onClose} className="p-2 hover:bg-gray-50 rounded-full text-gray-400">
@@ -122,7 +122,7 @@ export const NeuralSearch: React.FC<{ isOpen: boolean; onClose: () => void }> = 
                                 </div>
                             ) : (
                                 <div className="py-8 px-4">
-                                    <h5 className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-6">Recent Intelligence Searches</h5>
+                                    <h5 className="text-[10px] font-bold text-gray-400 tracking-tight font-semibold mb-6">Recent Intelligence Searches</h5>
                                     <div className="space-y-3">
                                         {(history.searchQueries && history.searchQueries.length > 0) ? history.searchQueries.map((q, i) => (
                                             <button 

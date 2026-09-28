@@ -72,7 +72,7 @@ const Projects: React.FC = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div className="space-y-4">
-                            <h3 className="font-bold text-accent uppercase tracking-widest text-sm">Luxury Lifestyle</h3>
+                            <h3 className="font-bold text-accent tracking-tight font-medium text-sm">Luxury Lifestyle</h3>
                             <ul className="space-y-2">
                                 <li><Link to="/projects/kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi" className="text-secondary hover:text-accent font-medium text-sm">Canvas Luxury Apartments</Link></li>
                                 <li><Link to="/projects/kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi" className="text-secondary hover:text-accent font-medium text-sm">24K Espada Row Houses</Link></li>
@@ -80,7 +80,7 @@ const Projects: React.FC = () => {
                             </ul>
                         </div>
                         <div className="space-y-4">
-                            <h3 className="font-bold text-accent uppercase tracking-widest text-sm">Smart Living</h3>
+                            <h3 className="font-bold text-accent tracking-tight font-medium text-sm">Smart Living</h3>
                             <ul className="space-y-2">
                                 <li><Link to="/projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi" className="text-secondary hover:text-accent font-medium text-sm">Universe Smart Homes</Link></li>
                                 <li><Link to="/projects/kolte-patil-life-republic-arezo-efficient-2-bhk-flats-hinjewadi" className="text-secondary hover:text-accent font-medium text-sm">Arezo Efficient Flats</Link></li>
@@ -88,7 +88,7 @@ const Projects: React.FC = () => {
                             </ul>
                         </div>
                         <div className="space-y-4">
-                            <h3 className="font-bold text-accent uppercase tracking-widest text-sm">NRI Investment</h3>
+                            <h3 className="font-bold text-accent tracking-tight font-medium text-sm">NRI Investment</h3>
                             <ul className="space-y-2">
                                 <li><Link to="/nri-investment-guide" className="text-secondary hover:text-accent font-medium text-sm">Pune Real Estate ROI Guide</Link></li>
                                 <li><Link to="/projects/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi" className="text-secondary hover:text-accent font-medium text-sm">Atmos Modern Apartments</Link></li>
@@ -96,7 +96,7 @@ const Projects: React.FC = () => {
                             </ul>
                         </div>
                         <div className="space-y-4">
-                            <h3 className="font-bold text-accent uppercase tracking-widest text-sm">Community Hubs</h3>
+                            <h3 className="font-bold text-accent tracking-tight font-medium text-sm">Community Hubs</h3>
                             <ul className="space-y-2">
                                 <li><Link to="/amenities" className="text-secondary hover:text-accent font-medium text-sm">Township Amenities Hub</Link></li>
                                 <li><Link to="/connectivity" className="text-secondary hover:text-accent font-medium text-sm">Project Connectivity Analysis</Link></li>

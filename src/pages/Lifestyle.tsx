@@ -60,7 +60,7 @@ const VolumeItem = ({ vol, idx }: { vol: any, idx: number }) => {
                     <div>
                         <div className="flex items-center gap-3 mb-2">
                             <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
-                            <h4 className="text-[12px] font-bold text-accent uppercase tracking-[0.6em]">{vol.subtitle}</h4>
+                            <h4 className="text-[12px] font-bold text-accent tracking-tight font-semibold">{vol.subtitle}</h4>
                         </div>
                         <h3 className="text-6xl md:text-7xl font-serif font-bold text-secondary tracking-tighter leading-none">{vol.title}</h3>
                     </div>
@@ -71,7 +71,7 @@ const VolumeItem = ({ vol, idx }: { vol: any, idx: number }) => {
                         <div key={i} className="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 group/metric hover:bg-white hover:shadow-2xl transition-all">
                             <div className="flex items-center gap-4">
                                 <Zap size={20} className="text-accent opacity-20 group-hover/metric:opacity-100 transition-opacity" />
-                                <p className="text-sm font-bold text-secondary uppercase tracking-widest leading-relaxed">{m}</p>
+                                <p className="text-sm font-bold text-secondary tracking-tight font-medium leading-relaxed">{m}</p>
                             </div>
                         </div>
                     ))}
@@ -100,7 +100,7 @@ export const Lifestyle: React.FC = () => {
                     <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.8, ease: "circOut" }}>
                         <div className="inline-flex items-center gap-8 px-12 py-5 bg-accent/10 border border-accent/20 rounded-full mb-16 backdrop-blur-3xl shadow-2xl">
                             <Wind size={24} className="text-accent animate-pulse" />
-                            <span className="text-[12px] font-bold uppercase tracking-[0.7em] text-accent">The Lifestyle Monograph v6.5</span>
+                            <span className="text-[12px] font-bold tracking-tight font-semibold text-accent">The Lifestyle Monograph v6.5</span>
                         </div>
                         <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-16 tracking-tighter leading-[0.75]">
                             Atmospheric <br /> <span className="italic text-accent">Sovereignty.</span>
@@ -112,8 +112,8 @@ export const Lifestyle: React.FC = () => {
                 </div>
                 
                 <div className="absolute bottom-24 left-24 hidden lg:flex items-center gap-16 text-text-muted">
-                    <div className="flex items-center gap-6"><Zap size={24} className="text-accent" /><span className="text-[11px] font-bold uppercase tracking-[0.6em]">Atmosphere Sync Active</span></div>
-                    <div className="flex items-center gap-6"><Globe size={24} /><span className="text-[11px] font-bold uppercase tracking-[0.6em]">400-Acre structural mesh</span></div>
+                    <div className="flex items-center gap-6"><Zap size={24} className="text-accent" /><span className="text-[11px] font-bold tracking-tight font-semibold">Atmosphere Sync Active</span></div>
+                    <div className="flex items-center gap-6"><Globe size={24} /><span className="text-[11px] font-bold tracking-tight font-semibold">400-Acre structural mesh</span></div>
                 </div>
                 <div className="absolute bottom-24 right-24 animate-bounce">
                     <div className="w-px h-32 bg-gradient-to-b from-accent to-transparent"></div>
@@ -135,7 +135,7 @@ export const Lifestyle: React.FC = () => {
                         <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
                             <div className="inline-flex items-center gap-6 px-10 py-4 bg-accent/20 border border-accent/30 rounded-full mb-20 shadow-2xl">
                                 <Cpu size={24} className="text-accent" />
-                                <span className="text-[12px] font-bold text-accent uppercase tracking-[0.7em]">Citizenship Synthesis v6.5</span>
+                                <span className="text-[12px] font-bold text-accent tracking-tight font-semibold">Citizenship Synthesis v6.5</span>
                             </div>
                             <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-secondary mb-24 tracking-tighter leading-[0.75]">Join the <br /> <span className="text-accent italic">Republic.</span></h2>
                         </motion.div>
@@ -152,7 +152,7 @@ export const Lifestyle: React.FC = () => {
                                         <stat.icon size={48} strokeWidth={1} />
                                     </div>
                                     <div className={`text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tighter group-hover/stat:scale-110 transition-transform ${stat.color}`}>{stat.val}</div>
-                                    <div className="text-[14px] font-bold text-text-muted uppercase tracking-[0.8em]">{stat.label}</div>
+                                    <div className="text-[14px] font-bold text-text-muted tracking-tight font-semibold">{stat.label}</div>
                                 </motion.div>
                             ))}
                         </div>
@@ -165,8 +165,8 @@ export const Lifestyle: React.FC = () => {
                                 Initiate Citizenship Synthesis <ArrowUpRight size={54} className="group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform" />
                             </button>
                             <div className="mt-24 space-y-4">
-                                <p className="text-[12px] font-bold text-white/20 uppercase tracking-[0.8em] block">Secure Residency Protocol v6.5</p>
-                                <div className="flex items-center justify-center gap-3 text-[10px] text-accent/40 font-bold uppercase tracking-widest">
+                                <p className="text-[12px] font-bold text-white/20 tracking-tight font-semibold block">Secure Residency Protocol v6.5</p>
+                                <div className="flex items-center justify-center gap-3 text-[10px] text-accent/40 font-bold tracking-tight font-medium">
                                     <ShieldCheck size={14} /> Encrypted Session Active
                                 </div>
                             </div>

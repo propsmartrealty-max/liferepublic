@@ -145,7 +145,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                     <div className={`w-10 h-10 ${isHighIntent ? 'bg-accent text-secondary' : 'bg-secondary text-white'} rounded-2xl flex items-center justify-center shadow-2xl`}>
                                         {isHighIntent ? <Zap size={20} className="animate-pulse" /> : <ShieldCheck size={20} />}
                                     </div>
-                                    <span className="text-[11px] font-bold text-accent uppercase tracking-[0.5em]">
+                                    <span className="text-[11px] font-bold text-accent tracking-tight font-semibold">
                                         {isHighIntent ? 'Priority Protocol v6.0' : 'Sovereign Dispatch Hub'}
                                     </span>
                                 </div>
@@ -206,11 +206,11 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                             </div>
                                         </div>
 
-                                        {error && <p className="text-red-500 text-xs font-bold uppercase tracking-widest text-center animate-bounce">{error}</p>}
+                                        {error && <p className="text-red-500 text-xs font-bold tracking-tight font-medium text-center animate-bounce">{error}</p>}
 
                                         <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-[2rem] border border-gray-100">
                                             <Globe size={24} className="text-accent shrink-0 mt-1" />
-                                            <p className="text-[10px] text-gray-500 font-medium leading-relaxed uppercase tracking-wider">
+                                            <p className="text-[10px] text-gray-500 font-medium leading-relaxed tracking-tight font-medium">
                                                 By authorizing, you agree to our <a href="/privacy-policy" className="text-accent underline" target="_blank">Privacy Policy</a> and <a href="/terms-of-service" className="text-accent underline" target="_blank">Terms of Service</a>. You consent to receive updates via Phone, SMS, or WhatsApp overriding your NDNC registration.
                                             </p>
                                         </div>
@@ -239,7 +239,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
 
                         <div className="p-8 bg-gray-50/50 border-t border-gray-100 text-center relative overflow-hidden">
                             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-20"></div>
-                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.6em]">
+                            <p className="text-[10px] font-bold text-gray-400 tracking-tight font-semibold">
                                 Sovereign Protocol v6.0 • 2026 Production Ready
                             </p>
                         </div>

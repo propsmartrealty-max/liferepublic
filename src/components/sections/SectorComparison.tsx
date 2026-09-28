@@ -21,7 +21,7 @@ export const SectorComparison: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
                     <div className="max-w-3xl">
-                        <span className="text-[10px] font-bold text-accent uppercase tracking-[0.5em] mb-4 block">Product Intelligence v6.5</span>
+                        <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-4 block">Product Intelligence v6.5</span>
                         <h2 className="text-4xl md:text-7xl font-serif font-bold text-secondary mb-8 tracking-tighter leading-tight">
                             The Sector <br /> <span className="text-accent italic">Sovereign Matrix.</span>
                         </h2>
@@ -36,7 +36,7 @@ export const SectorComparison: React.FC = () => {
                         <table className="w-full text-left border-collapse min-w-[900px]">
                             <thead>
                                 <tr className="bg-secondary text-white">
-                                    <th className="p-10 font-bold text-[10px] uppercase tracking-[0.4em] border-r border-white/5">Synthesis / Cluster</th>
+                                    <th className="p-10 font-bold text-[10px] tracking-tight font-semibold border-r border-white/5">Synthesis / Cluster</th>
                                     {comparisonSectors.map((s, i) => (
                                         <th key={i} className="p-10 text-center border-r border-white/5 last:border-r-0">
                                             <div className="flex flex-col items-center">
@@ -49,7 +49,7 @@ export const SectorComparison: React.FC = () => {
                                                         <Star key={i} size={10} className="fill-accent text-accent" />
                                                     ))}
                                                 </div>
-                                                <span className="text-[9px] font-bold text-accent/60 uppercase tracking-[0.2em] mt-3 bg-white/5 px-3 py-1 rounded-full border border-white/10">
+                                                <span className="text-[9px] font-bold text-accent/60 tracking-tight font-semibold mt-3 bg-white/5 px-3 py-1 rounded-full border border-white/10">
                                                     {s.segment}
                                                 </span>
                                             </div>
@@ -78,7 +78,7 @@ export const SectorComparison: React.FC = () => {
                                     <td className="p-10 font-bold text-secondary text-sm bg-gray-50/50 border-r border-gray-100">RERA Possession</td>
                                     {comparisonSectors.map((s, i) => (
                                         <td key={i} className="p-10 text-center border-r border-gray-50 last:border-r-0">
-                                            <span className="text-[10px] font-bold text-accent uppercase tracking-widest">{s.rera_possession}</span>
+                                            <span className="text-[10px] font-bold text-accent tracking-tight font-medium">{s.rera_possession}</span>
                                         </td>
                                     ))}
                                 </tr>
@@ -106,7 +106,7 @@ export const SectorComparison: React.FC = () => {
                                     <td className="p-10 font-bold text-secondary text-sm border-r border-gray-100">Occupancy Status</td>
                                     {comparisonSectors.map((s, i) => (
                                         <td key={i} className="p-10 text-center border-r border-gray-50 last:border-r-0">
-                                            <span className="text-[9px] font-bold text-secondary uppercase tracking-widest bg-white border border-gray-100 px-4 py-2 rounded-full shadow-sm">
+                                            <span className="text-[9px] font-bold text-secondary tracking-tight font-medium bg-white border border-gray-100 px-4 py-2 rounded-full shadow-sm">
                                                 {s.occupancy}
                                             </span>
                                         </td>

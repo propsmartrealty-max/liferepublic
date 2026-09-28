@@ -29,7 +29,7 @@ export const ITProfessionalsHub: React.FC = () => {
                         transition={{ duration: 0.8 }}
                         className="max-w-3xl space-y-8"
                     >
-                        <span className="text-accent text-sm font-bold uppercase tracking-[0.5em] block">
+                        <span className="text-accent text-sm font-bold tracking-tight font-semibold block">
                             Rajiv Gandhi IT Park
                         </span>
                         <h1 className="text-5xl md:text-7xl font-serif font-bold text-white tracking-tighter leading-[1.1]">
@@ -39,7 +39,7 @@ export const ITProfessionalsHub: React.FC = () => {
                             Designed exclusively for the visionaries shaping the future in Pune's IT Corridor. Reduce your commute, elevate your lifestyle, and secure your financial future in a 390-acre smart township.
                         </p>
                         <div className="pt-8 flex flex-wrap gap-6">
-                            <Button size="lg" className="rounded-full px-10 py-6 font-bold uppercase tracking-widest text-xs shadow-2xl" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
+                            <Button size="lg" className="rounded-full px-10 py-6 font-bold tracking-tight font-medium text-xs shadow-2xl" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
                                 Download ROI Report
                             </Button>
                         </div>
@@ -51,7 +51,7 @@ export const ITProfessionalsHub: React.FC = () => {
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="text-center mb-16">
-                        <span className="text-[10px] font-bold text-accent uppercase tracking-[0.5em] block mb-4">Strategic Location</span>
+                        <span className="text-[10px] font-bold text-accent tracking-tight font-semibold block mb-4">Strategic Location</span>
                         <h2 className="text-4xl md:text-6xl font-serif font-bold text-secondary tracking-tighter">Minutes from <br /><span className="text-accent italic">Innovation.</span></h2>
                     </div>
 
@@ -87,7 +87,7 @@ export const ITProfessionalsHub: React.FC = () => {
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2 space-y-10">
-                            <span className="text-[10px] font-bold text-accent uppercase tracking-[0.5em] block">Smart Homes</span>
+                            <span className="text-[10px] font-bold text-accent tracking-tight font-semibold block">Smart Homes</span>
                             <h2 className="text-4xl md:text-6xl font-serif font-bold tracking-tighter leading-tight">
                                 Engineered for <br /><span className="text-accent italic">Digital Nomads.</span>
                             </h2>
@@ -126,11 +126,11 @@ export const ITProfessionalsHub: React.FC = () => {
                         Join thousands of IT professionals who have already made Life Republic their home.
                     </p>
                     <div className="flex justify-center gap-6">
-                        <Button size="lg" className="rounded-full px-12 py-6 font-bold uppercase tracking-widest text-sm shadow-2xl" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
+                        <Button size="lg" className="rounded-full px-12 py-6 font-bold tracking-tight font-medium text-sm shadow-2xl" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
                             Schedule a VIP Tour
                         </Button>
                         <Link to="/projects">
-                            <Button variant="outline" size="lg" className="rounded-full px-12 py-6 font-bold uppercase tracking-widest text-sm">
+                            <Button variant="outline" size="lg" className="rounded-full px-12 py-6 font-bold tracking-tight font-medium text-sm">
                                 View Projects
                             </Button>
                         </Link>

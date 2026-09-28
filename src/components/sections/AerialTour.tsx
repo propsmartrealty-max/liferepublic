@@ -36,7 +36,7 @@ export const AerialTour: React.FC = () => {
                     >
                         <div className="inline-flex items-center gap-3 px-4 py-2 bg-accent/20 border border-accent/30 rounded-full mb-8 backdrop-blur-xl">
                             <Plane size={16} className="text-accent" />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent">Cinematic Aerial Sequence</span>
+                            <span className="text-[10px] font-bold tracking-tight font-semibold text-accent">Cinematic Aerial Sequence</span>
                         </div>
                         <h2 className="text-5xl md:text-8xl font-serif font-bold mb-6 drop-shadow-2xl">
                             The Horizon of <br /> <span className="text-accent italic">Sovereignty.</span>
@@ -52,15 +52,15 @@ export const AerialTour: React.FC = () => {
                     <div className="space-y-4">
                         <div className="flex items-center gap-3 text-white/60">
                             <Navigation size={20} className="text-accent shrink-0" />
-                            <span className="text-xs font-bold uppercase tracking-widest">Altitude: 1200ft MSL</span>
+                            <span className="text-xs font-bold tracking-tight font-medium">Altitude: 1200ft MSL</span>
                         </div>
                         <div className="flex items-center gap-3 text-white/60">
                             <Sparkles size={20} className="text-accent shrink-0" />
-                            <span className="text-xs font-bold uppercase tracking-widest">Visual Index: 98.4%</span>
+                            <span className="text-xs font-bold tracking-tight font-medium">Visual Index: 98.4%</span>
                         </div>
                     </div>
                     <div className="text-left sm:text-right w-full sm:w-auto">
-                        <div className="text-[10px] font-bold text-accent uppercase tracking-[0.5em] mb-2">Live Rendering</div>
+                        <div className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-2">Live Rendering</div>
                         <div className="w-full sm:w-48 h-1 bg-white/10 rounded-full overflow-hidden">
                             <motion.div 
                                 style={{ width: useTransform(scrollYProgress, [0, 1], ["0%", "100%"]) }}

@@ -15,28 +15,28 @@ export const Button: React.FC<ButtonProps> = ({
     className = '',
     ...props
 }) => {
-    const baseStyles = "inline-flex items-center justify-center font-bold tracking-wider transition-all duration-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent disabled:opacity-50 disabled:pointer-events-none rounded-full";
+    const baseStyles = "inline-flex items-center justify-center font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 disabled:opacity-50 disabled:pointer-events-none rounded-2xl";
 
     const variants = {
-        primary: "bg-accent text-white border-2 border-transparent shadow-glass hover:bg-white hover:text-accent hover:shadow-glass-hover hover:-translate-y-1",
-        secondary: "bg-white/10 text-white backdrop-blur-xl border border-white/20 shadow-glass hover:bg-white/20",
-        outline: "bg-white/10 text-white border-2 border-white backdrop-blur-md shadow-glass hover:bg-white hover:text-black hover:-translate-y-1",
-        ghost: "text-primary hover:bg-primary hover:text-white border-2 border-transparent hover:border-primary",
-        glass: "bg-white/20 text-white backdrop-blur-2xl border-2 border-white/50 shadow-glass hover:bg-white/40 hover:-translate-y-1 font-bold"
+        primary: "bg-gray-900 text-white shadow-sm hover:bg-gray-800 hover:shadow-md",
+        secondary: "bg-gray-100 text-gray-900 hover:bg-gray-200",
+        outline: "bg-transparent text-gray-900 border border-gray-200 hover:border-gray-900 hover:bg-gray-50",
+        ghost: "text-gray-600 hover:text-gray-900 hover:bg-gray-100",
+        glass: "bg-white/70 text-gray-900 backdrop-blur-xl border border-white/50 shadow-sm hover:bg-white/90"
     };
 
     const sizes = {
-        sm: "h-9 px-5 text-[11px] uppercase tracking-[0.2em]",
-        md: "h-12 px-8 text-xs uppercase tracking-[0.25em]",
-        lg: "h-14 px-10 text-sm uppercase tracking-[0.3em]",
-        icon: "h-12 w-12 rounded-full border-2 border-primary"
+        sm: "h-9 px-4 text-sm",
+        md: "h-11 px-6 text-[15px]",
+        lg: "h-14 px-8 text-base",
+        icon: "h-11 w-11 rounded-full border border-gray-200"
     };
 
     return (
         <motion.button
-            whileHover={{ x: -2, y: -2 }}
-            whileTap={{ x: 0, y: 0 }}
-            transition={{ duration: 0.1 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.2 }}
             className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
             {...props}
         >

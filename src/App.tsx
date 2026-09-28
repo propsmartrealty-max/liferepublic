@@ -71,7 +71,7 @@ export const PageLoader = () => (
           initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-[10px] font-bold text-secondary uppercase tracking-[0.8em]"
+          className="text-[10px] font-bold text-secondary tracking-tight font-semibold"
         >
           Kolte Patil
         </motion.div>
@@ -79,7 +79,7 @@ export const PageLoader = () => (
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="text-[9px] font-light text-gray-400 uppercase tracking-[0.5em]"
+          className="text-[9px] font-light text-gray-400 tracking-tight font-semibold"
         >
           Life Republic
         </motion.div>

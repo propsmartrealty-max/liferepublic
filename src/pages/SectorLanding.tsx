@@ -180,7 +180,7 @@ export const SectorLanding: React.FC = () => {
                             </div>
                             <div className="absolute top-8 right-8 bg-secondary p-6 rounded-2xl shadow-xl border border-white/20 max-w-[200px]">
                                 <p className="text-sm font-bold text-accent">{data.distance}</p>
-                                <p className="text-xs text-white/40 uppercase tracking-widest mt-1">To Metro Access</p>
+                                <p className="text-xs text-white/40 tracking-tight font-medium mt-1">To Metro Access</p>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@ export const SectorLanding: React.FC = () => {
                 <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[120px] -mr-48 -mt-48"></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="max-w-2xl mb-16">
-                        <span className="text-accent text-xs font-bold uppercase tracking-[0.3em] block mb-4">Hyper-Local Radius</span>
+                        <span className="text-accent text-xs font-bold tracking-tight font-semibold block mb-4">Hyper-Local Radius</span>
                         <h2 className="text-4xl font-serif font-bold mb-6">Localized Intelligence Hub</h2>
                         <p className="text-gray-400">Deep-dive into the specific advantages of living in <strong>{data.name}</strong>. From walking distances to school gates to internal shuttle frequency.</p>
                     </div>
@@ -206,7 +206,7 @@ export const SectorLanding: React.FC = () => {
                         ].map((item, idx) => (
                             <div key={idx} className="p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
                                 <div className="text-3xl mb-6 grayscale group-hover:grayscale-0 transition-all">{item.icon}</div>
-                                <p className="text-accent text-[10px] font-bold uppercase tracking-widest mb-1">{item.label}</p>
+                                <p className="text-accent text-[10px] font-bold tracking-tight font-medium mb-1">{item.label}</p>
                                 <h4 className="text-xl font-bold mb-1">{item.val}</h4>
                                 <p className="text-xs text-gray-500 font-medium">{item.sub}</p>
                             </div>

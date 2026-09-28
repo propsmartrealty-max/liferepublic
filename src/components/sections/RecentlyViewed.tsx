@@ -77,7 +77,7 @@ export const RecentlyViewed: React.FC = () => {
                     >
                         <div className="flex items-center gap-4 text-accent mb-8">
                             <BrainCircuit size={24} className="animate-pulse" />
-                            <span className="text-[11px] font-bold uppercase tracking-[0.6em]">{sentimentLabel}</span>
+                            <span className="text-[11px] font-bold tracking-tight font-semibold">{sentimentLabel}</span>
                         </div>
                         <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-secondary tracking-tighter leading-[0.85] mb-8">
                             {greeting}
@@ -93,7 +93,7 @@ export const RecentlyViewed: React.FC = () => {
                         className="flex gap-10 items-center bg-gray-50/50 backdrop-blur-xl px-12 py-6 rounded-[3rem] border border-gray-100 shadow-inner group"
                     >
                         <div className="text-right">
-                            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-1">Intent Multiplier</span>
+                            <span className="text-[10px] font-bold text-gray-400 tracking-tight font-medium block mb-1">Intent Multiplier</span>
                             <span className="text-4xl font-serif font-bold text-secondary tracking-tighter group-hover:text-accent transition-colors">{history.intentScore}</span>
                         </div>
                         <div className="w-px h-12 bg-gray-200"></div>
@@ -128,7 +128,7 @@ export const RecentlyViewed: React.FC = () => {
                                                 <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center text-accent">
                                                     <Zap size={14} />
                                                 </div>
-                                                <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/50">
+                                                <span className="text-[11px] font-bold tracking-tight font-semibold text-white/50">
                                                     {project.category} Synthesis
                                                 </span>
                                             </div>
@@ -147,7 +147,7 @@ export const RecentlyViewed: React.FC = () => {
                                         </p>
                                         <div className="flex items-center gap-4">
                                             <div className="h-px flex-grow bg-gray-100"></div>
-                                            <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Neural Index 0{index + 1}</span>
+                                            <span className="text-[10px] font-bold text-gray-300 tracking-tight font-medium">Neural Index 0{index + 1}</span>
                                         </div>
                                     </div>
                                 </Link>
@@ -162,7 +162,7 @@ export const RecentlyViewed: React.FC = () => {
                 <div className="mt-20 flex items-center justify-center gap-6">
                     <div className="px-8 py-3 bg-gray-50 border border-gray-100 rounded-full flex items-center gap-4">
                         <Cpu size={16} className="text-accent" />
-                        <span className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.4em]">Sovereign Memory Active</span>
+                        <span className="text-[10px] font-bold text-gray-400 tracking-tight font-semibold">Sovereign Memory Active</span>
                     </div>
                 </div>
             </div>

@@ -51,7 +51,7 @@ export const SectorMesh: React.FC = () => {
                             className="inline-flex items-center gap-4 px-6 py-3 bg-accent/20 border border-accent/30 rounded-full mb-10 backdrop-blur-2xl"
                         >
                             <Cpu size={16} className="text-accent animate-pulse" />
-                            <span className="text-[11px] font-bold uppercase tracking-[0.5em] text-accent">Tectonic Velocity Lab v6.5</span>
+                            <span className="text-[11px] font-bold tracking-tight font-semibold text-accent">Tectonic Velocity Lab v6.5</span>
                         </motion.div>
                         <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.85]">
                             Neural <br /> <span className="text-accent italic">Velocity Mesh.</span>
@@ -67,14 +67,14 @@ export const SectorMesh: React.FC = () => {
                         <div className="relative z-10">
                             <div className="flex items-center gap-4 mb-10">
                                 <Navigation size={24} className="text-accent animate-spin-slow" />
-                                <span className="text-[11px] font-bold text-accent uppercase tracking-[0.4em]">Infrastructure Proximity</span>
+                                <span className="text-[11px] font-bold text-accent tracking-tight font-semibold">Infrastructure Proximity</span>
                             </div>
                             <div className="space-y-6">
                                 {sectorsData.avenues.map((a, i) => (
                                     <div key={i} className="flex justify-between items-center group/item">
                                         <div className="flex items-center gap-3">
                                             <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse"></div>
-                                            <span className="text-[10px] font-bold text-white/40 uppercase tracking-widest group-hover/item:text-white transition-colors">{a.name}</span>
+                                            <span className="text-[10px] font-bold text-white/40 tracking-tight font-medium group-hover/item:text-white transition-colors">{a.name}</span>
                                         </div>
                                         <span className="text-lg font-mono font-bold text-white tracking-tighter">{a.distance}</span>
                                     </div>
@@ -90,7 +90,7 @@ export const SectorMesh: React.FC = () => {
                         <div className="bg-white/5 backdrop-blur-3xl rounded-[3.5rem] p-10 border border-white/10 shadow-2xl">
                             <div className="flex items-center gap-4 mb-12">
                                 <Target size={24} className="text-accent" />
-                                <h3 className="font-bold text-white uppercase tracking-[0.4em] text-[11px]">Residential Nodes</h3>
+                                <h3 className="font-bold text-white tracking-tight font-semibold text-[11px]">Residential Nodes</h3>
                             </div>
                             <ul className="space-y-6">
                                 {sectorsData.sectors.map((s) => (
@@ -102,7 +102,7 @@ export const SectorMesh: React.FC = () => {
                                         <Link to={`/projects/${s.slug}`} className="flex items-center justify-between group">
                                             <div className="flex flex-col">
                                                 <span className="text-gray-400 group-hover:text-accent text-base font-bold transition-all tracking-tight leading-none mb-1">{s.name.split('(')[0]}</span>
-                                                <span className="text-[9px] text-white/10 font-bold uppercase tracking-widest">{s.segment}</span>
+                                                <span className="text-[9px] text-white/10 font-bold tracking-tight font-medium">{s.segment}</span>
                                             </div>
                                             <div className="flex items-center gap-3">
                                                 <div className={`w-2 h-2 rounded-full transition-all duration-500 ${hoveredSectorId === s.id ? 'bg-accent scale-150 shadow-[0_0_15px_var(--accent)]' : 'bg-white/10 group-hover:bg-accent/40'}`}></div>
@@ -136,7 +136,7 @@ export const SectorMesh: React.FC = () => {
                                             </div>
                                             <div className="h-16 w-px bg-white/10"></div>
                                             <div className="text-left">
-                                                <span className="text-[10px] font-bold text-accent uppercase tracking-[0.5em] block mb-2">Investment Velocity</span>
+                                                <span className="text-[10px] font-bold text-accent tracking-tight font-semibold block mb-2">Investment Velocity</span>
                                                 <div className="flex items-center gap-3">
                                                     <div className="h-2 w-32 bg-white/10 rounded-full overflow-hidden">
                                                         <motion.div 
@@ -168,7 +168,7 @@ export const SectorMesh: React.FC = () => {
                                             ].map((m, i) => (
                                                 <div key={i} className="bg-white/5 p-6 rounded-3xl border border-white/5 flex flex-col items-center gap-3">
                                                     <m.icon size={20} className="text-accent/60" />
-                                                    <span className="text-[9px] font-bold text-white/20 uppercase tracking-widest">{m.label}</span>
+                                                    <span className="text-[9px] font-bold text-white/20 tracking-tight font-medium">{m.label}</span>
                                                     <span className="text-sm font-bold text-white text-center">{m.val}</span>
                                                 </div>
                                             ))}
@@ -194,7 +194,7 @@ export const SectorMesh: React.FC = () => {
                                             className="absolute inset-0 border-2 border-white/5 rounded-full scale-150"
                                         />
                                     </div>
-                                    <p className="text-white/20 font-bold uppercase tracking-[0.6em] text-[11px] max-w-xs leading-relaxed">Select a Residential Node to Calibrate Infrastructure Synthesis</p>
+                                    <p className="text-white/20 font-bold tracking-tight font-semibold text-[11px] max-w-xs leading-relaxed">Select a Residential Node to Calibrate Infrastructure Synthesis</p>
                                 </motion.div>
                             )}
                         </AnimatePresence>
@@ -205,7 +205,7 @@ export const SectorMesh: React.FC = () => {
                         <div className="bg-white/5 backdrop-blur-3xl rounded-[3.5rem] p-10 border border-white/10 shadow-2xl group">
                             <div className="flex items-center gap-4 mb-12">
                                 <Zap size={24} className="text-blue-400 animate-pulse" />
-                                <h3 className="font-bold text-white uppercase tracking-[0.4em] text-[11px]">Infrastructure Backbones</h3>
+                                <h3 className="font-bold text-white tracking-tight font-semibold text-[11px]">Infrastructure Backbones</h3>
                             </div>
                             <ul className="space-y-6">
                                 {sectorsData.avenues.map((a) => (
@@ -225,7 +225,7 @@ export const SectorMesh: React.FC = () => {
                             <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform">
                                 <ShieldCheck size={80} />
                             </div>
-                            <h4 className="text-xs font-bold text-accent uppercase tracking-[0.4em] mb-4">Sovereign Protocol Active</h4>
+                            <h4 className="text-xs font-bold text-accent tracking-tight font-semibold mb-4">Sovereign Protocol Active</h4>
                             <p className="text-sm text-gray-400 leading-relaxed font-medium">
                                 Cross-referencing all 390-acre development milestones with the 2026 Master Plan.
                             </p>
@@ -235,7 +235,7 @@ export const SectorMesh: React.FC = () => {
 
                 <div className="mt-32 pt-16 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-12">
                     <div className="flex flex-col gap-2">
-                        <p className="text-[12px] text-gray-400 uppercase tracking-[0.6em] font-bold">Neural Mesh Protocol v6.5</p>
+                        <p className="text-[12px] text-gray-400 tracking-tight font-semibold font-bold">Neural Mesh Protocol v6.5</p>
                         <p className="text-[11px] text-gray-600 font-medium tracking-widest flex items-center gap-3">
                             <Network size={14} className="text-accent" /> Fully Synchronized to Hinjewadi Tectonic Growth.
                         </p>
@@ -243,11 +243,11 @@ export const SectorMesh: React.FC = () => {
                     <div className="flex gap-16">
                         <div className="flex items-center gap-4 group cursor-help">
                             <div className="w-3 h-3 bg-accent rounded-full animate-pulse shadow-[0_0_20px_var(--accent)]"></div>
-                            <span className="text-[11px] font-bold text-gray-500 uppercase tracking-widest group-hover:text-white transition-colors">Sector Velocity</span>
+                            <span className="text-[11px] font-bold text-gray-500 tracking-tight font-medium group-hover:text-white transition-colors">Sector Velocity</span>
                         </div>
                         <div className="flex items-center gap-4 group cursor-help">
                             <div className="w-3 h-3 bg-blue-400 rounded-full shadow-[0_0_20px_rgba(96,165,250,0.5)]"></div>
-                            <span className="text-[11px] font-bold text-gray-500 uppercase tracking-widest group-hover:text-white transition-colors">Infrastructure Sync</span>
+                            <span className="text-[11px] font-bold text-gray-500 tracking-tight font-medium group-hover:text-white transition-colors">Infrastructure Sync</span>
                         </div>
                     </div>
                 </div>

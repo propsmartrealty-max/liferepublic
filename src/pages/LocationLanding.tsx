@@ -60,7 +60,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                     >
                         <div className="inline-flex items-center gap-6 px-10 py-4 bg-accent/10 border border-accent/20 rounded-full mb-16 backdrop-blur-3xl shadow-2xl">
                             <Target size={24} className="text-accent animate-pulse" />
-                            <span className="text-[12px] font-bold uppercase tracking-[0.7em] text-accent">Strategic Epicenter Sync 2026</span>
+                            <span className="text-[12px] font-bold tracking-tight font-semibold text-accent">Strategic Epicenter Sync 2026</span>
                         </div>
                         <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold mb-16 leading-[0.75] tracking-tighter">
                             Beyond <br /> <span className="text-accent italic">{locationName}.</span>
@@ -83,8 +83,8 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                 </div>
                 
                 <div className="absolute bottom-20 left-20 hidden lg:flex items-center gap-12 text-white/30">
-                    <div className="flex items-center gap-4"><Network size={20} className="text-accent" /><span className="text-[11px] font-bold uppercase tracking-[0.5em]">2026 Metro Sync Active</span></div>
-                    <div className="flex items-center gap-4"><Globe size={20} /><span className="text-[11px] font-bold uppercase tracking-[0.5em]">Hinjewadi ph 3 Hub</span></div>
+                    <div className="flex items-center gap-4"><Network size={20} className="text-accent" /><span className="text-[11px] font-bold tracking-tight font-semibold">2026 Metro Sync Active</span></div>
+                    <div className="flex items-center gap-4"><Globe size={20} /><span className="text-[11px] font-bold tracking-tight font-semibold">Hinjewadi ph 3 Hub</span></div>
                 </div>
             </section>
 
@@ -100,7 +100,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                             <div className="space-y-8">
                                 <div className="inline-flex items-center gap-4 text-accent font-bold mb-4">
                                     <Cpu size={24} />
-                                    <span className="text-[12px] uppercase tracking-[0.6em]">The Transit Synthesis</span>
+                                    <span className="text-[12px] tracking-tight font-semibold">The Transit Synthesis</span>
                                 </div>
                                 <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-secondary tracking-tighter leading-[0.85]">The Superior <br /><span className="text-accent italic">Commute Delta.</span></h2>
                             </div>
@@ -134,7 +134,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                             <div className="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full -mr-40 -mt-40 blur-[100px] group-hover:scale-150 transition-transform duration-[3s]"></div>
                             <div className="flex items-center justify-between mb-24">
                                 <h3 className="text-5xl font-serif font-bold text-secondary tracking-tighter italic">Sovereign Proximity Analysis</h3>
-                                <div className="flex items-center gap-4 text-[11px] font-bold text-accent uppercase tracking-[0.5em] bg-accent/10 px-8 py-4 rounded-full border border-accent/20">
+                                <div className="flex items-center gap-4 text-[11px] font-bold text-accent tracking-tight font-semibold bg-accent/10 px-8 py-4 rounded-full border border-accent/20">
                                     <Navigation size={16} className="animate-pulse" /> Live Sync Active
                                 </div>
                             </div>
@@ -142,10 +142,10 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                                 <table className="w-full text-left">
                                     <thead>
                                         <tr className="border-b border-gray-100">
-                                            <th className="pb-12 text-[12px] font-bold uppercase tracking-[0.6em] text-gray-300">Destination Hub</th>
-                                            <th className="pb-12 text-[12px] font-bold uppercase tracking-[0.6em] text-gray-300">Standalone {locationName}</th>
-                                            <th className="pb-12 text-[12px] font-bold uppercase tracking-[0.6em] text-accent">Sovereign Sync</th>
-                                            <th className="pb-12 text-[12px] font-bold uppercase tracking-[0.6em] text-gray-300">ROI Delta</th>
+                                            <th className="pb-12 text-[12px] font-bold tracking-tight font-semibold text-gray-300">Destination Hub</th>
+                                            <th className="pb-12 text-[12px] font-bold tracking-tight font-semibold text-gray-300">Standalone {locationName}</th>
+                                            <th className="pb-12 text-[12px] font-bold tracking-tight font-semibold text-accent">Sovereign Sync</th>
+                                            <th className="pb-12 text-[12px] font-bold tracking-tight font-semibold text-gray-300">ROI Delta</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-gray-50">
@@ -176,7 +176,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
             <section id="projects" className="py-64 bg-white relative">
                 <div className="container mx-auto px-4 text-center">
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}>
-                        <span className="text-[11px] font-bold text-accent uppercase tracking-[0.8em] mb-6 block">Personalized Synthesis</span>
+                        <span className="text-[11px] font-bold text-accent tracking-tight font-semibold mb-6 block">Personalized Synthesis</span>
                         <h2 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-secondary mb-32 tracking-tighter leading-none italic">The Sovereign <span className="text-accent">Clusters.</span></h2>
                     </motion.div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
@@ -202,7 +202,7 @@ export const LocationLanding: React.FC<LocationLandingProps> = ({ locationName, 
                         <div className="w-3 h-3 bg-accent rounded-full shadow-[0_0_15px_var(--accent)]"></div>
                         <div className="w-3 h-3 bg-accent/40 rounded-full"></div>
                         <div className="w-3 h-3 bg-accent/20 rounded-full"></div>
-                        <div className="text-[11px] font-bold text-white/20 uppercase tracking-[0.8em] ml-4">Registry Authenticated 2026</div>
+                        <div className="text-[11px] font-bold text-white/20 tracking-tight font-semibold ml-4">Registry Authenticated 2026</div>
                     </div>
                 </div>
             </section>

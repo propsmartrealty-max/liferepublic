@@ -43,7 +43,7 @@ export const NRIInvestorHub: React.FC = () => {
                             className="inline-flex items-center gap-4 px-6 py-3 bg-secondary text-white rounded-full mb-10 shadow-xl"
                         >
                             <Globe size={16} className="text-accent animate-pulse" />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.6em]">Global Investment Authority v6.0</span>
+                            <span className="text-[10px] font-bold tracking-tight font-semibold">Global Investment Authority v6.0</span>
                         </motion.div>
                         <h2 className="text-6xl md:text-[4rem] lg:text-[5rem] font-serif font-bold text-secondary mb-12 tracking-tighter leading-[0.8]">
                             NRI Legal & <br /><span className="text-accent italic">Tax Synthesis.</span>
@@ -115,7 +115,7 @@ export const NRIInvestorHub: React.FC = () => {
                                     <Cpu size={36} />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent mb-2">Expert Concierge Cell</p>
+                                    <p className="text-[10px] font-bold tracking-tight font-semibold text-accent mb-2">Expert Concierge Cell</p>
                                     <p className="text-lg text-white/60 font-medium">Speak to our dedicated Sovereign Global Investment Consultant.</p>
                                 </div>
                             </div>
@@ -129,11 +129,11 @@ export const NRIInvestorHub: React.FC = () => {
                         >
                             <div className="flex items-center gap-4 mb-3">
                                 <div className="w-2 h-2 rounded-full bg-accent animate-ping"></div>
-                                <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Global Synthesis</span>
+                                <span className="text-[10px] font-bold text-gray-300 tracking-tight font-medium">Global Synthesis</span>
                             </div>
                             <div className="text-6xl font-serif font-bold text-secondary mb-2 tracking-tighter italic">1,850+</div>
-                            <div className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.5em]">Global NRI Families</div>
-                            <div className="flex items-center gap-2 mt-6 text-emerald-500 font-bold text-[10px] uppercase tracking-widest">
+                            <div className="text-[11px] font-bold text-gray-400 tracking-tight font-semibold">Global NRI Families</div>
+                            <div className="flex items-center gap-2 mt-6 text-emerald-500 font-bold text-[10px] tracking-tight font-medium">
                                 <TrendingUp size={14} /> +12% Growth YOY
                             </div>
                         </motion.div>

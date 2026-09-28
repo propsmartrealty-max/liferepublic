@@ -44,7 +44,7 @@ export const TwoBHK: React.FC = () => {
                     <div className="max-w-5xl">
                         <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} className="inline-flex items-center gap-4 px-6 py-3 bg-accent/20 border border-accent/30 rounded-full mb-12 backdrop-blur-xl">
                             <Sparkles size={16} className="text-accent animate-pulse" />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent">The Efficiency Collection v5.5</span>
+                            <span className="text-[10px] font-bold tracking-tight font-semibold text-accent">The Efficiency Collection v5.5</span>
                         </motion.div>
                         <h1 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.8]">Synthesizing <br /> <span className="text-accent italic">Efficiency.</span></h1>
                         <p className="text-2xl md:text-3xl text-gray-400 max-w-4xl leading-relaxed font-medium">The Life Republic 2 BHK collection is engineered for the modern professional, synthesizing smart spatial flow with high-yield investment potential.</p>
@@ -67,7 +67,7 @@ export const TwoBHK: React.FC = () => {
                 </div>
                 <div className="mb-40">
                     <div className="flex items-end justify-between mb-24 border-b border-gray-100 pb-12">
-                        <div className="max-w-2xl"><span className="text-[10px] font-bold text-accent uppercase tracking-[0.5em] mb-4 block">Volume Synthesis</span><h2 className="text-5xl md:text-7xl font-serif font-bold text-secondary tracking-tighter">The 2 BHK <span className="text-accent italic">Portfolio.</span></h2></div>
+                        <div className="max-w-2xl"><span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-4 block">Volume Synthesis</span><h2 className="text-5xl md:text-7xl font-serif font-bold text-secondary tracking-tighter">The 2 BHK <span className="text-accent italic">Portfolio.</span></h2></div>
                     </div>
                     {loading ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">{[1, 2, 3].map(i => (<div key={i} className="bg-gray-50 rounded-[3.5rem] h-[500px] animate-pulse" />))}</div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">{projects.map((project) => (<ProjectCard key={project.id} project={project} />))}</div>)}
                 </div>
@@ -76,12 +76,12 @@ export const TwoBHK: React.FC = () => {
                         <div className="lg:col-span-5 space-y-12">
                             <h2 className="text-5xl md:text-7xl font-serif font-bold tracking-tighter leading-tight">The Yield <br /><span className="text-accent italic">Synthesis Delta.</span></h2>
                             <p className="text-2xl text-gray-400 leading-relaxed font-medium">A 2 BHK residence at Life Republic isn't just a home; it's a high-liquidity financial asset positioned at the epicenter of Pune's IT growth.</p>
-                            <div className="p-8 bg-white/5 rounded-[2.5rem] border border-white/10"><div className="flex items-center gap-4 text-accent mb-3"><Target size={20} /><span className="text-[11px] font-bold uppercase tracking-[0.3em]">Market Scarcity</span></div><p className="text-lg font-bold text-white uppercase tracking-[0.1em]">Premium 2 BHK inventory in Hinjewadi Ph 3 is projected to face a 12% supply-gap by 2026.</p></div>
+                            <div className="p-8 bg-white/5 rounded-[2.5rem] border border-white/10"><div className="flex items-center gap-4 text-accent mb-3"><Target size={20} /><span className="text-[11px] font-bold tracking-tight font-semibold">Market Scarcity</span></div><p className="text-lg font-bold text-white tracking-tight font-semibold">Premium 2 BHK inventory in Hinjewadi Ph 3 is projected to face a 12% supply-gap by 2026.</p></div>
                         </div>
                         <div className="lg:col-span-7 bg-white/5 backdrop-blur-3xl rounded-[4rem] p-12 md:p-20 border border-white/10 shadow-2xl">
                             <div className="space-y-12">
-                                <div className="flex items-center gap-8 p-8 bg-white/5 rounded-[2.5rem] border border-white/10"><div className="p-5 bg-accent text-secondary rounded-2xl"><Calculator size={32} /></div><div><p className="text-[10px] font-bold text-white/40 uppercase tracking-[0.4em] mb-2">Average Rental Yield</p><p className="text-4xl font-serif font-bold text-white tracking-tighter">~4.2% p.a.</p></div></div>
-                                <div className="flex items-center gap-8 p-8 bg-white/5 rounded-[2.5rem] border border-white/10"><div className="p-5 bg-secondary text-accent rounded-2xl border border-accent/20"><Landmark size={32} /></div><div><p className="text-[10px] font-bold text-white/40 uppercase tracking-[0.4em] mb-2">Projected Appreciation (2026)</p><p className="text-4xl font-serif font-bold text-accent tracking-tighter">+12.5% YoY</p></div></div>
+                                <div className="flex items-center gap-8 p-8 bg-white/5 rounded-[2.5rem] border border-white/10"><div className="p-5 bg-accent text-secondary rounded-2xl"><Calculator size={32} /></div><div><p className="text-[10px] font-bold text-white/40 tracking-tight font-semibold mb-2">Average Rental Yield</p><p className="text-4xl font-serif font-bold text-white tracking-tighter">~4.2% p.a.</p></div></div>
+                                <div className="flex items-center gap-8 p-8 bg-white/5 rounded-[2.5rem] border border-white/10"><div className="p-5 bg-secondary text-accent rounded-2xl border border-accent/20"><Landmark size={32} /></div><div><p className="text-[10px] font-bold text-white/40 tracking-tight font-semibold mb-2">Projected Appreciation (2026)</p><p className="text-4xl font-serif font-bold text-accent tracking-tighter">+12.5% YoY</p></div></div>
                             </div>
                         </div>
                     </div>
@@ -90,7 +90,7 @@ export const TwoBHK: React.FC = () => {
                     <div className="max-w-5xl mx-auto p-20 bg-gray-50 rounded-[5rem] border border-gray-100 shadow-inner relative overflow-hidden">
                         <h2 className="text-4xl md:text-7xl font-serif font-bold text-secondary mb-10 tracking-tighter">Secure Your <br /> <span className="text-accent italic">Sovereign Asset.</span></h2>
                         <div className="flex flex-col md:flex-row gap-8 justify-center"><a href="/contact"><button className="bg-secondary text-white px-20 py-10 rounded-full font-bold text-2xl hover:bg-accent hover:text-secondary transition-all shadow-2xl flex items-center justify-center gap-4 group">Initiate Site Synthesis <ArrowUpRight size={32} /></button></a></div>
-                        <p className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.6em] mt-16 block">Secure Yield Access Protocol v5.5</p>
+                        <p className="text-[10px] font-bold text-gray-400 tracking-tight font-semibold mt-16 block">Secure Yield Access Protocol v5.5</p>
                     </div>
                 </section>
             </div>

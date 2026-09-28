@@ -128,7 +128,7 @@ export const BlogPostPage: React.FC = () => {
                             <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Media Center
                         </Link>
                         
-                        <div className="flex flex-wrap items-center gap-6 text-[10px] font-bold uppercase tracking-[0.3em] text-accent/80 mb-8">
+                        <div className="flex flex-wrap items-center gap-6 text-[10px] font-bold tracking-tight font-semibold text-accent/80 mb-8">
                             <span className="flex items-center gap-2"><Calendar size={14} /> {formatDate(post.published_at || post.created_at)}</span>
                             <span className="flex items-center gap-2"><User size={14} /> {post.author || 'Sovereign Editor'}</span>
                             <span className="flex items-center gap-2"><Clock size={14} /> {Math.ceil(post.content.length / 1000)} MIN READ</span>
@@ -141,7 +141,7 @@ export const BlogPostPage: React.FC = () => {
                         {post.tags && post.tags.length > 0 && (
                             <div className="flex flex-wrap gap-3">
                                 {post.tags.map(tag => (
-                                    <span key={tag} className="bg-white/10 backdrop-blur-md text-white/70 border border-white/20 px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest">
+                                    <span key={tag} className="bg-white/10 backdrop-blur-md text-white/70 border border-white/20 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-tight font-medium">
                                         #{tag}
                                     </span>
                                 ))}
@@ -168,7 +168,7 @@ export const BlogPostPage: React.FC = () => {
                             </div>
                         </div>
                         <div className="flex items-center gap-6">
-                            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">Share Synthesis</span>
+                            <span className="text-[10px] font-bold tracking-tight font-semibold text-gray-400">Share Synthesis</span>
                             <ShareButtons
                                 url={`/media-center/${post.slug}`}
                                 title={post.title}
@@ -183,16 +183,16 @@ export const BlogPostPage: React.FC = () => {
                 <section className="py-24 bg-gray-50/50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <span className="text-[10px] font-bold text-accent uppercase tracking-[0.4em] mb-4 block text-center md:text-left">Complementary Synthesis</span>
+                            <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-4 block text-center md:text-left">Complementary Synthesis</span>
                             <h2 className="text-3xl md:text-5xl font-serif font-bold text-secondary mb-12 text-center md:text-left">Related <span className="text-accent italic">Sovereign Insights.</span></h2>
                             
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 {related.map((item, idx) => (
                                     <Link key={item.id} to={`/media-center/${item.slug}`} className="group">
                                         <div className="bg-white rounded-[2rem] border border-gray-100 p-8 h-full flex flex-col hover:border-accent transition-all hover:shadow-xl hover:shadow-accent/5">
-                                            <div className="text-[9px] font-bold text-accent uppercase tracking-widest mb-4">{formatDate(item.published_at)}</div>
+                                            <div className="text-[9px] font-bold text-accent tracking-tight font-medium mb-4">{formatDate(item.published_at)}</div>
                                             <h3 className="text-lg font-serif font-bold text-secondary mb-4 line-clamp-2 group-hover:text-accent transition-colors">{item.title}</h3>
-                                            <div className="mt-auto flex items-center gap-2 text-[9px] font-bold text-secondary uppercase tracking-[0.2em]">
+                                            <div className="mt-auto flex items-center gap-2 text-[9px] font-bold text-secondary tracking-tight font-semibold">
                                                 View Article <ChevronRight size={14} />
                                             </div>
                                         </div>

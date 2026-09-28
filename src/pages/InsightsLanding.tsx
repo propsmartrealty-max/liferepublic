@@ -27,7 +27,7 @@ export const InsightsLanding: React.FC = () => {
 
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto text-center mb-16">
-                    <span className="text-accent text-sm font-bold uppercase tracking-[0.5em] block mb-4">Market Knowledge Hub</span>
+                    <span className="text-accent text-sm font-bold tracking-tight font-semibold block mb-4">Market Knowledge Hub</span>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-dark mb-6">Pune Real Estate Insights</h1>
                     <p className="text-lg text-secondary leading-relaxed">
                         Deep dive into the trends, micro-markets, and premium lifestyle offerings shaping the future of Hinjewadi, Mahalunge, and Baner.
@@ -55,7 +55,7 @@ export const InsightsLanding: React.FC = () => {
                                                 Explore premium opportunities and deep market analysis for {item.name.toLowerCase()} in the thriving Pune West corridor.
                                             </p>
                                         </div>
-                                        <div className="mt-6 flex items-center gap-2 text-sm font-bold text-accent uppercase tracking-widest">
+                                        <div className="mt-6 flex items-center gap-2 text-sm font-bold text-accent tracking-tight font-medium">
                                             Read More
                                             <ArrowRight size={16} className="transform group-hover:translate-x-2 transition-transform" />
                                         </div>

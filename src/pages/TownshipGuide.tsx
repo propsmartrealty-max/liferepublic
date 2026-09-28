@@ -176,7 +176,7 @@ export const TownshipGuide: React.FC = () => {
                                 <div className="md:w-2/3">
                                     <div className="flex items-center gap-2 text-accent mb-2">
                                         <Building2 size={16} />
-                                        <span className="text-xs font-bold uppercase tracking-widest">{cluster.segment}</span>
+                                        <span className="text-xs font-bold tracking-tight font-medium">{cluster.segment}</span>
                                     </div>
                                     <h3 className="text-3xl font-bold text-secondary mb-4">{cluster.name} — <span className="text-gray-400 font-light">{cluster.sector}</span></h3>
                                     <p className="text-gray-600 mb-6 text-lg">{cluster.desc}</p>
@@ -200,11 +200,11 @@ export const TownshipGuide: React.FC = () => {
                             <table className="w-full border-collapse rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 mb-16">
                                 <thead>
                                     <tr className="bg-secondary text-white">
-                                        <th className="p-8 text-left font-serif uppercase tracking-[0.2em] text-xs font-bold border-b border-white/10">Sector Cluster</th>
-                                        <th className="p-8 text-left font-serif uppercase tracking-[0.2em] text-xs font-bold border-b border-white/10">Typology</th>
-                                        <th className="p-8 text-left font-serif uppercase tracking-[0.2em] text-xs font-bold border-b border-white/10">Price Point</th>
-                                        <th className="p-8 text-left font-serif uppercase tracking-[0.2em] text-xs font-bold border-b border-white/10">Possession</th>
-                                        <th className="p-8 text-left font-serif uppercase tracking-[0.2em] text-xs font-bold border-b border-white/10">Core USP</th>
+                                        <th className="p-8 text-left font-serif tracking-tight font-semibold text-xs font-bold border-b border-white/10">Sector Cluster</th>
+                                        <th className="p-8 text-left font-serif tracking-tight font-semibold text-xs font-bold border-b border-white/10">Typology</th>
+                                        <th className="p-8 text-left font-serif tracking-tight font-semibold text-xs font-bold border-b border-white/10">Price Point</th>
+                                        <th className="p-8 text-left font-serif tracking-tight font-semibold text-xs font-bold border-b border-white/10">Possession</th>
+                                        <th className="p-8 text-left font-serif tracking-tight font-semibold text-xs font-bold border-b border-white/10">Core USP</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -243,7 +243,7 @@ export const TownshipGuide: React.FC = () => {
                             </div>
                             <div className="flex items-center gap-3 bg-white px-6 py-3 rounded-2xl shadow-sm border border-gray-100">
                                 <Shield className="text-accent" size={20} />
-                                <span className="text-xs font-bold text-secondary uppercase tracking-widest">100% RERA Compliant</span>
+                                <span className="text-xs font-bold text-secondary tracking-tight font-medium">100% RERA Compliant</span>
                             </div>
                         </div>
                         
@@ -264,7 +264,7 @@ export const TownshipGuide: React.FC = () => {
                                 </div>
                             ))}
                         </div>
-                        <p className="text-[10px] text-gray-400 mt-8 text-center uppercase tracking-widest italic">
+                        <p className="text-[10px] text-gray-400 mt-8 text-center tracking-tight font-medium italic">
                             Verification available at maharera.mahaonline.gov.in under registered projects.
                         </p>
                     </div>
@@ -314,7 +314,7 @@ export const TownshipGuide: React.FC = () => {
                                     <img loading="lazy" src={item.img} alt={item.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onError={(e) => { e.currentTarget.src = 'https://life-republic.in/images/gallery/eros/master-layout.webp' }} />
                                     <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent"></div>
                                     <div className="absolute bottom-6 left-6">
-                                        <p className="text-xs font-bold text-accent uppercase tracking-widest mb-1">{item.status}</p>
+                                        <p className="text-xs font-bold text-accent tracking-tight font-medium mb-1">{item.status}</p>
                                         <h4 className="text-xl font-bold text-white">{item.title}</h4>
                                     </div>
                                 </div>
@@ -409,7 +409,7 @@ export const TownshipGuide: React.FC = () => {
                                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                         />
                                         <div className="absolute top-4 left-4">
-                                            <span className="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-accent uppercase tracking-widest">
+                                            <span className="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-accent tracking-tight font-medium">
                                                 {post.tags?.[0] || 'Updates'}
                                             </span>
                                         </div>
@@ -421,7 +421,7 @@ export const TownshipGuide: React.FC = () => {
                                         <p className="text-gray-500 text-sm line-clamp-3 mb-6 flex-grow">
                                             {post.excerpt || post.meta_description}
                                         </p>
-                                        <div className="flex items-center text-accent text-xs font-bold uppercase tracking-widest">
+                                        <div className="flex items-center text-accent text-xs font-bold tracking-tight font-medium">
                                             Read Analysis <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>

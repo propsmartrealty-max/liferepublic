@@ -180,7 +180,7 @@ export const SovereignMap: React.FC = () => {
               <h3 className="font-serif font-bold text-secondary mb-1">
                 {markers.find(m => m.id === activeMarker)?.title}
               </h3>
-              <div className="flex items-center gap-1 text-xs text-accent uppercase tracking-wider font-bold">
+              <div className="flex items-center gap-1 text-xs text-accent tracking-tight font-medium font-bold">
                 <Navigation size={12} />
                 {markers.find(m => m.id === activeMarker)?.type}
               </div>
@@ -196,7 +196,7 @@ export const SovereignMap: React.FC = () => {
             <MapPin size={20} />
           </div>
           <div>
-            <div className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Location</div>
+            <div className="text-[10px] font-bold tracking-tight font-medium text-gray-400">Location</div>
             <div className="font-serif font-bold text-secondary text-sm">Hinjewadi IT Corridor</div>
           </div>
         </div>

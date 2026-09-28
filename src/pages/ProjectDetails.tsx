@@ -57,7 +57,7 @@ const ProjectDetails: React.FC = () => {
             <div className="min-h-screen flex items-center justify-center bg-white">
                 <div className="flex flex-col items-center gap-6">
                     <div className="w-12 h-12 border-4 border-accent border-t-transparent rounded-full animate-spin"></div>
-                    <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-gray-400">Synthesizing Project Monograph</span>
+                    <span className="text-[10px] font-bold tracking-tight font-semibold text-gray-400">Synthesizing Project Monograph</span>
                 </div>
             </div>
         );
@@ -105,20 +105,20 @@ const ProjectDetails: React.FC = () => {
                 </motion.div>
 
                 <div className="container mx-auto px-6 relative z-10 text-center">
-                    <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-block px-6 py-2 bg-accent text-secondary text-[10px] font-bold uppercase tracking-[0.5em] rounded-full mb-8 shadow-2xl">
+                    <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-block px-6 py-2 bg-accent text-secondary text-[10px] font-bold tracking-tight font-semibold rounded-full mb-8 shadow-2xl">
                         {project.category} Monograph
                     </motion.span>
                     <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-5xl md:text-8xl font-serif font-bold text-white mb-6 tracking-tighter drop-shadow-2xl">
                         {project.title.split('|')[0]}
                     </motion.h1>
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="flex flex-wrap justify-center gap-8 text-white/80">
-                        <div className="flex items-center gap-2 font-bold uppercase tracking-widest text-[10px]">
+                        <div className="flex items-center gap-2 font-bold tracking-tight font-medium text-[10px]">
                             <MapPin size={16} className="text-accent" /> {project.location}
                         </div>
-                        <div className="flex items-center gap-2 font-bold uppercase tracking-widest text-[10px]">
+                        <div className="flex items-center gap-2 font-bold tracking-tight font-medium text-[10px]">
                             <Sparkles size={16} className="text-accent" /> {project.price}
                         </div>
-                        <div className="flex items-center gap-2 font-bold uppercase tracking-widest text-[10px]">
+                        <div className="flex items-center gap-2 font-bold tracking-tight font-medium text-[10px]">
                             <ShieldCheck size={16} className="text-accent" /> Sovereign Verified
                         </div>
                     </motion.div>
@@ -142,7 +142,7 @@ const ProjectDetails: React.FC = () => {
                         <div className="lg:w-1/2 space-y-12">
                             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} className="inline-flex items-center gap-3 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full">
                                 <Sparkles size={14} className="text-accent" />
-                                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Strategic Synthesis</span>
+                                <span className="text-[10px] font-bold tracking-tight font-semibold text-accent">Strategic Synthesis</span>
                             </motion.div>
                             <h2 className="text-5xl md:text-7xl font-serif font-bold text-secondary tracking-tighter leading-none">The <br /><span className="text-accent italic">Architecture.</span></h2>
                             <p className="text-xl text-gray-600 leading-relaxed font-medium">{project.overview}</p>
@@ -150,7 +150,7 @@ const ProjectDetails: React.FC = () => {
                                 {project.features.map((f, i) => (
                                     <div key={i} className="flex items-center gap-4 p-6 bg-gray-50 rounded-3xl border border-gray-100 group hover:bg-white hover:shadow-xl transition-all">
                                         <div className="w-2 h-2 bg-accent rounded-full group-hover:scale-150 transition-transform" />
-                                        <span className="text-[11px] font-bold text-secondary uppercase tracking-widest">{f}</span>
+                                        <span className="text-[11px] font-bold text-secondary tracking-tight font-medium">{f}</span>
                                     </div>
                                 ))}
                             </div>
@@ -161,10 +161,10 @@ const ProjectDetails: React.FC = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
                                 <div className="absolute bottom-16 left-16 right-16 flex justify-between items-end">
                                     <div className="space-y-2">
-                                        <span className="text-[10px] font-bold text-accent uppercase tracking-[0.5em]">Volume Value</span>
+                                        <span className="text-[10px] font-bold text-accent tracking-tight font-semibold">Volume Value</span>
                                         <p className="text-4xl font-serif font-bold text-white tracking-tighter">{project.price}</p>
                                     </div>
-                                    <Button variant="primary" size="lg" className="rounded-2xl px-10 py-5 font-bold uppercase tracking-widest text-xs" onClick={openEnquiry}>Enquire Now</Button>
+                                    <Button variant="primary" size="lg" className="rounded-2xl px-10 py-5 font-bold tracking-tight font-medium text-xs" onClick={openEnquiry}>Enquire Now</Button>
                                 </div>
                             </div>
                         </div>
@@ -174,7 +174,7 @@ const ProjectDetails: React.FC = () => {
                     <div className="space-y-16">
                         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-gray-100 pb-16">
                             <div className="max-w-2xl">
-                                <span className="text-[10px] font-bold text-accent uppercase tracking-[0.5em] block mb-4">Precision Blueprints</span>
+                                <span className="text-[10px] font-bold text-accent tracking-tight font-semibold block mb-4">Precision Blueprints</span>
                                 <h2 className="text-4xl md:text-6xl font-serif font-bold text-secondary tracking-tighter">Spatial <br /><span className="text-accent italic">Synthesis.</span></h2>
                             </div>
                             <p className="text-gray-500 font-medium max-w-sm italic">"Designing the void between the walls to maximize community flow and individual tranquility."</p>
@@ -198,11 +198,11 @@ const ProjectDetails: React.FC = () => {
                                         </div>
                                         <div className="flex items-center justify-between">
                                             <div className="flex items-center gap-3">
-                                                <span className="text-[10px] font-bold text-accent uppercase tracking-widest">Carpet Area</span>
+                                                <span className="text-[10px] font-bold text-accent tracking-tight font-medium">Carpet Area</span>
                                                 <span className={`text-lg font-mono font-bold ${selectedFloorPlan === plan ? 'text-white/60' : 'text-secondary/40'}`}>{plan.size}</span>
                                             </div>
                                             {plan.virtualTourUrl && (
-                                                <div className={`flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full ${selectedFloorPlan === plan ? 'bg-accent/20 text-accent' : 'bg-gray-100 text-gray-400'}`}>
+                                                <div className={`flex items-center gap-2 text-[10px] font-bold tracking-tight font-medium px-3 py-1.5 rounded-full ${selectedFloorPlan === plan ? 'bg-accent/20 text-accent' : 'bg-gray-100 text-gray-400'}`}>
                                                     <Video size={12} />
                                                     3D Tour
                                                 </div>
@@ -223,16 +223,16 @@ const ProjectDetails: React.FC = () => {
                                         </div>
                                         <div className="lg:w-1/2 space-y-12">
                                             <div>
-                                                <span className="text-[10px] font-bold text-accent uppercase tracking-[0.5em] block mb-4">Unit Analysis</span>
+                                                <span className="text-[10px] font-bold text-accent tracking-tight font-semibold block mb-4">Unit Analysis</span>
                                                 <h3 className="text-4xl md:text-6xl font-serif font-bold text-secondary tracking-tighter mb-6">{selectedFloorPlan.type}</h3>
                                                 <div className="inline-flex items-center gap-4 px-6 py-3 bg-white rounded-2xl shadow-sm border border-gray-100">
-                                                    <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">Validated Carpet Area</span>
+                                                    <span className="text-sm font-bold text-gray-400 tracking-tight font-medium">Validated Carpet Area</span>
                                                     <span className="text-2xl font-mono font-bold text-secondary">{selectedFloorPlan.size}</span>
                                                 </div>
                                                 {selectedFloorPlan.virtualTourUrl && (
                                                     <Button 
                                                         variant="outline" 
-                                                        className="mt-6 flex items-center gap-2 rounded-2xl px-8 py-4 font-bold text-xs uppercase tracking-[0.2em] border-accent text-accent hover:bg-accent hover:text-white"
+                                                        className="mt-6 flex items-center gap-2 rounded-2xl px-8 py-4 font-bold text-xs tracking-tight font-semibold border-accent text-accent hover:bg-accent hover:text-white"
                                                         onClick={() => setIsVirtualTourOpen(true)}
                                                     >
                                                         <Play size={16} /> Enter 3D Virtual Walkthrough
@@ -243,11 +243,11 @@ const ProjectDetails: React.FC = () => {
                                                 {selectedFloorPlan.details?.map((d: string, idx: number) => (
                                                     <div key={idx} className="flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-100">
                                                         <CheckCircle2 size={16} className="text-accent" />
-                                                        <span className="text-[11px] font-bold text-secondary uppercase tracking-widest">{d}</span>
+                                                        <span className="text-[11px] font-bold text-secondary tracking-tight font-medium">{d}</span>
                                                     </div>
                                                 ))}
                                             </div>
-                                            <Button variant="primary" size="lg" className="w-full rounded-2xl py-8 font-bold text-xs uppercase tracking-[0.5em] shadow-2xl" onClick={openEnquiry}>Enquire Now</Button>
+                                            <Button variant="primary" size="lg" className="w-full rounded-2xl py-8 font-bold text-xs tracking-tight font-semibold shadow-2xl" onClick={openEnquiry}>Enquire Now</Button>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -258,7 +258,7 @@ const ProjectDetails: React.FC = () => {
                     {/* Section 3: Tectonic Specifications */}
                     <div className="space-y-16">
                         <div className="text-center max-w-3xl mx-auto">
-                            <span className="text-[10px] font-bold text-accent uppercase tracking-[0.5em] block mb-4">Material Monograph</span>
+                            <span className="text-[10px] font-bold text-accent tracking-tight font-semibold block mb-4">Material Monograph</span>
                             <h2 className="text-4xl md:text-6xl font-serif font-bold text-secondary tracking-tighter">Tectonic <br /><span className="text-accent italic">Specifications.</span></h2>
                         </div>
                         
@@ -275,7 +275,7 @@ const ProjectDetails: React.FC = () => {
                                         {spec.items.map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-4 p-4 bg-gray-50/50 rounded-2xl group-hover:bg-white transition-all">
                                                 <div className="mt-1.5 w-1.5 h-1.5 bg-accent/40 rounded-full" />
-                                                <span className="text-[11px] font-bold text-secondary/70 uppercase tracking-widest leading-relaxed">{item}</span>
+                                                <span className="text-[11px] font-bold text-secondary/70 tracking-tight font-medium leading-relaxed">{item}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -289,12 +289,12 @@ const ProjectDetails: React.FC = () => {
                         <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
                         <div className="relative z-10 flex flex-col lg:flex-row gap-20 items-center">
                             <div className="lg:w-1/2 space-y-10">
-                                <span className="text-[10px] font-bold text-accent uppercase tracking-[0.5em]">Township Mesh</span>
+                                <span className="text-[10px] font-bold text-accent tracking-tight font-semibold">Township Mesh</span>
                                 <h2 className="text-4xl md:text-7xl font-serif font-bold text-white tracking-tighter leading-[0.85]">The <br /><span className="text-accent italic">Master Layout.</span></h2>
                                 <p className="text-xl text-white/40 font-medium leading-relaxed">A strategic blueprint of the 390-acre Life Republic ecosystem. Every cluster is a node in our vision for the future of community living.</p>
                                 <div className="flex flex-wrap gap-4 pt-8">
-                                    <div className="px-6 py-3 bg-white/5 border border-white/10 rounded-2xl text-white/60 text-[10px] font-bold uppercase tracking-widest flex items-center gap-3"><MapPin size={14} className="text-accent" /> Prime Hinjewadi Ph 2</div>
-                                    <div className="px-6 py-3 bg-white/5 border border-white/10 rounded-2xl text-white/60 text-[10px] font-bold uppercase tracking-widest flex items-center gap-3"><Navigation size={14} className="text-accent" /> Near Town Center</div>
+                                    <div className="px-6 py-3 bg-white/5 border border-white/10 rounded-2xl text-white/60 text-[10px] font-bold tracking-tight font-medium flex items-center gap-3"><MapPin size={14} className="text-accent" /> Prime Hinjewadi Ph 2</div>
+                                    <div className="px-6 py-3 bg-white/5 border border-white/10 rounded-2xl text-white/60 text-[10px] font-bold tracking-tight font-medium flex items-center gap-3"><Navigation size={14} className="text-accent" /> Near Town Center</div>
                                 </div>
                             </div>
                             <div className="lg:w-1/2">
@@ -312,16 +312,16 @@ const ProjectDetails: React.FC = () => {
                     <div className="space-y-16">
                         <div className="flex justify-between items-end">
                             <div>
-                                <span className="text-[10px] font-bold text-accent uppercase tracking-[0.5em] block mb-4">Lifestyle Fabric</span>
+                                <span className="text-[10px] font-bold text-accent tracking-tight font-semibold block mb-4">Lifestyle Fabric</span>
                                 <h2 className="text-4xl md:text-6xl font-serif font-bold text-secondary tracking-tighter">Cluster <br /><span className="text-accent italic">Amenities.</span></h2>
                             </div>
-                            <Button variant="outline" size="lg" className="rounded-2xl px-10 py-5 font-bold uppercase tracking-widest text-[10px]" onClick={openEnquiry}>Full Amenities List</Button>
+                            <Button variant="outline" size="lg" className="rounded-2xl px-10 py-5 font-bold tracking-tight font-medium text-[10px]" onClick={openEnquiry}>Full Amenities List</Button>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                             {project.amenities?.map((a, i) => (
                                 <div key={i} className="p-10 bg-gray-50 rounded-[3rem] border border-gray-100 text-center space-y-6 hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group">
                                     <div className="w-16 h-16 bg-white rounded-2xl mx-auto flex items-center justify-center text-accent shadow-lg group-hover:bg-accent group-hover:text-secondary transition-all"><Sparkles size={28} /></div>
-                                    <span className="block text-[11px] font-bold text-secondary uppercase tracking-[0.2em]">{a}</span>
+                                    <span className="block text-[11px] font-bold text-secondary tracking-tight font-semibold">{a}</span>
                                 </div>
                             ))}
                         </div>
@@ -350,7 +350,7 @@ const ProjectDetails: React.FC = () => {
                 {isVirtualTourOpen && selectedFloorPlan?.virtualTourUrl && (
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[1000] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center p-4 md:p-10">
                         <div className="w-full max-w-6xl flex justify-end mb-4">
-                            <button onClick={() => setIsVirtualTourOpen(false)} className="flex items-center gap-2 p-3 bg-white/10 text-white rounded-xl hover:bg-accent hover:text-white transition-all font-bold uppercase tracking-widest text-xs">
+                            <button onClick={() => setIsVirtualTourOpen(false)} className="flex items-center gap-2 p-3 bg-white/10 text-white rounded-xl hover:bg-accent hover:text-white transition-all font-bold tracking-tight font-medium text-xs">
                                 Close Tour <X size={16} />
                             </button>
                         </div>

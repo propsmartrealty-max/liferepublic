@@ -47,7 +47,7 @@ export const ThreeBHK: React.FC = () => {
                             className="inline-flex items-center gap-4 px-6 py-3 bg-accent/20 border border-accent/30 rounded-full mb-12 backdrop-blur-xl"
                         >
                             <Sparkles size={16} className="text-accent animate-pulse" />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent">The Premium Collection v5.5</span>
+                            <span className="text-[10px] font-bold tracking-tight font-semibold text-accent">The Premium Collection v5.5</span>
                         </motion.div>
                         <h1 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-white mb-10 tracking-tighter leading-[0.8]">
                             Synthesizing <br /> <span className="text-accent italic">Grandeur.</span>
@@ -88,10 +88,10 @@ export const ThreeBHK: React.FC = () => {
                 <div className="mb-40">
                     <div className="flex items-end justify-between mb-24 border-b border-gray-100 pb-12">
                         <div className="max-w-2xl">
-                            <span className="text-[10px] font-bold text-accent uppercase tracking-[0.5em] mb-4 block">Active Synthesis</span>
+                            <span className="text-[10px] font-bold text-accent tracking-tight font-semibold mb-4 block">Active Synthesis</span>
                             <h2 className="text-5xl md:text-7xl font-serif font-bold text-secondary tracking-tighter">The 3 BHK <span className="text-accent italic">Portfolio.</span></h2>
                         </div>
-                        <div className="flex items-center gap-4 text-[10px] font-bold text-gray-400 uppercase tracking-widest bg-gray-50 px-6 py-3 rounded-full border border-gray-100">
+                        <div className="flex items-center gap-4 text-[10px] font-bold text-gray-400 tracking-tight font-medium bg-gray-50 px-6 py-3 rounded-full border border-gray-100">
                             <Building2 size={14} className="text-accent" /> {projects.length} Active Clusters
                         </div>
                     </div>
@@ -109,7 +109,7 @@ export const ThreeBHK: React.FC = () => {
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
                         <div className="lg:col-span-5 space-y-12">
                             <div className="space-y-6">
-                                <span className="text-[10px] font-bold text-accent uppercase tracking-[0.6em]">Spatial Intelligence</span>
+                                <span className="text-[10px] font-bold text-accent tracking-tight font-semibold">Spatial Intelligence</span>
                                 <h2 className="text-5xl md:text-7xl font-serif font-bold tracking-tighter leading-tight">The Space <br /><span className="text-accent italic">Synthesis Delta.</span></h2>
                             </div>
                             <p className="text-2xl text-gray-400 leading-relaxed font-medium">
@@ -118,9 +118,9 @@ export const ThreeBHK: React.FC = () => {
                             <div className="p-8 bg-white/5 rounded-[2.5rem] border border-white/10 group-hover:bg-white/10 transition-all">
                                 <div className="flex items-center gap-4 text-accent mb-3">
                                     <Target size={20} className="animate-pulse" />
-                                    <span className="text-[11px] font-bold uppercase tracking-[0.3em]">Growth Multiplier</span>
+                                    <span className="text-[11px] font-bold tracking-tight font-semibold">Growth Multiplier</span>
                                 </div>
-                                <p className="text-lg font-bold text-white uppercase tracking-[0.1em]">3 BHKs in integrated townships appreciate 18% faster than standalone towers.</p>
+                                <p className="text-lg font-bold text-white tracking-tight font-semibold">3 BHKs in integrated townships appreciate 18% faster than standalone towers.</p>
                             </div>
                         </div>
                         
@@ -128,9 +128,9 @@ export const ThreeBHK: React.FC = () => {
                             <table className="w-full text-left">
                                 <thead>
                                     <tr className="border-b border-white/10">
-                                        <th className="pb-10 text-[11px] font-bold uppercase tracking-[0.4em] text-white/40">Technical Feature</th>
-                                        <th className="pb-10 text-[11px] font-bold uppercase tracking-[0.4em] text-white/40">Standalone Tower</th>
-                                        <th className="pb-10 text-[11px] font-bold uppercase tracking-[0.4em] text-accent">Sovereign 3 BHK</th>
+                                        <th className="pb-10 text-[11px] font-bold tracking-tight font-semibold text-white/40">Technical Feature</th>
+                                        <th className="pb-10 text-[11px] font-bold tracking-tight font-semibold text-white/40">Standalone Tower</th>
+                                        <th className="pb-10 text-[11px] font-bold tracking-tight font-semibold text-accent">Sovereign 3 BHK</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-white/5">
@@ -173,7 +173,7 @@ export const ThreeBHK: React.FC = () => {
                                 </button>
                             </a>
                         </div>
-                        <p className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.6em] mt-16 block">Secure Ledger Access Protocol v5.5</p>
+                        <p className="text-[10px] font-bold text-gray-400 tracking-tight font-semibold mt-16 block">Secure Ledger Access Protocol v5.5</p>
                     </div>
                 </section>
             </div>

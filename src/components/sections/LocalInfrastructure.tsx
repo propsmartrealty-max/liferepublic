@@ -65,7 +65,7 @@ export const LocalInfrastructure: React.FC = () => {
               <MapPin size={24} />
             </div>
             <div>
-              <p className="text-xs font-bold text-accent uppercase tracking-widest leading-none mb-1">Central Hub</p>
+              <p className="text-xs font-bold text-accent tracking-tight font-medium leading-none mb-1">Central Hub</p>
               <p className="text-sm font-bold text-secondary">Hinjewadi Phase 1 & 2</p>
             </div>
           </div>
@@ -86,7 +86,7 @@ export const LocalInfrastructure: React.FC = () => {
                   {React.cloneElement(poi.icon as React.ReactElement, { size: 18 } as any)}
                 </div>
                 <div className="w-px h-6 bg-gray-200" />
-                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">{poi.category}</span>
+                <span className="text-[10px] font-bold text-gray-400 tracking-tight font-semibold">{poi.category}</span>
               </div>
               <h3 className="text-lg font-bold text-secondary mb-1 group-hover:text-accent transition-colors">{poi.name}</h3>
               <p className="text-xs font-medium text-gray-500 flex items-center gap-1">

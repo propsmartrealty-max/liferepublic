@@ -74,7 +74,7 @@ export const NRIInvestment: React.FC = () => {
                                 </div>
                                 <div>
                                     <div className="text-xl font-bold text-secondary">{stat.value}</div>
-                                    <div className="text-xs text-gray-500 uppercase tracking-widest font-bold">{stat.label}</div>
+                                    <div className="text-xs text-gray-500 tracking-tight font-medium font-bold">{stat.label}</div>
                                 </div>
                             </div>
                         ))}
@@ -141,7 +141,7 @@ export const NRIInvestment: React.FC = () => {
                             <div className="text-center">
                                 <Globe size={80} className="text-accent mx-auto mb-6 opacity-50" />
                                 <div className="text-4xl font-serif font-bold text-secondary mb-2">2500+</div>
-                                <div className="text-secondary/60 uppercase tracking-widest text-sm font-bold">NRI Families Onboarded</div>
+                                <div className="text-secondary/60 tracking-tight font-medium text-sm font-bold">NRI Families Onboarded</div>
                             </div>
                         </div>
                     </div>

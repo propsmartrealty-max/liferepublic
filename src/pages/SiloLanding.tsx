@@ -42,7 +42,7 @@ export const SiloLanding: React.FC = () => {
             {/* Breadcrumbs */}
             <div className="bg-gray-50 border-b border-gray-200">
                 <div className="container mx-auto px-6 py-4">
-                    <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-gray-500 overflow-x-auto whitespace-nowrap">
+                    <div className="flex items-center gap-2 text-[10px] font-bold tracking-tight font-medium text-gray-500 overflow-x-auto whitespace-nowrap">
                         <Link to="/" className="hover:text-accent transition-colors flex items-center gap-1"><Home size={12}/> Home</Link>
                         <ChevronRight size={12} />
                         <span className="text-primary-dark">Search</span>
@@ -58,7 +58,7 @@ export const SiloLanding: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
                         {/* Main Content */}
                         <div className="lg:col-span-8">
-                            <span className="inline-block px-4 py-2 bg-accent/10 text-accent text-[10px] font-bold uppercase tracking-[0.3em] rounded-full mb-6">
+                            <span className="inline-block px-4 py-2 bg-accent/10 text-accent text-[10px] font-bold tracking-tight font-semibold rounded-full mb-6">
                                 Verified Listings
                             </span>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-secondary tracking-tighter leading-[1.1] mb-6">
@@ -69,10 +69,10 @@ export const SiloLanding: React.FC = () => {
                             </p>
 
                             <div className="flex flex-wrap gap-4 mb-12">
-                                <Button size="lg" className="rounded-2xl px-8 py-4 text-xs font-bold uppercase tracking-widest" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
+                                <Button size="lg" className="rounded-2xl px-8 py-4 text-xs font-bold tracking-tight font-medium" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>
                                     Get Price Sheet
                                 </Button>
-                                <Button variant="outline" size="lg" className="rounded-2xl px-8 py-4 text-xs font-bold uppercase tracking-widest" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
+                                <Button variant="outline" size="lg" className="rounded-2xl px-8 py-4 text-xs font-bold tracking-tight font-medium" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
                                     Read Analysis
                                 </Button>
                             </div>
@@ -102,7 +102,7 @@ export const SiloLanding: React.FC = () => {
                                 <p className="text-gray-400 text-sm mb-8 font-medium">Register for priority access and exclusive inventory for this configuration.</p>
                                 {/* Note: we use button to trigger modal here to avoid importing EnquiryForm if it doesn't exist */}
                                 <Button 
-                                    className="w-full bg-accent text-secondary hover:bg-white transition-colors rounded-xl py-6 font-bold uppercase tracking-widest text-xs"
+                                    className="w-full bg-accent text-secondary hover:bg-white transition-colors rounded-xl py-6 font-bold tracking-tight font-medium text-xs"
                                     onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { source: siloData.h1 }}))}
                                 >
                                     Book Site Visit

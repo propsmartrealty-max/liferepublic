@@ -29,7 +29,7 @@ export const DemandHeatmap: React.FC = () => {
                 </div>
                 <div>
                     <h3 className="font-serif font-bold text-xl text-secondary">Live Velocity Hub</h3>
-                    <p className="text-[10px] uppercase tracking-widest text-gray-400">Sector R7 Status</p>
+                    <p className="text-[10px] tracking-tight font-medium text-gray-400">Sector R7 Status</p>
                 </div>
             </div>
 
@@ -48,7 +48,7 @@ export const DemandHeatmap: React.FC = () => {
 
                 {/* Scarcity Meter */}
                 <div className="space-y-2">
-                    <div className="flex justify-between text-xs font-bold uppercase tracking-widest">
+                    <div className="flex justify-between text-xs font-bold tracking-tight font-medium">
                         <span className="text-gray-400">Inventory Status</span>
                         <span className="text-accent">{stats.unitsLeft} Units Remaining</span>
                     </div>
@@ -73,7 +73,7 @@ export const DemandHeatmap: React.FC = () => {
 
                 <div className="pt-4 flex items-center gap-3 text-red-500">
                     <ShieldAlert size={14} />
-                    <span className="text-[10px] font-bold uppercase tracking-widest">High Demand: Price Revision Expected Q3 2026</span>
+                    <span className="text-[10px] font-bold tracking-tight font-medium">High Demand: Price Revision Expected Q3 2026</span>
                 </div>
             </div>
         </div>

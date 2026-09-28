@@ -46,7 +46,7 @@ export const HTMLSitemap: React.FC = () => {
                     
                     {/* Core Pages */}
                     <div>
-                        <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 uppercase tracking-widest text-[10px]">Main Navigation</h2>
+                        <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 tracking-tight font-medium text-[10px]">Main Navigation</h2>
                         <ul className="space-y-3">
                             <li><Link to="/" className="text-gray-600 hover:text-accent transition-colors font-medium">Home</Link></li>
                             <li><Link to="/about" className="text-gray-600 hover:text-accent transition-colors font-medium">About Us</Link></li>
@@ -59,7 +59,7 @@ export const HTMLSitemap: React.FC = () => {
 
                     {/* Township Resources */}
                     <div>
-                        <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 uppercase tracking-widest text-[10px]">Resources & Guides</h2>
+                        <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 tracking-tight font-medium text-[10px]">Resources & Guides</h2>
                         <ul className="space-y-3">
                             <li><Link to="/township-guide" className="text-gray-600 hover:text-accent transition-colors font-medium">Ultimate Township Guide</Link></li>
                             <li><Link to="/township-intelligence" className="text-gray-600 hover:text-accent transition-colors font-medium">Township Intelligence</Link></li>
@@ -75,7 +75,7 @@ export const HTMLSitemap: React.FC = () => {
 
                     {/* Project Portfolio */}
                     <div>
-                        <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 uppercase tracking-widest text-[10px]">Property Portfolio</h2>
+                        <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 tracking-tight font-medium text-[10px]">Property Portfolio</h2>
                         <ul className="space-y-3">
                             {projects.map(p => (
                                 <li key={p.id}>
@@ -89,7 +89,7 @@ export const HTMLSitemap: React.FC = () => {
 
                     {/* Property Configurations */}
                     <div>
-                        <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 uppercase tracking-widest text-[10px]">By Configuration</h2>
+                        <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 tracking-tight font-medium text-[10px]">By Configuration</h2>
                         <ul className="space-y-3">
                             <li><Link to="/2-bhk-flats-in-hinjewadi" className="text-gray-600 hover:text-accent transition-colors font-medium">2 BHK Flats</Link></li>
                             <li><Link to="/3-bhk-flats-in-hinjewadi" className="text-gray-600 hover:text-accent transition-colors font-medium">3 BHK Flats</Link></li>
@@ -102,7 +102,7 @@ export const HTMLSitemap: React.FC = () => {
 
                     {/* Media Center */}
                     <div>
-                        <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 uppercase tracking-widest text-[10px]">Media Center</h2>
+                        <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 tracking-tight font-medium text-[10px]">Media Center</h2>
                         <ul className="space-y-3">
                             <li><Link to="/media-center" className="text-gray-600 hover:text-accent transition-colors font-medium">Latest News & Press</Link></li>
                             {posts.map(post => (
@@ -117,7 +117,7 @@ export const HTMLSitemap: React.FC = () => {
 
                     {/* Legal & Policy */}
                     <div>
-                        <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 uppercase tracking-widest text-[10px]">Legal</h2>
+                        <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 tracking-tight font-medium text-[10px]">Legal</h2>
                         <ul className="space-y-3">
                             <li><Link to="/privacy-policy" className="text-gray-600 hover:text-accent transition-colors font-medium">Privacy Policy</Link></li>
                             <li><Link to="/terms-of-service" className="text-gray-600 hover:text-accent transition-colors font-medium">Terms of Service</Link></li>
@@ -127,7 +127,7 @@ export const HTMLSitemap: React.FC = () => {
 
                     {/* Popular Location Searches (SEO Silo) */}
                     <div className="md:col-span-2 lg:col-span-3">
-                        <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 mt-8 uppercase tracking-widest text-[10px]">Popular Location Searches</h2>
+                        <h2 className="text-xl font-bold text-secondary border-b border-gray-200 pb-2 mb-4 mt-8 tracking-tight font-medium text-[10px]">Popular Location Searches</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                             {pseoSlugs.map(slug => (
                                 <Link 

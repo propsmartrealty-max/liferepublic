@@ -62,7 +62,7 @@ export const ExitIntentOffer: React.FC = () => {
                                 Unlock the <strong>2026 pricing</strong> and inventory availability before the next market surge.
                             </p>
                         </div>
-                        <div className="relative z-10 flex items-center gap-2 text-accent text-xs font-bold uppercase tracking-widest">
+                        <div className="relative z-10 flex items-center gap-2 text-accent text-xs font-bold tracking-tight font-medium">
                             <ShieldCheck size={16} /> Sales Desk Verified
                         </div>
                     </div>
@@ -74,7 +74,7 @@ export const ExitIntentOffer: React.FC = () => {
                         
                         <form className="space-y-6">
                             <div className="space-y-2">
-                                <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Full Name</label>
+                                <label className="text-[10px] font-bold tracking-tight font-medium text-gray-400">Full Name</label>
                                 <input 
                                     type="text" 
                                     placeholder="John Doe" 
@@ -82,7 +82,7 @@ export const ExitIntentOffer: React.FC = () => {
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Mobile Number</label>
+                                <label className="text-[10px] font-bold tracking-tight font-medium text-gray-400">Mobile Number</label>
                                 <input 
                                     type="tel" 
                                     placeholder="+91 99999 99999" 

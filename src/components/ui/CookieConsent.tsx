@@ -56,13 +56,13 @@ export const CookieConsent: React.FC = () => {
                         <div className="flex gap-3 mt-2">
                             <Button 
                                 variant="outline" 
-                                className="flex-1 rounded-xl py-3 text-[10px] font-bold uppercase tracking-widest border-gray-200"
+                                className="flex-1 rounded-xl py-3 text-[10px] font-bold tracking-tight font-medium border-gray-200"
                                 onClick={declineCookies}
                             >
                                 Decline
                             </Button>
                             <Button 
-                                className="flex-1 rounded-xl py-3 text-[10px] font-bold uppercase tracking-widest"
+                                className="flex-1 rounded-xl py-3 text-[10px] font-bold tracking-tight font-medium"
                                 onClick={acceptCookies}
                             >
                                 Accept All

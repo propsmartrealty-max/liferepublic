@@ -40,7 +40,7 @@ export const ROICalculator: React.FC = () => {
                             className="inline-flex items-center gap-3 px-4 py-2 bg-accent/20 border border-accent/30 rounded-full mb-6"
                         >
                             <Target size={14} className="text-accent" />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent">Tectonic ROI Engine v2.0</span>
+                            <span className="text-[10px] font-bold tracking-tight font-semibold text-accent">Tectonic ROI Engine v2.0</span>
                         </motion.div>
                         <h2 className="text-4xl md:text-6xl font-serif font-bold text-secondary mb-6 leading-tight">
                             Project Your <br /> <span className="text-accent italic">Wealth Velocity.</span>
@@ -57,7 +57,7 @@ export const ROICalculator: React.FC = () => {
                         <div className="space-y-16">
                             <div>
                                 <div className="flex justify-between items-center mb-6">
-                                    <label className="text-sm font-bold text-secondary uppercase tracking-widest flex items-center gap-2">
+                                    <label className="text-sm font-bold text-secondary tracking-tight font-medium flex items-center gap-2">
                                         <TrendingUp className="text-accent" size={18} />
                                         Capital Input
                                     </label>
@@ -72,7 +72,7 @@ export const ROICalculator: React.FC = () => {
                                     onChange={(e) => setInvestment(Number(e.target.value))}
                                     className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-accent"
                                 />
-                                <div className="flex justify-between mt-4 text-[9px] font-bold text-gray-400 uppercase tracking-widest">
+                                <div className="flex justify-between mt-4 text-[9px] font-bold text-gray-400 tracking-tight font-medium">
                                     <span>60 Lacs</span>
                                     <span>5 Cr</span>
                                 </div>
@@ -80,7 +80,7 @@ export const ROICalculator: React.FC = () => {
 
                             <div>
                                 <div className="flex justify-between items-center mb-6">
-                                    <label className="text-sm font-bold text-secondary uppercase tracking-widest flex items-center gap-2">
+                                    <label className="text-sm font-bold text-secondary tracking-tight font-medium flex items-center gap-2">
                                         <Calculator className="text-secondary" size={18} />
                                         Time Horizon
                                     </label>
@@ -95,7 +95,7 @@ export const ROICalculator: React.FC = () => {
                                     onChange={(e) => setYears(Number(e.target.value))}
                                     className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-secondary"
                                 />
-                                <div className="flex justify-between mt-4 text-[9px] font-bold text-gray-400 uppercase tracking-widest">
+                                <div className="flex justify-between mt-4 text-[9px] font-bold text-gray-400 tracking-tight font-medium">
                                     <span>Launch (2024)</span>
                                     <span>Maturity (2039)</span>
                                 </div>
@@ -104,13 +104,13 @@ export const ROICalculator: React.FC = () => {
                             <div className="flex items-center gap-4 pt-4">
                                 <button 
                                     onClick={() => setStrategy('conservative')}
-                                    className={`flex-1 py-3 px-4 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all ${strategy === 'conservative' ? 'bg-secondary text-white shadow-lg' : 'bg-white border border-gray-100 text-gray-400 hover:bg-gray-50'}`}
+                                    className={`flex-1 py-3 px-4 rounded-xl text-[10px] font-bold tracking-tight font-medium transition-all ${strategy === 'conservative' ? 'bg-secondary text-white shadow-lg' : 'bg-white border border-gray-100 text-gray-400 hover:bg-gray-50'}`}
                                 >
                                     Conservative (8%)
                                 </button>
                                 <button 
                                     onClick={() => setStrategy('aggressive')}
-                                    className={`flex-1 py-3 px-4 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all ${strategy === 'aggressive' ? 'bg-accent text-secondary shadow-lg' : 'bg-white border border-gray-100 text-gray-400 hover:bg-gray-50'}`}
+                                    className={`flex-1 py-3 px-4 rounded-xl text-[10px] font-bold tracking-tight font-medium transition-all ${strategy === 'aggressive' ? 'bg-accent text-secondary shadow-lg' : 'bg-white border border-gray-100 text-gray-400 hover:bg-gray-50'}`}
                                 >
                                     Metro Adjusted (12%)
                                 </button>
@@ -119,7 +119,7 @@ export const ROICalculator: React.FC = () => {
 
                         <div className="mt-12 p-6 bg-white rounded-3xl border border-gray-100 shadow-sm flex items-start gap-4">
                             <ShieldCheck className="text-accent shrink-0" size={20} />
-                            <p className="text-xs text-gray-500 leading-relaxed font-bold uppercase tracking-wider">
+                            <p className="text-xs text-gray-500 leading-relaxed font-bold tracking-tight font-medium">
                                 Projections account for the 2026 Metro Correction and IT Phase 3 cluster delivery.
                             </p>
                         </div>
@@ -133,9 +133,9 @@ export const ROICalculator: React.FC = () => {
                             <div>
                                 <div className="flex items-center gap-2 text-accent mb-4">
                                     <Zap size={14} className="animate-pulse" />
-                                    <span className="text-[10px] font-bold uppercase tracking-[0.4em]">Sovereign Valuation</span>
+                                    <span className="text-[10px] font-bold tracking-tight font-semibold">Sovereign Valuation</span>
                                 </div>
-                                <p className="text-white/40 text-xs font-bold uppercase tracking-[0.2em] mb-4">Projected Market Value (Year {2024 + years})</p>
+                                <p className="text-white/40 text-xs font-bold tracking-tight font-semibold mb-4">Projected Market Value (Year {2024 + years})</p>
                                 <motion.h3 
                                     key={futureValue}
                                     initial={{ opacity: 0, scale: 0.95 }}
@@ -150,14 +150,14 @@ export const ROICalculator: React.FC = () => {
                                 <div>
                                     <div className="flex items-center gap-2 mb-2">
                                         <TrendingUp size={14} className="text-green-400" />
-                                        <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest">Growth Premium</p>
+                                        <p className="text-white/40 text-[10px] font-bold tracking-tight font-medium">Growth Premium</p>
                                     </div>
                                     <p className="text-3xl font-serif font-bold text-green-400">+{formatCurrency(profit)}</p>
                                 </div>
                                 <div>
                                     <div className="flex items-center gap-2 mb-2">
                                         <Sparkles size={14} className="text-accent" />
-                                        <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest">Yield Signal</p>
+                                        <p className="text-white/40 text-[10px] font-bold tracking-tight font-medium">Yield Signal</p>
                                     </div>
                                     <p className="text-3xl font-serif font-bold text-white italic">{getVerdict()}</p>
                                 </div>
@@ -173,7 +173,7 @@ export const ROICalculator: React.FC = () => {
                                         <ChevronRight size={24} />
                                     </div>
                                 </button>
-                                <p className="text-center mt-6 text-[10px] text-white/20 font-bold uppercase tracking-[0.5em]">Secure Ledger Access Protocol v5.0</p>
+                                <p className="text-center mt-6 text-[10px] text-white/20 font-bold tracking-tight font-semibold">Secure Ledger Access Protocol v5.0</p>
                             </div>
                         </div>
                     </div>

@@ -18,12 +18,12 @@ export const ConstructionUpdates: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                     <div className="max-w-2xl">
-                        <span className="text-accent text-[10px] font-bold uppercase tracking-[0.5em] block mb-4">Real-Time Transparency</span>
+                        <span className="text-accent text-[10px] font-bold tracking-tight font-semibold block mb-4">Real-Time Transparency</span>
                         <h2 className="text-4xl md:text-5xl font-serif font-bold text-secondary mb-6">Construction Ledger 2026</h2>
                         <p className="text-gray-500 text-lg leading-relaxed mb-4">
                             Monitor the tectonic pulse of your future home. We maintain a transparent digital ledger of every structural milestone across the 390-acre ecosystem.
                         </p>
-                        <div className="flex items-center gap-2 text-[10px] font-bold text-accent uppercase tracking-widest">
+                        <div className="flex items-center gap-2 text-[10px] font-bold text-accent tracking-tight font-medium">
                             <span className="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
                             Last Site Sync: {new Date().toLocaleDateString('en-IN', { day: '2-digit', month: 'long', year: 'numeric' })}
                         </div>
@@ -49,9 +49,9 @@ export const ConstructionUpdates: React.FC = () => {
                             <div className="flex justify-between items-start mb-6">
                                 <div>
                                     <h3 className="text-xl font-bold text-secondary mb-1">{update.sector}</h3>
-                                    <p className="text-xs text-gray-400 uppercase tracking-widest font-medium">{update.phase} Stage</p>
+                                    <p className="text-xs text-gray-400 tracking-tight font-medium font-medium">{update.phase} Stage</p>
                                 </div>
-                                <div className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${update.status === 'Ahead of Schedule' ? 'bg-green-100 text-green-600' : 'bg-secondary/10 text-secondary/60'}`}>
+                                <div className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-tight font-medium ${update.status === 'Ahead of Schedule' ? 'bg-green-100 text-green-600' : 'bg-secondary/10 text-secondary/60'}`}>
                                     {update.status}
                                 </div>
                             </div>

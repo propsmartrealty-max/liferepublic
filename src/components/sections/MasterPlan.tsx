@@ -86,7 +86,7 @@ const SectorMarker = React.memo(({ sector, activeSector, onSelect }: { sector: a
                         exit={{ opacity: 0 }}
                         className="absolute top-full mt-6 bg-secondary/90 backdrop-blur-2xl px-6 py-2 rounded-full border border-white/10 shadow-2xl pointer-events-none whitespace-nowrap"
                     >
-                        <span className="text-[10px] font-bold text-white uppercase tracking-[0.4em]">{sector.name.split(':')[1] || sector.name}</span>
+                        <span className="text-[10px] font-bold text-white tracking-tight font-semibold">{sector.name.split(':')[1] || sector.name}</span>
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -116,7 +116,7 @@ export const MasterPlan: React.FC = () => {
                         className="inline-flex items-center gap-6 px-10 py-4 bg-secondary text-white rounded-full mb-12 shadow-2xl border border-white/10"
                     >
                         <Navigation size={20} className="text-accent animate-pulse" />
-                        <span className="text-[11px] font-bold uppercase tracking-[0.6em]">The Master Blueprint v6.0</span>
+                        <span className="text-[11px] font-bold tracking-tight font-semibold">The Master Blueprint v6.0</span>
                     </motion.div>
                     <h2 className="text-6xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-secondary mb-12 tracking-tighter leading-[0.85]">
                         Spatial <br /> <span className="text-accent italic">Sovereignty.</span>
@@ -191,9 +191,9 @@ export const MasterPlan: React.FC = () => {
                                 <div className="flex items-center gap-6 mb-12 relative z-10">
                                     <div className="flex items-center gap-3 px-6 py-3 bg-accent text-secondary rounded-full border border-white shadow-xl">
                                         <Shield size={16} />
-                                        <span className="text-[12px] font-bold uppercase tracking-[0.4em]">{activeSector.status}</span>
+                                        <span className="text-[12px] font-bold tracking-tight font-semibold">{activeSector.status}</span>
                                     </div>
-                                    <span className="text-[12px] font-bold uppercase tracking-[0.4em] text-gray-400">
+                                    <span className="text-[12px] font-bold tracking-tight font-semibold text-gray-400">
                                         {activeSector.type}
                                     </span>
                                 </div>
@@ -226,7 +226,7 @@ export const MasterPlan: React.FC = () => {
                             className="flex items-center gap-6"
                         >
                             <div className={`w-8 h-8 rounded-xl shadow-xl ${item.color}`}></div>
-                            <span className="text-[12px] font-bold text-gray-400 uppercase tracking-[0.5em]">{item.label}</span>
+                            <span className="text-[12px] font-bold text-gray-400 tracking-tight font-semibold">{item.label}</span>
                         </motion.div>
                     ))}
                 </div>

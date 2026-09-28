@@ -38,7 +38,7 @@ export const InsightDetail: React.FC = () => {
 
             <div className="container mx-auto px-4">
                 {/* Breadcrumbs */}
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-500 mb-12 overflow-x-auto whitespace-nowrap pb-2">
+                <div className="flex items-center gap-2 text-xs font-bold tracking-tight font-medium text-gray-500 mb-12 overflow-x-auto whitespace-nowrap pb-2">
                     <Link to="/" className="hover:text-accent transition-colors">Home</Link>
                     <ChevronRight size={12} />
                     <Link to="/insights" className="hover:text-accent transition-colors">Insights</Link>
@@ -50,7 +50,7 @@ export const InsightDetail: React.FC = () => {
                     {/* Main Content */}
                     <div className="lg:col-span-8">
                         <header className="mb-12">
-                            <span className="text-accent text-xs font-bold uppercase tracking-[0.5em] block mb-4">
+                            <span className="text-accent text-xs font-bold tracking-tight font-semibold block mb-4">
                                 {article.category}
                             </span>
                             <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary-dark mb-6 leading-tight">

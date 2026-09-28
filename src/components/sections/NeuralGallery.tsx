@@ -80,7 +80,7 @@ export const NeuralGallery: React.FC<NeuralGalleryProps> = ({ images, title }) =
                             }`}
                         >
                             <m.icon size={16} />
-                            <span className="text-[10px] font-bold uppercase tracking-widest">
+                            <span className="text-[10px] font-bold tracking-tight font-medium">
                                 {m.label}
                             </span>
                         </button>
@@ -90,7 +90,7 @@ export const NeuralGallery: React.FC<NeuralGalleryProps> = ({ images, title }) =
                 {/* Status Indicator */}
                 <div className="absolute top-8 left-8 flex items-center gap-3 bg-black/40 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10">
                     <Sparkles size={14} className="text-accent animate-pulse" />
-                    <span className="text-[10px] text-white/80 font-bold uppercase tracking-widest italic">
+                    <span className="text-[10px] text-white/80 font-bold tracking-tight font-medium italic">
                         Neural Synthesis Active
                     </span>
                 </div>
@@ -99,7 +99,7 @@ export const NeuralGallery: React.FC<NeuralGalleryProps> = ({ images, title }) =
             {/* Reflection Layer */}
             <div className="mt-8 text-center">
                 <h4 className="text-secondary font-serif font-bold text-2xl mb-2">{title}</h4>
-                <p className="text-gray-400 text-xs uppercase tracking-[0.3em]">Experience the Tectonic Flow</p>
+                <p className="text-gray-400 text-xs tracking-tight font-semibold">Experience the Tectonic Flow</p>
             </div>
         </div>
     );

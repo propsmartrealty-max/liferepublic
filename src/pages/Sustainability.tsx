@@ -29,7 +29,7 @@ export const Sustainability: React.FC = () => {
                             className="inline-flex items-center gap-4 px-6 py-3 bg-secondary text-white rounded-full mb-10 shadow-xl"
                         >
                             <ShieldCheck size={16} className="text-emerald-400 animate-pulse" />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.6em]">Sovereign ESG Protocol v6.0</span>
+                            <span className="text-[10px] font-bold tracking-tight font-semibold">Sovereign ESG Protocol v6.0</span>
                         </motion.div>
                         <h1 className="text-7xl md:text-[5rem] lg:text-[6rem] font-serif font-bold text-secondary mb-10 tracking-tighter leading-[0.8]">
                             Environmental <br /><span className="text-emerald-500 italic">Structuralism.</span>
@@ -44,7 +44,7 @@ export const Sustainability: React.FC = () => {
                             <Zap size={28} />
                         </div>
                         <div>
-                            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">ESG Benchmark</span>
+                            <span className="text-[10px] font-bold text-gray-400 tracking-tight font-medium block">ESG Benchmark</span>
                             <span className="text-xl font-bold text-secondary tracking-tight">2026 Net-Positive Ready</span>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ export const Sustainability: React.FC = () => {
                                 <metric.icon size={48} strokeWidth={1.5} />
                             </div>
                             <div className="text-5xl font-bold text-secondary mb-3 tracking-tighter italic">{metric.value}</div>
-                            <div className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.4em] mb-6">{metric.label}</div>
+                            <div className="text-[10px] font-bold text-gray-400 tracking-tight font-semibold mb-6">{metric.label}</div>
                             <p className="text-gray-500 text-base font-medium leading-relaxed italic">"{metric.description}"</p>
                         </motion.div>
                     ))}
@@ -85,7 +85,7 @@ export const Sustainability: React.FC = () => {
                         <div className="space-y-12">
                             <div className="flex items-center gap-4 text-emerald-400 font-bold mb-4">
                                 <Network size={24} />
-                                <span className="text-[11px] uppercase tracking-[0.6em]">Infrastructure Backbone Sync</span>
+                                <span className="text-[11px] tracking-tight font-semibold">Infrastructure Backbone Sync</span>
                             </div>
                             <h2 className="text-5xl md:text-8xl font-serif font-bold tracking-tighter leading-[0.85]">The 150ft <br /> <span className="text-emerald-400 italic">Oxygen Corridor.</span></h2>
                             <p className="text-2xl text-white/60 leading-relaxed font-medium">

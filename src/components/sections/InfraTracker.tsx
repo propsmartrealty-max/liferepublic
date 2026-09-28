@@ -39,7 +39,7 @@ export const InfraTracker: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
                     <div className="max-w-2xl">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-bold mb-4 uppercase tracking-widest">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-bold mb-4 tracking-tight font-medium">
                             <TrendingUp size={16} /> Sovereign Growth Monitor
                         </div>
                         <h2 className="text-4xl md:text-5xl font-serif font-bold text-secondary mb-6">Hinjewadi Infrastructure & Appreciation Tracker</h2>

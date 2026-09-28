@@ -44,7 +44,7 @@ export const NRIInvestmentHub: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                     >
-                        <span className="px-6 py-2 bg-accent/20 text-accent rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-8 inline-block border border-accent/20">
+                        <span className="px-6 py-2 bg-accent/20 text-accent rounded-full text-xs font-bold tracking-tight font-semibold mb-8 inline-block border border-accent/20">
                             Global Investors Portal
                         </span>
                         <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-8 leading-tight">

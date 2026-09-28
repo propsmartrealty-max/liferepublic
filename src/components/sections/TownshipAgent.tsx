@@ -86,7 +86,7 @@ export const TownshipAgent: React.FC = () => {
                                         <h3 className="font-serif font-bold text-xl">Neural Architect</h3>
                                         <div className="flex items-center gap-2">
                                             <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse"></span>
-                                            <p className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-bold">Life Republic v5.0</p>
+                                            <p className="text-[10px] tracking-tight font-semibold text-white/50 font-bold">Life Republic v5.0</p>
                                         </div>
                                     </div>
                                 </div>
@@ -135,7 +135,7 @@ export const TownshipAgent: React.FC = () => {
                                 <button 
                                     key={i}
                                     onClick={() => handleSend(s.q)}
-                                    className="flex items-center gap-2 px-5 py-2.5 bg-gray-50 border border-gray-100 rounded-full text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:bg-accent/10 hover:border-accent hover:text-accent transition-all whitespace-nowrap group"
+                                    className="flex items-center gap-2 px-5 py-2.5 bg-gray-50 border border-gray-100 rounded-full text-[10px] font-bold tracking-tight font-medium text-gray-400 hover:bg-accent/10 hover:border-accent hover:text-accent transition-all whitespace-nowrap group"
                                 >
                                     <s.icon size={12} className="group-hover:scale-125 transition-transform" /> {s.label}
                                 </button>
@@ -163,7 +163,7 @@ export const TownshipAgent: React.FC = () => {
                             </div>
                             <div className="mt-6 flex items-center justify-center gap-3">
                                 <div className="w-1 h-1 bg-accent rounded-full animate-ping"></div>
-                                <p className="text-[9px] text-gray-400 uppercase tracking-[0.3em] font-bold">
+                                <p className="text-[9px] text-gray-400 tracking-tight font-semibold font-bold">
                                     Neural Brain Grounded in Life Republic KB
                                 </p>
                             </div>
