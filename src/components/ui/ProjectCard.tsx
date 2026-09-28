@@ -124,7 +124,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                                 <p className="text-white/40 text-[10px] tracking-widest uppercase mb-1">Pricing Structure</p>
                                 <p className="text-white text-lg font-medium">{displayPrice}</p>
                             </div>
-                            <div className="flex items-center gap-2 text-white opacity-0 group-hover:opacity-100 transition-all duration-700 delay-150 group-hover:text-rainbow">
+                            <div className="flex items-center gap-2 text-white opacity-0 group-hover:opacity-100 transition-all duration-700 delay-150 group-hover:text-white">
                                 <span className="text-xs uppercase tracking-widest font-medium">Full Overview</span>
                                 <span className="material-symbol text-sm">arrow_forward</span>
                             </div>
