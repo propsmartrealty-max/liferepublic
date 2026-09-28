@@ -135,8 +135,8 @@ export const ExitIntentModal: React.FC = () => {
                                             <span className="text-[11px] font-bold text-green-600 tracking-tight font-semibold">Vault Protection Active</span>
                                         </div>
                                         <div className="flex items-center gap-3 px-6 py-2 bg-blue-50 rounded-full border border-blue-100">
-                                            <Network size={20} className="text-blue-500" />
-                                            <span className="text-[11px] font-bold text-blue-600 tracking-tight font-semibold">Neural Handover Ready</span>
+                                            <Network size={20} className="rainbow-text-clip font-bold" />
+                                            <span className="text-[11px] font-bold rainbow-text-clip font-bold tracking-tight font-semibold">Neural Handover Ready</span>
                                         </div>
                                     </div>
                                 </div>

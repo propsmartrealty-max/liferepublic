@@ -26,6 +26,7 @@
   background-clip: text;
 }
 
+@layer utilities {
 .bg-rainbow {
   background: var(--lr-rainbow);
 }
@@ -123,4 +124,6 @@
   background: var(--lr-rainbow);
   width: 100%;
   opacity: 0.5;
+}
+
 }

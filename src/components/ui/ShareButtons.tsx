@@ -44,7 +44,7 @@ export const ShareButtons: React.FC<ShareButtonsProps> = ({ url, title, classNam
             icon: <Linkedin size={16} strokeWidth={2} />,
             href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
             color: 'hover:bg-blue-700',
-            bg: 'bg-blue-50 text-blue-700'
+            bg: 'bg-blue-50 rainbow-text-clip font-bold'
         },
         {
             name: 'Twitter',

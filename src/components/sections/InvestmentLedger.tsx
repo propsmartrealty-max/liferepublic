@@ -219,7 +219,7 @@ export const InvestmentLedger: React.FC = () => {
                                     <div className="h-px bg-transparent/10"></div>
                                     <div className="flex justify-between items-center">
                                         <span className="text-xs text-[#202124]/40 font-bold tracking-tight font-medium flex items-center gap-2">
-                                            <PieChart size={14} className="text-blue-400" /> Est. Monthly Rent
+                                            <PieChart size={14} className="rainbow-text-clip font-bold" /> Est. Monthly Rent
                                         </span>
                                         <span className="text-2xl font-mono font-bold text-[#202124]">₹{(monthlyRent / 1000).toFixed(0)}K</span>
                                     </div>

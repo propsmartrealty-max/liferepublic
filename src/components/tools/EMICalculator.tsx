@@ -59,7 +59,7 @@ export const EMICalculator: React.FC = () => {
                 <div className="flex flex-col items-end gap-3">
                     <div className="px-6 py-3 bg-blue-50 border border-blue-100 rounded-full flex items-center gap-3 shadow-sm">
                         <div className="w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse"></div>
-                        <span className="text-[10px] font-bold text-blue-700 tracking-tight font-medium">2026 Rate Benchmark Active</span>
+                        <span className="text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-medium">2026 Rate Benchmark Active</span>
                     </div>
                 </div>
             </div>

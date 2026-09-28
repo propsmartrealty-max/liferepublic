@@ -72,7 +72,7 @@ export const PersonalizedDashboard: React.FC = () => {
                         {/* Search Intelligence */}
                         <div className="bg-white/5 backdrop-blur-xl border border-[#DADCE0] p-8 rounded-[24px] hover:bg-[#151822] border border-[#DADCE0]/10 transition-all">
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="p-2 bg-blue-500/20 rounded-lg text-blue-400">
+                                <div className="p-2 bg-blue-500/20 rounded-lg rainbow-text-clip font-bold">
                                     <Search size={20} />
                                 </div>
                                 <h4 className="text-[#202124] font-bold">Search History</h4>

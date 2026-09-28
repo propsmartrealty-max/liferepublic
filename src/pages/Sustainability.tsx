@@ -5,7 +5,7 @@ import { SEO } from '../components/seo/SEO';
 
 const metrics = [
     { label: 'Bio-Sovereign Trees', value: '15,000+', icon: Trees, color: 'text-emerald-500', description: 'Massive afforestation across the 400-acre structural mesh.' },
-    { label: 'Water Synthesis', value: '2.5 MLD', icon: Droplets, color: 'text-blue-500', description: 'Advanced STP with zero-liquid discharge and aquifer recharge.' },
+    { label: 'Water Synthesis', value: '2.5 MLD', icon: Droplets, color: 'rainbow-text-clip font-bold', description: 'Advanced STP with zero-liquid discharge and aquifer recharge.' },
     { label: 'Solar Matrix', value: '750 kW', icon: Sun, color: 'text-orange-500', description: 'Synchronized solar grid offsetting 40% of public infrastructure load.' },
     { label: 'Open Bio-Mesh', value: '70%', icon: Leaf, color: 'text-green-500', description: 'Dedicated to nature, architectural landscaping, and Urban Parks.' }
 ];

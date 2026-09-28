@@ -142,7 +142,7 @@ export const Lifestyle: React.FC = () => {
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-16">
                             {[
-                                { label: 'Active Citizens', val: '12,500+', icon: Users, color: 'text-blue-400' },
+                                { label: 'Active Citizens', val: '12,500+', icon: Users, color: 'rainbow-text-clip font-bold' },
                                 { label: 'Parks & Avenues', val: '45+', icon: Trees, color: 'text-emerald-400' },
                                 { label: 'Native Trees', val: '7,700+', icon: Wind, color: 'text-[#1a73e8]' },
                                 { label: 'Infrastructure', val: '2026', icon: Zap, color: 'text-orange-400' }

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const activities = [
     { type: 'Live Pulse', message: '12,452+ Sovereign Families call this home', time: 'ACTIVE', icon: Heart, color: 'text-red-500', bg: 'bg-red-50' },
     { type: 'Synthesis', message: 'New 3 BHK booking in Echoes Sector R22', time: '2 mins ago', icon: Home, color: 'text-[#1a73e8]', bg: 'bg-accent/10' },
-    { type: 'Global Tour', message: 'Digital walkthrough initiated from New Jersey, USA', time: '15 mins ago', icon: Globe, color: 'text-blue-500', bg: 'bg-blue-50' },
+    { type: 'Global Tour', message: 'Digital walkthrough initiated from New Jersey, USA', time: '15 mins ago', icon: Globe, color: 'rainbow-text-clip font-bold', bg: 'bg-blue-50' },
     { type: 'Possession', message: 'Authority letter issued for Arezo Tower A', time: '1 hour ago', icon: ShieldCheck, color: 'text-indigo-600', bg: 'bg-indigo-50' },
     { type: 'Infrastructure', message: 'Central Spine Road LED telemetry sync complete', time: '3 hours ago', icon: Zap, color: 'text-amber-500', bg: 'bg-amber-50' },
     { type: 'Bio-Sovereignty', message: '15 native trees planted in Urban Park Sector R10', time: 'Today', icon: Trees, color: 'text-emerald-500', bg: 'bg-emerald-50' },

@@ -7,7 +7,7 @@ export const CLUSTERS = [
         description: "Echoes is the newest residential phase at Life Republic (Sector R31/31st Avenue). Offering meticulously planned 2 & 2.5 BHK homes with 40+ amenities across a 5.89-acre development.",
         price: "₹75 Lakhs - ₹90 Lakhs",
         rera: "PM1261012502409",
-        image: "https://life-republic.in/images/gallery/eros/master-layout.webp", 
+        image: "https://liferepublic.in/images/webp/popup/echoes-desktop-kpdl.jpeg", 
         masterLayout: "https://life-republic.in/images/gallery/eros/master-layout.webp",
         configurations: [
             { type: "2 BHK", size: "735 - 840 sq.ft.", price: "₹75 Lakhs*" },
@@ -22,7 +22,7 @@ export const CLUSTERS = [
         description: "Duet features smart, space-efficient 2 BHK apartments designed for modern nuclear families with access to township-level infrastructure.",
         price: "₹62 Lakhs - ₹76 Lakhs",
         rera: "P52100079424",
-        image: "https://liferepublic.in/images/home/slider-1.webp",
+        image: "https://liferepublic.in/images/projects/location/1747221568duet%20list%20image.jpg",
         masterLayout: "https://liferepublic.in/images/home/slider-1.webp",
         configurations: [
             { type: "2 BHK", size: "721 - 766 sq.ft.", price: "₹62 Lakhs*" }
@@ -53,7 +53,7 @@ export const CLUSTERS = [
         description: "Canvas (Sector R5 / 5th Avenue) is the pinnacle of luxury at Life Republic. Offering sprawling 3 & 4 BHK residences with bespoke finishes and private decks.",
         price: "₹1.30 Cr - ₹2.8 Cr",
         rera: "P52100077008",
-        image: "https://liferepublic.in/images/home/slider-1.webp",
+        image: "https://liferepublic.in/images/webp/popup/canvas_desktop.jpg",
         masterLayout: "https://liferepublic.in/images/home/slider-1.webp",
         configurations: [
             { type: "3 BHK", size: "1,151 - 1,330 sq.ft.", price: "₹1.30 Cr*" },
@@ -69,7 +69,7 @@ export const CLUSTERS = [
         description: "Aros redefines community living with a massive 19,000 sq.ft. clubhouse, a 2.6-acre Nature's Nest, and a spectacular 70-meter high Sky Trail.",
         price: "₹75 Lakhs - ₹1.2 Cr",
         rera: "P52100047921",
-        image: "https://liferepublic.in/images/home/slider-1.webp",
+        image: "https://liferepublic.in/images/projects/location/1718965087Aros%20image.jpg",
         masterLayout: "https://liferepublic.in/images/home/slider-1.webp",
         configurations: [
             { type: "2 BHK", size: "836 sq.ft.", price: "₹75 Lakhs*" },
@@ -84,7 +84,7 @@ export const CLUSTERS = [
         description: "Atmos offers elevated lifestyle features with thoughtfully designed 2, 2.5, and 3 BHK units, focused on natural light and ventilation.",
         price: "₹64 Lakhs - ₹95 Lakhs",
         rera: "P52100051765",
-        image: "https://liferepublic.in/images/home/slider-1.webp",
+        image: "https://liferepublic.in/images/projects/location/1718965121atmos%20image.jpg",
         masterLayout: "https://liferepublic.in/images/home/slider-1.webp",
         configurations: [
             { type: "2 BHK", size: "722 sq.ft.", price: "₹64 Lakhs*" },
@@ -100,7 +100,7 @@ export const CLUSTERS = [
         description: "Smart, tech-enabled 1 and 2 BHK residences designed for millennials, featuring home automation and high-speed fiber infrastructure.",
         price: "₹40 Lakhs - ₹65 Lakhs",
         rera: "P52100027629",
-        image: "https://liferepublic.in/images/home/slider-1.webp",
+        image: "https://liferepublic.in/images/projects/location/1718965070Universe-.jpg",
         masterLayout: "https://liferepublic.in/images/home/slider-1.webp",
         configurations: [
             { type: "1 BHK", size: "393 - 507 sq.ft.", price: "₹40 Lakhs*" },

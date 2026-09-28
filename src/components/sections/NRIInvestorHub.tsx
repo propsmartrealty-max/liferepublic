@@ -13,7 +13,7 @@ const guidelines = [
         title: 'Global Capital Flow',
         desc: 'FEMA-synchronized guidelines for repatriation of sale proceeds via NRE/NRO accounts for zero-latency capital mobility.',
         icon: Network,
-        color: 'bg-blue-50 text-blue-600'
+        color: 'bg-blue-50 rainbow-text-clip font-bold'
     },
     {
         title: 'TDS & Tax Synthesis',

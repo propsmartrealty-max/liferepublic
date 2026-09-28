@@ -51,7 +51,7 @@ const reviews = [
 ];
 
 const communityStats = [
-    { label: 'Verified Citizens', value: '12,500+', icon: Users, color: 'text-blue-400' },
+    { label: 'Verified Citizens', value: '12,500+', icon: Users, color: 'rainbow-text-clip font-bold' },
     { label: 'Resident NPS', value: '4.8/5', icon: Heart, color: 'text-[#1a73e8]' },
     { label: 'Community Tenure', value: '10+ Yrs', icon: Trophy, color: 'text-emerald-400' }
 ];

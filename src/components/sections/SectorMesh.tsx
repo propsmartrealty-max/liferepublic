@@ -204,15 +204,15 @@ export const SectorMesh: React.FC = () => {
                     <div className="lg:col-span-1 space-y-12">
                         <div className="bg-[#151822] border border-[#DADCE0]/5 backdrop-blur-3xl rounded-[3.5rem] p-10 border border-[#DADCE0] shadow-2xl group">
                             <div className="flex items-center gap-4 mb-12">
-                                <Zap size={24} className="text-blue-400 animate-pulse" />
+                                <Zap size={24} className="rainbow-text-clip font-bold animate-pulse" />
                                 <h3 className="font-bold text-[#202124] tracking-tight font-semibold text-[11px]">Infrastructure Backbones</h3>
                             </div>
                             <ul className="space-y-6">
                                 {sectorsData.avenues.map((a) => (
                                     <li key={a.id}>
                                         <Link to={`/location/${a.slug}`} className="flex items-center justify-between group/link">
-                                            <span className="text-[#5F6368] group-hover/link:text-blue-400 text-lg font-bold transition-all tracking-tight">{a.name}</span>
-                                            <div className="w-10 h-10 bg-[#151822] border border-[#DADCE0]/5 border border-[#DADCE0] rounded-xl flex items-center justify-center text-[#202124]/20 group-hover/link:text-blue-400 group-hover/link:border-blue-400/50 transition-all">
+                                            <span className="text-[#5F6368] group-hover/link:rainbow-text-clip font-bold text-lg font-bold transition-all tracking-tight">{a.name}</span>
+                                            <div className="w-10 h-10 bg-[#151822] border border-[#DADCE0]/5 border border-[#DADCE0] rounded-xl flex items-center justify-center text-[#202124]/20 group-hover/link:rainbow-text-clip font-bold group-hover/link:border-blue-400/50 transition-all">
                                                 <Route size={18} />
                                             </div>
                                         </Link>

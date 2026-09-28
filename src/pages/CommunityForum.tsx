@@ -199,11 +199,11 @@ export const CommunityForum: React.FC = () => {
                             <div className="absolute top-0 right-0 p-12 opacity-5">
                                 <Megaphone size={80} />
                             </div>
-                            <div className="flex items-center gap-4 text-blue-600 font-bold mb-6">
+                            <div className="flex items-center gap-4 rainbow-text-clip font-bold font-bold mb-6">
                                 <ShieldCheck size={28} />
                                 <span className="text-[11px] tracking-tight font-semibold">Township Authority Hub</span>
                             </div>
-                            <p className="text-lg text-blue-900 leading-relaxed font-medium">
+                            <p className="text-lg rainbow-text-clip font-bold leading-relaxed font-medium">
                                 Sovereign shuttle synchronization for Hinjewadi Phase 3 initiating April 1st. Access real-time schedules via Resident Matrix v6.0.
                             </p>
                         </div>
