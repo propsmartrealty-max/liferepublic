@@ -50,7 +50,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
   return (
     <div className="min-h-[75vh] bg-transparent flex flex-col font-sans selection:bg-accent selection:text-[#202124] overflow-x-hidden">
       <Navbar />
-      <main className={`flex-grow ${location.pathname === '/' ? '' : 'pt-24'}`} aria-label={ariaLabel}>
+      <main className="flex-grow" aria-label={ariaLabel}>
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}

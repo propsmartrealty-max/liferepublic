@@ -54,7 +54,7 @@ export const Contact: React.FC = () => {
                 canonical="/contact"
                 schema={localBusinessSchema}
             />
-                        <section className="bg-white text-[#202124] py-20">
+                        <section className="bg-white text-[#202124] pt-32 pb-20">
                 <div className="container mx-auto px-4 text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}

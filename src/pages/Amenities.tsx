@@ -34,14 +34,14 @@ export const Amenities: React.FC = () => {
     ];
 
     return (
-        <div className="pt-4">
+        <div>
                         <SEO
                 title="World-Class Amenities at Kolte Patil Life Republic Township Hinjewadi"
                 description="Discover the world-class amenities at Kolte Patil Life Republic Township Hinjewadi. 3.5-acre urban park, Olympic-size pool, international school, fire station, and 24x7 security. Nature Community Sustainability in Pune."
                 keywords="Life Republic Amenities, Clubhouse in Hinjewadi, School in Life Republic, Integrated Township Amenities, Swimming Pool, Gymnasium, Parks in Hinjewadi, Gated Community Facilities, Better Living in Hinjewadi Pune, Sustainable & Progressive Spaces Pune, 400 Acres of Community Living"
                 canonical="/amenities"
             />
-            <section className="bg-white text-[#202124] py-28 relative overflow-hidden">
+            <section className="bg-white text-[#202124] pt-40 pb-28 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/slider/1.jpg')] bg-cover bg-center opacity-30"></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">

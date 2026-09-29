@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-4 pb-20 bg-black min-h-[50vh]">
+        <div className="pt-32 pb-20 bg-black min-h-[50vh]">
                         <SEO
                 title="Projects in Kolte Patil Life Republic Township Hinjewadi | 1, 2, 3 BHK & Villas"
                 description="Explore all residential projects in Kolte Patil Life Republic Township Hinjewadi. Choose from 1, 2, 3 BHK flats, row houses, and luxury villas. Check current pricing, floor plans, and availability."

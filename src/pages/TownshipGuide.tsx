@@ -90,7 +90,7 @@ export const TownshipGuide: React.FC = () => {
     ];
 
     return (
-        <div className="pt-4 bg-transparent">
+        <div>
             <SEO 
                 title="Life Republic Hinjewadi Guide: Portfolio, Clusters & ROI Analysis"
                 description="Comprehensive guide to Kolte Patil Life Republic. Explore Atmos, Aros, Universe, and Echoes. Analysis of ROI, schools, and Hinjewadi's 390-acre master township."
@@ -100,7 +100,7 @@ export const TownshipGuide: React.FC = () => {
             />
             
             {/* Hero Section */}
-            <section className="relative py-12 bg-black overflow-hidden">
+            <section className="relative pt-32 pb-12 bg-black overflow-hidden">
                 <div className="absolute inset-0 opacity-5"></div>
                 <div className="container mx-auto px-4 relative">
                     <motion.div
