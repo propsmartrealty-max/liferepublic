@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { api } from '../../services/api';
 import { FileCheck, Sparkles, Users, BrainCircuit, Database, Zap, CheckCircle2, QrCode, ArrowUpRight, Network } from 'lucide-react';
 import { brochureGenerator } from '../../services/brochureGenerator';
 import { personalizationStore } from '../../lib/personalizationStore';
@@ -46,7 +47,7 @@ export const BrochureEngine: React.FC = () => {
         setSynthesisStep(0);
         try {
             // First submit to leads API
-            const { api } = await import('../../services/api');
+            
             await api.leads.create({
                 name: formData.name || 'Valued Partner',
                 email: formData.email,

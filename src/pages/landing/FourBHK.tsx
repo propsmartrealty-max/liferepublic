@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Project } from '../../lib/types';
 import { api } from '../../services/api';
+import { projectsRegistry } from '../../data/projects';
 import { ProjectCard } from '../../components/ui/ProjectCard';
 import { SEO } from '../../components/seo/SEO';
 import { ShieldCheck, TrendingUp, Target, Crown, ArrowUpRight, Landmark, Gem, Zap } from 'lucide-react';
@@ -23,7 +24,7 @@ export const FourBHK: React.FC = () => {
                 if (filtered.length > 0) {
                     setProjects(filtered);
                 } else {
-                    const { projectsRegistry: staticProjects } = await import('../../data/projects');
+                    const staticProjects = projectsRegistry;
                     const staticFiltered = staticProjects.filter((p: Project) =>
                         p.features.some((f: string) => f.includes('4 BHK') || f.includes('4 Bed')) ||
                         p.title.includes('4 BHK') ||

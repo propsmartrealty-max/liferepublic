@@ -105,7 +105,6 @@ Mobile: ${mobile}`;
                                 <input 
                                     type="text" 
                                     name="name"
-                                    name="mobile"
                                     placeholder=" "
                                     className="peer w-full bg-transparent border-b border-white/20 py-3 text-white text-lg focus:border-white outline-none transition-all placeholder:text-transparent"
                                     required

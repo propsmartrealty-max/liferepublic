@@ -30,7 +30,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, onClose, pro
         try {
             if (!formRef.current) throw new Error("Form reference missing");
             const formData = new FormData(formRef.current);
-            await api.forms.submitEnquiry(formData);
+            await api.leads.create({ name: formData.get('name'), phone: formData.get('mobile'), email: formData.get('email'), project_id: projectName });
             
             setIsSuccess(true);
             if (window.dataLayer) {
