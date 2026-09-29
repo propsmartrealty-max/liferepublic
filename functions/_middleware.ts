@@ -230,10 +230,4 @@ export const onRequest: PagesFunction = async (context) => {
         headers
     });
 
-    } catch (e: any) {
-        return new Response(`Worker Exception:\n${e.message}\n\nStack:\n${e.stack}`, { 
-            status: 500,
-            headers: { 'Content-Type': 'text/plain' }
-        });
-    }
 };

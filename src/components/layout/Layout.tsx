@@ -5,11 +5,9 @@ import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { FloatingContact } from '../ui/FloatingContact';
 import { WhatsAppWidget } from '../ui/WhatsAppWidget';
-import { Breadcrumbs } from '../seo/Breadcrumbs';
 import { EnquiryModal } from '../ui/EnquiryModal';
 import { NeuralSearch } from '../ui/NeuralSearch';
 import { ExitIntentModal } from '../ui/ExitIntentModal';
-
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -23,7 +21,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
   const [enquiryProject, setEnquiryProject] = useState<string | undefined>(undefined);
 
   useEffect(() => {
-    // Neural Hub Event Synchronization v6.0
     const handleEnquiryOpen = (e: any) => {
         setEnquiryProject(e.detail?.projectName);
         setIsEnquiryOpen(true);
@@ -33,7 +30,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
     window.addEventListener('open-enquiry-modal', handleEnquiryOpen as any);
     window.addEventListener('open-neural-search', handleSearchOpen);
 
-    // Global Command Logic: Command + K (Search) / Command + J (Concierge)
     const handleKeyDown = (e: KeyboardEvent) => {
         if ((e.metaKey || e.ctrlKey)) {
             if (e.key === 'k') {
@@ -52,16 +48,9 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
   }, []);
 
   return (
-    <div className="min-h-[75vh] bg-white flex flex-col font-sans selection:bg-accent selection:text-[#202124] overflow-x-hidden">
-      {/* Sovereign Residents Pulse Ticker */}
-            
+    <div className="min-h-[75vh] bg-transparent flex flex-col font-sans selection:bg-accent selection:text-[#202124] overflow-x-hidden">
       <Navbar />
-      
       <main className={`flex-grow ${location.pathname === '/' ? '' : 'pt-24'}`} aria-label={ariaLabel}>
-        <div className="container mx-auto px-4 py-2">
-          <Breadcrumbs />
-        </div>
-        
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}
@@ -73,17 +62,10 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
             {children}
           </motion.div>
         </AnimatePresence>
-
-        {/* Neural Path Personalization Overlay */}
-        
       </main>
-
       <Footer />
-      
-      {/* Global UI Hardening Layer */}
       <FloatingContact />
       <WhatsAppWidget />
-      
       <EnquiryModal 
         isOpen={isEnquiryOpen}
         onClose={() => {
@@ -92,12 +74,10 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
         }}
         projectName={enquiryProject}
       />
-      
       <NeuralSearch 
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
       />
-
       <ExitIntentModal />
     </div>
   );
