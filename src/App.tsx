@@ -45,6 +45,7 @@ import { CommandPalette } from './components/ui/CommandPalette';
 import { FOMOEngine } from './components/ui/FOMOEngine';
 import { CookieConsent } from './components/ui/CookieConsent';
 import { Layout } from './components/layout/Layout';
+import { ScrollToTop } from './components/layout/ScrollToTop';
 import { CustomCursor } from './components/ui/CustomCursor';
 import { ExitIntentOffer } from './components/ui/ExitIntentOffer';
 import { useEffect } from 'react';
