@@ -19,6 +19,6 @@ export const RERA_REGISTRY = [
     { title: "Sixteenth Avenue (R16)", rera: "P52100009640", status: "Completed" }
 ];
 
-export const getReraLink = (rera: string) => `https://maharera.mahaonline.gov.in/SearchList/Search?rera=${rera}`;
+export const getReraLink = (rera: string) => `https://maharera.maharashtra.gov.in/`;
 
-export const RERA_DISCLAIMER = "Disclaimer: All project information, including but not limited to the RERA registration numbers, specifications, and layout plans, is synchronized with the MahaRERA portal. Life Republic is a 390-acre township by Kolte-Patil Developers. Verify all details on maharera.mahaonline.gov.in.";
+export const RERA_DISCLAIMER = "Disclaimer: All project information, including but not limited to the RERA registration numbers, specifications, and layout plans, is synchronized with the MahaRERA portal. Life Republic is a 390-acre township by Kolte-Patil Developers. Verify all details on maharera.maharashtra.gov.in.";

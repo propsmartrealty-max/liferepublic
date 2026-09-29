@@ -38,7 +38,7 @@ export const Disclaimer: React.FC = () => {
                             <li><strong>24K Espada:</strong> P52100002646</li>
                             <li><strong>Universe:</strong> P52100027629</li>
                         </ul>
-                        <p>For more details, visit the official MahaRERA website at <a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noopener noreferrer">https://maharera.mahaonline.gov.in</a>.</p>
+                        <p>For more details, visit the official MahaRERA website at <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">https://maharera.maharashtra.gov.in</a>.</p>
                     </div>
                 </div>
             </div>

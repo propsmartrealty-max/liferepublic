@@ -263,7 +263,7 @@ export const TownshipGuide: React.FC = () => {
                             ))}
                         </div>
                         <p className="text-[10px] text-[#5F6368] mt-8 text-center tracking-tight font-medium italic">
-                            Verification available at maharera.mahaonline.gov.in under registered projects.
+                            Verification available at maharera.maharashtra.gov.in under registered projects.
                         </p>
                     </div>
 

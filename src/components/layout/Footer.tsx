@@ -266,7 +266,7 @@ export const Footer: React.FC = () => {
                         ))}
                     </div>
                     <p className="text-[10px] text-text-muted mt-4 italic">
-                        The projects have been registered via MahaRERA registration numbers and are available on the website <a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noreferrer" className="text-text-muted hover:text-[#202124] hover:rainbow-text-clip font-bold underline">https://maharera.mahaonline.gov.in</a> under registered projects.
+                        The projects have been registered via MahaRERA registration numbers and are available on the website <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noreferrer" className="text-text-muted hover:text-[#202124] hover:rainbow-text-clip font-bold underline">https://maharera.maharashtra.gov.in</a> under registered projects.
                     </p>
                 </div>
 
