@@ -1,4 +1,5 @@
 export const onRequest: PagesFunction = async (context) => {
+
     const url = new URL(context.request.url);
     const response = await context.next();
 
@@ -26,7 +27,7 @@ export const onRequest: PagesFunction = async (context) => {
     const contentType = headers.get('content-type') || '';
 
     // 2. Advanced Edge HTML Rewriting & Minification
-    if (contentType.includes('text/html')) {
+    if (contentType.includes('text/html') && response.status === 200) {
         let html = await response.text();
         
         // Edge HTML Minification: Strip out excessive whitespace and comments
@@ -38,6 +39,7 @@ export const onRequest: PagesFunction = async (context) => {
         const path = url.pathname;
         let title = "Kolte Patil Life Republic Pune | Price, Projects, 2 & 3 BHK, Reviews";
         let desc = "Explore Kolte Patil Life Republic Pune near Hinjewadi. Compare current projects, 2 & 3 BHK homes, prices, floor plans, amenities, RERA details, location, connectivity and resale options.";
+        let schemaHtml = "";
 
         if (path.includes('/projects/')) {
             const projectSlug = path.split('/').pop();
@@ -227,4 +229,11 @@ export const onRequest: PagesFunction = async (context) => {
         statusText: response.statusText,
         headers
     });
+
+    } catch (e: any) {
+        return new Response(`Worker Exception:\n${e.message}\n\nStack:\n${e.stack}`, { 
+            status: 500,
+            headers: { 'Content-Type': 'text/plain' }
+        });
+    }
 };
