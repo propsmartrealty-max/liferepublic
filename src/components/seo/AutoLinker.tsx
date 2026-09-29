@@ -27,7 +27,7 @@ export const AutoLinker: React.FC<AutoLinkerProps> = ({ text, className = "" }) 
     const processText = useMemo(() => {
         if (!text) return [];
 
-        let currentText = text;
+        const currentText = text;
         const result: (string | JSX.Element)[] = [];
         
         // Build a regex pattern from our keywords (longest first to prevent partial matches)

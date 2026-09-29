@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle, ArrowRight, User, Phone, MapPin, Building2, Calendar, Clock } from 'lucide-react';
+import { X, CheckCircle, ArrowRight, MapPin, Building2 } from 'lucide-react';
 import { api } from '../../services/api';
 
 interface EnquiryModalProps {

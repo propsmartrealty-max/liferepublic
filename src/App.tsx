@@ -1,6 +1,6 @@
 import { GlobalErrorBoundary } from './components/ui/GlobalErrorBoundary';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
+import { Suspense } from 'react';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import { Amenities } from './pages/Amenities';

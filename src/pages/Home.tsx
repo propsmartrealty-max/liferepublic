@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { motion, useScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { KineticText } from '../components/ui/KineticText';
 import { MagneticButton } from '../components/ui/MagneticButton';

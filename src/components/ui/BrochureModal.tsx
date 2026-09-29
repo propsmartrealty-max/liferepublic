@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle, Download, FileText, ArrowRight } from 'lucide-react';
+import { X, CheckCircle, Download, FileText } from 'lucide-react';
 import { api } from '../../services/api';
 
 interface BrochureModalProps {

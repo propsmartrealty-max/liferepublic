@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, MapPin } from 'lucide-react';
-import { Button } from '../components/ui/Button';
 import { SEO } from '../components/seo/SEO';
 
 
@@ -105,7 +104,7 @@ export const Contact: React.FC = () => {
 
                             <div className="mt-8 rounded-xl overflow-hidden shadow-lg border border-white/20 h-[300px]">
                                 <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.996160105342!2d73.71261537446698!3d18.57416346752763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc6e326466f%3A0xc07c3905cf6ce12a!2sKolte%20Patil%20Life%20Republic!5e0!3m2!1sen!2sin!4v1704100000000!5m2!1sen!2sin" 
+                                    src="https://maps.google.com/maps?q=Kolte-Patil%20Life%20Republic%2C%20Marunji%2C%20Pune&t=m&z=15&output=embed&iwloc=near" 
                                     width="100%" 
                                     height="100%" 
                                     style={{ border: 0 }} 

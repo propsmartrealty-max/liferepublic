@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Calculator, TrendingUp, IndianRupee, PieChart } from 'lucide-react';
+import { Calculator, TrendingUp, PieChart } from 'lucide-react';
 import { CLUSTERS } from '../../lib/clusters';
 
 export const ROICalculator = () => {
@@ -12,7 +11,7 @@ export const ROICalculator = () => {
 
     // Extract numerical value from price string (e.g., "₹89 Lakhs*" -> 8900000)
     const getBasePrice = (priceStr: string) => {
-        let val = parseFloat(priceStr.replace(/[^0-9.]/g, ''));
+        const val = parseFloat(priceStr.replace(/[^0-9.]/g, ''));
         if (priceStr.toLowerCase().includes('cr')) return val * 10000000;
         if (priceStr.toLowerCase().includes('lac') || priceStr.toLowerCase().includes('lakh')) return val * 100000;
         return val;

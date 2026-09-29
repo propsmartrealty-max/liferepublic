@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import QRCode from 'react-qr-code';
 import { CLUSTERS } from '../lib/clusters';
 import { SEO } from '../components/seo/SEO';
-import { MapPin, CheckCircle, Download, Calendar, Layers, ShieldCheck } from 'lucide-react';
+import { CheckCircle, Download, Calendar, Layers, ShieldCheck } from 'lucide-react';
 
 const ProjectDetails: React.FC = () => {
     const { slug } = useParams<{ slug: string }>();

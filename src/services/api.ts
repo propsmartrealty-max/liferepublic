@@ -4,7 +4,7 @@ export const api = {
     leads: {
         create: async (lead: any) => {
             try {
-                let formData = new FormData();
+                const formData = new FormData();
                 formData.append('name', lead.name);
                 formData.append('email', lead.email || 'N/A');
                 formData.append('phone', lead.phone);

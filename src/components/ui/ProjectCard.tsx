@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { MapPin, Clock, Sparkles, AlertCircle, X, Maximize2, ShieldCheck, Layers, Calendar, Download } from 'lucide-react';
-import QRCode from 'react-qr-code';
 
 interface Configuration {
     type: string;

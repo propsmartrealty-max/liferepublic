@@ -45,6 +45,85 @@ export const onRequest: PagesFunction = async (context) => {
             const projectSlug = path.split('/').pop();
             title = `${projectSlug ? projectSlug.charAt(0).toUpperCase() + projectSlug.slice(1).replace(/-/g, ' ') : 'Premium Project'} | Kolte Patil Life Republic`;
             desc = `Secure your future in our premium ${projectSlug} cluster. View exclusive layouts, exact pricing, and secure your site visit today.`;
+        
+        } else if (path === '/') {
+            title = "Kolte Patil Life Republic Township | Hinjewadi Pune #1 Real Estate";
+            desc = "Ranked #1 Township in Pune. Explore Kolte Patil Life Republic, a 390-acre integrated smart city in Hinjewadi. Discover luxury 2, 3 BHK flats and villas.";
+            const rootGraph = {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://life-republic.in/#website",
+                        "url": "https://life-republic.in/",
+                        "name": "Kolte Patil Life Republic",
+                        "description": "Top-rated properties near me in Hinjewadi. Premium 390-acre integrated township in Pune.",
+                        "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": "https://life-republic.in/projects?q={search_term_string}",
+                            "query-input": "required name=search_term_string"
+                        }
+                    },
+                    {
+                        "@type": "RealEstateAgent",
+                        "@id": "https://life-republic.in/#organization",
+                        "name": "Kolte Patil Life Republic",
+                        "url": "https://life-republic.in",
+                        "logo": "https://life-republic.in/logo.png",
+                        "image": "https://life-republic.in/images/home/master-layout-full.jpg",
+                        "telephone": "+91-7744009295",
+                        "email": "propsmartrealty@gmail.com",
+                        "priceRange": "₹85 Lakhs - ₹3.5 Cr",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "Life Republic, Marunji, Hinjewadi",
+                            "addressLocality": "Pune",
+                            "addressRegion": "Maharashtra",
+                            "postalCode": "411057",
+                            "addressCountry": "IN"
+                        },
+                        "geo": {
+                            "@type": "GeoCoordinates",
+                            "latitude": 18.6186,
+                            "longitude": 73.7144
+                        },
+                        "sameAs": [
+                            "https://www.facebook.com/KoltePatil/",
+                            "https://www.instagram.com/koltepatil/"
+                        ]
+                    },
+                    {
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "What is the starting price of flats in Kolte Patil Life Republic?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "The starting price is roughly ₹89 Lakhs for a premium 2 BHK in the Qrious and Atmos clusters."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "Is Kolte Patil Life Republic MahaRERA registered?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes, all active clusters are MahaRERA registered. For example, Canvas is P52100077008."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "How far is Life Republic from Hinjewadi IT Park?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "It is located just 4.5 km from Hinjewadi Phase 1, making it a 10-15 minute drive for IT professionals."
+                                }
+                            }
+                        ]
+                    }
+                ]
+            };
+            schemaHtml = `\n<script type="application/ld+json">\n${JSON.stringify(rootGraph, null, 2)}\n</script>\n`;
         } else if (path === '/township-guide') {
             title = "390 Acre Township Guide | Life Republic Pune";
         } else if (path === '/amenities') {
@@ -198,14 +277,24 @@ export const onRequest: PagesFunction = async (context) => {
             schemaHtml = `\n<script type="application/ld+json">\n${JSON.stringify(realEstateSchema, null, 2)}\n</script>\n`;
         }
 
+        const ogImage = "https://life-republic.in/images/home/master-layout-full.jpg";
+        const currentUrl = `https://${url.hostname}${url.pathname === '/' ? '' : url.pathname}`;
+        
         const dynamicMeta = `
             <title>${title}</title>
             <meta name="description" content="${desc}" />
             <meta property="og:title" content="${title}" />
             <meta property="og:description" content="${desc}" />
+            <meta property="og:image" content="${ogImage}" />
+            <meta property="og:url" content="${currentUrl}" />
+            <meta property="og:type" content="website" />
+            <meta property="og:site_name" content="Kolte Patil Life Republic" />
+            <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content="${title}" />
             <meta name="twitter:description" content="${desc}" />
-            <link rel="canonical" href="https://${url.hostname}${url.pathname === '/' ? '' : url.pathname}" />
+            <meta name="twitter:image" content="${ogImage}" />
+            <meta name="twitter:site" content="@KoltePatil" />
+            <link rel="canonical" href="${currentUrl}" />
             <meta name="cf-edge-optimized" content="true" />
             <meta name="cf-edge-location" content="${city}, ${country}" />
             ${schemaHtml}
