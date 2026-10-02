@@ -34,7 +34,6 @@ export const api = {
                 formData.append('_template', 'table');
                 if (lead.email && lead.email.includes('@')) {
                     formData.append('_replyto', lead.email);
-                    formData.append('_autoresponse', `Dear ${leadName},\n\nThank you for your interest in Kolte-Patil Life Republic, Hinjewadi Pune.\n\nWe have received your enquiry for ${clusterName} (${config}). Our senior property relationship manager will connect with you shortly to share the latest price sheets, floor plans, and schedule your private site visit.\n\nWarm regards,\nSales & Relations Team\nKolte-Patil Life Republic, Hinjewadi\nPhone: +91 77440 09295\nWeb: https://life-republic.in`);
                 }
 
                 // Table Fields Formatted in Title-Case for Clean Email Display
