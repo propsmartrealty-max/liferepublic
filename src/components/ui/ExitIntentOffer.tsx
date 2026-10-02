@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Download, Lock, ArrowRight, ShieldCheck } from 'lucide-react';
+import { api } from '../../services/api';
 
 export const ExitIntentOffer: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -25,11 +26,20 @@ export const ExitIntentOffer: React.FC = () => {
 
     if (!isVisible) return null;
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
-        const name = formData.get('name');
-        const mobile = formData.get('mobile');
+        const name = (formData.get('name') as string)?.trim() || 'Valued Visitor';
+        const mobile = (formData.get('mobile') as string)?.trim() || '';
+
+        try {
+            api.leads.create({
+                name,
+                phone: mobile,
+                enquiryType: 'Exit Intent VIP Price List Request',
+                message: 'Requested VIP Pre-launch Price List & Floor Inventory via Exit Modal'
+            }).catch(() => {});
+        } catch {}
         
         const message = `Hello, I would like to access the Private Beta Price List for Life Republic.
 

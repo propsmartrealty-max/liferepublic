@@ -1,32 +1,126 @@
 import { projectsRegistry } from '../data/projects';
 
+export interface LeadSubmission {
+    name: string;
+    phone: string;
+    email?: string;
+    cluster?: string;
+    project_id?: string;
+    configuration?: string;
+    enquiryType?: string;
+    type?: string;
+    message?: string;
+    source?: string;
+    url?: string;
+}
+
 export const api = {
     leads: {
-        create: async (lead: any) => {
+        create: async (lead: LeadSubmission) => {
             try {
                 const formData = new FormData();
-                formData.append('name', lead.name);
-                formData.append('email', lead.email || 'N/A');
-                formData.append('phone', lead.phone);
-                formData.append('_subject', `New Lead from Life Republic Website - ${lead.name}`);
+                const leadName = lead.name?.trim() || 'Valued Visitor';
+                const leadPhone = lead.phone?.trim() || '';
+                const leadEmail = lead.email?.trim() || 'Not Provided';
+                const clusterName = lead.cluster || lead.project_id || 'Kolte Patil Life Republic';
+                const config = lead.configuration || '2 / 3 BHK';
+                const purpose = lead.enquiryType || lead.type || 'Site Visit & Pricing Inquiry';
+                const currentUrl = lead.url || (typeof window !== 'undefined' ? window.location.href : 'https://life-republic.in');
+                const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+
+                // FormSubmit Configuration Directives
+                formData.append('_subject', `🚨 Lead: ${leadName} - ${clusterName} (${config})`);
                 formData.append('_captcha', 'false');
                 formData.append('_template', 'table');
-                
-                const detailedMessage = `
-Cluster / Project: ${lead.project_id || 'Not Specified'}
-Message: ${lead.message || 'No additional message'}
-                `.trim();
-                
-                formData.append('message', detailedMessage);
+                if (lead.email && lead.email.includes('@')) {
+                    formData.append('_replyto', lead.email);
+                    formData.append('_autoresponse', `Dear ${leadName},\n\nThank you for your interest in Kolte-Patil Life Republic, Hinjewadi Pune.\n\nWe have received your enquiry for ${clusterName} (${config}). Our senior property relationship manager will connect with you shortly to share the latest price sheets, floor plans, and schedule your private site visit.\n\nWarm regards,\nSales & Relations Team\nKolte-Patil Life Republic, Hinjewadi\nPhone: +91 77440 09295\nWeb: https://life-republic.in`);
+                }
+
+                // Table Fields Formatted in Title-Case for Clean Email Display
+                formData.append('Applicant Name', leadName);
+                formData.append('Mobile Number', leadPhone);
+                formData.append('Email Address', leadEmail);
+                formData.append('Interested Cluster', clusterName);
+                formData.append('Preferred Typology', config);
+                formData.append('Inquiry Category', purpose);
+                formData.append('Customer Message', lead.message || 'Interested in receiving brochure, cost sheet, and booking site tour.');
+                formData.append('Source Touchpoint', lead.source || 'Website Modal');
+                formData.append('Submission Timestamp (IST)', timestamp);
+                formData.append('Page Origin URL', currentUrl);
+
+                // Embedded HTML Summary Table for Rich Email Rendering
+                const htmlLeadTable = `
+<div style="font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 620px; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+    <div style="background: linear-gradient(135deg, #090d16 0%, #1e293b 100%); color: #ffffff; padding: 20px 24px; border-bottom: 3px solid #e11d48;">
+        <h2 style="margin: 0; font-size: 20px; font-weight: 800; letter-spacing: 0.5px;">🏛️ KOLTE-PATIL LIFE REPUBLIC</h2>
+        <p style="margin: 4px 0 0 0; font-size: 13px; color: #94a3b8;">High-Intent Buyer Lead from Official Monograph</p>
+    </div>
+    <div style="padding: 24px; background: #ffffff;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+            <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 10px 0; color: #64748b; font-weight: 600; width: 38%;">Client Name:</td>
+                <td style="padding: 10px 0; color: #0f172a; font-weight: 700; font-size: 15px;">${leadName}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Phone Number:</td>
+                <td style="padding: 10px 0; color: #0f172a; font-weight: 700;"><a href="tel:${leadPhone}" style="color: #2563eb; text-decoration: none;">📞 ${leadPhone}</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Email Address:</td>
+                <td style="padding: 10px 0; color: #0f172a;">${leadEmail}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Preferred Cluster:</td>
+                <td style="padding: 10px 0; color: #e11d48; font-weight: 700;">${clusterName}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Configuration:</td>
+                <td style="padding: 10px 0; color: #0f172a; font-weight: 600;">${config}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Inquiry Type:</td>
+                <td style="padding: 10px 0; color: #047857; font-weight: 700; background: #ecfdf5; padding: 4px 8px; border-radius: 4px; display: inline-block;">${purpose}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Customer Note:</td>
+                <td style="padding: 10px 0; color: #334155;">${lead.message || 'Direct callback requested'}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Page Source:</td>
+                <td style="padding: 10px 0; color: #334155; font-size: 12px; word-break: break-all;">${currentUrl}</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Received Time:</td>
+                <td style="padding: 10px 0; color: #64748b; font-size: 12px;">${timestamp}</td>
+            </tr>
+        </table>
+        <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid #e2e8f0; text-align: center;">
+            <a href="https://wa.me/91${leadPhone.replace(/[^0-9]/g, '').slice(-10)}?text=Hello%20${encodeURIComponent(leadName)},%20thank%20you%20for%20enquiring%20about%20Kolte%20Patil%20Life%20Republic." 
+               style="background: #25D366; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 9999px; font-weight: bold; font-size: 14px; display: inline-block;">
+                💬 Open WhatsApp Chat with Client
+            </a>
+        </div>
+    </div>
+</div>
+`.trim();
+
+                formData.append('Executive Lead Card (HTML)', htmlLeadTable);
 
                 const response = await fetch('https://formsubmit.co/ajax/propsmartrealty@gmail.com', {
                     method: 'POST',
                     body: formData,
-                    headers: { 'Accept': 'application/json' }
+                    headers: {
+                        'Accept': 'application/json'
+                    }
                 });
                 
-                if (!response.ok) throw new Error('Failed to dispatch lead');
-                return await response.json();
+                if (!response.ok) {
+                    throw new Error(`Failed to dispatch lead: HTTP ${response.status}`);
+                }
+                
+                const result = await response.json();
+                return result;
             } catch (error) {
                 console.error('Lead Capture Error:', error);
                 throw error;

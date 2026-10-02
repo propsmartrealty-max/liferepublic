@@ -20,10 +20,14 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [enquiryProject, setEnquiryProject] = useState<string | undefined>(undefined);
+  const [enquiryType, setEnquiryType] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     const handleEnquiryOpen = (e: any) => {
-        setEnquiryProject(e.detail?.projectName);
+        const proj = e.detail?.project || e.detail?.projectName || e.detail?.cluster;
+        const typ = e.detail?.type || e.detail?.source || 'Priority Site Visit';
+        setEnquiryProject(proj);
+        setEnquiryType(typ);
         setIsEnquiryOpen(true);
     };
     const handleSearchOpen = () => setIsSearchOpen(true);
@@ -73,8 +77,10 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
         onClose={() => {
             setIsEnquiryOpen(false);
             setEnquiryProject(undefined);
+            setEnquiryType(undefined);
         }}
         projectName={enquiryProject}
+        enquiryType={enquiryType}
       />
       <NeuralSearch 
         isOpen={isSearchOpen}

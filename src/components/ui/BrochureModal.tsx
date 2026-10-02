@@ -23,7 +23,9 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose, p
                 name: formData.get('name') as string,
                 phone: formData.get('phone') as string,
                 email: formData.get('email') as string,
+                cluster: projectName,
                 project_id: projectName,
+                enquiryType: 'Brochure PDF Download',
                 message: `Brochure Download Request: ${projectName}`
             });
             setIsSuccess(true);
