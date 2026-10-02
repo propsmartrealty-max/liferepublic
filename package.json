@@ -13,7 +13,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "build:ssg": "npm run build",
-    "index": "npx tsx scripts/ping-google.ts"
+    "index": "node scripts/google-index.cjs"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
