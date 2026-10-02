@@ -7,9 +7,9 @@ const __dirname = path.dirname(__filename);
 
 // MASSSIVE SCALED MATRIX (Dominating Pune West Ecosystem)
 const pSEOMatrix = {
-    intents: ['luxury', 'premium', 'affordable', 'ready-possession', 'under-construction', 'investment', 'new-launch', 'best', 'top', 'high-roi', 'residential', 'township', 'pre-launch'],
+    intents: ['luxury', 'premium', 'affordable', 'ready-possession', 'under-construction', 'investment', 'new-launch', 'best', 'top', 'high-roi', 'residential', 'township', 'pre-launch', 'walk-to-work'],
     configurations: ['1-bhk-flats', '2-bhk-flats', '3-bhk-flats', '4-bhk-flats', '5-bhk-flats', 'duplex', 'penthouse', 'villas', 'row-houses', 'twin-bungalows', 'plots', 'studio-apartments'],
-    locations: ['hinjewadi', 'hinjewadi-phase-1', 'hinjewadi-phase-2', 'hinjewadi-phase-3', 'wakad', 'baner', 'balewadi', 'mahalunge', 'punawale', 'tathawade', 'bavdhan', 'sus', 'pcmc', 'pune-west', 'it-park', 'marunji', 'kasarsai'],
+    locations: ['hinjewadi', 'hinjewadi-phase-1', 'hinjewadi-phase-2', 'hinjewadi-phase-3', 'wakad', 'baner', 'balewadi', 'mahalunge', 'punawale', 'tathawade', 'bavdhan', 'sus', 'pcmc', 'pune-west', 'it-park', 'marunji', 'kasarsai', 'pirangut', 'hinjewadi-phase-4', 'gahunje', 'mahalunge-maan'],
     entities: ['kolte-patil-life-republic', 'life-republic-township', 'atmos', 'aros', 'universe', 'canvas', '24k-espada', 'echoes']
 };
 

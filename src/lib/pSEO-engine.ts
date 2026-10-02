@@ -49,7 +49,11 @@ export const pSEOMatrix = {
         { key: 'pune-west', title: 'Pune West', commute: '12 mins (6.5 km)', distance: '6.5 km' },
         { key: 'it-park', title: 'Hinjewadi IT Park', commute: '5 mins (3.0 km)', distance: '3.0 km' },
         { key: 'marunji', title: 'Marunji Road', commute: 'Walking Distance (0 km)', distance: '0 km' },
-        { key: 'kasarsai', title: 'Kasarsai', commute: '7 mins (4.0 km)', distance: '4.0 km' }
+        { key: 'kasarsai', title: 'Kasarsai', commute: '7 mins (4.0 km)', distance: '4.0 km' },
+        { key: 'pirangut', title: 'Pirangut Corridor', commute: '18 mins (12.0 km)', distance: '12.0 km' },
+        { key: 'hinjewadi-phase-4', title: 'Hinjewadi Phase 4', commute: '10 mins (5.5 km)', distance: '5.5 km' },
+        { key: 'gahunje', title: 'Gahunje Expressway', commute: '12 mins (8.0 km)', distance: '8.0 km' },
+        { key: 'mahalunge-maan', title: 'Mahalunge-Maan Hi-Tech City', commute: '7 mins (4.0 km)', distance: '4.0 km' }
     ],
     entities: [
         { key: 'kolte-patil-life-republic', title: 'Kolte Patil Life Republic' },
