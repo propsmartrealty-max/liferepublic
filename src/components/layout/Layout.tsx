@@ -9,6 +9,7 @@ import { EnquiryModal } from '../ui/EnquiryModal';
 import { NeuralSearch } from '../ui/NeuralSearch';
 import { ExitIntentModal } from '../ui/ExitIntentModal';
 import { Breadcrumbs } from '../seo/Breadcrumbs';
+import { TownshipAgent } from '../sections/TownshipAgent';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -72,6 +73,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
       <Footer />
       <FloatingContact />
       <WhatsAppWidget />
+      <TownshipAgent />
       <EnquiryModal 
         isOpen={isEnquiryOpen}
         onClose={() => {

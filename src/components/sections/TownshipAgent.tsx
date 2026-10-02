@@ -1,13 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Send, Sparkles, Map, Phone, BrainCircuit } from 'lucide-react';
+import { X, Send, Sparkles, Map, Phone, BrainCircuit, MessageSquare, ExternalLink, Calendar } from 'lucide-react';
 import { aiService } from '../../services/ai';
 import { usePersonalizationStore } from '../../lib/personalizationStore';
 
 export const TownshipAgent: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<{ role: 'user' | 'agent'; content: string }[]>([
-        { role: 'agent', content: "I am the Neural Architect. How may I synthesize the 390-acre Life Republic ecosystem for you today?" }
+        { 
+            role: 'agent', 
+            content: "Welcome to Kolte-Patil Life Republic. I am your AI Township Concierge. How may I assist you with cluster availability, floor plans, pricing, or scheduling a VIP site visit?" 
+        }
     ]);
     const [input, setInput] = useState('');
     const [isTyping, setIsTyping] = useState(false);
@@ -27,9 +30,8 @@ export const TownshipAgent: React.FC = () => {
         setInput('');
         setMessages(prev => [...prev, { role: 'user', content: query }]);
         setIsTyping(true);
-        updateIntentScore(5); // Increment intent for interacting with AI
+        updateIntentScore(5);
 
-        // Prepare history for Gemini
         const history = messages.map(m => ({
             role: m.role === 'user' ? 'user' : 'model' as 'user' | 'model',
             parts: [{ text: m.content }]
@@ -39,133 +41,161 @@ export const TownshipAgent: React.FC = () => {
         
         setIsTyping(false);
         setMessages(prev => [...prev, { role: 'agent', content: response }]);
+    };
 
-        // Intent Handoff Logic: If AI suggests 'Concierge' or user asks for price/visit
-        if (response.toLowerCase().includes('concierge') || response.toLowerCase().includes('synthesis tour')) {
-            setTimeout(() => {
-                window.dispatchEvent(new CustomEvent('open-sovereign-concierge'));
-            }, 1500);
-        }
+    const handleOpenEnquiry = (type: string) => {
+        window.dispatchEvent(new CustomEvent('open-enquiry-modal', {
+            detail: {
+                project: 'Life Republic Township',
+                type: `AI Concierge: ${type}`
+            }
+        }));
     };
 
     return (
         <>
-            {/* Floating Trigger with Neural Pulse */}
+            {/* Floating Trigger: Positioned on Bottom Left to avoid collision with WhatsApp Widget */}
             <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setIsOpen(true)}
-                className="fixed bottom-8 right-8 z-[60] w-16 h-16 bg-white text-[#202124] rounded-full shadow-2xl flex items-center justify-center border border-white/20 backdrop-blur-xl group overflow-hidden"
+                className="fixed bottom-6 left-6 z-50 flex items-center gap-2.5 px-4 py-3 bg-[#151822] text-white rounded-full shadow-2xl border border-white/20 backdrop-blur-md group hover:bg-[#1f2433] transition-all"
+                aria-label="Open AI Township Concierge"
             >
-                <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <BrainCircuit className="relative z-10" size={24} />
-                <motion.div 
-                    animate={{ scale: [1, 1.5], opacity: [0.5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute w-full h-full bg-accent rounded-full -z-0"
-                />
+                <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-accent/20 text-[#E5C07B]">
+                    <BrainCircuit size={18} />
+                    <span className="absolute -top-0.5 -right-0.5 flex h-2.5 w-2.5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                    </span>
+                </div>
+                <div className="text-left hidden sm:block">
+                    <div className="text-xs font-bold leading-tight">AI Concierge</div>
+                    <div className="text-[10px] text-gray-400 font-medium">Ask Anything</div>
+                </div>
             </motion.button>
 
+            {/* Chat Modal Interface */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9, y: 100 }}
+                        initial={{ opacity: 0, scale: 0.92, y: 40 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.9, y: 100 }}
-                        className="fixed bottom-28 right-8 z-[60] w-[calc(100vw-2rem)] md:w-[400px] bg-[#151822] border border-white/20 rounded-[24px] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] border border-white/20 overflow-hidden flex flex-col h-[650px]"
+                        exit={{ opacity: 0, scale: 0.92, y: 40 }}
+                        transition={{ duration: 0.25, ease: 'easeOut' }}
+                        className="fixed bottom-20 left-4 sm:left-6 z-50 w-[calc(100vw-2rem)] sm:w-[410px] bg-white rounded-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)] border border-gray-200 overflow-hidden flex flex-col h-[560px] max-h-[85vh]"
                     >
-                        {/* Premium Header */}
-                        <div className="p-8 bg-white text-[#202124] relative">
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
-                            <div className="relative z-10 flex items-center justify-between">
-                                <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 bg-[#151822] border border-white/20/10 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/20">
-                                        <Sparkles size={24} className="rainbow-text-clip font-bold" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-sans font-bold text-xl">Neural Architect</h3>
-                                        <div className="flex items-center gap-2">
-                                            <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse"></span>
-                                            <p className="text-[10px] tracking-tight font-semibold text-[#202124]/50 font-bold">Life Republic v5.0</p>
-                                        </div>
-                                    </div>
+                        {/* Header */}
+                        <div className="p-4 bg-[#151822] text-white flex items-center justify-between border-b border-gray-800">
+                            <div className="flex items-center gap-3">
+                                <div className="w-9 h-9 rounded-xl bg-accent/20 flex items-center justify-center text-[#E5C07B] border border-white/10">
+                                    <Sparkles size={18} />
                                 </div>
-                                <button onClick={() => setIsOpen(false)} className="p-3 hover:bg-[#151822] border border-white/20/10 rounded-2xl transition-colors">
-                                    <X size={24} />
-                                </button>
+                                <div>
+                                    <h3 className="font-bold text-sm leading-tight text-white flex items-center gap-1.5">
+                                        Township AI Concierge
+                                        <span className="px-1.5 py-0.5 bg-emerald-900/60 text-emerald-400 text-[9px] rounded font-semibold border border-emerald-700/50">
+                                            Online
+                                        </span>
+                                    </h3>
+                                    <p className="text-[11px] text-gray-400 font-medium">
+                                        Kolte-Patil Life Republic Knowledge Base
+                                    </p>
+                                </div>
                             </div>
+                            <button 
+                                onClick={() => setIsOpen(false)} 
+                                className="p-1.5 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
+                                aria-label="Close Concierge"
+                            >
+                                <X size={20} />
+                            </button>
                         </div>
 
-                        {/* Chat Body */}
-                        <div ref={scrollRef} className="flex-1 overflow-y-auto p-8 space-y-8 scroll-smooth bg-[#F8F9FA]/30">
+                        {/* Chat Messages Body */}
+                        <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50/50 text-sm">
                             {messages.map((msg, idx) => (
                                 <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
                                     key={idx}
+                                    initial={{ opacity: 0, y: 6 }}
+                                    animate={{ opacity: 1, y: 0 }}
                                     className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                                 >
-                                    <div className={`max-w-[90%] p-5 rounded-[1.5rem] text-sm leading-relaxed shadow-sm ${
+                                    <div className={`max-w-[88%] p-3.5 rounded-2xl text-xs sm:text-sm leading-relaxed shadow-sm ${
                                         msg.role === 'user' 
-                                        ? 'bg-white text-[#202124] rounded-tr-none' 
-                                        : 'bg-white text-gray-300 border border-white/20 rounded-tl-none'
+                                        ? 'bg-[#151822] text-white rounded-br-none' 
+                                        : 'bg-white text-[#202124] border border-gray-200 rounded-bl-none'
                                     }`}>
-                                        {msg.content}
+                                        <div dangerouslySetInnerHTML={{ 
+                                            __html: msg.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') 
+                                        }} />
                                     </div>
                                 </motion.div>
                             ))}
                             {isTyping && (
                                 <div className="flex justify-start">
-                                    <div className="bg-[#151822] border border-white/20 p-5 rounded-[1.5rem] rounded-tl-none border border-white/20 flex gap-2">
-                                        <div className="w-2 h-2 bg-accent rounded-full animate-bounce" />
-                                        <div className="w-2 h-2 bg-accent/60 rounded-full animate-bounce [animation-delay:0.2s]" />
-                                        <div className="w-2 h-2 bg-accent/30 rounded-full animate-bounce [animation-delay:0.4s]" />
+                                    <div className="bg-white border border-gray-200 p-3 rounded-2xl rounded-bl-none flex items-center gap-1.5 shadow-sm">
+                                        <div className="w-2 h-2 bg-[#E5C07B] rounded-full animate-bounce" />
+                                        <div className="w-2 h-2 bg-[#E5C07B] rounded-full animate-bounce [animation-delay:0.2s]" />
+                                        <div className="w-2 h-2 bg-[#E5C07B] rounded-full animate-bounce [animation-delay:0.4s]" />
                                     </div>
                                 </div>
                             )}
                         </div>
 
-                        {/* Intelligent Suggestions */}
-                        <div className="px-8 py-4 flex gap-3 overflow-x-auto no-scrollbar bg-white">
+                        {/* Suggested Prompt Chips */}
+                        <div className="px-3 py-2 bg-white border-t border-gray-100 flex gap-2 overflow-x-auto no-scrollbar">
                             {[
-                                { icon: Map, label: "Connectivity", q: "Synthesize the connectivity to Hinjewadi Phase 1" },
-                                { icon: Phone, label: "Site Visit", q: "How do I book a Spatial Synthesis tour?" },
-                                { icon: BrainCircuit, label: "Investment ROI", q: "What is the historical price trend of Life Republic?" }
-                            ].map((s, i) => (
+                                { label: "2 & 3 BHK Prices", q: "What are the latest 2 and 3 BHK prices at Life Republic?" },
+                                { label: "Commute to IT Park", q: "How far is Hinjewadi Phase 1 IT Park from the township?" },
+                                { label: "Anisha Global School", q: "Tell me about Crimson Anisha Global School inside the township." },
+                                { label: "Rental Yield & ROI", q: "What is the expected rental yield and appreciation in Hinjewadi?" }
+                            ].map((chip, i) => (
                                 <button 
                                     key={i}
-                                    onClick={() => handleSend(s.q)}
-                                    className="flex items-center gap-2 px-5 py-2.5 bg-[#F8F9FA] border border-white/20 rounded-full text-[10px] font-bold tracking-tight font-medium text-[#5F6368] hover:bg-accent/10 hover:border-accent hover:rainbow-text-clip font-bold transition-all whitespace-nowrap group"
+                                    onClick={() => handleSend(chip.q)}
+                                    className="flex-shrink-0 px-3 py-1.5 bg-gray-100 hover:bg-gray-200 text-[#202124] text-[11px] font-semibold rounded-full transition-colors"
                                 >
-                                    <s.icon size={12} className="group-hover:scale-125 transition-transform" /> {s.label}
+                                    {chip.label}
                                 </button>
                             ))}
                         </div>
 
+                        {/* Instant Action Bar */}
+                        <div className="px-3 py-2 bg-gray-50 border-t border-gray-200 flex items-center justify-between gap-2 text-xs">
+                            <button
+                                onClick={() => handleOpenEnquiry('VIP Site Visit Booking')}
+                                className="flex-1 py-1.5 px-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-bold text-[11px] transition-colors flex items-center justify-center gap-1"
+                            >
+                                <Calendar size={13} /> Book VIP Visit
+                            </button>
+                            <button
+                                onClick={() => handleOpenEnquiry('Download Price Sheet')}
+                                className="flex-1 py-1.5 px-2 bg-white hover:bg-gray-100 text-[#202124] border border-gray-300 rounded-lg font-bold text-[11px] transition-colors flex items-center justify-center gap-1"
+                            >
+                                <ExternalLink size={13} /> Price Sheet
+                            </button>
+                        </div>
+
                         {/* Input Area */}
-                        <div className="p-8 border-t border-white/20 bg-transparent">
-                            <div className="relative">
+                        <div className="p-3 bg-white border-t border-gray-100">
+                            <div className="relative flex items-center">
                                 <input
                                     type="text"
                                     value={input}
                                     onChange={(e) => setInput(e.target.value)}
-                                    onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-                                    placeholder="Ask about ROI, connectivity, or sectors..."
-                                    className="w-full pl-6 pr-14 py-5 bg-[#F8F9FA] border border-white/20 rounded-2xl focus:outline-none focus:ring-4 focus:ring-accent/10 transition-all text-sm font-medium"
+                                    onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+                                    placeholder="Ask about sectors, prices, RERA..."
+                                    className="w-full pl-3.5 pr-11 py-2.5 bg-gray-100 border border-transparent rounded-xl focus:bg-white focus:border-gray-300 focus:outline-none text-xs sm:text-sm text-[#202124] placeholder-gray-500 transition-all"
                                 />
                                 <button 
                                     onClick={() => handleSend()}
                                     disabled={!input.trim() || isTyping}
-                                    className="absolute right-2 top-2 bottom-2 w-12 bg-white text-[#202124] rounded-xl flex items-center justify-center hover:bg-accent hover:scale-[1.05] transition-all disabled:opacity-50 shadow-lg"
+                                    className="absolute right-1.5 p-2 bg-[#151822] text-white rounded-lg hover:bg-black transition-all disabled:opacity-40"
+                                    aria-label="Send Message"
                                 >
-                                    <Send size={20} />
+                                    <Send size={14} />
                                 </button>
-                            </div>
-                            <div className="mt-6 flex items-center justify-center gap-3">
-                                <div className="w-1 h-1 bg-accent rounded-full animate-ping"></div>
-                                <p className="text-[9px] text-[#5F6368] tracking-tight font-semibold font-bold">
-                                    Neural Brain Grounded in Life Republic KB
-                                </p>
                             </div>
                         </div>
                     </motion.div>

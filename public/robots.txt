@@ -1,5 +1,5 @@
 # ==========================================
-# ENTERPRISE ROBOTS PROTOCOL (GOOGLE HARDENED)
+# ENTERPRISE ROBOTS PROTOCOL (GOOGLE & AI ENGINE HARDENED)
 # ==========================================
 
 # Explicitly whitelist and prioritize Googlebot Crawlers
@@ -8,6 +8,8 @@ Allow: /
 Allow: /google-shopping-feed.xml
 Allow: /google-products.json
 Allow: /sitemap*.xml
+Allow: /llms.txt
+Allow: /llms-full.txt
 Disallow: /api/
 Disallow: /cdn-cgi/
 
@@ -28,6 +30,42 @@ Allow: /
 User-agent: Mediapartners-Google
 Allow: /
 
+# Frontier Generative AI Search Crawlers (GEO - Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: anthropic-ai
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Applebot-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
 # Bingbot & Standard Engines
 User-agent: Bingbot
 Allow: /
@@ -42,7 +80,7 @@ Disallow: /cdn-cgi/
 Disallow: /_redirects
 Disallow: /_headers
 
-# Explicit Sitemap & Product Feed Declarations
+# Explicit Sitemap & Knowledge Base Declarations
 Sitemap: https://life-republic.in/sitemap.xml
 Sitemap: https://life-republic.in/sitemap-silos-index.xml
 Sitemap: https://life-republic.in/google-shopping-feed.xml
