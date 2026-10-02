@@ -8,6 +8,7 @@ import {
     Sparkles, PhoneCall, MessageCircle, FileText
 } from 'lucide-react';
 import { Button } from '../components/ui/Button';
+import { EMICalculator } from '../components/ui/EMICalculator';
 
 export const SiloLanding: React.FC = () => {
     const { siloSlug } = useParams<{ siloSlug: string }>();
@@ -304,6 +305,12 @@ export const SiloLanding: React.FC = () => {
                                     </div>
                                 </div>
                             )}
+                            
+                            {/* Interactive Mortgage EMI & Affordability Calculator */}
+                            <EMICalculator 
+                                initialAmount={siloData.lowPriceNum} 
+                                clusterName={siloData.entity} 
+                            />
 
                             {/* Deep Dynamic SEO Article */}
                             <div className="border-t border-gray-200 pt-8 mb-12">

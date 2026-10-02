@@ -10,6 +10,7 @@ import { NeuralSearch } from '../ui/NeuralSearch';
 import { ExitIntentModal } from '../ui/ExitIntentModal';
 import { Breadcrumbs } from '../seo/Breadcrumbs';
 import { TownshipAgent } from '../sections/TownshipAgent';
+import { NRIBar } from '../ui/NRIBar';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -55,6 +56,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
 
   return (
     <div className="min-h-[75vh] bg-transparent flex flex-col font-sans selection:bg-accent selection:text-[#202124] overflow-x-hidden">
+      <NRIBar />
       <Navbar />
       <Breadcrumbs />
       <main className="flex-grow" aria-label={ariaLabel}>

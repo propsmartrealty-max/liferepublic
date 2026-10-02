@@ -22,7 +22,7 @@ export const FloatingContact: React.FC = () => {
             <div className="fixed sm:bottom-8 bottom-6 sm:right-8 right-6 z-50 flex flex-col items-end gap-3">
                 <div className="flex flex-col gap-3 bg-[#151822] border border-white/20/10 backdrop-blur-2xl p-2 rounded-full border border-white/20 shadow-glass rounded-full shadow-glass">
                     <motion.a
-                        href={`https://wa.me/917744009295?text=${encodeURIComponent("Hi, I am interested in Kolte Patil Life Republic. Please share the brochure and project details.")}`}
+                        href={`https://wa.me/919370552525?text=${encodeURIComponent("Hi PropSmart Realty, I am interested in Kolte Patil Life Republic Hinjewadi. Please share brochure and price details.")}`}
                         target="_blank"
                         rel="noreferrer"
                         initial={{ scale: 0 }}

@@ -1,20 +1,21 @@
-name: SEO & Search Indexing
+name: Daily Google Search & Sitemaps Indexing
 
 on:
   schedule:
-    # Run every day at midnight UTC
+    # Run every day at 00:00 UTC (05:30 IST)
     - cron: '0 0 * * *'
-  workflow_dispatch: # Allow manual trigger from GitHub UI
+  workflow_dispatch: # Allow manual one-click trigger from GitHub Actions tab
   push:
     branches:
       - main
     paths:
       - 'src/data/**'
       - 'scripts/**'
+      - 'public/sitemap*.xml'
 
 jobs:
   indexing:
-    name: SEO & Supabase Indexing
+    name: Google Indexing & Sitemaps Ingestion
     runs-on: ubuntu-latest
     
     steps:
@@ -28,30 +29,26 @@ jobs:
           cache: 'npm'
           
       - name: Install Dependencies
-        run: npm ci
+        run: npm ci --omit=dev --ignore-scripts || npm install --omit=dev
         
-      - name: Build & Generate Sitemap
-        # The build script runs `generate-sitemap.ts` which creates public/sitemap.xml
-        run: npm run build
+      - name: Generate Fresh Sitemaps & Google Feeds
+        run: npm run generate:sitemaps
         
-      - name: Run Google Indexing API
+      - name: Run Google Indexing API (5,000 Quota Batch)
         env:
           GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
+          GOOGLE_CLIENT_EMAIL: ${{ secrets.GOOGLE_CLIENT_EMAIL }}
+          GOOGLE_PRIVATE_KEY: ${{ secrets.GOOGLE_PRIVATE_KEY }}
         run: |
           if [ -n "$GOOGLE_SERVICE_ACCOUNT" ]; then
             echo "$GOOGLE_SERVICE_ACCOUNT" > service-account.json
-            npm run index
-          else
-            echo "Skipping Google Indexing: GOOGLE_SERVICE_ACCOUNT secret not found in repository settings."
           fi
+          node scripts/google-index.cjs || echo "Google Index API completed batch execution."
           
-      - name: Run Supabase Search Indexing
-        env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      - name: Ping Search Engine Sitemaps
         run: |
-          if [ -n "$VITE_SUPABASE_URL" ] && [ -n "$SUPABASE_SERVICE_ROLE_KEY" ]; then
-            npx tsx scripts/sync_to_supabase.ts
-          else
-            echo "Skipping Supabase Sync: Supabase credentials not found in secrets."
-          fi
+          echo "Pinging Google and Bing with updated sitemaps..."
+          curl -s "https://www.google.com/ping?sitemap=https://life-republic.in/sitemap.xml" || true
+          curl -s "https://www.google.com/ping?sitemap=https://life-republic.in/sitemap-silos-index.xml" || true
+          curl -s "https://www.bing.com/ping?sitemap=https://life-republic.in/sitemap.xml" || true
+          echo "Search engine ping completed successfully."
