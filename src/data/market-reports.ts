@@ -80,7 +80,7 @@ The Metro Line 3 doesn't just move people; it moves capital. It integrates the i
     date: "August 2026",
     readTime: "7 min read",
     category: "NRI Investment",
-    image: "https://liferepublic.in/images/project/gallery/1727440628GATE SCULPTURE.webp",
+    image: "https://liferepublic.in/images/project/gallery/1727440628GATE%20SCULPTURE.webp",
     content: `
 ## The Global Capital Influx
 

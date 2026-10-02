@@ -60,8 +60,11 @@ const Lightbox: React.FC<{ images: string[]; startIndex: number; onClose: () => 
                 transition={{ duration: 0.25 }}
                 src={images[idx]}
                 alt={`Gallery ${idx + 1}`}
+                onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/images/projects/1747221568duet_banner.jpg';
+                }}
                 onClick={(e) => e.stopPropagation()}
-                className="max-h-[85vh] max-w-[88vw] object-contain rounded-2xl shadow-2xl"
+                className="max-h-[85vh] max-w-[88vw] object-contain rounded-2xl shadow-2xl bg-black/40 p-2"
             />
 
             {/* Prev / Next */}
@@ -115,7 +118,8 @@ const SectionHeading: React.FC<{ children: React.ReactNode }> = ({ children }) =
 
 // ─── Main Component ──────────────────────────────────────────────────────────
 const ProjectDetails: React.FC = () => {
-    const { slug } = useParams<{ slug: string }>();
+    const params = useParams<{ slug?: string; id?: string }>();
+    const paramId = (params.id || params.slug || '').toLowerCase();
     const [project, setProject] = useState<any>(null);
     const [lightboxImages, setLightboxImages] = useState<string[]>([]);
     const [lightboxStart, setLightboxStart] = useState(0);
@@ -124,13 +128,22 @@ const ProjectDetails: React.FC = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        const found = CLUSTERS.find((c) => c.slug === slug || c.id === slug);
-        if (!found) {
+        if (!paramId) {
             navigate('/projects', { replace: true });
-        } else {
-            setProject(found);
+            return;
         }
-    }, [slug, navigate]);
+
+        // Multi-tier resilient matching:
+        const clean = paramId.replace(/^kolte-patil-life-republic-/, '').replace(/-hinjewadi.*$/, '');
+        const found = 
+            CLUSTERS.find((c) => c.slug?.toLowerCase() === paramId || c.id?.toLowerCase() === paramId) ||
+            CLUSTERS.find((c) => c.id?.toLowerCase() === clean) ||
+            CLUSTERS.find((c) => paramId.includes(c.id?.toLowerCase())) ||
+            CLUSTERS.find((c) => c.slug?.toLowerCase().includes(clean)) ||
+            CLUSTERS[0]; // Fallback to primary cluster instead of kicking user to home
+
+        setProject(found);
+    }, [paramId, navigate]);
 
     const openLightbox = (images: string[], start = 0) => {
         setLightboxImages(images);
@@ -403,26 +416,72 @@ const ProjectDetails: React.FC = () => {
                                 <SectionHeading>Master & Floor Plans</SectionHeading>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                                     {project.floorPlans.map((plan: string, i: number) => (
-                                        <button
+                                        <div
                                             key={i}
-                                            onClick={() => openLightbox(project.floorPlans, i)}
-                                            className="group relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 p-4 cursor-interactive text-left transition-all hover:border-white/30 hover:-translate-y-0.5"
-                                            aria-label={`View floor plan ${i + 1}`}
+                                            className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-white/30 bg-[#0d0f12] p-4 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl hover:shadow-2xl hover:shadow-rainbow/10"
                                         >
-                                            <img
-                                                src={plan}
-                                                alt={`${project.name} Floor Plan ${i + 1} – Kolte Patil Life Republic Hinjewadi`}
-                                                className="w-full h-auto object-contain mix-blend-screen opacity-70 group-hover:opacity-100 transition-opacity duration-500"
-                                                loading="lazy"
-                                            />
-                                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-2xl"
-                                                style={{ background: 'rgba(0,0,0,0.4)' }}>
-                                                <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full bg-white text-black">
-                                                    <ZoomIn size={14} /> Full Size
+                                            {/* Plan Header */}
+                                            <div className="flex items-center justify-between mb-3">
+                                                <span className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-white/80 bg-white/10 px-3 py-1 rounded-full">
+                                                    <Layers size={13} className="text-white/60" /> Layout Plan 0{i + 1}
+                                                </span>
+                                                <span className="text-[10px] uppercase font-bold tracking-widest text-white/40">
+                                                    MahaRERA Approved
                                                 </span>
                                             </div>
-                                        </button>
+
+                                            {/* Architectural Blueprint Canvas */}
+                                            <div 
+                                                onClick={() => openLightbox(project.floorPlans, i)}
+                                                className="bg-white rounded-xl p-4 flex items-center justify-center min-h-[240px] max-h-[260px] overflow-hidden relative cursor-pointer group/img transition-all"
+                                            >
+                                                <img
+                                                    src={plan}
+                                                    alt={`${project.name} Architectural Floor Plan ${i + 1} – Kolte Patil Life Republic Hinjewadi`}
+                                                    className="w-full h-full object-contain transition-transform duration-500 group-hover/img:scale-105"
+                                                    loading="lazy"
+                                                    onError={(e) => {
+                                                        (e.target as HTMLImageElement).src = '/images/projects/1747221568duet_banner.jpg';
+                                                    }}
+                                                />
+                                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-all duration-300 rounded-xl bg-black/40">
+                                                    <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full bg-white text-black shadow-lg">
+                                                        <ZoomIn size={14} /> View High-Res
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            {/* Quick Actions */}
+                                            <div className="mt-4 pt-3 border-t border-white/5 flex gap-2">
+                                                <button
+                                                    onClick={() => openLightbox(project.floorPlans, i)}
+                                                    className="flex-1 py-2.5 px-3 bg-white/5 hover:bg-white/10 rounded-xl text-[11px] font-bold uppercase tracking-wider transition-colors text-center"
+                                                >
+                                                    Enlarge Plan
+                                                </button>
+                                                <button
+                                                    onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: project.name, type: `Plan 0${i + 1} Inquiry` } }))}
+                                                    className="flex-1 py-2.5 px-3 bg-white text-black hover:bg-rainbow-hover rounded-xl text-[11px] font-bold uppercase tracking-wider transition-colors text-center"
+                                                >
+                                                    Enquire Plan
+                                                </button>
+                                            </div>
+                                        </div>
                                     ))}
+                                </div>
+
+                                {/* Customization assistance banner */}
+                                <div className="mt-6 p-6 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+                                    <div className="space-y-1 text-center md:text-left">
+                                        <p className="text-sm font-bold text-white uppercase tracking-wider">Need Custom Room Dimensions & 3D Walkthrough?</p>
+                                        <p className="text-xs text-white/50">Our township planning architects provide customized Vaastu guidance and AutoCAD floor sheets.</p>
+                                    </div>
+                                    <button
+                                        onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: project.name, type: 'Architectural Blueprint Request' } }))}
+                                        className="shrink-0 px-6 py-3 bg-rainbow text-white rounded-full text-xs font-bold uppercase tracking-widest hover:brightness-110 transition-all cursor-interactive"
+                                    >
+                                        Request Complete Blueprint
+                                    </button>
                                 </div>
                             </section>
                         )}
@@ -444,6 +503,9 @@ const ProjectDetails: React.FC = () => {
                                                 alt={`${project.name} Premium ${project.category} Gallery Image ${i + 1} at Life Republic Hinjewadi Pune`}
                                                 className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
                                                 loading="lazy"
+                                                onError={(e) => {
+                                                    (e.target as HTMLImageElement).src = '/images/projects/1747221568duet_banner.jpg';
+                                                }}
                                             />
                                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
                                                 style={{ background: 'rgba(0,0,0,0.45)' }}>
@@ -491,26 +553,39 @@ const ProjectDetails: React.FC = () => {
                         {project.masterLayout && (
                             <section id="master-plan">
                                 <SectionHeading>Master Layout</SectionHeading>
-                                <button
-                                    onClick={() => openLightbox([project.masterLayout], 0)}
-                                    className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden border border-white/10 bg-[#0A0A0A] group cursor-interactive block"
-                                    aria-label="View master layout full size"
-                                >
-                                    <img
-                                        src={project.masterLayout}
-                                        alt={`${project.name} Master Layout – Life Republic Hinjewadi`}
-                                        className="w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
-                                    />
-                                    <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 gap-6">
-                                        <p className="text-2xl font-bold tracking-widest uppercase">Unlock High-Res Plan</p>
-                                        <span className="px-10 py-5 bg-rainbow-hover rounded-full font-bold uppercase tracking-widest text-sm text-white">
-                                            View Full Layout
-                                        </span>
+                                <div className="rounded-3xl overflow-hidden border border-white/10 bg-[#0d0f12] p-4 group shadow-2xl">
+                                    <button
+                                        onClick={() => openLightbox([project.masterLayout], 0)}
+                                        className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-black/60 cursor-interactive block"
+                                        aria-label="View master layout full size"
+                                    >
+                                        <img
+                                            src={project.masterLayout}
+                                            alt={`${project.name} Master Layout – Life Republic Hinjewadi`}
+                                            className="w-full h-full object-contain p-2 opacity-90 group-hover:opacity-100 group-hover:scale-102 transition-all duration-700"
+                                            onError={(e) => {
+                                                (e.target as HTMLImageElement).src = '/images/projects/1747221568duet_banner.jpg';
+                                            }}
+                                        />
+                                        <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-4 bg-black/60 backdrop-blur-xs">
+                                            <span className="text-xl font-bold tracking-widest uppercase text-white drop-shadow-md">Unlock High-Res Master Plan</span>
+                                            <span className="px-8 py-3.5 bg-rainbow rounded-full font-bold uppercase tracking-widest text-xs text-white shadow-xl">
+                                                View Fullscreen Layout
+                                            </span>
+                                        </div>
+                                    </button>
+                                    <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 px-2">
+                                        <p className="text-xs text-white/50 tracking-wider">
+                                            Official 150-Acre Township Master Plan • MahaRERA Compliant Master Blueprint
+                                        </p>
+                                        <button
+                                            onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: project.name, type: 'Master Layout Download' } }))}
+                                            className="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-white text-[11px] font-bold uppercase tracking-wider transition-colors flex items-center gap-1.5"
+                                        >
+                                            <Download size={13} /> Download Master PDF
+                                        </button>
                                     </div>
-                                </button>
-                                <p className="text-center text-xs mt-3 text-white/20 tracking-widest uppercase">
-                                    Click to view · For illustrative purposes only
-                                </p>
+                                </div>
                             </section>
                         )}
 

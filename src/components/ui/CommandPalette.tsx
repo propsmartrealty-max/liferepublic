@@ -11,7 +11,7 @@ export const CommandPalette = () => {
     const inputRef = useRef<HTMLInputElement>(null);
     const navigate = useNavigate();
 
-    // Toggle on Cmd+K or Ctrl+K
+    // Toggle on Cmd+K, Ctrl+K, or custom event
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
@@ -23,8 +23,14 @@ export const CommandPalette = () => {
             }
         };
 
+        const handleCustomOpen = () => setIsOpen(true);
+
         document.addEventListener('keydown', handleKeyDown);
-        return () => document.removeEventListener('keydown', handleKeyDown);
+        window.addEventListener('open-command-palette', handleCustomOpen);
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('open-command-palette', handleCustomOpen);
+        };
     }, []);
 
     // Focus input when opened

@@ -132,6 +132,11 @@ function App() {
                 <ProjectDetails />
               </Layout>
             } />
+            <Route path="/project/:id" element={
+              <Layout ariaLabel="Kolte Patil Life Republic Township Project Monograph">
+                <ProjectDetails />
+              </Layout>
+            } />
             <Route path="/amenities" element={
               <Layout ariaLabel="Kolte Patil Life Republic Township Amenities">
                 <Amenities />
