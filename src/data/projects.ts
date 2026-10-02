@@ -28,21 +28,18 @@ export const projectsRegistry: Project[] = [
     },
     {
         id: 'kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi',
-        title: 'Kolte Patil Life Republic Atmos | Modern 2, 2.5 & 3 BHK Hinjewadi',
+        title: 'Kolte Patil Life Republic Atmos | Modern 3 BHK Hinjewadi',
         category: 'Lifestyle',
         location: 'Sector R22 (Atmos)',
-        price: '₹65 Lakhs*',
+        price: '₹1.15 Cr*',
         image: '/images/projects/1718284587atmosb.webp',
-        description: 'Experience the Atmos lifestyle at Kolte Patil Life Republic Township Hinjewadi. Modern 2, 2.5 & 3 BHK apartments with high-rise luxury and smart amenities.',
-        features: ['2, 2.5 & 3 BHK', 'Sector R22', 'Smart Home Ready'],
-        overview: 'Atmos at Kolte Patil Life Republic Township Hinjewadi is the latest chapter in our architectural monograph. Designed with tectonic precision, these towers offer panoramic views and optimized spatial flow.',
+        description: 'Experience the Atmos lifestyle at Kolte Patil Life Republic Township Hinjewadi. Modern 3 BHK apartments in Sector R22 with high-rise luxury and smart amenities.',
+        features: ['3 BHK', 'Sector R22', 'Dec 2028 Possession'],
+        overview: 'Atmos at Kolte Patil Life Republic Township Hinjewadi is the latest chapter in our architectural monograph. Designed with tectonic precision, these Sector R22 towers offer panoramic views and optimized spatial flow.',
         amenities: ['Clubhouse Atmos', 'Infinity Edge Pool', 'Gymnasium', 'Landscaped Garden', 'Children\'s Play Area', 'Multi-purpose Hall', 'Yoga Deck', 'Jogging Track'],
         masterLayout: '/images/projects/1711957330atmos_master_thumb.webp',
         floorPlans: [
-            { type: '2 BHK Optima', size: '682 sq.ft.', image: '/images/projects/1711957330atmos_master_thumb.webp', virtualTourUrl: 'https://my.matterport.com/show/?m=JvwN82W8Xq1', details: ['Carpet Area: 682 sq.ft.', 'Modern Kitchen Layout', 'Spacious Balcony'] },
-            { type: '2 BHK Grande', size: '800 sq.ft.', image: '/images/projects/1711957330atmos_master_thumb.webp', details: ['Carpet Area: 800 sq.ft.', 'Master Bedroom with Ensuite', 'Extra Utility Space'] },
-            { type: '2.5 BHK', size: '943 sq.ft.', image: '/images/projects/1711957330atmos_master_thumb.webp', virtualTourUrl: 'https://my.matterport.com/show/?m=JvwN82W8Xq1', details: ['Carpet Area: 943 sq.ft.', 'Additional Study Room', 'Premium Living Area'] },
-            { type: '3 BHK', size: '1037 sq.ft.', image: '/images/projects/1711960894atmos-11_s.webp', virtualTourUrl: 'https://my.matterport.com/show/?m=JvwN82W8Xq1', details: ['Carpet Area: 1037 sq.ft.', 'Triple Balcony System', 'Luxury Finishes'] }
+            { type: '3 BHK', size: '1007 - 1032 sq.ft.', image: '/images/projects/1711960894atmos-11_s.webp', details: ['Carpet Area: 1007 - 1032 sq.ft.', 'Panoramic Hinjewadi Views', 'Triple Balcony System', 'Luxury Finishes'] }
         ],
         specifications: [
             { title: 'Structure & Walls', items: ['Earthquake resistant R.C.C. structure', 'Gypsum finished internal walls', 'OBD paint in all rooms'] },
@@ -51,8 +48,8 @@ export const projectsRegistry: Project[] = [
             { title: 'Kitchen & Bath', items: ['Granite kitchen platform with SS sink', 'Wall tiles up to 7ft in toilets', 'Branded CP & Sanitary fittings (Kohler/Jaquar)'] }
         ],
         faqs: [
-            { question: "What is the possession date for Life Republic Atmos?", answer: "Life Republic Atmos Phase 1 is expected to be handed over by December 2026." },
-            { question: "Are there 3 BHK flats in Atmos?", answer: "Yes, Atmos offers premium 3 BHK configurations with carpet areas up to 1037 sq.ft." }
+            { question: "What is the possession date for Life Republic Atmos?", answer: "Life Republic Atmos is scheduled for RERA possession by December 2028." },
+            { question: "Are there 3 BHK flats in Atmos?", answer: "Yes, Atmos offers premium 3 BHK configurations with carpet areas from 1,007 to 1,032 sq.ft. starting at ₹1.15 Cr*." }
         ],
         themeColor: '#2c3e50'
     },
@@ -61,16 +58,17 @@ export const projectsRegistry: Project[] = [
         title: 'Kolte Patil Life Republic Aros | Premium 2 & 3 BHK Hinjewadi',
         category: 'Executive',
         location: 'Sector R13 (Aros)',
-        price: '₹75 Lakhs*',
+        price: '₹92 Lakhs*',
         image: '/images/projects/17523100953-bhk-flats-in-pune-hinjewadi-aros-life-republic.webp',
-        description: 'Discover Aros at Kolte Patil Life Republic Township Hinjewadi. Premium 2 & 3 BHK homes adjacent to the 3.5-acre Urban Park and jogging spine.',
-        features: ['2 & 3 BHK', 'MahaRERA: P52100079623', 'Premium Sector R13'],
+        description: 'Discover Aros at Kolte Patil Life Republic Township Hinjewadi. Premium 2 & 3 BHK homes in Sector R13 adjacent to the 3.5-acre Urban Park and jogging spine.',
+        features: ['2 & 3 BHK', 'Sector R13', 'Possession June 2028'],
         overview: 'Aros at Kolte Patil Life Republic Township Hinjewadi represents the peak of residential synthesis. Located in Sector R13, it offers unparalleled access to nature and fitness infrastructure.',
         amenities: ['Private Clubhouse', 'Olympic Size Pool', 'Urban Park Access', 'Pet Park', 'Amphitheatre', 'Co-working Space'],
         masterLayout: '/images/projects/1724406503master.webp',
         floorPlans: [
-            { type: '2 BHK', size: '718 sq.ft.', image: '/images/projects/1724406503master.webp', virtualTourUrl: 'https://my.matterport.com/show/?m=JvwN82W8Xq1', details: ['Carpet Area: 718 sq.ft.', 'Optimized Living-Dining', 'Large Master Bedroom'] },
-            { type: '3 BHK', size: '920 - 1176 sq.ft.', image: '/images/projects/1724406503master.webp', virtualTourUrl: 'https://my.matterport.com/show/?m=JvwN82W8Xq1', details: ['Carpet Area: 920-1176 sq.ft.', 'Wrap-around Balcony', 'Premium Bath Fittings'] }
+            { type: '2 BHK', size: '836 sq.ft.', image: '/images/projects/1724406503master.webp', details: ['Carpet Area: 836 sq.ft.', 'Optimized Living-Dining', 'Large Master Bedroom'] },
+            { type: '3 BHK Regal', size: '1060 sq.ft.', image: '/images/projects/1724406503master.webp', details: ['Carpet Area: 1060 sq.ft.', 'Spacious 3 BHK Regal Layout'] },
+            { type: '3 BHK Imperial', size: '1176 sq.ft.', image: '/images/projects/1724406503master.webp', details: ['Carpet Area: 1176 sq.ft.', 'Wrap-around Balcony', 'Premium Bath Fittings'] }
         ],
         specifications: [
             { title: 'Architectural Synthesis', items: ['R.C.C. frame with blockwork', 'Smooth internal gypsum finish', 'External acrylic texture paint'] },
@@ -123,20 +121,19 @@ export const projectsRegistry: Project[] = [
     },
     {
         id: 'kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi',
-        title: 'Kolte Patil Life Republic Echoes | New Launch 2, 2.5 & 3 BHK Hinjewadi',
+        title: 'Kolte Patil Life Republic Echoes | New Launch 2 & 2.5 BHK Hinjewadi',
         category: 'New Launch',
-        location: 'Sector R17/R18 (Echoes)',
-        price: '₹92 Lakhs*',
+        location: 'Sector R31 (Echoes)',
+        price: '₹85 Lakhs*',
         image: '/images/projects/1774005462Top_Banner-1795x930.jpg.jpeg',
-        description: 'Echoes at Kolte Patil Life Republic Hinjewadi. The latest architectural monograph by Hafeez Contractor, featuring premium 2, 2.5 & 3 BHK homes.',
-        features: ['2, 2.5 & 3 BHK', 'MahaRERA: P52100079424', 'Near Urban Park'],
-        overview: 'Echoes at Kolte Patil Life Republic Township Hinjewadi is where architectural legacy meets modern tectonic design. These towers are optimized for air-flow and natural light, creating a harmonious living volume.',
+        description: 'Echoes at Kolte Patil Life Republic Hinjewadi. Sector R31 architectural phase featuring meticulously planned 2 & 2.5 BHK homes.',
+        features: ['2 & 2.5 BHK', 'Sector R31', 'Possession Dec 2030'],
+        overview: 'Echoes at Kolte Patil Life Republic Township Hinjewadi (Sector R31) is where architectural legacy meets modern tectonic design. These towers are optimized for air-flow and natural light, creating a harmonious living volume.',
         amenities: ['Hafeez Contractor Signature Clubhouse', 'Reflection Pool', 'Zen Garden', 'Rooftop Lounge', 'Star Gazing Deck'],
         masterLayout: '/images/projects/1774006373728x728_-_1_.jpg',
         floorPlans: [
-            { type: '2 BHK Moment', size: '840 sq.ft.', image: '/images/projects/1774006373728x728_-_1_.jpg', details: ['Carpet Area: 840 sq.ft.', 'Architectural Living Space', 'Premium Flooring'] },
-            { type: '2.5 BHK Memoria', size: '866 sq.ft.', image: '/images/projects/1774006373728x728_-_1_.jpg', details: ['Carpet Area: 866 sq.ft.', 'Additional Study/Guest Room'] },
-            { type: '3 BHK', size: '1231 sq.ft.', image: '/images/projects/1774006373728x728_-_1_.jpg', details: ['Carpet Area: 1231 sq.ft.', 'Grand Balcony System'] }
+            { type: '2 BHK', size: '837 - 840 sq.ft.', image: '/images/projects/1774006373728x728_-_1_.jpg', details: ['Carpet Area: 837 - 840 sq.ft.', 'Architectural Living Space', 'Premium Flooring'] },
+            { type: '2.5 BHK', size: '963 - 978 sq.ft.', image: '/images/projects/1774006373728x728_-_1_.jpg', details: ['Carpet Area: 963 - 978 sq.ft.', 'Additional Study/Guest Room', 'Dual Balconies'] }
         ],
         specifications: [
             { title: 'Signature Synthesis', items: ['High-end Vitrified tiles', 'Premium sanitary ware', 'Hafeez Contractor curated materials'] }
@@ -147,17 +144,17 @@ export const projectsRegistry: Project[] = [
         id: 'kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi',
         title: 'Kolte Patil Life Republic Duet | Premium 2 BHK Hinjewadi',
         category: 'Compact',
-        location: 'Sector R10 (Duet)',
-        price: '₹68 Lakhs*',
+        location: 'Sector R34 (Duet)',
+        price: '₹79 Lakhs*',
         image: '/images/projects/1747221568duet_banner.jpg',
-        description: 'Compact luxury at Duet, Kolte Patil Life Republic Hinjewadi. Premium 2 BHK apartments designed for couples and young families.',
-        features: ['2 BHK', 'MahaRERA: P52100018539', 'High Rental Yield'],
-        overview: 'Duet at Kolte Patil Life Republic Township Hinjewadi offers efficient 2 BHK units that maximize every square foot. Perfect for first-time buyers and savvy investors.',
+        description: 'Compact luxury at Duet, Kolte Patil Life Republic Hinjewadi (Sector R34). Space-efficient 2 BHK Eterna & Infinite apartments.',
+        features: ['2 BHK Eterna & Infinite', 'Sector R34', 'Possession Dec 2030'],
+        overview: 'Duet at Kolte Patil Life Republic Township Hinjewadi (Sector R34) offers efficient 2 BHK units that maximize every square foot. Perfect for first-time buyers and savvy investors.',
         amenities: ['Rooftop Gym', 'Community Garden', 'Smart Entrance', 'Library', 'EV Charging'],
         masterLayout: '/images/projects/1747304746duet_mplan.png',
         floorPlans: [
-            { type: '2 BHK Smart', size: '660 sq.ft.', image: '/images/projects/1747304746duet_mplan.png', details: ['Carpet Area: 660 sq.ft.', 'Minimalist Design Flow'] },
-            { type: '2 BHK Plus', size: '835 sq.ft.', image: '/images/projects/1747304746duet_mplan.png', details: ['Carpet Area: 835 sq.ft.', 'Extended Balcony Space'] }
+            { type: '2 BHK Eterna', size: '740 sq.ft.', image: '/images/projects/1747304746duet_mplan.png', details: ['Carpet Area: 740 sq.ft.', 'Space-Efficient Smart Design'] },
+            { type: '2 BHK Infinite', size: '766 sq.ft.', image: '/images/projects/1747304746duet_mplan.png', details: ['Carpet Area: 766 sq.ft.', 'Extended Living & Balcony Space'] }
         ],
         specifications: [
             { title: 'Efficient Synthesis', items: ['Standard vitrified tiles', 'Branded sanitary fittings', 'Quality electric switches'] }
@@ -289,24 +286,26 @@ export const projectsRegistry: Project[] = [
         id: 'kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi',
         title: 'Kolte Patil Life Republic Canvas | Premium 3, 3.5 & 4 BHK Hinjewadi',
         category: 'Ultra Luxury',
-        location: 'Sector R3 (Canvas)',
-        price: '₹1.49 Cr*',
+        location: 'Sector R5 (Canvas)',
+        price: '₹1.59 Cr*',
         image: '/images/projects/1727356856project_banner___1795-930.jpg',
         description: 'Ultra-luxury living at Canvas, Kolte Patil Life Republic Hinjewadi. Premium 3, 3.5 & 4 BHK residences in 40-storey high-rise towers with elite specifications.',
-        features: ['3, 3.5 & 4 BHK', 'MahaRERA: P52100077008', '40-Storey Towers'],
+        features: ['3, 3.5 & 4 BHK', 'MahaRERA: P52100077008', 'Possession Dec 2030'],
         overview: 'Canvas at Kolte Patil Life Republic Township represents the zenith of ultra-luxury living. Spanning 6.34 acres, it features four iconic G+4P+40 storey towers offering panoramic views, an infinity-edge pool, and a massive 21,000 sq.ft. indoor recreation zone.',
         amenities: ['Infinity-edge Pool', '21,000 sq.ft. Clubhouse', 'Pickleball & Padel Tennis', 'Fitness Plaza', 'Co-working Spaces', 'Extensive Open Spaces'],
         masterLayout: '/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp',
         floorPlans: [
-            { type: '3 BHK Premium', size: '1332 - 1452 sq.ft.', image: '/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp', details: ['Carpet Area: 1332-1452 sq.ft.', 'Dual Master Bedrooms', 'Large Deck'] },
-            { type: '3.5 BHK Luxury', size: '1700 sq.ft.', image: '/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp', details: ['Carpet Area: ~1700 sq.ft.', 'Expansive Layout', 'Premium Finishes'] },
-            { type: '4 BHK Ultra', size: '2024 sq.ft.', image: '/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp', details: ['Carpet Area: ~2024 sq.ft.', 'Grand Entrance Lobby', 'Maximum Privacy'] }
+            { type: '3 BHK Portrait', size: '1332 sq.ft.', image: '/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp', details: ['Carpet Area: 1332 sq.ft.', 'Dual Master Bedrooms', 'Large Deck'] },
+            { type: '3 BHK Landscape', size: '1452 sq.ft.', image: '/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp', details: ['Carpet Area: 1452 sq.ft.', 'Panoramic Views', 'Extended Deck'] },
+            { type: '3 BHK Landscape (Large)', size: '1496 sq.ft.', image: '/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp', details: ['Carpet Area: 1496 sq.ft.', 'Corner View Unit', 'Luxury Finishes'] },
+            { type: '3.5 BHK Macro', size: '1710 sq.ft.', image: '/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp', details: ['Carpet Area: 1710 sq.ft.', 'Dedicated Family Room/Office', 'Premium Specifications'] },
+            { type: '4 BHK Mega', size: '2023 sq.ft.', image: '/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp', details: ['Carpet Area: 2023 sq.ft.', 'Grand Entrance Lobby', 'Maximum Privacy'] }
         ],
         specifications: [
             { title: 'Elite Finishes', items: ['Italian Marble Flooring', 'Home Automation', 'Premium Fittings', 'Heat-reflective glass'] }
         ],
         faqs: [
-            { question: "What is the possession date for Canvas?", answer: "Target possession is June 2028, with RERA possession by December 2028." },
+            { question: "What is the possession date for Canvas?", answer: "Target possession is December 2030 as per MahaRERA." },
             { question: "How tall are the Canvas towers?", answer: "Canvas features 4 high-rise towers reaching G+4P+40 floors." }
         ],
         themeColor: '#9b59b6'
@@ -316,25 +315,27 @@ export const projectsRegistry: Project[] = [
         id: 'kolte-patil-life-republic-qrious',
         title: 'Kolte Patil Life Republic Qrious | Premium 2 & 3 BHK Hinjewadi',
         category: 'Lifestyle',
-        location: 'Sector R (Qrious)',
-        price: '₹78 Lakhs*',
+        location: 'Sector R14 (Qrious)',
+        price: '₹89 Lakhs*',
         image: '/images/projects/1727356856project_banner___1795-930.jpg',
-        description: 'Discover Qrious at Kolte Patil Life Republic Township. A premium 7.58-acre residential enclave offering high-rise luxury towers and an exclusive 19,000 sq.ft. Q Club.',
-        features: ['2 & 3 BHK', 'Under Construction', '19,000 sq.ft. Club'],
-        overview: 'Kolte Patil Life Republic Qrious offers an unparalleled living experience with G+25/26 high-rise towers. Enjoy panoramic views, 50+ lifestyle amenities, and intelligent floor layouts.',
+        description: 'Discover Qrious at Kolte Patil Life Republic Township (Sector R14). A premium 7.58-acre residential enclave offering high-rise luxury towers and an exclusive 19,000 sq.ft. Q Club.',
+        features: ['2 & 3 BHK', 'Sector R14', 'Possession Dec 2030'],
+        overview: 'Kolte Patil Life Republic Qrious (Sector R14) offers an unparalleled living experience with G+25/26 high-rise towers. Enjoy panoramic views, 50+ lifestyle amenities, and intelligent floor layouts.',
         amenities: ['Q Club (19,000 sq.ft.)', 'Infinity Edge Swimming Pool', 'Yoga Deck', 'Sports Courts', 'Kids Play Area', 'Gymnasium'],
         masterLayout: '/images/projects/walkthrough.jpg',
         floorPlans: [
-            { type: '2 BHK', size: '796 - 900 sq.ft.', image: '/images/projects/1727356856project_banner___1795-930.jpg', details: ['Carpet Area: 796-900 sq.ft.', 'Modern Layout', 'Spacious Balcony'] },
-            { type: '3 BHK', size: '1100 - 1231 sq.ft.', image: '/images/projects/1727356856project_banner___1795-930.jpg', details: ['Carpet Area: 1100-1231 sq.ft.', 'Grand Living Space', 'Premium Finishes'] }
+            { type: '2 BHK Large', size: '796 - 813 sq.ft.', image: '/images/projects/1727356856project_banner___1795-930.jpg', details: ['Carpet Area: 796 - 813 sq.ft.', 'Modern Layout', 'Spacious Balcony'] },
+            { type: '2 BHK Luxurious', size: '887 - 900 sq.ft.', image: '/images/projects/1727356856project_banner___1795-930.jpg', details: ['Carpet Area: 887 - 900 sq.ft.', 'Expansive Living-Dining', 'Large Master Bed'] },
+            { type: '3 BHK Large', size: '1100 - 1118 sq.ft.', image: '/images/projects/1727356856project_banner___1795-930.jpg', details: ['Carpet Area: 1100 - 1118 sq.ft.', 'Grand Living Space', 'Premium Finishes'] },
+            { type: '3 BHK Luxurious', size: '1212 - 1231 sq.ft.', image: '/images/projects/1727356856project_banner___1795-930.jpg', details: ['Carpet Area: 1212 - 1231 sq.ft.', 'Signature Master Suite', 'Utility Area'] }
         ],
         specifications: [
             { title: 'Structure', items: ['G+26 Storey High-Rise', 'Earthquake Resistant', '5 High Speed Lifts per tower'] },
             { title: 'Finishes', items: ['Premium Vitrified Tiles', 'Anti-skid flooring in baths', 'Branded Sanitaryware'] }
         ],
         faqs: [
-            { question: "What is the starting price of Qrious?", answer: "Prices at Qrious start from approximately ₹78 Lakhs* for a 2 BHK." },
-            { question: "When is the possession?", answer: "The targeted possession for Qrious is December 2029." }
+            { question: "What is the starting price of Qrious?", answer: "Prices at Qrious start from ₹89 Lakhs* for 2 BHK Large." },
+            { question: "When is the possession?", answer: "The RERA possession for Qrious is December 2030." }
         ],
         themeColor: '#4f46e5'
     }

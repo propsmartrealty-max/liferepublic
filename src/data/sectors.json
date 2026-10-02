@@ -43,7 +43,7 @@
       "usp": "Centralized sector with excellent walkability to education hubs and internal spine parks.", 
       "infrastructure": "Walking distance to Anisha Global School", 
       "distance": "5 mins from High Street",
-      "rera_possession": "Oct 2026",
+      "rera_possession": "Dec 2030",
       "occupancy": "Under Construction",
       "investment_velocity": 0.82,
       "keywords": ["Canvas Hinjewadi", "Canvas flats", "Kolte Patil R3"]
@@ -107,7 +107,7 @@
       "usp": "Premium ecosystem with direct access to the 4km jogging spine and urban park.", 
       "infrastructure": "On the Fitness Loop Spine", 
       "distance": "0 mins from Jogging Track",
-      "rera_possession": "Dec 2026",
+      "rera_possession": "Jun 2028",
       "occupancy": "Under Construction",
       "investment_velocity": 0.92,
       "keywords": ["Aros price", "Aros Hinjewadi", "Aros premium flats", "Kolte Patil R13"]
@@ -171,7 +171,7 @@
       "usp": "Elevated living in 22nd Avenue with superior ventilation and 2026 infrastructure sync.", 
       "infrastructure": "Latest Infrastructure Phase", 
       "distance": "8 mins from Hinjewadi Ph 1",
-      "rera_possession": "Dec 2026",
+      "rera_possession": "Dec 2028",
       "occupancy": "High Velocity Construction",
       "investment_velocity": 0.99,
       "keywords": ["Atmos price", "Atmos 22nd Avenue", "Atmos luxury flats", "Kolte Patil Atmos"]
@@ -193,36 +193,52 @@
       "keywords": ["24K Espada price", "luxury villas Hinjewadi", "premium villas Pune", "24K Life Republic"]
     },
     {
-      "id": "r17r18",
-      "name": "Echoes (R17/R18)",
+      "id": "r31e",
+      "name": "Echoes (R31)",
       "branding": "Echoes Life Republic",
       "slug": "kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi",
       "type": "Sector",
       "segment": "Designer Premium",
       "target": "Experience Seekers",
-      "usp": "Architectural monograph by Hafeez Contractor adjacent to the 3.5-acre Urban Park.",
+      "usp": "Architectural monograph by Hafeez Contractor adjacent to the 3.5-acre Urban Park in Sector R31.",
       "infrastructure": "Directly Adjacent to Urban Park",
       "distance": "5 mins from High Street",
-      "rera_possession": "Dec 2027",
-      "occupancy": "Planned",
-      "investment_velocity": 0.88,
-      "keywords": ["Echoes Life Republic price", "Echoes Hinjewadi RERA", "Hafeez Contractor Pune"]
+      "rera_possession": "Dec 2030",
+      "occupancy": "Under Construction",
+      "investment_velocity": 0.94,
+      "keywords": ["Echoes Life Republic price", "Echoes Hinjewadi RERA", "Hafeez Contractor Pune", "Echoes Sector R31"]
     },
     {
-      "id": "r10d",
-      "name": "Duet (R10)",
+      "id": "r34",
+      "name": "Duet (R34)",
       "branding": "Duet Life Republic",
       "slug": "kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi",
       "type": "Sector",
       "segment": "Modern Compact",
       "target": "Young Professionals",
-      "usp": "Specifically designed for modern couples seeking class within the R10 Metro hub.",
+      "usp": "Specifically designed for modern couples seeking class in Sector R34.",
       "infrastructure": "Near upcoming Metro Junction",
       "distance": "2 mins from Metro Access",
-      "rera_possession": "Dec 2026",
+      "rera_possession": "Dec 2030",
       "occupancy": "Under Construction",
       "investment_velocity": 0.96,
-      "keywords": ["Duet Life Republic price", "Duet Hinjewadi flats", "Kolte Patil Duet"]
+      "keywords": ["Duet Life Republic price", "Duet Hinjewadi flats", "Kolte Patil Duet", "Duet Sector R34"]
+    },
+    {
+      "id": "r14",
+      "name": "Qrious (R14)",
+      "branding": "Qrious Smart Homes",
+      "slug": "kolte-patil-life-republic-qrious",
+      "type": "Sector",
+      "segment": "Smart Luxury",
+      "target": "Families & Professionals",
+      "usp": "Integrated high-street retail, 5 towers with 50+ lifestyle amenities in Sector R14.",
+      "infrastructure": "On 150-ft Spine Road with 90 Retail Shops",
+      "distance": "3 mins from Main Gate",
+      "rera_possession": "Dec 2030",
+      "occupancy": "Under Construction",
+      "investment_velocity": 0.95,
+      "keywords": ["Qrious price", "Qrious Sector R14", "Qrious Life Republic", "Kolte Patil R14"]
     }
   ],
   "avenues": [

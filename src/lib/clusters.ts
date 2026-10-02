@@ -1,21 +1,21 @@
 export const CLUSTERS = [
     {
         id: "echoes",
-        status: "New Launch",
-        possession: "Dec 2027",
-        sector: "Sector R10",
+        status: "Under Construction",
+        possession: "Dec 2030",
+        sector: "Sector R31",
         usp: "Premium Residences with Smart Tech",
         name: "Echoes",
         slug: "kolte-patil-life-republic-echoes",
         category: "Premium Residences",
-        description: "Echoes is the newest residential phase at Life Republic (Sector R31/31st Avenue). Offering meticulously planned 2 & 2.5 BHK homes with 40+ amenities across a 5.89-acre development.",
-        price: "₹92 Lakhs*",
+        description: "Echoes is the newest residential phase at Life Republic (Sector R31). Offering meticulously planned 2 & 2.5 BHK homes with 40+ amenities across a 5.89-acre development.",
+        price: "₹85 Lakhs*",
         rera: "PM1261012502409",
         image: "https://liferepublic.in/images/webp/popup/echoes-desktop-kpdl.jpeg", 
         masterLayout: "https://life-republic.in/images/gallery/eros/master-layout.webp",
         configurations: [
-            { type: "2 BHK", size: "837 sq.ft.", price: "₹92 - 99 Lakhs*" },
-            { type: "2.5 BHK", size: "963 - 978 sq.ft.", price: "₹1.02 - 1.10 Cr*" }
+            { type: "2 BHK", size: "837 - 840 sq.ft.", price: "₹85 Lakhs*" },
+            { type: "2.5 BHK", size: "963 - 978 sq.ft.", price: "₹1.05 Cr*" }
         ],
         gallery: [
         "https://liferepublic.in/images/project/gallery/1774005843Elevation 01 A.jpg",
@@ -46,20 +46,21 @@ export const CLUSTERS = [
     },
     {
         id: "duet",
-        status: "New Launch",
-        possession: "Dec 2026",
-        sector: "Sector R7",
+        status: "Under Construction",
+        possession: "Dec 2030",
+        sector: "Sector R34",
         usp: "Space-Efficient Smart Layouts",
         name: "Duet",
         slug: "kolte-patil-life-republic-duet",
         category: "Premium 2 BHK",
-        description: "Duet features smart, space-efficient 2 BHK apartments designed for modern nuclear families with access to township-level infrastructure.",
-        price: "₹79 Lacs*",
+        description: "Duet (Sector R34) features smart, space-efficient 2 BHK apartments designed for modern nuclear families with access to township-level infrastructure.",
+        price: "₹79 Lakhs*",
         rera: "P52100079424",
         image: "https://liferepublic.in/images/projects/location/1747221568duet%20list%20image.jpg",
         masterLayout: "https://liferepublic.in/images/home/slider-1.webp",
         configurations: [
-            { type: "2 BHK", size: "721 - 766 sq.ft.", price: "₹79 Lacs*" }
+            { type: "2 BHK Eterna", size: "740 sq.ft.", price: "₹79 Lakhs*" },
+            { type: "2 BHK Infinite", size: "766 sq.ft.", price: "₹82 Lakhs*" }
         ],
         gallery: [
         "https://liferepublic.in/images/project/gallery/1747221668duet interior 2.jpg",
@@ -131,23 +132,23 @@ export const CLUSTERS = [
     },
     {
         id: "qrious",
-        status: "Nearing Possession",
-        possession: "June 2025",
-        sector: "Sector R8",
+        status: "Under Construction",
+        possession: "Dec 2030",
+        sector: "Sector R14",
         usp: "Educational & Play-Themed Amenities",
         name: "Qrious",
         slug: "kolte-patil-life-republic-qrious",
         category: "Smart 2 & 3 BHK",
-        description: "Qrious at Life Republic, Punawale features premium 2 & 3 BHK homes in a 7.58-acre development. Highlights include 5 Towers, 8 Flats/floor, 4 Lifts/tower, 36 Habitable Floors, and High Street Retail with 90 Shops.",
+        description: "Qrious at Life Republic (Sector R14) features premium 2 & 3 BHK homes in a 7.58-acre development. Highlights include 5 Towers, 8 Flats/floor, 4 Lifts/tower, 36 Habitable Floors, and High Street Retail with 90 Shops.",
         price: "₹89 Lakhs*",
         rera: "P52100079623",
         image: "https://liferepublic.in/images/home/slider-1.webp",
         masterLayout: "https://liferepublic.in/images/home/slider-1.webp",
         configurations: [
-            { type: "2 BHK Large", size: "813 sq.ft.", price: "₹89 Lakhs*" },
-            { type: "2 BHK Luxurious", size: "900 sq.ft.", price: "₹97 Lakhs*" },
-            { type: "3 BHK Large", size: "1,116 sq.ft.", price: "₹1.23 Cr*" },
-            { type: "3 BHK Luxurious", size: "1,231 sq.ft.", price: "₹1.38 Cr*" }
+            { type: "2 BHK Large", size: "796 - 813 sq.ft.", price: "₹89 Lakhs*" },
+            { type: "2 BHK Luxurious", size: "887 - 900 sq.ft.", price: "₹97 Lakhs*" },
+            { type: "3 BHK Large", size: "1,100 - 1,118 sq.ft.", price: "₹1.23 Cr*" },
+            { type: "3 BHK Luxurious", size: "1,212 - 1,231 sq.ft.", price: "₹1.38 Cr*" }
         ],
         gallery: [
         "https://liferepublic.in/images/project/gallery/17507608341749723762QriousLiving.jpg",
@@ -236,23 +237,24 @@ export const CLUSTERS = [
     },
     {
         id: "canvas",
-        status: "New Launch",
-        possession: "Dec 2028",
+        status: "Under Construction",
+        possession: "Dec 2030",
         sector: "Sector R5",
         usp: "Pune's Tallest Residential Tower",
         name: "Canvas",
         slug: "kolte-patil-life-republic-canvas",
         category: "Premium 3, 3.5 & 4 BHK",
-        description: "Pune's Tallest Residential Tower reaching ~120M high. Canvas offers ultra-premium 3 & 4 BHK residences with 50+ curated amenities across a 6+ acre estate. Each unit features 2 master bedrooms.",
-        price: "₹1.55 Cr*",
+        description: "Pune's Tallest Residential Tower reaching ~120M high. Canvas offers ultra-premium 3, 3.5 & 4 BHK residences with 50+ curated amenities across a 6+ acre estate. Each unit features 2 master bedrooms.",
+        price: "₹1.59 Cr*",
         rera: "P52100077008",
         image: "https://liferepublic.in/images/project/gallery/1727440628GATE SCULPTURE.webp",
         masterLayout: "https://liferepublic.in/images/project/plan/172846001957.webp",
         configurations: [
-            { type: "3 BHK", size: "1,330+ sq.ft.", price: "₹1.55 Cr*" },
-            { type: "3 BHK XL", size: "1,450+ sq.ft.", price: "₹1.69 Cr*" },
-            { type: "3.5 BHK", size: "1,700+ sq.ft.", price: "₹1.99 Cr*" },
-            { type: "4 BHK", size: "2,023+ sq.ft.", price: "₹2.45 Cr*" }
+            { type: "3 BHK Portrait", size: "1,332 sq.ft.", price: "₹1.59 Cr*" },
+            { type: "3 BHK Landscape", size: "1,452 sq.ft.", price: "₹1.69 Cr*" },
+            { type: "3 BHK Landscape (Large)", size: "1,496 sq.ft.", price: "₹1.89 Cr*" },
+            { type: "3.5 BHK Macro", size: "1,710 sq.ft.", price: "₹2.25 Cr*" },
+            { type: "4 BHK Mega", size: "2,023 sq.ft.", price: "₹2.59 Cr*" }
         ],
         gallery: [
             "https://liferepublic.in/images/project/gallery/1727440628GATE SCULPTURE.webp",
@@ -283,21 +285,22 @@ export const CLUSTERS = [
     },
     {
         id: "aros",
-        status: "Ready Possession",
-        possession: "Immediate",
-        sector: "Sector R1",
+        status: "Under Construction",
+        possession: "June 2028",
+        sector: "Sector R13",
         usp: "Nature-Integrated Expansive Living",
         name: "Aros",
         slug: "kolte-patil-life-republic-aros",
         category: "Premium 2 & 3 BHK",
-        description: "Aros redefines community living with a massive 19,000 sq.ft. clubhouse, a 2.6-acre Nature's Nest, and a spectacular 70-meter high Sky Trail.",
-        price: "₹89 Lacs*",
+        description: "Aros (Sector R13) redefines community living with a massive 19,000 sq.ft. clubhouse, a 2.6-acre Nature's Nest, and a spectacular 70-meter high Sky Trail.",
+        price: "₹92 Lakhs*",
         rera: "P52100047921",
         image: "https://liferepublic.in/images/projects/location/1718965087Aros%20image.jpg",
         masterLayout: "https://liferepublic.in/images/home/slider-1.webp",
         configurations: [
-            { type: "2 BHK", size: "836 sq.ft.", price: "₹89 Lacs*" },
-            { type: "3 BHK", size: "920 - 1,176 sq.ft.", price: "₹95 Lakhs*" }
+            { type: "2 BHK", size: "836 sq.ft.", price: "₹92 Lakhs*" },
+            { type: "3 BHK Regal", size: "1,060 sq.ft.", price: "₹1.15 Cr*" },
+            { type: "3 BHK Imperial", size: "1,176 sq.ft.", price: "₹1.35 Cr*" }
         ],
         gallery: [
         "https://liferepublic.in/images/project/gallery/1709192604interioraros3.webp",
@@ -352,21 +355,19 @@ export const CLUSTERS = [
     {
         id: "atmos",
         status: "Under Construction",
-        possession: "Dec 2026",
-        sector: "Sector R4",
+        possession: "Dec 2028",
+        sector: "Sector R22",
         usp: "Elevated High-Rise Lifestyles",
         name: "Atmos",
         slug: "kolte-patil-life-republic-atmos",
-        category: "Premium 2, 2.5 & 3 BHK",
-        description: "Atmos offers elevated lifestyle features with thoughtfully designed 2, 2.5, and 3 BHK units, focused on natural light and ventilation.",
-        price: "₹83 Lacs*",
+        category: "Premium 3 BHK",
+        description: "Atmos (Sector R22) offers elevated lifestyle features with thoughtfully designed 3 BHK units, focused on natural light, ventilation, and panoramic views.",
+        price: "₹1.15 Cr*",
         rera: "P52100051765",
         image: "https://liferepublic.in/images/projects/location/1718965121atmos%20image.jpg",
         masterLayout: "https://liferepublic.in/images/home/slider-1.webp",
         configurations: [
-            { type: "2 BHK", size: "722 sq.ft.", price: "₹83 Lacs*" },
-            { type: "2.5 BHK", size: "850 sq.ft.", price: "₹82 Lakhs*" },
-            { type: "3 BHK", size: "1,032 sq.ft.", price: "₹95 Lakhs*" }
+            { type: "3 BHK", size: "1,007 - 1,032 sq.ft.", price: "₹1.15 Cr*" }
         ],
         gallery: [
         "https://liferepublic.in/images/project/gallery/17182847281.webp",

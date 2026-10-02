@@ -231,10 +231,23 @@ const ProjectDetails: React.FC = () => {
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full border border-white/20 mb-6 backdrop-blur-md"
+                                    className="flex flex-wrap items-center gap-2 mb-6"
                                 >
-                                    <ShieldCheck size={14} className="rainbow-text-clip font-bold" />
-                                    <span className="text-xs font-bold tracking-widest uppercase">MahaRERA: {project.rera}</span>
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full border border-white/20 backdrop-blur-md">
+                                        <ShieldCheck size={14} className="rainbow-text-clip font-bold" />
+                                        <span className="text-xs font-bold tracking-widest uppercase">MahaRERA: {project.rera}</span>
+                                    </div>
+                                    {project.sector && (
+                                        <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 rounded-full border border-white/20 backdrop-blur-md">
+                                            <span className="text-xs font-bold tracking-widest uppercase text-white/90">{project.sector}</span>
+                                        </div>
+                                    )}
+                                    {project.possession && (
+                                        <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 rounded-full border border-white/20 backdrop-blur-md">
+                                            <Calendar size={13} className="text-white/60" />
+                                            <span className="text-xs font-bold tracking-widest uppercase text-amber-300">Possession: {project.possession}</span>
+                                        </div>
+                                    )}
                                 </motion.div>
 
                                 <motion.h1

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence, useMotionValue, useSpring } from 'framer-motion';
 
 const NAV_LINKS = [
@@ -18,6 +18,7 @@ const MagneticLink: React.FC<{
     onClick?: () => void;
 }> = ({ to, children, isActive, onClick }) => {
     const ref = useRef<HTMLAnchorElement>(null);
+    const navigate = useNavigate();
     const x = useMotionValue(0);
     const y = useMotionValue(0);
     const springX = useSpring(x, { stiffness: 300, damping: 20 });
@@ -40,14 +41,18 @@ const MagneticLink: React.FC<{
             href={to}
             onMouseMove={onMouseMove}
             onMouseLeave={onMouseLeave}
-            onClick={(e) => { e.preventDefault(); onClick?.(); window.location.href = to; }}
+            onClick={(e) => { 
+                e.preventDefault(); 
+                onClick?.(); 
+                navigate(to); 
+            }}
             style={{ x: springX, y: springY }}
             className="relative group cursor-interactive select-none"
         >
             {/* Rainbow underline glow on hover */}
             <span
                 className="relative z-10 block px-4 py-2 text-sm font-black uppercase tracking-[0.12em] transition-colors duration-200"
-                style={{ color: isActive ? '#fff' : 'rgba(255,255,255,0.55)' }}
+                style={{ color: isActive ? '#fff' : 'rgba(255,255,255,0.7)' }}
             >
                 {children}
                 {/* Animated underline */}
@@ -70,13 +75,12 @@ const MagneticLink: React.FC<{
 export const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const [atTop, setAtTop] = useState(true);
     const location = useLocation();
+    const routerNavigate = useNavigate();
 
     const handleScroll = useCallback(() => {
         const y = window.scrollY;
-        setScrolled(y > 80);
-        setAtTop(y < 10);
+        setScrolled(y > 50);
     }, []);
 
     useEffect(() => {
@@ -94,7 +98,7 @@ export const Navbar = () => {
 
     const navigate = (path: string) => {
         setMenuOpen(false);
-        window.location.href = path;
+        routerNavigate(path);
     };
 
     return (
@@ -108,21 +112,17 @@ export const Navbar = () => {
                 style={{ top: '3px' }}
                 initial={false}
                 animate={{
-                    background: atTop
-                        ? 'rgba(5,5,5,0)'
-                        : scrolled
-                            ? 'rgba(5,5,5,0.96)'
-                            : 'rgba(5,5,5,0.75)',
-                    backdropFilter: atTop ? 'none' : 'blur(28px) saturate(200%)',
-                    WebkitBackdropFilter: atTop ? 'none' : 'blur(28px) saturate(200%)',
-                    borderBottom: scrolled
-                        ? '1px solid rgba(255,255,255,0.06)'
-                        : '1px solid transparent',
+                    background: scrolled
+                        ? 'rgba(5,5,5,0.96)'
+                        : 'rgba(5,5,5,0.72)',
+                    backdropFilter: 'blur(28px) saturate(200%)',
+                    WebkitBackdropFilter: 'blur(28px) saturate(200%)',
+                    borderBottom: '1px solid rgba(255,255,255,0.08)',
                     boxShadow: scrolled
                         ? '0 0 0 1px rgba(255,255,255,0.04), 0 20px 60px rgba(0,0,0,0.6)'
-                        : 'none',
+                        : '0 10px 30px rgba(0,0,0,0.3)',
                 }}
-                transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
             >
                 <div
                     className="mx-auto flex items-center justify-between px-6 lg:px-12"
@@ -149,7 +149,7 @@ export const Navbar = () => {
                     </Link>
 
                     {/* ── Desktop links ─────────────────────────────── */}
-                    <nav className="hidden lg:flex items-center gap-0" aria-label="Main navigation">
+                    <nav className="hidden lg:flex items-center gap-2" aria-label="Main navigation">
                         {NAV_LINKS.map((item) => (
                             <MagneticLink
                                 key={item.name}
