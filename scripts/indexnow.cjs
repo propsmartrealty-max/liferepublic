@@ -58,7 +58,7 @@ function submitBatch(batch) {
         });
 
         const req = https.request({
-            hostname: 'api.indexnow.org',
+            hostname: 'www.bing.com',
             path: '/indexnow',
             method: 'POST',
             headers: {

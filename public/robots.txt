@@ -84,3 +84,5 @@ Disallow: /_headers
 Sitemap: https://life-republic.in/sitemap.xml
 Sitemap: https://life-republic.in/sitemap-silos-index.xml
 Sitemap: https://life-republic.in/google-shopping-feed.xml
+Sitemap: https://life-republic.in/feed.xml
+Sitemap: https://life-republic.in/rss.xml
