@@ -1,8 +1,16 @@
-# Domain Canonicalization (Force non-www) - Example
-# https://www.life-republic.in/* https://life-republic.in/:splat 301
+# ========================================================
+# CLOUDFLARE PAGES EDGE REDIRECTS & ROUTING MATRIX
+# ========================================================
 
-# Clean URL enforcement (Remove trailing slashes) - Handled natively by Cloudflare Pages now, but we can set specific legacy redirects if needed.
-
-# Legacy routes mapping to new Silos
+# Legacy Cluster Slugs to Modern Canonic URLs
 /projects/kolte-patil-life-republic-echoes-hinjewadi /projects/kolte-patil-life-republic-echoes 301
+/project/kolte-patil-life-republic-echoes-hinjewadi /projects/kolte-patil-life-republic-echoes 301
 /master-plan /township-guide 301
+/masterplan /township-guide 301
+/amenities/ /amenities 301
+/location/ /location 301
+/lifestyle/ /lifestyle 301
+/projects/ /projects 301
+
+# Cloudflare Pages Single Page Application (SPA) Fallback Rule
+/* /index.html 200

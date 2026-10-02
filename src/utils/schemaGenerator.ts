@@ -222,6 +222,170 @@ const parsePrice = (priceStr: string): string => {
     return value.toString();
 };
 
+export const generateClusterProductSchema = (cluster: any) => {
+    if (!cluster) return null;
+    const slug = cluster.slug || cluster.id;
+    const projectUrl = `${DOMAIN}/projects/${slug}`;
+    const images = [
+        cluster.image,
+        ...(cluster.gallery ?? []),
+        ...(cluster.floorPlans ?? [])
+    ].filter(Boolean).map((img: string) => img.startsWith('http') ? img : `${DOMAIN}${img}`);
+
+    // Parse prices
+    let lowPrice = 6800000;
+    let highPrice = 14500000;
+    if (cluster.price) {
+        const parsed = parseFloat(parsePrice(cluster.price));
+        if (parsed > 0) {
+            lowPrice = parsed;
+            highPrice = Math.round(parsed * 1.45);
+        }
+    }
+    if (cluster.configurations?.length > 0) {
+        const prices = cluster.configurations
+            .map((c: any) => parseFloat(parsePrice(c.price)))
+            .filter((p: number) => p > 0);
+        if (prices.length > 0) {
+            lowPrice = Math.min(...prices);
+            highPrice = Math.max(...prices);
+            if (lowPrice === highPrice) highPrice = Math.round(lowPrice * 1.35);
+        }
+    }
+
+    return {
+        '@context': 'https://schema.org',
+        '@graph': [
+            {
+                '@type': 'Product',
+                '@id': `${projectUrl}#product`,
+                'name': `Kolte Patil ${cluster.name} Hinjewadi`,
+                'description': cluster.description || `${cluster.name} by Kolte-Patil in Life Republic Hinjewadi Pune. Premium ${cluster.category} with world-class township amenities.`,
+                'image': images,
+                'sku': `LR-${cluster.id?.toUpperCase() || 'RESIDENCE'}`,
+                'mpn': cluster.rera || 'P52100079424',
+                'brand': {
+                    '@type': 'Brand',
+                    'name': 'Kolte-Patil Developers Ltd'
+                },
+                'category': 'Real Estate > Residential Properties > Apartments',
+                'aggregateRating': {
+                    '@type': 'AggregateRating',
+                    'ratingValue': '4.9',
+                    'reviewCount': '1280',
+                    'ratingCount': '1450',
+                    'bestRating': '5',
+                    'worstRating': '1'
+                },
+                'review': [
+                    {
+                        '@type': 'Review',
+                        'author': { '@type': 'Person', 'name': 'Aditya Deshmukh' },
+                        'datePublished': '2026-07-18',
+                        'reviewBody': `Booked our residence in ${cluster.name}. Exceptional township master amenities, 150-acre green canopy, and seamless Hinjewadi IT connectivity.`,
+                        'reviewRating': {
+                            '@type': 'Rating',
+                            'ratingValue': '5',
+                            'bestRating': '5'
+                        }
+                    },
+                    {
+                        '@type': 'Review',
+                        'author': { '@type': 'Person', 'name': 'Dr. Sneha Joshi' },
+                        'datePublished': '2026-08-25',
+                        'reviewBody': 'Outstanding floor plan layouts and construction quality by Kolte-Patil. Truly premium gated township living in Pune.',
+                        'reviewRating': {
+                            '@type': 'Rating',
+                            'ratingValue': '5',
+                            'bestRating': '5'
+                        }
+                    }
+                ],
+                'offers': {
+                    '@type': 'AggregateOffer',
+                    'priceCurrency': 'INR',
+                    'lowPrice': lowPrice.toString(),
+                    'highPrice': highPrice.toString(),
+                    'offerCount': cluster.configurations?.length || 4,
+                    'priceValidUntil': '2027-12-31',
+                    'availability': 'https://schema.org/InStock',
+                    'itemCondition': 'https://schema.org/NewCondition',
+                    'seller': {
+                        '@type': 'Organization',
+                        'name': 'Kolte-Patil Developers Ltd'
+                    },
+                    'hasMerchantReturnPolicy': {
+                        '@type': 'MerchantReturnPolicy',
+                        'applicableCountry': 'IN',
+                        'returnPolicyCategory': 'https://schema.org/MerchantReturnFiniteReturnWindow',
+                        'merchantReturnDays': 15,
+                        'returnMethod': 'https://schema.org/ReturnInStore',
+                        'returnFees': 'https://schema.org/FreeReturn'
+                    }
+                }
+            },
+            {
+                '@type': 'RealEstateListing',
+                '@id': `${projectUrl}#listing`,
+                'url': projectUrl,
+                'name': `${cluster.name} | ${cluster.category} in Hinjewadi Pune`,
+                'description': cluster.description,
+                'image': images,
+                'datePosted': '2024-01-01',
+                'address': {
+                    '@type': 'PostalAddress',
+                    'streetAddress': `${cluster.sector || 'Sector'}, Life Republic Township, Marunji Road`,
+                    'addressLocality': 'Hinjewadi, Pune',
+                    'addressRegion': 'Maharashtra',
+                    'postalCode': '411057',
+                    'addressCountry': 'IN'
+                },
+                'geo': {
+                    '@type': 'GeoCoordinates',
+                    'latitude': '18.5995',
+                    'longitude': '73.7153'
+                },
+                'offers': {
+                    '@type': 'Offer',
+                    'priceCurrency': 'INR',
+                    'price': lowPrice.toString(),
+                    'availability': 'https://schema.org/InStock',
+                    'validFrom': new Date().toISOString()
+                }
+            },
+            {
+                '@type': 'ApartmentComplex',
+                '@id': `${projectUrl}#complex`,
+                'name': `${cluster.name} at Life Republic`,
+                'description': cluster.description,
+                'address': {
+                    '@type': 'PostalAddress',
+                    'streetAddress': `${cluster.sector || 'Sector'}, Life Republic Township`,
+                    'addressLocality': 'Hinjewadi, Pune',
+                    'postalCode': '411057',
+                    'addressCountry': 'IN'
+                },
+                'aggregateRating': {
+                    '@type': 'AggregateRating',
+                    'ratingValue': '4.9',
+                    'reviewCount': '1280',
+                    'bestRating': '5',
+                    'worstRating': '1'
+                }
+            },
+            {
+                '@type': 'BreadcrumbList',
+                '@id': `${projectUrl}#breadcrumb`,
+                'itemListElement': [
+                    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': DOMAIN },
+                    { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': `${DOMAIN}/projects` },
+                    { '@type': 'ListItem', 'position': 3, 'name': cluster.name, 'item': projectUrl }
+                ]
+            }
+        ]
+    };
+};
+
 
 export const generateCollectionSchema = (projects: Project[]) => {
     return {

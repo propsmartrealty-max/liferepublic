@@ -1,73 +1,242 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
-<channel>
-<title>PropSmart Kolte Patil Life Republic Properties</title>
-<link>https://life-republic.in</link>
-<description>Premium residential apartments and villas in Kolte Patil Life Republic Hinjewadi.</description>
-  <item>
-    <g:id>qrious-at-life-republic</g:id>
-    <g:title>Qrious at Life Republic - Hinjewadi Pune</g:title>
-    <g:description>Premium 2 & 3 BHK Apartments in Hinjewadi Phase 1</g:description>
-    <g:link>https://life-republic.in/projects/qrious</g:link>
-    <g:image_link>https://liferepublic.in/images/projects/qrious/qrious-1.jpg</g:image_link>
-    <g:condition>new</g:condition>
-    <g:availability>in stock</g:availability>
-    <g:price>8900000 INR</g:price>
-    <g:brand>Kolte Patil Developers</g:brand>
-    <g:product_type>Real Estate &gt; Residential</g:product_type>
-    <g:custom_label_0>Hinjewadi Phase 1</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>canvas-at-life-republic</g:id>
-    <g:title>Canvas at Life Republic - Hinjewadi Pune</g:title>
-    <g:description>Ultra-Luxury 3 & 4 BHK Residences in Hinjewadi Pune</g:description>
-    <g:link>https://life-republic.in/projects/canvas</g:link>
-    <g:image_link>https://liferepublic.in/images/projects/canvas/canvas-1.jpg</g:image_link>
-    <g:condition>new</g:condition>
-    <g:availability>in stock</g:availability>
-    <g:price>14500000 INR</g:price>
-    <g:brand>Kolte Patil Developers</g:brand>
-    <g:product_type>Real Estate &gt; Residential</g:product_type>
-    <g:custom_label_0>Hinjewadi Phase 1</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>espada-at-life-republic</g:id>
-    <g:title>Espada at Life Republic - Hinjewadi Pune</g:title>
-    <g:description>Exquisite 4 & 5 BHK Row Villas in Life Republic</g:description>
-    <g:link>https://life-republic.in/projects/espada</g:link>
-    <g:image_link>https://liferepublic.in/images/projects/espada/espada-1.jpg</g:image_link>
-    <g:condition>new</g:condition>
-    <g:availability>in stock</g:availability>
-    <g:price>28500000 INR</g:price>
-    <g:brand>Kolte Patil Developers</g:brand>
-    <g:product_type>Real Estate &gt; Residential</g:product_type>
-    <g:custom_label_0>Hinjewadi Phase 1</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>atmos-at-life-republic</g:id>
-    <g:title>Atmos at Life Republic - Hinjewadi Pune</g:title>
-    <g:description>Smart 2 & 2.5 BHK Homes in Hinjewadi</g:description>
-    <g:link>https://life-republic.in/projects/atmos</g:link>
-    <g:image_link>https://liferepublic.in/images/projects/atmos/atmos-1.jpg</g:image_link>
-    <g:condition>new</g:condition>
-    <g:availability>in stock</g:availability>
-    <g:price>7500000 INR</g:price>
-    <g:brand>Kolte Patil Developers</g:brand>
-    <g:product_type>Real Estate &gt; Residential</g:product_type>
-    <g:custom_label_0>Hinjewadi Phase 1</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>aros-at-life-republic</g:id>
-    <g:title>Aros at Life Republic - Hinjewadi Pune</g:title>
-    <g:description>Premium 2 & 3 BHK Apartments</g:description>
-    <g:link>https://life-republic.in/projects/aros</g:link>
-    <g:image_link>https://liferepublic.in/images/projects/aros/aros-1.jpg</g:image_link>
-    <g:condition>new</g:condition>
-    <g:availability>in stock</g:availability>
-    <g:price>9500000 INR</g:price>
-    <g:brand>Kolte Patil Developers</g:brand>
-    <g:product_type>Real Estate &gt; Residential</g:product_type>
-    <g:custom_label_0>Hinjewadi Phase 1</g:custom_label_0>
-  </item>
-</channel>
+  <channel>
+    <title>Kolte Patil Life Republic Properties | Google Shopping Real Estate Catalog</title>
+    <link>https://life-republic.in</link>
+    <description>Official Google Shopping Feed for Kolte Patil Life Republic Hinjewadi Pune. Verified MahaRERA residential apartments, 2 &amp; 3 BHK flats, and luxury villas.</description>
+    <item>
+      <g:id>duet-2bhk</g:id>
+      <g:title>Kolte Patil Duet 2 BHK Flat | Life Republic Hinjewadi Pune</g:title>
+      <g:description>Smart space-efficient 2 BHK apartment in Sector R34 Duet at Kolte-Patil Life Republic Hinjewadi. MahaRERA P52100079424. Includes 150-acre master township amenities, sports club, 4.5-acre Anisha Global School, and 5-min Hinjewadi IT Park access.</g:description>
+      <g:link>https://life-republic.in/projects/kolte-patil-life-republic-duet</g:link>
+      <g:image_link>https://life-republic.in/images/projects/1747221568duet_banner.jpg</g:image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/17473051321744275848duetfp3.jpg</g:additional_image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/17473051101744275822duetfp.jpg</g:additional_image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>7900000.00 INR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Kolte-Patil Developers Ltd</g:brand>
+      <g:google_product_category>Real Estate &gt; Residential Properties &gt; Apartments</g:google_product_category>
+      <g:product_type>Real Estate &gt; Pune &gt; Hinjewadi &gt; 2 BHK Flats</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:mpn>P52100079424</g:mpn>
+      <g:product_highlight>Smart space-efficient 2 BHK layouts with zero wasted corridor space</g:product_highlight>
+      <g:product_highlight>MahaRERA Registered: P52100079424 with delivery by Dec 2030</g:product_highlight>
+      <g:product_highlight>Inside 150+ Acre Integrated Gated Township with 24/7 security</g:product_highlight>
+      <g:product_highlight>Strategic signal-free road access to Hinjewadi Phase 1, 2, and 3</g:product_highlight>
+      <g:custom_label_0>Sector R34</g:custom_label_0>
+      <g:custom_label_1>2 BHK</g:custom_label_1>
+      <g:custom_label_2>Dec 2030</g:custom_label_2>
+      <g:custom_label_3>Hinjewadi Pune</g:custom_label_3>
+      <g:custom_label_4>Under Construction</g:custom_label_4>
+    </item>
+    <item>
+      <g:id>qrious-2bhk</g:id>
+      <g:title>Kolte Patil Qrious 2 BHK Smart Home | Life Republic Hinjewadi</g:title>
+      <g:description>Home-automated 2 BHK flat in Sector R1 Qrious at Kolte-Patil Life Republic Hinjewadi Pune. MahaRERA P52100053158. Possession starting Dec 2026 with designer clubhouse, swimming pool, and school within walking distance.</g:description>
+      <g:link>https://life-republic.in/projects/kolte-patil-life-republic-qrious</g:link>
+      <g:image_link>https://liferepublic.in/images/projects/location/17507612781749724578qriousele1.jpg</g:image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/1750763925qrious20.jpg</g:additional_image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/1750764931qrious25.jpg</g:additional_image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>6800000.00 INR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Kolte-Patil Developers Ltd</g:brand>
+      <g:google_product_category>Real Estate &gt; Residential Properties &gt; Apartments</g:google_product_category>
+      <g:product_type>Real Estate &gt; Pune &gt; Hinjewadi &gt; 2 BHK Flats</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:mpn>P52100053158</g:mpn>
+      <g:product_highlight>Smart automated residences with digital door locks &amp; energy automation</g:product_highlight>
+      <g:product_highlight>Early possession delivery timeline starting Dec 2026</g:product_highlight>
+      <g:product_highlight>Direct walking access to 4.5-Acre Anisha Global CBSE School</g:product_highlight>
+      <g:product_highlight>Zero brokerage direct developer pricing with attractive payment schemes</g:product_highlight>
+      <g:custom_label_0>Sector R1</g:custom_label_0>
+      <g:custom_label_1>2 BHK</g:custom_label_1>
+      <g:custom_label_2>Dec 2026</g:custom_label_2>
+      <g:custom_label_3>Hinjewadi Pune</g:custom_label_3>
+      <g:custom_label_4>Under Construction</g:custom_label_4>
+    </item>
+    <item>
+      <g:id>qrious-3bhk</g:id>
+      <g:title>Kolte Patil Qrious 3 BHK Luxury Apartment | Hinjewadi Pune</g:title>
+      <g:description>Spacious 3 BHK home in Qrious at Life Republic Hinjewadi. Expansive master bedrooms, panoramic sundecks overlooking the 150-acre township greenery, and multi-tier club amenities.</g:description>
+      <g:link>https://life-republic.in/projects/kolte-patil-life-republic-qrious</g:link>
+      <g:image_link>https://liferepublic.in/images/projects/location/17507612781749724578qriousele1.jpg</g:image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/1750765294qrious39.jpg</g:additional_image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/1750765385qrious43.jpg</g:additional_image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>9500000.00 INR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Kolte-Patil Developers Ltd</g:brand>
+      <g:google_product_category>Real Estate &gt; Residential Properties &gt; Apartments</g:google_product_category>
+      <g:product_type>Real Estate &gt; Pune &gt; Hinjewadi &gt; 3 BHK Flats</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:mpn>P52100053158</g:mpn>
+      <g:product_highlight>Expansive 3 BHK master layouts with large sunrise balconies</g:product_highlight>
+      <g:product_highlight>MahaRERA: P52100053158 with Dec 2026 handover</g:product_highlight>
+      <g:product_highlight>Access to Olympic swimming pool, gym, yoga lawn &amp; tennis courts</g:product_highlight>
+      <g:product_highlight>10 mins from Infosys, Wipro, TCS, and upcoming Pune Metro Line 3</g:product_highlight>
+      <g:custom_label_0>Sector R1</g:custom_label_0>
+      <g:custom_label_1>3 BHK</g:custom_label_1>
+      <g:custom_label_2>Dec 2026</g:custom_label_2>
+      <g:custom_label_3>Hinjewadi Pune</g:custom_label_3>
+      <g:custom_label_4>Under Construction</g:custom_label_4>
+    </item>
+    <item>
+      <g:id>canvas-3bhk</g:id>
+      <g:title>Kolte Patil Canvas Luxury 3 BHK Flat | Life Republic Hinjewadi</g:title>
+      <g:description>Ultra-luxury 3 BHK bespoke residence in Canvas Sector R1 at Kolte-Patil Life Republic Hinjewadi. MahaRERA P52100077255. Features infinity rooftop swimming pool, bonfire deck, private theater, and designer imported specifications.</g:description>
+      <g:link>https://life-republic.in/projects/kolte-patil-life-republic-canvas</g:link>
+      <g:image_link>https://liferepublic.in/images/project/gallery/1727440628GATE%20SCULPTURE.webp</g:image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/172846001957.webp</g:additional_image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/17284728371Canvas%20Flipchart%20-%20A3%20-%20Final-21.webp</g:additional_image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>13500000.00 INR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Kolte-Patil Developers Ltd</g:brand>
+      <g:google_product_category>Real Estate &gt; Residential Properties &gt; Apartments</g:google_product_category>
+      <g:product_type>Real Estate &gt; Pune &gt; Hinjewadi &gt; 3 BHK Flats</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:mpn>P52100077255</g:mpn>
+      <g:product_highlight>Bespoke luxury 3 BHK with premium marble finishes &amp; grand foyer</g:product_highlight>
+      <g:product_highlight>Infinity rooftop pool, sky lounge, and private banquet pavilion</g:product_highlight>
+      <g:product_highlight>MahaRERA P52100077255 with Dec 2027 possession</g:product_highlight>
+      <g:product_highlight>Surrounded by 150+ acres of verdant landscaped master township</g:product_highlight>
+      <g:custom_label_0>Sector R1</g:custom_label_0>
+      <g:custom_label_1>3 BHK</g:custom_label_1>
+      <g:custom_label_2>Dec 2027</g:custom_label_2>
+      <g:custom_label_3>Hinjewadi Pune</g:custom_label_3>
+      <g:custom_label_4>Under Construction</g:custom_label_4>
+    </item>
+    <item>
+      <g:id>canvas-4bhk</g:id>
+      <g:title>Kolte Patil Canvas 4 BHK Presidential Residence | Hinjewadi</g:title>
+      <g:description>Presidential 4 BHK residences in Canvas at Kolte-Patil Life Republic. Double-height living decks, servant quarters, dual master suites, and dedicated private parking bays in Hinjewadi Pune.</g:description>
+      <g:link>https://life-republic.in/projects/kolte-patil-life-republic-canvas</g:link>
+      <g:image_link>https://liferepublic.in/images/project/gallery/1727440628GATE%20SCULPTURE.webp</g:image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/172845998455.webp</g:additional_image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/172846003358.webp</g:additional_image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>18500000.00 INR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Kolte-Patil Developers Ltd</g:brand>
+      <g:google_product_category>Real Estate &gt; Residential Properties &gt; Apartments</g:google_product_category>
+      <g:product_type>Real Estate &gt; Pune &gt; Hinjewadi &gt; 4 BHK Flats</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:mpn>P52100077255</g:mpn>
+      <g:product_highlight>Palatial 4 BHK presidential layouts with dual master suites</g:product_highlight>
+      <g:product_highlight>Dedicated private elevator vestibule and double-height sundecks</g:product_highlight>
+      <g:product_highlight>MahaRERA: P52100077255</g:product_highlight>
+      <g:product_highlight>Top-tier investment yield and high capital appreciation potential</g:product_highlight>
+      <g:custom_label_0>Sector R1</g:custom_label_0>
+      <g:custom_label_1>4 BHK</g:custom_label_1>
+      <g:custom_label_2>Dec 2027</g:custom_label_2>
+      <g:custom_label_3>Hinjewadi Pune</g:custom_label_3>
+      <g:custom_label_4>Under Construction</g:custom_label_4>
+    </item>
+    <item>
+      <g:id>aros-2bhk</g:id>
+      <g:title>Kolte Patil Aros 2 BHK High-Rise Flat | Life Republic Hinjewadi</g:title>
+      <g:description>Contemporary high-rise 2 BHK flats in Sector R13 Aros at Kolte-Patil Life Republic Hinjewadi Pune. MahaRERA P52100050839. Designed with cross-ventilation, panoramic hills view, and multi-tier clubhouse.</g:description>
+      <g:link>https://life-republic.in/projects/kolte-patil-life-republic-aros</g:link>
+      <g:image_link>https://life-republic.in/images/projects/17523100953-bhk-flats-in-pune-hinjewadi-aros-life-republic.webp</g:image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/1724406891aros3.webp</g:additional_image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/1711954304Aros%202%20BHK%20Elite%20small.webp</g:additional_image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>7900000.00 INR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Kolte-Patil Developers Ltd</g:brand>
+      <g:google_product_category>Real Estate &gt; Residential Properties &gt; Apartments</g:google_product_category>
+      <g:product_type>Real Estate &gt; Pune &gt; Hinjewadi &gt; 2 BHK Flats</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:mpn>P52100050839</g:mpn>
+      <g:product_highlight>Premium 2 BHK Elite units with panoramic scenic views</g:product_highlight>
+      <g:product_highlight>June 2028 possession timeline under MahaRERA P52100050839</g:product_highlight>
+      <g:product_highlight>State-of-the-art multi-court sports complex and heated swimming pool</g:product_highlight>
+      <g:product_highlight>Ideal for IT professionals working in Hinjewadi Rajiv Gandhi InfoTech Park</g:product_highlight>
+      <g:custom_label_0>Sector R13</g:custom_label_0>
+      <g:custom_label_1>2 BHK</g:custom_label_1>
+      <g:custom_label_2>June 2028</g:custom_label_2>
+      <g:custom_label_3>Hinjewadi Pune</g:custom_label_3>
+      <g:custom_label_4>Under Construction</g:custom_label_4>
+    </item>
+    <item>
+      <g:id>aros-3bhk</g:id>
+      <g:title>Kolte Patil Aros 3 BHK Regal Residence | Life Republic Pune</g:title>
+      <g:description>3 BHK Regal residences in Aros at Life Republic Hinjewadi. Master bedroom suite, separate utility area, and access to exclusive podium level lifestyle amenities.</g:description>
+      <g:link>https://life-republic.in/projects/kolte-patil-life-republic-aros</g:link>
+      <g:image_link>https://life-republic.in/images/projects/17523100953-bhk-flats-in-pune-hinjewadi-aros-life-republic.webp</g:image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/1711954372Aros%203%20BHK%20Regal%20small.webp</g:additional_image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/1711954331Aros%203%20BHK%20Imperial%20small.webp</g:additional_image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>10500000.00 INR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Kolte-Patil Developers Ltd</g:brand>
+      <g:google_product_category>Real Estate &gt; Residential Properties &gt; Apartments</g:google_product_category>
+      <g:product_type>Real Estate &gt; Pune &gt; Hinjewadi &gt; 3 BHK Flats</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:mpn>P52100050839</g:mpn>
+      <g:product_highlight>3 BHK Regal &amp; Imperial layouts with premium vitrified flooring</g:product_highlight>
+      <g:product_highlight>MahaRERA: P52100050839</g:product_highlight>
+      <g:product_highlight>Podium lifestyle deck with jogging loop, skating rink, and open amphitheater</g:product_highlight>
+      <g:product_highlight>Direct bus feeder connectivity to Pune Metro stations</g:product_highlight>
+      <g:custom_label_0>Sector R13</g:custom_label_0>
+      <g:custom_label_1>3 BHK</g:custom_label_1>
+      <g:custom_label_2>June 2028</g:custom_label_2>
+      <g:custom_label_3>Hinjewadi Pune</g:custom_label_3>
+      <g:custom_label_4>Under Construction</g:custom_label_4>
+    </item>
+    <item>
+      <g:id>atmos-2bhk</g:id>
+      <g:title>Kolte Patil Atmos 2 &amp; 2.5 BHK Apartment | Life Republic Hinjewadi</g:title>
+      <g:description>Sky-touching 2 &amp; 2.5 BHK towers in Sector R22 Atmos at Life Republic Hinjewadi. MahaRERA P52100052345. Designed for modern work-from-home lifestyles with flexible study/work alcove.</g:description>
+      <g:link>https://life-republic.in/projects/kolte-patil-life-republic-atmos</g:link>
+      <g:image_link>https://life-republic.in/images/projects/1718284587atmosb.webp</g:image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/1711961745atmos-25%20s.webp</g:additional_image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/1711961620atmos-20%20s.webp</g:additional_image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>9000000.00 INR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Kolte-Patil Developers Ltd</g:brand>
+      <g:google_product_category>Real Estate &gt; Residential Properties &gt; Apartments</g:google_product_category>
+      <g:product_type>Real Estate &gt; Pune &gt; Hinjewadi &gt; 2 &amp; 2.5 BHK Flats</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:mpn>P52100052345</g:mpn>
+      <g:product_highlight>Innovative 2.5 BHK layouts with dedicated home office / study area</g:product_highlight>
+      <g:product_highlight>MahaRERA P52100052345 with possession by Dec 2028</g:product_highlight>
+      <g:product_highlight>Over 40+ curated indoor and outdoor lifestyle amenities</g:product_highlight>
+      <g:product_highlight>High rental demand hub near Hinjewadi Phase 1 IT park</g:product_highlight>
+      <g:custom_label_0>Sector R22</g:custom_label_0>
+      <g:custom_label_1>2 &amp; 2.5 BHK</g:custom_label_1>
+      <g:custom_label_2>Dec 2028</g:custom_label_2>
+      <g:custom_label_3>Hinjewadi Pune</g:custom_label_3>
+      <g:custom_label_4>Under Construction</g:custom_label_4>
+    </item>
+    <item>
+      <g:id>echoes-2bhk</g:id>
+      <g:title>Kolte Patil Echoes 2 BHK Nature Residence | Life Republic Hinjewadi</g:title>
+      <g:description>Nature-centric 2 BHK apartments in Sector R16 Echoes at Kolte-Patil Life Republic Hinjewadi. MahaRERA P52100078096. Peaceful green sanctuary with botanical gardens, meditation deck, and modern club.</g:description>
+      <g:link>https://life-republic.in/projects/kolte-patil-life-republic-echoes</g:link>
+      <g:image_link>https://liferepublic.in/images/project/gallery/171083281311.webp</g:image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/1724418615small4.webp</g:additional_image_link>
+      <g:additional_image_link>https://liferepublic.in/images/project/plan/1724418673small1.webp</g:additional_image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>7900000.00 INR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Kolte-Patil Developers Ltd</g:brand>
+      <g:google_product_category>Real Estate &gt; Residential Properties &gt; Apartments</g:google_product_category>
+      <g:product_type>Real Estate &gt; Pune &gt; Hinjewadi &gt; 2 BHK Flats</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:mpn>P52100078096</g:mpn>
+      <g:product_highlight>Serene nature-facing residences bordering the green master spine</g:product_highlight>
+      <g:product_highlight>MahaRERA P52100078096 with Dec 2027 possession</g:product_highlight>
+      <g:product_highlight>Dedicated clubhouse, swimming pool, and pet park</g:product_highlight>
+      <g:product_highlight>100% vaastu-compliant cross-ventilated design</g:product_highlight>
+      <g:custom_label_0>Sector R16</g:custom_label_0>
+      <g:custom_label_1>2 BHK</g:custom_label_1>
+      <g:custom_label_2>Dec 2027</g:custom_label_2>
+      <g:custom_label_3>Hinjewadi Pune</g:custom_label_3>
+      <g:custom_label_4>Under Construction</g:custom_label_4>
+    </item>
+  </channel>
 </rss>

@@ -1,16 +1,51 @@
+# ========================================================
+# CLOUDFLARE ENTERPRISE EDGE HEADERS & CACHING PROTOCOL
+# ========================================================
+
 /*
-  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  # Modern Transport & Security Directives
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
-  X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  X-DNS-Prefetch-Control: on
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(self), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), display-capture=()
+  
+  # Content Security Policy (Google & Cloudflare hardened)
+  Content-Security-Policy: default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; font-src 'self' https: data:; connect-src 'self' https: wss:; media-src 'self' https: data: blob:; worker-src 'self' blob:; frame-src 'self' https:;
+  
+  # Default HTML Edge Cache Control (instant delivery + background revalidation)
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
 
+# Immutable Hashed Static Assets (Vite / Rollup bundles)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+  Timing-Allow-Origin: *
 
+# High-Performance Cached Media Assets
 /images/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
+  Access-Control-Allow-Origin: *
+  Timing-Allow-Origin: *
 
+# Typography & Web Fonts
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# Sitemaps, Feeds, and Robots (Fresh within 1 hour, stale allowed for bots)
+/*.xml
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: application/xml; charset=UTF-8
+  Access-Control-Allow-Origin: *
+
+/*.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: application/json; charset=UTF-8
+  Access-Control-Allow-Origin: *
+
+/robots.txt
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: text/plain; charset=UTF-8

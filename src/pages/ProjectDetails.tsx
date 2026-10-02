@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import QRCode from 'react-qr-code';
 import { CLUSTERS } from '../lib/clusters';
 import { SEO } from '../components/seo/SEO';
+import { generateClusterProductSchema } from '../utils/schemaGenerator';
 import { CheckCircle, Download, Calendar, Layers, ShieldCheck, ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react';
 
 // ─── Lightbox ────────────────────────────────────────────────────────────────
@@ -174,12 +175,16 @@ const ProjectDetails: React.FC = () => {
         { key: 'master-plan', label: 'Master Layout' },
     ];
 
+    const clusterSchema = generateClusterProductSchema(project);
+
     return (
         <div className="bg-[#050505] min-h-screen text-white">
             <SEO
-                title={`${project.name} | Kolte Patil Life Republic Hinjewadi | Price, Floor Plan`}
-                description={project.description}
+                title={`${project.name} Life Republic - ${project.category} | Hinjewadi`}
+                description={project.description || `${project.name} in Life Republic Hinjewadi Pune. Explore 2, 3 & 4 BHK apartments, floor plans, MahaRERA ${project.rera}, and township master amenities.`}
                 canonical={`/projects/${project.slug}`}
+                schema={clusterSchema}
+                image={project.image}
             />
 
             {/* Lightbox */}

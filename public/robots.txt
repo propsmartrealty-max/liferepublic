@@ -1,17 +1,20 @@
 # ==========================================
-# ENTERPRISE ROBOTS PROTOCOL (SEO HARDENED)
+# ENTERPRISE ROBOTS PROTOCOL (GOOGLE HARDENED)
 # ==========================================
 
-# Explicitly whitelist and prioritize Googlebots
+# Explicitly whitelist and prioritize Googlebot Crawlers
 User-agent: Googlebot
 Allow: /
+Allow: /google-shopping-feed.xml
+Allow: /google-products.json
+Allow: /sitemap*.xml
 Disallow: /api/
-Disallow: /*?*
 Disallow: /cdn-cgi/
 
 User-agent: Googlebot-Image
 Allow: /
 Allow: /images/
+Allow: /assets/
 
 User-agent: Googlebot-Mobile
 Allow: /
@@ -19,27 +22,27 @@ Allow: /
 User-agent: AdsBot-Google
 Allow: /
 
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+# Bingbot & Standard Engines
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 Disallow: /api/
-Disallow: /*?*
 
-User-agent: YandexBot
-Allow: /
-Crawl-delay: 2
-Disallow: /api/
-Disallow: /*?*
-
-# Fallback for all other crawling agents
+# General Fallback
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /*?*
 Disallow: /cdn-cgi/
 Disallow: /_redirects
 Disallow: /_headers
 
-# Explicit Sitemap Declarations
-Sitemap: https://life-republic.in/sitemap-silos-index.xml
+# Explicit Sitemap & Product Feed Declarations
 Sitemap: https://life-republic.in/sitemap.xml
+Sitemap: https://life-republic.in/sitemap-silos-index.xml
+Sitemap: https://life-republic.in/google-shopping-feed.xml

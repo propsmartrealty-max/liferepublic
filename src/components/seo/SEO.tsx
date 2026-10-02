@@ -30,22 +30,24 @@ export const SEO: React.FC<SEOProps> = ({
     breadcrumbItems,
     noindex = false,
 }) => {
-    const siteTitle = 'Kolte Patil Life Republic Hinjewadi';
-    const locationSuffix = 'Pune';
-    
-    // De-duplicate branding and location more aggressively
-    const cleanTitle = title?.replace(/Kolte Patil|Life Republic|Hinjewadi|Pune/gi, '').replace(/^[\s|:-]+|[\s|:-]+$/g, '');
-    const fullTitle = title 
-        ? (title.includes('Kolte Patil Life Republic') && title.includes('Hinjewadi')) 
-            ? title 
-            : `${siteTitle} | ${cleanTitle || title} | ${locationSuffix}`
-        : `${siteTitle} | Premium Township | ${locationSuffix}`;
-
-    // Ensure it doesn't get too crazy long for Google (keep under 60-70 chars)
-    const finalTitle = fullTitle.length > 70 ? fullTitle.substring(0, 67) + '...' : fullTitle;
+    // SERP-Engineered Title Synthesis (Target: 45-60 characters, no ellipsis truncation, maximum Google CTR)
+    let finalTitle = '';
+    if (title) {
+        const trimmedTitle = title.trim();
+        if (trimmedTitle.length <= 60) {
+            finalTitle = trimmedTitle;
+        } else {
+            // Intelligently shorten to last whole word under 58 characters
+            const sub = trimmedTitle.substring(0, 58);
+            const lastSpace = sub.lastIndexOf(' ');
+            finalTitle = (lastSpace > 35 ? sub.substring(0, lastSpace) : sub).replace(/[\s|:-]+$/, '');
+        }
+    } else {
+        finalTitle = 'Kolte Patil Life Republic Hinjewadi | 150-Acre Township';
+    }
 
     const defaultDescription =
-        'Explore Kolte Patil Life Republic Hinjewadi, a 390-acre premium township in Pune. RERA-registered 1, 2, 3 BHK flats & 4 BHK villas near Rajiv Gandhi IT Park.';
+        'Explore Kolte Patil Life Republic Hinjewadi, a 150+ acre integrated township in Pune. RERA-registered 2, 3 & 4 BHK luxury residences near Hinjewadi IT Park.';
     const metaDescription = description || defaultDescription;
 
     const location = useLocation();
@@ -170,6 +172,12 @@ export const SEO: React.FC<SEOProps> = ({
             ) : (
                 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
             )}
+            <meta name="application-name" content="Life Republic" />
+            <meta name="apple-mobile-web-app-title" content="Life Republic" />
+            <meta name="geo.region" content="IN-MH" />
+            <meta name="geo.placename" content="Hinjewadi, Pune" />
+            <meta name="geo.position" content="18.5995;73.7153" />
+            <meta name="ICBM" content="18.5995, 73.7153" />
 
             {/* Open Graph / Facebook */}
             <meta property="og:type" content={type} />
