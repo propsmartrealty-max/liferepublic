@@ -26,3 +26,4 @@ dist-ssr
 .vercel
 service-account.json
 .indexing-quota-cache.json
+.wrangler
