@@ -1,0 +1,30 @@
+{
+  "name": "Kolte Patil Life Republic Hinjewadi",
+  "short_name": "Life Republic",
+  "description": "390-Acre Integrated Sustainable Township in Hinjewadi Pune. Luxury 1, 2, 3, 4 BHK residences, row houses, and sovereign amenities.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#C5A059",
+  "orientation": "portrait-primary",
+  "categories": ["lifestyle", "real-estate", "productivity"],
+  "icons": [
+    {
+      "src": "/favicon.png?v=kpbird",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png?v=kpbird",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png?v=kpbird",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

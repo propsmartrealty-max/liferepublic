@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 /**
- * Sovereign Performance Synthesis v6.0
- * Optimized for <1.5s Load Time & 60fps Velocity
+ * Sovereign Performance Synthesis v7.0
+ * Optimized for <1.5s Load Time, Zero Circular Chunks & 60fps Velocity
  */
 
 export default defineConfig(({ command, ssrBuild }: any) => {
@@ -32,16 +32,27 @@ export default defineConfig(({ command, ssrBuild }: any) => {
         output: isSsr ? {} : {
           manualChunks(id) {
             if (id.includes('node_modules')) {
-              if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+              if (
+                id.includes('/react/') || 
+                id.includes('/react-dom/') || 
+                id.includes('/react-router/') || 
+                id.includes('/react-router-dom/') ||
+                id.includes('/scheduler/')
+              ) {
                 return 'vendor-react';
               }
-              if (id.includes('framer-motion')) {
+              if (id.includes('/framer-motion/') || id.includes('/motion-dom/') || id.includes('/motion-utils/')) {
                 return 'vendor-framer';
               }
-              if (id.includes('lucide-react')) {
+              if (id.includes('/lucide-react/')) {
                 return 'vendor-icons';
               }
-              return 'vendor';
+              if (id.includes('/leaflet/') || id.includes('/react-leaflet/')) {
+                return 'vendor-maps';
+              }
+              if (id.includes('/canvas-confetti/')) {
+                return 'vendor-effects';
+              }
             }
           },
           chunkFileNames: 'assets/js/[name]-[hash].js',
@@ -49,7 +60,7 @@ export default defineConfig(({ command, ssrBuild }: any) => {
           assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
         },
       },
-      chunkSizeWarningLimit: 1500,
+      chunkSizeWarningLimit: 1200,
     },
     optimizeDeps: {
       include: ['react', 'react-dom', 'framer-motion', 'lucide-react']

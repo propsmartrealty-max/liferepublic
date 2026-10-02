@@ -206,6 +206,8 @@ async function runHardening() {
         const dnsList = await cfRequest(`/zones/${zoneId}/dns_records?per_page=100`);
         if (dnsList.success && dnsList.result) {
             console.log(`  Found ${dnsList.result.length} DNS records for ${DOMAIN}:`);
+            const caaRecords = dnsList.result.filter(r => r.type === 'CAA');
+
             for (const record of dnsList.result) {
                 const isApexOrWww = record.name === DOMAIN || record.name === `www.${DOMAIN}`;
                 if (isApexOrWww && (record.type === 'A' || record.type === 'AAAA' || record.type === 'CNAME')) {
@@ -222,6 +224,39 @@ async function runHardening() {
                     }
                 } else if (record.type === 'TXT') {
                     console.log(`  ✓ TXT ${record.name} -> ${record.content.substring(0, 50)}...`);
+                } else if (record.type === 'CAA') {
+                    console.log(`  ✓ CAA ${record.name} -> ${record.data?.tag || ''} ${record.data?.value || ''}`);
+                }
+            }
+
+            // Provision CAA records if none exist (Hardened Certificate Authority Authorization)
+            if (caaRecords.length === 0) {
+                console.log('\n  🔐 No CAA records detected. Provisioning sovereign CAA protection...');
+                const caaTargets = [
+                    { tag: 'issue', value: 'letsencrypt.org' },
+                    { tag: 'issue', value: 'pki.goog' },
+                    { tag: 'issue', value: 'digicert.com' },
+                    { tag: 'issuewild', value: ';' }
+                ];
+                for (const target of caaTargets) {
+                    try {
+                        const caaRes = await cfRequest(`/zones/${zoneId}/dns_records`, 'POST', {
+                            type: 'CAA',
+                            name: DOMAIN,
+                            data: {
+                                flags: 0,
+                                tag: target.tag,
+                                value: target.value
+                            }
+                        });
+                        if (caaRes.success) {
+                            console.log(`  ✅ [CAA ADDED] ${target.tag} "${target.value}"`);
+                        } else {
+                            console.log(`  ⚠ [CAA NOTE] ${target.tag} "${target.value}": ${caaRes.errors?.[0]?.message || 'Already exists'}`);
+                        }
+                    } catch (e) {
+                        console.log(`  ⚠ CAA Error: ${e.message}`);
+                    }
                 }
             }
         }

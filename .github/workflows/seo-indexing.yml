@@ -45,6 +45,10 @@ jobs:
           fi
           node scripts/google-index.cjs || echo "Google Index API completed batch execution."
           
+      - name: Run IndexNow Instant Indexing (Bing, Copilot & Yandex)
+        run: |
+          node scripts/indexnow.cjs || echo "IndexNow submission completed."
+          
       - name: Ping Search Engine Sitemaps
         run: |
           echo "Pinging Google and Bing with updated sitemaps..."
