@@ -13,7 +13,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "build:ssg": "npm run build",
-    "index": "node scripts/google-index.cjs"
+    "index": "node scripts/google-index.cjs",
+    "harden:cf": "node scripts/cloudflare-harden.cjs"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

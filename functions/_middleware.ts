@@ -2,6 +2,11 @@ export const onRequest: PagesFunction = async (context) => {
     const url = new URL(context.request.url);
     const path = url.pathname;
 
+    // 0. Apex Domain Normalization (Consolidate www.life-republic.in -> life-republic.in)
+    if (url.hostname === 'www.life-republic.in') {
+        return Response.redirect(`https://life-republic.in${url.pathname}${url.search}`, 301);
+    }
+
     // 1. Enterprise Edge URL Normalization (Prevent Duplicate Content in Google SERP)
     // Avoid redirecting assets, images, API routes, or the root path
     const isStaticAsset = path.startsWith('/assets/') || 
