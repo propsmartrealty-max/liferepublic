@@ -247,6 +247,69 @@ export const pseoRegistry: Record<string, LandingConfig> = {
         infraScore: 98, rentalYield: '5.5% - 7.0%', commutePhase1: '10 mins',
         highlights: ['Kolte Patil trusted legacy', '30+ years in Pune real estate', 'BSE-listed developer']
     },
+    'sector-r3-life-republic': {
+        title: 'Canvas Sector R3 Life Republic Hinjewadi | Luxury 3 & 4 BHK',
+        description: 'Explore Canvas in Sector R3 at Kolte Patil Life Republic Hinjewadi Pune. Luxury 3 & 4 BHK residences with high-rise views, walking distance to Anisha Global School.',
+        keywords: 'sector r3 life republic, canvas sector r3, kolte patil canvas hinjewadi, 3 bhk sector r3',
+        infraScore: 97, rentalYield: '6.0% - 6.8%', commutePhase1: '5 mins',
+        highlights: ['Walking distance to Crimson Anisha Global School', 'Panoramic high-rise views across 390-acre green canopy', 'Exclusive luxury specifications with double-height clubhouse']
+    },
+    'sector-r22-life-republic': {
+        title: 'Atmos Sector R22 Life Republic Hinjewadi | Modern 2 & 3 BHK',
+        description: 'Discover Atmos in Sector R22 at Kolte Patil Life Republic Hinjewadi Pune. Contemporary 2 & 3 BHK apartments with high-speed connectivity to IT Park.',
+        keywords: 'sector r22 life republic, atmos sector r22, kolte patil atmos hinjewadi',
+        infraScore: 96, rentalYield: '6.2% - 7.0%', commutePhase1: '6 mins',
+        highlights: ['6 mins to Hinjewadi Phase 1 IT Park', 'Clubhouse Atmos with infinity edge pool', 'Dec 2028 possession with flexible payment plans']
+    },
+    'sector-r13-life-republic': {
+        title: 'Aros Sector R13 Life Republic Hinjewadi | Premium 2 & 3 BHK',
+        description: 'Aros in Sector R13 at Kolte Patil Life Republic Hinjewadi. Premium 2 & 3 BHK residences with world-class sports amenities and central park access.',
+        keywords: 'sector r13 life republic, aros sector r13, kolte patil aros hinjewadi',
+        infraScore: 95, rentalYield: '5.8% - 6.5%', commutePhase1: '8 mins',
+        highlights: ['Direct access to 3.5-acre Central Park', 'Olympic-size swimming pool and sports hub', 'Vastu-compliant layouts with high natural ventilation']
+    },
+    'sector-r10-life-republic': {
+        title: 'Universe Sector R10 Life Republic Hinjewadi | Smart 1 & 2 BHK',
+        description: 'Smart tech residences at Universe Sector R10 Kolte Patil Life Republic Hinjewadi. Space-optimized 1 & 2 BHK apartments designed with Planet Smart City tech.',
+        keywords: 'sector r10 life republic, universe sector r10, kolte patil universe hinjewadi',
+        infraScore: 94, rentalYield: '6.5% - 7.2%', commutePhase1: '8 mins',
+        highlights: ['Planet Smart City IoT technology integration', 'Highest rental yield in township for young IT professionals', 'Compact zero-wastage functional floor plans']
+    },
+    'sector-r17a-life-republic': {
+        title: 'Echoes Sector R17 / R31 Life Republic Hinjewadi | New Launch',
+        description: 'Latest new launch phase Echoes at Sector R31 Kolte Patil Life Republic Hinjewadi. Meticulously planned 2 & 2.5 BHK apartments across 5.89 acres.',
+        keywords: 'sector r17a life republic, echoes sector r31, kolte patil echoes hinjewadi',
+        infraScore: 95, rentalYield: '6.0% - 6.8%', commutePhase1: '7 mins',
+        highlights: ['New launch early bird price advantage', '40+ modern lifestyle and wellness amenities', 'Dec 2030 possession with construction-linked milestones']
+    },
+    'sector-r31-life-republic': {
+        title: '24K Espada Sector R31 / R24 Life Republic | Ultra-Luxury Row Houses',
+        description: '24K Espada at Kolte Patil Life Republic Hinjewadi Pune. Ultra-luxury 4 & 5 BHK row houses with private terraces and 24K bespoke concierge services.',
+        keywords: 'sector r31 life republic, 24k espada life republic, luxury row houses hinjewadi',
+        infraScore: 99, rentalYield: '5.0% - 5.5%', commutePhase1: '8 mins',
+        highlights: ['Rare low-density villa and row-house enclave', 'Private elevators, garden decks, and multi-car parking', 'Exclusive 24K brand craftsmanship and bespoke finishes']
+    },
+    'sector-r2-life-republic': {
+        title: 'Qrious Sector R2 Life Republic Hinjewadi | Smart Tech Homes',
+        description: 'Qrious at Sector R2 Kolte Patil Life Republic Hinjewadi. Smart 2 & 3 BHK apartments adjacent to high-street retail boulevard and community plaza.',
+        keywords: 'sector r2 life republic, qrious sector r2, kolte patil qrious hinjewadi',
+        infraScore: 95, rentalYield: '6.0% - 6.8%', commutePhase1: '7 mins',
+        highlights: ['Integrated high-density retail boulevard', 'Home automation enabled smart residences', 'Immediate access to primary township gate and Spine Road']
+    },
+    'sector-r34-life-republic': {
+        title: 'Duet Sector R34 Life Republic Hinjewadi | Space-Efficient 2 BHK',
+        description: 'Duet at Sector R34 Kolte Patil Life Republic Hinjewadi. Space-efficient smart 2 BHK homes with low maintenance and direct connectivity.',
+        keywords: 'sector r34 life republic, duet sector r34, kolte patil duet hinjewadi',
+        infraScore: 93, rentalYield: '6.2% - 7.0%', commutePhase1: '8 mins',
+        highlights: ['High-efficiency 2 BHK spatial configurations', 'Low maintenance overhead with dedicated clubhouse', 'Dec 2030 possession with flexible builder payment schemes']
+    },
+    'sector-r17-life-republic': {
+        title: 'Nora Sector R17 Life Republic Hinjewadi | Bungalow Plots',
+        description: 'Build your bespoke bungalow at Nora Sector R17 Kolte Patil Life Republic Hinjewadi. Exclusive gated plots with underground utility infrastructure.',
+        keywords: 'sector r17 life republic, nora plots hinjewadi, bungalow plots life republic',
+        infraScore: 96, rentalYield: '4.5% - 5.2%', commutePhase1: '8 mins',
+        highlights: ['100% clear title NA bungalow plots', 'Build-to-suit architectural freedom adhering to township design code', 'Underground power cables, water supply, and wide internal paved avenues']
+    }
 };
 
 // All expanded PSEO slugs for sitemap generation

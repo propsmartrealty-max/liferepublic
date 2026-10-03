@@ -9,33 +9,95 @@ import { api } from '../services/api';
 import type { Project } from '../lib/types';
 
 import { pseoRegistry } from '../data/pseo-registry';
+import sectorsData from '../data/sectors.json';
 
 export const HyperLocalLanding: React.FC = () => {
     const { slug } = useParams<{ slug: string }>();
     const [projects, setProjects] = React.useState<Project[]>([]);
     
     const config = useMemo(() => {
-        return slug ? pseoRegistry[slug] : null;
+        if (!slug) return pseoRegistry['flats-near-marunji-road'];
+        if (pseoRegistry[slug]) return pseoRegistry[slug];
+
+        // Check sectors.json
+        const allItems = [
+            ...(sectorsData.sectors || []),
+            ...(sectorsData.avenues || []),
+            ...(sectorsData.localities || [])
+        ];
+        
+        const sectorIdMatch = slug.match(/sector-(r[0-9]+[a-z]?)/i);
+        const sectorId = sectorIdMatch ? sectorIdMatch[1].toLowerCase() : null;
+
+        const sectorMatch = allItems.find(item => 
+            item.slug === slug || 
+            (sectorId && item.id?.toLowerCase() === sectorId) ||
+            item.slug?.includes(slug) ||
+            (sectorId && item.slug?.toLowerCase().includes(sectorId))
+        );
+
+        if (sectorMatch) {
+            return {
+                title: `${sectorMatch.name} | Kolte Patil Life Republic Hinjewadi`,
+                description: `${sectorMatch.usp || `Explore ${sectorMatch.name} at Kolte Patil Life Republic Hinjewadi Pune.`} Possession: ${(sectorMatch as any).rera_possession || 'RERA Compliant'}.`,
+                keywords: `${sectorMatch.name}, ${sectorMatch.name} Life Republic, Kolte Patil ${(sectorMatch as any).id || ''}, flats in Hinjewadi`,
+                infraScore: (sectorMatch as any).occupancy ? 97 : 94,
+                rentalYield: '5.8% - 6.8%',
+                commutePhase1: (sectorMatch as any).distance || '8 mins',
+                highlights: [
+                    sectorMatch.usp || 'Master-planned township infrastructure with 70% open spaces',
+                    (sectorMatch as any).infrastructure || 'Direct arterial connectivity to 150-ft Spine Road',
+                    `Possession status: ${(sectorMatch as any).rera_possession || 'MahaRERA Approved'}`
+                ]
+            };
+        }
+
+        // Resilient fallback for any location slug
+        const cleanName = slug
+            .replace(/-/g, ' ')
+            .replace(/\blife republic\b/gi, '')
+            .trim()
+            .replace(/\b\w/g, l => l.toUpperCase());
+
+        return {
+            title: `${cleanName} | Kolte Patil Life Republic Hinjewadi`,
+            description: `Explore premium residential clusters and high-yield properties in ${cleanName} at Kolte Patil Life Republic 390-acre township Hinjewadi Pune.`,
+            keywords: `${cleanName}, ${cleanName} Life Republic, flats in ${cleanName}, property in Hinjewadi`,
+            infraScore: 95,
+            rentalYield: '5.8% - 6.8%',
+            commutePhase1: '8-10 mins',
+            highlights: [
+                'Direct 150-ft Spine Road connectivity to Hinjewadi IT Park Phases 1, 2 & 3',
+                'Crimson Anisha Global School & 3.5-acre Central Park within walking distance',
+                '100% MahaRERA approved with clear legal titles and high rental yield'
+            ]
+        };
     }, [slug]);
 
     React.useEffect(() => {
         const loadProjects = async () => {
             const allProjects = await api.projects.getAll();
-            setProjects(allProjects.slice(0, 3)); // Show top 3 for context
+            if (slug) {
+                const sLower = slug.toLowerCase();
+                const matched = allProjects.filter(p => 
+                    p.id.toLowerCase().includes(sLower) || 
+                    (sLower.includes('r3') && p.title.toLowerCase().includes('canvas')) ||
+                    (sLower.includes('r22') && p.title.toLowerCase().includes('atmos')) ||
+                    (sLower.includes('r13') && p.title.toLowerCase().includes('aros')) ||
+                    (sLower.includes('r10') && p.title.toLowerCase().includes('universe')) ||
+                    (sLower.includes('r17') && (p.title.toLowerCase().includes('echoes') || p.title.toLowerCase().includes('nora'))) ||
+                    (sLower.includes('r31') && (p.title.toLowerCase().includes('espada') || p.title.toLowerCase().includes('echoes'))) ||
+                    (sLower.includes('r2') && p.title.toLowerCase().includes('qrious')) ||
+                    (sLower.includes('r34') && p.title.toLowerCase().includes('duet'))
+                );
+                const remaining = allProjects.filter(p => !matched.some(m => m.id === p.id));
+                setProjects([...matched, ...remaining].slice(0, 3));
+            } else {
+                setProjects(allProjects.slice(0, 3));
+            }
         };
         loadProjects();
-    }, []);
-
-    if (!config) return (
-        <div className="pt-40 text-center">
-            <SEO 
-                title={`${slug?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} | Kolte Patil Life Republic`}
-                description={`Premium real estate and investment opportunities in ${slug?.replace(/-/g, ' ')}. Kolte Patil Life Republic Hinjewadi.`}
-                canonical={`/location/${slug}`}
-            />
-            Loading Authority Data...
-        </div>
-    );
+    }, [slug]);
 
     return (
         <div className="pt-4 pb-20 bg-transparent">
