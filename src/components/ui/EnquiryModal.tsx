@@ -114,7 +114,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
     return (
         <AnimatePresence>
             {isOpen && (
-                <div className="fixed inset-0 z-[120] flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+                <div className="fixed inset-0 z-[300] flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
                     {/* Dark Glass Backdrop */}
                     <motion.div 
                         initial={{ opacity: 0 }} 

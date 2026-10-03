@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MapPin, Clock, Sparkles, AlertCircle, X, Maximize2, ShieldCheck, Layers, Calendar, Download, ArrowUpRight } from 'lucide-react';
 import { getProjectSlug } from '../../data/slug-registry';
 
@@ -33,6 +33,7 @@ interface ProjectData {
 }
 
 export const ProjectCard = ({ project, priority }: { project: ProjectData, priority?: boolean }) => {
+    const navigate = useNavigate();
     const cardRef = useRef<HTMLDivElement>(null);
     const [isExpanded, setIsExpanded] = useState(false);
     
@@ -75,6 +76,11 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
         y.set(0);
     };
 
+    const handleCardClick = (e: React.MouseEvent) => {
+        // Direct navigation to full project details page
+        navigate(`/projects/${projectSlug}`);
+    };
+
     const config = configurations.length > 0 
         ? `${configurations[0].type} ${configurations.length > 1 ? `& ${configurations[configurations.length - 1].type}` : ''}`
         : displayCategory;
@@ -87,7 +93,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                 ref={cardRef}
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => setIsExpanded(true)}
+                onClick={handleCardClick}
                 style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
                 className="group relative block w-full aspect-[4/5] overflow-hidden rounded-[2rem] rainbow-border-wrap bg-black hover:shadow-2xl hover:shadow-rainbow/20 transition-shadow duration-700 cursor-interactive"
             >
@@ -289,7 +295,10 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                                                 <div className="text-sm text-white/60 mb-4">{cfg.size}</div>
                                                 <div className="text-2xl font-bold rainbow-text-clip mb-4">{cfg.price}</div>
                                                 <button 
-                                                    onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: displayName, type: `${cfg.type} Floor Plan` } }))}
+                                                    onClick={() => {
+                                                        setIsExpanded(false);
+                                                        window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: displayName, type: `${cfg.type} Floor Plan` } }));
+                                                    }}
                                                     className="w-full py-3 bg-white/10 hover:bg-rainbow-hover rounded-xl text-xs font-bold uppercase tracking-widest transition-colors"
                                                 >
                                                     View Floor Plan
@@ -302,7 +311,13 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                                 {/* Master Layout & Amenities */}
                                 <div>
                                     <h3 className="text-sm font-bold uppercase tracking-widest text-white/50 mb-4 flex items-center gap-2"><Sparkles size={16}/> Master Layout</h3>
-                                    <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 group cursor-interactive" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: displayName, type: 'Master Plan' } }))}>
+                                    <div 
+                                        className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 group cursor-interactive" 
+                                        onClick={() => {
+                                            setIsExpanded(false);
+                                            window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: displayName, type: 'Master Plan' } }));
+                                        }}
+                                    >
                                         <img src={project.masterLayout || displayImage} alt="Master Layout" className="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity" />
                                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                                             <div className="px-6 py-3 bg-rainbow-hover rounded-full font-bold uppercase tracking-widest text-xs flex items-center gap-2 text-white">
@@ -320,7 +335,10 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                                             <p className="text-sm text-white/60">Free pickup and drop facility available.</p>
                                         </div>
                                         <button 
-                                            onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: displayName, type: 'Site Visit' } }))}
+                                            onClick={() => {
+                                                setIsExpanded(false);
+                                                window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: displayName, type: 'Site Visit' } }));
+                                            }}
                                             className="whitespace-nowrap px-8 py-4 bg-white text-black rounded-full font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform flex items-center gap-2"
                                         >
                                             <Calendar size={14} /> Book Now

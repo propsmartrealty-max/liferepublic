@@ -20,9 +20,11 @@ export const ID_TO_SLUG: Record<string, string> = {
 };
 
 export const getProjectSlug = (id?: string, existingSlug?: string): string => {
-    if (existingSlug && existingSlug.startsWith('kolte-patil-')) return existingSlug;
-    if (id && id.startsWith('kolte-patil-')) return id;
     if (id && ID_TO_SLUG[id]) return ID_TO_SLUG[id];
+    if (existingSlug && ID_TO_SLUG[existingSlug]) return ID_TO_SLUG[existingSlug];
+    if (existingSlug && existingSlug.startsWith('kolte-patil-') && existingSlug.includes('-flats-') || existingSlug?.includes('-houses-') || existingSlug?.includes('-homes-') || existingSlug?.includes('-plots-')) return existingSlug;
+    if (id && id.startsWith('kolte-patil-')) return id;
+    if (existingSlug && existingSlug.startsWith('kolte-patil-')) return existingSlug;
     if (existingSlug) return existingSlug;
     if (id) return `kolte-patil-life-republic-${id}`;
     return '';
