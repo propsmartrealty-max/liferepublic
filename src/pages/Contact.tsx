@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, MapPin } from 'lucide-react';
 import { SEO } from '../components/seo/SEO';
+import { api } from '../services/api';
 
 
 export const Contact: React.FC = () => {
@@ -154,36 +155,29 @@ const ContactForm: React.FC = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            const formPayload = new FormData();
-            formPayload.append("name", formData.name);
-            formPayload.append("phone", formData.phone);
-            formPayload.append("email", formData.email);
-            formPayload.append("project", formData.cluster || "Not Specified");
-            formPayload.append("configuration", formData.configuration || "Not Specified");
-            formPayload.append("message", formData.message);
-            formPayload.append("_subject", "New Enquiry from Contact Page | Life Republic");
-
-            const response = await fetch('https://formsubmit.co/ajax/propsmartrealty@gmail.com', {
-                method: "POST",
-                body: formPayload
+            await api.leads.create({
+                name: formData.name,
+                phone: formData.phone,
+                email: formData.email,
+                cluster: formData.cluster || "Life Republic General Enquiry",
+                configuration: formData.configuration || "All Typologies",
+                message: formData.message,
+                source: "Official Contact Page",
+                enquiryType: "Contact Page Message",
+                url: typeof window !== 'undefined' ? window.location.href : 'https://life-republic.in/contact'
             });
 
-            if (response.ok) {
-                setSuccess(true);
-                setTimeout(() => {
-                    const message = encodeURIComponent(`Hi, I'm ${formData.name}. I'm interested in ${formData.cluster || formData.project || 'your project'} ${formData.configuration}. Please share the E-Brochure.`);
-                    window.open(`https://wa.me/917744009295?text=${message}`, '_blank');
-                    setFormData({ name: '', phone: '', email: '', cluster: '', configuration: '', message: '' });
-                    setSuccess(false);
-                }, 2000);
-            } else {
-                throw new Error("Form submission failed");
-            }
+            setSuccess(true);
+            setTimeout(() => {
+                const message = encodeURIComponent(`Hi, I'm ${formData.name}. I just sent an enquiry for Kolte Patil Life Republic ${formData.cluster || ''} ${formData.configuration || ''}. Please share brochure and price details.`);
+                window.open(`https://wa.me/919370552525?text=${message}`, '_blank');
+                setFormData({ name: '', phone: '', email: '', cluster: '', configuration: '', message: '' });
+                setSuccess(false);
+            }, 1500);
         } catch (e) {
-            console.error(e);
-            alert('Unable to submit right now. Redirecting to WhatsApp desk for immediate assistance...');
-            const message = encodeURIComponent(`Hi, I'm ${formData.name}. I'm interested in ${formData.cluster} ${formData.configuration}. ${formData.message}`);
-            window.open(`https://wa.me/917744009295?text=${message}`, '_blank');
+            console.error('Contact Form Submission Error:', e);
+            const message = encodeURIComponent(`Hi, I'm ${formData.name}. I'm interested in Kolte Patil Life Republic ${formData.cluster || ''} ${formData.configuration || ''}. ${formData.message || ''}`);
+            window.open(`https://wa.me/919370552525?text=${message}`, '_blank');
         } finally {
             setLoading(false);
         }

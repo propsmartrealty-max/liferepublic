@@ -33,19 +33,20 @@ export const ExitIntentOffer: React.FC = () => {
         const mobile = (formData.get('mobile') as string)?.trim() || '';
 
         try {
-            api.leads.create({
+            await api.leads.create({
                 name,
                 phone: mobile,
                 enquiryType: 'Exit Intent VIP Price List Request',
-                message: 'Requested VIP Pre-launch Price List & Floor Inventory via Exit Modal'
-            }).catch(() => {});
-        } catch {}
+                message: 'Requested VIP Pre-launch Price List & Floor Inventory via Exit Modal',
+                source: 'Exit Intent Modal',
+                url: typeof window !== 'undefined' ? window.location.href : 'https://life-republic.in'
+            });
+        } catch (err) {
+            console.error('Exit intent dispatch error:', err);
+        }
         
-        const message = `Hello, I would like to access the Private Beta Price List for Life Republic.
-
-Name: ${name}
-Mobile: ${mobile}`;
-        window.open(`https://wa.me/917744009295?text=${encodeURIComponent(message)}`, '_blank');
+        const message = `Hello, I would like to access the Private Beta Price List for Life Republic.\n\nName: ${name}\nMobile: ${mobile}`;
+        window.open(`https://wa.me/919370552525?text=${encodeURIComponent(message)}`, '_blank');
         setIsVisible(false);
     };
 

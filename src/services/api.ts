@@ -36,6 +36,26 @@ export const api = {
                     formData.append('_replyto', lead.email);
                 }
 
+                // Sovereign Local Lead Persistence Backup (Zero Lead Drop Guarantee)
+                try {
+                    if (typeof window !== 'undefined' && window.localStorage) {
+                        const existing = JSON.parse(localStorage.getItem('lr_leads_backup') || '[]');
+                        existing.unshift({
+                            name: leadName,
+                            phone: leadPhone,
+                            email: leadEmail,
+                            cluster: clusterName,
+                            configuration: config,
+                            purpose,
+                            message: lead.message,
+                            source: lead.source,
+                            url: currentUrl,
+                            timestamp
+                        });
+                        localStorage.setItem('lr_leads_backup', JSON.stringify(existing.slice(0, 100)));
+                    }
+                } catch (_) {}
+
                 // Table Fields Formatted in Title-Case for Clean Email Display
                 formData.append('Applicant Name', leadName);
                 formData.append('Mobile Number', leadPhone);
