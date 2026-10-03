@@ -18,6 +18,9 @@ export const api = {
     leads: {
         create: async (lead: LeadSubmission) => {
             try {
+                const escapeHtml = (str: string) => 
+                    str.replace(/[&<>"']/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m] || m));
+
                 const formData = new FormData();
                 const leadName = lead.name?.trim() || 'Valued Visitor';
                 const leadPhone = lead.phone?.trim() || '';
@@ -27,6 +30,15 @@ export const api = {
                 const purpose = lead.enquiryType || lead.type || 'Site Visit & Pricing Inquiry';
                 const currentUrl = lead.url || (typeof window !== 'undefined' ? window.location.href : 'https://life-republic.in');
                 const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+
+                const safeLeadName = escapeHtml(leadName);
+                const safeLeadPhone = escapeHtml(leadPhone);
+                const safeLeadEmail = escapeHtml(leadEmail);
+                const safeClusterName = escapeHtml(clusterName);
+                const safeConfig = escapeHtml(config);
+                const safePurpose = escapeHtml(purpose);
+                const safeMessage = escapeHtml(lead.message || 'Interested in receiving brochure, cost sheet, and booking site tour.');
+                const safeUrl = escapeHtml(currentUrl);
 
                 // FormSubmit Configuration Directives
                 formData.append('_subject', `🚨 Lead: ${leadName} - ${clusterName} (${config})`);
@@ -79,35 +91,35 @@ export const api = {
         <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
             <tr style="border-bottom: 1px solid #f1f5f9;">
                 <td style="padding: 10px 0; color: #64748b; font-weight: 600; width: 38%;">Client Name:</td>
-                <td style="padding: 10px 0; color: #0f172a; font-weight: 700; font-size: 15px;">${leadName}</td>
+                <td style="padding: 10px 0; color: #0f172a; font-weight: 700; font-size: 15px;">${safeLeadName}</td>
             </tr>
             <tr style="border-bottom: 1px solid #f1f5f9;">
                 <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Phone Number:</td>
-                <td style="padding: 10px 0; color: #0f172a; font-weight: 700;"><a href="tel:${leadPhone}" style="color: #2563eb; text-decoration: none;">📞 ${leadPhone}</a></td>
+                <td style="padding: 10px 0; color: #0f172a; font-weight: 700;"><a href="tel:${safeLeadPhone}" style="color: #2563eb; text-decoration: none;">📞 ${safeLeadPhone}</a></td>
             </tr>
             <tr style="border-bottom: 1px solid #f1f5f9;">
                 <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Email Address:</td>
-                <td style="padding: 10px 0; color: #0f172a;">${leadEmail}</td>
+                <td style="padding: 10px 0; color: #0f172a;">${safeLeadEmail}</td>
             </tr>
             <tr style="border-bottom: 1px solid #f1f5f9;">
                 <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Preferred Cluster:</td>
-                <td style="padding: 10px 0; color: #e11d48; font-weight: 700;">${clusterName}</td>
+                <td style="padding: 10px 0; color: #e11d48; font-weight: 700;">${safeClusterName}</td>
             </tr>
             <tr style="border-bottom: 1px solid #f1f5f9;">
                 <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Configuration:</td>
-                <td style="padding: 10px 0; color: #0f172a; font-weight: 600;">${config}</td>
+                <td style="padding: 10px 0; color: #0f172a; font-weight: 600;">${safeConfig}</td>
             </tr>
             <tr style="border-bottom: 1px solid #f1f5f9;">
                 <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Inquiry Type:</td>
-                <td style="padding: 10px 0; color: #047857; font-weight: 700; background: #ecfdf5; padding: 4px 8px; border-radius: 4px; display: inline-block;">${purpose}</td>
+                <td style="padding: 10px 0; color: #047857; font-weight: 700; background: #ecfdf5; padding: 4px 8px; border-radius: 4px; display: inline-block;">${safePurpose}</td>
             </tr>
             <tr style="border-bottom: 1px solid #f1f5f9;">
                 <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Customer Note:</td>
-                <td style="padding: 10px 0; color: #334155;">${lead.message || 'Direct callback requested'}</td>
+                <td style="padding: 10px 0; color: #334155;">${safeMessage}</td>
             </tr>
             <tr style="border-bottom: 1px solid #f1f5f9;">
                 <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Page Source:</td>
-                <td style="padding: 10px 0; color: #334155; font-size: 12px; word-break: break-all;">${currentUrl}</td>
+                <td style="padding: 10px 0; color: #334155; font-size: 12px; word-break: break-all;">${safeUrl}</td>
             </tr>
             <tr>
                 <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Received Time:</td>
