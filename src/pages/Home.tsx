@@ -160,9 +160,9 @@ export const Home = () => {
                         whileInView={{ x: 0 }}
                         initial={{ x: 50 }}
                         transition={{ duration: 1.5, ease: 'easeOut' }}
-                        src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=2000&auto=format&fit=crop" 
-                        alt="City" 
-                        className="w-full h-full object-cover opacity-30" 
+                        src="/images/home/master-township.webp" 
+                        alt="Kolte Patil Life Republic Master Township Hinjewadi Pune" 
+                        className="w-full h-full object-cover opacity-60" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-l from-black/90 via-black/60 to-transparent"></div>
                 </div>
