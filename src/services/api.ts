@@ -119,6 +119,19 @@ export const api = {
                 }
                 
                 const result = await response.json();
+
+                // Fire Google Ads & Analytics Conversion Event
+                if (typeof window !== 'undefined' && (window as any).gtag) {
+                    try {
+                        (window as any).gtag('event', 'generate_lead', {
+                            event_category: 'Lead Generation',
+                            event_label: `${clusterName} - ${config}`,
+                            value: 1.0,
+                            currency: 'INR'
+                        });
+                    } catch (_) {}
+                }
+
                 return result;
             } catch (error) {
                 console.error('Lead Capture Error:', error);

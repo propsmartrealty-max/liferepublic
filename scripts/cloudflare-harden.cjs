@@ -259,6 +259,48 @@ async function runHardening() {
                     }
                 }
             }
+
+            // Provision Cloudflare Email Routing MX & SPF Records (@life-republic.in)
+            const mxRecords = dnsList.result.filter(r => r.type === 'MX');
+            if (mxRecords.length === 0) {
+                console.log('\n  📬 Setting up Cloudflare Email Routing MX Records for @life-republic.in...');
+                const mxTargets = [
+                    { content: 'route1.mx.cloudflare.net', priority: 58 },
+                    { content: 'route2.mx.cloudflare.net', priority: 9 },
+                    { content: 'route3.mx.cloudflare.net', priority: 87 }
+                ];
+                for (const target of mxTargets) {
+                    try {
+                        const mxRes = await cfRequest(`/zones/${zoneId}/dns_records`, 'POST', {
+                            type: 'MX',
+                            name: DOMAIN,
+                            content: target.content,
+                            priority: target.priority
+                        });
+                        if (mxRes.success) {
+                            console.log(`  ✅ [MX ADDED] ${target.content} (Priority ${target.priority})`);
+                        }
+                    } catch (e) {
+                        console.log(`  ⚠ MX Error: ${e.message}`);
+                    }
+                }
+
+                // Update SPF record to authorize Cloudflare Email Routing
+                const spfRecord = dnsList.result.find(r => r.type === 'TXT' && r.content.includes('v=spf1'));
+                if (spfRecord && spfRecord.content.includes('-all') && !spfRecord.content.includes('cloudflare')) {
+                    try {
+                        const updatedSpf = 'v=spf1 include:_spf.mx.cloudflare.net ~all';
+                        await cfRequest(`/zones/${zoneId}/dns_records/${spfRecord.id}`, 'PATCH', {
+                            content: updatedSpf
+                        });
+                        console.log(`  ✅ [SPF UPDATED] ${updatedSpf}`);
+                    } catch (e) {
+                        console.log(`  ⚠ SPF Update Notice: ${e.message}`);
+                    }
+                }
+            } else {
+                console.log(`\n  ✓ Email Routing MX Records Active (${mxRecords.length} records configured).`);
+            }
         }
     } catch (e) {
         console.log(`  ⚠ DNS Record Check: ${e.message}`);

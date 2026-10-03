@@ -28,6 +28,15 @@ export const WhatsAppWidget: React.FC = () => {
 
     const handleSend = () => {
         if (!message.trim()) return;
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+            try {
+                (window as any).gtag('event', 'contact', {
+                    event_category: 'Engagement',
+                    event_label: 'WhatsApp Chat',
+                    method: 'WhatsApp'
+                });
+            } catch (_) {}
+        }
         const encodedMessage = encodeURIComponent(message);
         window.open(`https://wa.me/919370552525?text=${encodedMessage}`, '_blank');
         setIsOpen(false);

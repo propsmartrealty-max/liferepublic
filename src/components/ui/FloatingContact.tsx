@@ -25,6 +25,17 @@ export const FloatingContact: React.FC = () => {
                         href={`https://wa.me/919370552525?text=${encodeURIComponent("Hi PropSmart Realty, I am interested in Kolte Patil Life Republic Hinjewadi. Please share brochure and price details.")}`}
                         target="_blank"
                         rel="noreferrer"
+                        onClick={() => {
+                            if (typeof window !== 'undefined' && (window as any).gtag) {
+                                try {
+                                    (window as any).gtag('event', 'contact', {
+                                        event_category: 'Engagement',
+                                        event_label: 'Floating WhatsApp',
+                                        method: 'WhatsApp'
+                                    });
+                                } catch (_) {}
+                            }
+                        }}
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         whileHover={{ scale: 1.05 }}
