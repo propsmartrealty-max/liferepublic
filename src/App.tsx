@@ -276,8 +276,18 @@ function App() {
             </Layout>
           } />
 
-          {/* Programmatic SEO (10,000+ Permutations) */}
+          {/* Programmatic SEO (Scalable Permutations) */}
+          <Route path="/search" element={
+            <Layout ariaLabel="Kolte Patil Real Estate Search">
+              <SiloLanding />
+            </Layout>
+          } />
           <Route path="/search/:siloSlug" element={
+            <Layout ariaLabel="Kolte Patil Real Estate Search">
+              <SiloLanding />
+            </Layout>
+          } />
+          <Route path="/s/:siloSlug" element={
             <Layout ariaLabel="Kolte Patil Real Estate Search">
               <SiloLanding />
             </Layout>

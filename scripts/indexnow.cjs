@@ -15,33 +15,35 @@ const SITEMAP_PATH = path.resolve(__dirname, '../public/sitemap.xml');
 
 // Extract URLs from sitemaps
 function getUrls() {
-    if (!fs.existsSync(SITEMAP_PATH)) {
-        console.error('Sitemap not found at', SITEMAP_PATH);
-        return [];
-    }
-
-    const content = fs.readFileSync(SITEMAP_PATH, 'utf-8');
     const urls = new Set();
-    const locRegex = /<loc>(.*?)<\/loc>/g;
-    let match;
+    const sitemapFiles = ['sitemap.xml', 'sitemap-silos-index.xml'];
 
-    while ((match = locRegex.exec(content)) !== null) {
-        const url = match[1].trim();
-        if (url.endsWith('.xml')) {
-            const filename = path.basename(url);
-            const subPath = path.resolve(__dirname, '../public', filename);
-            if (fs.existsSync(subPath)) {
-                const subContent = fs.readFileSync(subPath, 'utf-8');
-                let subMatch;
-                const subRegex = /<loc>(.*?)<\/loc>/g;
-                while ((subMatch = subRegex.exec(subContent)) !== null) {
-                    if (!subMatch[1].endsWith('.xml')) {
-                        urls.add(subMatch[1].trim());
+    for (const smName of sitemapFiles) {
+        const smPath = path.resolve(__dirname, '../public', smName);
+        if (!fs.existsSync(smPath)) continue;
+
+        const content = fs.readFileSync(smPath, 'utf-8');
+        const locRegex = /<loc>(.*?)<\/loc>/g;
+        let match;
+
+        while ((match = locRegex.exec(content)) !== null) {
+            const url = match[1].trim();
+            if (url.endsWith('.xml')) {
+                const filename = path.basename(url);
+                const subPath = path.resolve(__dirname, '../public', filename);
+                if (fs.existsSync(subPath)) {
+                    const subContent = fs.readFileSync(subPath, 'utf-8');
+                    let subMatch;
+                    const subRegex = /<loc>(.*?)<\/loc>/g;
+                    while ((subMatch = subRegex.exec(subContent)) !== null) {
+                        if (!subMatch[1].endsWith('.xml')) {
+                            urls.add(subMatch[1].trim());
+                        }
                     }
                 }
+            } else {
+                urls.add(url);
             }
-        } else {
-            urls.add(url);
         }
     }
 

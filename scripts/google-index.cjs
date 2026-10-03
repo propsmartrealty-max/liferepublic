@@ -63,35 +63,37 @@ function saveQuotaCache(cache) {
     } catch (_) {}
 }
 
-// Extract all URLs from sitemap.xml (supports sitemap indexes and standard sitemaps)
+// Extract all URLs from sitemap.xml and sitemap-silos-index.xml (supports sitemap indexes and standard sitemaps)
 function extractUrls() {
-    if (!fs.existsSync(CONFIG.sitemapPath)) {
-        throw new Error(`Sitemap not found at ${CONFIG.sitemapPath}`);
-    }
-    
-    const content = fs.readFileSync(CONFIG.sitemapPath, 'utf-8');
     const urls = new Set();
-    const locRegex = /<loc>(.*?)<\/loc>/g;
-    let match;
+    const sitemapFiles = ['sitemap.xml', 'sitemap-silos-index.xml'];
 
-    while ((match = locRegex.exec(content)) !== null) {
-        const url = match[1].trim();
-        // If it points to another XML sitemap, try to read it locally
-        if (url.endsWith('.xml')) {
-            const filename = path.basename(url);
-            const subPath = path.resolve(__dirname, '../public', filename);
-            if (fs.existsSync(subPath)) {
-                const subContent = fs.readFileSync(subPath, 'utf-8');
-                let subMatch;
-                const subRegex = /<loc>(.*?)<\/loc>/g;
-                while ((subMatch = subRegex.exec(subContent)) !== null) {
-                    if (!subMatch[1].endsWith('.xml')) {
-                        urls.add(subMatch[1].trim());
+    for (const smName of sitemapFiles) {
+        const smPath = path.resolve(__dirname, '../public', smName);
+        if (!fs.existsSync(smPath)) continue;
+
+        const content = fs.readFileSync(smPath, 'utf-8');
+        const locRegex = /<loc>(.*?)<\/loc>/g;
+        let match;
+
+        while ((match = locRegex.exec(content)) !== null) {
+            const url = match[1].trim();
+            if (url.endsWith('.xml')) {
+                const filename = path.basename(url);
+                const subPath = path.resolve(__dirname, '../public', filename);
+                if (fs.existsSync(subPath)) {
+                    const subContent = fs.readFileSync(subPath, 'utf-8');
+                    let subMatch;
+                    const subRegex = /<loc>(.*?)<\/loc>/g;
+                    while ((subMatch = subRegex.exec(subContent)) !== null) {
+                        if (!subMatch[1].endsWith('.xml')) {
+                            urls.add(subMatch[1].trim());
+                        }
                     }
                 }
+            } else {
+                urls.add(url);
             }
-        } else {
-            urls.add(url);
         }
     }
 

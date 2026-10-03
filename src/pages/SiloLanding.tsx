@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import { extractSiloData } from '../lib/pSEO-engine';
 import { 
     CheckCircle2, ChevronRight, Home, Star, MapPin, 
@@ -11,23 +11,16 @@ import { Button } from '../components/ui/Button';
 import { EMICalculator } from '../components/ui/EMICalculator';
 
 export const SiloLanding: React.FC = () => {
-    const { siloSlug } = useParams<{ siloSlug: string }>();
-    const siloData = siloSlug ? extractSiloData(siloSlug) : null;
+    const { siloSlug } = useParams<{ siloSlug?: string }>();
+    const location = useLocation();
+    const queryParam = new URLSearchParams(location.search).get('q') || 
+                       new URLSearchParams(location.search).get('query') || 
+                       new URLSearchParams(location.search).get('keyword') || '';
+    const activeSlug = siloSlug || queryParam || 'kolte-patil-life-republic-township-hinjewadi';
+    const siloData = extractSiloData(activeSlug);
     const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
-    if (!siloData) {
-        return (
-            <div className="min-h-[70vh] flex flex-col items-center justify-center px-4 text-center">
-                <h1 className="text-2xl font-bold text-[#202124] mb-4">Search Listing Not Found</h1>
-                <p className="text-[#5F6368] mb-6">The specified property permutation is not currently listed.</p>
-                <Link to="/projects">
-                    <Button>Browse All Projects</Button>
-                </Link>
-            </div>
-        );
-    }
-
-    const currentUrl = `https://life-republic.in/search/${siloSlug}`;
+    const currentUrl = `https://life-republic.in/search/${activeSlug}`;
 
     // Schema: Product / RealEstateListing + Breadcrumbs + FAQPage
     const jsonLdSchema = {
@@ -358,6 +351,30 @@ export const SiloLanding: React.FC = () => {
                                     })}
                                 </div>
                             </div>
+
+                            {/* Internal Links Graph: Related Programmatic Searches */}
+                            {siloData.relatedSearches && siloData.relatedSearches.length > 0 && (
+                                <div className="border-t border-gray-200 pt-10 mt-12 mb-8">
+                                    <h3 className="text-xl font-bold text-[#202124] mb-2 tracking-tight">
+                                        Popular Property Searches in {siloData.location}
+                                    </h3>
+                                    <p className="text-xs text-[#5F6368] mb-6">
+                                        Explore related configurations, cluster phases, and investment typologies across Kolte Patil Life Republic
+                                    </p>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        {siloData.relatedSearches.map((item, idx) => (
+                                            <Link
+                                                key={idx}
+                                                to={`/search/${item.slug}`}
+                                                className="p-3.5 bg-white hover:bg-gray-50 border border-gray-200 hover:border-emerald-500 rounded-xl text-xs font-semibold text-[#202124] hover:text-emerald-700 transition-all shadow-sm flex items-center justify-between group"
+                                            >
+                                                <span className="truncate">{item.title}</span>
+                                                <ChevronRight size={14} className="text-gray-400 group-hover:text-emerald-600 shrink-0 ml-2" />
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                         </div>
 
                         {/* Sticky Sidebar (4 cols) */}
