@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { MapPin, Clock, Sparkles, AlertCircle, X, Maximize2, ShieldCheck, Layers, Calendar, Download } from 'lucide-react';
+import { MapPin, Clock, Sparkles, AlertCircle, X, Maximize2, ShieldCheck, Layers, Calendar, Download, ArrowUpRight } from 'lucide-react';
+import { getProjectSlug } from '../../data/slug-registry';
 
 interface Configuration {
     type: string;
@@ -37,7 +38,8 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
     
     if (!project) return null;
     
-    const displaySlug = project.slug || project.id || '';
+    const projectSlug = getProjectSlug(project.id, project.slug);
+    const displaySlug = projectSlug;
     const displayName = project.name || project.title || 'Exclusive Project';
     const displayCategory = project.category || 'Premium Residences';
     const displayDesc = project.description || 'Unparalleled architectural symmetry designed for maximum living comfort.';
@@ -105,11 +107,28 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                 {/* Highly readable Cinematic Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent transition-colors duration-700 group-hover:from-[#050505]"></div>
 
-                {/* Expand Overlay Hint */}
+                {/* Hover Action Overlay */}
                 <div className="absolute inset-0 bg-rainbow/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center pointer-events-none z-30 backdrop-blur-[2px]">
-                    <div className="px-6 py-3 bg-black/60 rounded-full border border-white/20 backdrop-blur-md flex items-center gap-2 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 shadow-2xl">
-                        <Maximize2 size={16} className="text-white" />
-                        <span className="text-white text-xs font-bold uppercase tracking-widest">Tap to Expand</span>
+                    <div className="flex items-center gap-3 pointer-events-auto transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 shadow-2xl">
+                        <Link 
+                            to={`/projects/${projectSlug}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="px-5 py-2.5 bg-white text-black hover:bg-rainbow-hover rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 shadow-2xl transition-all hover:scale-105"
+                        >
+                            <span>View Full Page</span>
+                            <ArrowUpRight size={15} />
+                        </Link>
+                        <button
+                            type="button"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setIsExpanded(true);
+                            }}
+                            className="px-4 py-2.5 bg-black/60 rounded-full border border-white/20 backdrop-blur-md flex items-center gap-2 hover:bg-white/20 text-white text-xs font-bold uppercase tracking-widest shadow-2xl transition-all"
+                        >
+                            <Maximize2 size={15} />
+                            <span>Quick View</span>
+                        </button>
                     </div>
                 </div>
 
@@ -149,9 +168,15 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                                     <span className="text-[10px] uppercase tracking-widest font-bold">{project.sector}</span>
                                 </div>
                             )}
-                            <h3 className="text-4xl font-sans font-bold text-white tracking-tight">
-                                {displayName}
-                            </h3>
+                            <Link 
+                                to={`/projects/${projectSlug}`} 
+                                onClick={(e) => e.stopPropagation()}
+                                className="pointer-events-auto block hover:opacity-90 transition-opacity"
+                            >
+                                <h3 className="text-4xl font-sans font-bold text-white tracking-tight hover:rainbow-text-clip transition-all">
+                                    {displayName}
+                                </h3>
+                            </Link>
                             <div className="mt-4 h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100 overflow-hidden">
                                 {project.usp && (
                                     <div className="flex items-start gap-1.5 mb-2 mt-1">
@@ -165,7 +190,7 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                             </div>
                         </div>
 
-                        <div className="pt-4 border-t border-white/10 flex justify-between items-end">
+                        <div className="pt-4 border-t border-white/10 flex justify-between items-end gap-3">
                             <div>
                                 {project.possession && (
                                     <div className="flex items-center gap-1.5 mb-4 text-white/70">
@@ -177,6 +202,17 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                                 <div className="text-xl md:text-2xl font-bold rainbow-text-clip tracking-tight">
                                     {configurations.length > 0 ? `${configurations[0].price} Onwards` : displayPrice}
                                 </div>
+                            </div>
+                            <div className="pointer-events-auto shrink-0">
+                                <Link 
+                                    to={`/projects/${projectSlug}`}
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="px-4 py-2 bg-white text-black hover:bg-rainbow-hover rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-1.5 shadow-xl hover:scale-105 group/btn"
+                                    title={`View full project details for ${displayName}`}
+                                >
+                                    <span>View Full Page</span>
+                                    <ArrowUpRight size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -224,8 +260,13 @@ export const ProjectCard = ({ project, priority }: { project: ProjectData, prior
                                     <h2 className="text-5xl md:text-5xl font-bold text-white mb-2">{displayName}</h2>
                                     <p className="text-lg text-white/70 mb-6">{project.usp}</p>
                                     
-                                    <Link to={`/projects/${displaySlug}`} className="w-full py-4 bg-white text-black hover:bg-rainbow-hover rounded-full font-bold uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-2">
-                                        View Full Page
+                                    <Link 
+                                        to={`/projects/${projectSlug}`} 
+                                        onClick={() => setIsExpanded(false)}
+                                        className="w-full py-4 bg-white text-black hover:bg-rainbow-hover rounded-full font-bold uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-2 shadow-xl hover:scale-[1.02]"
+                                    >
+                                        <span>View Full Page</span>
+                                        <ArrowUpRight size={16} />
                                     </Link>
                                 </div>
                             </div>

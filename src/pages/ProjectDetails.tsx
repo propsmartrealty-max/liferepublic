@@ -3,6 +3,8 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import QRCode from 'react-qr-code';
 import { CLUSTERS } from '../lib/clusters';
+import { projectsRegistry } from '../data/projects';
+import { ID_TO_SLUG } from '../data/slug-registry';
 import { SEO } from '../components/seo/SEO';
 import { generateClusterProductSchema } from '../utils/schemaGenerator';
 import { CheckCircle, Download, Calendar, Layers, ShieldCheck, ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react';
@@ -135,15 +137,50 @@ const ProjectDetails: React.FC = () => {
         }
 
         // Multi-tier resilient matching:
-        const clean = paramId.replace(/^kolte-patil-life-republic-/, '').replace(/-hinjewadi.*$/, '');
-        const found = 
-            CLUSTERS.find((c) => c.slug?.toLowerCase() === paramId || c.id?.toLowerCase() === paramId) ||
-            CLUSTERS.find((c) => c.id?.toLowerCase() === clean) ||
-            CLUSTERS.find((c) => paramId.includes(c.id?.toLowerCase())) ||
-            CLUSTERS.find((c) => c.slug?.toLowerCase().includes(clean)) ||
-            CLUSTERS[0]; // Fallback to primary cluster instead of kicking user to home
+        const clean = paramId
+            .replace(/^kolte-patil-life-republic-/, '')
+            .replace(/-(premium|modern|luxury|ultra-luxury|smart|new-launch|efficient|signature).*$/, '')
+            .replace(/-hinjewadi.*$/, '');
 
-        setProject(found);
+        let found: any = 
+            CLUSTERS.find((c) => c.slug?.toLowerCase() === paramId || c.id?.toLowerCase() === paramId) ||
+            CLUSTERS.find((c) => ID_TO_SLUG[c.id]?.toLowerCase() === paramId) ||
+            CLUSTERS.find((c) => c.id?.toLowerCase() === clean || c.slug?.toLowerCase() === `kolte-patil-life-republic-${clean}`) ||
+            CLUSTERS.find((c) => clean.length > 2 && (paramId.includes(c.id?.toLowerCase()) || c.id?.toLowerCase().includes(clean)));
+
+        if (!found) {
+            const regProj = projectsRegistry.find((p) => 
+                p.id?.toLowerCase() === paramId || 
+                (clean.length > 2 && p.id?.toLowerCase().includes(clean)) ||
+                (p.title && clean.length > 2 && p.title.toLowerCase().includes(clean))
+            );
+            if (regProj) {
+                found = {
+                    id: regProj.id,
+                    name: regProj.title?.split('|')[0]?.trim().replace(/^Kolte Patil Life Republic\s*/i, '') || regProj.title,
+                    slug: regProj.id,
+                    sector: regProj.location || 'Life Republic Township',
+                    status: 'Available',
+                    category: regProj.category,
+                    description: regProj.description || regProj.overview,
+                    price: regProj.price,
+                    rera: (regProj as any).rera || 'Available on Request',
+                    image: regProj.image,
+                    masterLayout: regProj.masterLayout || regProj.image,
+                    configurations: regProj.floorPlans?.map(fp => ({
+                        type: fp.type,
+                        size: fp.size,
+                        price: regProj.price,
+                        image: fp.image
+                    })) || [{ type: regProj.category || 'Luxury Residence', size: 'Spacious', price: regProj.price }],
+                    gallery: [regProj.image, ...(regProj.floorPlans?.map(fp => fp.image).filter(Boolean) || [])],
+                    amenitiesList: regProj.amenities?.map(a => ({ name: a, icon: '' })) || [],
+                    floorPlans: regProj.floorPlans?.map(fp => fp.image).filter(Boolean) || []
+                };
+            }
+        }
+
+        setProject(found || CLUSTERS[0]);
     }, [paramId, navigate]);
 
     const openLightbox = (images: string[], start = 0) => {
@@ -295,7 +332,7 @@ const ProjectDetails: React.FC = () => {
                             >
                                 <div className="p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-md">
                                     <p className="text-sm text-white/50 uppercase tracking-widest mb-1">Starting Price</p>
-                                    <p className="text-4xl font-bold rainbow-text-clip">{project.configurations?.[0]?.price}</p>
+                                    <p className="text-4xl font-bold rainbow-text-clip">{project.configurations?.[0]?.price || project.price || 'Price on Request'}</p>
                                 </div>
                                 <button
                                     onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: project.name, type: 'Download Brochure' } }))}
