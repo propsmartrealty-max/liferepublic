@@ -90,8 +90,8 @@ export const WhatsAppWidget: React.FC = () => {
                         >
                             <Send size={14} /> Send WhatsApp Message
                         </button>
-                        <p className="text-[10px] text-gray-400 text-center mt-2">
-                            Direct Line: +91 93705 52525
+                        <p className="text-[10px] text-gray-400 text-center mt-2 flex items-center justify-center gap-1">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Verified Township Advisory Desk
                         </p>
                     </motion.div>
                 )}

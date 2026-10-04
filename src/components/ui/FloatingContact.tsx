@@ -55,19 +55,16 @@ export const FloatingContact: React.FC = () => {
                         href="tel:+917744009295"
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
-                        whileHover={{ scale: 1.04 }}
-                        whileTap={{ scale: 0.96 }}
+                        whileHover={{ scale: 1.08 }}
+                        whileTap={{ scale: 0.94 }}
                         transition={{ delay: 0.1 }}
-                        className={`sm:p-3.5 p-3 rounded-full border-2 border-primary shadow-lg transition-all duration-300 flex items-center gap-2 group ${
-                            isLive ? 'bg-[#0f172a] text-white shadow-none' : 'bg-white text-[#202124] hover:bg-[#F8F9FA]'
+                        className={`sm:p-4 p-3 rounded-full border-2 border-primary shadow-xl transition-all duration-300 flex items-center justify-center ${
+                            isLive ? 'bg-accent text-[#202124]' : 'bg-white text-[#202124] hover:bg-[#F8F9FA]'
                         }`}
-                        aria-label="Direct Call: +91 77440 09295"
-                        title="Call Township Sales Office: +91 77440 09295"
+                        aria-label="Call Sales Office"
+                        title="Call Sales Office"
                     >
-                        <Phone className="sm:size-[20px] size-[18px] text-emerald-400 shrink-0" />
-                        <span className="hidden sm:inline-block pr-2 text-xs font-black tracking-wider text-white whitespace-nowrap">
-                            +91 77440 09295
-                        </span>
+                        <Phone className="sm:size-[24px] size-[20px]" />
                         {isLive && (
                             <span className="absolute inset-0 rounded-full border-2 border-primary bg-accent animate-ping opacity-20 pointer-events-none" />
                         )}

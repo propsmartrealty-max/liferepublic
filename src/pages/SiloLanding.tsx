@@ -426,10 +426,10 @@ export const SiloLanding: React.FC = () => {
                                     </p>
                                     <div className="space-y-2.5">
                                         <a 
-                                            href="tel:+919370552525" 
+                                            href="tel:+917744009295" 
                                             className="flex items-center justify-center gap-2 w-full py-3 bg-white text-emerald-950 rounded-xl text-xs font-bold hover:bg-emerald-50 transition-colors shadow-sm"
                                         >
-                                            <PhoneCall size={14} /> Call +91 93705 52525
+                                            <PhoneCall size={14} /> Call Sales Advisor
                                         </a>
                                         <a 
                                             href={`https://wa.me/919370552525?text=${encodeURIComponent(`Hi, I need assistance regarding ${siloData.h1} at Kolte Patil Life Republic.`)}`}

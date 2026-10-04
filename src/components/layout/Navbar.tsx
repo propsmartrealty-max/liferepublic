@@ -392,18 +392,14 @@ export const Navbar: React.FC = () => {
                             <span className="hidden xl:inline text-[11px] font-mono opacity-60">⌘K</span>
                         </motion.button>
 
-                        {/* Direct Phone Consultation Pill with Phone Logo */}
+                        {/* Phone Consultation Icon Trigger (Number sits behind icon) */}
                         <a
                             href="tel:+917744009295"
-                            className="flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full bg-white/[0.08] hover:bg-white/[0.15] border border-white/15 hover:border-emerald-500/50 text-white transition-all text-xs font-black uppercase tracking-wider group cursor-interactive shadow-lg"
-                            title="Call Township Sales Office"
+                            className="flex items-center justify-center w-11 h-11 rounded-full bg-white/[0.08] hover:bg-emerald-500/20 border border-white/15 hover:border-emerald-500/50 text-emerald-400 transition-all group cursor-interactive shadow-lg"
+                            title="Call Sales Office"
+                            aria-label="Call Sales Office"
                         >
-                            <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
-                                <Phone size={11} className="fill-current" />
-                            </div>
-                            <span className="text-[11px] sm:text-[12px] font-bold tracking-wider sm:tracking-widest text-white/95 group-hover:text-emerald-300 transition-colors whitespace-nowrap">
-                                +91 77440 09295
-                            </span>
+                            <Phone size={16} className="fill-current group-hover:scale-110 transition-transform" />
                         </a>
 
                         {/* Prominent High-Impact "Enquire Now" CTA */}
@@ -744,9 +740,9 @@ export const Navbar: React.FC = () => {
                             <div className="pt-8 space-y-3">
                                 <a
                                     href="tel:+917744009295"
-                                    className="w-full py-4 rounded-2xl bg-white/10 border border-white/20 text-white font-bold text-center flex items-center justify-center gap-2 text-sm tracking-widest uppercase"
+                                    className="w-full py-4 rounded-2xl bg-white/10 border border-white/20 text-white font-bold text-center flex items-center justify-center gap-2 text-sm tracking-widest uppercase hover:bg-emerald-500/20 hover:border-emerald-500/40 transition-colors"
                                 >
-                                    <Phone size={16} /> Call +91 77440 09295
+                                    <Phone size={16} /> Call Sales Office
                                 </a>
 
                                 <button
