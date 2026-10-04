@@ -71,7 +71,7 @@ export const SiloLanding: React.FC = () => {
                     'availability': 'https://schema.org/InStock',
                     'seller': {
                         '@type': 'RealEstateAgent',
-                        'name': 'PropSmart Realty (MahaRERA: A52100019166)'
+                        'name': 'Kolte-Patil Life Republic Authorized Sales Office'
                     }
                 },
                 'aggregateRating': {
@@ -221,7 +221,7 @@ export const SiloLanding: React.FC = () => {
                                     <PhoneCall size={16} /> Book VIP Site Visit
                                 </Button>
                                 <a 
-                                    href={`https://wa.me/919370552525?text=${encodeURIComponent(`Hi PropSmart Realty, I am interested in ${siloData.h1}. Please share pricing details.`)}`}
+                                    href={`https://wa.me/919370552525?text=${encodeURIComponent(`Hello, I am interested in ${siloData.h1}. Please share pricing details.`)}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 px-5 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold tracking-wide transition-colors shadow-sm"
@@ -410,11 +410,11 @@ export const SiloLanding: React.FC = () => {
                                     </div>
 
                                     <div className="mt-6 pt-5 border-t border-gray-100 flex items-center justify-between text-xs text-[#5F6368]">
-                                        <span>Authorized Marketing:</span>
-                                        <span className="font-semibold text-[#202124]">PropSmart Realty</span>
+                                        <span>Official Sales Desk:</span>
+                                        <span className="font-semibold text-[#202124]">Life Republic Sales Desk</span>
                                     </div>
                                     <div className="text-[11px] text-[#5F6368] mt-1 text-center">
-                                        MahaRERA: A52100019166
+                                        MahaRERA Registered Project
                                     </div>
                                 </div>
 

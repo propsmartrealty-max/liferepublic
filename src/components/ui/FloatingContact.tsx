@@ -22,7 +22,7 @@ export const FloatingContact: React.FC = () => {
             <div className="fixed sm:bottom-8 bottom-6 sm:right-8 right-6 z-50 flex flex-col items-end gap-3">
                 <div className="flex flex-col gap-3 bg-[#151822] border border-white/20/10 backdrop-blur-2xl p-2 rounded-full border border-white/20 shadow-glass rounded-full shadow-glass">
                     <motion.a
-                        href={`https://wa.me/919370552525?text=${encodeURIComponent("Hi PropSmart Realty, I am interested in Kolte Patil Life Republic Hinjewadi. Please share brochure and price details.")}`}
+                        href={`https://wa.me/919370552525?text=${encodeURIComponent("Hello, I am interested in Kolte Patil Life Republic Hinjewadi. Please share brochure and price details.")}`}
                         target="_blank"
                         rel="noreferrer"
                         onClick={() => {
@@ -51,26 +51,27 @@ export const FloatingContact: React.FC = () => {
                         )}
                     </motion.a>
 
-                    <motion.button
-                        onClick={() => {
-                            setModalContext("Request Instant Callback");
-                            setIsEnquiryOpen(true);
-                        }}
+                    <motion.a
+                        href="tel:+917744009295"
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        whileHover={{ scale: 1.04 }}
+                        whileTap={{ scale: 0.96 }}
                         transition={{ delay: 0.1 }}
-                        className={`sm:p-4 p-3 rounded-full border-2 border-primary shadow-none transition-all duration-300 flex items-center justify-center ${
-                            isLive ? 'bg-accent text-[#202124] shadow-none' : 'bg-white text-[#202124] hover:bg-[#F8F9FA]'
+                        className={`sm:p-3.5 p-3 rounded-full border-2 border-primary shadow-lg transition-all duration-300 flex items-center gap-2 group ${
+                            isLive ? 'bg-[#0f172a] text-white shadow-none' : 'bg-white text-[#202124] hover:bg-[#F8F9FA]'
                         }`}
-                        aria-label="Request Instant Callback"
+                        aria-label="Direct Call: +91 77440 09295"
+                        title="Call Township Sales Office: +91 77440 09295"
                     >
-                        <Phone className="sm:size-[24px] size-[20px]" />
+                        <Phone className="sm:size-[20px] size-[18px] text-emerald-400 shrink-0" />
+                        <span className="hidden sm:inline-block pr-2 text-xs font-black tracking-wider text-white whitespace-nowrap">
+                            +91 77440 09295
+                        </span>
                         {isLive && (
-                            <span className="absolute inset-0 rounded-full border-2 border-primary bg-accent animate-ping opacity-20" />
+                            <span className="absolute inset-0 rounded-full border-2 border-primary bg-accent animate-ping opacity-20 pointer-events-none" />
                         )}
-                    </motion.button>
+                    </motion.a>
                 </div>
             </div>
 

@@ -13,7 +13,7 @@ const Insights = () => {
     return (
         <div className="bg-[#050505] min-h-screen text-white pt-4 pb-20">
             <SEO 
-                title="Pune Real Estate Insights & Market Trends | PropSmart Realty"
+                title="Pune Real Estate Insights & Market Trends | Life Republic"
                 description="Expert analysis on the Pune real estate market, Hinjewadi property trends, Metro Line 3 impact, and ROI metrics for Kolte Patil Life Republic."
                 canonical="/market-reports"
             />

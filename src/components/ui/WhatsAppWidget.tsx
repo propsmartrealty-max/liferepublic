@@ -14,15 +14,15 @@ export const WhatsAppWidget: React.FC = () => {
         if (path.startsWith('/projects/')) {
             const slug = path.split('/').pop() || '';
             const clusterName = slug.replace(/^kolte-patil-life-republic-/, '').replace(/-/g, ' ').toUpperCase();
-            setMessage(`Hi PropSmart Realty, I am interested in Life Republic ${clusterName}. Please share the floor plans, brochure, and current price sheet.`);
+            setMessage(`Hello, I am interested in Life Republic ${clusterName}. Please share the floor plans, brochure, and current price sheet.`);
         } else if (path.startsWith('/search/')) {
             const siloSlug = path.split('/').pop() || '';
             const formatted = siloSlug.replace(/-/g, ' ');
-            setMessage(`Hi PropSmart Realty, I found your listing for ${formatted}. Please share the pricing and inventory availability.`);
+            setMessage(`Hello, I found your listing for ${formatted}. Please share the pricing and inventory availability.`);
         } else if (path.startsWith('/market-reports/') || path.startsWith('/insights/')) {
-            setMessage('Hi PropSmart Realty, I was reading your Hinjewadi real estate market analysis and would like investment advisory on Life Republic.');
+            setMessage('Hello, I was reading your Hinjewadi real estate market analysis and would like advisory on Life Republic.');
         } else {
-            setMessage('Hi PropSmart Realty, I am interested in Kolte-Patil Life Republic Hinjewadi. Please share brochure and project details.');
+            setMessage('Hello, I am interested in Kolte-Patil Life Republic Hinjewadi. Please share brochure and project details.');
         }
     }, [location.pathname]);
 
@@ -91,7 +91,7 @@ export const WhatsAppWidget: React.FC = () => {
                             <Send size={14} /> Send WhatsApp Message
                         </button>
                         <p className="text-[10px] text-gray-400 text-center mt-2">
-                            Direct Line: +91 93705 52525 (PropSmart Realty)
+                            Direct Line: +91 93705 52525
                         </p>
                     </motion.div>
                 )}

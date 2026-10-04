@@ -392,15 +392,16 @@ export const Navbar: React.FC = () => {
                             <span className="hidden xl:inline text-[11px] font-mono opacity-60">⌘K</span>
                         </motion.button>
 
-                        {/* Direct Phone Consultation Pill */}
+                        {/* Direct Phone Consultation Pill with Phone Logo */}
                         <a
                             href="tel:+917744009295"
-                            className="hidden md:flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/[0.05] hover:bg-white/[0.12] border border-white/10 hover:border-emerald-500/50 text-white transition-all text-xs font-black uppercase tracking-wider group cursor-interactive"
+                            className="flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full bg-white/[0.08] hover:bg-white/[0.15] border border-white/15 hover:border-emerald-500/50 text-white transition-all text-xs font-black uppercase tracking-wider group cursor-interactive shadow-lg"
+                            title="Call Township Sales Office"
                         >
-                            <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
                                 <Phone size={11} className="fill-current" />
                             </div>
-                            <span className="text-[12px] font-bold tracking-widest text-white/90 group-hover:text-emerald-300 transition-colors">
+                            <span className="text-[11px] sm:text-[12px] font-bold tracking-wider sm:tracking-widest text-white/95 group-hover:text-emerald-300 transition-colors whitespace-nowrap">
                                 +91 77440 09295
                             </span>
                         </a>

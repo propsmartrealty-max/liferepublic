@@ -188,7 +188,7 @@ export const CommandPalette = () => {
                                 <span className="flex items-center gap-1"><kbd className="bg-white/10 px-1.5 py-0.5 rounded text-[10px]">↑↓</kbd> to navigate</span>
                                 <span className="flex items-center gap-1"><kbd className="bg-white/10 px-1.5 py-0.5 rounded text-[10px]">Enter</kbd> to select</span>
                             </div>
-                            <span>PropSmart AI Predictive Search</span>
+                            <span>AI Predictive Search</span>
                         </div>
                     </motion.div>
                 </>

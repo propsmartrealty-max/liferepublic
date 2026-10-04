@@ -35,7 +35,7 @@ const Article = () => {
     return (
         <div className="bg-[#050505] min-h-screen text-white pb-20">
             <SEO 
-                title={`${article.title} | PropSmart Insights`}
+                title={`${article.title} | Life Republic Insights`}
                 description={article.excerpt}
                 canonical={`/market-reports/${article.slug}`}
                 type="article"

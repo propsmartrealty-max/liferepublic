@@ -4,7 +4,7 @@ import type { Project } from '../lib/types';
 
 const SYSTEM_PROMPT = `
 You are the Sovereign AI Concierge for Kolte-Patil Life Republic, a 390-acre sustainable, integrated township in Hinjewadi-Marunji, Pune West.
-You represent Kolte-Patil Developers Ltd. (33+ years heritage, NSE/BSE listed) and PropSmart Realty (Authorized Partner, MahaRERA: A52100019166).
+You represent Kolte-Patil Developers Ltd. (33+ years heritage, NSE/BSE listed).
 
 Core Facts:
 - Scale: 390+ Contiguous Acres, 20,000+ residents, 12,000+ delivered homes.
@@ -66,7 +66,7 @@ function getLocalKnowledgeResponse(query: string): string {
 
     // RERA / Approvals / Legal
     if (q.includes('rera') || q.includes('legal') || q.includes('approval') || q.includes('possession') || q.includes('maharera')) {
-        return "All residential sectors at Kolte-Patil Life Republic are 100% MahaRERA registered: Qrious (P52100028753), Duet (P52100052344), Canvas (P52100054789), Atmos (P52100049756), Aros (P52100030584), and Echoes (P52100051288). PropSmart Realty is an authorized sales partner (MahaRERA: A52100019166).";
+        return "All residential sectors at Kolte-Patil Life Republic are 100% MahaRERA registered: Qrious (P52100028753), Duet (P52100052344), Canvas (P52100054789), Atmos (P52100049756), Aros (P52100030584), and Echoes (P52100051288).";
     }
 
     // Price / Cost / Rate per sq ft
