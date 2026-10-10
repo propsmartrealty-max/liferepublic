@@ -58,24 +58,24 @@ const Projects: React.FC = () => {
                         <div className="space-y-4">
                             <h3 className="font-bold text-white/80 tracking-tight font-medium text-sm">Luxury Lifestyle</h3>
                             <ul className="space-y-2">
-                                <li><Link to="/projects/kolte-patil-life-republic-canvas" className="text-white hover:text-white/80 font-medium text-sm">Canvas Luxury Apartments</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi" className="text-white hover:text-white/80 font-medium text-sm">Canvas Luxury Apartments</Link></li>
                                 <li><Link to="/projects/kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi" className="text-white hover:text-white/80 font-medium text-sm">24K Espada Row Houses</Link></li>
                             </ul>
                         </div>
                         <div className="space-y-4">
                             <h3 className="font-bold text-white/80 tracking-tight font-medium text-sm">Smart Living</h3>
                             <ul className="space-y-2">
-                                <li><Link to="/projects/kolte-patil-life-republic-qrious" className="text-white hover:text-white/80 font-medium text-sm">Qrious Smart Homes</Link></li>
-                                <li><Link to="/projects/kolte-patil-life-republic-duet" className="text-white hover:text-white/80 font-medium text-sm">Duet Compact Living</Link></li>
-                                <li><Link to="/projects/kolte-patil-life-republic-universe" className="text-white hover:text-white/80 font-medium text-sm">Universe Residences</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi" className="text-white hover:text-white/80 font-medium text-sm">Qrious Smart Homes</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi" className="text-white hover:text-white/80 font-medium text-sm">Duet Compact Living</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi" className="text-white hover:text-white/80 font-medium text-sm">Universe Residences</Link></li>
                             </ul>
                         </div>
                         <div className="space-y-4">
                             <h3 className="font-bold text-white/80 tracking-tight font-medium text-sm">Premium & Newest</h3>
                             <ul className="space-y-2">
-                                <li><Link to="/projects/kolte-patil-life-republic-echoes" className="text-white hover:text-white/80 font-medium text-sm">Echoes (New Launch)</Link></li>
-                                <li><Link to="/projects/kolte-patil-life-republic-atmos" className="text-white hover:text-white/80 font-medium text-sm">Atmos Modern Apartments</Link></li>
-                                <li><Link to="/projects/kolte-patil-life-republic-aros" className="text-white hover:text-white/80 font-medium text-sm">Aros Premium Sector</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi" className="text-white hover:text-white/80 font-medium text-sm">Echoes (New Launch)</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi" className="text-white hover:text-white/80 font-medium text-sm">Atmos Modern Apartments</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi" className="text-white hover:text-white/80 font-medium text-sm">Aros Premium Sector</Link></li>
                             </ul>
                         </div>
                         <div className="space-y-4">

@@ -312,7 +312,7 @@ export const projectsRegistry: Project[] = [
     }
 ,
     {
-        id: 'kolte-patil-life-republic-qrious',
+        id: 'kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi',
         title: 'Kolte Patil Life Republic Qrious | Premium 2 & 3 BHK Hinjewadi',
         category: 'Lifestyle',
         location: 'Sector R14 (Qrious)',

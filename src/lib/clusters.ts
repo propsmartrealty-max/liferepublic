@@ -6,7 +6,7 @@ export const CLUSTERS = [
         sector: "Sector R31",
         usp: "Premium Residences with Smart Tech",
         name: "Echoes",
-        slug: "kolte-patil-life-republic-echoes",
+        slug: "kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi",
         category: "Premium Residences",
         description: "Echoes is the newest residential phase at Life Republic (Sector R31). Offering meticulously planned 2 & 2.5 BHK homes with 40+ amenities across a 5.89-acre development.",
         price: "₹85 Lakhs*",
@@ -51,7 +51,7 @@ export const CLUSTERS = [
         sector: "Sector R34",
         usp: "Space-Efficient Smart Layouts",
         name: "Duet",
-        slug: "kolte-patil-life-republic-duet",
+        slug: "kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi",
         category: "Premium 2 BHK",
         description: "Duet (Sector R34) features smart, space-efficient 2 BHK apartments designed for modern nuclear families with access to township-level infrastructure.",
         price: "₹79 Lakhs*",
@@ -137,7 +137,7 @@ export const CLUSTERS = [
         sector: "Sector R14",
         usp: "Educational & Play-Themed Amenities",
         name: "Qrious",
-        slug: "kolte-patil-life-republic-qrious",
+        slug: "kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi",
         category: "Smart 2 & 3 BHK",
         description: "Qrious at Life Republic (Sector R14) features premium 2 & 3 BHK homes in a 7.58-acre development. Highlights include 5 Towers, 8 Flats/floor, 4 Lifts/tower, 36 Habitable Floors, and High Street Retail with 90 Shops.",
         price: "₹89 Lakhs*",
@@ -242,7 +242,7 @@ export const CLUSTERS = [
         sector: "Sector R5",
         usp: "Pune's Tallest Residential Tower",
         name: "Canvas",
-        slug: "kolte-patil-life-republic-canvas",
+        slug: "kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi",
         category: "Premium 3, 3.5 & 4 BHK",
         description: "Pune's Tallest Residential Tower reaching ~120M high. Canvas offers ultra-premium 3, 3.5 & 4 BHK residences with 50+ curated amenities across a 6+ acre estate. Each unit features 2 master bedrooms.",
         price: "₹1.59 Cr*",
@@ -290,7 +290,7 @@ export const CLUSTERS = [
         sector: "Sector R13",
         usp: "Nature-Integrated Expansive Living",
         name: "Aros",
-        slug: "kolte-patil-life-republic-aros",
+        slug: "kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi",
         category: "Premium 2 & 3 BHK",
         description: "Aros (Sector R13) redefines community living with a massive 19,000 sq.ft. clubhouse, a 2.6-acre Nature's Nest, and a spectacular 70-meter high Sky Trail.",
         price: "₹92 Lakhs*",
@@ -359,7 +359,7 @@ export const CLUSTERS = [
         sector: "Sector R22",
         usp: "Elevated High-Rise Lifestyles",
         name: "Atmos",
-        slug: "kolte-patil-life-republic-atmos",
+        slug: "kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi",
         category: "Premium 3 BHK",
         description: "Atmos (Sector R22) offers elevated lifestyle features with thoughtfully designed 3 BHK units, focused on natural light, ventilation, and panoramic views.",
         price: "₹1.15 Cr*",
@@ -404,7 +404,7 @@ export const CLUSTERS = [
         sector: "Town Center",
         usp: "High-Street Retail & Integrated High-Street",
         name: "Universe",
-        slug: "kolte-patil-life-republic-universe",
+        slug: "kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi",
         category: "Smart 1 & 2 BHK",
         description: "Smart, tech-enabled 1 and 2 BHK residences designed for millennials, featuring home automation and high-speed fiber infrastructure.",
         price: "₹75 Lacs*",
@@ -446,7 +446,7 @@ export const CLUSTERS = [
     },
     {
         id: "oro-avenue",
-        slug: "kolte-patil-life-republic-oro-avenue",
+        slug: "kolte-patil-life-republic-oro-avenue-smart-1-2-bhk-hinjewadi",
         name: "Oro Avenue",
         rera: "P52100017116", // Placeholder RERA
         image: "https://liferepublic.in/images/projects/location/172060335117189650503rd%20Avenue-.jpg",
@@ -480,7 +480,7 @@ export const CLUSTERS = [
     },
     {
         id: "i-tower",
-        slug: "kolte-patil-life-republic-i-tower",
+        slug: "kolte-patil-life-republic-i-towers-smart-homes-hinjewadi",
         name: "I Tower",
         rera: "P52100009640", // Placeholder RERA
         image: "https://liferepublic.in/images/projects/location/1720604991i%20tower.jpg",
@@ -497,7 +497,7 @@ export const CLUSTERS = [
     },
     {
         id: "sound-of-soul",
-        slug: "kolte-patil-life-republic-sound-of-soul",
+        slug: "kolte-patil-life-republic-sound-of-soul-luxury-4-bhk-row-houses-hinjewadi",
         name: "Sound of Soul",
         rera: "P52100049289", // Placeholder RERA
         image: "https://liferepublic.in/images/projects/location/1718965104Sound%20Of%20Soul%20image.jpg",
@@ -513,7 +513,7 @@ export const CLUSTERS = [
     },
     {
         id: "24k-espada",
-        slug: "kolte-patil-life-republic-24k-espada",
+        slug: "kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi",
         name: "24K Espada",
         rera: "P52100052345", // Placeholder RERA
         image: "https://liferepublic.in/images/projects/location/171896513924K%20Espada.jpg",

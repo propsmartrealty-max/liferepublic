@@ -28,7 +28,7 @@ export const AutoLinker: React.FC<AutoLinkerProps> = ({ text, className = "" }) 
         if (!text) return [];
 
         const currentText = text;
-        const result: (string | JSX.Element)[] = [];
+        const result: (string | React.ReactNode)[] = [];
         
         // Build a regex pattern from our keywords (longest first to prevent partial matches)
         const keywords = Object.keys(KEYWORD_MAP).sort((a, b) => b.length - a.length);

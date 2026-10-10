@@ -52,11 +52,11 @@ export const CommandPalette = () => {
         const q = query.toLowerCase();
         if (!q) return [];
 
-        const results = [];
+        const results: any[] = [];
 
         // 1. Search Clusters
         CLUSTERS.forEach(cluster => {
-            if (cluster.name.toLowerCase().includes(q) || cluster.category.toLowerCase().includes(q) || cluster.description.toLowerCase().includes(q)) {
+            if (cluster.name.toLowerCase().includes(q) || cluster.category?.toLowerCase().includes(q) || cluster.description?.toLowerCase().includes(q)) {
                 results.push({
                     type: 'Cluster',
                     title: cluster.name,

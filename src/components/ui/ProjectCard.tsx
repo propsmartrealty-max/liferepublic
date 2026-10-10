@@ -26,10 +26,11 @@ interface ProjectData {
     sector?: string;
     usp?: string;
     masterLayout?: string;
-    configurations?: Configuration[];
-    gallery?: string[];
+    configurations?: any[];
+    gallery?: (string | { url: string; alt?: string })[];
     amenitiesList?: {name: string, icon: string}[];
-    floorPlans?: string[];
+    floorPlans?: any[];
+    [key: string]: any;
 }
 
 export const ProjectCard = ({ project, priority }: { project: ProjectData, priority?: boolean }) => {

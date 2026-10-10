@@ -11,9 +11,11 @@ import localBlogs from '../data/blogs.json';
 
 export const BlogPostPage: React.FC = () => {
     const { slug } = useParams<{ slug: string }>();
-    const [post, setPost] = useState<BlogPost | null>(null);
-    const [related, setRelated] = useState<BlogPost[]>([]);
-    const [loading, setLoading] = useState(true);
+    const initialPost = localBlogs.find(b => b.slug === slug) as any || null;
+    const initialRelated = localBlogs.filter(b => b.slug !== slug).slice(0, 3) as any;
+    const [post, setPost] = useState<BlogPost | null>(initialPost);
+    const [related, setRelated] = useState<BlogPost[]>(initialRelated);
+    const [loading, setLoading] = useState(!initialPost);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {

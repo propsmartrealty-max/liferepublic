@@ -1,4 +1,5 @@
 import type { Project } from '../lib/types';
+import { getProjectSlug } from '../data/slug-registry';
 
 const DOMAIN = 'https://life-republic.in';
 
@@ -224,7 +225,7 @@ const parsePrice = (priceStr: string): string => {
 
 export const generateClusterProductSchema = (cluster: any) => {
     if (!cluster) return null;
-    const slug = cluster.slug || cluster.id;
+    const slug = getProjectSlug(cluster.id, cluster.slug) || cluster.slug || cluster.id;
     const projectUrl = `${DOMAIN}/projects/${slug}`;
     const images = [
         cluster.image,

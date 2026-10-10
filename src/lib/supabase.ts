@@ -1,4 +1,4 @@
-export const supabase = {
+export const supabase: any = {
   from: () => ({
     select: () => ({
       eq: () => ({

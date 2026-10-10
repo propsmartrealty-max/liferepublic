@@ -33,7 +33,7 @@ export const KineticText = ({ text, className, delay = 0, as: Component = 'div' 
     return (
         <MotionComponent
             style={{ overflow: "hidden", display: "flex", flexWrap: "wrap", justifyContent: "inherit" }}
-            variants={container}
+            variants={container as any}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
@@ -42,7 +42,7 @@ export const KineticText = ({ text, className, delay = 0, as: Component = 'div' 
             {words.map((word, index) => (
                 <span style={{ display: "inline-flex", overflow: "hidden" }} key={index} className="mr-[0.25em]">
                     {word.split("").map((char, index) => (
-                        <motion.span variants={child} key={index} style={{ display: "inline-block" }}>
+                        <motion.span variants={child as any} key={index} style={{ display: "inline-block" }}>
                             {char}
                         </motion.span>
                     ))}

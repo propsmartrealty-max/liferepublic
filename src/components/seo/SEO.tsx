@@ -12,7 +12,7 @@ interface SEOProps {
     canonical?: string;
     image?: string;
     type?: 'website' | 'article' | 'product';
-    schema?: Record<string, unknown> | Record<string, unknown>[];
+    schema?: Record<string, unknown> | Record<string, unknown>[] | null;
     breadcrumbItems?: { name: string; item: string }[];
     noindex?: boolean;
 }

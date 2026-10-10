@@ -1,25 +1,15 @@
 import fs from 'fs';
 import path from 'path';
-import dotenv from 'dotenv';
-import { createClient } from '@supabase/supabase-js';
-
-// Load environment variables
-dotenv.config();
+import { fileURLToPath } from 'url';
+import { ID_TO_SLUG } from '../src/data/slug-registry';
+import { projectsRegistry } from '../src/data/projects';
 
 const DOMAIN = 'https://life-republic.in';
 const PUBLIC_DIR = path.resolve(process.cwd(), 'public');
 
-// Load sectors data
+// Load sectors data & local blogs
 const sectorsData = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'src/data/sectors.json'), 'utf-8'));
 const localBlogsData = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'src/data/blogs.json'), 'utf-8'));
-
-// Initialize Supabase Client
-const supabaseUrl = process.env.VITE_SUPABASE_URL;
-const supabaseKey = process.env.VITE_SUPABASE_ANON_KEY;
-
-const supabase = (supabaseUrl && supabaseKey)
-    ? createClient(supabaseUrl, supabaseKey)
-    : null;
 
 const staticRoutes = [
     '/',
@@ -27,25 +17,26 @@ const staticRoutes = [
     '/amenities',
     '/contact',
     '/about',
-    '/privacy',
-    '/terms',
+    '/privacy-policy',
+    '/terms-of-service',
+    '/disclaimer',
     '/location',
     '/nri-corner',
     '/testimonials',
     '/media-center',
     '/township-intelligence',
-    '/nri-investment-guide',
     '/connectivity',
     '/lifestyle',
     '/sustainability',
-    '/community-hub',
+    '/community-forum',
+    '/market-reports',
+    '/locations-directory',
     '/sitemap',
     '/township-guide',
     // BHK & Property Type Landing Pages
     '/2-bhk-flats-in-hinjewadi',
     '/3-bhk-flats-in-hinjewadi',
     '/4-bhk-flats-in-hinjewadi',
-    '/1-bhk-flats-in-hinjewadi',
     '/row-houses-in-life-republic',
     '/luxury-villas-near-hinjewadi',
     '/plots-in-hinjewadi',
@@ -57,7 +48,7 @@ const staticRoutes = [
     '/location/flats-near-marunji',
     '/location/flats-near-marunji-road',
     '/location/ready-possession-flats-hinjewadi',
-    // Phase 6 - Keyword Dominance
+    // Keyword Dominance Landing Pages
     '/location/affordable-flats-in-hinjewadi',
     '/location/luxury-apartments-hinjewadi',
     '/location/new-launch-projects-hinjewadi',
@@ -92,142 +83,86 @@ const staticRoutes = [
     '/location/kolte-patil-hinjewadi-pune',
 ];
 
-// Add sector-based routes from sectors.json
+// Sector-based routes from sectors.json
 const sectorRoutes = [
-    ...sectorsData.sectors.map((s: any) => `/location/${s.slug}`),
-    ...sectorsData.avenues.map((a: any) => `/location/${a.slug}`),
-    ...sectorsData.localities.map((l: any) => `/location/${l.slug}`),
+    ...(sectorsData.sectors || []).map((s: any) => `/location/${s.slug}`),
+    ...(sectorsData.avenues || []).map((a: any) => `/location/${a.slug}`),
+    ...(sectorsData.localities || []).map((l: any) => `/location/${l.slug}`),
 ];
 
-export const ID_TO_SLUG: Record<string, string> = {
-    'duet': 'kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi',
-    'arezo': 'kolte-patil-life-republic-arezo-efficient-2-bhk-flats-hinjewadi',
-    'canvas': 'kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi',
-    'atmos': 'kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi',
-    '24k-espada': 'kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi',
-    'sound-of-soul': 'kolte-patil-life-republic-sound-of-soul-luxury-4-bhk-row-houses-hinjewadi',
-    'aros': 'kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi',
-    'universe': 'kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi',
-    'first-avenue': 'kolte-patil-life-republic-first-avenue-premium-2-3-bhk-hinjewadi',
-    'villas': 'kolte-patil-life-republic-villas-hinjewadi',
-    'bungalows': 'kolte-patil-life-republic-bungalows-hinjewadi',
-    'echoes': 'kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi',
-    'qrious': 'kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi',
-    'oro-avenue': 'kolte-patil-life-republic-oro-avenue-smart-1-2-bhk-hinjewadi',
-    'i-towers': 'kolte-patil-life-republic-i-towers-smart-homes-hinjewadi'
-};
+// Market Reports routes
+const marketReportRoutes = [
+    '/market-reports/pune-real-estate-trends-2026',
+    '/market-reports/hinjewadi-phase-3-infrastructure-impact',
+    '/market-reports/hinjewadi-metro-line-3-real-estate-impact',
+    '/market-reports/integrated-townships-vs-standalone-buildings-pune',
+    '/market-reports/nri-investment-guide-pune-real-estate-2026'
+];
 
 async function generateSitemap() {
-    console.log('🗺️  Generating Sitemap...');
+    console.log('🗺️  Generating Canonical Master Sitemap...');
 
-    let projectRoutes: string[] = [];
-    let blogRoutes: string[] = [];
-
-    // Fetch projects and blogs from Supabase
-    if (supabase) {
-        try {
-            const { data: projects, error: pError } = await supabase.from('projects').select('id');
-            const { data: posts, error: bError } = await supabase.from('posts').select('slug').eq('published', true);
-
-            if (projects) {
-                console.log(`📡 Fetched ${projects.length} projects from database.`);
-                projectRoutes = projects.map(p => `/projects/${ID_TO_SLUG[p.id] || p.id}`);
-            }
-            if (posts) {
-                console.log(`📡 Fetched ${posts.length} blog posts from database.`);
-                blogRoutes = posts.map(p => `/media-center/${p.slug}`);
-            }
-        } catch (error) {
-            console.error('❌ Error fetching dynamic routes:', error);
+    // Resolve Canonical Project Routes
+    const projectRoutes: string[] = [];
+    (projectsRegistry || []).forEach(lp => {
+        const canonicalSlug = ID_TO_SLUG[lp.id] || lp.id;
+        const route = `/projects/${canonicalSlug}`;
+        if (!projectRoutes.includes(route)) {
+            projectRoutes.push(route);
         }
-    }
+    });
 
-    // Self-healing fallback: Ensure all projects from local data are included
-    if (projectRoutes.length < 13) {
-        console.log('🛡️  Sitemap Health Check: Database count low. Merging local projects...');
-        const { projectsRegistry: localProjects } = await import('../src/data/projects');
-        (localProjects || []).forEach(lp => {
-            const route = `/projects/${ID_TO_SLUG[lp.id] || lp.id}`;
-            if (!projectRoutes.includes(route)) {
-                projectRoutes.push(route);
-            }
-        });
-    }
+    // Resolve Media / Blog Routes
+    const blogRoutes: string[] = [];
+    (localBlogsData || []).forEach((lb: any) => {
+        const route = `/media-center/${lb.slug}`;
+        if (!blogRoutes.includes(route)) {
+            blogRoutes.push(route);
+        }
+    });
 
-    // Self-healing fallback: Ensure local blogs are included
-    if (blogRoutes.length < 3) {
-        console.log('🛡️  Sitemap Health Check: Merging local SEO blogs...');
-        (localBlogsData || []).forEach((lb: any) => {
-            const route = `/media-center/${lb.slug}`;
-            if (!blogRoutes.includes(route)) {
-                blogRoutes.push(route);
-            }
-        });
-    }
+    // Deduplicate all routes
+    const allRoutes = Array.from(new Set([
+        ...staticRoutes,
+        ...sectorRoutes,
+        ...projectRoutes,
+        ...blogRoutes,
+        ...marketReportRoutes
+    ]));
 
-    const allRoutes = [...staticRoutes, ...sectorRoutes, ...projectRoutes, ...blogRoutes];
+    const today = new Date().toISOString().split('T')[0];
 
     const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allRoutes.map(route => `  <url>
+${allRoutes.map(route => {
+    let priority = '0.8';
+    let changefreq = 'weekly';
+
+    if (route === '/') {
+        priority = '1.0';
+        changefreq = 'daily';
+    } else if (route === '/projects' || route.startsWith('/projects/')) {
+        priority = '0.9';
+        changefreq = 'daily';
+    } else if (route.startsWith('/location/')) {
+        priority = '0.9';
+        changefreq = 'weekly';
+    } else if (route.startsWith('/media-center/') || route.startsWith('/market-reports/')) {
+        priority = '0.85';
+        changefreq = 'weekly';
+    }
+
+    return `  <url>
     <loc>${DOMAIN}${route}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>${route === '/' ? 'daily' : 'weekly'}</changefreq>
-    <priority>${route === '/' ? '1.0' : (route.startsWith('/projects/') || route.startsWith('/location/') || route.startsWith('/media-center/')) ? '0.9' : '0.8'}</priority>
-  </url>`).join('\n')}
+    <lastmod>${today}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+}).join('\n')}
 </urlset>`;
 
-    fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap.xml'), sitemapContent);
-    console.log(`✅ Sitemap generated with ${allRoutes.length} URLs.`);
-}
-
-function generateRobots() {
-    console.log('🤖 Generating robots.txt...');
-    const robotsContent = `# Block aggressive scraper bots
-User-agent: AhrefsBot
-Disallow: /
-User-agent: MJ12bot
-Disallow: /
-User-agent: Rogerbot
-Disallow: /
-User-agent: SemrushBot
-Disallow: /
-User-agent: DotBot
-Disallow: /
-
-# Aggressive Crawl Budget Allocation for Major Bots
-User-agent: Googlebot
-Allow: /projects/
-Allow: /location/
-Allow: /assets/
-Allow: /images/
-Disallow: /admin
-Disallow: /api/
-Disallow: /*?*
-Disallow: /*_escaped_fragment_
-
-User-agent: Bingbot
-Allow: /projects/
-Allow: /location/
-Allow: /assets/
-Allow: /images/
-Disallow: /admin
-Disallow: /api/
-Disallow: /*?*
-
-# Default rules for all other crawlers
-User-agent: *
-Allow: /
-Disallow: /admin
-Disallow: /api/
-Disallow: /search?*
-Disallow: /?*
-
-Sitemap: ${DOMAIN}/sitemap.xml
-Host: ${DOMAIN}
-`;
-    fs.writeFileSync(path.join(PUBLIC_DIR, 'robots.txt'), robotsContent);
-    console.log('✅ robots.txt generated.');
+    fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap.xml'), sitemapContent, 'utf-8');
+    console.log(`✅ Canonical Sitemap generated with ${allRoutes.length} URLs (0 duplicate, 100% canonical).`);
 }
 
 try {
@@ -235,9 +170,8 @@ try {
         fs.mkdirSync(PUBLIC_DIR, { recursive: true });
     }
     await generateSitemap();
-    generateRobots();
-    console.log('✨ SEO assets updated successfully.');
+    console.log('✨ Sitemap updated according to Google Standards.');
 } catch (error) {
-    console.error('❌ Failed to generate SEO assets:', error);
+    console.error('❌ Failed to generate sitemap:', error);
     process.exit(1);
 }

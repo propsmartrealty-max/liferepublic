@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { KineticText } from '../components/ui/KineticText';
 import { MagneticButton } from '../components/ui/MagneticButton';
+import { SEO } from '../components/seo/SEO';
 
 export const Home = () => {
     const [activeSlide, setActiveSlide] = useState(0);
@@ -35,6 +36,11 @@ export const Home = () => {
 
     return (
         <main ref={containerRef} className="w-full h-[100dvh] overflow-y-auto snap-y snap-mandatory bg-black scroll-smooth">
+            <SEO
+                title="Kolte Patil Life Republic Hinjewadi | 390-Acre Township"
+                description="Explore Kolte Patil Life Republic Hinjewadi Pune. A 390-acre gated integrated township offering premium 1, 2, 3 BHK apartments and luxury villas near Rajiv Gandhi Infotech Park."
+                canonical="/"
+            />
             
             {/* Minimalist Slide Progress Tracker */}
             <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-4 mix-blend-difference pointer-events-none">

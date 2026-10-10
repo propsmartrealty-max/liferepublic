@@ -9,8 +9,8 @@ import type { BlogPost } from '../lib/types';
 import localBlogs from '../data/blogs.json';
 
 export const MediaCenter: React.FC = () => {
-    const [posts, setPosts] = useState<BlogPost[]>([]);
-    const [loading, setLoading] = useState(true);
+    const [posts, setPosts] = useState<BlogPost[]>(localBlogs as any);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {

@@ -2,7 +2,6 @@ import path from 'path';
 import fs from 'fs';
 import { projectsRegistry as projects } from '../src/data/projects';
 import dotenv from 'dotenv';
-import { createClient } from '@supabase/supabase-js';
 
 dotenv.config();
 
@@ -10,10 +9,8 @@ const OUT_DIR = path.resolve(process.cwd(), 'dist');
 const SSR_BUNDLE_PATH = path.join(OUT_DIR, 'server/entry-server.js');
 const DOMAIN = 'https://life-republic.in';
 
-// Initialize Supabase Client
-const supabaseUrl = process.env.VITE_SUPABASE_URL;
-const supabaseKey = process.env.VITE_SUPABASE_ANON_KEY;
-const supabase = (supabaseUrl && supabaseKey) ? createClient(supabaseUrl, supabaseKey) : null;
+// Load local blogs data
+const localBlogsData = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'src/data/blogs.json'), 'utf-8'));
 
 // Load sectors data
 const sectorsData = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'src/data/sectors.json'), 'utf-8'));
@@ -64,15 +61,10 @@ async function getDynamicRoutes() {
     // Add projects
     projects.forEach(p => routes.push(`/projects/${ID_TO_SLUG[p.id] || p.id}`));
     
-    // Fetch blogs if possible
-    if (supabase) {
-        try {
-            const { data: posts } = await supabase.from('posts').select('slug').eq('published', true);
-            if (posts) posts.forEach(p => routes.push(`/media-center/${p.slug}`));
-        } catch (e) {
-            console.error('⚠️ Could not fetch blog routes for prerendering');
-        }
-    }
+    // Add local blogs
+    (localBlogsData || []).forEach((lb: any) => {
+        routes.push(`/media-center/${lb.slug}`);
+    });
     
     return routes;
 }
@@ -100,24 +92,41 @@ async function prerender() {
 
             let cleanAppHtml = appHtml || '';
             
-            // Extract leaked Helmet tags from the body
+            // Extract Helmet / Head tags rendered in the body (React 19 streaming output)
             const titles = cleanAppHtml.match(/<title[^>]*>.*?<\/title>/gi) || [];
             const metas = cleanAppHtml.match(/<meta[^>]*>/gi) || [];
-            const links = cleanAppHtml.match(/<link[^>]*(data-rh="true"|rel="canonical"|rel="alternate"|rel="preload")[^>]*>/gi) || [];
-            
-            // Combine extracted tags
-            const extractedHeadTags = [...titles, ...metas, ...links].join('\n');
+            const links = cleanAppHtml.match(/<link[^>]*(data-rh="true"|rel=["']canonical["']|rel=["']alternate["']|rel=["']preload["'])[^>]*>/gi) || [];
+            const schemas = cleanAppHtml.match(/<script\s+[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi) || [];
 
-            // Strip them from the body to prevent hydration mismatch
+            // Combine extracted head tags
+            const extractedHeadTags = [
+                ...metas.filter(m => !m.includes('name="description"')),
+                ...links,
+                ...schemas
+            ].join('\n');
+
+            // Strip extracted tags from the body to prevent hydration mismatch
             cleanAppHtml = cleanAppHtml.replace(/<title[^>]*>.*?<\/title>/gi, '');
             cleanAppHtml = cleanAppHtml.replace(/<meta[^>]*>/gi, '');
-            cleanAppHtml = cleanAppHtml.replace(/<link[^>]*(data-rh="true"|rel="canonical"|rel="alternate"|rel="preload")[^>]*>/gi, '');
+            cleanAppHtml = cleanAppHtml.replace(/<link[^>]*(data-rh="true"|rel=["']canonical["']|rel=["']alternate["']|rel=["']preload["'])[^>]*>/gi, '');
+            cleanAppHtml = cleanAppHtml.replace(/<script\s+[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, '');
 
             const finalHead = (headHtml || '') + '\n' + extractedHeadTags;
 
-            const renderedHtml = template
+            let renderedHtml = template
                 .replace('<!--app-head-->', finalHead)
                 .replace('<!--app-html-->', cleanAppHtml);
+
+            // Replace template default title with page specific title
+            if (titles.length > 0) {
+                renderedHtml = renderedHtml.replace(/<title>.*?<\/title>/i, titles[titles.length - 1]);
+            }
+
+            // Replace template default description with page specific description
+            const pageDesc = metas.find(m => m.includes('name="description"'));
+            if (pageDesc) {
+                renderedHtml = renderedHtml.replace(/<meta name="description" content=".*?"\/?>/i, pageDesc);
+            }
 
             const filePath = route === '/'
                 ? path.join(OUT_DIR, 'index.html')

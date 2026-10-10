@@ -2,9 +2,73 @@
 # CLOUDFLARE PAGES EDGE REDIRECTS & ROUTING MATRIX
 # ========================================================
 
-# Legacy Cluster Slugs to Modern Canonic URLs
-/projects/kolte-patil-life-republic-echoes-hinjewadi /projects/kolte-patil-life-republic-echoes 301
-/project/kolte-patil-life-republic-echoes-hinjewadi /projects/kolte-patil-life-republic-echoes 301
+# Legacy & Short Project Slugs to Canonical Rich URLs
+/projects/kolte-patil-life-republic-echoes-hinjewadi /projects/kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi 301
+/project/kolte-patil-life-republic-echoes-hinjewadi /projects/kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi 301
+/projects/kolte-patil-life-republic-echoes /projects/kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi 301
+/project/kolte-patil-life-republic-echoes /projects/kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi 301
+/projects/echoes /projects/kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi 301
+/project/echoes /projects/kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi 301
+
+/projects/kolte-patil-life-republic-duet /projects/kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi 301
+/project/kolte-patil-life-republic-duet /projects/kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi 301
+/projects/duet /projects/kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi 301
+/project/duet /projects/kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi 301
+
+/projects/kolte-patil-life-republic-qrious /projects/kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi 301
+/project/kolte-patil-life-republic-qrious /projects/kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi 301
+/projects/qrious /projects/kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi 301
+/project/qrious /projects/kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi 301
+
+/projects/kolte-patil-life-republic-canvas /projects/kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi 301
+/project/kolte-patil-life-republic-canvas /projects/kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi 301
+/projects/canvas /projects/kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi 301
+/project/canvas /projects/kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi 301
+
+/projects/kolte-patil-life-republic-aros /projects/kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi 301
+/project/kolte-patil-life-republic-aros /projects/kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi 301
+/projects/aros /projects/kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi 301
+/project/aros /projects/kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi 301
+
+/projects/kolte-patil-life-republic-atmos /projects/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi 301
+/project/kolte-patil-life-republic-atmos /projects/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi 301
+/projects/atmos /projects/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi 301
+/project/atmos /projects/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi 301
+
+/projects/kolte-patil-life-republic-universe /projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi 301
+/project/kolte-patil-life-republic-universe /projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi 301
+/projects/universe /projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi 301
+/project/universe /projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi 301
+
+/projects/kolte-patil-life-republic-oro-avenue /projects/kolte-patil-life-republic-oro-avenue-smart-1-2-bhk-hinjewadi 301
+/project/kolte-patil-life-republic-oro-avenue /projects/kolte-patil-life-republic-oro-avenue-smart-1-2-bhk-hinjewadi 301
+
+/projects/kolte-patil-life-republic-i-tower /projects/kolte-patil-life-republic-i-towers-smart-homes-hinjewadi 301
+/project/kolte-patil-life-republic-i-tower /projects/kolte-patil-life-republic-i-towers-smart-homes-hinjewadi 301
+/projects/kolte-patil-life-republic-i-towers /projects/kolte-patil-life-republic-i-towers-smart-homes-hinjewadi 301
+
+/projects/kolte-patil-life-republic-sound-of-soul /projects/kolte-patil-life-republic-sound-of-soul-luxury-4-bhk-row-houses-hinjewadi 301
+/project/kolte-patil-life-republic-sound-of-soul /projects/kolte-patil-life-republic-sound-of-soul-luxury-4-bhk-row-houses-hinjewadi 301
+
+/projects/kolte-patil-life-republic-24k-espada /projects/kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi 301
+/project/kolte-patil-life-republic-24k-espada /projects/kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi 301
+
+/projects/kolte-patil-life-republic-arezo /projects/kolte-patil-life-republic-arezo-efficient-2-bhk-flats-hinjewadi 301
+/project/kolte-patil-life-republic-arezo /projects/kolte-patil-life-republic-arezo-efficient-2-bhk-flats-hinjewadi 301
+
+/projects/kolte-patil-life-republic-first-avenue /projects/kolte-patil-life-republic-first-avenue-premium-2-3-bhk-hinjewadi 301
+/project/kolte-patil-life-republic-first-avenue /projects/kolte-patil-life-republic-first-avenue-premium-2-3-bhk-hinjewadi 301
+
+/projects/kolte-patil-life-republic-villas /projects/kolte-patil-life-republic-villas-hinjewadi 301
+/project/kolte-patil-life-republic-villas /projects/kolte-patil-life-republic-villas-hinjewadi 301
+
+/projects/kolte-patil-life-republic-bungalows /projects/kolte-patil-life-republic-bungalows-hinjewadi 301
+/project/kolte-patil-life-republic-bungalows /projects/kolte-patil-life-republic-bungalows-hinjewadi 301
+
+/projects/sector-r17b-life-republic /projects/kolte-patil-life-republic-nora-bungalow-plots-hinjewadi 301
+/project/sector-r17b-life-republic /projects/kolte-patil-life-republic-nora-bungalow-plots-hinjewadi 301
+
+# General Utility Directives
 /master-plan /township-guide 301
 /masterplan /township-guide 301
 /amenities/ /amenities 301

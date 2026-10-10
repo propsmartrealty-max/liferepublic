@@ -182,10 +182,10 @@ export const api = {
     },
     amenities: {
         getAll: async () => [
-            { id: 1, name: 'Clubhouse', image_url: 'https://liferepublic.in/images/home/overview-img.jpg', order: 1 },
-            { id: 2, name: 'Swimming Pool', image_url: 'https://liferepublic.in/images/home/overview-img.jpg', order: 2 },
-            { id: 3, name: 'Gymnasium', image_url: 'https://liferepublic.in/images/home/overview-img.jpg', order: 3 },
-            { id: 4, name: 'Kids Play Area', image_url: 'https://liferepublic.in/images/home/overview-img.jpg', order: 4 },
+            { id: 1, name: 'Clubhouse', title: 'Clubhouse', description: 'World-class clubhouse with modern recreational amenities', icon: 'Home', image_url: 'https://liferepublic.in/images/home/overview-img.jpg', order: 1 },
+            { id: 2, name: 'Swimming Pool', title: 'Swimming Pool', description: 'Olympic size pool with sun deck', icon: 'Droplets', image_url: 'https://liferepublic.in/images/home/overview-img.jpg', order: 2 },
+            { id: 3, name: 'Gymnasium', title: 'Gymnasium', description: 'High-tech fitness studio & cardio arena', icon: 'Dumbbell', image_url: 'https://liferepublic.in/images/home/overview-img.jpg', order: 3 },
+            { id: 4, name: 'Kids Play Area', title: 'Kids Play Area', description: 'Dedicated safe interactive outdoor zones', icon: 'Smile', image_url: 'https://liferepublic.in/images/home/overview-img.jpg', order: 4 },
         ]
     }
 };

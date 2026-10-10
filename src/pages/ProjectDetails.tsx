@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import QRCode from 'react-qr-code';
 import { CLUSTERS } from '../lib/clusters';
 import { projectsRegistry } from '../data/projects';
-import { ID_TO_SLUG } from '../data/slug-registry';
+import { ID_TO_SLUG, getProjectSlug } from '../data/slug-registry';
 import { SEO } from '../components/seo/SEO';
 import { generateClusterProductSchema } from '../utils/schemaGenerator';
 import { CheckCircle, Download, Calendar, Layers, ShieldCheck, ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react';
@@ -119,11 +119,59 @@ const SectionHeading: React.FC<{ children: React.ReactNode }> = ({ children }) =
     </div>
 );
 
+const resolveProject = (paramId: string) => {
+    if (!paramId) return CLUSTERS[0];
+    const clean = paramId
+        .replace(/^kolte-patil-life-republic-/, '')
+        .replace(/-(premium|modern|luxury|ultra-luxury|smart|new-launch|efficient|signature).*$/, '')
+        .replace(/-hinjewadi.*$/, '');
+
+    let found: any = 
+        CLUSTERS.find((c) => c.slug?.toLowerCase() === paramId || c.id?.toLowerCase() === paramId) ||
+        CLUSTERS.find((c) => ID_TO_SLUG[c.id]?.toLowerCase() === paramId) ||
+        CLUSTERS.find((c) => c.id?.toLowerCase() === clean || c.slug?.toLowerCase() === `kolte-patil-life-republic-${clean}`) ||
+        CLUSTERS.find((c) => clean.length > 2 && (paramId.includes(c.id?.toLowerCase()) || c.id?.toLowerCase().includes(clean)));
+
+    if (!found) {
+        const regProj = projectsRegistry.find((p) => 
+            p.id?.toLowerCase() === paramId || 
+            (clean.length > 2 && p.id?.toLowerCase().includes(clean)) ||
+            (p.title && clean.length > 2 && p.title.toLowerCase().includes(clean))
+        );
+        if (regProj) {
+            found = {
+                id: regProj.id,
+                name: regProj.title?.split('|')[0]?.trim().replace(/^Kolte Patil Life Republic\s*/i, '') || regProj.title,
+                slug: regProj.id,
+                sector: regProj.location || 'Life Republic Township',
+                status: 'Available',
+                category: regProj.category,
+                description: regProj.description || regProj.overview,
+                price: regProj.price,
+                rera: (regProj as any).rera || 'Available on Request',
+                image: regProj.image,
+                masterLayout: regProj.masterLayout || regProj.image,
+                configurations: regProj.floorPlans?.map(fp => ({
+                    type: fp.type,
+                    size: fp.size,
+                    price: regProj.price,
+                    image: fp.image
+                })) || [{ type: regProj.category || 'Luxury Residence', size: 'Spacious', price: regProj.price }],
+                gallery: [regProj.image, ...(regProj.floorPlans?.map(fp => fp.image).filter(Boolean) || [])],
+                amenitiesList: regProj.amenities?.map(a => ({ name: a, icon: '' })) || [],
+                floorPlans: regProj.floorPlans?.map(fp => fp.image).filter(Boolean) || []
+            };
+        }
+    }
+
+    return found || CLUSTERS[0];
+};
+
 // ─── Main Component ──────────────────────────────────────────────────────────
 const ProjectDetails: React.FC = () => {
     const params = useParams<{ slug?: string; id?: string }>();
     const paramId = (params.id || params.slug || '').toLowerCase();
-    const [project, setProject] = useState<any>(null);
+    const project = resolveProject(paramId);
     const [lightboxImages, setLightboxImages] = useState<string[]>([]);
     const [lightboxStart, setLightboxStart] = useState(0);
     const [activeTab, setActiveTab] = useState('pricing');
@@ -133,54 +181,7 @@ const ProjectDetails: React.FC = () => {
         window.scrollTo(0, 0);
         if (!paramId) {
             navigate('/projects', { replace: true });
-            return;
         }
-
-        // Multi-tier resilient matching:
-        const clean = paramId
-            .replace(/^kolte-patil-life-republic-/, '')
-            .replace(/-(premium|modern|luxury|ultra-luxury|smart|new-launch|efficient|signature).*$/, '')
-            .replace(/-hinjewadi.*$/, '');
-
-        let found: any = 
-            CLUSTERS.find((c) => c.slug?.toLowerCase() === paramId || c.id?.toLowerCase() === paramId) ||
-            CLUSTERS.find((c) => ID_TO_SLUG[c.id]?.toLowerCase() === paramId) ||
-            CLUSTERS.find((c) => c.id?.toLowerCase() === clean || c.slug?.toLowerCase() === `kolte-patil-life-republic-${clean}`) ||
-            CLUSTERS.find((c) => clean.length > 2 && (paramId.includes(c.id?.toLowerCase()) || c.id?.toLowerCase().includes(clean)));
-
-        if (!found) {
-            const regProj = projectsRegistry.find((p) => 
-                p.id?.toLowerCase() === paramId || 
-                (clean.length > 2 && p.id?.toLowerCase().includes(clean)) ||
-                (p.title && clean.length > 2 && p.title.toLowerCase().includes(clean))
-            );
-            if (regProj) {
-                found = {
-                    id: regProj.id,
-                    name: regProj.title?.split('|')[0]?.trim().replace(/^Kolte Patil Life Republic\s*/i, '') || regProj.title,
-                    slug: regProj.id,
-                    sector: regProj.location || 'Life Republic Township',
-                    status: 'Available',
-                    category: regProj.category,
-                    description: regProj.description || regProj.overview,
-                    price: regProj.price,
-                    rera: (regProj as any).rera || 'Available on Request',
-                    image: regProj.image,
-                    masterLayout: regProj.masterLayout || regProj.image,
-                    configurations: regProj.floorPlans?.map(fp => ({
-                        type: fp.type,
-                        size: fp.size,
-                        price: regProj.price,
-                        image: fp.image
-                    })) || [{ type: regProj.category || 'Luxury Residence', size: 'Spacious', price: regProj.price }],
-                    gallery: [regProj.image, ...(regProj.floorPlans?.map(fp => fp.image).filter(Boolean) || [])],
-                    amenitiesList: regProj.amenities?.map(a => ({ name: a, icon: '' })) || [],
-                    floorPlans: regProj.floorPlans?.map(fp => fp.image).filter(Boolean) || []
-                };
-            }
-        }
-
-        setProject(found || CLUSTERS[0]);
     }, [paramId, navigate]);
 
     const openLightbox = (images: string[], start = 0) => {
@@ -212,6 +213,7 @@ const ProjectDetails: React.FC = () => {
         { key: 'master-plan', label: 'Master Layout' },
     ];
 
+    const canonicalSlug = getProjectSlug(project.id, project.slug) || project.slug;
     const clusterSchema = generateClusterProductSchema(project);
 
     return (
@@ -219,7 +221,7 @@ const ProjectDetails: React.FC = () => {
             <SEO
                 title={`${project.name} Life Republic - ${project.category} | Hinjewadi`}
                 description={project.description || `${project.name} in Life Republic Hinjewadi Pune. Explore 2, 3 & 4 BHK apartments, floor plans, MahaRERA ${project.rera}, and township master amenities.`}
-                canonical={`/projects/${project.slug}`}
+                canonical={`/projects/${canonicalSlug}`}
                 schema={clusterSchema}
                 image={project.image}
             />
