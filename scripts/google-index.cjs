@@ -181,8 +181,8 @@ async function main() {
     for (let i = 0; i < rawAccounts.length; i++) {
         const acc = rawAccounts[i];
         const stat = cache.accountStats[acc.clientEmail] || { submitted: 0, exhausted: false, exhaustedAt: 0 };
-        // If more than 20 minutes have elapsed since it was marked exhausted, unmark it to probe for quota replenishment
-        if (stat.exhausted && stat.exhaustedAt && (Date.now() - stat.exhaustedAt > 20 * 60 * 1000)) {
+        // If more than 20 minutes have elapsed since it was marked exhausted (or timestamp was unset), unmark it to probe for replenishment
+        if (stat.exhausted && (!stat.exhaustedAt || (Date.now() - stat.exhaustedAt > 20 * 60 * 1000))) {
             stat.exhausted = false;
             stat.submitted = 0; // reset counter on new probe cycle
         }
