@@ -65,6 +65,47 @@ async function getDynamicRoutes() {
     (localBlogsData || []).forEach((lb: any) => {
         routes.push(`/media-center/${lb.slug}`);
     });
+
+    // Add Top High-Intent Programmatic Silo Routes (Competitors, Landmarks & Core Clusters)
+    const topPseoRoutes = [
+        // Competitor Comparisons
+        '/search/life-republic-vs-megapolis-hinjewadi',
+        '/search/life-republic-vs-godrej-woodsville-hinjewadi',
+        '/search/life-republic-vs-vtp-bellissimo-hinjewadi',
+        '/search/life-republic-vs-kohinoor-coral-hinjewadi',
+        '/search/life-republic-vs-shapoorji-joyville-hinjewadi',
+        '/search/life-republic-vs-kasturi-balmoral-hinjewadi',
+        '/search/life-republic-vs-rohan-nidita-hinjewadi',
+        // Infrastructure & Landmarks
+        '/search/pune-metro-line-3-connectivity-life-republic',
+        '/search/pmrda-ring-road-marunji-life-republic',
+        '/search/anisha-global-school-life-republic-campus',
+        '/search/crimson-club-sports-academy-life-republic',
+        '/search/3.5-acre-urban-park-botanical-gardens',
+        '/search/mumbai-pune-expressway-gahunje-exit-connectivity',
+        '/search/walk-to-work-homes-hinjewadi-phase-1-it-park',
+        '/search/it-professionals-housing-hinjewadi-phase-2-tcs-wipro-infosys',
+        '/search/nri-investment-guide-life-republic-pune',
+        // Top High-Volume Search Permutations
+        ...['price', 'floor-plans', 'brochure', 'rera-number', 'possession-date', 'reviews', 'site-visit', 'booking-offers'].flatMap(intent => [
+            `/search/${intent}-1-bhk-flats-in-hinjewadi-kolte-patil-life-republic`,
+            `/search/${intent}-2-bhk-flats-in-hinjewadi-kolte-patil-life-republic`,
+            `/search/${intent}-2.5-bhk-flats-in-hinjewadi-echoes`,
+            `/search/${intent}-3-bhk-flats-in-hinjewadi-kolte-patil-life-republic`,
+            `/search/${intent}-4-bhk-flats-in-hinjewadi-kolte-patil-life-republic`,
+            `/search/${intent}-row-houses-in-hinjewadi-24k-espada`,
+            `/search/${intent}-villas-in-hinjewadi-villas`,
+            `/search/${intent}-plots-in-hinjewadi-nora`,
+            `/search/${intent}-2-bhk-flats-in-marunji-duet`,
+            `/search/${intent}-3-bhk-flats-in-marunji-atmos`,
+            `/search/${intent}-2-bhk-flats-in-wakad-aros`,
+            `/search/${intent}-1-bhk-flats-in-hinjewadi-universe`,
+            `/search/${intent}-3-bhk-flats-in-hinjewadi-canvas`,
+            `/search/${intent}-2-bhk-flats-in-hinjewadi-qrious`
+        ])
+    ];
+
+    routes.push(...topPseoRoutes);
     
     return routes;
 }

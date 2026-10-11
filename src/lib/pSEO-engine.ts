@@ -211,6 +211,24 @@ export const extractSiloData = (rawSlug: string): SiloData => {
         metaTitle = `Official Contact Desk & Sales Office | Life Republic`;
     }
 
+    // Special Programmatic Handlers: Competitor Comparisons & Infrastructure Landmarks
+    if (cleaned.includes('-vs-')) {
+        const parts = cleaned.split('-vs-');
+        const rawComp = parts[1] ? parts[1].replace(/-/g, ' ').replace(/hinjewadi/i, '').trim() : 'Competitors';
+        const compFormatted = rawComp.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+        h1 = `Kolte Patil Life Republic vs ${compFormatted} Hinjewadi | Detailed Comparison`;
+        metaTitle = `Life Republic vs ${compFormatted} | Price & Specs`;
+    } else if (cleaned.includes('metro')) {
+        h1 = `Pune Metro Line 3 Connectivity to Kolte Patil Life Republic Hinjewadi`;
+        metaTitle = `Pune Metro Line 3 to Life Republic | Distance & Route`;
+    } else if (cleaned.includes('anisha-global-school') || cleaned.includes('school')) {
+        h1 = `Anisha Global School at Kolte Patil Life Republic Hinjewadi Campus`;
+        metaTitle = `Anisha Global School Life Republic | Campus & Admissions`;
+    } else if (cleaned.includes('ring-road')) {
+        h1 = `PMRDA Ring Road Connectivity to Kolte Patil Life Republic Marunji`;
+        metaTitle = `PMRDA Ring Road to Life Republic | Expressway Corridor`;
+    }
+
     if (metaTitle.length > 60) {
         metaTitle = `${config} in ${location} | Life Republic`;
     }
@@ -218,7 +236,12 @@ export const extractSiloData = (rawSlug: string): SiloData => {
         metaTitle = `${config} ${location} - Kolte Patil`;
     }
 
-    const metaDescription = `Explore ${intent.toLowerCase()} ${config.toLowerCase()} in ${location} at ${entity} (${sector}). Pricing from ${minPrice} to ${maxPrice}. MahaRERA: ${rera}. Instant price sheet & free site visit cab!`.slice(0, 158);
+    let metaDescription = `Explore ${intent.toLowerCase()} ${config.toLowerCase()} in ${location} at ${entity} (${sector}). Pricing from ${minPrice} to ${maxPrice}. MahaRERA: ${rera}. Instant price sheet & free site visit cab!`.slice(0, 158);
+    if (cleaned.includes('-vs-')) {
+        metaDescription = `Comprehensive comparison of Kolte Patil Life Republic vs other Hinjewadi projects. Compare price, floor plans, carpet area, 390-acre amenities & RERA approvals.`.slice(0, 158);
+    } else if (cleaned.includes('metro')) {
+        metaDescription = `Direct high-speed connectivity from Kolte Patil Life Republic to Pune Metro Line 3 (Hinjewadi-Shivajinagar). 5-min drive to Phase 1 & Megapolis metro stations.`.slice(0, 158);
+    }
 
     // Matching Projects from both registries
     const matchingProjects: Project[] = [];
@@ -269,7 +292,7 @@ export const extractSiloData = (rawSlug: string): SiloData => {
         },
         {
             question: `How can I schedule a VIP site visit with free pickup and drop facility?`,
-            answer: `You can schedule a complimentary VIP site visit with free AC cab pickup and drop across Pune by contacting our authorized sales desk at +91 93705 52525. Guided physical model walkthroughs and sample flat tours are available 7 days a week.`
+            answer: `You can schedule a complimentary VIP site visit with free AC cab pickup and drop across Pune by clicking the Call Sales or WhatsApp button on this page. Guided physical model walkthroughs and sample flat tours are available 7 days a week.`
         }
     ];
 
