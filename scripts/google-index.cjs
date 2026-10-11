@@ -180,7 +180,12 @@ async function main() {
     const clients = [];
     for (let i = 0; i < rawAccounts.length; i++) {
         const acc = rawAccounts[i];
-        const stat = cache.accountStats[acc.clientEmail] || { submitted: 0, exhausted: false };
+        const stat = cache.accountStats[acc.clientEmail] || { submitted: 0, exhausted: false, exhaustedAt: 0 };
+        // If more than 20 minutes have elapsed since it was marked exhausted, unmark it to probe for quota replenishment
+        if (stat.exhausted && stat.exhaustedAt && (Date.now() - stat.exhaustedAt > 20 * 60 * 1000)) {
+            stat.exhausted = false;
+            stat.submitted = 0; // reset counter on new probe cycle
+        }
         cache.accountStats[acc.clientEmail] = stat;
 
         const jwt = new JWT({
@@ -268,6 +273,7 @@ async function main() {
                     if (msg.includes('Publish requests per day') || msg.includes('Quota exceeded')) {
                         console.log(`\n🔄 [${activeAcc.projectId}] Daily quota cap reached (200/day).`);
                         activeAcc.stat.exhausted = true;
+                        activeAcc.stat.exhaustedAt = Date.now();
                         saveQuotaCache(cache);
 
                         // Rotate to next available account in pool
