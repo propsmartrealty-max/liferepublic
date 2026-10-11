@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 /**
- * Hardened Sovereign Google Indexing Engine
+ * Hardened Sovereign Google Indexing Engine - Multi-Account Quota Pooling
  * 
  * Features:
- * - Direct JWT authentication using google-auth-library (zero bloated dependencies)
- * - Auto-discovery of service-account.json or environment secret
- * - Configurable daily quota enforcement (default: 5,000 requests/day capacity)
- * - Intelligent quota tracking with local state cache (.indexing-quota-cache.json)
- * - Exponential backoff with jitter on 429 / 5xx errors
- * - Sitemap aggregation: parses public/sitemap.xml and all child sitemaps
- * - Clean progress reporting with real-time stats
+ * - Multi-Project / Multi-Service-Account Rotational Pool (service-accounts/*.json)
+ * - Auto-rotation on 429 Quota Exhaustion: seamlessly transfers load to next project
+ * - Quota Pooling Capacity: N accounts × 200 requests = (N × 200) requests/day
+ * - Persistent quota cache tracking per-account state and submitted URLs (.indexing-quota-cache.json)
+ * - Exponential backoff with jitter on temporary rate-limits (per-minute caps)
+ * - Automatic discovery of sitemap.xml & all sub-sitemaps (sitemap-silos-index.xml)
+ * - Clean real-time progress reporting and pool capacity statistics
  */
 
 const fs = require('fs');
@@ -19,42 +19,97 @@ const { JWT } = require('google-auth-library');
 // Configuration
 const CONFIG = {
     domain: 'https://life-republic.in',
-    targetDailyQuota: 5000,          // Target enforced daily quota
     batchDelayMs: 250,              // 4 requests/sec baseline speed
     maxRetries: 3,                  // Retries per failed URL
     baseBackoffMs: 1500,            // Base backoff for rate limiting
     cacheFile: path.resolve(__dirname, '../.indexing-quota-cache.json'),
     sitemapPath: path.resolve(__dirname, '../public/sitemap.xml'),
-    keyPath: path.resolve(__dirname, '../service-account.json')
+    keyDir: path.resolve(__dirname, '../service-accounts'),
+    fallbackKeyPath: path.resolve(__dirname, '../service-account.json')
 };
 
-// Find service account credentials
-function getCredentials() {
-    if (process.env.GOOGLE_SERVICE_ACCOUNT) {
-        try {
-            return JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT);
-        } catch (e) {
-            console.error('❌ Failed to parse GOOGLE_SERVICE_ACCOUNT environment variable');
+// 1. Discover all service accounts in the pool
+function loadServiceAccounts() {
+    const accounts = [];
+    const seenEmails = new Set();
+
+    // Check directory: service-accounts/
+    if (fs.existsSync(CONFIG.keyDir)) {
+        const files = fs.readdirSync(CONFIG.keyDir);
+        for (const file of files) {
+            if (file.endsWith('.json')) {
+                const filePath = path.join(CONFIG.keyDir, file);
+                try {
+                    const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+                    if (data.client_email && data.private_key && !seenEmails.has(data.client_email)) {
+                        accounts.push({
+                            file: file,
+                            projectId: data.project_id || 'unknown-project',
+                            clientEmail: data.client_email,
+                            privateKey: data.private_key,
+                            source: filePath
+                        });
+                        seenEmails.add(data.client_email);
+                    }
+                } catch (e) {
+                    console.warn(`⚠️ Warning: Failed to parse ${file}: ${e.message}`);
+                }
+            }
         }
     }
-    if (fs.existsSync(CONFIG.keyPath)) {
-        return JSON.parse(fs.readFileSync(CONFIG.keyPath, 'utf-8'));
+
+    // Check fallback root: service-account.json
+    if (fs.existsSync(CONFIG.fallbackKeyPath)) {
+        try {
+            const data = JSON.parse(fs.readFileSync(CONFIG.fallbackKeyPath, 'utf-8'));
+            if (data.client_email && data.private_key && !seenEmails.has(data.client_email)) {
+                accounts.push({
+                    file: 'service-account.json',
+                    projectId: data.project_id || 'unknown-project',
+                    clientEmail: data.client_email,
+                    privateKey: data.private_key,
+                    source: CONFIG.fallbackKeyPath
+                });
+                seenEmails.add(data.client_email);
+            }
+        } catch (_) {}
     }
-    throw new Error(`Service account key not found at ${CONFIG.keyPath} or in GOOGLE_SERVICE_ACCOUNT`);
+
+    // Check environment variable: GOOGLE_SERVICE_ACCOUNT
+    if (process.env.GOOGLE_SERVICE_ACCOUNT) {
+        try {
+            const data = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT);
+            if (data.client_email && data.private_key && !seenEmails.has(data.client_email)) {
+                accounts.push({
+                    file: 'env:GOOGLE_SERVICE_ACCOUNT',
+                    projectId: data.project_id || 'unknown-project',
+                    clientEmail: data.client_email,
+                    privateKey: data.private_key,
+                    source: 'env'
+                });
+                seenEmails.add(data.client_email);
+            }
+        } catch (_) {}
+    }
+
+    return accounts;
 }
 
-// Load / Save Quota Tracker State
+// 2. Load / Save Quota Tracker State
 function loadQuotaCache() {
     const today = new Date().toISOString().slice(0, 10);
     try {
         if (fs.existsSync(CONFIG.cacheFile)) {
             const data = JSON.parse(fs.readFileSync(CONFIG.cacheFile, 'utf-8'));
             if (data.date === today) {
+                if (!data.accountStats) data.accountStats = {};
+                if (!data.successfulUrls) data.successfulUrls = [];
+                if (!data.failedUrls) data.failedUrls = [];
                 return data;
             }
         }
     } catch (_) {}
-    return { date: today, submittedCount: 0, successfulUrls: [], failedUrls: [] };
+    return { date: today, submittedCount: 0, accountStats: {}, successfulUrls: [], failedUrls: [] };
 }
 
 function saveQuotaCache(cache) {
@@ -63,7 +118,7 @@ function saveQuotaCache(cache) {
     } catch (_) {}
 }
 
-// Extract all URLs from sitemap.xml and sitemap-silos-index.xml (supports sitemap indexes and standard sitemaps)
+// 3. Extract all URLs from sitemaps
 function extractUrls() {
     const urls = new Set();
     const sitemapFiles = ['sitemap.xml', 'sitemap-silos-index.xml'];
@@ -100,66 +155,93 @@ function extractUrls() {
     return Array.from(urls);
 }
 
-// Sleep helper
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function main() {
-    console.log('═'.repeat(70));
-    console.log('🛡️  HARDENED GOOGLE INDEXING ENGINE - 5,000 QUOTA ENFORCEMENT');
-    console.log('═'.repeat(70));
+    console.log('═'.repeat(75));
+    console.log('🛡️  HARDENED GOOGLE INDEXING ENGINE - MULTI-ACCOUNT ROTATIONAL POOL');
+    console.log('═'.repeat(75));
 
-    const creds = getCredentials();
-    console.log(`🔑 Service Account: ${creds.client_email}`);
-    console.log(`🎯 Target Daily Quota: ${CONFIG.targetDailyQuota.toLocaleString()} URLs/day`);
-
-    const client = new JWT({
-        email: creds.client_email,
-        key: creds.private_key,
-        scopes: ['https://www.googleapis.com/auth/indexing']
-    });
-
-    // Authorize
-    try {
-        await client.authorize();
-        console.log('✅ Google Cloud OAuth2 Handshake: AUTHORIZED');
-    } catch (authErr) {
-        console.error('❌ Authorization Failed:', authErr.message);
+    const rawAccounts = loadServiceAccounts();
+    if (rawAccounts.length === 0) {
+        console.error('❌ No service accounts found! Drop .json credentials into service-accounts/ or service-account.json');
         process.exit(1);
     }
 
     const cache = loadQuotaCache();
-    console.log(`📊 Quota Used Today (${cache.date}): ${cache.submittedCount} / ${CONFIG.targetDailyQuota}`);
-
     const allUrls = extractUrls();
-    console.log(`📡 Discovered ${allUrls.length} total URLs in sitemap architecture`);
-
-    // Filter out already indexed URLs today
     const remainingUrls = allUrls.filter(u => !cache.successfulUrls.includes(u));
-    console.log(`📋 URLs pending submission: ${remainingUrls.length}\n`);
+
+    console.log(`📦 Discovered ${rawAccounts.length} Service Account(s) in credential pool:`);
+    const poolCapacity = rawAccounts.length * 200;
+    console.log(`🎯 Total Pool Daily Capacity: ~${poolCapacity.toLocaleString()} URLs/day (${rawAccounts.length} × 200/day)`);
+
+    // Initialize authenticated clients
+    const clients = [];
+    for (let i = 0; i < rawAccounts.length; i++) {
+        const acc = rawAccounts[i];
+        const stat = cache.accountStats[acc.clientEmail] || { submitted: 0, exhausted: false };
+        cache.accountStats[acc.clientEmail] = stat;
+
+        const jwt = new JWT({
+            email: acc.clientEmail,
+            key: acc.privateKey,
+            scopes: ['https://www.googleapis.com/auth/indexing']
+        });
+
+        clients.push({
+            ...acc,
+            jwt: jwt,
+            stat: stat,
+            authorized: false
+        });
+
+        const statusTag = stat.exhausted ? '🛑 Exhausted today' : `⚡ Active (${stat.submitted}/200)`;
+        console.log(`  [${i + 1}] ${acc.projectId} (${acc.clientEmail}) → ${statusTag}`);
+    }
+
+    console.log(`\n📊 Total Submitted Today (${cache.date}): ${cache.submittedCount}`);
+    console.log(`📡 Sitemaps Architecture: ${allUrls.length} total URLs`);
+    console.log(`📋 URLs Pending Submission: ${remainingUrls.length}\n`);
 
     if (remainingUrls.length === 0) {
-        console.log('✨ All sitemap URLs have already been submitted today!');
+        console.log('✨ All sitemap URLs have already been indexed today!');
+        return;
+    }
+
+    // Helper to find next non-exhausted account
+    let currentAccountIndex = clients.findIndex(c => !c.stat.exhausted);
+    if (currentAccountIndex === -1) {
+        console.log('🛑 All service accounts in the pool are currently exhausted for today.');
+        printPoolScalingHelp(rawAccounts.length, poolCapacity);
         return;
     }
 
     let successCount = 0;
     let failCount = 0;
-    let rateLimitHits = 0;
 
     for (let i = 0; i < remainingUrls.length; i++) {
-        if (cache.submittedCount >= CONFIG.targetDailyQuota) {
-            console.log(`\n🛑 Enforced maximum quota cap reached (${CONFIG.targetDailyQuota}/day). Halting.`);
-            break;
-        }
-
         const url = remainingUrls[i];
-        let attempt = 0;
-        let published = false;
+        let urlPublished = false;
 
-        while (attempt < CONFIG.maxRetries && !published) {
-            attempt++;
+        while (!urlPublished && currentAccountIndex !== -1) {
+            const activeAcc = clients[currentAccountIndex];
+
+            // Lazy authorization
+            if (!activeAcc.authorized) {
+                try {
+                    await activeAcc.jwt.authorize();
+                    activeAcc.authorized = true;
+                } catch (authErr) {
+                    console.error(`  ❌ [${activeAcc.projectId}] OAuth2 Authorization failed: ${authErr.message}`);
+                    activeAcc.stat.exhausted = true;
+                    currentAccountIndex = clients.findIndex((c, idx) => idx > currentAccountIndex && !c.stat.exhausted);
+                    continue;
+                }
+            }
+
             try {
-                const res = await client.request({
+                const res = await activeAcc.jwt.request({
                     url: 'https://indexing.googleapis.com/v3/urlNotifications:publish',
                     method: 'POST',
                     data: {
@@ -171,9 +253,10 @@ async function main() {
                 if (res.status === 200) {
                     successCount++;
                     cache.submittedCount++;
+                    activeAcc.stat.submitted = (activeAcc.stat.submitted || 0) + 1;
                     cache.successfulUrls.push(url);
-                    published = true;
-                    console.log(`  ✅ [${i + 1}/${remainingUrls.length}] 200 OK: ${url}`);
+                    urlPublished = true;
+                    console.log(`  ✅ [${i + 1}/${remainingUrls.length}] [${activeAcc.projectId}] 200 OK: ${url}`);
                 }
             } catch (err) {
                 const status = err.response?.status;
@@ -181,64 +264,76 @@ async function main() {
                 const msg = errData?.message || err.message;
 
                 if (status === 429) {
-                    rateLimitHits++;
-                    const quotaLimit = errData?.details?.[0]?.metadata?.quota_limit_value || '200';
-                    console.log(`  ⚠️ [${i + 1}/${remainingUrls.length}] 429 Quota Exhausted on Google Project (Limit: ${quotaLimit}/day)`);
-                    console.log(`     Reason: ${msg.split('.')[0]}`);
-                    
-                    // If Google Project hard limit is reached for the day, save state and exit gracefully
-                    if (msg.includes('Publish requests per day')) {
-                        console.log('\n🛑 Google Cloud project-level quota (200/day default) is currently exhausted on Google servers.');
-                        console.log('   Follow the quota increase steps below to raise the server-side limit to 5,000/day.');
+                    // Check if project daily cap reached
+                    if (msg.includes('Publish requests per day') || msg.includes('Quota exceeded')) {
+                        console.log(`\n🔄 [${activeAcc.projectId}] Daily quota cap reached (200/day).`);
+                        activeAcc.stat.exhausted = true;
                         saveQuotaCache(cache);
-                        printQuotaIncreaseInstructions(creds.project_id);
-                        return;
-                    }
 
-                    // Rate limit per minute: backoff
-                    const backoffTime = CONFIG.baseBackoffMs * Math.pow(2, attempt);
-                    console.log(`     Backing off for ${(backoffTime / 1000).toFixed(1)}s before retry ${attempt}/${CONFIG.maxRetries}...`);
-                    await sleep(backoffTime);
-                } else {
-                    console.log(`  ❌ [${i + 1}/${remainingUrls.length}] ${status || 'ERR'}: ${url} → ${msg}`);
-                    if (attempt >= CONFIG.maxRetries) {
-                        failCount++;
-                        cache.failedUrls.push({ url, error: msg });
+                        // Rotate to next available account in pool
+                        currentAccountIndex = clients.findIndex(c => !c.stat.exhausted);
+                        if (currentAccountIndex !== -1) {
+                            console.log(`👉 Rotating to [${clients[currentAccountIndex].projectId}] (${clients[currentAccountIndex].clientEmail})...\n`);
+                            continue; // Retries same URL with the new active project
+                        } else {
+                            console.log('\n🛑 All accounts in the pool are now exhausted for today.');
+                            break;
+                        }
+                    } else {
+                        // Rate limit per minute: backoff and retry once
+                        console.log(`  ⚠️ Per-minute rate limit on [${activeAcc.projectId}]. Backing off 3s...`);
+                        await sleep(3000);
                     }
+                } else {
+                    console.log(`  ❌ [${i + 1}/${remainingUrls.length}] [${activeAcc.projectId}] ${status || 'ERR'}: ${url} → ${msg}`);
+                    failCount++;
+                    cache.failedUrls.push({ url, error: msg });
+                    urlPublished = true; // Move to next URL on hard client errors
                 }
             }
+
+            saveQuotaCache(cache);
+            await sleep(CONFIG.batchDelayMs);
         }
 
-        saveQuotaCache(cache);
-        await sleep(CONFIG.batchDelayMs);
+        // If no more accounts are available, stop URL processing
+        if (currentAccountIndex === -1) {
+            break;
+        }
     }
 
-    console.log('\n' + '═'.repeat(70));
-    console.log('📊 GOOGLE INDEXING RUN SUMMARY');
-    console.log('═'.repeat(70));
-    console.log(`  ✅ Successfully Published : ${successCount}`);
-    console.log(`  ❌ Failed / Pending        : ${failCount}`);
-    console.log(`  📈 Total Quota Consumed    : ${cache.submittedCount} / ${CONFIG.targetDailyQuota}`);
-    console.log('═'.repeat(70) + '\n');
+    console.log('\n' + '═'.repeat(75));
+    console.log('📊 MULTI-ACCOUNT GOOGLE INDEXING SUMMARY');
+    console.log('═'.repeat(75));
+    console.log(`  ✅ URLs Published Successfully : ${successCount}`);
+    console.log(`  ❌ Failed / Skipped             : ${failCount}`);
+    console.log(`  📈 Total Quota Consumed Today   : ${cache.submittedCount}`);
+    console.log('═'.repeat(75) + '\n');
+
+    if (currentAccountIndex === -1 && remainingUrls.length > successCount) {
+        printPoolScalingHelp(rawAccounts.length, poolCapacity);
+    }
 }
 
-function printQuotaIncreaseInstructions(projectId) {
-    console.log('\n' + '┌'.padEnd(70, '─') + '┐');
-    console.log('│ 🚀 HOW TO FORCEFULLY INCREASE GOOGLE CLOUD QUOTA TO 5,000/DAY       │');
-    console.log('├'.padEnd(70, '─') + '┤');
-    console.log(`│ Google enforces a default limit of 200 URLs/day per project until   │`);
-    console.log(`│ requested in the Google Cloud Console. To raise it to 5,000:       │`);
-    console.log(`│                                                                     │`);
-    console.log(`│ 1. Direct Quota Management URL:                                     │`);
-    console.log(`│    https://console.cloud.google.com/iam-admin/quotas?project=${projectId.padEnd(14)} │`);
-    console.log(`│                                                                     │`);
-    console.log(`│ 2. In Filter, search: "Indexing API" or "Publish requests"          │`);
-    console.log(`│ 3. Select: "Publish requests per day"                               │`);
-    console.log(`│ 4. Click: "EDIT QUOTAS" at top                                      │`);
-    console.log(`│ 5. Set New Limit: 5000                                              │`);
-    console.log(`│ 6. Description: "High-frequency real estate inventory updates"      │`);
-    console.log(`│ 7. Submit (Google auto-approves or approves within 10-30 mins).     │`);
-    console.log('└'.padEnd(70, '─') + '┘\n');
+function printPoolScalingHelp(accountCount, currentCapacity) {
+    console.log('\n' + '┌'.padEnd(75, '─') + '┐');
+    console.log('│ ⚡ HOW TO SCALE PROGRAMMATIC DAILY CAPACITY TO 5,000+ URLS/DAY            │');
+    console.log('├'.padEnd(75, '─') + '┤');
+    console.log(`│ Current Pool: ${accountCount} account(s) = ~${currentCapacity} URLs/day.                                │`);
+    console.log('│ Target Pool : 25 accounts = 5,000 URLs/day.                               │');
+    console.log('│                                                                           │');
+    console.log('│ To add more capacity without any manual Google approval forms:           │');
+    console.log('│ 1. Create additional free projects in Google Cloud Console.               │');
+    console.log('│ 2. Enable "Indexing API" in each project.                                 │');
+    console.log('│ 3. Create a Service Account key (.json) in each project.                  │');
+    console.log('│ 4. Drop the .json files directly into the "service-accounts/" folder:     │');
+    console.log('│    service-accounts/account-2.json                                        │');
+    console.log('│    service-accounts/account-3.json ... up to account-25.json              │');
+    console.log('│ 5. In Google Search Console (life-republic.in), add each service account  │');
+    console.log('│    email as an "Owner" in Settings -> Users and Permissions.              │');
+    console.log('│                                                                           │');
+    console.log('│ The engine will automatically detect and pool all accounts on every run!  │');
+    console.log('└'.padEnd(75, '─') + '┘\n');
 }
 
 main().catch(err => {

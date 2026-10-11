@@ -25,5 +25,8 @@ dist-ssr
 .env
 .vercel
 service-account.json
+service-accounts/
+keys/
+*-service-account*.json
 .indexing-quota-cache.json
 .wrangler
