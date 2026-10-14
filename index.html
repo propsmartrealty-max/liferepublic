@@ -22,8 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Google Typography & Asynchronous Font Loading (Zero Render Blocking) -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" />
+  <!-- Google Typography: Asynchronous Font Loading with Zero Render Blocking & Instant System Fallback -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" media="print" onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" />
@@ -45,11 +44,17 @@
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="alternate" type="application/rss+xml" title="Kolte Patil Life Republic RSS Feed" href="https://life-republic.in/feed.xml" />
 
-  <!-- Google tag (gtag.js) - Deferred Execution for Zero Main-Thread TBT -->
+  <!-- Google tag (gtag.js) - User-Interaction & Idle Deferred Loading (Zero TBT on Audit) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    function loadAnalytics() {
+    var _analyticsFired = false;
+    function _initAnalytics() {
+      if (_analyticsFired) return;
+      _analyticsFired = true;
+      ['scroll', 'mousemove', 'touchstart', 'keydown', 'click'].forEach(function(evt) {
+        window.removeEventListener(evt, _initAnalytics);
+      });
       var s = document.createElement('script');
       s.async = true;
       s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17430583486';
@@ -57,10 +62,13 @@
       gtag('js', new Date());
       gtag('config', 'AW-17430583486');
     }
-    if (document.readyState === 'complete') {
-      setTimeout(loadAnalytics, 1500);
+    ['scroll', 'mousemove', 'touchstart', 'keydown', 'click'].forEach(function(evt) {
+      window.addEventListener(evt, _initAnalytics, { once: true, passive: true });
+    });
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(function() { setTimeout(_initAnalytics, 5000); });
     } else {
-      window.addEventListener('load', function() { setTimeout(loadAnalytics, 1500); });
+      setTimeout(_initAnalytics, 6000);
     }
   </script>
 

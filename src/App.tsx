@@ -107,9 +107,7 @@ function App() {
   return (
     <>
       <GlobalErrorBoundary>
-      <CommandPalette />
       <CustomCursor />
-      <ExitIntentOffer />
       <CookieConsent />
       <ScrollToTop />
       <AnimatePresence mode="wait">

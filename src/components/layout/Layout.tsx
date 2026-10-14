@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { FloatingContact } from '../ui/FloatingContact';
 import { WhatsAppWidget } from '../ui/WhatsAppWidget';
-import { EnquiryModal } from '../ui/EnquiryModal';
-import { NeuralSearch } from '../ui/NeuralSearch';
-import { ExitIntentModal } from '../ui/ExitIntentModal';
 import { Breadcrumbs } from '../seo/Breadcrumbs';
-import { TownshipAgent } from '../sections/TownshipAgent';
 import { NRIBar } from '../ui/NRIBar';
+
+const EnquiryModal = lazy(() => import('../ui/EnquiryModal').then(m => ({ default: m.EnquiryModal })));
+const NeuralSearch = lazy(() => import('../ui/NeuralSearch').then(m => ({ default: m.NeuralSearch })));
+const TownshipAgent = lazy(() => import('../sections/TownshipAgent').then(m => ({ default: m.TownshipAgent })));
+const ExitIntentModal = lazy(() => import('../ui/ExitIntentModal').then(m => ({ default: m.ExitIntentModal })));
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -74,22 +75,28 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
       </main>
       <Footer />
       <FloatingContact />
-      <TownshipAgent />
-      <EnquiryModal 
-        isOpen={isEnquiryOpen}
-        onClose={() => {
-            setIsEnquiryOpen(false);
-            setEnquiryProject(undefined);
-            setEnquiryType(undefined);
-        }}
-        projectName={enquiryProject}
-        enquiryType={enquiryType}
-      />
-      <NeuralSearch 
-        isOpen={isSearchOpen}
-        onClose={() => setIsSearchOpen(false)}
-      />
-      <ExitIntentModal />
+      <Suspense fallback={null}>
+        <TownshipAgent />
+        {isEnquiryOpen && (
+          <EnquiryModal 
+            isOpen={isEnquiryOpen}
+            onClose={() => {
+                setIsEnquiryOpen(false);
+                setEnquiryProject(undefined);
+                setEnquiryType(undefined);
+            }}
+            projectName={enquiryProject}
+            enquiryType={enquiryType}
+          />
+        )}
+        {isSearchOpen && (
+          <NeuralSearch 
+            isOpen={isSearchOpen}
+            onClose={() => setIsSearchOpen(false)}
+          />
+        )}
+        <ExitIntentModal />
+      </Suspense>
     </div>
   );
 };

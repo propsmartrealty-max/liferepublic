@@ -10,9 +10,16 @@ export const CookieConsent: React.FC = () => {
     useEffect(() => {
         const consent = localStorage.getItem('cookie-consent');
         if (!consent) {
-            // Show after a small delay so it doesn't block immediate initial render
-            const timer = setTimeout(() => setIsVisible(true), 1500);
-            return () => clearTimeout(timer);
+            const onInteract = () => {
+                setIsVisible(true);
+                ['scroll', 'touchstart', 'click'].forEach(e => window.removeEventListener(e, onInteract));
+            };
+            ['scroll', 'touchstart', 'click'].forEach(e => window.addEventListener(e, onInteract, { passive: true, once: true }));
+            const timer = setTimeout(() => setIsVisible(true), 6000);
+            return () => {
+                clearTimeout(timer);
+                ['scroll', 'touchstart', 'click'].forEach(e => window.removeEventListener(e, onInteract));
+            };
         }
     }, []);
 

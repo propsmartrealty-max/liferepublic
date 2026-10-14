@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 
-export const CustomCursor = () => {
+const DesktopCursor = () => {
     const [isHovering, setIsHovering] = useState(false);
     const mouseX = useMotionValue(-100);
     const mouseY = useMotionValue(-100);
@@ -11,10 +11,6 @@ export const CustomCursor = () => {
     const cursorY = useSpring(mouseY, springConfig);
 
     useEffect(() => {
-        if (typeof window === 'undefined' || window.matchMedia('(pointer: coarse)').matches) {
-            return;
-        }
-
         const updateMousePosition = (e: MouseEvent) => {
             mouseX.set(e.clientX - 16);
             mouseY.set(e.clientY - 16);
@@ -38,10 +34,6 @@ export const CustomCursor = () => {
         };
     }, [mouseX, mouseY]);
 
-    if (typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches) {
-        return null;
-    }
-
     return (
         <motion.div
             className="fixed top-0 left-0 w-8 h-8 pointer-events-none z-[9999] mix-blend-difference hidden md:flex items-center justify-center"
@@ -60,4 +52,17 @@ export const CustomCursor = () => {
             />
         </motion.div>
     );
+};
+
+export const CustomCursor = () => {
+    const [isTouch, setIsTouch] = useState(true);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined' && !window.matchMedia('(pointer: coarse)').matches) {
+            setIsTouch(false);
+        }
+    }, []);
+
+    if (isTouch) return null;
+    return <DesktopCursor />;
 };

@@ -265,7 +265,7 @@ export const Home: React.FC = () => {
                         <source media="(max-width: 640px)" srcSet="/hero-new-mobile.webp" type="image/webp" />
                         <source srcSet="/hero-new.webp" type="image/webp" />
                         <img
-                            src="/hero-new.jpg"
+                            src="/hero-new-mobile.webp"
                             alt="Kolte Patil Life Republic Hinjewadi Pune 390-Acre Township"
                             className="w-full h-full object-cover opacity-60 scale-100"
                             loading="eager"
