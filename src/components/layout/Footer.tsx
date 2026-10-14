@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
                     <div className="lg:col-span-3 space-y-8">
                         <div className="flex flex-col gap-6">
                             <div className="w-16 h-16 bg-[#151822] border border-white/20 rounded-2xl flex items-center justify-center p-2 shadow-2xl overflow-hidden group-hover:scale-110 transition-transform duration-500">
-                                <img loading="lazy" src="/images/brand/logo.webp" alt="Life Republic" className="w-full h-full object-contain" />
+                                <img loading="lazy" src="/images/brand/logo.webp" alt="Life Republic" width="64" height="64" className="w-full h-full object-contain" />
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-3xl font-sans font-bold tracking-wider text-[#202124] font-bold">
@@ -45,14 +45,16 @@ export const Footer: React.FC = () => {
                         </p>
                         <div className="flex gap-4">
                             {[
-                                { Icon: Facebook, label: 'Facebook' },
-                                { Icon: Instagram, label: 'Instagram' },
-                                { Icon: Twitter, label: 'Twitter' },
-                                { Icon: Linkedin, label: 'LinkedIn' }
-                            ].map(({ Icon, label }, idx) => (
+                                { Icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com' },
+                                { Icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com' },
+                                { Icon: Twitter, label: 'Twitter', href: 'https://twitter.com' },
+                                { Icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com' }
+                            ].map(({ Icon, label, href }, idx) => (
                                 <a
                                     key={idx}
-                                    href="#"
+                                    href={href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="h-12 w-12 rounded-full border border-strong flex items-center justify-center hover:bg-accent hover:border-accent hover:text-[#202124] font-bold transition-all duration-300 group"
                                     aria-label={label}
                                 >
@@ -64,7 +66,7 @@ export const Footer: React.FC = () => {
 
                     {/* Quick Link Columns (Span 2 each) */}
                     <div className="lg:col-span-2 lg:col-start-4">
-                        <h4 className="text-lg font-sans font-bold mb-8 text-[#202124] font-bold">Explore</h4>
+                        <h3 className="text-lg font-sans font-bold mb-8 text-[#202124] font-bold">Explore</h3>
                         <ul className="space-y-4">
                             {[
                                 { name: 'Home', path: '/' },
@@ -88,7 +90,7 @@ export const Footer: React.FC = () => {
                     </div>
 
                     <div className="lg:col-span-2">
-                        <h4 className="text-lg font-sans font-bold mb-8 text-[#202124] font-bold">Project Clusters</h4>
+                        <h3 className="text-lg font-sans font-bold mb-8 text-[#202124] font-bold">Project Clusters</h3>
                         <ul className="space-y-4">
                             {[
                                 { name: 'Atmos (2 & 3 BHK)', path: '/projects/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi' },
@@ -111,7 +113,7 @@ export const Footer: React.FC = () => {
                     </div>
 
                     <div className="lg:col-span-2">
-                        <h4 className="text-lg font-sans font-bold mb-8 text-[#202124] font-bold">Location Index</h4>
+                        <h3 className="text-lg font-sans font-bold mb-8 text-[#202124] font-bold">Location Index</h3>
                         <ul className="space-y-4">
                             {[
                                 { name: 'Near Hinjewadi Phase 1', path: '/location/flats-near-hinjewadi' },
@@ -135,7 +137,7 @@ export const Footer: React.FC = () => {
 
                     {/* Contact Column (Span 3) */}
                     <div className="lg:col-span-3">
-                        <h4 className="text-lg font-sans font-bold mb-8 text-[#202124] font-bold">Visit Us</h4>
+                        <h3 className="text-lg font-sans font-bold mb-8 text-[#202124] font-bold">Visit Us</h3>
                         <div className="space-y-6">
                             <div className="flex items-start gap-4 group">
                                 <div className="p-3 rounded-2xl bg-transparent border-2 border-strong group-hover:bg-accent/20 transition-colors">
@@ -167,25 +169,25 @@ export const Footer: React.FC = () => {
 
                 {/* Township FAQs */}
                 <div className="border-t border-strong py-12 mt-12">
-                    <h5 className="text-xl font-bold text-[#202124] tracking-tight mb-8">Frequently Asked Questions: Kolte Patil Life Republic Pune</h5>
+                    <h3 className="text-xl font-bold text-[#202124] tracking-tight mb-8">Frequently Asked Questions: Kolte Patil Life Republic Pune</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
                         <div className="space-y-6">
                             <div>
-                                <h6 className="font-bold text-[#202124] mb-2">What is Kolte Patil Life Republic?</h6>
+                                <h4 className="font-bold text-[#202124] mb-2">What is Kolte Patil Life Republic?</h4>
                                 <p className="text-text-muted">Life Republic by Kolte-Patil is a ~390-acre integrated township in Hinjewadi, Pune. It features premium residential clusters (like Canvas, Qrious, Duet, and Echoes), high-street retail, schools, and 50+ world-class amenities designed for a holistic community lifestyle.</p>
                             </div>
                             <div>
-                                <h6 className="font-bold text-[#202124] mb-2">Where is Life Republic located?</h6>
+                                <h4 className="font-bold text-[#202124] mb-2">Where is Life Republic located?</h4>
                                 <p className="text-text-muted">The township is strategically located at <a href="https://www.google.com/maps/dir//Life+Republic+Sales+Office+Or+Main+Office,+Survey+No.+74+Hinjawadi+-+Marunji,+Hinjawadi+-+Kasarsai+Rd,+Taluka,+Mulshi,+Maharashtra+411033/@18.6459725,73.7360171,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bc2ba5053b55b4b:0x14d3205e23f3f5f7!2m2!1d73.7093735!2d18.6182576?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="font-bold underline hover:text-accent transition-colors">Survey No. 74, Marunji, Hinjawadi-Marunji-Kasarsai Road, Taluka Mulshi, Pune 411057</a>, just ~4.5 km from the Hinjewadi IT Park Phase 1, offering excellent connectivity to Mumbai-Bengaluru Highway.</p>
                             </div>
                         </div>
                         <div className="space-y-6">
                             <div>
-                                <h6 className="font-bold text-[#202124] mb-2">What are the configurations and price range?</h6>
+                                <h4 className="font-bold text-[#202124] mb-2">What are the configurations and price range?</h4>
                                 <p className="text-text-muted">Life Republic offers smart 2 & 3 BHKs (Qrious, Echoes) starting from ₹75 Lakhs, to Ultra-Luxury 3 & 4 BHKs (Canvas) starting at ₹1.45 Cr, catering to IT professionals and luxury home buyers.</p>
                             </div>
                             <div>
-                                <h6 className="font-bold text-[#202124] mb-2">Are the projects MahaRERA registered?</h6>
+                                <h4 className="font-bold text-[#202124] mb-2">Are the projects MahaRERA registered?</h4>
                                 <p className="text-text-muted">Yes, all active clusters within the Life Republic township are fully registered under MahaRERA. Specific numbers (e.g., P52100077008 for Canvas) are listed below for verification.</p>
                             </div>
                         </div>
@@ -194,7 +196,7 @@ export const Footer: React.FC = () => {
 
                 {/* RERA Numbers Section */}
                 <div className="border-t border-strong py-8">
-                    <h5 className="text-sm font-bold text-[#202124] tracking-tight font-medium mb-4">RERA Registration Numbers</h5>
+                    <h3 className="text-sm font-bold text-[#202124] tracking-tight font-medium mb-4">RERA Registration Numbers</h3>
                     <div className="flex flex-wrap gap-x-6 gap-y-2 text-[10px] text-text-muted hover:text-[#202124]">
                         {RERA_REGISTRY.map((item: { title: string, rera: string }, index: number) => (
                             <span key={index} className="flex items-center gap-1">

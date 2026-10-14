@@ -23,7 +23,7 @@ const FEATURED_CLUSTERS = [
     {
         name: 'Qrious',
         slug: 'kolte-patil-life-republic-qrious',
-        sector: 'Sector R1',
+        sector: 'Sector R14',
         typology: '2 & 3 BHK',
         price: '₹68 Lakhs*',
         status: 'Under Construction',
@@ -43,7 +43,7 @@ const FEATURED_CLUSTERS = [
     {
         name: 'Canvas',
         slug: 'kolte-patil-life-republic-canvas',
-        sector: 'Sector R1',
+        sector: 'Sector R5',
         typology: '3 & 4 BHK Luxury',
         price: '₹1.35 Cr*',
         status: 'Under Construction',
@@ -73,7 +73,7 @@ const FEATURED_CLUSTERS = [
     {
         name: 'Echoes',
         slug: 'kolte-patil-life-republic-echoes',
-        sector: 'Sector R16',
+        sector: 'Sector R31',
         typology: '2 & 3 BHK Scenic',
         price: '₹79 Lakhs*',
         status: 'Under Construction',
@@ -295,6 +295,8 @@ export const Navbar: React.FC = () => {
                             <motion.img
                                 src="/logo.webp"
                                 alt="Kolte-Patil Life Republic"
+                                width="180"
+                                height="58"
                                 animate={{ height: scrolled ? 48 : 58 }}
                                 transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
                                 className="object-contain"

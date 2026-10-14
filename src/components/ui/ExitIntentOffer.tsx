@@ -8,6 +8,10 @@ export const ExitIntentOffer: React.FC = () => {
     const [hasShown, setHasShown] = useState(false);
 
     useEffect(() => {
+        if (typeof window === 'undefined' || window.matchMedia('(pointer: coarse)').matches) {
+            return;
+        }
+
         // Check if shown in this session
         const shown = sessionStorage.getItem('lr_exit_intent_shown');
         if (shown) setHasShown(true);

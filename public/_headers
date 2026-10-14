@@ -86,3 +86,13 @@
   Cache-Tag: lr-ai, lr-llms
   Content-Type: text/plain; charset=UTF-8
   Access-Control-Allow-Origin: *
+
+# Agentic Resource Discovery (.well-known/ai-catalog.json & .well-known/ard.json)
+/.well-known/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  CDN-Cache-Control: public, max-age=7200, stale-while-revalidate=86400
+  Cloudflare-CDN-Cache-Control: public, max-age=7200, stale-while-revalidate=86400
+  Cache-Tag: lr-ai, lr-ard
+  Content-Type: application/json; charset=UTF-8
+  Access-Control-Allow-Origin: *
+

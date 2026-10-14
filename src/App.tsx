@@ -110,7 +110,6 @@ function App() {
       <CommandPalette />
       <CustomCursor />
       <ExitIntentOffer />
-      <FloatingContact />
       <CookieConsent />
       <ScrollToTop />
       <AnimatePresence mode="wait">

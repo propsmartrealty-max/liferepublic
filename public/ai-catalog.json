@@ -1,0 +1,59 @@
+{
+  "$schema": "https://agenticresourcediscovery.org/schemas/v1/ai-catalog.schema.json",
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Kolte-Patil Life Republic Hinjewadi",
+    "identifier": "did:web:life-republic.in",
+    "documentationUrl": "https://life-republic.in/township-guide",
+    "logoUrl": "https://life-republic.in/logo.webp"
+  },
+  "entries": [
+    {
+      "identifier": "township-concierge",
+      "displayName": "Life Republic AI Township Concierge",
+      "type": "application/json",
+      "url": "https://life-republic.in/api/ai-chat",
+      "description": "Interactive AI concierge providing deterministic information about residential inventory, floor plans, pricing, MahaRERA certifications, and VIP site visit bookings for Kolte Patil Life Republic Hinjewadi.",
+      "representativeQueries": [
+        "What are the starting prices for 2 BHK in Life Republic?",
+        "Tell me about Sector R5 Canvas apartments",
+        "How far is Life Republic from Hinjewadi Phase 1?",
+        "Schedule a site visit to Kolte Patil Life Republic"
+      ]
+    },
+    {
+      "identifier": "property-catalog",
+      "displayName": "Life Republic Real Estate Inventory Catalog",
+      "type": "application/json",
+      "url": "https://life-republic.in/google-products.json",
+      "description": "Machine-readable catalog of all active residential towers, apartments, row houses, and bungalow plots with verified MahaRERA numbers and price ranges.",
+      "representativeQueries": [
+        "Find available 3 BHK flats in Hinjewadi Pune",
+        "MahaRERA numbers of Life Republic sectors",
+        "Compare prices between Duet and Canvas clusters"
+      ]
+    },
+    {
+      "identifier": "google-property-feed",
+      "displayName": "Google Merchant Real Estate Feed",
+      "type": "application/xml",
+      "url": "https://life-republic.in/google-property-feed.xml",
+      "description": "Structured XML property feed conforming to Google Merchant Center Real Estate RSS specifications.",
+      "representativeQueries": [
+        "Google Shopping feed for Life Republic properties",
+        "Property XML feed Hinjewadi apartments"
+      ]
+    },
+    {
+      "identifier": "llm-knowledge-base",
+      "displayName": "Life Republic Comprehensive Knowledge Graph",
+      "type": "text/plain",
+      "url": "https://life-republic.in/llms-full.txt",
+      "description": "Complete textual corpus detailing 390-acre township infrastructure, Crimson Anisha Global School, connectivity routes, rental yields, and sector layout.",
+      "representativeQueries": [
+        "Detailed master plan of Kolte Patil Life Republic",
+        "School and healthcare infrastructure inside Life Republic"
+      ]
+    }
+  ]
+}

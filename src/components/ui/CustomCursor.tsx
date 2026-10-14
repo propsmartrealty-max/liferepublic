@@ -11,6 +11,10 @@ export const CustomCursor = () => {
     const cursorY = useSpring(mouseY, springConfig);
 
     useEffect(() => {
+        if (typeof window === 'undefined' || window.matchMedia('(pointer: coarse)').matches) {
+            return;
+        }
+
         const updateMousePosition = (e: MouseEvent) => {
             mouseX.set(e.clientX - 16);
             mouseY.set(e.clientY - 16);
@@ -25,14 +29,18 @@ export const CustomCursor = () => {
             }
         };
 
-        window.addEventListener('mousemove', updateMousePosition);
-        window.addEventListener('mouseover', handleMouseOver);
+        window.addEventListener('mousemove', updateMousePosition, { passive: true });
+        window.addEventListener('mouseover', handleMouseOver, { passive: true });
 
         return () => {
             window.removeEventListener('mousemove', updateMousePosition);
             window.removeEventListener('mouseover', handleMouseOver);
         };
     }, [mouseX, mouseY]);
+
+    if (typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches) {
+        return null;
+    }
 
     return (
         <motion.div

@@ -22,9 +22,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Google Typography & LCP Image Preload -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap">
-  <link rel="preload" as="image" href="/images/home/master-layout-full.jpg" fetchpriority="high">  
+  <!-- Google Typography & Asynchronous Font Loading (Zero Render Blocking) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" />
+  </noscript>
+
+  <!-- High-Priority Responsive LCP Hero Image Preload -->
+  <link rel="preload" as="image" href="/hero-new-mobile.webp" type="image/webp" media="(max-width: 640px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/hero-new.webp" type="image/webp" media="(min-width: 641px)" fetchpriority="high" />
+
+  <!-- Agentic Resource Discovery (ARD 1.0) AI Catalog Pointer -->
+  <link rel="ai-catalog" href="/ai-catalog.json" type="application/json" />
+
   <title>Kolte Patil Life Republic Township | Hinjewadi Pune</title>
   <meta name="description" content="Explore Kolte Patil Life Republic, a 400-acre integrated township in Hinjewadi, Pune. Discover luxury 2, 3 BHK flats and row houses.">
 
@@ -34,14 +45,23 @@
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="alternate" type="application/rss+xml" title="Kolte Patil Life Republic RSS Feed" href="https://life-republic.in/feed.xml" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17430583486"></script>
+  <!-- Google tag (gtag.js) - Deferred Execution for Zero Main-Thread TBT -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'AW-17430583486');
+    function loadAnalytics() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17430583486';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'AW-17430583486');
+    }
+    if (document.readyState === 'complete') {
+      setTimeout(loadAnalytics, 1500);
+    } else {
+      window.addEventListener('load', function() { setTimeout(loadAnalytics, 1500); });
+    }
   </script>
 
   <!-- Meta Pixel Code (Activated when valid ID is configured) -->

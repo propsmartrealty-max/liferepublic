@@ -74,7 +74,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, ariaLabel }) => {
       </main>
       <Footer />
       <FloatingContact />
-      <WhatsAppWidget />
       <TownshipAgent />
       <EnquiryModal 
         isOpen={isEnquiryOpen}

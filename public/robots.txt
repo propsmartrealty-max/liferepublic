@@ -83,6 +83,10 @@ Disallow: /_headers
 # Explicit Sitemap & Knowledge Base Declarations
 Sitemap: https://life-republic.in/sitemap.xml
 Sitemap: https://life-republic.in/sitemap-silos-index.xml
+Sitemap: https://life-republic.in/google-property-feed.xml
 Sitemap: https://life-republic.in/google-shopping-feed.xml
 Sitemap: https://life-republic.in/feed.xml
 Sitemap: https://life-republic.in/rss.xml
+
+# Agentic Resource Discovery & AI Browsing
+Agentmap: https://life-republic.in/ai-catalog.json
