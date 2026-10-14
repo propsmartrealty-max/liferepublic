@@ -82,13 +82,23 @@ async function runCycle() {
     }
 
     // 2. Run IndexNow Instant Discovery Engine (Bing, Copilot, Yandex)
-    log('🟠 [Engine 2/2] Launching IndexNow Protocol Engine...');
+    log('🟠 [Engine 2/3] Launching IndexNow Protocol Engine...');
     const indexNowRes = await runScript('indexnow.cjs');
     const indexNowSuccess = indexNowRes.stdout.match(/IndexNow Cycle Complete:\s*(\d+)\s*URLs newly broadcasted/);
     if (indexNowSuccess) {
         log(`🎉 IndexNow Engine: ${indexNowSuccess[1]} URLs newly broadcasted to Bing/Copilot.`);
     } else {
         log(`ℹ️ IndexNow Engine completed with exit code ${indexNowRes.code}.`);
+    }
+
+    // 3. Run Google Search Console Sitemaps & Property Feeds Engine
+    log('🟢 [Engine 3/3] Synchronizing Google Search Console Feeds...');
+    const gscRes = await runScript('gsc-sync.cjs');
+    const gscMatch = gscRes.stdout.match(/GSC Sync Completed:\s*(\d+\/\d+)/);
+    if (gscMatch) {
+        log(`✨ GSC Engine: ${gscMatch[1]} sitemaps active in Google Search Console.`);
+    } else {
+        log(`ℹ️ GSC Engine completed with exit code ${gscRes.code}.`);
     }
 
     log(`🏁 Cycle complete. Next scheduled evaluation in 30 minutes.\n`);
@@ -106,6 +116,10 @@ async function showStatus() {
     console.log('\n--- IndexNow Discovery Engine ---');
     const indexNowStatus = await runScript('indexnow.cjs', ['--status']);
     process.stdout.write(indexNowStatus.stdout);
+
+    console.log('\n--- Google Search Console Sitemaps Engine ---');
+    const gscStatus = await runScript('gsc-sync.cjs');
+    process.stdout.write(gscStatus.stdout);
 
     console.log('\n--- Daemon Loop Configuration ---');
     console.log(`⏱️ Evaluation Cadence: Every 30 minutes (${CHECK_INTERVAL_MS / 60000} mins)`);
