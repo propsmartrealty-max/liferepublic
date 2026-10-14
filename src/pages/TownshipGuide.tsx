@@ -84,9 +84,9 @@ export const TownshipGuide: React.FC = () => {
         { name: "Atmos", sector: "R22", segment: "Premium Apartments", slug: "sector-r22-life-republic", desc: "Modern 2 & 3 BHK residences designed for maximum ventilation and wellness." },
         { name: "Aros", sector: "R13", segment: "Community Homes", slug: "sector-r13-life-republic", desc: "Direct access to the 4km fitness loop and vibrant social spaces." },
         { name: "Universe", sector: "R10", segment: "Smart Homes", slug: "sector-r10-life-republic", desc: "Planet-themed living with phased excellence and futuristic infrastructure." },
-        { name: "Canvas", sector: "R3", segment: "Luxury Residences", slug: "sector-r3-life-republic", desc: "Elite 3 & 4 BHK apartments with panoramic township views and infinity amenities." },
-        { name: "Echoes", sector: "R17/18", segment: "Architectural Marvel", slug: "sector-r17a-life-republic", desc: "The newest launch designed by Hafeez Contractor near the 3.5-acre Urban Park." },
-        { name: "24K Espada", sector: "R9", segment: "Ultra-Luxury Villas", slug: "sector-r31-life-republic", desc: "Rare 4 & 5 Bed row houses for the crème de la crème of Hinjewadi." }
+        { name: "Canvas", sector: "R5", segment: "Luxury Residences", slug: "sector-r3-life-republic", desc: "Elite 3, 3.5 & 4 BHK apartments in Pune's tallest 40-storey residential towers." },
+        { name: "Echoes", sector: "R31", segment: "Architectural Marvel", slug: "sector-r17a-life-republic", desc: "The newest launch designed by Hafeez Contractor near the 3.5-acre Urban Park." },
+        { name: "24K Espada", sector: "R31", segment: "Ultra-Luxury Villas", slug: "sector-r31-life-republic", desc: "Rare 4 & 5 Bed row houses for the crème de la crème of Hinjewadi." }
     ];
 
     return (
@@ -247,14 +247,18 @@ export const TownshipGuide: React.FC = () => {
                         
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             {[
-                                { name: "Atmos (R22)", rera: "P52100051307" },
-                                { name: "Aros (R13)", rera: "P52100046648" },
-                                { name: "Universe (R10)", rera: "P52100028886" },
-                                { name: "Canvas (R3)", rera: "P52100077008" },
-                                { name: "Echoes (R17)", rera: "P52100051307" },
-                                { name: "24K Espada (R9)", rera: "P52100028246" },
-                                { name: "Sound of Soul", rera: "P52100032047" },
-                                { name: "ORO Avenue", rera: "P52100017116" }
+                                { name: "Atmos (R22)", rera: "P52100051765" },
+                                { name: "Aros (R13)", rera: "P52100047921" },
+                                { name: "The Universe (R10)", rera: "P52100027629" },
+                                { name: "Canvas (R5)", rera: "P52100077008" },
+                                { name: "Echoes (R31)", rera: "PM1261012502409" },
+                                { name: "Duet (R34)", rera: "P52100079424" },
+                                { name: "Qrious (R14)", rera: "P52100079623" },
+                                { name: "24K Espada (R31)", rera: "P52100002646" },
+                                { name: "Sound of Soul (R17A)", rera: "P52100079424" },
+                                { name: "Nora Plots (R17B)", rera: "P52100022278" },
+                                { name: "Arezo (R16)", rera: "P52100018539" },
+                                { name: "ORO Avenue (R9)", rera: "P52100017116" }
                             ].map((item, i) => (
                                 <div key={i} className="bg-[#0A0A0A] border border-white/10 p-4 rounded-xl border border-white/10 hover:border-accent/30 transition-all text-center group">
                                     <p className="text-[10px] font-bold text-[#5F6368] uppercase mb-1">{item.name}</p>

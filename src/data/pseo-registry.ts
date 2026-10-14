@@ -248,11 +248,11 @@ export const pseoRegistry: Record<string, LandingConfig> = {
         highlights: ['Kolte Patil trusted legacy', '30+ years in Pune real estate', 'BSE-listed developer']
     },
     'sector-r3-life-republic': {
-        title: 'Canvas Sector R3 Life Republic Hinjewadi | Luxury 3 & 4 BHK',
-        description: 'Explore Canvas in Sector R3 at Kolte Patil Life Republic Hinjewadi Pune. Luxury 3 & 4 BHK residences with high-rise views, walking distance to Anisha Global School.',
-        keywords: 'sector r3 life republic, canvas sector r3, kolte patil canvas hinjewadi, 3 bhk sector r3',
+        title: 'Canvas Sector R5 Life Republic Hinjewadi | Luxury 3 & 4 BHK',
+        description: 'Explore Canvas in Sector R5 at Kolte Patil Life Republic Hinjewadi Pune. Luxury 3, 3.5 & 4 BHK residences with high-rise views, walking distance to Anisha Global School.',
+        keywords: 'sector r5 life republic, canvas sector r5, kolte patil canvas hinjewadi, 3 bhk sector r5',
         infraScore: 97, rentalYield: '6.0% - 6.8%', commutePhase1: '5 mins',
-        highlights: ['Walking distance to Crimson Anisha Global School', 'Panoramic high-rise views across 390-acre green canopy', 'Exclusive luxury specifications with double-height clubhouse']
+        highlights: ['Walking distance to Crimson Anisha Global School', 'Pune\'s tallest ~120M 40-storey towers across 390-acre green canopy', 'Exclusive luxury specifications with double-height clubhouse']
     },
     'sector-r22-life-republic': {
         title: 'Atmos Sector R22 Life Republic Hinjewadi | Modern 2 & 3 BHK',
@@ -276,39 +276,39 @@ export const pseoRegistry: Record<string, LandingConfig> = {
         highlights: ['Planet Smart City IoT technology integration', 'Highest rental yield in township for young IT professionals', 'Compact zero-wastage functional floor plans']
     },
     'sector-r17a-life-republic': {
-        title: 'Echoes Sector R17 / R31 Life Republic Hinjewadi | New Launch',
+        title: 'Echoes Sector R31 Life Republic Hinjewadi | New Launch',
         description: 'Latest new launch phase Echoes at Sector R31 Kolte Patil Life Republic Hinjewadi. Meticulously planned 2 & 2.5 BHK apartments across 5.89 acres.',
-        keywords: 'sector r17a life republic, echoes sector r31, kolte patil echoes hinjewadi',
+        keywords: 'echoes sector r31, kolte patil echoes hinjewadi, new launch life republic',
         infraScore: 95, rentalYield: '6.0% - 6.8%', commutePhase1: '7 mins',
         highlights: ['New launch early bird price advantage', '40+ modern lifestyle and wellness amenities', 'Dec 2030 possession with construction-linked milestones']
     },
     'sector-r31-life-republic': {
-        title: '24K Espada Sector R31 / R24 Life Republic | Ultra-Luxury Row Houses',
-        description: '24K Espada at Kolte Patil Life Republic Hinjewadi Pune. Ultra-luxury 4 & 5 BHK row houses with private terraces and 24K bespoke concierge services.',
+        title: '24K Espada Sector R31 Life Republic | Ultra-Luxury Row Houses',
+        description: '24K Espada at Kolte Patil Life Republic Hinjewadi Pune. Ultra-luxury 4 & 5 BHK row houses in Sector R31 with private terraces and 24K bespoke concierge services.',
         keywords: 'sector r31 life republic, 24k espada life republic, luxury row houses hinjewadi',
         infraScore: 99, rentalYield: '5.0% - 5.5%', commutePhase1: '8 mins',
-        highlights: ['Rare low-density villa and row-house enclave', 'Private elevators, garden decks, and multi-car parking', 'Exclusive 24K brand craftsmanship and bespoke finishes']
+        highlights: ['Rare low-density villa and row-house enclave in Sector R31', 'Private elevators, garden decks, and multi-car parking', 'Exclusive 24K brand craftsmanship and bespoke finishes']
     },
     'sector-r2-life-republic': {
-        title: 'Qrious Sector R2 Life Republic Hinjewadi | Smart Tech Homes',
-        description: 'Qrious at Sector R2 Kolte Patil Life Republic Hinjewadi. Smart 2 & 3 BHK apartments adjacent to high-street retail boulevard and community plaza.',
-        keywords: 'sector r2 life republic, qrious sector r2, kolte patil qrious hinjewadi',
+        title: 'Qrious Sector R14 Life Republic Hinjewadi | Smart Tech Homes',
+        description: 'Qrious at Sector R14 Kolte Patil Life Republic Hinjewadi. Smart 2 & 3 BHK apartments adjacent to high-street retail boulevard and community plaza.',
+        keywords: 'sector r14 life republic, qrious sector r14, kolte patil qrious hinjewadi',
         infraScore: 95, rentalYield: '6.0% - 6.8%', commutePhase1: '7 mins',
-        highlights: ['Integrated high-density retail boulevard', 'Home automation enabled smart residences', 'Immediate access to primary township gate and Spine Road']
+        highlights: ['Integrated high-density retail boulevard in Sector R14', 'Home automation enabled smart residences', 'Immediate access to primary township gate and 150-ft Spine Road']
     },
     'sector-r34-life-republic': {
         title: 'Duet Sector R34 Life Republic Hinjewadi | Space-Efficient 2 BHK',
         description: 'Duet at Sector R34 Kolte Patil Life Republic Hinjewadi. Space-efficient smart 2 BHK homes with low maintenance and direct connectivity.',
         keywords: 'sector r34 life republic, duet sector r34, kolte patil duet hinjewadi',
         infraScore: 93, rentalYield: '6.2% - 7.0%', commutePhase1: '8 mins',
-        highlights: ['High-efficiency 2 BHK spatial configurations', 'Low maintenance overhead with dedicated clubhouse', 'Dec 2030 possession with flexible builder payment schemes']
+        highlights: ['High-efficiency 2 BHK spatial configurations in Sector R34', 'Low maintenance overhead with dedicated clubhouse', 'Dec 2030 possession with flexible builder payment schemes']
     },
     'sector-r17-life-republic': {
-        title: 'Nora Sector R17 Life Republic Hinjewadi | Bungalow Plots',
-        description: 'Build your bespoke bungalow at Nora Sector R17 Kolte Patil Life Republic Hinjewadi. Exclusive gated plots with underground utility infrastructure.',
-        keywords: 'sector r17 life republic, nora plots hinjewadi, bungalow plots life republic',
+        title: 'Nora Sector R17B Life Republic Hinjewadi | Bungalow Plots',
+        description: 'Build your bespoke bungalow at Nora Sector R17B Kolte Patil Life Republic Hinjewadi. Exclusive gated plots with underground utility infrastructure.',
+        keywords: 'sector r17b life republic, nora plots hinjewadi, bungalow plots life republic',
         infraScore: 96, rentalYield: '4.5% - 5.2%', commutePhase1: '8 mins',
-        highlights: ['100% clear title NA bungalow plots', 'Build-to-suit architectural freedom adhering to township design code', 'Underground power cables, water supply, and wide internal paved avenues']
+        highlights: ['100% clear title NA bungalow plots in Sector R17B', 'Build-to-suit architectural freedom adhering to township design code', 'Underground power cables, water supply, and wide internal paved avenues']
     }
 };
 

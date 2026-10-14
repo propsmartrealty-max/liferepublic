@@ -24,21 +24,66 @@ const sectors = [
     },
     {
         id: 'qrious',
-        name: 'Sector R1: Qrious',
+        name: 'Sector R14: Qrious',
         type: '2-3 BHK Smarthomes',
-        status: 'Ready',
+        status: 'Ongoing',
         intensity: 'High',
         pos: { top: '25%', left: '65%' },
         link: '/projects/kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi'
     },
     {
+        id: 'canvas',
+        name: 'Sector R5: Canvas',
+        type: '3, 3.5 & 4 BHK',
+        status: 'Ultra Luxury',
+        intensity: 'High',
+        pos: { top: '30%', left: '50%' },
+        link: '/projects/kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi'
+    },
+    {
         id: 'espada',
-        name: '24K Espada',
-        type: '4 BHK Villas',
+        name: 'Sector R31: 24K Espada',
+        type: '4 & 5 BHK Row Houses',
         status: 'Ultra Luxury',
         intensity: 'High',
         pos: { top: '15%', left: '45%' },
-        link: '/projects/kolte-patil-life-republic-24k-espada-luxury-villas-hinjewadi'
+        link: '/projects/kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi'
+    },
+    {
+        id: 'echoes',
+        name: 'Sector R31: Echoes',
+        type: '2 & 2.5 BHK',
+        status: 'New Launch',
+        intensity: 'High',
+        pos: { top: '20%', left: '40%' },
+        link: '/projects/kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi'
+    },
+    {
+        id: 'duet',
+        name: 'Sector R34: Duet',
+        type: '2 BHK Compact',
+        status: 'Ongoing',
+        intensity: 'Medium',
+        pos: { top: '40%', left: '30%' },
+        link: '/projects/kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi'
+    },
+    {
+        id: 'universe',
+        name: 'Sector R10: The Universe',
+        type: '1 & 2 BHK Smart',
+        status: 'Ongoing',
+        intensity: 'High',
+        pos: { top: '55%', left: '60%' },
+        link: '/projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi'
+    },
+    {
+        id: 'nora',
+        name: 'Sector R17B: Nora',
+        type: 'Bungalow Plots',
+        status: 'Active',
+        intensity: 'Medium',
+        pos: { top: '65%', left: '45%' },
+        link: '/projects/kolte-patil-life-republic-nora-bungalow-plots-hinjewadi'
     },
     {
         id: 'arezo',

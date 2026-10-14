@@ -42,13 +42,21 @@ export const generateGlobalSchema = (path: string = '/') => {
                     'name': 'Kolte Patil Developers Ltd.',
                     'url': 'https://www.koltepatil.com/'
                 },
-                'aggregateRating': {
-                    '@type': 'AggregateRating',
-                    'ratingValue': '4.8',
-                    'reviewCount': '12500',
-                    'bestRating': '5',
-                    'worstRating': '1'
-                }
+                'geo': {
+                    '@type': 'GeoCoordinates',
+                    'latitude': 18.6186,
+                    'longitude': 73.7147
+                },
+                'hasMap': 'https://maps.google.com/?cid=1236873151214041762',
+                'areaServed': ['Hinjewadi', 'Marunji', 'Wakad', 'Baner', 'Pune', 'PCMC', 'West Pune'],
+                'openingHoursSpecification': [
+                    {
+                        '@type': 'OpeningHoursSpecification',
+                        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                        'opens': '09:00',
+                        'closes': '19:00'
+                    }
+                ]
             },
             {
                 '@type': 'WebSite',
@@ -366,13 +374,13 @@ export const generateClusterProductSchema = (cluster: any) => {
                     'postalCode': '411057',
                     'addressCountry': 'IN'
                 },
-                'aggregateRating': {
-                    '@type': 'AggregateRating',
-                    'ratingValue': '4.9',
-                    'reviewCount': '1280',
-                    'bestRating': '5',
-                    'worstRating': '1'
-                }
+                'geo': {
+                    '@type': 'GeoCoordinates',
+                    'latitude': 18.6186,
+                    'longitude': 73.7147
+                },
+                'numberOfBedrooms': '1 to 5',
+                'petsAllowed': true
             },
             {
                 '@type': 'BreadcrumbList',

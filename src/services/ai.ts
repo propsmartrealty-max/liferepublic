@@ -12,14 +12,16 @@ Core Facts:
 - Infrastructure: Crimson Anisha Global School (in-township), dedicated Fire Station, 150-ft Spine Road, 3.5-Acre Central Park.
 - Connectivity: Hinjewadi Phase 1 (8-10 mins), Phase 2 (12 mins), Phase 3 (15 mins), upcoming Pune Metro Line 3 (7 mins).
 - Current Active Clusters:
-  1. Qrious (Sector R1): 1, 2, 3 BHK, ₹42L - ₹75L, RERA: P52100028753
-  2. Duet (Sector R2): 2 & 2.5 BHK, ₹68L - ₹85L, RERA: P52100052344
-  3. Canvas (Sector R3): 2, 3, 4 BHK, ₹78L - ₹1.45Cr, RERA: P52100054789
-  4. Aros (Sector R9): 2 & 3 BHK, ₹72L - ₹1.15Cr, RERA: P52100030584
-  5. Atmos (Sector R14): 2 & 3 BHK, ₹76L - ₹1.22Cr, RERA: P52100049756
-  6. Echoes (Sector R16): 2 & 3 BHK Eco-Chic, ₹74L - ₹1.18Cr, RERA: P52100051288
-  7. 24K Espada (Sector R22): 4 & 5 BHK Row Houses/Villas, ₹2.85Cr - ₹5.50Cr, RERA: P52100027655
-  8. Nora (Sector R17B): Bungalow Plots (1500-4000 sq.ft), ₹1.25Cr - ₹3.50Cr, RERA: P52100024589
+  1. Qrious (Sector R14): 2 & 3 BHK, ₹89L - ₹1.15Cr, RERA: P52100079623
+  2. Duet (Sector R34): 2 BHK, ₹79L - ₹85L, RERA: P52100079424
+  3. Canvas (Sector R5): 3, 3.5 & 4 BHK, ₹1.59Cr - ₹2.59Cr, RERA: P52100077008
+  4. Aros (Sector R13): 2 & 3 BHK, ₹92L - ₹1.35Cr, RERA: P52100047921
+  5. Atmos (Sector R22): 2 & 3 BHK, ₹1.15Cr - ₹1.45Cr, RERA: P52100051765
+  6. Echoes (Sector R31): 2 & 2.5 BHK Eco-Chic, ₹85L - ₹1.10Cr, RERA: PM1261012502409
+  7. 24K Espada (Sector R31): 4 & 5 BHK Row Houses/Villas, ₹3.40Cr - ₹5.50Cr, RERA: P52100002646
+  8. Nora (Sector R17B): Bungalow Plots (1500-4000 sq.ft), ₹1.80Cr - ₹3.50Cr, RERA: P52100022278
+  9. The Universe (Sector R10): 1 & 2 BHK Smart Homes, ₹40L - ₹65L, RERA: P52100027629
+  10. Arezo (Sector R16): 2 BHK Residences, ₹78L*, RERA: P52100018539
 
 Style:
 - Professional, authoritative, welcoming, concise (under 4 sentences).
@@ -31,27 +33,27 @@ function getLocalKnowledgeResponse(query: string): string {
 
     // 1 BHK or Budget Queries
     if (q.includes('1 bhk') || q.includes('studio') || (q.includes('budget') && !q.includes('high')) || q.includes('40 lakh') || q.includes('50 lakh') || q.includes('affordable')) {
-        return "At Kolte-Patil Life Republic, 1 BHK smart residences are available in **Qrious (Sector R1)** starting from ₹42 Lakhs* (carpet areas 450–520 sq.ft). They offer high rental demand from Hinjewadi IT professionals with anticipated yields of 6.2%–7.1%. Would you like to view the floor plans or check current tower availability?";
+        return "At Kolte-Patil Life Republic, 1 BHK smart residences are available in **The Universe (Sector R10)** starting from ₹40 Lakhs* (carpet areas 393–444 sq.ft). They offer phenomenal rental demand from Hinjewadi IT professionals with anticipated yields of 6.2%–7.1%. Would you like to view the floor plans or check current tower availability?";
     }
 
     // 2 BHK Queries
     if (q.includes('2 bhk') || q.includes('2bhk')) {
-        return "Life Republic offers multiple 2 BHK clusters tailored to your lifestyle: **Qrious** (from ₹58L*), **Duet** (from ₹68L*), **Aros** (from ₹72L* adjacent to Central Park), **Echoes** (from ₹74L*), and **Atmos** (from ₹76L* high-rise vista). Carpet areas range from 680 to 820 sq.ft. Which cluster would you like to explore?";
+        return "Life Republic offers multiple 2 BHK clusters tailored to your lifestyle: **The Universe (Sector R10)** (from ₹58L*), **Duet (Sector R34)** (from ₹79L*), **Arezo (Sector R16)** (from ₹78L*), **Aros (Sector R13)** (from ₹92L* adjacent to Central Park), **Echoes (Sector R31)** (from ₹85L*), and **Qrious (Sector R14)** (from ₹89L*). Which cluster would you like to explore?";
     }
 
     // 3 BHK Queries
     if (q.includes('3 bhk') || q.includes('3bhk')) {
-        return "For spacious 3 BHK residences, you can select from **Atmos** (from ₹1.08Cr*, Sector R22), **Canvas** (from ₹1.05Cr*, artistic high-rise with sundecks), **Aros** (from ₹98L*), or **Echoes** (from ₹1.02Cr* biophilic living). Carpet areas range from 950 to 1,180 sq.ft. Would you like a comparative cost breakdown?";
+        return "For spacious 3 BHK residences, you can select from **Atmos (Sector R22)** (from ₹1.15Cr*), **Canvas (Sector R5)** (from ₹1.59Cr*, luxury 40-storey towers), **Aros (Sector R13)** (from ₹92L*), or **Echoes (Sector R31)** (from ₹85L* biophilic living). Carpet areas range from 950 to 1,452 sq.ft. Would you like a comparative cost breakdown?";
     }
 
     // 4 BHK / Villas / Row Houses / 24K Espada
     if (q.includes('4 bhk') || q.includes('5 bhk') || q.includes('villa') || q.includes('row house') || q.includes('espada') || q.includes('penthouse') || q.includes('luxury')) {
-        return "Our ultra-luxury portfolio features **24K Espada (Sector R22)**, offering signature 4 & 5 BHK row houses and independent villas (2,800 to 4,500 sq.ft) starting from ₹2.85 Cr to ₹5.50 Cr*. They include private elevators, personal gardens, and bespoke concierge services. May I arrange an exclusive private showing for you?";
+        return "Our ultra-luxury portfolio features **24K Espada (Sector R31)**, offering signature 4 & 5 BHK row houses and independent estates (1,876 to 2,274 sq.ft carpet) starting from ₹3.40 Cr*. They include private terraces, private gardens, and 24K Signature Club privileges. May I arrange an exclusive private showing for you?";
     }
 
     // Plots / Land / Nora
     if (q.includes('plot') || q.includes('land') || q.includes('nora')) {
-        return "Sector R17B features **Nora Bungalow Plots**, offering clear-title, infrastructure-ready gated land parcels from 1,500 to 4,000 sq.ft, priced from ₹1.25 Cr to ₹3.50 Cr*. You have complete architectural freedom to construct your custom villa within the 390-acre gated ecosystem.";
+        return "Sector R17B features **Nora Bungalow Plots**, offering clear-title, infrastructure-ready gated land parcels from 1,500 to 4,000 sq.ft, priced from ₹1.80 Cr to ₹3.50 Cr*. You have complete architectural freedom to construct your custom villa within the 390-acre gated ecosystem.";
     }
 
     // School / Education

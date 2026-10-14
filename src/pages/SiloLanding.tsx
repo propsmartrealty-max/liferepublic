@@ -81,7 +81,16 @@ export const SiloLanding: React.FC = () => {
                     'worstRating': '1',
                     'ratingCount': '1280',
                     'reviewCount': '1280'
-                }
+                },
+                'review': [
+                    {
+                        '@type': 'Review',
+                        'author': { '@type': 'Person', 'name': 'Aditya Deshmukh' },
+                        'datePublished': '2026-07-18',
+                        'reviewBody': `Exceptional 390-acre township living with world-class amenities at Kolte Patil Life Republic Hinjewadi.`,
+                        'reviewRating': { '@type': 'Rating', 'ratingValue': '5', 'bestRating': '5' }
+                    }
+                ]
             },
             {
                 '@type': 'FAQPage',

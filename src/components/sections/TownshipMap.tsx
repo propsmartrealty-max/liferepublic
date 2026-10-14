@@ -19,9 +19,9 @@ const clusters: ClusterPoint[] = [
   { id: 'R22', name: 'Atmos', x: 25, y: 30, slug: 'sector-r22-life-republic', type: 'Premium 2 & 3 BHK', status: 'Oct 2027', color: '#2ecc71' },
   { id: 'R13', name: 'Aros', x: 45, y: 40, slug: 'sector-r13-life-republic', type: 'Community 2 & 3 BHK', status: 'Dec 2026', color: '#e67e22' },
   { id: 'R10', name: 'Universe', x: 65, y: 35, slug: 'sector-r10-life-republic', type: 'Smart 1 & 2 BHK', status: 'Phased', color: '#3498db' },
-  { id: 'R3', name: 'Canvas', x: 35, y: 60, slug: 'sector-r3-life-republic', type: 'Luxury 3 & 4 BHK', status: 'Oct 2026', color: '#9b59b6' },
-  { id: 'R17', name: 'Echoes', x: 55, y: 65, slug: 'sector-r17a-life-republic', type: 'Modern 2 & 3 BHK', status: 'New Launch', color: '#f1c40f' },
-  { id: 'R9', name: '24K Espada', x: 75, y: 60, slug: 'sector-r31-life-republic', type: 'Luxury Villas', status: 'Exclusive', color: '#e74c3c' },
+  { id: 'R5', name: 'Canvas', x: 35, y: 60, slug: 'sector-r3-life-republic', type: 'Luxury 3 & 4 BHK', status: 'Dec 2030', color: '#9b59b6' },
+  { id: 'R31', name: 'Echoes', x: 55, y: 65, slug: 'sector-r17a-life-republic', type: 'Modern 2 & 2.5 BHK', status: 'New Launch', color: '#f1c40f' },
+  { id: 'R31', name: '24K Espada', x: 75, y: 60, slug: 'sector-r31-life-republic', type: 'Luxury Row Houses', status: 'Exclusive', color: '#e74c3c' },
 ];
 
 export const TownshipMap: React.FC = () => {

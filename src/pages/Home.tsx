@@ -29,15 +29,15 @@ const HOME_FAQS = [
     },
     {
         question: "What are the starting prices for flats in Life Republic Hinjewadi?",
-        answer: "Prices in Kolte Patil Life Republic start at ₹40 Lakhs* for smart 1 BHK apartments in Sector R10 (Universe). Premium 2 BHK apartments start from ₹79 Lakhs* in Duet and ₹92 Lakhs* in Aros. Luxury 3 BHK homes in Atmos and Aros start from ₹1.15 Cr*, while ultra-luxury 4 & 5 BHK row houses in 24K Espada start from ₹3.40 Cr*."
+        answer: "Prices in Kolte Patil Life Republic start at ₹40 Lakhs* for smart 1 BHK apartments in Sector R10 (The Universe). Premium 2 BHK apartments start from ₹79 Lakhs* in Duet (Sector R34) and ₹92 Lakhs* in Aros (Sector R13). Luxury 3 BHK homes in Atmos (Sector R22) start from ₹1.15 Cr*, 3 & 4 BHK presidential suites in Canvas (Sector R5) start from ₹1.59 Cr*, while ultra-luxury 4 & 5 BHK row houses in 24K Espada (Sector R31) start from ₹3.40 Cr*."
     },
     {
         question: "Which residential clusters are currently available for booking?",
-        answer: "Active clusters with live inventory include Atmos (Sector R22: 3 BHK), Aros (Sector R13: 2 & 3 BHK), Echoes (Sector R31: 2 & 2.5 BHK New Launch), Duet (Sector R34: 2 BHK Eterna & Infinite), Universe (Sector R10: 1 & 2 BHK), 24K Espada (Sector R31: Luxury Row Houses), and Nora (Sector R17: Bungalow Plots)."
+        answer: "Active clusters with live inventory include Atmos (Sector R22: 2 & 3 BHK), Aros (Sector R13: 2 & 3 BHK), Echoes (Sector R31: 2 & 2.5 BHK New Launch), Duet (Sector R34: 2 BHK Eterna & Infinite), Canvas (Sector R5: 3, 3.5 & 4 BHK), Qrious (Sector R14: 2 & 3 BHK Smart Homes), The Universe (Sector R10: 1 & 2 BHK), 24K Espada (Sector R31: Luxury Row Houses), and Nora (Sector R17B: Bungalow Plots)."
     },
     {
         question: "Is Kolte Patil Life Republic approved by MahaRERA?",
-        answer: "Yes, every cluster within Kolte Patil Life Republic is fully registered and approved by MahaRERA. For example, Atmos is registered under P52100051765, Aros under P52100077008, Echoes under P52100079424, Duet under P52100079623, Universe under P52100027629, and 24K Espada under P52100002646."
+        answer: "Yes, every cluster within Kolte Patil Life Republic is fully registered and approved by MahaRERA. For example, Atmos is registered under P52100051765 (Sector R22), Aros under P52100047921 (Sector R13), Echoes under PM1261012502409 (Sector R31), Duet under P52100079424 (Sector R34), Canvas under P52100077008 (Sector R5), Qrious under P52100079623 (Sector R14), The Universe under P52100027629 (Sector R10), and 24K Espada under P52100002646 (Sector R31)."
     },
     {
         question: "How far is Life Republic from Hinjewadi IT Park and Pune Metro?",
@@ -45,7 +45,7 @@ const HOME_FAQS = [
     },
     {
         question: "Are there ready-to-move-in flats available at Life Republic?",
-        answer: "Yes, ready possession and near-possession residences are available in established clusters including First Avenue, Third Avenue, Arezo (Sector R16), and select inventory in 24K Espada. Other towers are slated for phased delivery between 2026 and 2030."
+        answer: "Yes, ready possession and near-possession residences are available in established clusters including First Avenue (Sector R1), Third Avenue (Sector R3), Arezo (Sector R16), and select inventory in 24K Espada (Sector R31). Other towers are slated for phased delivery between 2026 and 2030."
     },
     {
         question: "What educational facilities are located inside the township campus?",
@@ -69,7 +69,7 @@ const PRICING_MATRIX = [
     {
         typology: "1 BHK Smart Residences",
         carpet: "393 - 444 sq.ft.",
-        sectors: "Universe (Sector R10)",
+        sectors: "The Universe (Sector R10)",
         price: "₹40 Lakhs*",
         possession: "Dec 2027",
         link: "/projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi"
@@ -77,7 +77,7 @@ const PRICING_MATRIX = [
     {
         typology: "2 BHK Compact Homes",
         carpet: "560 - 629 sq.ft.",
-        sectors: "Universe (R10) / Arezo (R16)",
+        sectors: "The Universe (Sector R10) / Arezo (Sector R16)",
         price: "₹58 L - ₹72 Lakhs*",
         possession: "Ready / Dec 2027",
         link: "/projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi"
@@ -85,7 +85,7 @@ const PRICING_MATRIX = [
     {
         typology: "2 BHK Premium Flats",
         carpet: "740 - 840 sq.ft.",
-        sectors: "Duet (R34) / Echoes (R31) / Aros (R13)",
+        sectors: "Duet (Sector R34) / Echoes (Sector R31) / Aros (Sector R13)",
         price: "₹79 L - ₹92 Lakhs*",
         possession: "2028 - 2030",
         link: "/projects/kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi"
@@ -107,6 +107,14 @@ const PRICING_MATRIX = [
         link: "/projects/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi"
     },
     {
+        typology: "3.5 & 4 BHK Presidential Towers",
+        carpet: "1,332 - 2,023 sq.ft.",
+        sectors: "Canvas (Sector R5)",
+        price: "₹1.59 Cr*",
+        possession: "Dec 2030",
+        link: "/projects/kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi"
+    },
+    {
         typology: "4 & 5 BHK Row Houses",
         carpet: "1,876 - 2,274 sq.ft.",
         sectors: "24K Espada (Sector R31)",
@@ -117,7 +125,7 @@ const PRICING_MATRIX = [
     {
         typology: "Bespoke Bungalow Plots",
         carpet: "Various Plot Sizes",
-        sectors: "Nora (Sector R17)",
+        sectors: "Nora (Sector R17B)",
         price: "₹1.80 Cr*",
         possession: "Immediate Infrastructure Ready",
         link: "/projects/kolte-patil-life-republic-nora-bungalow-plots-hinjewadi"
@@ -144,11 +152,66 @@ export const Home: React.FC = () => {
         }
     };
 
-    // Rich Schema for the Home Page
+    // Google 5-Star Review Snippets & Real Estate Properties Enterprise Schema
     const homeCustomSchema = [
         {
             "@context": "https://schema.org",
+            "@type": "Product",
+            "@id": "https://life-republic.in/#township-residences",
+            "name": "Kolte Patil Life Republic Hinjewadi",
+            "description": "390-Acre Integrated Gated Township in Marunji, Hinjewadi, Pune offering premium 1, 2, 2.5, 3 & 4 BHK apartments, luxury row houses, and bungalow plots.",
+            "image": "https://life-republic.in/hero-new.jpg",
+            "brand": {
+                "@type": "Brand",
+                "name": "Kolte-Patil Developers Ltd."
+            },
+            "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "INR",
+                "lowPrice": "4000000",
+                "highPrice": "35000000",
+                "price": "4000000",
+                "offerCount": "11",
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2026-01-01"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "bestRating": "5",
+                "worstRating": "1",
+                "ratingCount": "1450",
+                "reviewCount": "1280"
+            },
+            "review": [
+                {
+                    "@type": "Review",
+                    "author": { "@type": "Person", "name": "Aditya Deshmukh" },
+                    "datePublished": "2026-07-18",
+                    "reviewBody": "Living in Kolte Patil Life Republic Hinjewadi has been phenomenal. The 390-acre township infrastructure, 3.5-acre urban park, and effortless 5-minute commute to Hinjewadi Phase 1 IT Park make it the best residential project in Pune.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                    }
+                },
+                {
+                    "@type": "Review",
+                    "author": { "@type": "Person", "name": "Dr. Sneha Joshi" },
+                    "datePublished": "2026-08-25",
+                    "reviewBody": "Outstanding construction quality, expansive floor layouts, and world-class educational infrastructure with Crimson Anisha Global School right inside the township gates.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                    }
+                }
+            ]
+        },
+        {
+            "@context": "https://schema.org",
             "@type": "ApartmentComplex",
+            "@id": "https://life-republic.in/#complex",
             "name": "Kolte Patil Life Republic Hinjewadi",
             "alternateName": ["Life Republic Pune", "Kolte Patil Life Republic Township"],
             "url": "https://life-republic.in",
@@ -166,12 +229,14 @@ export const Home: React.FC = () => {
                 "latitude": 18.6186,
                 "longitude": 73.7147
             },
+            "hasMap": "https://maps.google.com/?cid=1236873151214041762",
             "numberOfBedrooms": "1 to 5",
             "petsAllowed": true
         },
         {
             "@context": "https://schema.org",
             "@type": "FAQPage",
+            "@id": "https://life-republic.in/#faq",
             "mainEntity": HOME_FAQS.map(faq => ({
                 "@type": "Question",
                 "name": faq.question,

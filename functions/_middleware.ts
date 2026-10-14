@@ -8,7 +8,6 @@ export const onRequest: PagesFunction = async (context) => {
     }
 
     // 1. Enterprise Edge URL Normalization (Prevent Duplicate Content in Google SERP)
-    // Avoid redirecting assets, images, API routes, or the root path
     const isStaticAsset = path.startsWith('/assets/') || 
                           path.startsWith('/images/') || 
                           path.startsWith('/fonts/') ||
@@ -17,7 +16,7 @@ export const onRequest: PagesFunction = async (context) => {
                           path.endsWith('.txt') ||
                           path.endsWith('.ico') ||
                           path.endsWith('.svg') ||
-                          path.endsWith('.png') ||
+                          path.endsWith('.png') || 
                           path.endsWith('.webp');
 
     if (!isStaticAsset && path !== '/') {
@@ -105,144 +104,23 @@ export const onRequest: PagesFunction = async (context) => {
     const contentType = headers.get('content-type') || '';
 
     // 8. Advanced Edge HTML Rewriting & Minification
+    // Preserves authentic SSG / SSR pre-rendered schema, canonical, and title without duplicate schema injection
     if (contentType.includes('text/html') && response.status === 200) {
         let html = await response.text();
 
-        // Edge HTML Minification
-        html = html.replace(/<!--[\s\S]*?-->/g, ''); // Remove comments
-        html = html.replace(/>\s+</g, '><'); // Remove inter-tag whitespace
-        html = html.replace(/\n/g, ''); // Flatten newlines
+        // Edge HTML Minification (Remove comments & inter-tag whitespace without breaking pre-rendered script tags)
+        html = html.replace(/<!--[\s\S]*?-->/g, '');
+        html = html.replace(/>\s+</g, '><');
 
-        let title = "Kolte Patil Life Republic Pune | Price, Projects, 2 & 3 BHK, Reviews";
-        let desc = "Explore Kolte Patil Life Republic Pune near Hinjewadi. Compare current projects, 2 & 3 BHK homes, prices, floor plans, amenities, RERA details, location, connectivity and resale options.";
-        let schemaHtml = "";
-
-        if (path.startsWith('/projects/')) {
-            const projectSlug = path.split('/').pop() || '';
-            const formattedName = projectSlug.charAt(0).toUpperCase() + projectSlug.slice(1).replace(/-/g, ' ');
-            title = `${formattedName} | Kolte Patil Life Republic`;
-            desc = `Explore ${formattedName} at Kolte Patil Life Republic Hinjewadi. View verified floor plans, latest pricing, RERA details, and book your VIP site visit.`;
-
-            const realEstateSchema = {
-                "@context": "https://schema.org",
-                "@graph": [
-                    {
-                        "@type": "ApartmentComplex",
-                        "@id": `https://${url.hostname}${path}#complex`,
-                        "name": `Life Republic ${formattedName}`,
-                        "description": `Premium luxury residences at Life Republic ${formattedName} near Hinjewadi IT Park Pune.`,
-                        "url": `https://${url.hostname}${path}`,
-                        "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "Survey No. 74, Marunji-Kasarsai Road, Hinjewadi",
-                            "addressLocality": "Pune",
-                            "addressRegion": "Maharashtra",
-                            "postalCode": "411057",
-                            "addressCountry": "IN"
-                        },
-                        "geo": {
-                            "@type": "GeoCoordinates",
-                            "latitude": 18.5913,
-                            "longitude": 73.7389
-                        }
-                    },
-                    {
-                        "@type": "RealEstateListing",
-                        "name": `Residences at ${formattedName} - Life Republic`,
-                        "url": `https://${url.hostname}${path}`,
-                        "datePosted": new Date().toISOString(),
-                        "seller": {
-                            "@type": "RealEstateAgent",
-                            "name": "PropSmart Realty (MahaRERA: A52100019166)"
-                        }
-                    }
-                ]
-            };
-            schemaHtml = `\n<script type="application/ld+json">\n${JSON.stringify(realEstateSchema)}\n</script>\n`;
-
-        } else if (path === '/') {
-            title = "Kolte Patil Life Republic Township | Hinjewadi Pune #1 Real Estate";
-            desc = "Ranked #1 Township in Pune. Explore Kolte Patil Life Republic, a 390-acre integrated smart township in Hinjewadi. 1, 2, 3, 4 BHK residences & custom villas.";
-            
-            const rootGraph = {
-                "@context": "https://schema.org",
-                "@graph": [
-                    {
-                        "@type": "WebSite",
-                        "@id": `https://${url.hostname}/#website`,
-                        "url": `https://${url.hostname}/`,
-                        "name": "Kolte Patil Life Republic",
-                        "description": "390-Acre Integrated Sustainable Township in Hinjewadi Pune.",
-                        "potentialAction": {
-                            "@type": "SearchAction",
-                            "target": `https://${url.hostname}/projects?q={search_term_string}`,
-                            "query-input": "required name=search_term_string"
-                        }
-                    },
-                    {
-                        "@type": "RealEstateAgent",
-                        "@id": `https://${url.hostname}/#organization`,
-                        "name": "Kolte Patil Life Republic",
-                        "url": `https://${url.hostname}`,
-                        "logo": `https://${url.hostname}/logo.webp`,
-                        "image": `https://${url.hostname}/images/home/master-layout-full.jpg`,
-                        "telephone": "+91-9370552525",
-                        "email": "propsmartrealty@gmail.com",
-                        "priceRange": "₹42 Lakhs - ₹5.50 Cr",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "Survey No. 74, Marunji-Kasarsai Road, Hinjewadi",
-                            "addressLocality": "Pune",
-                            "addressRegion": "Maharashtra",
-                            "postalCode": "411057",
-                            "addressCountry": "IN"
-                        },
-                        "geo": {
-                            "@type": "GeoCoordinates",
-                            "latitude": 18.5913,
-                            "longitude": 73.7389
-                        }
-                    }
-                ]
-            };
-            schemaHtml = `\n<script type="application/ld+json">\n${JSON.stringify(rootGraph)}\n</script>\n`;
-
-        } else if (path.startsWith('/search/')) {
-            const siloSlug = path.split('/').pop() || '';
-            const formattedSlug = siloSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-            title = `${formattedSlug} | Life Republic`;
-            desc = `Find ${formattedSlug} in Hinjewadi Pune at Kolte Patil Life Republic. 390-acre gated township, RERA verified. Book visit!`;
-        }
-
-        const ogImage = "https://life-republic.in/images/home/master-layout-full.jpg";
-        const currentUrl = `https://${url.hostname}${path === '/' ? '' : path}`;
-
-        const dynamicMeta = `
-            <title>${title}</title>
-            <meta name="description" content="${desc}" />
-            <meta property="og:title" content="${title}" />
-            <meta property="og:description" content="${desc}" />
-            <meta property="og:image" content="${ogImage}" />
-            <meta property="og:url" content="${currentUrl}" />
-            <meta property="og:type" content="website" />
-            <meta property="og:site_name" content="Kolte Patil Life Republic" />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="${title}" />
-            <meta name="twitter:description" content="${desc}" />
-            <meta name="twitter:image" content="${ogImage}" />
-            <link rel="canonical" href="${currentUrl}" />
+        // Edge verification headers injected cleanly into head
+        const edgeMeta = `
             <meta name="cf-edge-optimized" content="true" />
             <meta name="cf-edge-location" content="${city}, ${country}" />
             <meta name="nri-visitor" content="${isNRI ? 'true' : 'false'}" />
             <meta name="visitor-country" content="${country}" />
             <meta name="preferred-currency" content="${preferredCurrency}" />
-            ${schemaHtml}
         `;
-
-        // Clean duplicates
-        html = html.replace(/<title>.*?<\/title>/gi, '');
-        html = html.replace(/<meta name="description"[^>]*>/gi, '');
-        html = html.replace('</head>', `${dynamicMeta}</head>`);
+        html = html.replace('</head>', `${edgeMeta}</head>`);
 
         return new Response(html, {
             status: response.status,
