@@ -95,21 +95,54 @@ function loadServiceAccounts() {
     return accounts;
 }
 
-// 2. Load / Save Quota Tracker State
+// 2. Pacific Time Calibrations (Google Cloud Indexing Quotas reset at 00:00 Pacific Time = 12:30 PM IST)
+function getPacificDate() {
+    return new Intl.DateTimeFormat('en-CA', { 
+        timeZone: 'America/Los_Angeles', 
+        year: 'numeric', 
+        month: '2-digit', 
+        day: '2-digit' 
+    }).format(new Date());
+}
+
+function getNextPacificMidnight() {
+    const now = new Date();
+    const ptString = now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+    const ptDate = new Date(ptString);
+    const nextPtMidnight = new Date(ptDate.getFullYear(), ptDate.getMonth(), ptDate.getDate() + 1, 0, 0, 0, 0);
+    const msUntilReset = nextPtMidnight.getTime() - ptDate.getTime();
+    return new Date(now.getTime() + msUntilReset);
+}
+
+// 3. Load / Save Quota Tracker State
 function loadQuotaCache() {
-    const today = new Date().toISOString().slice(0, 10);
+    const todayPT = getPacificDate();
     try {
         if (fs.existsSync(CONFIG.cacheFile)) {
             const data = JSON.parse(fs.readFileSync(CONFIG.cacheFile, 'utf-8'));
-            if (data.date === today) {
+            const cachePT = data.pacificDate || data.date;
+            if (cachePT === todayPT) {
+                data.pacificDate = todayPT;
+                data.date = todayPT;
                 if (!data.accountStats) data.accountStats = {};
                 if (!data.successfulUrls) data.successfulUrls = [];
                 if (!data.failedUrls) data.failedUrls = [];
                 return data;
+            } else {
+                console.log(`🌅 Pacific Midnight Quota Reset Detected: ${cachePT} -> ${todayPT}`);
+                console.log(`   Refreshing daily quota pool. Preserving ${data.successfulUrls?.length || 0} indexed URLs.`);
+                return {
+                    pacificDate: todayPT,
+                    date: todayPT,
+                    submittedCount: 0,
+                    accountStats: {},
+                    successfulUrls: data.successfulUrls || [],
+                    failedUrls: []
+                };
             }
         }
     } catch (_) {}
-    return { date: today, submittedCount: 0, accountStats: {}, successfulUrls: [], failedUrls: [] };
+    return { pacificDate: todayPT, date: todayPT, submittedCount: 0, accountStats: {}, successfulUrls: [], failedUrls: [] };
 }
 
 function saveQuotaCache(cache) {
@@ -176,16 +209,26 @@ async function main() {
     const poolCapacity = rawAccounts.length * 200;
     console.log(`🎯 Total Pool Daily Capacity: ~${poolCapacity.toLocaleString()} URLs/day (${rawAccounts.length} × 200/day)`);
 
+    const todayPT = getPacificDate();
+    const nextReset = getNextPacificMidnight();
+    const msUntilReset = nextReset.getTime() - Date.now();
+    const hoursUntilReset = (msUntilReset / (1000 * 60 * 60)).toFixed(1);
+    const istResetStr = nextReset.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', hour12: true });
+
     // Initialize authenticated clients
     const clients = [];
     for (let i = 0; i < rawAccounts.length; i++) {
         const acc = rawAccounts[i];
-        const stat = cache.accountStats[acc.clientEmail] || { submitted: 0, exhausted: false, exhaustedAt: 0 };
-        // If more than 20 minutes have elapsed since it was marked exhausted (or timestamp was unset), unmark it to probe for replenishment
-        if (stat.exhausted && (!stat.exhaustedAt || (Date.now() - stat.exhaustedAt > 20 * 60 * 1000))) {
+        let stat = cache.accountStats[acc.clientEmail] || { submitted: 0, exhausted: false, exhaustedAt: 0, exhaustedForDate: null };
+        
+        // If marked exhausted on a previous Pacific Day, automatically replenish
+        if (stat.exhausted && stat.exhaustedForDate && stat.exhaustedForDate !== todayPT) {
+            console.log(`✨ Replenishing quota for ${acc.clientEmail} (New Pacific Day: ${todayPT})`);
             stat.exhausted = false;
-            stat.submitted = 0; // reset counter on new probe cycle
+            stat.submitted = 0;
+            stat.exhaustedForDate = null;
         }
+
         cache.accountStats[acc.clientEmail] = stat;
 
         const jwt = new JWT({
@@ -201,13 +244,21 @@ async function main() {
             authorized: false
         });
 
-        const statusTag = stat.exhausted ? '🛑 Exhausted today' : `⚡ Active (${stat.submitted}/200)`;
+        const statusTag = stat.exhausted 
+            ? `🛑 Exhausted for PT ${stat.exhaustedForDate || todayPT} (Resets at ${istResetStr} IST)` 
+            : `⚡ Active (${stat.submitted}/200)`;
         console.log(`  [${i + 1}] ${acc.projectId} (${acc.clientEmail}) → ${statusTag}`);
     }
 
-    console.log(`\n📊 Total Submitted Today (${cache.date}): ${cache.submittedCount}`);
+    console.log(`\n📊 Total Submitted Today (PT ${cache.pacificDate || todayPT}): ${cache.submittedCount}`);
     console.log(`📡 Sitemaps Architecture: ${allUrls.length} total URLs`);
-    console.log(`📋 URLs Pending Submission: ${remainingUrls.length}\n`);
+    console.log(`📋 URLs Pending Submission: ${remainingUrls.length}`);
+    console.log(`⏳ Next Google Quota Reset: ${istResetStr} IST (in ~${hoursUntilReset}h)\n`);
+
+    if (process.argv.includes('--status')) {
+        console.log('🔍 Status query completed.');
+        return;
+    }
 
     if (remainingUrls.length === 0) {
         console.log('✨ All sitemap URLs have already been indexed today!');
@@ -217,7 +268,8 @@ async function main() {
     // Helper to find next non-exhausted account
     let currentAccountIndex = clients.findIndex(c => !c.stat.exhausted);
     if (currentAccountIndex === -1) {
-        console.log('🛑 All service accounts in the pool are currently exhausted for today.');
+        console.log(`🛑 All service accounts in the pool are currently exhausted for today (Pacific Date ${todayPT}).`);
+        console.log(`⏳ Sleeping until next Google Cloud quota reset at ${istResetStr} IST (in ~${hoursUntilReset}h).`);
         printPoolScalingHelp(rawAccounts.length, poolCapacity);
         return;
     }
@@ -274,6 +326,8 @@ async function main() {
                         console.log(`\n🔄 [${activeAcc.projectId}] Daily quota cap reached (200/day).`);
                         activeAcc.stat.exhausted = true;
                         activeAcc.stat.exhaustedAt = Date.now();
+                        activeAcc.stat.exhaustedForDate = todayPT;
+                        activeAcc.stat.nextResetIso = nextReset.toISOString();
                         saveQuotaCache(cache);
 
                         // Rotate to next available account in pool

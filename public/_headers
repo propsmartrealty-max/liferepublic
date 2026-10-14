@@ -77,6 +77,13 @@
   Cache-Control: public, max-age=3600, stale-while-revalidate=86400
   Cache-Tag: lr-robots, lr-seo
   Content-Type: text/plain; charset=UTF-8
+  Access-Control-Allow-Origin: *
+
+/*.txt
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Cache-Tag: lr-txt, lr-seo
+  Content-Type: text/plain; charset=UTF-8
+  Access-Control-Allow-Origin: *
 
 # Generative Engine Optimization (llms.txt & llms-full.txt)
 /llms*.txt
