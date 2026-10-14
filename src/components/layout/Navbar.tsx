@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence, useMotionValue, useSpring } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
     ChevronDown, 
     Search, 
@@ -140,39 +140,15 @@ const MagneticNavItem: React.FC<{
     onMouseEnter?: () => void;
     onMouseLeave?: () => void;
 }> = ({ title, isActive, hasDropdown, isOpen, onClick, onMouseEnter, onMouseLeave }) => {
-    const ref = useRef<HTMLDivElement>(null);
-    const x = useMotionValue(0);
-    const y = useMotionValue(0);
-    const springX = useSpring(x, { stiffness: 350, damping: 25 });
-    const springY = useSpring(y, { stiffness: 350, damping: 25 });
-
-    const onMouseMove = (e: React.MouseEvent) => {
-        const rect = ref.current?.getBoundingClientRect();
-        if (!rect) return;
-        const dx = (e.clientX - rect.left - rect.width / 2) * 0.2;
-        const dy = (e.clientY - rect.top - rect.height / 2) * 0.2;
-        x.set(dx);
-        y.set(dy);
-    };
-
-    const handleMouseLeave = () => {
-        x.set(0);
-        y.set(0);
-        onMouseLeave?.();
-    };
-
     return (
         <div
-            ref={ref}
-            onMouseMove={onMouseMove}
             onMouseEnter={onMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseLeave={onMouseLeave}
             className="relative h-full flex items-center"
         >
-            <motion.button
+            <button
                 onClick={onClick}
-                style={{ x: springX, y: springY }}
-                className={`relative px-4 py-2.5 rounded-full flex items-center gap-1.5 transition-all duration-300 cursor-interactive select-none ${
+                className={`relative px-4 py-2.5 rounded-full flex items-center gap-1.5 transition-all duration-200 hover:-translate-y-0.5 cursor-interactive select-none ${
                     isOpen ? 'bg-white/10 text-white' : isActive ? 'text-white' : 'text-white/80 hover:text-white'
                 }`}
             >
@@ -198,7 +174,7 @@ const MagneticNavItem: React.FC<{
                         transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                 )}
-            </motion.button>
+            </button>
         </div>
     );
 };
