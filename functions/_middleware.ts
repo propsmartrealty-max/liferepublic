@@ -102,16 +102,9 @@ export const onRequest: PagesFunction = async (context) => {
 
     const contentType = headers.get('content-type') || '';
 
-    // 8. Advanced Edge HTML Rewriting & Minification
-    // Preserves authentic SSG / SSR pre-rendered schema, canonical, and title without duplicate schema injection
+    // 8. Streaming Edge HTML Rewriting
+    // Preserves authentic SSG / SSR pre-rendered schema, canonical, and title with zero-latency streaming
     if (contentType.includes('text/html') && response.status === 200) {
-        let html = await response.text();
-
-        // Edge HTML Minification (Remove comments & inter-tag whitespace without breaking pre-rendered script tags)
-        html = html.replace(/<!--[\s\S]*?-->/g, '');
-        html = html.replace(/>\s+</g, '><');
-
-        // Edge verification headers injected cleanly into head
         const edgeMeta = `
             <meta name="cf-edge-optimized" content="true" />
             <meta name="cf-edge-location" content="${city}, ${country}" />
@@ -119,13 +112,18 @@ export const onRequest: PagesFunction = async (context) => {
             <meta name="visitor-country" content="${country}" />
             <meta name="preferred-currency" content="${preferredCurrency}" />
         `;
-        html = html.replace('</head>', `${edgeMeta}</head>`);
 
-        return new Response(html, {
+        const rewriter = new HTMLRewriter().on('head', {
+            element(el) {
+                el.append(edgeMeta, { html: true });
+            }
+        });
+
+        return rewriter.transform(new Response(response.body, {
             status: response.status,
             statusText: response.statusText,
             headers
-        });
+        }));
     }
 
     return new Response(response.body, {
