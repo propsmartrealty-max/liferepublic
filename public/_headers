@@ -15,8 +15,6 @@
   # Content Security Policy (Google & Cloudflare hardened)
   Content-Security-Policy: default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; font-src 'self' https: data:; connect-src 'self' https: wss:; media-src 'self' https: data: blob:; worker-src 'self' blob:; frame-src 'self' https:;
   
-  # 103 Early Hints Preconnect Directives
-  Link: <https://fonts.googleapis.com>; rel=preconnect; crossorigin, <https://fonts.gstatic.com>; rel=preconnect; crossorigin
   
   # Default HTML Edge Cache Control (Instant edge delivery + background revalidation)
   Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400

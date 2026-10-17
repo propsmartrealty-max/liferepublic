@@ -45,8 +45,7 @@ export const onRequest: PagesFunction = async (context) => {
     headers.set('Content-Security-Policy', "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; font-src 'self' https: data:; connect-src 'self' https: wss:; frame-src 'self' https:;");
     headers.set('Permissions-Policy', 'accelerometer=(), camera=(), geolocation=(self), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()');
 
-    // 4. Enterprise 103 Early Hints Preconnect Directives
-    headers.set('Link', '<https://fonts.googleapis.com>; rel=preconnect; crossorigin, <https://fonts.gstatic.com>; rel=preconnect; crossorigin');
+
 
     // 5. Dynamic Cache-Tag Allocation (Enterprise Targeted Edge Purging)
     let routeTag = 'lr-core';

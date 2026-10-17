@@ -268,16 +268,14 @@ export const Navbar: React.FC = () => {
                             className="flex items-center gap-3 cursor-interactive group"
                             aria-label="Kolte-Patil Life Republic Homepage"
                         >
-                            <motion.img
+                            <img
                                 src="/logo.webp"
                                 alt="Kolte-Patil Life Republic"
                                 width="180"
                                 height="58"
                                 loading="eager"
                                 fetchPriority="high"
-                                animate={{ height: scrolled ? 48 : 58 }}
-                                transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
-                                className="object-contain"
+                                className={`object-contain transition-all duration-300 ${scrolled ? 'h-12' : 'h-14'}`}
                                 style={{ mixBlendMode: 'lighten' }}
                             />
                         </Link>

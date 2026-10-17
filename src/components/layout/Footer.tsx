@@ -268,7 +268,7 @@ export const Footer: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-strong text-xs text-gray-400 text-center leading-relaxed">
+                <div className="mt-8 pt-8 border-t border-strong text-xs text-gray-600 text-center leading-relaxed">
                     Disclaimer: This website is for informational purposes only and does not constitute an offer or solicitation. The visual representations, including images and 3D walkthroughs, are artistic impressions and may differ from the actual project. Pricing and specifications are subject to change without notice. By submitting your contact details, you authorize our partners to contact you via phone, SMS, or email, overriding any NDNC registration.
                 </div>
             </div>
