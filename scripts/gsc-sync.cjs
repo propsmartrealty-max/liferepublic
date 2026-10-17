@@ -27,8 +27,6 @@ const SITEMAPS = [
     'https://life-republic.in/sitemap-silos-5.xml',
     'https://life-republic.in/sitemap-silos-6.xml',
     'https://life-republic.in/sitemap-silos-7.xml',
-    'https://life-republic.in/google-property-feed.xml',
-    'https://life-republic.in/google-shopping-feed.xml',
     'https://life-republic.in/feed.xml',
     'https://life-republic.in/rss.xml'
 ];
