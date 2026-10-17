@@ -262,6 +262,7 @@ export const Home: React.FC = () => {
             <header className="relative min-h-[92vh] flex items-center justify-center overflow-hidden px-4 md:px-8 border-b border-white/10">
                 <div className="absolute inset-0 z-0">
                     <picture>
+                        <source media="(max-width: 640px)" srcSet="/hero-new-mobile.avif" type="image/avif" />
                         <source media="(max-width: 640px)" srcSet="/hero-new-mobile.webp" type="image/webp" />
                         <source srcSet="/hero-new.webp" type="image/webp" />
                         <img
@@ -270,8 +271,8 @@ export const Home: React.FC = () => {
                             className="w-full h-full object-cover opacity-60 scale-100"
                             loading="eager"
                             fetchPriority="high"
-                            width="1000"
-                            height="563"
+                            width="480"
+                            height="270"
                         />
                     </picture>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-black/70" />
@@ -538,7 +539,7 @@ export const Home: React.FC = () => {
                     </table>
                 </div>
 
-                <p className="text-xs text-gray-500 mt-4 text-center">
+                <p className="text-xs text-gray-400 mt-4 text-center">
                     *Disclaimer: Prices mentioned are indicative starting quotes, subject to change without prior notice. Government taxes, stamp duty, and registration charges are extra as applicable.
                 </p>
             </section>

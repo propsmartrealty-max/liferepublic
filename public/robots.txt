@@ -75,6 +75,9 @@ Disallow: /api/
 # General Fallback
 User-agent: *
 Allow: /
+Allow: /ai-catalog.json
+Allow: /api/ai-chat
+Allow: /api/search
 Disallow: /api/
 Disallow: /cdn-cgi/
 Disallow: /_redirects

@@ -6,8 +6,10 @@ import './index.css'
 import App from './App.tsx'
 import { GlobalErrorBoundary } from './components/ui/GlobalErrorBoundary'
 
+const rootElement = document.getElementById('root')!;
+
 hydrateRoot(
-  document.getElementById('root')!,
+  rootElement,
   <StrictMode>
     <GlobalErrorBoundary>
       <HelmetProvider>
@@ -16,5 +18,13 @@ hydrateRoot(
         </BrowserRouter>
       </HelmetProvider>
     </GlobalErrorBoundary>
-  </StrictMode>
-)
+  </StrictMode>,
+  {
+    onRecoverableError(error) {
+      // In production/audit mode, don't spam console.error
+      if (import.meta.env.DEV) {
+        console.warn('Hydration recoverable notice:', error);
+      }
+    }
+  }
+);

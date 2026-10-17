@@ -223,44 +223,44 @@ export const Footer: React.FC = () => {
                 </div>
                 
                 
-                {/* Massive SEO Silo - Compacted */}
-                <div className="border-t border-strong pt-6 pb-2 mt-8 text-[10px] text-text-muted">
-                    <div className="flex flex-col gap-4">
+                {/* Massive SEO Silo - Compacted with Accessible Touch Targets */}
+                <div className="border-t border-strong pt-6 pb-2 mt-8 text-xs text-text-muted">
+                    <div className="flex flex-col gap-6">
                         <div>
-                            <span className="font-bold text-[#202124] mr-2 uppercase tracking-widest">Configurations:</span>
-                            <div className="inline-flex flex-wrap gap-x-3 gap-y-1">
+                            <span className="font-bold text-[#202124] mr-2 uppercase tracking-widest block sm:inline mb-2 sm:mb-0">Configurations:</span>
+                            <div className="inline-flex flex-wrap gap-x-2 gap-y-2 items-center">
                                 {seoClusters.configurations.map((item, idx) => (
-                                    <span key={item.slug} className="flex items-center gap-3">
-                                        <Link to={`/insights/${item.slug}`} className="hover:text-[#202124] hover:rainbow-text-clip font-bold transition-colors">{item.name}</Link>
-                                        {idx !== seoClusters.configurations.length - 1 && <span className="text-strong">|</span>}
+                                    <span key={item.slug} className="inline-flex items-center">
+                                        <Link to={`/insights/${item.slug}`} className="inline-block py-2 px-1.5 text-xs text-[#3c4043] hover:text-[#202124] hover:rainbow-text-clip font-semibold transition-colors">{item.name}</Link>
+                                        {idx !== seoClusters.configurations.length - 1 && <span className="text-gray-300 mx-1">|</span>}
                                     </span>
                                 ))}
                             </div>
                         </div>
                         <div>
-                            <span className="font-bold text-[#202124] mr-2 uppercase tracking-widest">Locations:</span>
-                            <div className="inline-flex flex-wrap gap-x-3 gap-y-1">
-                                {seoClusters.locations.map((item, idx) => (
-                                    <span key={item.slug} className="flex items-center gap-3">
-                                        <Link to={`/insights/${item.slug}`} className="hover:text-[#202124] hover:rainbow-text-clip font-bold transition-colors">{item.name}</Link>
-                                        <span className="text-strong">|</span>
+                            <span className="font-bold text-[#202124] mr-2 uppercase tracking-widest block sm:inline mb-2 sm:mb-0">Locations:</span>
+                            <div className="inline-flex flex-wrap gap-x-2 gap-y-2 items-center">
+                                {seoClusters.locations.map((item) => (
+                                    <span key={item.slug} className="inline-flex items-center">
+                                        <Link to={`/insights/${item.slug}`} className="inline-block py-2 px-1.5 text-xs text-[#3c4043] hover:text-[#202124] hover:rainbow-text-clip font-semibold transition-colors">{item.name}</Link>
+                                        <span className="text-gray-300 mx-1">|</span>
                                     </span>
                                 ))}
                                 {pseoSlugs.slice(0, 15).map((slug, idx) => (
-                                    <span key={slug} className="flex items-center gap-3">
-                                        <Link to={`/location/${slug}`} className="hover:text-[#202124] hover:rainbow-text-clip font-bold transition-colors">{pseoRegistry[slug].title.split('|')[0].trim()}</Link>
-                                        {idx !== 14 && <span className="text-strong">|</span>}
+                                    <span key={slug} className="inline-flex items-center">
+                                        <Link to={`/location/${slug}`} className="inline-block py-2 px-1.5 text-xs text-[#3c4043] hover:text-[#202124] hover:rainbow-text-clip font-semibold transition-colors">{pseoRegistry[slug].title.split('|')[0].trim()}</Link>
+                                        {idx !== 14 && <span className="text-gray-300 mx-1">|</span>}
                                     </span>
                                 ))}
                             </div>
                         </div>
                         <div>
-                            <span className="font-bold text-[#202124] mr-2 uppercase tracking-widest">Themes:</span>
-                            <div className="inline-flex flex-wrap gap-x-3 gap-y-1">
+                            <span className="font-bold text-[#202124] mr-2 uppercase tracking-widest block sm:inline mb-2 sm:mb-0">Themes:</span>
+                            <div className="inline-flex flex-wrap gap-x-2 gap-y-2 items-center">
                                 {seoClusters.themes.map((item, idx) => (
-                                    <span key={item.slug} className="flex items-center gap-3">
-                                        <Link to={`/insights/${item.slug}`} className="hover:text-[#202124] hover:rainbow-text-clip font-bold transition-colors">{item.name}</Link>
-                                        {idx !== seoClusters.themes.length - 1 && <span className="text-strong">|</span>}
+                                    <span key={item.slug} className="inline-flex items-center">
+                                        <Link to={`/insights/${item.slug}`} className="inline-block py-2 px-1.5 text-xs text-[#3c4043] hover:text-[#202124] hover:rainbow-text-clip font-semibold transition-colors">{item.name}</Link>
+                                        {idx !== seoClusters.themes.length - 1 && <span className="text-gray-300 mx-1">|</span>}
                                     </span>
                                 ))}
                             </div>
@@ -268,7 +268,7 @@ export const Footer: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-strong text-[9px] text-text-muted text-center leading-relaxed">
+                <div className="mt-8 pt-8 border-t border-strong text-xs text-gray-400 text-center leading-relaxed">
                     Disclaimer: This website is for informational purposes only and does not constitute an offer or solicitation. The visual representations, including images and 3D walkthroughs, are artistic impressions and may differ from the actual project. Pricing and specifications are subject to change without notice. By submitting your contact details, you authorize our partners to contact you via phone, SMS, or email, overriding any NDNC registration.
                 </div>
             </div>

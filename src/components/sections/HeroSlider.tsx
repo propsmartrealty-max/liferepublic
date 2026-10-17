@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Sparkles } from 'lucide-react';
 import { MorphingBackground } from '../ui/MorphingBackground';
 
 export const HeroSlider = () => {
@@ -13,7 +14,7 @@ export const HeroSlider = () => {
                     transition={{ duration: 0.5 }}
                     className="mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E8F0FE] rainbow-text-clip font-bold text-sm font-medium"
                 >
-                    <span className="material-symbol text-lg">new_releases</span>
+                    <Sparkles className="w-4 h-4 text-blue-600" />
                     New Sector Launch
                 </motion.div>
 

@@ -273,6 +273,8 @@ export const Navbar: React.FC = () => {
                                 alt="Kolte-Patil Life Republic"
                                 width="180"
                                 height="58"
+                                loading="eager"
+                                fetchPriority="high"
                                 animate={{ height: scrolled ? 48 : 58 }}
                                 transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
                                 className="object-contain"

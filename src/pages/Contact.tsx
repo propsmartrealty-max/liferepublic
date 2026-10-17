@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, MapPin } from 'lucide-react';
+import { Phone, MapPin, Navigation, CheckCircle2, ArrowRight } from 'lucide-react';
 import { SEO } from '../components/seo/SEO';
 import { api } from '../services/api';
 
@@ -122,7 +122,7 @@ export const Contact: React.FC = () => {
                                     rel="noopener noreferrer"
                                     className="flex items-center justify-center gap-3 w-full bg-[#1A73E8] hover:bg-[#1557B0] text-white py-4 rounded-xl font-bold transition-colors shadow-lg"
                                 >
-                                    <span className="material-symbol">directions</span>
+                                    <Navigation className="w-5 h-5" />
                                     Get Directions to Sales Office
                                 </a>
                             </div>
@@ -187,7 +187,7 @@ const ContactForm: React.FC = () => {
         return (
             <div className="flex flex-col items-center justify-center py-20 px-8 text-center bg-[#0F1115] rounded-[2rem] border border-white/10 shadow-2xl">
                 <div className="w-20 h-20 bg-accent/20 text-accent rounded-full flex items-center justify-center mb-6">
-                    <span className="material-symbol text-4xl">check_circle</span>
+                    <CheckCircle2 className="w-10 h-10 text-emerald-400" />
                 </div>
                 <h3 className="text-3xl font-sans font-bold text-white mb-2">Request Verified</h3>
                 <p className="text-white/50 text-sm">Transferring you to our secure WhatsApp concierge...</p>
@@ -287,7 +287,7 @@ const ContactForm: React.FC = () => {
                 className="relative z-10 w-full py-4 rounded-xl text-xs font-bold tracking-widest uppercase shadow-2xl flex items-center justify-center gap-3 bg-white text-black hover:bg-accent hover:text-white transition-all duration-500 disabled:opacity-50 group"
             >
                 {loading ? 'Authenticating...' : 'Send Secure Request'}
-                {!loading && <span className="material-symbol group-hover:translate-x-1 transition-transform text-sm">arrow_forward</span>}
+                {!loading && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
             </button>
         </form>
     );

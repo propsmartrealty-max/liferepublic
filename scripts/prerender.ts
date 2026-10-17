@@ -146,11 +146,11 @@ async function prerender() {
                 ...schemas
             ].join('\n');
 
-            // Strip extracted tags from the body to prevent hydration mismatch
+            // Strip extracted head tags that belong outside the root
             cleanAppHtml = cleanAppHtml.replace(/<title[^>]*>.*?<\/title>/gi, '');
             cleanAppHtml = cleanAppHtml.replace(/<meta[^>]*>/gi, '');
             cleanAppHtml = cleanAppHtml.replace(/<link[^>]*(data-rh="true"|rel=["']canonical["']|rel=["']alternate["']|rel=["']preload["'])[^>]*>/gi, '');
-            cleanAppHtml = cleanAppHtml.replace(/<script\s+[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, '');
+            // Retain JSON-LD scripts in cleanAppHtml so client React hydrateRoot matches the vDOM perfectly without Error #418
 
             const finalHead = (headHtml || '') + '\n' + extractedHeadTags;
 

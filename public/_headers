@@ -50,6 +50,13 @@
   Cache-Tag: lr-media, lr-images
   Access-Control-Allow-Origin: *
 
+/*.avif
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
+  CDN-Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
+  Cloudflare-CDN-Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
+  Cache-Tag: lr-media, lr-images
+  Access-Control-Allow-Origin: *
+
 /*.jpg
   Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
   CDN-Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
