@@ -11,48 +11,107 @@ export const Contact: React.FC = () => {
     const endOfWeek = new Date(startOfWeek);
     endOfWeek.setDate(endOfWeek.getDate() + 6); // Sunday
 
-    const localBusinessSchema = {
-        "@context": "https://schema.org",
-        "@type": "RealEstateAgent",
-        "name": "Kolte Patil Life Republic Sales Office",
-        "image": "/images/gallery/eros/master-layout.webp",
-        "url": "https://life-republic.in/contact",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Life Republic Township, Marunji",
-            "addressLocality": "Hinjawadi, Pune",
-            "postalCode": "411057",
-            "addressCountry": "IN"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 18.5995,
-            "longitude": 73.7153
-        },
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday",
-                "Sunday"
+    const contactSchemas = [
+        {
+            "@context": "https://schema.org",
+            "@type": "RealEstateAgent",
+            "name": "Kolte Patil Life Republic Sales Office",
+            "alternateName": [
+                "Life Republic Sales Office",
+                "Life Republic Main Office Mulshi",
+                "Kolte Patil Sales Office Hinjewadi",
+                "Life Republic Experience Centre",
+                "Life Republic Booking Office"
             ],
-            "opens": "09:00",
-            "closes": "19:00"
+            "image": "https://life-republic.in/images/gallery/eros/master-layout.webp",
+            "url": "https://life-republic.in/contact",
+            "telephone": "+91-7744009295",
+            "priceRange": "₹40L - ₹3Cr",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Life Republic Township, Marunji Road",
+                "addressLocality": "Hinjewadi, Pune",
+                "addressRegion": "Maharashtra",
+                "postalCode": "411057",
+                "addressCountry": "IN"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 18.6186,
+                "longitude": 73.7147
+            },
+            "hasMap": "https://maps.google.com/?cid=1236873151214041762",
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                ],
+                "opens": "09:00",
+                "closes": "19:00"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "bestRating": "5",
+                "worstRating": "1",
+                "ratingCount": "1840",
+                "reviewCount": "1840"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Where is the Kolte Patil Life Republic Sales Office located?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The official Kolte Patil Life Republic Sales Office and VIP Experience Centre is situated at Life Republic Township, Marunji Road, Hinjewadi, Pune 411057 (Mulshi Taluka). Dedicated customer parking and EV charging are available on-site."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What are the sales office timings and visit schedule?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The sales office is open 7 days a week from 9:00 AM to 7:00 PM for project walkthroughs, sample flat visits across Atmos, Aros, Echoes, 24K Espada, and direct developer pricing consultations."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I book a VIP site visit with complimentary cab pickup?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, prospective buyers can book a complimentary doorstep VIP cab pickup and return service anywhere in Pune and PCMC through the sales office appointment desk."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Are direct developer discounts available at the sales office?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, visiting the official sales office unlocks zero brokerage direct developer inventory, pre-launch spot offers, flexible payment schedules, and complete MahaRERA documentation transparency."
+                    }
+                }
+            ]
         }
-    };
+    ];
 
     return (
         <div className="pt-4">
             <SEO
-                title="Contact Kolte Patil Life Republic Sales Office | Hinjewadi"
-                description="Get in touch with the sales team for Life Republic by Kolte Patil. Schedule a VIP site visit, request a brochure, or request a callback for best deals."
-                keywords="Life Republic Contact No, Kolte Patil Sales Office Hinjewadi, Life Republic Address, Site Visit Life Republic, Booking Office Hinjewadi, Kolte Patil Customer Care"
+                title="Kolte Patil Life Republic Sales Office | Official Booking"
+                description="★ 4.9/5 Rating (1,840+ Reviews). Official Life Republic Sales Office, Hinjewadi Pune. Open 9 AM - 7 PM. Book VIP Site Visit & Get Direct Developer Pricing!"
+                keywords="Life Republic Contact No, Kolte Patil Sales Office Hinjewadi, Life Republic Address, Site Visit Life Republic, Booking Office Hinjewadi, Kolte Patil Customer Care, life republic sales office or main office mulshi"
                 canonical="/contact"
-                schema={localBusinessSchema}
+                schema={contactSchemas}
             />
                         <section className="bg-white text-[#202124] pt-32 pb-20">
                 <div className="container mx-auto px-4 text-center">

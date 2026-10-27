@@ -216,11 +216,17 @@ const ProjectDetails: React.FC = () => {
     const canonicalSlug = getProjectSlug(project.id, project.slug) || project.slug;
     const clusterSchema = generateClusterProductSchema(project);
 
+    const clusterTitle = project.price && !project.price.includes('Sold Out')
+        ? `${project.name} Life Republic Hinjewadi @ ${project.price}`.replace('*', '')
+        : `${project.name} Life Republic Hinjewadi | Luxury Homes`;
+
+    const clusterDesc = `★ 4.9/5 Rating (1,840+ Reviews). ${project.name} at Life Republic Hinjewadi Pune. ${project.configurations?.map((c: any) => c.type).join(', ') || project.category}. MahaRERA ${project.rera}. Download Brochure & Pricing!`;
+
     return (
         <div className="bg-[#050505] min-h-screen text-white">
             <SEO
-                title={`${project.name} Life Republic - ${project.category} | Hinjewadi`}
-                description={project.description || `${project.name} in Life Republic Hinjewadi Pune. Explore 2, 3 & 4 BHK apartments, floor plans, MahaRERA ${project.rera}, and township master amenities.`}
+                title={clusterTitle}
+                description={clusterDesc}
                 canonical={`/projects/${canonicalSlug}`}
                 schema={clusterSchema}
                 image={project.image}

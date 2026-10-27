@@ -137,15 +137,19 @@ export const Footer: React.FC = () => {
 
                     {/* Contact Column (Span 3) */}
                     <div className="lg:col-span-3">
-                        <h3 className="text-lg font-sans font-bold mb-8 text-[#202124] font-bold">Visit Us</h3>
+                        <h3 className="text-lg font-sans font-bold mb-8 text-[#202124]">Sales Office & Experience Centre</h3>
                         <div className="space-y-6">
                             <div className="flex items-start gap-4 group">
                                 <div className="p-3 rounded-2xl bg-transparent border-2 border-strong group-hover:bg-accent/20 transition-colors">
                                     <MapPin size={20} className="rainbow-text-clip font-bold" />
                                 </div>
                                 <div className="space-y-1">
-                                    <p className="text-[#202124] font-medium">Site Address</p>
-                                    <p className="text-sm text-text-muted hover:text-[#202124]">Marunji, Hinjewadi, Pune, Maharashtra 411057</p>
+                                    <p className="text-[#202124] font-medium">Official Sales Office</p>
+                                    <p className="text-sm text-gray-700">Life Republic Township, Marunji Road, Hinjewadi, Pune 411057 (Mulshi)</p>
+                                    <p className="text-xs font-semibold text-emerald-700 mt-1">Open Daily: 9:00 AM – 7:00 PM</p>
+                                    <Link to="/contact" className="inline-block text-xs font-bold text-accent hover:underline mt-1">
+                                        Book VIP Visit & Directions →
+                                    </Link>
                                 </div>
                             </div>
 
@@ -154,12 +158,12 @@ export const Footer: React.FC = () => {
                                     <Phone size={20} className="rainbow-text-clip font-bold" />
                                 </div>
                                 <div>
-                                    <p className="text-[#202124] font-medium">Get in touch</p>
+                                    <p className="text-[#202124] font-medium">Sales Desk & Site Visits</p>
                                     <button 
                                         onClick={() => setIsEnquiryOpen(true)}
-                                        className="text-sm text-text-muted hover:text-[#202124] hover:text-[#202124] font-bold transition-colors cursor-pointer"
+                                        className="text-sm text-text-muted hover:text-[#202124] font-bold transition-colors cursor-pointer"
                                     >
-                                        Request Callback
+                                        Schedule Free VIP Cab & Visit
                                     </button>
                                 </div>
                             </div>

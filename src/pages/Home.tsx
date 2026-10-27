@@ -28,6 +28,10 @@ const HOME_FAQS = [
         answer: "Kolte Patil Life Republic is a 390-acre integrated gated township developed by Kolte-Patil Developers Ltd. in Marunji, Hinjewadi, Pune (PIN 411057). Located just 4.5 km from Rajiv Gandhi Infotech Park Phase 1, the township features over 20,000 residents, operational schools, commercial high streets, and 11 distinct residential sectors."
     },
     {
+        question: "Where is the Kolte Patil Life Republic Sales Office and what are its timings?",
+        answer: "The official Kolte Patil Life Republic Sales Office and VIP Experience Centre is located at Life Republic Township, Marunji Road, Hinjewadi, Pune 411057 (Mulshi Taluka). The sales gallery is open daily 7 days a week from 9:00 AM to 7:00 PM for project walkthroughs, sample flat visits, and direct developer booking assistance."
+    },
+    {
         question: "What are the starting prices for flats in Life Republic Hinjewadi?",
         answer: "Prices in Kolte Patil Life Republic start at ₹40 Lakhs* for smart 1 BHK apartments in Sector R10 (The Universe). Premium 2 BHK apartments start from ₹79 Lakhs* in Duet (Sector R34) and ₹92 Lakhs* in Aros (Sector R13). Luxury 3 BHK homes in Atmos (Sector R22) start from ₹1.15 Cr*, 3 & 4 BHK presidential suites in Canvas (Sector R5) start from ₹1.59 Cr*, while ultra-luxury 4 & 5 BHK row houses in 24K Espada (Sector R31) start from ₹3.40 Cr*."
     },
@@ -253,7 +257,7 @@ export const Home: React.FC = () => {
             <SEO
                 title="Kolte Patil Life Republic Hinjewadi | 1, 2, 3 BHK @ ₹40L*"
                 description="★ 4.9/5 Rating (1,840+ Reviews). 390-Acre Township in Hinjewadi Pune. Luxury 1, 2, 3 BHK & Villas From ₹40L*. Download 2026 Price List & Book VIP Visit!"
-                keywords="kolte patil life republic, life republic hinjewadi, life republic pune, kolte patil hinjewadi, flats in hinjewadi, 2 bhk flats in hinjewadi, 3 bhk in hinjewadi, life republic atmos, life republic aros, life republic echoes, life republic duet, life republic 24k espada, life republic floor plan, life republic price, life republic rera"
+                keywords="kolte patil life republic, life republic hinjewadi, life republic pune, kolte patil hinjewadi, flats in hinjewadi, 2 bhk flats in hinjewadi, 3 bhk in hinjewadi, life republic atmos, life republic aros, life republic echoes, life republic duet, life republic 24k espada, life republic floor plan, life republic price, life republic rera, life republic sales office, life republic sales office or main office mulshi"
                 canonical="/"
                 schema={homeCustomSchema}
             />

@@ -118,7 +118,19 @@ async function prerender() {
         process.exit(1);
     }
 
-    const template = fs.readFileSync(path.join(OUT_DIR, 'index.html'), 'utf-8');
+    const templatePath = path.join(OUT_DIR, 'template.html');
+    const indexPath = path.join(OUT_DIR, 'index.html');
+    
+    let template = '';
+    // If clean template.html exists, use it; otherwise read index.html and cache it
+    if (fs.existsSync(indexPath) && fs.readFileSync(indexPath, 'utf-8').includes('<!--app-head-->')) {
+        template = fs.readFileSync(indexPath, 'utf-8');
+        fs.writeFileSync(templatePath, template);
+    } else if (fs.existsSync(templatePath)) {
+        template = fs.readFileSync(templatePath, 'utf-8');
+    } else {
+        template = fs.readFileSync(indexPath, 'utf-8');
+    }
     const { render } = await import(`file://${SSR_BUNDLE_PATH}`);
 
     const dynamicRoutes = await getDynamicRoutes();

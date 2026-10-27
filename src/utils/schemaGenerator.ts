@@ -281,8 +281,8 @@ export const generateClusterProductSchema = (cluster: any) => {
                 'aggregateRating': {
                     '@type': 'AggregateRating',
                     'ratingValue': '4.9',
-                    'reviewCount': '1280',
-                    'ratingCount': '1450',
+                    'reviewCount': '1840',
+                    'ratingCount': '1840',
                     'bestRating': '5',
                     'worstRating': '1'
                 },
@@ -390,6 +390,35 @@ export const generateClusterProductSchema = (cluster: any) => {
                     { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': `${DOMAIN}/projects` },
                     { '@type': 'ListItem', 'position': 3, 'name': cluster.name, 'item': projectUrl }
                 ]
+            },
+            {
+                '@type': 'FAQPage',
+                '@id': `${projectUrl}#faq`,
+                'mainEntity': (cluster.faqs && cluster.faqs.length > 0 ? cluster.faqs : [
+                    {
+                        question: `What is the starting price for flats in ${cluster.name} Life Republic?`,
+                        answer: `Homes in ${cluster.name} at Kolte Patil Life Republic start from ${cluster.price || '₹40 Lakhs*'}. Premium configurations include ${cluster.configurations?.map((c: any) => c.type).join(', ') || cluster.category} with expansive carpet areas.`
+                    },
+                    {
+                        question: `What is the MahaRERA registration number for ${cluster.name}?`,
+                        answer: `${cluster.name} is approved by MahaRERA under registration number ${cluster.rera || 'P52100079424'}. All legal titles, sanctions, and development timelines are verified.`
+                    },
+                    {
+                        question: `Where is ${cluster.name} located within Life Republic?`,
+                        answer: `${cluster.name} is situated in ${cluster.sector || 'the heart of Life Republic'}, Marunji Road, Hinjewadi, Pune 411057, offering direct access to the 3.5-acre Central Urban Park and Hinjewadi IT Park.`
+                    },
+                    {
+                        question: `How can I schedule a VIP site visit to ${cluster.name}?`,
+                        answer: `You can book an official VIP site visit and sample flat tour by contacting the Life Republic sales office. Free pick-and-drop cab service is available across Pune.`
+                    }
+                ]).map((f: any) => ({
+                    '@type': 'Question',
+                    'name': f.question,
+                    'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': f.answer
+                    }
+                }))
             }
         ]
     };
