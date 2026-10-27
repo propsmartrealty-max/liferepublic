@@ -189,6 +189,15 @@ async function prerender() {
             if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
             
             fs.writeFileSync(filePath, renderedHtml);
+
+            // Also output clean flat file (e.g., dist/contact.html) so Cloudflare Pages serves non-trailing-slash URLs with 200 OK
+            if (route !== '/') {
+                const cleanRoute = route.startsWith('/') ? route.slice(1) : route;
+                const flatPath = path.join(OUT_DIR, `${cleanRoute}.html`);
+                const flatDir = path.dirname(flatPath);
+                if (!fs.existsSync(flatDir)) fs.mkdirSync(flatDir, { recursive: true });
+                fs.writeFileSync(flatPath, renderedHtml);
+            }
             
         } catch (e) {
             console.error(`⚠️ Failed to render ${route}:`, e);
