@@ -150,7 +150,7 @@ async function prerender() {
             cleanAppHtml = cleanAppHtml.replace(/<title[^>]*>.*?<\/title>/gi, '');
             cleanAppHtml = cleanAppHtml.replace(/<meta[^>]*>/gi, '');
             cleanAppHtml = cleanAppHtml.replace(/<link[^>]*(data-rh="true"|rel=["']canonical["']|rel=["']alternate["']|rel=["']preload["'])[^>]*>/gi, '');
-            // Retain JSON-LD scripts in cleanAppHtml so client React hydrateRoot matches the vDOM perfectly without Error #418
+            cleanAppHtml = cleanAppHtml.replace(/<script\s+[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, '');
 
             const finalHead = (headHtml || '') + '\n' + extractedHeadTags;
 

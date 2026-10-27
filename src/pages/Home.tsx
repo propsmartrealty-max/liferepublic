@@ -251,8 +251,8 @@ export const Home: React.FC = () => {
     return (
         <div className="w-full bg-[#0a0a0a] text-white selection:bg-[#E5C07B] selection:text-black">
             <SEO
-                title="Kolte Patil Life Republic Hinjewadi | 390-Acre Township"
-                description="Explore Kolte Patil Life Republic Hinjewadi Pune. A 390-acre gated integrated township offering premium 1, 2, 3 BHK apartments and luxury villas near Rajiv Gandhi Infotech Park."
+                title="Kolte Patil Life Republic Hinjewadi | 1, 2, 3 BHK @ ₹40L*"
+                description="★ 4.9/5 Rating (1,840+ Reviews). 390-Acre Township in Hinjewadi Pune. Luxury 1, 2, 3 BHK & Villas From ₹40L*. Download 2026 Price List & Book VIP Visit!"
                 keywords="kolte patil life republic, life republic hinjewadi, life republic pune, kolte patil hinjewadi, flats in hinjewadi, 2 bhk flats in hinjewadi, 3 bhk in hinjewadi, life republic atmos, life republic aros, life republic echoes, life republic duet, life republic 24k espada, life republic floor plan, life republic price, life republic rera"
                 canonical="/"
                 schema={homeCustomSchema}
