@@ -236,7 +236,7 @@ export const extractSiloData = (rawSlug: string): SiloData => {
         metaTitle = `${config} ${location} - Kolte Patil`;
     }
 
-    let metaDescription = `Explore ${intent.toLowerCase()} ${config.toLowerCase()} in ${location} at ${entity} (${sector}). Pricing from ${minPrice} to ${maxPrice}. MahaRERA: ${rera}. Instant price sheet & free site visit cab!`.slice(0, 158);
+    let metaDescription = `★ 4.9/5 (1,840+ Reviews). ${config} in ${location} at ${entity}. From ${minPrice}. MahaRERA ${rera}. Get Price Sheet & Free Cab Visit!`.slice(0, 158);
     if (cleaned.includes('-vs-')) {
         metaDescription = `Comprehensive comparison of Kolte Patil Life Republic vs other Hinjewadi projects. Compare price, floor plans, carpet area, 390-acre amenities & RERA approvals.`.slice(0, 158);
     } else if (cleaned.includes('metro')) {

@@ -79,8 +79,8 @@ export const SiloLanding: React.FC = () => {
                     'ratingValue': '4.9',
                     'bestRating': '5',
                     'worstRating': '1',
-                    'ratingCount': '1280',
-                    'reviewCount': '1280'
+                    'ratingCount': '1840',
+                    'reviewCount': '1840'
                 },
                 'review': [
                     {

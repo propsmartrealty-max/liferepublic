@@ -71,10 +71,12 @@ export const Footer: React.FC = () => {
                             {[
                                 { name: 'Home', path: '/' },
                                 { name: 'Township Guide', path: '/township-guide' },
-                                { name: 'Projects', path: '/projects' },
+                                { name: 'Projects & Clusters', path: '/projects' },
                                 { name: 'Amenities', path: '/amenities' },
-                                { name: 'Contact', path: '/contact' },
-                                { name: 'About Us', path: '/about' }
+                                { name: 'Sales Office & Visit', path: '/contact' },
+                                { name: 'Property Directory', path: '/locations-directory' },
+                                { name: 'HTML Sitemap', path: '/sitemap' },
+                                { name: 'About Township', path: '/about' }
                             ].map((link) => (
                                 <li key={link.name}>
                                     <Link

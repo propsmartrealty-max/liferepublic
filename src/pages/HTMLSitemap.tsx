@@ -140,6 +140,44 @@ export const HTMLSitemap: React.FC = () => {
                         </div>
                     </div>
 
+                    {/* Programmatic Search Corridors (High Intent Ecosystem) */}
+                    <div className="md:col-span-2 lg:col-span-3">
+                        <h2 className="text-xl font-bold text-[#202124] border-b border-white/20 pb-2 mb-4 mt-8 tracking-tight font-medium text-[10px]">High Intent Search Corridors</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                            {[
+                                { title: 'Life Republic Price List 2026', slug: 'price-2-bhk-flats-in-hinjewadi-kolte-patil-life-republic' },
+                                { title: '1 BHK Flats in Universe Hinjewadi', slug: 'price-1-bhk-flats-in-hinjewadi-universe' },
+                                { title: '2 BHK Flats in Duet & Atmos', slug: 'price-2-bhk-flats-in-hinjewadi-atmos' },
+                                { title: '3 BHK Flats in Aros & Canvas', slug: 'price-3-bhk-flats-in-hinjewadi-aros' },
+                                { title: 'Luxury Row Houses 24K Espada', slug: 'price-row-houses-in-hinjewadi-24k-espada' },
+                                { title: 'Bungalow Plots at Nora', slug: 'price-plots-in-hinjewadi-nora' },
+                                { title: 'Official Brochure PDF Download', slug: 'brochure-2-bhk-flats-in-hinjewadi-kolte-patil-life-republic' },
+                                { title: 'Township Master Floor Plans', slug: 'floor-plans-2-bhk-flats-in-hinjewadi-kolte-patil-life-republic' },
+                                { title: 'MahaRERA Numbers & Approvals', slug: 'rera-number-2-bhk-flats-in-hinjewadi-kolte-patil-life-republic' },
+                                { title: 'Possession Dates & Status', slug: 'possession-date-2-bhk-flats-in-hinjewadi-kolte-patil-life-republic' },
+                                { title: 'Homeowner Reviews & Ratings', slug: 'reviews-2-bhk-flats-in-hinjewadi-kolte-patil-life-republic' },
+                                { title: 'Schedule VIP Cab Site Visit', slug: 'site-visit-2-bhk-flats-in-hinjewadi-kolte-patil-life-republic' },
+                                { title: 'Pune Metro Line 3 Transit Route', slug: 'pune-metro-line-3-connectivity-life-republic' },
+                                { title: 'PMRDA Ring Road Connectivity', slug: 'pmrda-ring-road-marunji-life-republic' },
+                                { title: 'Crimson Anisha Global School', slug: 'anisha-global-school-life-republic-campus' },
+                                { title: '3.5-Acre Central Urban Park', slug: '3.5-acre-urban-park-botanical-gardens' },
+                                { title: 'Life Republic vs Megapolis', slug: 'life-republic-vs-megapolis-hinjewadi' },
+                                { title: 'Life Republic vs Godrej Woodsville', slug: 'life-republic-vs-godrej-woodsville-hinjewadi' },
+                                { title: 'Life Republic vs VTP Bellissimo', slug: 'life-republic-vs-vtp-bellissimo-hinjewadi' },
+                                { title: 'Life Republic vs Shapoorji Joyville', slug: 'life-republic-vs-shapoorji-joyville-hinjewadi' }
+                            ].map(item => (
+                                <Link
+                                    key={item.slug}
+                                    to={`/search/${item.slug}`}
+                                    className="text-xs text-[#5F6368] hover:rainbow-text-clip font-bold transition-colors block truncate font-medium"
+                                    title={item.title}
+                                >
+                                    {item.title}
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
