@@ -67,7 +67,7 @@ const Projects: React.FC = () => {
                             <ul className="space-y-2">
                                 <li><Link to="/projects/kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi" className="text-white hover:text-white/80 font-medium text-sm">Qrious Smart Homes</Link></li>
                                 <li><Link to="/projects/kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi" className="text-white hover:text-white/80 font-medium text-sm">Duet Compact Living</Link></li>
-                                <li><Link to="/projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi" className="text-white hover:text-white/80 font-medium text-sm">Universe Residences</Link></li>
+                                <li><Link to="/projects/kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi" className="text-white hover:text-white/80 font-medium text-sm">Universe Residences</Link></li>
                             </ul>
                         </div>
                         <div className="space-y-4">

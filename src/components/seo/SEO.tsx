@@ -60,7 +60,6 @@ export const SEO: React.FC<SEOProps> = ({
         const cluster: string[] = [...seoMatrix.base];
         
         // 1. Configuration Keywords
-        if (path.includes('1-bhk')) cluster.push(...seoMatrix.configurations["1-bhk"]);
         if (path.includes('2-bhk')) cluster.push(...seoMatrix.configurations["2-bhk"]);
         if (path.includes('3-bhk')) cluster.push(...seoMatrix.configurations["3-bhk"]);
         if (path.includes('4-bhk')) cluster.push(...seoMatrix.configurations["4-bhk"]);

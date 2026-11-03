@@ -30,7 +30,7 @@ export const Disclaimer: React.FC = () => {
                         <p>This website is managed and operated by an Authorized Channel Partner / Real Estate Agent promoting Kolte Patil Life Republic Township projects in Hinjewadi, Pune. It serves strictly for project information dissemination, customer advisory, and lead generation. This site is not the official corporate website of Kolte-Patil Developers Ltd. (the promoter/developer). The official developer website can be accessed at <a href="https://www.koltepatil.com" target="_blank" rel="noopener noreferrer">https://www.koltepatil.com</a>.</p>
 
                         <h2>5. MahaRERA Registration & Compliance</h2>
-                        <p>Real Estate Agent MahaRERA Registration Number: <strong>A52100039548</strong>.</p>
+                        <p>Real Estate Agent MahaRERA Registration Number: <strong>A0321262401295</strong>.</p>
                         <p>The projects within Life Republic Township are registered with the Maharashtra Real Estate Regulatory Authority (MahaRERA). Registration certificates and details are verifiable on the official MahaRERA website:</p>
                         <ul>
                             <li><strong>Atmos (Sector R22):</strong> P52100051765</li>

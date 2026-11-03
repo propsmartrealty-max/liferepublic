@@ -299,14 +299,14 @@ ON CONFLICT (id) DO UPDATE SET
 -- Upserting Kolte Patil Life Republic Township Universe
 INSERT INTO public.projects (id, title, category, location, price, description, overview, features, image, master_layout, floor_plans, gallery, amenities, faqs, theme_color, rera)
 VALUES (
-  'kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi',
+  'kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi',
   'Kolte Patil Life Republic Township Universe',
   'Residential',
   'Sector R10 (The Universe)',
-  '₹45 Lakhs*',
-  'Smart 1 & 2 BHK homes designed for modern living. Perfect for first-time homebuyers.',
-  'The Universe (R10) is a futuristic residential cluster within Life Republic offering smart 1 & 2 BHK apartments. Designed for the dynamic modern generation, it provides a perfect entry into the township lifestyle. The project features smart infrastructure, high-speed connectivity options, and a vibrant community atmosphere. Residents enjoy access to all township facilities including the 5-acre entrance avenue and global school, making it an ideal choice for ambitious starters.',
-  '["1 & 2 BHK","Possession: Dec 2026","Smart Infrastructure"]'::jsonb,
+  '₹58 Lakhs*',
+  'Smart 2 BHK homes designed for modern living. Perfect for first-time homebuyers.',
+  'The Universe (R10) is a futuristic residential cluster within Life Republic offering smart 2 BHK apartments. Designed for the dynamic modern generation, it provides a perfect entry into the township lifestyle. The project features smart infrastructure, high-speed connectivity options, and a vibrant community atmosphere. Residents enjoy access to all township facilities including the 5-acre entrance avenue and global school, making it an ideal choice for ambitious starters.',
+  '["2 BHK","Possession: Dec 2026","Smart Infrastructure"]'::jsonb,
   '/images/slider/1.jpg',
   NULL,
   '[]'::jsonb,

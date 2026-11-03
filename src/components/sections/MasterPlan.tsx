@@ -70,11 +70,11 @@ const sectors = [
     {
         id: 'universe',
         name: 'Sector R10: The Universe',
-        type: '1 & 2 BHK Smart',
+        type: '2 BHK Smart',
         status: 'Ongoing',
         intensity: 'High',
         pos: { top: '55%', left: '60%' },
-        link: '/projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi'
+        link: '/projects/kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi'
     },
     {
         id: 'nora',

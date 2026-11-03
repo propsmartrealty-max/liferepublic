@@ -190,27 +190,9 @@ const INVENTORY = [
         desc: "Architectural monograph by Hafeez Contractor in Sector R31 Echoes at Kolte-Patil Life Republic Hinjewadi. MahaRERA: PM1261012502409. Eco-chic towers, reflection pools, and rooftop stargazing deck."
     },
     {
-        id: "universe-1bhk",
-        clusterId: "universe",
-        slug: "kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi",
-        title: "Kolte Patil The Universe 1 BHK Smart Flat | Sector R10 Hinjewadi",
-        name: "The Universe - Sector R10",
-        sector: "Sector R10",
-        typology: "1 BHK",
-        carpetArea: "393 - 444 sq.ft.",
-        priceNum: "4000000",
-        priceFormatted: "4000000.00 INR",
-        displayPrice: "₹40 Lakhs*",
-        status: "Under Construction",
-        possession: "Dec 2027",
-        rera: "P52100027629",
-        image: `${DOMAIN}/images/projects/1719304446unnn1795-930.webp`,
-        desc: "Planet Smart City 1 BHK home in Sector R10 Universe at Kolte-Patil Life Republic Hinjewadi. MahaRERA: P52100027629. Highest rental yields in Hinjewadi, walking distance to Town Center and Metro Line 3."
-    },
-    {
         id: "universe-2bhk",
         clusterId: "universe",
-        slug: "kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi",
+        slug: "kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi",
         title: "Kolte Patil The Universe 2 BHK Smart Residence | Sector R10 Hinjewadi",
         name: "The Universe - Sector R10",
         sector: "Sector R10",

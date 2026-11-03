@@ -146,7 +146,7 @@ export const HTMLSitemap: React.FC = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                             {[
                                 { title: 'Life Republic Price List 2026', slug: 'price-2-bhk-flats-in-hinjewadi-kolte-patil-life-republic' },
-                                { title: '1 BHK Flats in Universe Hinjewadi', slug: 'price-1-bhk-flats-in-hinjewadi-universe' },
+                                { title: '2 BHK Flats in Universe Hinjewadi', slug: 'price-2-bhk-flats-in-hinjewadi-universe' },
                                 { title: '2 BHK Flats in Duet & Atmos', slug: 'price-2-bhk-flats-in-hinjewadi-atmos' },
                                 { title: '3 BHK Flats in Aros & Canvas', slug: 'price-3-bhk-flats-in-hinjewadi-aros' },
                                 { title: 'Luxury Row Houses 24K Espada', slug: 'price-row-houses-in-hinjewadi-24k-espada' },

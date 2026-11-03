@@ -99,19 +99,18 @@ export const projectsRegistry: Project[] = [
         themeColor: '#C5A059'
     },
     {
-        id: 'kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi',
-        title: 'Kolte Patil Life Republic Universe | Smart 1 & 2 BHK Hinjewadi',
+        id: 'kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi',
+        title: 'Kolte Patil Life Republic Universe | Smart 2 BHK Hinjewadi',
         category: 'Modern',
         location: 'Sector R10 (Universe)',
-        price: '₹40 Lakhs*',
+        price: '₹58 Lakhs*',
         image: '/images/projects/1719304446unnn1795-930.webp',
-        description: 'Modern living at Universe, Kolte Patil Life Republic Hinjewadi. Planet-themed luxury 1 & 2 BHK homes near the upcoming Metro Phase 3.',
-        features: ['1 & 2 BHK', 'MahaRERA: P52100027629', 'Metro Connectivity'],
+        description: 'Modern living at Universe, Kolte Patil Life Republic Hinjewadi. Planet-themed luxury 2 BHK homes near the upcoming Metro Phase 3.',
+        features: ['2 BHK', 'MahaRERA: P52100027629', 'Metro Connectivity'],
         overview: 'Universe at Kolte Patil Life Republic Township Hinjewadi is designed for the modern millennial. With smart infrastructure and proximity to the Town Center, it offers the perfect balance of work and play.',
         amenities: ['Central Planet Park', 'Digital Library', 'EV Charging Station', 'Multi-sport Courts', 'Sunset Deck'],
         masterLayout: '/images/projects/1724418593small5.webp',
         floorPlans: [
-            { type: '1 BHK', size: '393 - 444 sq.ft.', image: '/images/projects/1724418593small5.webp', details: ['Carpet Area: 393-444 sq.ft.', 'Smart Layout', 'Premium Bath Fittings'] },
             { type: '2 BHK', size: '560 - 629 sq.ft.', image: '/images/projects/1724418593small5.webp', details: ['Carpet Area: 560-629 sq.ft.', 'Dual Balcony Layout', 'Optimized Master Bedroom'] }
         ],
         specifications: [
@@ -243,14 +242,14 @@ export const projectsRegistry: Project[] = [
         themeColor: '#2980b9'
     },
     {
-        id: 'kolte-patil-life-republic-oro-avenue-smart-1-2-bhk-hinjewadi',
-        title: 'Kolte Patil Life Republic ORO Avenue | Smart 1 & 2 BHK Hinjewadi',
+        id: 'kolte-patil-life-republic-oro-avenue-smart-2-bhk-hinjewadi',
+        title: 'Kolte Patil Life Republic ORO Avenue | Smart 2 BHK Hinjewadi',
         category: 'Smart',
         location: 'Sector R9 (ORO Avenue)',
         price: 'Sold Out',
         image: '/images/projects/box-img-03.jpg',
-        description: 'Smart living at ORO Avenue, Kolte Patil Life Republic Hinjewadi. Optimized 1 & 2 BHK apartments designed for high-yield investment and modern comfort.',
-        features: ['1 & 2 BHK', 'MahaRERA: P52100017116', 'Sector R9'],
+        description: 'Smart living at ORO Avenue, Kolte Patil Life Republic Hinjewadi. Optimized 2 BHK apartments designed for high-yield investment and modern comfort.',
+        features: ['2 BHK', 'MahaRERA: P52100017116', 'Sector R9'],
         overview: 'ORO Avenue at Kolte Patil Life Republic Township Hinjewadi offers smart urban apartments with high rental demand in the growing Sector R9.',
         amenities: ['Gymnasium', 'Walking Track', 'Retail Plaza', 'CCTV Security', 'Power Backup', 'Landscaped Garden'],
         masterLayout: '/images/projects/overview-img.jpg',
@@ -342,18 +341,17 @@ export const projectsRegistry: Project[] = [
 ,
     {
         id: 'kolte-patil-life-republic-3rd-avenue',
-        title: 'Kolte Patil Life Republic 3rd Avenue | 1 & 2 BHK Hinjewadi',
+        title: 'Kolte Patil Life Republic 3rd Avenue | 2 BHK Hinjewadi',
         category: 'Lifestyle',
         location: 'Sector R3 (3rd Avenue)',
         price: 'Sold Out',
         image: '/images/home/box-img-01.jpg',
-        description: 'Explore 3rd Avenue at Kolte Patil Life Republic Township. Established 1 and 2 BHK residences featuring robust community living and immediate access to township amenities.',
-        features: ['1 & 2 BHK', 'Ready to Move', 'Established Community'],
+        description: 'Explore 3rd Avenue at Kolte Patil Life Republic Township. Established 2 BHK residences featuring robust community living and immediate access to township amenities.',
+        features: ['2 BHK', 'Ready to Move', 'Established Community'],
         overview: '3rd Avenue is one of the foundational sectors of the Kolte Patil Life Republic Township, providing residents with fully established infrastructural benefits and an active community lifestyle.',
         amenities: ['Clubhouse', 'Swimming Pool', 'Landscaped Gardens', 'Children Play Area', '24/7 Security'],
         masterLayout: '/images/projects/walkthrough.jpg',
         floorPlans: [
-            { type: '1 BHK', size: '450 sq.ft.', image: '/images/home/box-img-01.jpg', details: ['Carpet Area: 450 sq.ft.', 'Compact Design'] },
             { type: '2 BHK', size: '650 sq.ft.', image: '/images/home/box-img-01.jpg', details: ['Carpet Area: 650 sq.ft.', 'Standard Layout'] }
         ],
         specifications: [

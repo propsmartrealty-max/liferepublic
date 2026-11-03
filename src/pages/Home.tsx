@@ -33,11 +33,11 @@ const HOME_FAQS = [
     },
     {
         question: "What are the starting prices for flats in Life Republic Hinjewadi?",
-        answer: "Prices in Kolte Patil Life Republic start at ₹40 Lakhs* for smart 1 BHK apartments in Sector R10 (The Universe). Premium 2 BHK apartments start from ₹79 Lakhs* in Duet (Sector R34) and ₹92 Lakhs* in Aros (Sector R13). Luxury 3 BHK homes in Atmos (Sector R22) start from ₹1.15 Cr*, 3 & 4 BHK presidential suites in Canvas (Sector R5) start from ₹1.59 Cr*, while ultra-luxury 4 & 5 BHK row houses in 24K Espada (Sector R31) start from ₹3.40 Cr*."
+        answer: "Prices in Kolte Patil Life Republic start at ₹58 Lakhs* for premium 2 BHK apartments in Sector R10 (The Universe), ₹79 Lakhs* in Duet (Sector R34), and ₹92 Lakhs* in Aros (Sector R13). Luxury 3 BHK homes in Atmos (Sector R22) start from ₹1.15 Cr*, 3 & 4 BHK presidential suites in Canvas (Sector R5) start from ₹1.59 Cr*, while ultra-luxury 4 & 5 BHK row houses in 24K Espada (Sector R31) start from ₹3.40 Cr*."
     },
     {
         question: "Which residential clusters are currently available for booking?",
-        answer: "Active clusters with live inventory include Atmos (Sector R22: 2 & 3 BHK), Aros (Sector R13: 2 & 3 BHK), Echoes (Sector R31: 2 & 2.5 BHK New Launch), Duet (Sector R34: 2 BHK Eterna & Infinite), Canvas (Sector R5: 3, 3.5 & 4 BHK), Qrious (Sector R14: 2 & 3 BHK Smart Homes), The Universe (Sector R10: 1 & 2 BHK), 24K Espada (Sector R31: Luxury Row Houses), and Nora (Sector R17B: Bungalow Plots)."
+        answer: "Active clusters with live inventory include Atmos (Sector R22: 2 & 3 BHK), Aros (Sector R13: 2 & 3 BHK), Echoes (Sector R31: 2 & 2.5 BHK New Launch), Duet (Sector R34: 2 BHK Eterna & Infinite), Canvas (Sector R5: 3, 3.5 & 4 BHK), Qrious (Sector R14: 2 & 3 BHK Smart Homes), The Universe (Sector R10: 2 BHK), 24K Espada (Sector R31: Luxury Row Houses), and Nora (Sector R17B: Bungalow Plots)."
     },
     {
         question: "Is Kolte Patil Life Republic approved by MahaRERA?",
@@ -71,20 +71,12 @@ const HOME_FAQS = [
 
 const PRICING_MATRIX = [
     {
-        typology: "1 BHK Smart Residences",
-        carpet: "393 - 444 sq.ft.",
-        sectors: "The Universe (Sector R10)",
-        price: "₹40 Lakhs*",
-        possession: "Dec 2027",
-        link: "/projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi"
-    },
-    {
         typology: "2 BHK Compact Homes",
         carpet: "560 - 629 sq.ft.",
         sectors: "The Universe (Sector R10) / Arezo (Sector R16)",
         price: "₹58 L - ₹72 Lakhs*",
         possession: "Ready / Dec 2027",
-        link: "/projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi"
+        link: "/projects/kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi"
     },
     {
         typology: "2 BHK Premium Flats",

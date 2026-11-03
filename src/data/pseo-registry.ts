@@ -25,10 +25,10 @@ export const pseoRegistry: Record<string, LandingConfig> = {
     },
     'affordable-flats-in-hinjewadi': {
         title: 'Affordable Flats in Hinjewadi Pune | Kolte Patil Life Republic',
-        description: 'Find affordable 1 & 2 BHK flats in Hinjewadi starting ₹45 Lakhs at Kolte Patil Life Republic township.',
+        description: 'Find affordable 2 BHK flats in Hinjewadi starting ₹58 Lakhs at Kolte Patil Life Republic township.',
         keywords: 'affordable flats hinjewadi, budget flats hinjewadi pune, cheap flats near hinjewadi',
         infraScore: 90, rentalYield: '5.5% - 6.2%', commutePhase1: '10 mins',
-        highlights: ['Starting ₹45 Lakhs', 'PMAY eligible configurations', 'Metro connectivity coming']
+        highlights: ['Starting ₹58 Lakhs', 'PMAY eligible configurations', 'Metro connectivity coming']
     },
     'luxury-apartments-hinjewadi': {
         title: 'Luxury Apartments in Hinjewadi | Kolte Patil Life Republic',
@@ -109,10 +109,10 @@ export const pseoRegistry: Record<string, LandingConfig> = {
     },
     'flats-in-hinjewadi-under-50-lakhs': {
         title: 'Flats in Hinjewadi Under 50 Lakhs | Life Republic Pune',
-        description: 'Budget-friendly 1 BHK flats in Hinjewadi under ₹50 Lakhs at Kolte Patil Life Republic township.',
+        description: 'Budget-friendly smart apartments in Hinjewadi under ₹50 Lakhs at Kolte Patil Life Republic township.',
         keywords: 'flats in hinjewadi under 50 lakhs, cheap flats hinjewadi, budget apartments pune',
         infraScore: 88, rentalYield: '6.0% - 7.0%', commutePhase1: '10 mins',
-        highlights: ['Starting ₹45 Lakhs', 'Smart home features', 'Township amenities included']
+        highlights: ['Starting ₹48 Lakhs', 'Smart home features', 'Township amenities included']
     },
     'flats-in-hinjewadi-under-80-lakhs': {
         title: 'Flats in Hinjewadi Under 80 Lakhs | 2 BHK Life Republic',
@@ -269,8 +269,8 @@ export const pseoRegistry: Record<string, LandingConfig> = {
         highlights: ['Direct access to 3.5-acre Central Park', 'Olympic-size swimming pool and sports hub', 'Vastu-compliant layouts with high natural ventilation']
     },
     'sector-r10-life-republic': {
-        title: 'Universe Sector R10 Life Republic Hinjewadi | Smart 1 & 2 BHK',
-        description: 'Smart tech residences at Universe Sector R10 Kolte Patil Life Republic Hinjewadi. Space-optimized 1 & 2 BHK apartments designed with Planet Smart City tech.',
+        title: 'Universe Sector R10 Life Republic Hinjewadi | Smart 2 BHK',
+        description: 'Smart tech residences at Universe Sector R10 Kolte Patil Life Republic Hinjewadi. Space-optimized 2 BHK apartments designed with Planet Smart City tech.',
         keywords: 'sector r10 life republic, universe sector r10, kolte patil universe hinjewadi',
         infraScore: 94, rentalYield: '6.5% - 7.2%', commutePhase1: '8 mins',
         highlights: ['Planet Smart City IoT technology integration', 'Highest rental yield in township for young IT professionals', 'Compact zero-wastage functional floor plans']

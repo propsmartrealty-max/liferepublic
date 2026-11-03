@@ -209,7 +209,7 @@ export const TownshipGuide: React.FC = () => {
                                     {[
                                         { name: "Atmos", type: "2 & 3 BHK", price: "₹75L*", status: "Oct 2027", usp: "Aero-Wellness Design" },
                                         { name: "Aros", type: "2 & 3 BHK", price: "₹82L*", status: "Dec 2026", usp: "Fitness Loop Access" },
-                                        { name: "Universe", type: "1 & 2 BHK", price: "₹65L*", status: "Phased", usp: "Planet Theme Living" },
+                                        { name: "Universe", type: "2 BHK", price: "₹65L*", status: "Phased", usp: "Planet Theme Living" },
                                         { name: "Canvas", type: "3, 3.5 & 4 BHK", price: "₹1.49Cr*", status: "Dec 2028", usp: "Infinity Amenities & 40-Storey Towers" },
                                         { name: "24K Espada", type: "Row Houses", price: "₹3.5Cr*", status: "Ready/Ongoing", usp: "Ultra-Luxury Villas" }
                                     ].map((row, i) => (

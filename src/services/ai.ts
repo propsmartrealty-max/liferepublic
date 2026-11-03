@@ -20,7 +20,7 @@ Core Facts:
   6. Echoes (Sector R31): 2 & 2.5 BHK Eco-Chic, ₹85L - ₹1.10Cr, RERA: PM1261012502409
   7. 24K Espada (Sector R31): 4 & 5 BHK Row Houses/Villas, ₹3.40Cr - ₹5.50Cr, RERA: P52100002646
   8. Nora (Sector R17B): Bungalow Plots (1500-4000 sq.ft), ₹1.80Cr - ₹3.50Cr, RERA: P52100022278
-  9. The Universe (Sector R10): 1 & 2 BHK Smart Homes, ₹40L - ₹65L, RERA: P52100027629
+  9. The Universe (Sector R10): 2 BHK Smart Homes, ₹58L - ₹75L, RERA: P52100027629
   10. Arezo (Sector R16): 2 BHK Residences, ₹78L*, RERA: P52100018539
 
 Style:
@@ -31,9 +31,9 @@ Style:
 function getLocalKnowledgeResponse(query: string): string {
     const q = query.toLowerCase().trim();
 
-    // 1 BHK or Budget Queries
-    if (q.includes('1 bhk') || q.includes('studio') || (q.includes('budget') && !q.includes('high')) || q.includes('40 lakh') || q.includes('50 lakh') || q.includes('affordable')) {
-        return "At Kolte-Patil Life Republic, 1 BHK smart residences are available in **The Universe (Sector R10)** starting from ₹40 Lakhs* (carpet areas 393–444 sq.ft). They offer phenomenal rental demand from Hinjewadi IT professionals with anticipated yields of 6.2%–7.1%. Would you like to view the floor plans or check current tower availability?";
+    // Budget or Compact Queries
+    if (q.includes('studio') || (q.includes('budget') && !q.includes('high')) || q.includes('40 lakh') || q.includes('50 lakh') || q.includes('affordable')) {
+        return "Compact and high-ROI residences are available in **The Universe (Sector R10)** starting from ₹58 Lakhs* (2 BHK) and **Duet (Sector R34)** from ₹79 Lakhs*. Would you like to view the 2 BHK floor plans or explore current tower availability?";
     }
 
     // 2 BHK Queries
@@ -73,7 +73,7 @@ function getLocalKnowledgeResponse(query: string): string {
 
     // Price / Cost / Rate per sq ft
     if (q.includes('price') || q.includes('cost') || q.includes('rate') || q.includes('payment plan')) {
-        return "Residential pricing at Life Republic spans from ₹42 Lakhs* for 1 BHKs, ₹58L–₹85L* for 2 BHKs, ₹98L–₹1.35Cr* for 3 BHKs, and ₹2.85Cr+ for signature 24K Espada villas. Flexible construction-linked payment plans and 0% pre-EMI schemes are currently available on select towers. Would you like the official price sheet?";
+        return "Residential pricing at Life Republic spans from ₹58L–₹85L* for 2 BHKs, ₹98L–₹1.35Cr* for 3 BHKs, and ₹2.85Cr+ for signature 24K Espada villas. Flexible construction-linked payment plans and 0% pre-EMI schemes are currently available on select towers. Would you like the official price sheet?";
     }
 
     // ROI / Investment / Rent

@@ -16,7 +16,7 @@ const pSEOMatrix = {
         'walk-to-work', 'township', 'resale', 'rent'
     ],
     configurations: [
-        '1-bhk-flats', '2-bhk-flats', '2.5-bhk-flats', '3-bhk-flats', 
+        '2-bhk-flats', '2.5-bhk-flats', '3-bhk-flats', 
         '3.5-bhk-flats', '4-bhk-flats', '5-bhk-flats', 'duplex', 
         'penthouse', 'villas', 'row-houses', 'twin-bungalows', 
         'studio-apartments', 'plots', 'commercial-shops'

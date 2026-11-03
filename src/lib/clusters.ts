@@ -404,15 +404,14 @@ export const CLUSTERS = [
         sector: "Town Center",
         usp: "High-Street Retail & Integrated High-Street",
         name: "Universe",
-        slug: "kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi",
-        category: "Smart 1 & 2 BHK",
-        description: "Smart, tech-enabled 1 and 2 BHK residences designed for millennials, featuring home automation and high-speed fiber infrastructure.",
-        price: "₹75 Lacs*",
+        slug: "kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi",
+        category: "Smart 2 BHK",
+        description: "Smart, tech-enabled 2 BHK residences designed for millennials, featuring home automation and high-speed fiber infrastructure.",
+        price: "₹60 Lakhs*",
         rera: "P52100027629",
         image: "https://liferepublic.in/images/projects/location/1718965070Universe-.jpg",
         masterLayout: "https://liferepublic.in/images/home/slider-1.webp",
         configurations: [
-            { type: "1 BHK", size: "393 - 507 sq.ft.", price: "₹75 Lacs*" },
             { type: "2 BHK", size: "560 - 682 sq.ft.", price: "₹60 Lakhs*" }
         ],
         gallery: [
@@ -446,7 +445,7 @@ export const CLUSTERS = [
     },
     {
         id: "oro-avenue",
-        slug: "kolte-patil-life-republic-oro-avenue-smart-1-2-bhk-hinjewadi",
+        slug: "kolte-patil-life-republic-oro-avenue-smart-2-bhk-hinjewadi",
         name: "Oro Avenue",
         rera: "P52100017116", // Placeholder RERA
         image: "https://liferepublic.in/images/projects/location/172060335117189650503rd%20Avenue-.jpg",
@@ -456,7 +455,6 @@ export const CLUSTERS = [
         sector: "Sector R9",
         usp: "Premium Completed Residences",
         configurations: [
-            { type: "1 BHK", size: "420 sq.ft.", price: "₹75 Lacs*" },
             { type: "2 BHK", size: "650 sq.ft.", price: "₹65 Lakhs*" }
         ],
         gallery: [

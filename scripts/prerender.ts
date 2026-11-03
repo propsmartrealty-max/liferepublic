@@ -23,13 +23,13 @@ const ID_TO_SLUG: Record<string, string> = {
     '24k-espada': 'kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi',
     'sound-of-soul': 'kolte-patil-life-republic-sound-of-soul-luxury-4-bhk-row-houses-hinjewadi',
     'aros': 'kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi',
-    'universe': 'kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi',
+    'universe': 'kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi',
     'first-avenue': 'kolte-patil-life-republic-first-avenue-premium-2-3-bhk-hinjewadi',
     'villas': 'kolte-patil-life-republic-villas-hinjewadi',
     'bungalows': 'kolte-patil-life-republic-bungalows-hinjewadi',
     'echoes': 'kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi',
     'qrious': 'kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi',
-    'oro-avenue': 'kolte-patil-life-republic-oro-avenue-smart-1-2-bhk-hinjewadi',
+    'oro-avenue': 'kolte-patil-life-republic-oro-avenue-smart-2-bhk-hinjewadi',
     'i-towers': 'kolte-patil-life-republic-i-towers-smart-homes-hinjewadi'
 };
 
@@ -38,7 +38,7 @@ const staticRoutes = [
     '/nri-corner', '/testimonials', '/media-center', '/township-intelligence',
     '/nri-investment-guide', '/connectivity', '/lifestyle', '/sustainability', '/community-hub',
     '/2-bhk-flats-in-hinjewadi', '/3-bhk-flats-in-hinjewadi', '/4-bhk-flats-in-hinjewadi',
-    '/1-bhk-flats-in-hinjewadi', '/row-houses-in-life-republic', '/luxury-villas-near-hinjewadi',
+    '/row-houses-in-life-republic', '/luxury-villas-near-hinjewadi',
     '/plots-in-hinjewadi', '/sitemap', '/township-guide'
 ];
 
@@ -88,7 +88,6 @@ async function getDynamicRoutes() {
         '/search/nri-investment-guide-life-republic-pune',
         // Top High-Volume Search Permutations
         ...['price', 'floor-plans', 'brochure', 'rera-number', 'possession-date', 'reviews', 'site-visit', 'booking-offers'].flatMap(intent => [
-            `/search/${intent}-1-bhk-flats-in-hinjewadi-kolte-patil-life-republic`,
             `/search/${intent}-2-bhk-flats-in-hinjewadi-kolte-patil-life-republic`,
             `/search/${intent}-2.5-bhk-flats-in-hinjewadi-echoes`,
             `/search/${intent}-3-bhk-flats-in-hinjewadi-kolte-patil-life-republic`,
@@ -99,7 +98,7 @@ async function getDynamicRoutes() {
             `/search/${intent}-2-bhk-flats-in-marunji-duet`,
             `/search/${intent}-3-bhk-flats-in-marunji-atmos`,
             `/search/${intent}-2-bhk-flats-in-wakad-aros`,
-            `/search/${intent}-1-bhk-flats-in-hinjewadi-universe`,
+            `/search/${intent}-2-bhk-flats-in-hinjewadi-universe`,
             `/search/${intent}-3-bhk-flats-in-hinjewadi-canvas`,
             `/search/${intent}-2-bhk-flats-in-hinjewadi-qrious`
         ])

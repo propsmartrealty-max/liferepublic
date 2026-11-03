@@ -1,8 +1,8 @@
 {
   "catalogTitle": "Kolte Patil Life Republic Official Property & Products Catalog",
-  "lastUpdated": "2026-11-03T07:24:32.393Z",
+  "lastUpdated": "2026-11-03T07:48:30.522Z",
   "domain": "https://life-republic.in",
-  "totalItems": 15,
+  "totalItems": 14,
   "items": [
     {
       "id": "duet-2bhk",
@@ -195,25 +195,6 @@
       }
     },
     {
-      "id": "universe-1bhk",
-      "title": "Kolte Patil The Universe 1 BHK Smart Flat | Sector R10 Hinjewadi",
-      "sector": "Sector R10",
-      "typology": "1 BHK",
-      "carpetArea": "393 - 444 sq.ft.",
-      "price": "4000000.00 INR",
-      "displayPrice": "₹40 Lakhs*",
-      "status": "Under Construction",
-      "possession": "Dec 2027",
-      "rera": "P52100027629",
-      "url": "https://life-republic.in/projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi",
-      "image": "https://life-republic.in/images/projects/1719304446unnn1795-930.webp",
-      "rating": {
-        "value": "4.9",
-        "count": "1280",
-        "best": "5"
-      }
-    },
-    {
       "id": "universe-2bhk",
       "title": "Kolte Patil The Universe 2 BHK Smart Residence | Sector R10 Hinjewadi",
       "sector": "Sector R10",
@@ -224,7 +205,7 @@
       "status": "Under Construction",
       "possession": "Dec 2027",
       "rera": "P52100027629",
-      "url": "https://life-republic.in/projects/kolte-patil-life-republic-universe-luxury-1-2-bhk-flats-hinjewadi",
+      "url": "https://life-republic.in/projects/kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi",
       "image": "https://life-republic.in/images/projects/1719304446unnn1795-930.webp",
       "rating": {
         "value": "4.9",

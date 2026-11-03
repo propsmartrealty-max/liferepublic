@@ -29,7 +29,6 @@ export const pSEOMatrix = {
         { key: 'rent', title: 'Flats for Rent & Leasing', aliases: ['rent', 'rental', 'lease', 'tenant', 'to-let'] }
     ],
     configurations: [
-        { key: '1-bhk-flats', title: '1 BHK Flats', bhk: 1, minPrice: '₹42 Lakhs*', maxPrice: '₹48 Lakhs*', lowPriceNum: 4200000, highPriceNum: 4800000, aliases: ['1-bhk', '1bhk', '1-bedroom', '1-bhk-flats'] },
         { key: '2-bhk-flats', title: '2 BHK Flats', bhk: 2, minPrice: '₹62 Lakhs*', maxPrice: '₹85 Lakhs*', lowPriceNum: 6200000, highPriceNum: 8500000, aliases: ['2-bhk', '2bhk', '2-bedroom', '2-bhk-flats'] },
         { key: '2.5-bhk-flats', title: '2.5 BHK Flats', bhk: 2.5, minPrice: '₹92 Lakhs*', maxPrice: '₹1.05 Cr*', lowPriceNum: 9200000, highPriceNum: 10500000, aliases: ['2.5-bhk', '2-5-bhk', '2.5bhk', '2-5-bhk-flats'] },
         { key: '3-bhk-flats', title: '3 BHK Flats', bhk: 3, minPrice: '₹98 Lakhs*', maxPrice: '₹1.45 Cr*', lowPriceNum: 9800000, highPriceNum: 14500000, aliases: ['3-bhk', '3bhk', '3-bedroom', '3-bhk-flats'] },
@@ -299,8 +298,8 @@ export const extractSiloData = (rawSlug: string): SiloData => {
     // Related Internal Permutations (PageRank Link Graph)
     const relatedSearches: RelatedSearch[] = [
         {
-            title: `1 BHK Flats in ${location}`,
-            slug: `affordable-1-bhk-flats-in-${locationObj.key}-kolte-patil-life-republic`
+            title: `2 BHK Smart Flats in ${location}`,
+            slug: `smart-2-bhk-flats-in-${locationObj.key}-kolte-patil-life-republic`
         },
         {
             title: `2 BHK Flats in ${location}`,
@@ -389,9 +388,9 @@ export const extractSiloData = (rawSlug: string): SiloData => {
                             <td class="p-3.5 border border-gray-200 text-emerald-600 font-medium">${rera}</td>
                         </tr>
                         <tr class="bg-gray-50/30">
-                            <td class="p-3.5 border border-gray-200 font-medium">1 BHK Smart Residences</td>
-                            <td class="p-3.5 border border-gray-200 font-semibold">₹42 - 48 Lakhs*</td>
-                            <td class="p-3.5 border border-gray-200 text-[#5F6368]">450 - 480 sq.ft.</td>
+                            <td class="p-3.5 border border-gray-200 font-medium">2 BHK Smart Residences</td>
+                            <td class="p-3.5 border border-gray-200 font-semibold">₹58 - 72 Lakhs*</td>
+                            <td class="p-3.5 border border-gray-200 text-[#5F6368]">560 - 682 sq.ft.</td>
                             <td class="p-3.5 border border-gray-200 text-emerald-600">Registered</td>
                         </tr>
                         <tr class="bg-white">

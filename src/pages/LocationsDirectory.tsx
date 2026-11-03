@@ -4,7 +4,7 @@ import { SEO } from '../components/seo/SEO';
 
 const pSEOMatrix = {
     intents: ['luxury', 'premium', 'affordable', 'ready-possession', 'under-construction', 'investment', 'new-launch', 'walk-to-work'],
-    configurations: ['1-bhk-flats', '2-bhk-flats', '3-bhk-flats', '4-bhk-flats', 'duplex', 'penthouse', 'villas', 'row-houses', 'plots'],
+    configurations: ['2-bhk-flats', '3-bhk-flats', '4-bhk-flats', 'duplex', 'penthouse', 'villas', 'row-houses', 'plots'],
     locations: ['hinjewadi', 'wakad', 'baner', 'mahalunge', 'pcmc', 'tathawade', 'pune-west', 'it-park'],
     entities: ['kolte-patil-life-republic', 'atmos', 'aros', 'universe', 'canvas', '24k-espada']
 };

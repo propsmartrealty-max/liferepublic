@@ -286,7 +286,6 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                                     defaultValue="2 BHK" 
                                                     className="w-full bg-[#090b10] border border-white/15 focus:border-white rounded-xl px-3.5 py-3 text-white text-sm focus:outline-none transition-colors cursor-pointer"
                                                 >
-                                                    <option value="1 BHK" className="bg-[#090b10] text-white">1 BHK Smart</option>
                                                     <option value="2 BHK" className="bg-[#090b10] text-white">2 BHK Premium</option>
                                                     <option value="2.5 BHK" className="bg-[#090b10] text-white">2.5 BHK Space-Plus</option>
                                                     <option value="3 BHK" className="bg-[#090b10] text-white">3 BHK Luxury</option>
