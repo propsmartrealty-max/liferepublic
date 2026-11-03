@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle, ArrowRight, MapPin, Building2, Phone, Sparkles, MessageCircle } from 'lucide-react';
 import { api } from '../../services/api';
@@ -323,8 +324,16 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                                             </div>
                                         )}
 
-                                        <p className="text-[10px] text-white/30 leading-relaxed text-center">
-                                            🔒 Guaranteed privacy. Your information is delivered directly to Kolte-Patil Life Republic sales desk. Zero spam.
+                                        <p className="text-[11px] text-white/50 leading-relaxed text-center">
+                                            🔒 By submitting, you agree to our{' '}
+                                            <Link to="/privacy-policy" onClick={onClose} className="underline text-amber-400 hover:text-white">
+                                                Privacy Policy
+                                            </Link>{' '}
+                                            &{' '}
+                                            <Link to="/terms-of-service" onClick={onClose} className="underline text-amber-400 hover:text-white">
+                                                Terms of Service
+                                            </Link>
+                                            , and authorize our authorized sales representatives to contact you via Phone, WhatsApp, or SMS (overriding NDNC/DND). Zero spam guaranteed.
                                         </p>
 
                                         {/* Submit Button */}

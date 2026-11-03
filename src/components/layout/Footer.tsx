@@ -274,8 +274,16 @@ export const Footer: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-strong text-xs text-gray-600 text-center leading-relaxed">
-                    Disclaimer: This website is for informational purposes only and does not constitute an offer or solicitation. The visual representations, including images and 3D walkthroughs, are artistic impressions and may differ from the actual project. Pricing and specifications are subject to change without notice. By submitting your contact details, you authorize our partners to contact you via phone, SMS, or email, overriding any NDNC registration.
+                <div className="mt-8 pt-8 border-t border-strong text-xs text-gray-600 text-center leading-relaxed space-y-3">
+                    <p>
+                        <strong>Regulatory & Brand Disclosure:</strong> This website is an informational and marketing portal managed by an Authorized Channel Partner for Kolte-Patil Developers Ltd. promoting Life Republic Township, Hinjewadi, Pune. It does not constitute an offer or solicitation. The developer's official website is <a href="https://www.koltepatil.com" target="_blank" rel="noopener noreferrer" className="underline font-medium text-gray-700">koltepatil.com</a>.
+                    </p>
+                    <p>
+                        <strong>MahaRERA Registration Details:</strong> Promoted by MahaRERA Registered Real Estate Agent (Reg No: A52100039548). Project MahaRERA Nos: <strong>Atmos</strong> (P52100051765), <strong>Aros</strong> (P52100047921), <strong>Echoes</strong> (PM1261012502409), <strong>Duet</strong> (P52100079424), <strong>24K Espada</strong> (P52100002646), <strong>The Universe</strong> (P52100027629), <strong>Canvas</strong> (P52100077008), <strong>Qrious</strong> (P52100079623), <strong>Nora</strong> (P52100022278). All details and certificates are verifiable at the official MahaRERA portal: <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-bold text-gray-700">https://maharera.maharashtra.gov.in</a>.
+                    </p>
+                    <p>
+                        <strong>Pricing & Transparency:</strong> Advertised prices represent base cost; government taxes, stamp duty, registration, and other statutory charges are extra. Layout plans and 3D walkthroughs are artistic impressions. By submitting your contact details, you expressly authorize our sales desk to contact you via Phone, WhatsApp, SMS, or Email, overriding any NDNC/DND registration. Read our <Link to="/privacy-policy" className="underline font-bold text-gray-800">Privacy Policy</Link>, <Link to="/terms-of-service" className="underline font-bold text-gray-800">Terms of Service</Link>, and <Link to="/disclaimer" className="underline font-bold text-gray-800">Legal Disclaimer</Link>.
+                    </p>
                 </div>
             </div>
             

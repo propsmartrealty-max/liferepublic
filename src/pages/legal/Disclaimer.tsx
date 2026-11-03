@@ -26,19 +26,27 @@ export const Disclaimer: React.FC = () => {
                         <h2>3. Pricing & Specifications</h2>
                         <p>Prices, availability, and specifications are subject to change without prior notice. The dimensions and carpet areas mentioned in floor plans are approximate and subject to final measurement.</p>
 
-                        <h2>4. Independent Partner Network</h2>
-                        <p>This website may be managed by an authorized channel partner of Kolte Patil Developers Ltd. It is strictly for information dissemination and lead generation. The official website of the developer should be referred to for formal documents.</p>
+                        <h2>4. Authorized Channel Partner & Marketing Disclosure</h2>
+                        <p>This website is managed and operated by an Authorized Channel Partner / Real Estate Agent promoting Kolte Patil Life Republic Township projects in Hinjewadi, Pune. It serves strictly for project information dissemination, customer advisory, and lead generation. This site is not the official corporate website of Kolte-Patil Developers Ltd. (the promoter/developer). The official developer website can be accessed at <a href="https://www.koltepatil.com" target="_blank" rel="noopener noreferrer">https://www.koltepatil.com</a>.</p>
 
-                        <h2>5. MahaRERA Registration Details</h2>
-                        <p>The projects at Life Republic Township are registered with MahaRERA. The registration numbers are:</p>
+                        <h2>5. MahaRERA Registration & Compliance</h2>
+                        <p>Real Estate Agent MahaRERA Registration Number: <strong>A52100039548</strong>.</p>
+                        <p>The projects within Life Republic Township are registered with the Maharashtra Real Estate Regulatory Authority (MahaRERA). Registration certificates and details are verifiable on the official MahaRERA website:</p>
                         <ul>
-                            <li><strong>Canvas:</strong> P52100077008</li>
-                            <li><strong>Echoes:</strong> P52100079424</li>
-                            <li><strong>Aros:</strong> P52100079623</li>
-                            <li><strong>24K Espada:</strong> P52100002646</li>
-                            <li><strong>Universe:</strong> P52100027629</li>
+                            <li><strong>Atmos (Sector R22):</strong> P52100051765</li>
+                            <li><strong>Aros (Sector R13):</strong> P52100047921</li>
+                            <li><strong>Echoes (Sector R31):</strong> PM1261012502409</li>
+                            <li><strong>Duet (Sector R34):</strong> P52100079424</li>
+                            <li><strong>Qrious (Sector R14):</strong> P52100079623</li>
+                            <li><strong>Canvas (Sector R5):</strong> P52100077008</li>
+                            <li><strong>The Universe (Sector R10):</strong> P52100027629</li>
+                            <li><strong>24K Espada (Sector R31):</strong> P52100002646</li>
+                            <li><strong>Nora Bungalow Plots (Sector R17B):</strong> P52100022278</li>
                         </ul>
                         <p>For more details, visit the official MahaRERA website at <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">https://maharera.maharashtra.gov.in</a>.</p>
+
+                        <h2>6. Lead Generation & DND/NDNC Consent</h2>
+                        <p>By submitting your contact details (name, email address, and mobile number) on any enquiry form, callback request, brochure download, or interactive calculator across this website, you expressly authorize our sales relationship managers and authorized representatives to contact you via Phone Calls, WhatsApp messages, or SMS regarding project updates, pricing, floor plans, and site visits, overriding any National Do Not Call (NDNC) or Telecom Do Not Disturb (DND) registration.</p>
                     </div>
                 </div>
             </div>

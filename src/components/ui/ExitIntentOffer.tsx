@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Download, Lock, ArrowRight, ShieldCheck } from 'lucide-react';
 import { api } from '../../services/api';
@@ -150,8 +151,12 @@ export const ExitIntentOffer: React.FC = () => {
                             </button>
                         </form>
                         
-                        <p className="text-[10px] text-white/30 mt-10 font-light max-w-md uppercase tracking-wider">
-                            Your privacy is our priority. No spam, only the exclusive price list.
+                        <p className="text-[10px] text-white/50 mt-8 font-light max-w-md leading-relaxed text-center">
+                            🔒 By requesting details, you agree to our{' '}
+                            <Link to="/privacy-policy" onClick={() => setIsVisible(false)} className="underline text-amber-400 hover:text-white">
+                                Privacy Policy
+                            </Link>{' '}
+                            and authorize our authorized sales representatives to contact you via Call, SMS, or WhatsApp (overriding NDNC/DND).
                         </p>
                     </div>
                 </motion.div>

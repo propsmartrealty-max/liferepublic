@@ -36,13 +36,22 @@ export const PrivacyPolicy: React.FC = () => {
                         </ul>
 
                         <h2>3. Google Analytics & Advertising</h2>
-                        <p>We use Google Analytics and Google Ads to understand our audience and deliver relevant advertisements. Google may use cookies to serve ads based on your prior visits to our website. You may opt out of personalized advertising by visiting Google's Ads Settings.</p>
+                        <p>We use Google Analytics and Google Ads to understand our audience and deliver relevant advertisements. Google may use cookies to serve ads based on your prior visits to our website. You may opt out of personalized advertising by visiting Google's Ads Settings (<a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">https://adssettings.google.com</a>).</p>
 
-                        <h2>4. Data Security</h2>
-                        <p>We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure.</p>
+                        <h2>4. Non-Disclosure & No Sale of Personal Data</h2>
+                        <p>We strictly do not sell, rent, trade, or share your personally identifiable information with third-party advertisers or unauthorized external brokers. Your details are used solely by our authorized project sales relationship managers to provide you with the requested property brochures, price lists, and site visit scheduling.</p>
 
-                        <h2>5. Contact Us</h2>
-                        <p>If you have questions or comments about this policy, you may contact our Data Protection Officer at privacy@life-republic.in.</p>
+                        <h2>5. Communication Consent & DND Regulations</h2>
+                        <p>By submitting your telephone number on our website forms, you expressly grant permission to our sales desk to reach out via phone calls, SMS, and WhatsApp messages regarding project availability and booking appointments, overriding any prior registration on the National Do Not Call (NDNC) registry or Telecom Do Not Disturb (DND) registry.</p>
+
+                        <h2>6. Data Retention & Deletion Requests</h2>
+                        <p>You have the right to request access to the personal data we hold about you or request immediate deletion of your contact number from our calling database. To exercise these rights, please email us at privacy@life-republic.in with the subject line "Data Deletion Request".</p>
+
+                        <h2>7. Data Security</h2>
+                        <p>We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. All data transmission is encrypted via 256-bit SSL/TLS protocol.</p>
+
+                        <h2>8. Contact Us</h2>
+                        <p>If you have questions or comments about this policy, you may contact our Data Protection Officer at privacy@life-republic.in or visit our Experience Centre at Life Republic Township, Marunji Road, Hinjewadi, Pune 411057.</p>
                     </div>
                 </div>
             </div>

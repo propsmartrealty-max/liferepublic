@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Phone, MapPin, Navigation, CheckCircle2, ArrowRight } from 'lucide-react';
 import { SEO } from '../components/seo/SEO';
@@ -107,8 +108,8 @@ export const Contact: React.FC = () => {
     return (
         <div className="pt-4">
             <SEO
-                title="Kolte Patil Life Republic Sales Office | Official Booking"
-                description="★ 4.9/5 Rating (1,840+ Reviews). Official Life Republic Sales Office, Hinjewadi Pune. Open 9 AM - 7 PM. Book VIP Site Visit & Get Direct Developer Pricing!"
+                title="Kolte Patil Life Republic Sales Office | Experience Centre"
+                description="★ 4.9/5 Rating (1,840+ Reviews). Life Republic Sales Office & Experience Centre, Hinjewadi Pune. Open 9 AM - 7 PM. Book VIP Site Visit & Get Developer Pricing!"
                 keywords="Life Republic Contact No, Kolte Patil Sales Office Hinjewadi, Life Republic Address, Site Visit Life Republic, Booking Office Hinjewadi, Kolte Patil Customer Care, life republic sales office or main office mulshi"
                 canonical="/contact"
                 schema={contactSchemas}
@@ -339,6 +340,14 @@ const ContactForm: React.FC = () => {
                     Your Requirements *
                 </label>
             </div>
+
+            <p className="text-[11px] text-white/50 leading-relaxed text-center pt-2">
+                🔒 By submitting, you agree to our{' '}
+                <Link to="/privacy-policy" className="underline text-amber-400 hover:text-white">
+                    Privacy Policy
+                </Link>{' '}
+                and authorize our authorized sales representatives to contact you via Call, SMS, or WhatsApp (overriding NDNC/DND).
+            </p>
 
             <button 
                 type="submit" 

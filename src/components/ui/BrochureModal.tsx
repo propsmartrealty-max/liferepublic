@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle, Download, FileText } from 'lucide-react';
 import { api } from '../../services/api';
@@ -129,6 +130,14 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose, p
                                                 Email Address *
                                             </label>
                                         </div>
+
+                                        <p className="text-[11px] text-white/50 leading-relaxed text-center">
+                                            🔒 By requesting the brochure, you agree to our{' '}
+                                            <Link to="/privacy-policy" onClick={onClose} className="underline text-amber-400 hover:text-white">
+                                                Privacy Policy
+                                            </Link>{' '}
+                                            and authorize our sales desk to contact you via Call, SMS, or WhatsApp (overriding NDNC/DND).
+                                        </p>
 
                                         <button 
                                             type="submit" 
