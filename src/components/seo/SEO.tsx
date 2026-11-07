@@ -114,25 +114,18 @@ export const SEO: React.FC<SEOProps> = ({
             cluster.push(...seoMatrix.lifestyle.township);
         }
         
-        // 6. Global Injectors (Applied to almost all core pages to maximize long-tail hits)
-        if (path === '/' || path.includes('projects') || path.includes('location')) {
-            cluster.push(...seoMatrix.it_hub);
-            cluster.push(...seoMatrix.luxury);
-            cluster.push(...seoMatrix.lifestyle.long_tail);
-            cluster.push(...seoMatrix.lifestyle.mega_combinations);
-            cluster.push(...seoMatrix.configurations.general);
-        }
-
-        // Deduplicate and return
-        return [...new Set(cluster)].join(', ');
+        // Deduplicate, cap to top 12 focused terms to prevent Google SpamBrain keyword-stuffing flags
+        return [...new Set(cluster)].slice(0, 12).join(', ');
     };
 
     const pathKeywords = getPathSpecificKeywords(location.pathname);
     
-    // De-duplicate and combine keywords from props and matrix
-    const metaKeywords = keywords 
-        ? `${keywords}, ${pathKeywords}` 
-        : pathKeywords;
+    // De-duplicate and combine keywords from props and matrix (strictly capped to 15 terms)
+    const combinedTerms = (keywords ? `${keywords}, ${pathKeywords}` : pathKeywords)
+        .split(',')
+        .map(t => t.trim())
+        .filter(Boolean);
+    const metaKeywords = [...new Set(combinedTerms)].slice(0, 15).join(', ');
 
     const globalSchema = generateGlobalSchema(location.pathname);
     const navSchema = generateSiteNavigationSchema();
