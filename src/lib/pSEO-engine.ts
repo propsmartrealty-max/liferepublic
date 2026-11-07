@@ -40,7 +40,7 @@ export const pSEOMatrix = {
         { key: 'villas', title: 'Luxury Villas', bhk: 4, minPrice: '₹2.85 Cr*', maxPrice: '₹5.50 Cr*', lowPriceNum: 28500000, highPriceNum: 55000000, aliases: ['villas', 'luxury-villas', 'villa', 'bungalow-villas'] },
         { key: 'row-houses', title: 'Row Houses', bhk: 4, minPrice: '₹2.35 Cr*', maxPrice: '₹3.60 Cr*', lowPriceNum: 23500000, highPriceNum: 36000000, aliases: ['row-houses', 'row-house', 'townhouses'] },
         { key: 'twin-bungalows', title: 'Twin Bungalows', bhk: 4, minPrice: '₹2.95 Cr*', maxPrice: '₹4.50 Cr*', lowPriceNum: 29500000, highPriceNum: 45000000, aliases: ['twin-bungalows', 'bungalows', 'independent-bungalows'] },
-        { key: 'studio-apartments', title: 'Studio Apartments', bhk: 1, minPrice: '₹38 Lakhs*', maxPrice: '₹45 Lakhs*', lowPriceNum: 3800000, highPriceNum: 4500000, aliases: ['studio-apartments', 'studio', '1-rk', 'rk'] },
+        { key: 'luxury-residences', title: 'Luxury Residences', bhk: 3, minPrice: '₹1.15 Cr*', maxPrice: '₹2.80 Cr*', lowPriceNum: 11500000, highPriceNum: 28000000, aliases: ['luxury-residences', 'luxury-homes', 'premium-residences', 'luxury-flats'] },
         { key: 'plots', title: 'Bungalow Plots', bhk: 0, minPrice: '₹1.25 Cr*', maxPrice: '₹3.50 Cr*', lowPriceNum: 12500000, highPriceNum: 35000000, aliases: ['plots', 'bungalow-plots', 'residential-plots', 'land'] },
         { key: 'commercial-shops', title: 'Commercial Shops & Retail', bhk: 0, minPrice: '₹65 Lakhs*', maxPrice: '₹2.50 Cr*', lowPriceNum: 6500000, highPriceNum: 25000000, aliases: ['commercial-shops', 'shops', 'commercial', 'retail', 'showrooms', 'offices'] }
     ],

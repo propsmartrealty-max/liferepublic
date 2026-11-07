@@ -78,6 +78,10 @@ export const SEO: React.FC<SEOProps> = ({
             if (path.includes('canvas')) cluster.push(...seoMatrix.projects.canvas);
             if (path.includes('echoes')) cluster.push(...seoMatrix.projects.echoes);
             if (path.includes('villas')) cluster.push(...seoMatrix.projects.villas);
+            if (path.includes('qrious')) cluster.push(...(seoMatrix.projects.qrious || []));
+            if (path.includes('nora')) cluster.push(...(seoMatrix.projects.nora || []));
+            if (path.includes('i-tower') || path.includes('i-towers')) cluster.push(...(seoMatrix.projects["i-towers"] || []));
+            if (path.includes('3rd-avenue')) cluster.push(...(seoMatrix.projects["3rd-avenue"] || []));
         }
 
         // 3. Location & Region Keywords

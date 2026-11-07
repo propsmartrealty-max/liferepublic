@@ -48,6 +48,8 @@
 /project/kolte-patil-life-republic-oro-avenue-smart-1-2-bhk-hinjewadi /projects/kolte-patil-life-republic-oro-avenue-smart-2-bhk-hinjewadi 301
 
 /1-bhk-flats-in-hinjewadi /2-bhk-flats-in-hinjewadi 301
+/studio-apartments-in-hinjewadi /2-bhk-flats-in-hinjewadi 301
+/search/*studio-apartments* /2-bhk-flats-in-hinjewadi 301
 
 /projects/kolte-patil-life-republic-i-tower /projects/kolte-patil-life-republic-i-towers-smart-homes-hinjewadi 301
 /project/kolte-patil-life-republic-i-tower /projects/kolte-patil-life-republic-i-towers-smart-homes-hinjewadi 301

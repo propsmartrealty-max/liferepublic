@@ -1,33 +1,32 @@
 export const seoClusters = {
     configurations: [
-        { name: "2 BHK Flats in Hinjewadi", slug: "2-bhk-flats-in-hinjewadi" },
-        { name: "3 BHK Flats in Mahalunge", slug: "3-bhk-flats-in-mahalunge" },
-        { name: "4 BHK Luxury Apartments in Baner", slug: "4-bhk-luxury-apartments-in-baner" },
-        { name: "4 BHK Duplex in Pune West", slug: "4-bhk-duplex-in-pune-west" },
-        { name: "Premium Skyduplex in Hinjewadi", slug: "premium-skyduplex-in-hinjewadi" },
-        { name: "5 BHK Penthouses in Mahalunge", slug: "5-bhk-penthouses-in-mahalunge" },
-        { name: "Simplex Homes in Hinjewadi Phase 1", slug: "simplex-homes-in-hinjewadi-phase-1" },
-        { name: "Ready Possession 2 BHK in Pune", slug: "ready-possession-2-bhk-in-pune" },
-        { name: "Under Construction 3 BHK in Baner", slug: "under-construction-3-bhk-in-baner" },
+        { name: "Kolte Patil Life Republic 2 BHK Flats", slug: "2-bhk-flats-in-hinjewadi" },
+        { name: "Kolte Patil Life Republic 3 BHK Luxury Residences", slug: "3-bhk-flats-in-hinjewadi" },
+        { name: "Kolte Patil Life Republic 4 BHK Luxury Apartments", slug: "4-bhk-flats-in-hinjewadi" },
+        { name: "Kolte Patil Life Republic 24K Espada Row Houses", slug: "row-houses-in-life-republic" },
+        { name: "Kolte Patil Life Republic Signature Villas", slug: "luxury-villas-near-hinjewadi" },
+        { name: "Kolte Patil Life Republic Nora Bungalow Plots", slug: "plots-in-hinjewadi" },
+        { name: "Ready Possession Flats in Life Republic", slug: "ready-possession-2-bhk-in-pune" },
+        { name: "Under Construction 3 BHK in Atmos & Aros", slug: "under-construction-3-bhk-in-baner" },
+        { name: "New Launch Echoes 2 & 2.5 BHK Hinjewadi", slug: "kolte-patil-life-republic-echoes" }
     ],
     locations: [
-        { name: "Real Estate in Hinjewadi", slug: "real-estate-in-hinjewadi" },
-        { name: "Property in Mahalunge", slug: "property-in-mahalunge" },
-        { name: "Baner Real Estate Market", slug: "baner-real-estate-market" },
-        { name: "Flats near Rajiv Gandhi IT Park", slug: "flats-near-rajiv-gandhi-it-park" },
-        { name: "Townships in Pune West", slug: "townships-in-pune-west" },
-        { name: "Properties near Mumbai-Pune Expressway", slug: "properties-near-mumbai-pune-expressway" },
-        { name: "Wakad Residential Projects", slug: "wakad-residential-projects" },
-        { name: "Balewadi High Street Properties", slug: "balewadi-high-street-properties" },
+        { name: "Kolte Patil Life Republic Hinjewadi Phase 1", slug: "flats-near-hinjewadi-phase-1" },
+        { name: "Kolte Patil Life Republic Marunji Road Gateway", slug: "flats-near-marunji" },
+        { name: "Kolte Patil Life Republic Rajiv Gandhi IT Park", slug: "flats-near-rajiv-gandhi-it-park" },
+        { name: "Kolte Patil Life Republic Near Hinjewadi Metro Line 3", slug: "properties-near-mumbai-pune-expressway" },
+        { name: "Kolte Patil Life Republic Near Wakad Corridor", slug: "flats-near-wakad" },
+        { name: "Kolte Patil Life Republic Near Tathawade Hub", slug: "flats-near-tathawade" },
+        { name: "Kolte Patil Life Republic Near Punawale", slug: "flats-near-punawale" }
     ],
     themes: [
-        { name: "Integrated Townships in Pune", slug: "integrated-townships-in-pune" },
-        { name: "Gated Communities in Hinjewadi", slug: "gated-communities-in-hinjewadi" },
-        { name: "Luxury Real Estate Investment Pune", slug: "luxury-real-estate-investment-pune" },
-        { name: "Best Places to Invest in Pune 2026", slug: "best-places-to-invest-in-pune-2026" },
-        { name: "Smart Homes in Mahalunge", slug: "smart-homes-in-mahalunge" },
-        { name: "Eco-friendly Projects in Pune", slug: "eco-friendly-projects-in-pune" },
-        { name: "Kolte Patil Life Republic Reviews", slug: "kolte-patil-life-republic-reviews" },
+        { name: "Kolte Patil Life Republic 390-Acre Master Township", slug: "integrated-townships-in-pune" },
+        { name: "Kolte Patil Life Republic Price List 2026", slug: "kolte-patil-life-republic-price" },
+        { name: "Kolte Patil Life Republic Floor Plans & Layouts", slug: "floor-plans-life-republic" },
+        { name: "Kolte Patil Life Republic Sales Office & VIP Visit", slug: "contact" },
+        { name: "Kolte Patil Life Republic MahaRERA Title Approvals", slug: "rera-number-life-republic" },
+        { name: "Kolte Patil Life Republic Resident Reviews (4.9★)", slug: "kolte-patil-life-republic-reviews" },
+        { name: "Crimson Anisha Global School Life Republic", slug: "township-guide" }
     ]
 };
 
