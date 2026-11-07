@@ -66,6 +66,26 @@ const HOME_FAQS = [
     {
         question: "How can I schedule a private site visit to Kolte Patil Life Republic?",
         answer: "You can book a private VIP site tour with township concierge assistance by clicking the 'Schedule Site Visit' button on this page or reaching out via phone or WhatsApp. Complimentary pickup and drop services are available from Hinjewadi Phase 1."
+    },
+    {
+        question: "What are the typical maintenance charges in Kolte Patil Life Republic?",
+        answer: "Maintenance charges typically range between ₹2.50 to ₹3.50 per sq.ft. per month depending on the cluster and high-rise amenities. This covers 24/7 security, clubhouse maintenance, landscaping, captive water management, and common area solar power."
+    },
+    {
+        question: "Are resale flats available in Kolte Patil Life Republic?",
+        answer: "Yes, verified resale opportunities are available in established ready-to-move clusters including First Avenue, Arezo, Oro Avenue, and Universe. Interested buyers can request an updated resale inventory list directly from our sales desk."
+    },
+    {
+        question: "Which major banks offer pre-approved home loans for Life Republic?",
+        answer: "All premier financial institutions including State Bank of India (SBI), HDFC Bank, ICICI Bank, Axis Bank, and Bank of Baroda have pre-approved the projects with competitive interest rates and special PMAY subsidy assistance."
+    },
+    {
+        question: "What is the expected rental yield for investors in Life Republic Hinjewadi?",
+        answer: "Owing to its proximity to Hinjewadi Phase 1 IT Park (4.5 km) housing 450,000+ tech professionals, Life Republic commands healthy rental yields of 6.2% to 7.1%, with 2 BHK flats renting between ₹22,000 to ₹30,000/month and 3 BHK flats commanding ₹32,000 to ₹45,000/month."
+    },
+    {
+        question: "Are commercial shops or retail spaces available inside Life Republic?",
+        answer: "Yes, high-street retail spaces, daily convenience stores, supermarkets, and boutique commercial units are integrated along the 150-ft Spine Road, providing a self-sufficient township ecosystem for 20,000+ residents."
     }
 ];
 
@@ -139,6 +159,16 @@ const CONNECTIVITY_LANDMARKS = [
 
 export const Home: React.FC = () => {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
+    const [clusterCategory, setClusterCategory] = useState<string>('all');
+
+    const filteredProjects = projectsRegistry.filter(project => {
+        if (clusterCategory === 'all') return true;
+        if (clusterCategory === '2-bhk') return project.title.includes('2 BHK') || project.description.includes('2 BHK') || project.category === 'Smart Homes';
+        if (clusterCategory === '3-bhk') return project.title.includes('3 BHK') || project.title.includes('4 BHK') || project.category === 'Luxury' || project.category === 'Lifestyle';
+        if (clusterCategory === 'villas') return project.category === 'Villas' || project.title.includes('Row Houses') || project.id.includes('espada') || project.id.includes('villas') || project.id.includes('sound-of-soul');
+        if (clusterCategory === 'plots') return project.category === 'Plots' || project.id.includes('nora');
+        return true;
+    });
 
     const handleEnquire = (project?: string, type: string = 'General Enquiry') => {
         if (typeof window !== 'undefined') {
@@ -428,10 +458,32 @@ export const Home: React.FC = () => {
                     <p className="text-gray-400 mt-4 text-base">
                         From compact smart homes for IT professionals to grand 4 BHK row houses and bungalow plots, Life Republic offers an expansive spectrum of luxury living.
                     </p>
+
+                    <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
+                        {[
+                            { id: 'all', label: 'All 16 Sectors' },
+                            { id: '2-bhk', label: '2 BHK Smart Homes (From ₹58L*)' },
+                            { id: '3-bhk', label: '3 & 4 BHK Luxury High-Rise' },
+                            { id: 'villas', label: 'Row Houses & Signature Villas' },
+                            { id: 'plots', label: 'Custom Bungalow Plots' }
+                        ].map((cat) => (
+                            <button
+                                key={cat.id}
+                                onClick={() => setClusterCategory(cat.id)}
+                                className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+                                    clusterCategory === cat.id
+                                        ? 'bg-[#E5C07B] text-black shadow-lg font-bold'
+                                        : 'bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10'
+                                }`}
+                            >
+                                {cat.label}
+                            </button>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projectsRegistry.map((project) => (
+                    {filteredProjects.map((project) => (
                         <article
                             key={project.id}
                             className="bg-[#121212] rounded-2xl overflow-hidden border border-white/10 hover:border-[#E5C07B]/50 transition-all duration-300 flex flex-col group shadow-lg"
@@ -636,6 +688,66 @@ export const Home: React.FC = () => {
                     <p className="text-xs text-gray-400 leading-relaxed">
                         {RERA_DISCLAIMER}
                     </p>
+                </div>
+            </section>
+
+            {/* SECTION 6.5: TOWNSHIP EXPANSION & FUTURE BLUEPRINT (2026-2030) */}
+            <section id="township-expansion" className="py-20 px-4 md:px-8 max-w-7xl mx-auto border-b border-white/10 bg-[#0d0f16]/60 rounded-3xl my-12">
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <div className="inline-flex items-center gap-2 text-[#E5C07B] text-xs uppercase font-semibold tracking-widest mb-3">
+                        <Sparkles size={14} />
+                        <span>The 2026–2030 Growth Horizon</span>
+                    </div>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-white tracking-tight">
+                        Expanding the Kolte Patil Life Republic Vision
+                    </h2>
+                    <p className="text-gray-400 mt-4 text-base">
+                        From a 390-acre greenfield township to a self-sustaining sovereign metropolis: explore the next phase of infrastructure, high-rise sectors, and transit nodes.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#E5C07B]/40 transition-all space-y-3">
+                        <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-[#E5C07B] flex items-center justify-center font-bold">01</div>
+                        <h3 className="font-bold text-white text-base">Pune Metro Line 3 Integration</h3>
+                        <p className="text-xs text-gray-400 leading-relaxed">
+                            With Hinjewadi Phase 1 Metro Station just 4.2 km away, direct elevated rapid rail links residents to Baner, Aundh, and Shivajinagar Civil Court in ~25 minutes.
+                        </p>
+                    </div>
+
+                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#E5C07B]/40 transition-all space-y-3">
+                        <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-[#E5C07B] flex items-center justify-center font-bold">02</div>
+                        <h3 className="font-bold text-white text-base">110M PMRDA Ring Road Node</h3>
+                        <p className="text-xs text-gray-400 leading-relaxed">
+                            Direct interchange with the upcoming 110-meter PMRDA Ring Road at Marunji eliminates intra-city bottlenecks, ensuring seamless transit to Chakan, Talegaon, and PCMC.
+                        </p>
+                    </div>
+
+                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#E5C07B]/40 transition-all space-y-3">
+                        <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-[#E5C07B] flex items-center justify-center font-bold">03</div>
+                        <h3 className="font-bold text-white text-base">Next-Gen High-Rise Towers</h3>
+                        <p className="text-xs text-gray-400 leading-relaxed">
+                            Following the landmark success of Canvas (40 storeys), new residential sectors (Echoes, Duet, Atmos) feature expansive sky gardens, co-working lounges, and dual balconies.
+                        </p>
+                    </div>
+
+                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#E5C07B]/40 transition-all space-y-3">
+                        <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-[#E5C07B] flex items-center justify-center font-bold">04</div>
+                        <h3 className="font-bold text-white text-base">Civic & Commercial Expansion</h3>
+                        <p className="text-xs text-gray-400 leading-relaxed">
+                            Planned expansion of high-street retail, 100+ branded storefronts along the 150-ft Spine Road, captive healthcare centers, and EV charging stations across all sectors.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="mt-12 text-center">
+                    <Link
+                        to="/township-guide"
+                        className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#E5C07B] text-black font-bold text-sm hover:bg-amber-300 transition-all shadow-lg"
+                    >
+                        <span>Explore the Full 390-Acre Master Township Monograph</span>
+                        <ArrowRight size={16} />
+                    </Link>
                 </div>
             </section>
 
