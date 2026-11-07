@@ -25,9 +25,8 @@ Today, Life Republic is home to more than 20,000 residents across 12,000+ homes,
 ### 2.1 Life Republic Qrious (Sector R1)
 - **Concept**: Future-forward, tech-enabled starter and family homes.
 - **RERA Number**: P52100028753
-- **Typologies**: 1 BHK, 2 BHK, 3 BHK
+- **Typologies**: 2 BHK, 3 BHK
 - **Carpet Area Details**:
-  - 1 BHK: 450 sq.ft. to 520 sq.ft. (Price: ₹42 Lakhs - ₹48 Lakhs)
   - 2 BHK Compact: 620 sq.ft. to 690 sq.ft. (Price: ₹58 Lakhs - ₹66 Lakhs)
   - 2 BHK Large: 710 sq.ft. to 780 sq.ft. (Price: ₹68 Lakhs - ₹75 Lakhs)
   - 3 BHK: 840 sq.ft. to 920 sq.ft. (Price: ₹82 Lakhs - ₹92 Lakhs)

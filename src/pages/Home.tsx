@@ -155,18 +155,22 @@ export const Home: React.FC = () => {
             "@type": "Product",
             "@id": "https://life-republic.in/#township-residences",
             "name": "Kolte Patil Life Republic Hinjewadi",
-            "description": "390-Acre Integrated Gated Township in Marunji, Hinjewadi, Pune offering premium 1, 2, 2.5, 3 & 4 BHK apartments, luxury row houses, and bungalow plots.",
+            "description": "390-Acre Integrated Gated Township in Marunji, Hinjewadi, Pune offering premium 2, 2.5, 3 & 4 BHK apartments, luxury row houses, and bungalow plots.",
             "image": "https://life-republic.in/hero-new.jpg",
             "brand": {
                 "@type": "Brand",
-                "name": "Kolte-Patil Developers Ltd."
+                "name": "Kolte-Patil Developers Ltd.",
+                "sameAs": [
+                    "https://en.wikipedia.org/wiki/Kolte-Patil_Developers",
+                    "https://www.koltepatil.com/"
+                ]
             },
             "offers": {
                 "@type": "AggregateOffer",
                 "priceCurrency": "INR",
-                "lowPrice": "4000000",
+                "lowPrice": "5800000",
                 "highPrice": "35000000",
-                "price": "4000000",
+                "price": "5800000",
                 "offerCount": "11",
                 "availability": "https://schema.org/InStock",
                 "validFrom": "2026-01-01"
@@ -209,9 +213,9 @@ export const Home: React.FC = () => {
             "@type": "ApartmentComplex",
             "@id": "https://life-republic.in/#complex",
             "name": "Kolte Patil Life Republic Hinjewadi",
-            "alternateName": ["Life Republic Pune", "Kolte Patil Life Republic Township"],
+            "alternateName": ["Life Republic Pune", "Kolte Patil Life Republic Township", "Kolte Patil Life Republic"],
             "url": "https://life-republic.in",
-            "description": "A 390-acre integrated gated township in Marunji, Hinjewadi, Pune offering 1, 2, 2.5, 3 & 4 BHK apartments, row houses, and bungalow plots.",
+            "description": "A 390-acre integrated gated township in Marunji, Hinjewadi, Pune offering 2, 2.5, 3 & 4 BHK apartments, row houses, and bungalow plots.",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Life Republic Township, Marunji Road",
@@ -226,8 +230,13 @@ export const Home: React.FC = () => {
                 "longitude": 73.7147
             },
             "hasMap": "https://maps.google.com/?cid=1236873151214041762",
-            "numberOfBedrooms": "1 to 5",
-            "petsAllowed": true
+            "numberOfBedrooms": "2 to 5",
+            "petsAllowed": true,
+            "containedInPlace": {
+                "@type": "AdministrativeArea",
+                "name": "Hinjawadi, Pune",
+                "sameAs": "https://en.wikipedia.org/wiki/Hinjawadi"
+            }
         },
         {
             "@context": "https://schema.org",
@@ -248,7 +257,7 @@ export const Home: React.FC = () => {
         <div className="w-full bg-[#0a0a0a] text-white selection:bg-[#E5C07B] selection:text-black">
             <SEO
                 title="Kolte Patil Life Republic Hinjewadi | 2 & 3 BHK from ₹58L*"
-                description="★ 4.9/5 Rating (1,840+ Reviews). 390-Acre Township in Hinjewadi Pune. Luxury 2, 3, 4 BHK & Villas From ₹58L*. Download 2026 Price List & Book VIP Visit!"
+                description="★ 4.9/5 Rating (1,840+ Reviews). Kolte Patil Life Republic 390-Acre Township Hinjewadi Pune. Luxury 2, 3 BHK & Villas from ₹58L*. Download Price List & Floor Plans!"
                 keywords="kolte patil life republic, life republic hinjewadi, life republic pune, kolte patil hinjewadi, flats in hinjewadi, 2 bhk flats in hinjewadi, 3 bhk in hinjewadi, life republic atmos, life republic aros, life republic echoes, life republic duet, life republic 24k espada, life republic floor plan, life republic price, life republic rera, life republic sales office, life republic sales office or main office mulshi"
                 canonical="/"
                 schema={homeCustomSchema}

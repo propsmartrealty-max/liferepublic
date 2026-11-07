@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
                             </div>
                         </div>
                         <p className="text-[#202124] leading-relaxed max-w-sm">
-                            <strong>Kolte Patil Life Republic Township Hinjewadi</strong> is a premium 390+ acre integrated township. Offering 1, 2, 3 BHK flats and villas near Rajiv Gandhi IT Park.
+                            <strong>Kolte Patil Life Republic Township Hinjewadi</strong> is a premium 390+ acre integrated township. Offering premium 2, 3 & 4 BHK flats and luxury villas near Rajiv Gandhi IT Park.
                         </p>
                         <div className="flex gap-4">
                             {[
@@ -190,7 +190,7 @@ export const Footer: React.FC = () => {
                         <div className="space-y-6">
                             <div>
                                 <h4 className="font-bold text-[#202124] mb-2">What are the configurations and price range?</h4>
-                                <p className="text-text-muted">Life Republic offers smart 2 & 3 BHKs (Qrious, Echoes) starting from ₹75 Lakhs, to Ultra-Luxury 3 & 4 BHKs (Canvas) starting at ₹1.45 Cr, catering to IT professionals and luxury home buyers.</p>
+                                <p className="text-text-muted">Life Republic offers smart 2 & 3 BHKs (Universe, Echoes, Duet) starting from ₹58 Lakhs*, to Ultra-Luxury 3 & 4 BHKs (Canvas) and Row Houses (24K Espada) up to ₹3.40 Cr*, catering to IT professionals and luxury home buyers.</p>
                             </div>
                             <div>
                                 <h4 className="font-bold text-[#202124] mb-2">Are the projects MahaRERA registered?</h4>

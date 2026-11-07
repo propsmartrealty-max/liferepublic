@@ -266,11 +266,11 @@ export const Navbar: React.FC = () => {
                         <Link
                             to="/"
                             className="flex items-center gap-3 cursor-interactive group"
-                            aria-label="Kolte-Patil Life Republic Homepage"
+                            aria-label="Kolte Patil Life Republic Hinjewadi Homepage"
                         >
                             <img
                                 src="/logo.webp"
-                                alt="Kolte-Patil Life Republic"
+                                alt="Kolte Patil Life Republic Hinjewadi Pune"
                                 width="180"
                                 height="58"
                                 loading="eager"

@@ -88,10 +88,10 @@ export const pseoRegistry: Record<string, LandingConfig> = {
     },
     'kolte-patil-life-republic-price': {
         title: 'Kolte Patil Life Republic Price List 2026 | All Projects',
-        description: 'price list for all Kolte Patil Life Republic projects. 1, 2, 3, 4 BHK flats starting ₹45 Lakhs.',
+        description: 'Updated price list for all Kolte Patil Life Republic projects. Premium 2, 3 & 4 BHK flats starting ₹58 Lakhs*.',
         keywords: 'kolte patil life republic price, life republic price list 2026, life republic hinjewadi price',
         infraScore: 97, rentalYield: '5.5% - 7.0%', commutePhase1: '10 mins',
-        highlights: ['pricing from ₹45L to ₹3Cr+', 'Flexible payment plans', 'Home loan pre-approved']
+        highlights: ['Verified pricing from ₹58L to ₹3.5Cr*', 'Flexible payment plans', 'Home loan pre-approved']
     },
     'kolte-patil-life-republic-reviews': {
         title: 'Kolte Patil Life Republic Reviews 2026 | Resident Feedback',

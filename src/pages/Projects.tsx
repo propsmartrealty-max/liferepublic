@@ -16,8 +16,8 @@ const Projects: React.FC = () => {
     return (
         <div className="pt-32 pb-20 bg-black min-h-[50vh]">
                         <SEO
-                title="Projects in Kolte Patil Life Republic Township Hinjewadi | 1, 2, 3 BHK & Villas"
-                description="Explore all residential projects in Kolte Patil Life Republic Township Hinjewadi. Choose from 1, 2, 3 BHK flats, row houses, and luxury villas. Check current pricing, floor plans, and availability."
+                title="Projects in Kolte Patil Life Republic Hinjewadi | 2, 3 BHK & Villas"
+                description="Explore all residential projects in Kolte Patil Life Republic Township Hinjewadi. Choose from premium 2, 3 & 4 BHK flats, row houses, and luxury villas from ₹58L*. Floor plans & pricing."
                 keywords="Kolte Patil Life Republic Projects, Kolte Patil Life Republic Township Hinjewadi, Flats in Hinjewadi, 2 BHK in Life Republic, 3 BHK Flats Pune, Row Houses in Hinjewadi, Villas in Pune, New Launch Projects Hinjewadi, Ready Possession Flats"
                 canonical="/projects"
             />

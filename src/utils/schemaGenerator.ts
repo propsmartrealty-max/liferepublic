@@ -21,7 +21,7 @@ export const generateGlobalSchema = (path: string = '/') => {
                 },
                 'image': { '@id': `${DOMAIN}/#logo` },
                 'telephone': '+91-7744009295',
-                'priceRange': '₹40L - ₹3Cr',
+                'priceRange': '₹58L - ₹3.5Cr',
                 'address': {
                     '@type': 'PostalAddress',
                     'streetAddress': 'Life Republic Township, Marunji Road',
@@ -81,7 +81,7 @@ export const generateGlobalSchema = (path: string = '/') => {
                 'provider': { '@id': `${DOMAIN}/#organization` },
                 'mainEntity': { '@id': `${DOMAIN}/#organization` },
                 'primaryImageOfPage': { '@id': `${DOMAIN}${path}#primaryimage` },
-                'description': 'Explore Kolte Patil Life Republic Hinjewadi, a 390-acre integrated township in Pune with premium 1, 2, 3 BHK flats and luxury villas.'
+                'description': 'Explore Kolte Patil Life Republic Hinjewadi, a 390-acre integrated township in Pune with premium 2, 3 & 4 BHK flats and luxury villas.'
             }
         ]
     };
@@ -379,7 +379,7 @@ export const generateClusterProductSchema = (cluster: any) => {
                     'latitude': 18.6186,
                     'longitude': 73.7147
                 },
-                'numberOfBedrooms': '1 to 5',
+                'numberOfBedrooms': '2 to 5',
                 'petsAllowed': true
             },
             {
@@ -397,7 +397,7 @@ export const generateClusterProductSchema = (cluster: any) => {
                 'mainEntity': (cluster.faqs && cluster.faqs.length > 0 ? cluster.faqs : [
                     {
                         question: `What is the starting price for flats in ${cluster.name} Life Republic?`,
-                        answer: `Homes in ${cluster.name} at Kolte Patil Life Republic start from ${cluster.price || '₹40 Lakhs*'}. Premium configurations include ${cluster.configurations?.map((c: any) => c.type).join(', ') || cluster.category} with expansive carpet areas.`
+                        answer: `Homes in ${cluster.name} at Kolte Patil Life Republic start from ${cluster.price || '₹58 Lakhs*'}. Premium configurations include ${cluster.configurations?.map((c: any) => c.type).join(', ') || cluster.category} with expansive carpet areas.`
                     },
                     {
                         question: `What is the MahaRERA registration number for ${cluster.name}?`,
@@ -430,7 +430,7 @@ export const generateCollectionSchema = (projects: Project[]) => {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "Kolte Patil Life Republic Projects",
-        "description": "Browse premium 1, 2, 3 BHK flats and villas in Life Republic Township, Hinjewadi.",
+        "description": "Browse premium 2, 3 & 4 BHK flats and villas in Life Republic Township, Hinjewadi.",
         "url": `${DOMAIN}/projects`,
         "mainEntity": {
             "@type": "OfferCatalog",
@@ -459,7 +459,7 @@ export const generateLocalBusinessSchema = () => {
         'name': 'Kolte Patil Life Republic Hinjewadi Experience Centre',
         'image': `${DOMAIN}/images/experience-centre.webp`,
         'telephone': '+91-7744009295',
-        'priceRange': '₹40L - ₹3Cr',
+        'priceRange': '₹58L - ₹3.5Cr',
         'url': DOMAIN,
         'sameAs': [
             'https://www.google.com/search?q=kolte+patil+life+republic&sca_esv=0cefd7cacdd99c8f&rlz=1C5CHFA_enIN1014IN1014&sxsrf=ANbL-n6cp4Yw7Z7Fh4G4LehvmcPQYTXMWQ:1780943573807&udm=1&lsack=1Qonau7-ML6WseMPr7iR6A4&sa=X&ved=2ahUKEwiuvdPoo_iUAxU-S2wGHS9cBO0QjGp6BAgpEAA&biw=1440&bih=778&dpr=2#sv=CAwSwgIKBmxjbF9wdhIbCgNwdnESFENnMHZaeTh4TVdoNlpERTVaRFV3EpABCgNscWkSiAFDaGxyYjJ4MFpTQndZWFJwYkNCc2FXWmxJSEpsY0hWaWJHbGpTS0RoMHNENXI0Q0FDRm9yRUFBUUFSQUNFQU1ZQUJnQkdBSVlBeUlaYTI5c2RHVWdjR0YwYVd3Z2JHbG1aU0J5WlhCMVlteHBZNUlCRVdGd1lYSjBiV1Z1ZEY5amIyMXdiR1Y0ElQKA3RicxJNbHJmOiEybTQhMWUxNSE0bTIhMTVtMSExc2hhc18xd2hlZWxjaGFpcl8xYWNjZXNzaWJsZV8xZW50cmFuY2UhMm0xITFlMyEzc0lBRT0SHgoBcRIZa29sdGUgcGF0aWwgbGlmZSByZXB1YmxpYxoSbG9jYWwtcGxhY2Utdmlld2VyGAoghsjQIg'

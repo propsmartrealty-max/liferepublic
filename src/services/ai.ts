@@ -92,7 +92,7 @@ function getLocalKnowledgeResponse(query: string): string {
     }
 
     // General Fallback
-    return "Kolte-Patil Life Republic is a 390-acre integrated sustainable township in Hinjewadi, Pune West, master-planned by Hafeez Contractor. It offers 1, 2, 3, 4 BHK residences, row houses, and bungalow plots starting from ₹42 Lakhs*. How may I assist you with floor plans, pricing, or a VIP site visit today?";
+    return "Kolte-Patil Life Republic is a 390-acre integrated sustainable township in Hinjewadi, Pune West, master-planned by Hafeez Contractor. It offers premium 2, 3 & 4 BHK residences, row houses, and bungalow plots starting from ₹58 Lakhs*. How may I assist you with floor plans, pricing, or a VIP site visit today?";
 }
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
