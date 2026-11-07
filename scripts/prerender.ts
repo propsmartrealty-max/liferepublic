@@ -203,6 +203,10 @@ async function prerender() {
         }
     }
 
+    if (fs.existsSync(templatePath)) {
+        try { fs.unlinkSync(templatePath); } catch {}
+    }
+
     console.log('✅ SSG Prerendering Finished.');
     process.exit(0);
 }

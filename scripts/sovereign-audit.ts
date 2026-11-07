@@ -40,8 +40,8 @@ walkDir(DIST_DIR, (filepath) => {
         return; 
     }
 
-    // Skip Google Site Verification files
-    if (relativePath.startsWith('google') || relativePath.startsWith('server/google')) {
+    // Skip template.html, Google Site Verification files, and intermediate templates
+    if (relativePath === 'template.html' || relativePath.startsWith('google') || relativePath.startsWith('server/google')) {
         return;
     }
 
