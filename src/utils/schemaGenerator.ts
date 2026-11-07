@@ -84,6 +84,10 @@ export const generateGlobalSchema = (path: string = '/') => {
                 'provider': { '@id': `${DOMAIN}/#organization` },
                 'mainEntity': { '@id': `${DOMAIN}/#organization` },
                 'primaryImageOfPage': { '@id': `${DOMAIN}${path}#primaryimage` },
+                'speakable': {
+                    '@type': 'SpeakableSpecification',
+                    'cssSelector': ['h1', 'h2', 'article p', '.faq-answer', '[data-ai-grounding="true"]']
+                },
                 'description': 'Explore Kolte Patil Life Republic Hinjewadi, a 390-acre integrated township in Pune with premium 2, 3 & 4 BHK flats and luxury villas.'
             }
         ]

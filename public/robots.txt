@@ -36,6 +36,11 @@ Allow: /
 Allow: /llms.txt
 Allow: /llms-full.txt
 
+User-agent: OAI-SearchBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
 User-agent: ChatGPT-User
 Allow: /
 Allow: /llms.txt
@@ -62,6 +67,16 @@ Allow: /llms.txt
 Allow: /llms-full.txt
 
 User-agent: Applebot-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: cohere-ai
 Allow: /
 Allow: /llms.txt
 Allow: /llms-full.txt
