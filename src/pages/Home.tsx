@@ -247,8 +247,8 @@ export const Home: React.FC = () => {
     return (
         <div className="w-full bg-[#0a0a0a] text-white selection:bg-[#E5C07B] selection:text-black">
             <SEO
-                title="Kolte Patil Life Republic Hinjewadi | 1, 2, 3 BHK @ ₹40L*"
-                description="★ 4.9/5 Rating (1,840+ Reviews). 390-Acre Township in Hinjewadi Pune. Luxury 1, 2, 3 BHK & Villas From ₹40L*. Download 2026 Price List & Book VIP Visit!"
+                title="Kolte Patil Life Republic Hinjewadi | 2, 3 BHK & Villas @ ₹58L*"
+                description="★ 4.9/5 Rating (1,840+ Reviews). 390-Acre Township in Hinjewadi Pune. Luxury 2, 3, 4 BHK & Villas From ₹58L*. Download 2026 Price List & Book VIP Visit!"
                 keywords="kolte patil life republic, life republic hinjewadi, life republic pune, kolte patil hinjewadi, flats in hinjewadi, 2 bhk flats in hinjewadi, 3 bhk in hinjewadi, life republic atmos, life republic aros, life republic echoes, life republic duet, life republic 24k espada, life republic floor plan, life republic price, life republic rera, life republic sales office, life republic sales office or main office mulshi"
                 canonical="/"
                 schema={homeCustomSchema}
@@ -286,7 +286,7 @@ export const Home: React.FC = () => {
 
                     <p className="text-lg sm:text-xl md:text-2xl text-gray-300 font-light max-w-3xl mb-8 leading-relaxed">
                         Pune’s benchmark 390-acre integrated smart township in Marunji, Hinjewadi. 
-                        Offering premium 1, 2, 2.5, 3 &amp; 4 BHK residences, bespoke villas, and row houses just 4.5 km from Rajiv Gandhi Infotech Park.
+                        Offering premium 2, 2.5, 3 &amp; 4 BHK residences, bespoke villas, and row houses just 4.5 km from Rajiv Gandhi Infotech Park.
                     </p>
 
                     {/* Township Highlights Badges */}
@@ -304,7 +304,7 @@ export const Home: React.FC = () => {
                             <span className="text-xs text-gray-300 uppercase tracking-wider">Active Sectors</span>
                         </div>
                         <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-3.5">
-                            <span className="text-2xl font-bold text-[#E5C07B] block">₹40L*</span>
+                            <span className="text-2xl font-bold text-[#E5C07B] block">₹58L*</span>
                             <span className="text-xs text-gray-300 uppercase tracking-wider">Starting Price</span>
                         </div>
                     </div>
