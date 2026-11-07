@@ -62,46 +62,26 @@ function runScript(scriptRelativePath, args = []) {
 async function runCycle() {
     log('⚡ Starting orchestrated Search Indexing cycle...');
 
-    // 1. Run Google Indexing Engine
-    log('🔵 [Engine 1/2] Launching Google Indexing API Engine...');
-    const googleRes = await runScript('google-index.cjs');
+    // 1. Run Ultra-Advanced Programmatic Google SEO Engine
+    log('🔵 [Engine 1/1] Launching Ultra-Advanced Programmatic Google SEO Engine...');
+    const ultraRes = await runScript('ultra-seo-engine.cjs');
     
-    // Parse Google summary
-    const publishedMatch = googleRes.stdout.match(/URLs Published Successfully\s*:\s*(\d+)/);
-    const consumedMatch = googleRes.stdout.match(/Total Quota Consumed Today\s*:\s*(\d+)/);
-    const exhaustedMatch = googleRes.stdout.includes('All service accounts in the pool are currently exhausted');
-    const resetMatch = googleRes.stdout.match(/Next Google Quota Reset\s*:\s*(.*?)\n/);
+    // Parse Ultra Engine summary
+    const pubMatch = ultraRes.stdout.match(/Successfully pushed (\d+) high-priority URLs/);
+    const gscMatch = ultraRes.stdout.match(/GSC Feeds Active:\s*(\d+\/\d+)/);
+    const oppMatch = ultraRes.stdout.match(/Found (\d+) high-opportunity queries/);
 
-    if (publishedMatch) {
-        log(`✅ Google Engine: ${publishedMatch[1]} URLs published successfully in this cycle.`);
-    } else if (exhaustedMatch) {
-        const resetInfo = resetMatch ? resetMatch[1].trim() : '12:30 PM IST (Midnight PT)';
-        log(`🛑 Google Engine: Quota exhausted for today. Next reset: ${resetInfo}`);
-    } else {
-        log(`ℹ️ Google Engine completed with exit code ${googleRes.code}.`);
+    if (oppMatch) {
+        log(`🎯 Opportunity Engine: Discovered ${oppMatch[1]} high-opportunity queries queued for Rank #1.`);
     }
-
-    // 2. Run IndexNow Instant Discovery Engine (Bing, Copilot, Yandex)
-    log('🟠 [Engine 2/3] Launching IndexNow Protocol Engine...');
-    const indexNowRes = await runScript('indexnow.cjs');
-    const indexNowSuccess = indexNowRes.stdout.match(/IndexNow Cycle Complete:\s*(\d+)\s*URLs newly broadcasted/);
-    if (indexNowSuccess) {
-        log(`🎉 IndexNow Engine: ${indexNowSuccess[1]} URLs newly broadcasted to Bing/Copilot.`);
-    } else {
-        log(`ℹ️ IndexNow Engine completed with exit code ${indexNowRes.code}.`);
+    if (pubMatch) {
+        log(`✅ Google Indexing Engine: Successfully pushed ${pubMatch[1]} high-priority URLs.`);
     }
-
-    // 3. Run Google Search Console Sitemaps & Property Feeds Engine
-    log('🟢 [Engine 3/3] Synchronizing Google Search Console Feeds...');
-    const gscRes = await runScript('gsc-sync.cjs');
-    const gscMatch = gscRes.stdout.match(/GSC Sync Completed:\s*(\d+\/\d+)/);
     if (gscMatch) {
-        log(`✨ GSC Engine: ${gscMatch[1]} sitemaps active in Google Search Console.`);
-    } else {
-        log(`ℹ️ GSC Engine completed with exit code ${gscRes.code}.`);
+        log(`✨ GSC Feeds Active: ${gscMatch[1]} sitemaps live in Google Search Console.`);
     }
 
-    log(`🏁 Cycle complete. Next scheduled evaluation in 30 minutes.\n`);
+    log(`🏁 Ultra-Advanced cycle complete. Next scheduled evaluation in 30 minutes.\n`);
 }
 
 async function showStatus() {

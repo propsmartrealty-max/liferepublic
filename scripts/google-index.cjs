@@ -188,6 +188,30 @@ function extractUrls() {
     return Array.from(urls);
 }
 
+// Ultra-Advanced Programmatic Google SEO: Intelligent URL Weighting Engine
+function prioritizeUrls(urls) {
+    const getScore = (url) => {
+        // Priority 1: Root & Core Project Hubs
+        if (url === 'https://life-republic.in' || url === 'https://life-republic.in/') return 1000;
+        if (url.includes('/projects/kolte-patil-life-republic-')) return 900;
+        if (url.includes('/projects') || url.includes('/amenities') || url.includes('/township-guide') || url.includes('/contact')) return 850;
+        
+        // Priority 2: High-converting buyer intent & GSC opportunity queries
+        if (url.includes('kolte-patil-life-republic-price') || url.includes('price-list')) return 800;
+        if (url.includes('/2-bhk') || url.includes('/3-bhk') || url.includes('/4-bhk')) return 750;
+        if (url.includes('price-') && url.includes('kolte-patil-life-republic')) return 700;
+        if (url.includes('price-') && (url.includes('atmos') || url.includes('aros') || url.includes('duet') || url.includes('echoes') || url.includes('canvas') || url.includes('universe') || url.includes('24k-espada'))) return 650;
+        if (url.includes('floor-plans-') || url.includes('brochure-') || url.includes('rera-number-')) return 600;
+        if (url.includes('reviews-') || url.includes('possession-date-') || url.includes('site-visit-')) return 550;
+        if (url.includes('vs-')) return 500; // Competitor comparisons
+        if (url.includes('metro') || url.includes('ring-road') || url.includes('school')) return 450;
+        
+        // Priority 3: General programmatic permutations
+        return 100;
+    };
+    return urls.slice().sort((a, b) => getScore(b) - getScore(a));
+}
+
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function main() {
@@ -203,7 +227,8 @@ async function main() {
 
     const cache = loadQuotaCache();
     const allUrls = extractUrls();
-    const remainingUrls = allUrls.filter(u => !cache.successfulUrls.includes(u));
+    const prioritizedAllUrls = prioritizeUrls(allUrls);
+    const remainingUrls = prioritizedAllUrls.filter(u => !cache.successfulUrls.includes(u));
 
     console.log(`📦 Discovered ${rawAccounts.length} Service Account(s) in credential pool:`);
     const poolCapacity = rawAccounts.length * 200;
