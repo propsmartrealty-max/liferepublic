@@ -458,6 +458,45 @@ const ProjectDetails: React.FC = () => {
                                     </div>
                                 ))}
                             </div>
+
+                            {/* Semantic Position 0 Featured Snippet Table */}
+                            <div className="mt-8 overflow-x-auto rounded-2xl border border-white/10 bg-[#07080b]">
+                                <table className="w-full text-left border-collapse text-xs md:text-sm">
+                                    <thead>
+                                        <tr className="border-b border-white/10 bg-white/5 text-amber-400 font-bold tracking-wider uppercase text-[11px]">
+                                            <th className="p-4">Typology</th>
+                                            <th className="p-4">Carpet Area</th>
+                                            <th className="p-4">Indicative Base Price</th>
+                                            <th className="p-4">Govt. Taxes (SD + Reg + GST)</th>
+                                            <th className="p-4">All-Inclusive Estimate*</th>
+                                            <th className="p-4 text-right">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-white/5 text-gray-300">
+                                        {project.configurations?.filter((c: any) => !c.type?.includes('1 BHK') && !c.type?.includes('1BHK')).map((config: any, idx: number) => (
+                                            <tr key={idx} className="hover:bg-white/[0.02] transition-colors">
+                                                <td className="p-4 font-bold text-white">{config.type}</td>
+                                                <td className="p-4">{config.size}</td>
+                                                <td className="p-4 font-semibold text-amber-400">{config.price}</td>
+                                                <td className="p-4 text-gray-400">~12% (Stamp Duty 7% + GST 5%)</td>
+                                                <td className="p-4 font-bold text-emerald-400">Request Cost Sheet</td>
+                                                <td className="p-4 text-right">
+                                                    <button
+                                                        onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { project: project.name, type: `${config.type} Detailed Cost Sheet` } }))}
+                                                        className="px-3 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs font-bold transition-all"
+                                                    >
+                                                        Get Breakup
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                                <div className="p-3 bg-white/[0.02] border-t border-white/5 text-[11px] text-gray-500 flex flex-col sm:flex-row justify-between gap-2">
+                                    <span>*Prices indicative. Stamp duty (7%), registration, and statutory charges applicable at actuals. Minimum unit pricing starts at ₹58 Lakhs*.</span>
+                                    <span>MahaRERA: <strong className="text-gray-400 font-mono">{project.rera}</strong></span>
+                                </div>
+                            </div>
                         </section>
 
                         {/* Floor Plans Gallery — clickable lightbox */}

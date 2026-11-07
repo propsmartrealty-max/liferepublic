@@ -38,6 +38,7 @@ const SiloLanding = lazy(() => import('./pages/SiloLanding').then((m: any) => ({
 const PrivacyPolicy = lazy(() => import('./pages/legal/PrivacyPolicy').then((m: any) => ({ default: m.PrivacyPolicy || m.default })));
 const TermsOfService = lazy(() => import('./pages/legal/TermsOfService').then((m: any) => ({ default: m.TermsOfService || m.default })));
 const Disclaimer = lazy(() => import('./pages/legal/Disclaimer').then((m: any) => ({ default: m.Disclaimer || m.default })));
+const SalesOffice = lazy(() => import('./pages/SalesOffice').then((m: any) => ({ default: m.SalesOffice || m.default })));
 
 
 // Keep layout components static as they are used on every page
@@ -145,6 +146,13 @@ function App() {
               <Contact />
             </Layout>
           } />
+          <Route path="/life-republic-sales-office-hinjewadi" element={
+            <Layout ariaLabel="Life Republic Sales Office or Main Office Mulshi">
+              <SalesOffice />
+            </Layout>
+          } />
+          <Route path="/sales-office" element={<Navigate to="/life-republic-sales-office-hinjewadi" replace />} />
+          <Route path="/life-republic-sales-office" element={<Navigate to="/life-republic-sales-office-hinjewadi" replace />} />
           <Route path="/about" element={
             <Layout ariaLabel="About Kolte Patil Life Republic">
               <About />

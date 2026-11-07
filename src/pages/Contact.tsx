@@ -27,7 +27,7 @@ export const Contact: React.FC = () => {
             "image": "https://life-republic.in/images/gallery/eros/master-layout.webp",
             "url": "https://life-republic.in/contact",
             "telephone": "+91-7744009295",
-            "priceRange": "₹40L - ₹3Cr",
+            "priceRange": "₹58L - ₹3.5Cr",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Life Republic Township, Marunji Road",

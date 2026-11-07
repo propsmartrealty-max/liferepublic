@@ -34,7 +34,7 @@ const ID_TO_SLUG: Record<string, string> = {
 };
 
 const staticRoutes = [
-    '/', '/projects', '/amenities', '/contact', '/about', '/privacy', '/terms', '/location',
+    '/', '/projects', '/amenities', '/contact', '/life-republic-sales-office-hinjewadi', '/about', '/privacy', '/terms', '/location',
     '/nri-corner', '/testimonials', '/media-center', '/township-intelligence',
     '/nri-investment-guide', '/connectivity', '/lifestyle', '/sustainability', '/community-hub',
     '/2-bhk-flats-in-hinjewadi', '/3-bhk-flats-in-hinjewadi', '/4-bhk-flats-in-hinjewadi',

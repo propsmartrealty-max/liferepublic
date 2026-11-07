@@ -16,6 +16,7 @@ const staticRoutes = [
     '/projects',
     '/amenities',
     '/contact',
+    '/life-republic-sales-office-hinjewadi',
     '/about',
     '/privacy-policy',
     '/terms-of-service',

@@ -193,8 +193,9 @@ function prioritizeUrls(urls) {
     const getScore = (url) => {
         // Priority 1: Root & Core Project Hubs
         if (url === 'https://life-republic.in' || url === 'https://life-republic.in/') return 1000;
+        if (url.includes('life-republic-sales-office') || url.includes('/contact')) return 980;
         if (url.includes('/projects/kolte-patil-life-republic-')) return 900;
-        if (url.includes('/projects') || url.includes('/amenities') || url.includes('/township-guide') || url.includes('/contact')) return 850;
+        if (url.includes('/projects') || url.includes('/amenities') || url.includes('/township-guide')) return 850;
         
         // Priority 2: High-converting buyer intent & GSC opportunity queries
         if (url.includes('kolte-patil-life-republic-price') || url.includes('price-list')) return 800;

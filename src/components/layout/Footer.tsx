@@ -74,7 +74,7 @@ export const Footer: React.FC = () => {
                                 { name: 'Township Guide', path: '/township-guide' },
                                 { name: 'Projects & Clusters', path: '/projects' },
                                 { name: 'Amenities', path: '/amenities' },
-                                { name: 'Sales Office & Visit', path: '/contact' },
+                                { name: 'Sales Office (Mulshi)', path: '/life-republic-sales-office-hinjewadi' },
                                 { name: 'Property Directory', path: '/locations-directory' },
                                 { name: 'HTML Sitemap', path: '/sitemap' },
                                 { name: 'About Township', path: '/about' }
@@ -150,7 +150,7 @@ export const Footer: React.FC = () => {
                                     <p className="text-[#202124] font-medium">Official Sales Office</p>
                                     <p className="text-sm text-gray-700">Life Republic Township, Marunji Road, Hinjewadi, Pune 411057 (Mulshi)</p>
                                     <p className="text-xs font-semibold text-emerald-700 mt-1">Open Daily: 9:00 AM – 7:00 PM</p>
-                                    <Link to="/contact" className="inline-block text-xs font-bold text-accent hover:underline mt-1">
+                                    <Link to="/life-republic-sales-office-hinjewadi" className="inline-block text-xs font-bold text-accent hover:underline mt-1">
                                         Book VIP Visit & Directions →
                                     </Link>
                                 </div>
