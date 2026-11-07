@@ -23,7 +23,7 @@ const LocationsDirectory: React.FC = () => {
             groups[location] = [];
             for (const config of pSEOMatrix.configurations) {
                 // To keep DOM size reasonable per location block, we take top intents
-                for (const intent of ['luxury', 'premium', 'ready-possession']) {
+                for (const intent of ['price', 'luxury', 'premium', 'ready-possession', 'investment']) {
                     const entity = 'kolte-patil-life-republic'; 
                     const slug = `${intent}-${config}-in-${location}-${entity}`;
                     groups[location].push(slug);

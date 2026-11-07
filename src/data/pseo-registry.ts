@@ -107,12 +107,12 @@ export const pseoRegistry: Record<string, LandingConfig> = {
         infraScore: 97, rentalYield: '5.5% - 7.0%', commutePhase1: '10 mins',
         highlights: ['390 acres integrated township', '30+ residential sectors', 'Self-sustaining ecosystem']
     },
-    'flats-in-hinjewadi-under-50-lakhs': {
-        title: 'Flats in Hinjewadi Under 50 Lakhs | Life Republic Pune',
-        description: 'Budget-friendly smart apartments in Hinjewadi under ₹50 Lakhs at Kolte Patil Life Republic township.',
-        keywords: 'flats in hinjewadi under 50 lakhs, cheap flats hinjewadi, budget apartments pune',
-        infraScore: 88, rentalYield: '6.0% - 7.0%', commutePhase1: '10 mins',
-        highlights: ['Starting ₹48 Lakhs', 'Smart home features', 'Township amenities included']
+    'flats-in-hinjewadi-under-60-lakhs': {
+        title: 'Flats in Hinjewadi Under 60 Lakhs | Life Republic Pune',
+        description: 'Smart 2 BHK apartments in Hinjewadi from ₹58 Lakhs* at Kolte Patil Life Republic township.',
+        keywords: 'flats in hinjewadi under 60 lakhs, cheap flats hinjewadi, budget apartments pune',
+        infraScore: 92, rentalYield: '6.0% - 7.0%', commutePhase1: '10 mins',
+        highlights: ['Starting ₹58 Lakhs*', 'Smart 2 BHK layouts', 'Township amenities included']
     },
     'flats-in-hinjewadi-under-80-lakhs': {
         title: 'Flats in Hinjewadi Under 80 Lakhs | 2 BHK Life Republic',
