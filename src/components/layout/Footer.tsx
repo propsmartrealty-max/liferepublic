@@ -5,6 +5,7 @@ import { Facebook, Instagram, Twitter, Linkedin, Phone, MapPin, ArrowUpRight } f
 import { pseoSlugs, pseoRegistry } from '../../data/pseo-registry';
 import { seoClusters } from '../../data/seo-clusters';
 import { EnquiryModal } from '../ui/EnquiryModal';
+import { KeywordEcosystem } from '../seo/KeywordEcosystem';
 
 export const Footer: React.FC = () => {
     const [isEnquiryOpen, setIsEnquiryOpen] = React.useState(false);
@@ -273,6 +274,9 @@ export const Footer: React.FC = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* Kolte Patil Life Republic Entire Keyword Ecosystem & Search Matrix */}
+                <KeywordEcosystem />
 
                 <div className="mt-8 pt-8 border-t border-strong text-xs text-gray-600 text-center leading-relaxed space-y-3">
                     <p>

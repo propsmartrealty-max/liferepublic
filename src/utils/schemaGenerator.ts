@@ -1,5 +1,6 @@
 import type { Project } from '../lib/types';
 import { getProjectSlug } from '../data/slug-registry';
+import seoMatrix from '../data/seoMatrix.json';
 
 const DOMAIN = 'https://life-republic.in';
 
@@ -65,6 +66,7 @@ export const generateGlobalSchema = (path: string = '/') => {
                 'name': 'Kolte Patil Life Republic',
                 'description': '390-Acre Integrated Township in Hinjewadi, Pune',
                 'publisher': { '@id': `${DOMAIN}/#organization` },
+                'keywords': seoMatrix.base.join(', '),
                 'potentialAction': [{
                     '@type': 'SearchAction',
                     'target': `${DOMAIN}/search?q={search_term_string}`,
@@ -78,6 +80,7 @@ export const generateGlobalSchema = (path: string = '/') => {
                 'name': 'Kolte Patil Life Republic Hinjewadi | Township Site',
                 'isPartOf': { '@id': `${DOMAIN}/#website` },
                 'about': { '@id': `${DOMAIN}/#organization` },
+                'keywords': seoMatrix.base.slice(0, 25).join(', '),
                 'provider': { '@id': `${DOMAIN}/#organization` },
                 'mainEntity': { '@id': `${DOMAIN}/#organization` },
                 'primaryImageOfPage': { '@id': `${DOMAIN}${path}#primaryimage` },

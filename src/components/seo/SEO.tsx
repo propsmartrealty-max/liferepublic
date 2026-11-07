@@ -114,18 +114,18 @@ export const SEO: React.FC<SEOProps> = ({
             cluster.push(...seoMatrix.lifestyle.township);
         }
         
-        // Deduplicate, cap to top 12 focused terms to prevent Google SpamBrain keyword-stuffing flags
-        return [...new Set(cluster)].slice(0, 12).join(', ');
+        // Deduplicate and return entire cluster keywords
+        return [...new Set(cluster)].join(', ');
     };
 
     const pathKeywords = getPathSpecificKeywords(location.pathname);
     
-    // De-duplicate and combine keywords from props and matrix (strictly capped to 15 terms)
+    // De-duplicate and combine entire keywords ecosystem from props and matrix
     const combinedTerms = (keywords ? `${keywords}, ${pathKeywords}` : pathKeywords)
         .split(',')
         .map(t => t.trim())
         .filter(Boolean);
-    const metaKeywords = [...new Set(combinedTerms)].slice(0, 15).join(', ');
+    const metaKeywords = [...new Set(combinedTerms)].join(', ');
 
     const globalSchema = generateGlobalSchema(location.pathname);
     const navSchema = generateSiteNavigationSchema();
