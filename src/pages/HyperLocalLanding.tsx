@@ -10,10 +10,11 @@ import type { Project } from '../lib/types';
 
 import { pseoRegistry } from '../data/pseo-registry';
 import sectorsData from '../data/sectors.json';
+import { projectsRegistry } from '../data/projects';
+import { generateFAQSchema } from '../utils/schemaGenerator';
 
 export const HyperLocalLanding: React.FC = () => {
     const { slug } = useParams<{ slug: string }>();
-    const [projects, setProjects] = React.useState<Project[]>([]);
     
     const config = useMemo(() => {
         if (!slug) return pseoRegistry['flats-near-marunji-road'];
@@ -74,30 +75,60 @@ export const HyperLocalLanding: React.FC = () => {
         };
     }, [slug]);
 
-    React.useEffect(() => {
-        const loadProjects = async () => {
-            const allProjects = await api.projects.getAll();
-            if (slug) {
-                const sLower = slug.toLowerCase();
-                const matched = allProjects.filter(p => 
-                    p.id.toLowerCase().includes(sLower) || 
-                    (sLower.includes('r3') && p.title.toLowerCase().includes('canvas')) ||
-                    (sLower.includes('r22') && p.title.toLowerCase().includes('atmos')) ||
-                    (sLower.includes('r13') && p.title.toLowerCase().includes('aros')) ||
-                    (sLower.includes('r10') && p.title.toLowerCase().includes('universe')) ||
-                    (sLower.includes('r17') && (p.title.toLowerCase().includes('echoes') || p.title.toLowerCase().includes('nora'))) ||
-                    (sLower.includes('r31') && (p.title.toLowerCase().includes('espada') || p.title.toLowerCase().includes('echoes'))) ||
-                    (sLower.includes('r2') && p.title.toLowerCase().includes('qrious')) ||
-                    (sLower.includes('r34') && p.title.toLowerCase().includes('duet'))
-                );
-                const remaining = allProjects.filter(p => !matched.some(m => m.id === p.id));
-                setProjects([...matched, ...remaining].slice(0, 3));
-            } else {
-                setProjects(allProjects.slice(0, 3));
-            }
-        };
-        loadProjects();
+    // Synchronous Server & Client Project Matching (Guarantees SSG Prerender Content for Googlebot)
+    const projects: Project[] = useMemo(() => {
+        if (!slug) return (projectsRegistry as unknown as Project[]).slice(0, 3);
+        const sLower = slug.toLowerCase();
+        const all = projectsRegistry as unknown as Project[];
+        const matched = all.filter(p => 
+            p.id.toLowerCase().includes(sLower) || 
+            (sLower.includes('r3') && p.title.toLowerCase().includes('canvas')) ||
+            (sLower.includes('r22') && p.title.toLowerCase().includes('atmos')) ||
+            (sLower.includes('r13') && p.title.toLowerCase().includes('aros')) ||
+            (sLower.includes('r10') && p.title.toLowerCase().includes('universe')) ||
+            (sLower.includes('r17') && (p.title.toLowerCase().includes('echoes') || p.title.toLowerCase().includes('nora'))) ||
+            (sLower.includes('r31') && (p.title.toLowerCase().includes('espada') || p.title.toLowerCase().includes('echoes'))) ||
+            (sLower.includes('r2') && p.title.toLowerCase().includes('qrious')) ||
+            (sLower.includes('r34') && p.title.toLowerCase().includes('duet'))
+        );
+        const remaining = all.filter(p => !matched.some(m => m.id === p.id));
+        return [...matched, ...remaining].slice(0, 3);
     }, [slug]);
+
+    const locationFaqs = useMemo(() => [
+        {
+            question: `What are the property prices and configurations available in ${config.title.split('|')[0].trim()}?`,
+            answer: `Residences in ${config.title.split('|')[0].trim()} start from ₹58 Lakhs* for premium 2 BHK flats, up to ₹3.5 Cr* for luxury row houses and villas. All properties feature modern lifestyle amenities and are registered under MahaRERA.`
+        },
+        {
+            question: `How far is ${config.title.split('|')[0].trim()} from Hinjewadi IT Park and Pune Metro?`,
+            answer: `This location is strategically situated just 5 to 10 minutes (approx. 4.5 km) from Hinjewadi IT Park Phase 1 and 3 minutes from the upcoming Hinjewadi Metro Line 3 station.`
+        },
+        {
+            question: `Is Kolte Patil Life Republic an approved township with MahaRERA?`,
+            answer: `Yes, Kolte Patil Life Republic is a fully MahaRERA registered 390-acre integrated gated community. Every sector holds independent MahaRERA compliance, and the authorized agent registration is A0321262401295.`
+        }
+    ], [config]);
+
+    const locationSchema = useMemo(() => [
+        generateFAQSchema(locationFaqs),
+        {
+            '@context': 'https://schema.org',
+            '@type': 'RealEstateListing',
+            'name': config.title,
+            'description': config.description,
+            'url': `https://life-republic.in/location/${slug}`,
+            'offers': {
+                '@type': 'AggregateOffer',
+                'priceCurrency': 'INR',
+                'lowPrice': '5800000',
+                'highPrice': '35000000',
+                'price': '5800000',
+                'offerCount': projects.length || 3,
+                'availability': 'https://schema.org/InStock'
+            }
+        }
+    ], [config, locationFaqs, projects, slug]);
 
     return (
         <div className="pt-4 pb-20 bg-transparent">
@@ -106,6 +137,7 @@ export const HyperLocalLanding: React.FC = () => {
                 description={config.description}
                 keywords={config.keywords}
                 canonical={`/location/${slug}`}
+                schema={locationSchema}
             />
 
             <div className="container mx-auto px-4">
@@ -186,14 +218,14 @@ export const HyperLocalLanding: React.FC = () => {
                         </ul>
                     </div>
 
-                    <div className="bg-gray-900 rounded-[2rem] p-10 text-[#202124] flex flex-col justify-between">
+                    <div className="bg-gray-900 rounded-[2rem] p-10 text-white flex flex-col justify-between">
                         <div>
-                            <h4 className="text-xl font-bold mb-4">Market View</h4>
-                            <p className="text-[#202124]/60 text-sm leading-relaxed">
+                            <h4 className="text-xl font-bold mb-4 text-white">Market View</h4>
+                            <p className="text-gray-300 text-sm leading-relaxed">
                                 Demand for premium housing near {slug?.split('-')[0]} has spiked by 18% in the last quarter due to the Hinjewadi-Shivajinagar Metro progress.
                             </p>
                         </div>
-                        <Link to="/township-intelligence" className="flex items-center gap-2 rainbow-text-clip font-bold text-xs font-bold tracking-tight font-medium group">
+                        <Link to="/township-intelligence" className="flex items-center gap-2 text-amber-400 hover:text-amber-300 text-xs font-bold tracking-tight font-medium group mt-6">
                             Explore Stats <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                         </Link>
                     </div>

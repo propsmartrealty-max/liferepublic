@@ -63,7 +63,7 @@ async function runCycle() {
     log('⚡ Starting orchestrated Search Indexing cycle...');
 
     // 1. Run Ultra-Advanced Programmatic Google SEO Engine
-    log('🔵 [Engine 1/1] Launching Ultra-Advanced Programmatic Google SEO Engine...');
+    log('🔵 [Engine 1/2] Launching Ultra-Advanced Programmatic Google SEO Engine...');
     const ultraRes = await runScript('ultra-seo-engine.cjs');
     
     // Parse Ultra Engine summary
@@ -79,6 +79,16 @@ async function runCycle() {
     }
     if (gscMatch) {
         log(`✨ GSC Feeds Active: ${gscMatch[1]} sitemaps live in Google Search Console.`);
+    }
+
+    // 2. Run IndexNow Instant Discovery Engine
+    log('🟢 [Engine 2/2] Launching IndexNow Instant Discovery Engine (Bing, Copilot, Yandex)...');
+    const indexNowRes = await runScript('indexnow.cjs');
+    const indexNowMatch = indexNowRes.stdout.match(/(\d+) URLs newly broadcasted/);
+    if (indexNowMatch) {
+        log(`🚀 IndexNow Discovery: ${indexNowMatch[1]} URLs successfully broadcasted to search engines.`);
+    } else if (indexNowRes.stdout.includes('All URLs have already been submitted')) {
+        log(`✨ IndexNow Discovery: All URLs up-to-date across search syndicates.`);
     }
 
     log(`🏁 Ultra-Advanced cycle complete. Next scheduled evaluation in 30 minutes.\n`);

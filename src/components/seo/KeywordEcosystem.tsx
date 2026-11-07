@@ -26,7 +26,7 @@ export const KeywordEcosystem: React.FC = () => {
     };
 
     return (
-        <section className="w-full border-t border-gray-200 bg-gray-50/50 py-10 px-4 sm:px-6 lg:px-8 text-xs text-gray-700 font-sans">
+        <section className="w-full border-t border-gray-200 bg-gray-50/50 py-10 px-4 sm:px-6 lg:px-8 text-xs text-gray-700 font-sans" aria-label="Kolte Patil Life Republic Keyword & Township Index">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-6 border-b border-gray-200 gap-4">
                     <div className="flex items-center gap-3">
@@ -47,7 +47,7 @@ export const KeywordEcosystem: React.FC = () => {
                         className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-gray-300 bg-white hover:bg-gray-100 text-gray-800 font-semibold transition-all shadow-sm"
                         aria-expanded={isExpanded}
                     >
-                        <span>{isExpanded ? 'Collapse Entire Ecosystem' : 'Explore Entire Ecosystem (500+ Corridors)'}</span>
+                        <span>{isExpanded ? 'Collapse Extended Directory' : 'Expand Extended Directory (500+ Corridors)'}</span>
                         {isExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                     </button>
                 </div>
@@ -118,82 +118,84 @@ export const KeywordEcosystem: React.FC = () => {
                             <span>Location Corridors</span>
                         </div>
                         <ul className="space-y-1.5 text-[11px] text-gray-600">
+                            <li><Link to="/life-republic-sales-office-hinjewadi" className="hover:text-amber-600 hover:underline font-semibold text-amber-700 block">Life Republic Sales Office (Survey No. 74)</Link></li>
                             <li><Link to="/location/flats-near-hinjewadi" className="hover:text-amber-600 hover:underline block">Flats Near Hinjewadi Phase 1 IT Park</Link></li>
                             <li><Link to="/location/flats-near-marunji" className="hover:text-amber-600 hover:underline block">Flats on Marunji-Kasarsai Road</Link></li>
                             <li><Link to="/location/flats-near-wakad" className="hover:text-amber-600 hover:underline block">Apartments Near Wakad Bridge Corridor</Link></li>
                             <li><Link to="/location/flats-near-tathawade" className="hover:text-amber-600 hover:underline block">Residences Near Tathawade Education Hub</Link></li>
                             <li><Link to="/location/flats-near-punawale" className="hover:text-amber-600 hover:underline block">Projects Near Punawale Expressway Exit</Link></li>
                             <li><Link to="/search/pune-metro-line-3-connectivity-life-republic" className="hover:text-amber-600 hover:underline block">Pune Metro Line 3 Connectivity Hub</Link></li>
-                            <li><Link to="/search/pmrda-ring-road-marunji-life-republic" className="hover:text-amber-600 hover:underline block">PMRDA Ring Road Direct Access</Link></li>
                         </ul>
                     </div>
                 </div>
 
-                {/* Collapsible Entire Keyword Ecosystem (All 545 Permutations) */}
-                {isExpanded && (
-                    <div className="mt-8 pt-8 border-t border-gray-200 space-y-6 transition-all duration-300">
-                        {/* High-Converting Buyer Intent */}
-                        <div>
-                            <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-3">
-                                High-Intent Buyer Corridors (Price, Floor Plan, RERA, Possession, Reviews)
-                            </h4>
-                            <div className="flex flex-wrap gap-2 text-[11px]">
-                                {seoMatrix.buyer_intent.map((intentKw, i) => (
-                                    <Link
-                                        key={i}
-                                        to={`/search/${intentKw.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                                        className="px-2.5 py-1 rounded bg-white border border-gray-200 hover:border-amber-500 hover:text-amber-700 transition-colors"
-                                    >
-                                        {intentKw}
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* All 16 Clusters Deep Queries */}
-                        <div>
-                            <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-3">
-                                All 16 Sector Clusters & Architectural Phases
-                            </h4>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-[11px]">
-                                {Object.entries(seoMatrix.projects).map(([projKey, projKws]) => (
-                                    <div key={projKey} className="p-3 bg-white border border-gray-200 rounded-lg">
-                                        <p className="font-bold text-gray-900 capitalize mb-1.5">
-                                            {projKey.replace(/-/g, ' ')}
-                                        </p>
-                                        <ul className="space-y-1 text-gray-500">
-                                            {(projKws as string[]).slice(0, 4).map((pk, pi) => (
-                                                <li key={pi}>
-                                                    <Link 
-                                                        to={clusterSlugs[projKey] || '/projects'}
-                                                        className="hover:text-amber-600 hover:underline truncate block"
-                                                        title={pk}
-                                                    >
-                                                        {pk}
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* West Pune & IT Corridor Clusters */}
-                        <div>
-                            <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-3">
-                                IT Hubs & Connectivity Nodes (Infosys, TCS, Wipro, Metro, Expressway)
-                            </h4>
-                            <div className="flex flex-wrap gap-2 text-[11px]">
-                                {seoMatrix.it_hub.concat(seoMatrix.luxury).map((kw, i) => (
-                                    <span key={i} className="px-2 py-0.5 rounded bg-gray-100 text-gray-600 text-[10px]">
-                                        {kw}
-                                    </span>
-                                ))}
-                            </div>
+                {/* Complete Crawlable Keyword Ecosystem (Always in the DOM for Googlebot & AI Crawlers) */}
+                <div className={`mt-8 pt-8 border-t border-gray-200 space-y-6 transition-all duration-300 ${isExpanded ? 'block' : 'hidden md:block'}`}>
+                    {/* High-Converting Buyer Intent */}
+                    <div>
+                        <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-3">
+                            High-Intent Buyer Corridors (Price, Floor Plan, RERA, Possession, Reviews)
+                        </h4>
+                        <div className="flex flex-wrap gap-2 text-[11px]">
+                            {seoMatrix.buyer_intent.map((intentKw, i) => (
+                                <Link
+                                    key={i}
+                                    to={`/search/${intentKw.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                                    className="px-2.5 py-1 rounded bg-white border border-gray-200 hover:border-amber-500 hover:text-amber-700 transition-colors"
+                                >
+                                    {intentKw}
+                                </Link>
+                            ))}
                         </div>
                     </div>
-                )}
+
+                    {/* All 16 Clusters Deep Queries */}
+                    <div>
+                        <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-3">
+                            All 16 Sector Clusters & Architectural Phases
+                        </h4>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-[11px]">
+                            {Object.entries(seoMatrix.projects).map(([projKey, projKws]) => (
+                                <div key={projKey} className="p-3 bg-white border border-gray-200 rounded-lg">
+                                    <p className="font-bold text-gray-900 capitalize mb-1.5">
+                                        {projKey.replace(/-/g, ' ')}
+                                    </p>
+                                    <ul className="space-y-1 text-gray-500">
+                                        {(projKws as string[]).slice(0, 4).map((pk, pi) => (
+                                            <li key={pi}>
+                                                <Link 
+                                                    to={clusterSlugs[projKey] || '/projects'}
+                                                    className="hover:text-amber-600 hover:underline truncate block"
+                                                    title={pk}
+                                                >
+                                                    {pk}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* West Pune & IT Corridor Clusters */}
+                    <div>
+                        <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-3">
+                            IT Hubs & Connectivity Nodes (Infosys, TCS, Wipro, Metro, Expressway)
+                        </h4>
+                        <div className="flex flex-wrap gap-2 text-[11px]">
+                            {seoMatrix.it_hub.concat(seoMatrix.luxury).map((kw, i) => (
+                                <Link
+                                    key={i}
+                                    to={`/search/${kw.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                                    className="px-2 py-0.5 rounded bg-white border border-gray-200 text-gray-600 hover:text-amber-600 hover:border-amber-400 text-[10px] transition-colors"
+                                >
+                                    {kw}
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );
