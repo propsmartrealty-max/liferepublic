@@ -34,13 +34,13 @@ export const SEO: React.FC<SEOProps> = ({
     let finalTitle = '';
     if (title) {
         const trimmedTitle = title.trim();
-        if (trimmedTitle.length <= 60) {
+        if (trimmedTitle.length <= 62) {
             finalTitle = trimmedTitle;
         } else {
-            // Intelligently shorten to last whole word under 58 characters
-            const sub = trimmedTitle.substring(0, 58);
+            // Intelligently shorten to last whole word under 60 characters
+            const sub = trimmedTitle.substring(0, 60);
             const lastSpace = sub.lastIndexOf(' ');
-            finalTitle = (lastSpace > 35 ? sub.substring(0, lastSpace) : sub).replace(/[\s|:-]+$/, '');
+            finalTitle = (lastSpace > 35 ? sub.substring(0, lastSpace) : sub).replace(/[\s|:@&,\-]+$/, '');
         }
     } else {
         finalTitle = 'Kolte Patil Life Republic Hinjewadi | 150-Acre Township';
