@@ -40,6 +40,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
         let formSubmitSuccess = false;
         let formSubmitResponseText = "";
+        let formSubmitStatus = 0;
 
         try {
             const formSubmitRes = await fetch("https://formsubmit.co/ajax/propsmartrealty@gmail.com", {
@@ -47,22 +48,27 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
                 headers: {
                     "Content-Type": "application/json",
                     "Accept": "application/json",
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
                     "Origin": "https://life-republic.in",
                     "Referer": "https://life-republic.in/"
                 },
                 body: JSON.stringify(formSubmitPayload)
             });
 
+            formSubmitStatus = formSubmitRes.status;
             formSubmitResponseText = await formSubmitRes.text();
             formSubmitSuccess = formSubmitRes.ok;
         } catch (err: any) {
             console.error("Server-side FormSubmit dispatch error:", err);
+            formSubmitResponseText = err.message || String(err);
         }
 
         return new Response(JSON.stringify({
             success: true,
             message: "Lead processed successfully",
             dispatched: formSubmitSuccess,
+            formSubmitStatus,
+            formSubmitResponse: formSubmitResponseText,
             timestamp
         }), {
             status: 200,
@@ -78,6 +84,21 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
             headers: { "Content-Type": "application/json" }
         });
     }
+};
+
+export const onRequestGet: PagesFunction<Env> = async () => {
+    return new Response(JSON.stringify({
+        status: "active",
+        service: "Life Republic Lead Dispatch Relay",
+        destination: "propsmartrealty@gmail.com",
+        timestamp: new Date().toISOString()
+    }), {
+        status: 200,
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+        }
+    });
 };
 
 export const onRequestOptions: PagesFunction = async () => {
