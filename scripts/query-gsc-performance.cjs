@@ -6,20 +6,32 @@ const KEY_FILE = path.resolve(__dirname, '../service-accounts/account-1.json');
 const SITE_URL = 'sc-domain:life-republic.in';
 
 async function getAuthClient() {
-    if (!fs.existsSync(KEY_FILE)) {
-        throw new Error(`Service account key not found at ${KEY_FILE}`);
+    const keyDir = path.resolve(__dirname, '../service-accounts');
+    const candidateFiles = [];
+    if (fs.existsSync(keyDir)) {
+        const files = fs.readdirSync(keyDir).filter(f => f.endsWith('.json')).map(f => path.join(keyDir, f));
+        candidateFiles.push(...files);
     }
-    const keyData = JSON.parse(fs.readFileSync(KEY_FILE, 'utf-8'));
-    const jwt = new JWT({
-        email: keyData.client_email,
-        key: keyData.private_key,
-        scopes: [
-            'https://www.googleapis.com/auth/webmasters',
-            'https://www.googleapis.com/auth/webmasters.readonly'
-        ]
-    });
-    await jwt.authorize();
-    return jwt;
+    candidateFiles.push(path.resolve(__dirname, '../service-account.json'));
+
+    for (const keyPath of candidateFiles) {
+        if (!fs.existsSync(keyPath)) continue;
+        try {
+            const keyData = JSON.parse(fs.readFileSync(keyPath, 'utf-8'));
+            if (!keyData.client_email || !keyData.private_key) continue;
+            const jwt = new JWT({
+                email: keyData.client_email,
+                key: keyData.private_key,
+                scopes: [
+                    'https://www.googleapis.com/auth/webmasters',
+                    'https://www.googleapis.com/auth/webmasters.readonly'
+                ]
+            });
+            await jwt.authorize();
+            return jwt;
+        } catch (_) {}
+    }
+    throw new Error('No valid service account found in service-accounts/ with GSC access');
 }
 
 function formatDate(d) {
