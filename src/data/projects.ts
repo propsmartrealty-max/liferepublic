@@ -592,16 +592,18 @@ export const projectsRegistry: Project[] = [
         "id": "kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi",
         "title": "Kolte Patil Life Republic Universe | Smart 2 BHK Hinjewadi",
         "category": "Smart Homes",
-        "location": "Sector R1 (Universe)",
-        "price": "₹58 Lakhs*",
+        "location": "Sector R10 (Universe)",
+        "price": "₹78 Lakhs* (Sold Out)",
+        "status": "Sold Out Cluster",
         "image": "/images/projects/1719304446unnn1795-930.webp",
-        "description": "Universe at Kolte Patil Life Republic Hinjewadi. Smart, IoT-enabled 2 BHK homes in partnership with Planet Smart City.",
+        "description": "Universe at Kolte Patil Life Republic Hinjewadi (Sector R10). Smart, IoT-enabled 2 BHK homes in partnership with Planet Smart City (Sold Out Cluster).",
         "features": [
             "2 BHK Residences",
-            "Smart City Features",
+            "Sector R10",
+            "Sold Out Cluster",
             "MahaRERA: P52100027629"
         ],
-        "overview": "Universe at Kolte Patil Life Republic Township is an innovative partnership with Planet Smart City. Features smart infrastructure, IoT lighting, community engagement apps, and resource-efficient residential living.",
+        "overview": "Universe at Kolte Patil Life Republic Township (Sector R10) is an innovative partnership with Planet Smart City. Features smart infrastructure, IoT lighting, community engagement apps, and resource-efficient residential living. 100% Sold Out Cluster with verified resale opportunities.",
         "amenities": [
             "Smart Community App",
             "Solar Powered Common Areas",
@@ -617,6 +619,7 @@ export const projectsRegistry: Project[] = [
                 "image": "/images/gallery/universe/2bhk-plan.webp",
                 "details": [
                     "Carpet Area: 650 - 720 sq.ft.",
+                    "Price: ₹78 Lakhs* (Sold Out Cluster)",
                     "IoT Home Automation",
                     "Optimized Floor Space"
                 ]

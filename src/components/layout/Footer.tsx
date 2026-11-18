@@ -191,7 +191,7 @@ export const Footer: React.FC = () => {
                         <div className="space-y-6">
                             <div>
                                 <h4 className="font-bold text-[#202124] mb-2">What are the configurations and price range?</h4>
-                                <p className="text-text-muted">Life Republic offers smart 2 & 3 BHKs (Universe, Echoes, Duet) starting from ₹58 Lakhs*, to Ultra-Luxury 3 & 4 BHKs (Canvas) and Row Houses (24K Espada) up to ₹3.40 Cr*, catering to IT professionals and luxury home buyers.</p>
+                                <p className="text-text-muted">Life Republic offers smart 2 & 3 BHKs (Universe, Echoes, Duet) starting from ₹78 Lakhs*, to Ultra-Luxury 3 & 4 BHKs (Canvas) and Row Houses (24K Espada) up to ₹3.40 Cr*, catering to IT professionals and luxury home buyers.</p>
                             </div>
                             <div>
                                 <h4 className="font-bold text-[#202124] mb-2">Are the projects MahaRERA registered?</h4>

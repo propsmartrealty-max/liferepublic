@@ -98,7 +98,7 @@ export const HyperLocalLanding: React.FC = () => {
     const locationFaqs = useMemo(() => [
         {
             question: `What are the property prices and configurations available in ${config.title.split('|')[0].trim()}?`,
-            answer: `Residences in ${config.title.split('|')[0].trim()} start from ₹58 Lakhs* for premium 2 BHK flats, up to ₹3.5 Cr* for luxury row houses and villas. All properties feature modern lifestyle amenities and are registered under MahaRERA.`
+            answer: `Residences in ${config.title.split('|')[0].trim()} start from ₹78 Lakhs* for premium 2 BHK flats, up to ₹3.5 Cr* for luxury row houses and villas. All properties feature modern lifestyle amenities and are registered under MahaRERA.`
         },
         {
             question: `How far is ${config.title.split('|')[0].trim()} from Hinjewadi IT Park and Pune Metro?`,

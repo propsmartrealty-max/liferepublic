@@ -20,7 +20,7 @@ Core Facts:
   6. Echoes (Sector R31): 2 & 2.5 BHK Eco-Chic, ₹85L - ₹1.10Cr, RERA: PM1261012502409
   7. 24K Espada (Sector R31): 4 & 5 BHK Row Houses/Villas, ₹3.40Cr - ₹5.50Cr, RERA: P52100002646
   8. Nora (Sector R17B): Bungalow Plots (1500-4000 sq.ft), ₹1.80Cr - ₹3.50Cr, RERA: P52100022278
-  9. The Universe (Sector R10): 2 BHK Smart Homes, ₹58L - ₹75L, RERA: P52100027629
+  9. The Universe (Sector R10): 2 BHK Smart Homes, ₹78L* (Sold Out Cluster), RERA: P52100027629
   10. Arezo (Sector R16): 2 BHK Residences, ₹78L*, RERA: P52100018539
 
 Style:
@@ -33,12 +33,12 @@ function getLocalKnowledgeResponse(query: string): string {
 
     // Budget or Compact Queries
     if (q.includes('studio') || (q.includes('budget') && !q.includes('high')) || q.includes('40 lakh') || q.includes('50 lakh') || q.includes('affordable')) {
-        return "Compact and high-ROI residences are available in **The Universe (Sector R10)** starting from ₹58 Lakhs* (2 BHK) and **Duet (Sector R34)** from ₹79 Lakhs*. Would you like to view the 2 BHK floor plans or explore current tower availability?";
+        return "Residences in **The Universe (Sector R10)** are ₹78 Lakhs* (100% Sold Out Cluster with verified resale options), while active new units in **Duet (Sector R34)** start from ₹79 Lakhs*. Would you like to view the 2 BHK floor plans or explore current tower availability?";
     }
 
     // 2 BHK Queries
     if (q.includes('2 bhk') || q.includes('2bhk')) {
-        return "Life Republic offers multiple 2 BHK clusters tailored to your lifestyle: **The Universe (Sector R10)** (from ₹58L*), **Duet (Sector R34)** (from ₹79L*), **Arezo (Sector R16)** (from ₹78L*), **Aros (Sector R13)** (from ₹92L* adjacent to Central Park), **Echoes (Sector R31)** (from ₹85L*), and **Qrious (Sector R14)** (from ₹89L*). Which cluster would you like to explore?";
+        return "Life Republic offers multiple 2 BHK clusters tailored to your lifestyle: **The Universe (Sector R10)** (₹78L* - Sold Out Cluster), **Duet (Sector R34)** (from ₹79L*), **Arezo (Sector R16)** (from ₹78L*), **Aros (Sector R13)** (from ₹92L* adjacent to Central Park), **Echoes (Sector R31)** (from ₹85L*), and **Qrious (Sector R14)** (from ₹89L*). Which cluster would you like to explore?";
     }
 
     // 3 BHK Queries
@@ -92,7 +92,7 @@ function getLocalKnowledgeResponse(query: string): string {
     }
 
     // General Fallback
-    return "Kolte-Patil Life Republic is a 390-acre integrated sustainable township in Hinjewadi, Pune West, master-planned by Hafeez Contractor. It offers premium 2, 3 & 4 BHK residences, row houses, and bungalow plots starting from ₹58 Lakhs*. How may I assist you with floor plans, pricing, or a VIP site visit today?";
+    return "Kolte-Patil Life Republic is a 390-acre integrated sustainable township in Hinjewadi, Pune West, master-planned by Hafeez Contractor. It offers premium 2, 3 & 4 BHK residences, row houses, and bungalow plots starting from ₹78 Lakhs*. How may I assist you with floor plans, pricing, or a VIP site visit today?";
 }
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;

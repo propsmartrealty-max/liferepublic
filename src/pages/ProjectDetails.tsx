@@ -305,6 +305,11 @@ const ProjectDetails: React.FC = () => {
                                             <span className="text-xs font-bold tracking-widest uppercase text-white/90">{project.sector}</span>
                                         </div>
                                     )}
+                                    {project.status?.includes('Sold Out') && (
+                                        <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-red-500/20 text-red-400 border border-red-500/30 rounded-full backdrop-blur-md">
+                                            <span className="text-xs font-bold tracking-widest uppercase">Sold Out Cluster</span>
+                                        </div>
+                                    )}
                                     {project.possession && (
                                         <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 rounded-full border border-white/20 backdrop-blur-md">
                                             <Calendar size={13} className="text-white/60" />
@@ -493,7 +498,7 @@ const ProjectDetails: React.FC = () => {
                                     </tbody>
                                 </table>
                                 <div className="p-3 bg-white/[0.02] border-t border-white/5 text-[11px] text-gray-500 flex flex-col sm:flex-row justify-between gap-2">
-                                    <span>*Prices indicative. Stamp duty (7%), registration, and statutory charges applicable at actuals. Minimum unit pricing starts at ₹58 Lakhs*.</span>
+                                    <span>*Prices indicative. Stamp duty (7%), registration, and statutory charges applicable at actuals. Minimum unit pricing starts at ₹78 Lakhs*.</span>
                                     <span>MahaRERA: <strong className="text-gray-400 font-mono">{project.rera}</strong></span>
                                 </div>
                             </div>

@@ -33,11 +33,11 @@ const HOME_FAQS = [
     },
     {
         question: "What are the starting prices for flats in Life Republic Hinjewadi?",
-        answer: "Prices in Kolte Patil Life Republic start at ₹58 Lakhs* for premium 2 BHK apartments in Sector R10 (The Universe), ₹79 Lakhs* in Duet (Sector R34), and ₹92 Lakhs* in Aros (Sector R13). Luxury 3 BHK homes in Atmos (Sector R22) start from ₹1.15 Cr*, 3 & 4 BHK presidential suites in Canvas (Sector R5) start from ₹1.59 Cr*, while ultra-luxury 4 & 5 BHK row houses in 24K Espada (Sector R31) start from ₹3.40 Cr*."
+        answer: "Prices in Kolte Patil Life Republic start at ₹78 Lakhs* for premium 2 BHK apartments in Sector R10 (The Universe - Sold Out Cluster), ₹79 Lakhs* in Duet (Sector R34), and ₹92 Lakhs* in Aros (Sector R13). Luxury 3 BHK homes in Atmos (Sector R22) start from ₹1.15 Cr*, 3 & 4 BHK presidential suites in Canvas (Sector R5) start from ₹1.59 Cr*, while ultra-luxury 4 & 5 BHK row houses in 24K Espada (Sector R31) start from ₹3.40 Cr*."
     },
     {
         question: "Which residential clusters are currently available for booking?",
-        answer: "Active clusters with live inventory include Atmos (Sector R22: 2 & 3 BHK), Aros (Sector R13: 2 & 3 BHK), Echoes (Sector R31: 2 & 2.5 BHK New Launch), Duet (Sector R34: 2 BHK Eterna & Infinite), Canvas (Sector R5: 3, 3.5 & 4 BHK), Qrious (Sector R14: 2 & 3 BHK Smart Homes), The Universe (Sector R10: 2 BHK), 24K Espada (Sector R31: Luxury Row Houses), and Nora (Sector R17B: Bungalow Plots)."
+        answer: "Active clusters with live developer inventory include Atmos (Sector R22: 2 & 3 BHK), Aros (Sector R13: 2 & 3 BHK), Echoes (Sector R31: 2 & 2.5 BHK New Launch), Duet (Sector R34: 2 BHK Eterna & Infinite), Canvas (Sector R5: 3, 3.5 & 4 BHK), Qrious (Sector R14: 2 & 3 BHK Smart Homes), 24K Espada (Sector R31: Luxury Row Houses), and Nora (Sector R17B: Bungalow Plots). The Universe (Sector R10) is a 100% Sold Out cluster with verified resale options available."
     },
     {
         question: "Is Kolte Patil Life Republic approved by MahaRERA?",
@@ -94,8 +94,9 @@ const PRICING_MATRIX = [
         typology: "2 BHK Compact Homes",
         carpet: "560 - 629 sq.ft.",
         sectors: "The Universe (Sector R10) / Arezo (Sector R16)",
-        price: "₹58 L - ₹72 Lakhs*",
-        possession: "Ready / Dec 2027",
+        price: "₹78 Lakhs*",
+        soldOut: true,
+        possession: "Ready / Sold Out Cluster",
         link: "/projects/kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi"
     },
     {
@@ -199,9 +200,9 @@ export const Home: React.FC = () => {
             "offers": {
                 "@type": "AggregateOffer",
                 "priceCurrency": "INR",
-                "lowPrice": "5800000",
+                "lowPrice": "7800000",
                 "highPrice": "35000000",
-                "price": "5800000",
+                "price": "7800000",
                 "offerCount": "11",
                 "availability": "https://schema.org/InStock",
                 "validFrom": "2026-01-01"
@@ -344,7 +345,7 @@ export const Home: React.FC = () => {
                             <span className="text-xs text-gray-300 uppercase tracking-wider">Active Sectors</span>
                         </div>
                         <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-3.5">
-                            <span className="text-2xl font-bold text-[#E5C07B] block">₹58L*</span>
+                            <span className="text-2xl font-bold text-[#E5C07B] block">₹78L*</span>
                             <span className="text-xs text-gray-300 uppercase tracking-wider">Starting Price</span>
                         </div>
                     </div>
@@ -464,7 +465,7 @@ export const Home: React.FC = () => {
                         {[
                             { id: 'all', label: 'All 16 Sectors' },
                             { id: 'latest', label: '🔥 Latest Launches (2026)' },
-                            { id: '2-bhk', label: '2 BHK Smart Homes (From ₹58L*)' },
+                            { id: '2-bhk', label: '2 BHK Smart Homes (From ₹78L*)' },
                             { id: '3-bhk', label: '3 & 4 BHK Luxury High-Rise' },
                             { id: 'villas', label: 'Row Houses & Signature Villas' },
                             { id: 'plots', label: 'Custom Bungalow Plots' }
@@ -586,8 +587,22 @@ export const Home: React.FC = () => {
                                 <tr key={idx} className="hover:bg-white/[0.03] transition-colors">
                                     <td className="p-4 sm:p-5 font-semibold text-white">{row.typology}</td>
                                     <td className="p-4 sm:p-5 text-gray-300">{row.carpet}</td>
-                                    <td className="p-4 sm:p-5 text-gray-300">{row.sectors}</td>
-                                    <td className="p-4 sm:p-5 text-[#E5C07B] font-bold text-base">{row.price}</td>
+                                    <td className="p-4 sm:p-5 text-gray-300">
+                                        <span>{row.sectors}</span>
+                                        {(row as any).soldOut && (
+                                            <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-red-500/20 text-red-400 border border-red-500/30">
+                                                Sold Out Cluster
+                                            </span>
+                                        )}
+                                    </td>
+                                    <td className="p-4 sm:p-5 text-[#E5C07B] font-bold text-base">
+                                        <div>{row.price}</div>
+                                        {(row as any).soldOut && (
+                                            <span className="block text-[11px] font-semibold text-red-400 uppercase tracking-normal">
+                                                Sold Out Cluster
+                                            </span>
+                                        )}
+                                    </td>
                                     <td className="p-4 sm:p-5 text-gray-400">{row.possession}</td>
                                     <td className="p-4 sm:p-5 text-right">
                                         <Link

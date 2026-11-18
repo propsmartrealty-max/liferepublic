@@ -404,7 +404,7 @@ export const generateClusterProductSchema = (cluster: any) => {
                 'mainEntity': (cluster.faqs && cluster.faqs.length > 0 ? cluster.faqs : [
                     {
                         question: `What is the starting price for flats in ${cluster.name} Life Republic?`,
-                        answer: `Homes in ${cluster.name} at Kolte Patil Life Republic start from ${cluster.price || '₹58 Lakhs*'}. Premium configurations include ${cluster.configurations?.map((c: any) => c.type).join(', ') || cluster.category} with expansive carpet areas.`
+                        answer: `Homes in ${cluster.name} at Kolte Patil Life Republic start from ${cluster.price || '₹78 Lakhs*'}. Premium configurations include ${cluster.configurations?.map((c: any) => c.type).join(', ') || cluster.category} with expansive carpet areas.`
                     },
                     {
                         question: `What is the MahaRERA registration number for ${cluster.name}?`,

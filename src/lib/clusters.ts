@@ -317,20 +317,20 @@ export const CLUSTERS = [
     },
     {
         id: "universe",
-        status: "Ready & Resale Available",
-        possession: "Ready to Move",
-        sector: "Sector R1",
-        usp: "Planet Smart City Partnership with IoT-Enabled Living",
+        status: "Sold Out Cluster",
+        possession: "Ready Possession (Sold Out)",
+        sector: "Sector R10",
+        usp: "Planet Smart City Partnership with IoT-Enabled Living (Sold Out Cluster)",
         name: "Universe",
         slug: "kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi",
         category: "Smart 2 BHK",
-        description: "Universe at Life Republic is co-developed with Planet Smart City, integrating smart infrastructure, community apps, sensor lighting, and sustainable living.",
-        price: "₹58 Lakhs*",
+        description: "Universe at Life Republic (Sector R10) is co-developed with Planet Smart City, integrating smart infrastructure, community apps, sensor lighting, and sustainable living. Primary inventory is 100% Sold Out.",
+        price: "₹78 Lakhs* (Sold Out)",
         rera: "P52100027629",
         image: "/images/projects/1719304446unnn1795-930.webp",
         masterLayout: "/images/gallery/universe/master-layout.webp",
         configurations: [
-            { type: "2 BHK Smart", size: "650 - 720 sq.ft.", price: "₹58 Lakhs*" }
+            { type: "2 BHK Smart", size: "650 - 720 sq.ft.", price: "₹78 Lakhs* (Sold Out)" }
         ],
         gallery: [
             "https://liferepublic.in/images/project/gallery/17108326182%20(1).webp",

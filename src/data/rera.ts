@@ -17,7 +17,7 @@ export const RERA_REGISTRY = [
     { title: "Duet (Sector R34)", sector: "Sector R34", rera: "P52100079424", status: "Active" },
     { title: "Qrious (Sector R14)", sector: "Sector R14", rera: "P52100079623", status: "Active" },
     { title: "Canvas (Sector R5)", sector: "Sector R5", rera: "P52100077008", status: "Active" },
-    { title: "The Universe (Sector R10)", sector: "Sector R10", rera: "P52100027629", status: "Active" },
+    { title: "The Universe (Sector R10)", sector: "Sector R10", rera: "P52100027629", status: "Sold Out Cluster" },
     { title: "24K Espada (Sector R31)", sector: "Sector R31", rera: "P52100002646", status: "Completed" },
     { title: "Sound of Soul (Sector R17A)", sector: "Sector R17A", rera: "P52100079424", status: "Active" },
     { title: "Nora Bungalow Plots (Sector R17B)", sector: "Sector R17B", rera: "P52100022278", status: "Active" },

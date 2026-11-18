@@ -25,10 +25,10 @@ export const pseoRegistry: Record<string, LandingConfig> = {
     },
     'affordable-flats-in-hinjewadi': {
         title: 'Affordable Flats in Hinjewadi Pune | Kolte Patil Life Republic',
-        description: 'Find affordable 2 BHK flats in Hinjewadi starting ₹58 Lakhs at Kolte Patil Life Republic township.',
+        description: 'Find premium 2 BHK flats in Hinjewadi starting ₹78 Lakhs at Kolte Patil Life Republic township.',
         keywords: 'affordable flats hinjewadi, budget flats hinjewadi pune, cheap flats near hinjewadi',
         infraScore: 90, rentalYield: '5.5% - 6.2%', commutePhase1: '10 mins',
-        highlights: ['Starting ₹58 Lakhs', 'PMAY eligible configurations', 'Metro connectivity coming']
+        highlights: ['Starting ₹78 Lakhs*', 'PMAY eligible configurations', 'Metro connectivity coming']
     },
     'luxury-apartments-hinjewadi': {
         title: 'Luxury Apartments in Hinjewadi | Kolte Patil Life Republic',
@@ -88,10 +88,10 @@ export const pseoRegistry: Record<string, LandingConfig> = {
     },
     'kolte-patil-life-republic-price': {
         title: 'Kolte Patil Life Republic Price List 2026 | All Projects',
-        description: 'Updated price list for all Kolte Patil Life Republic projects. Premium 2, 3 & 4 BHK flats starting ₹58 Lakhs*.',
+        description: 'Updated price list for all Kolte Patil Life Republic projects. Premium 2, 3 & 4 BHK flats starting ₹78 Lakhs*.',
         keywords: 'kolte patil life republic price, life republic price list 2026, life republic hinjewadi price',
         infraScore: 97, rentalYield: '5.5% - 7.0%', commutePhase1: '10 mins',
-        highlights: ['Verified pricing from ₹58L to ₹3.5Cr*', 'Flexible payment plans', 'Home loan pre-approved']
+        highlights: ['Verified pricing from ₹78L to ₹3.5Cr*', 'Flexible payment plans', 'Home loan pre-approved']
     },
     'kolte-patil-life-republic-reviews': {
         title: 'Kolte Patil Life Republic Reviews 2026 | Resident Feedback',
@@ -109,10 +109,10 @@ export const pseoRegistry: Record<string, LandingConfig> = {
     },
     'flats-in-hinjewadi-under-60-lakhs': {
         title: 'Flats in Hinjewadi Under 60 Lakhs | Life Republic Pune',
-        description: 'Smart 2 BHK apartments in Hinjewadi from ₹58 Lakhs* at Kolte Patil Life Republic township.',
+        description: 'Smart 2 BHK apartments in Hinjewadi benchmarked from ₹78 Lakhs* at Kolte Patil Life Republic township (Sold Out Cluster).',
         keywords: 'flats in hinjewadi under 60 lakhs, cheap flats hinjewadi, budget apartments pune',
         infraScore: 92, rentalYield: '6.0% - 7.0%', commutePhase1: '10 mins',
-        highlights: ['Starting ₹58 Lakhs*', 'Smart 2 BHK layouts', 'Township amenities included']
+        highlights: ['Starting ₹78 Lakhs* (Sold Out Cluster)', 'Smart 2 BHK layouts', 'Township amenities included']
     },
     'flats-in-hinjewadi-under-80-lakhs': {
         title: 'Flats in Hinjewadi Under 80 Lakhs | 2 BHK Life Republic',
