@@ -56,29 +56,36 @@ export const emailService = {
 
         let emailSent = false;
 
-        // === TIER 1: Web3Forms Instant Dispatch ===
+        // === TIER 1: Edge Cloudflare Function (/api/leads) ===
         try {
-            const response = await fetch(WEB3FORMS_URL, {
+            const edgeRes = await fetch("/api/leads", {
                 method: "POST",
-                body: formData
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    name: lead.name,
+                    phone: lead.phone,
+                    email: lead.email,
+                    cluster: lead.project,
+                    message: lead.message,
+                    source: lead.source || (typeof window !== 'undefined' ? window.location.hostname : 'Life Republic')
+                })
             });
 
-            if (response.ok) {
-                const result = await response.json();
+            if (edgeRes.ok) {
+                const result = await edgeRes.json();
                 if (result.success) {
                     emailSent = true;
-                    console.log("[Email Tier 1] Web3Forms dispatch successful.");
-                } else {
-                    console.warn("[Email Tier 1] Web3Forms returned non-success:", result);
+                    console.log("[Email Tier 1] Edge /api/leads dispatch successful.");
                 }
-            } else {
-                console.warn("[Email Tier 1] Web3Forms HTTP error:", response.status);
             }
-        } catch (error) {
-            console.error("[Email Tier 1] Web3Forms failed:", error);
+        } catch (edgeErr) {
+            console.warn("[Email Tier 1] Edge /api/leads failed:", edgeErr);
         }
 
-        // === TIER 2: FormSubmit Fallback ===
+        // === TIER 2: FormSubmit Direct Relay ===
         if (!emailSent) {
             try {
                 const formSubmitUrl = "https://formsubmit.co/ajax/propsmartrealty@gmail.com";
