@@ -21,64 +21,84 @@ import { CLUSTERS } from '../../lib/clusters';
 // ─── Verified Featured Clusters for Mega Menu ─────────────────────────────────
 const FEATURED_CLUSTERS = [
     {
+        name: 'Canvas',
+        slug: 'kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi',
+        sector: 'Sector R5',
+        typology: '3, 3.5 & 4 BHK Luxury',
+        price: '₹1.59 Cr*',
+        status: 'New Launch',
+        possession: 'Dec 2030',
+        image: '/images/projects/1727356856project_banner___1795-930.jpg'
+    },
+    {
+        name: 'Echoes',
+        slug: 'kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi',
+        sector: 'Sector R31',
+        typology: '2 & 2.5 BHK',
+        price: '₹85 Lakhs*',
+        status: 'New Launch',
+        possession: 'Dec 2030',
+        image: '/images/projects/1774005462Top_Banner-1795x930.jpg.jpeg'
+    },
+    {
         name: 'Qrious',
-        slug: 'kolte-patil-life-republic-qrious',
+        slug: 'kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi',
         sector: 'Sector R14',
         typology: '2 & 3 BHK',
-        price: '₹68 Lakhs*',
-        status: 'Under Construction',
-        possession: 'Dec 2026',
-        image: 'https://liferepublic.in/images/projects/location/17507612781749724578qriousele1.jpg'
+        price: '₹89 Lakhs*',
+        status: 'New Launch',
+        possession: 'Dec 2028',
+        image: 'https://liferepublic.in/images/project/banner/175076037117497235991795X930.jpg'
     },
     {
         name: 'Duet',
-        slug: 'kolte-patil-life-republic-duet',
+        slug: 'kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi',
         sector: 'Sector R34',
         typology: 'Smart 2 BHK',
         price: '₹79 Lakhs*',
-        status: 'Under Construction',
+        status: 'New Launch',
         possession: 'Dec 2030',
         image: '/images/projects/1747221568duet_banner.jpg'
     },
     {
-        name: 'Canvas',
-        slug: 'kolte-patil-life-republic-canvas',
-        sector: 'Sector R5',
-        typology: '3 & 4 BHK Luxury',
-        price: '₹1.35 Cr*',
-        status: 'Under Construction',
-        possession: 'Dec 2027',
-        image: 'https://liferepublic.in/images/project/gallery/1727440628GATE%20SCULPTURE.webp'
-    },
-    {
-        name: 'Aros',
-        slug: 'kolte-patil-life-republic-aros',
-        sector: 'Sector R13',
-        typology: '2 & 3 BHK High-Rise',
-        price: '₹79 Lakhs*',
-        status: 'Under Construction',
-        possession: 'June 2028',
-        image: '/images/projects/17523100953-bhk-flats-in-pune-hinjewadi-aros-life-republic.webp'
-    },
-    {
         name: 'Atmos',
-        slug: 'kolte-patil-life-republic-atmos',
+        slug: 'kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi',
         sector: 'Sector R22',
-        typology: '2, 2.5 & 3 BHK',
-        price: '₹90 Lakhs*',
-        status: 'Under Construction',
+        typology: '2 & 3 BHK',
+        price: '₹1.15 Cr*',
+        status: 'New Launch',
         possession: 'Dec 2028',
         image: '/images/projects/1718284587atmosb.webp'
     },
     {
-        name: 'Echoes',
-        slug: 'kolte-patil-life-republic-echoes',
-        sector: 'Sector R31',
-        typology: '2 & 3 BHK Scenic',
-        price: '₹79 Lakhs*',
-        status: 'Under Construction',
+        name: '24K Espada',
+        slug: 'kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi',
+        sector: 'Sector R24',
+        typology: '4 & 5 BHK Row Houses',
+        price: '₹3.4 Cr*',
+        status: 'Signature Luxury',
         possession: 'Dec 2027',
-        image: 'https://liferepublic.in/images/project/gallery/171083281311.webp'
+        image: 'https://liferepublic.in/images/project/banner/1710841863video%20thumb%20images1795-929.webp'
+    },
+    {
+        name: 'Sound of Soul',
+        slug: 'kolte-patil-life-republic-sound-of-soul-luxury-4-bhk-row-houses-hinjewadi',
+        sector: 'Sector R15',
+        typology: '4 BHK Row Houses',
+        price: '₹2.90 Cr*',
+        status: 'Ready Possession',
+        possession: 'Ready to Move',
+        image: 'https://liferepublic.in/images/project/banner/1718811004sos1795-930.webp'
+    },
+    {
+        name: 'Aros',
+        slug: 'kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi',
+        sector: 'Sector R13',
+        typology: '2 & 3 BHK High-Rise',
+        price: '₹92 Lakhs*',
+        status: 'Under Construction',
+        possession: 'June 2028',
+        image: '/images/projects/17523100953-bhk-flats-in-pune-hinjewadi-aros-life-republic.webp'
     }
 ];
 

@@ -12,16 +12,18 @@ interface EnquiryModalProps {
 }
 
 const CLUSTERS_LIST = [
-    'Qrious',
-    'Duet',
-    'Canvas',
-    'Aros',
-    'Atmos',
-    'Echoes',
-    '24K Espada',
+    'Canvas (Sector R5)',
+    'Echoes (Sector R31)',
+    'Qrious (Sector R14)',
+    'Duet (Sector R34)',
+    'Atmos (Sector R22)',
+    '24K Espada (Villas)',
+    'Sound of Soul (Row Houses)',
+    'Aros (Sector R13)',
+    'Universe (Sector R1)',
+    'Nora (Bungalow Plots)',
     'Oro Avenue',
-    'Universe',
-    '150-Acre Master Township'
+    '390-Acre Master Township'
 ];
 
 export const EnquiryModal: React.FC<EnquiryModalProps> = ({ 

@@ -157,7 +157,7 @@ const resolveProject = (paramId: string) => {
                     price: regProj.price,
                     image: fp.image
                 })) || [{ type: regProj.category || 'Luxury Residence', size: 'Spacious', price: regProj.price }],
-                gallery: [regProj.image, ...(regProj.floorPlans?.map(fp => fp.image).filter(Boolean) || [])],
+                gallery: (regProj.gallery && regProj.gallery.length > 0) ? regProj.gallery : [regProj.image, ...(regProj.floorPlans?.map(fp => fp.image).filter(Boolean) || [])],
                 amenitiesList: regProj.amenities?.map(a => ({ name: a, icon: '' })) || [],
                 floorPlans: regProj.floorPlans?.map(fp => fp.image).filter(Boolean) || []
             };

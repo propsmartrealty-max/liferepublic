@@ -36,7 +36,7 @@ export const AmenitiesCarousel: React.FC = () => {
             description: "A sprawling clubhouse for social gatherings and recreation."
         },
         {
-            image_url: "/images/homeaminities/aminities/1714995734Boulevard%201-%20DSC_2081-%20911%20x%20500%20copy.webp",
+            image_url: "/images/homeaminities/aminities/boulevard-1.webp",
             title: "Green Boulevards",
             description: "Lush green pathways for peaceful walks and nature connect."
         },
@@ -46,7 +46,7 @@ export const AmenitiesCarousel: React.FC = () => {
             description: "Relax and rejuvenate in our temperature-controlled swimming pool."
         },
         {
-            image_url: "/images/homeaminities/aminities/1714995633Boulevard%202-%20DSC_2109-%20911%20x%20500%20copy.webp",
+            image_url: "/images/homeaminities/aminities/boulevard-2.webp",
             title: "Landscaped Gardens",
             description: "Beautifully manicured gardens that soothe your senses."
         },

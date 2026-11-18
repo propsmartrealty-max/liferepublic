@@ -18,7 +18,7 @@ export const ITProfessionalsHub: React.FC = () => {
             {/* Hero Section */}
             <section className="relative h-[80vh] flex items-center bg-white overflow-hidden">
                 <div className="absolute inset-0">
-                    <img loading="lazy" src="/images/projects/atmos/Atmos-1.jpg" alt="Life Republic Aerial View" className="w-full h-full object-cover opacity-40" />
+                    <img loading="lazy" src="/images/projects/1718284587atmosb.webp" alt="Life Republic Aerial View" className="w-full h-full object-cover opacity-40" />
                     <div className="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary-dark/80 to-transparent" />
                 </div>
                 
@@ -110,8 +110,8 @@ export const ITProfessionalsHub: React.FC = () => {
                         </div>
                         <div className="lg:w-1/2">
                             <div className="grid grid-cols-2 gap-4">
-                                <img src="/images/projects/universe/clubhouse.webp" alt="Co-working Space" className="rounded-3xl w-full h-64 object-cover" />
-                                <img src="/images/gallery/eros/eros-7.jpg" alt="Smart Home" className="rounded-3xl w-full h-64 object-cover mt-12" />
+                                <img src="/images/gallery/clubhouse.webp" alt="Co-working Space" className="rounded-3xl w-full h-64 object-cover" />
+                                <img src="/images/project/gallery/1747221661duet-interior-1.jpg" alt="Smart Home" className="rounded-3xl w-full h-64 object-cover mt-12" />
                             </div>
                         </div>
                     </div>

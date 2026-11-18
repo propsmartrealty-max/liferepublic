@@ -163,6 +163,7 @@ export const Home: React.FC = () => {
 
     const filteredProjects = projectsRegistry.filter(project => {
         if (clusterCategory === 'all') return true;
+        if (clusterCategory === 'latest') return ['canvas', 'echoes', 'qrious', 'duet', 'atmos', 'espada', 'sound-of-soul'].some(key => project.id.includes(key));
         if (clusterCategory === '2-bhk') return project.title.includes('2 BHK') || project.description.includes('2 BHK') || project.category === 'Smart Homes';
         if (clusterCategory === '3-bhk') return project.title.includes('3 BHK') || project.title.includes('4 BHK') || project.category === 'Luxury' || project.category === 'Lifestyle';
         if (clusterCategory === 'villas') return project.category === 'Villas' || project.title.includes('Row Houses') || project.id.includes('espada') || project.id.includes('villas') || project.id.includes('sound-of-soul');
@@ -462,6 +463,7 @@ export const Home: React.FC = () => {
                     <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
                         {[
                             { id: 'all', label: 'All 16 Sectors' },
+                            { id: 'latest', label: '🔥 Latest Launches (2026)' },
                             { id: '2-bhk', label: '2 BHK Smart Homes (From ₹58L*)' },
                             { id: '3-bhk', label: '3 & 4 BHK Luxury High-Rise' },
                             { id: 'villas', label: 'Row Houses & Signature Villas' },
@@ -500,6 +502,12 @@ export const Home: React.FC = () => {
                                 <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-[#E5C07B] border border-white/10">
                                     {project.location}
                                 </div>
+                                {['canvas', 'echoes', 'qrious', 'duet', 'atmos', 'espada', 'sound-of-soul'].some(k => project.id.includes(k)) && (
+                                    <div className="absolute top-4 right-4 bg-gradient-to-r from-amber-500 to-[#E5C07B] text-black font-extrabold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow-lg flex items-center gap-1 z-10">
+                                        <Sparkles size={11} className="text-black" />
+                                        <span>New Launch</span>
+                                    </div>
+                                )}
                                 <div className="absolute bottom-4 right-4 bg-[#E5C07B] text-black px-3.5 py-1 rounded-full text-sm font-bold shadow-md">
                                     {project.price}
                                 </div>
