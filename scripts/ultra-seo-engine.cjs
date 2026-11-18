@@ -50,15 +50,32 @@ function runCommand(command, args = []) {
 
 async function getOpportunityQueries() {
     try {
-        if (!fs.existsSync(KEY_FILE)) return [];
-        const credentials = JSON.parse(fs.readFileSync(KEY_FILE, 'utf-8'));
-        const client = new JWT({
-            email: credentials.client_email,
-            key: credentials.private_key,
-            scopes: ['https://www.googleapis.com/auth/webmasters.readonly']
-        });
+        const keyDir = path.resolve(__dirname, '../service-accounts');
+        const candidateFiles = [];
+        if (fs.existsSync(keyDir)) {
+            const files = fs.readdirSync(keyDir).filter(f => f.endsWith('.json')).map(f => path.join(keyDir, f));
+            candidateFiles.push(...files);
+        }
+        candidateFiles.push(path.resolve(__dirname, '../service-account.json'));
 
-        await client.authorize();
+        let client = null;
+        for (const keyPath of candidateFiles) {
+            if (!fs.existsSync(keyPath)) continue;
+            try {
+                const credentials = JSON.parse(fs.readFileSync(keyPath, 'utf-8'));
+                if (!credentials.client_email || !credentials.private_key) continue;
+                const jwt = new JWT({
+                    email: credentials.client_email,
+                    key: credentials.private_key,
+                    scopes: ['https://www.googleapis.com/auth/webmasters.readonly']
+                });
+                await jwt.authorize();
+                client = jwt;
+                break;
+            } catch (_) {}
+        }
+
+        if (!client) return [];
 
         const endDate = new Date().toISOString().split('T')[0];
         const startDate = new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];

@@ -94,10 +94,35 @@ export const onRequest: PagesFunction = async (context) => {
     const userAgent = context.request.headers.get('user-agent') || '';
     const isSearchBot = /googlebot|bingbot|yandex|duckduckbot|slurp|baiduspider|gptbot|chatgpt|claudebot|perplexitybot|applebot/i.test(userAgent);
     
-    // SEO Hardening Directive
+    // SEO Hardening Directive & Edge Canonical Signaling
     headers.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+    if (!isStaticAsset) {
+        const canonicalUrl = `https://life-republic.in${path === '/' ? '' : path}`;
+        headers.set('Link', `<${canonicalUrl}>; rel="canonical", <https://life-republic.in/sitemap.xml>; rel="sitemap"`);
+    }
+
     if (isSearchBot) {
         headers.set('X-Crawler-Classification', 'search-engine-verified');
+        headers.set('Surrogate-Control', 'max-age=604800');
+        headers.set('X-Edge-Indexing-Tier', 'Enterprise-Active');
+    }
+
+    // 7b. Edge Instant IndexNow Signal for Programmatic Pages & Search Crawlers
+    // Asynchronously broadcasts discovery to Bing, Microsoft Copilot, Yandex with 0ms visitor latency
+    if (!isStaticAsset && (isSearchBot || path.startsWith('/search/') || path.startsWith('/projects/'))) {
+        const targetUrl = `https://life-republic.in${path}`;
+        context.waitUntil(
+            fetch('https://api.indexnow.org/indexnow', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json; charset=utf-8' },
+                body: JSON.stringify({
+                    host: 'life-republic.in',
+                    key: 'e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9',
+                    keyLocation: 'https://life-republic.in/e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9.txt',
+                    urlList: [targetUrl]
+                })
+            }).catch(() => {})
+        );
     }
 
     const contentType = headers.get('content-type') || '';
