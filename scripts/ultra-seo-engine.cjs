@@ -133,6 +133,25 @@ async function runUltraSEOEngine() {
         log(`ℹ️ GSC Feeds sync executed (code ${gscRes.code}).`);
     }
 
+    // Step 4: Googlebot Direct Sitemap Ping
+    log('\n🔔 Step 4: Pinging Googlebot & Crawlers for Real-Time Sitemap Discovery...');
+    const https = require('https');
+    const pingUrls = [
+        `https://www.google.com/ping?sitemap=${encodeURIComponent(`${DOMAIN}/sitemap.xml`)}`,
+        `https://www.google.com/ping?sitemap=${encodeURIComponent(`${DOMAIN}/sitemap-silos-index.xml`)}`
+    ];
+
+    for (const pUrl of pingUrls) {
+        try {
+            await new Promise((resolve) => {
+                https.get(pUrl, (res) => {
+                    log(`   📡 Pinged ${pUrl.split('?')[1]} → HTTP ${res.statusCode}`);
+                    resolve();
+                }).on('error', () => resolve());
+            });
+        } catch (_) {}
+    }
+
     log('\n🏁 Ultra-Advanced Programmatic Google SEO Cycle Completed Successfully.');
     log('═'.repeat(75) + '\n');
 }

@@ -1,704 +1,1135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://life-republic.in/</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/hero-new.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Hinjewadi Master Skyline</image:title>
+      <image:caption>Kolte Patil Life Republic 390-Acre Integrated Gated Township Hinjewadi Pune</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/master-layout-full.jpg</image:loc>
+      <image:title>Life Republic 390-Acre Master Layout Plan</image:title>
+      <image:caption>Master layout and 16 residential sectors map of Kolte Patil Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/gallery/clubhouse.webp</image:loc>
+      <image:title>Crimson Clubhouse &amp; Sports Complex</image:title>
+      <image:caption>Olympic-length swimming pool, sports arena, and township lifestyle club</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/amenities</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/gallery/clubhouse.webp</image:loc>
+      <image:title>Crimson Clubhouse Amenities</image:title>
+      <image:caption>World-class clubhouse and indoor sports facilities at Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/overview-img.jpg</image:loc>
+      <image:title>3.5-Acre Central Urban Park</image:title>
+      <image:caption>Lush green botanical gardens and jogging tracks in Life Republic</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/contact</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/life-republic-sales-office-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/hero-new.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Sales Office Hinjewadi</image:title>
+      <image:caption>Official sales office and VIP experience centre at Survey No. 74 Marunji Mulshi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/overview-img.jpg</image:loc>
+      <image:title>Life Republic Sales Office Gallery &amp; Sample Flat</image:title>
+      <image:caption>Sample flats and project walkthroughs at Life Republic Sales Office</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/about</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/privacy-policy</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/terms-of-service</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/disclaimer</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/nri-corner</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/testimonials</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/media-center</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/township-intelligence</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/connectivity</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/lifestyle</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/sustainability</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/community-forum</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/market-reports</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/locations-directory</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/sitemap</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/township-guide</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/2-bhk-flats-in-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/3-bhk-flats-in-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/4-bhk-flats-in-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/row-houses-in-life-republic</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/luxury-villas-near-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/plots-in-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-tathawade</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-punawale</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-wakad</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-marunji</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-marunji-road</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/ready-possession-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/affordable-flats-in-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/luxury-apartments-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/new-launch-projects-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/under-construction-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-rajiv-gandhi-infotech-park</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-mann-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-maan-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/property-in-hinjewadi-phase-3</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-wakad-hinjewadi-road</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-price</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-reviews</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-master-plan</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-in-hinjewadi-under-50-lakhs</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-in-hinjewadi-under-80-lakhs</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-in-hinjewadi-under-1-crore</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/township-in-hinjewadi-pune</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/rera-approved-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-pimpri-chinchwad</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-baner-pune</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-balewadi-pune</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/investment-property-hinjewadi-pune</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/nri-property-investment-pune</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/smart-homes-hinjewadi-pune</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/row-houses-hinjewadi-pune</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/penthouse-in-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-mumbai-pune-expressway</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-hinjewadi-metro-station</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/gated-community-hinjewadi-pune</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/family-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/resale-flats-life-republic</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/rental-flats-life-republic-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-hinjewadi-pune</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-first-avenue-premium-2-3-bhk-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/sector-r2-life-republic</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-i-towers-smart-homes-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-oro-avenue-smart-1-2-bhk-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-arezo-efficient-2-bhk-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-sound-of-soul-luxury-4-bhk-row-houses-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-nora-bungalow-plots-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/kolte-patil-life-republic-qrious</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/1st-avenue-life-republic</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/2nd-avenue-life-republic</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/3rd-avenue-life-republic</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/4th-avenue-life-republic</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-hinjewadi-phase-1</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-hinjewadi-phase-2</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/location/flats-near-hinjewadi-phase-3</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-nora-bungalow-plots-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/walkthrough.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Nora | Premium Bungalow Plots Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic Nora | Premium Bungalow Plots Hinjewadi luxury residences in Sector Sector R17 (Nora)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/overview-img.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Nora | Premium Bungalow Plots Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic Nora | Premium Bungalow Plots Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/overview-img.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Nora | Premium Bungalow Plots Hinjewadi - Premium Plot Floor Plan (Various Sizes)</image:title>
+      <image:caption>Premium Plot luxury layout with optimized carpet area at Kolte Patil Life Republic Nora | Premium Bungalow Plots Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1718284587atmosb.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Atmos | Modern 3 BHK Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic Atmos | Modern 3 BHK Hinjewadi luxury residences in Sector Sector R22 (Atmos)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1711957330atmos_master_thumb.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Atmos | Modern 3 BHK Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic Atmos | Modern 3 BHK Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1711960894atmos-11_s.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Atmos | Modern 3 BHK Hinjewadi - 3 BHK Floor Plan (1007 - 1032 sq.ft.)</image:title>
+      <image:caption>3 BHK luxury layout with optimized carpet area at Kolte Patil Life Republic Atmos | Modern 3 BHK Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/17523100953-bhk-flats-in-pune-hinjewadi-aros-life-republic.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Aros | Premium 2 &amp; 3 BHK Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic Aros | Premium 2 &amp; 3 BHK Hinjewadi luxury residences in Sector Sector R13 (Aros)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1724406503master.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Aros | Premium 2 &amp; 3 BHK Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic Aros | Premium 2 &amp; 3 BHK Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1724406503master.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Aros | Premium 2 &amp; 3 BHK Hinjewadi - 2 BHK Floor Plan (836 sq.ft.)</image:title>
+      <image:caption>2 BHK luxury layout with optimized carpet area at Kolte Patil Life Republic Aros | Premium 2 &amp; 3 BHK Hinjewadi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1724406503master.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Aros | Premium 2 &amp; 3 BHK Hinjewadi - 3 BHK Regal Floor Plan (1060 sq.ft.)</image:title>
+      <image:caption>3 BHK Regal luxury layout with optimized carpet area at Kolte Patil Life Republic Aros | Premium 2 &amp; 3 BHK Hinjewadi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1724406503master.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Aros | Premium 2 &amp; 3 BHK Hinjewadi - 3 BHK Imperial Floor Plan (1176 sq.ft.)</image:title>
+      <image:caption>3 BHK Imperial luxury layout with optimized carpet area at Kolte Patil Life Republic Aros | Premium 2 &amp; 3 BHK Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/24k-espada-thumb.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic 24K Espada | Ultra-Luxury Row Houses Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic 24K Espada | Ultra-Luxury Row Houses Hinjewadi luxury residences in Sector Sector R31 (24K Espada)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/24k-espada-thumb.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic 24K Espada | Ultra-Luxury Row Houses Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic 24K Espada | Ultra-Luxury Row Houses Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/24k-espada-thumb.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic 24K Espada | Ultra-Luxury Row Houses Hinjewadi - 4 BHK Row House Floor Plan (1876 sq.ft.)</image:title>
+      <image:caption>4 BHK Row House luxury layout with optimized carpet area at Kolte Patil Life Republic 24K Espada | Ultra-Luxury Row Houses Hinjewadi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/24k-espada-thumb.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic 24K Espada | Ultra-Luxury Row Houses Hinjewadi - 5 BHK Estate Floor Plan (2274 sq.ft.)</image:title>
+      <image:caption>5 BHK Estate luxury layout with optimized carpet area at Kolte Patil Life Republic 24K Espada | Ultra-Luxury Row Houses Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1719304446unnn1795-930.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Universe | Smart 2 BHK Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic Universe | Smart 2 BHK Hinjewadi luxury residences in Sector Sector R10 (Universe)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1724418593small5.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Universe | Smart 2 BHK Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic Universe | Smart 2 BHK Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1724418593small5.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Universe | Smart 2 BHK Hinjewadi - 2 BHK Floor Plan (560 - 629 sq.ft.)</image:title>
+      <image:caption>2 BHK luxury layout with optimized carpet area at Kolte Patil Life Republic Universe | Smart 2 BHK Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1774005462Top_Banner-1795x930.jpg.jpeg</image:loc>
+      <image:title>Kolte Patil Life Republic Echoes | New Launch 2 &amp; 2.5 BHK Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic Echoes | New Launch 2 &amp; 2.5 BHK Hinjewadi luxury residences in Sector Sector R31 (Echoes)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1774006373728x728_-_1_.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Echoes | New Launch 2 &amp; 2.5 BHK Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic Echoes | New Launch 2 &amp; 2.5 BHK Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1774006373728x728_-_1_.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Echoes | New Launch 2 &amp; 2.5 BHK Hinjewadi - 2 BHK Floor Plan (837 - 840 sq.ft.)</image:title>
+      <image:caption>2 BHK luxury layout with optimized carpet area at Kolte Patil Life Republic Echoes | New Launch 2 &amp; 2.5 BHK Hinjewadi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1774006373728x728_-_1_.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Echoes | New Launch 2 &amp; 2.5 BHK Hinjewadi - 2.5 BHK Floor Plan (963 - 978 sq.ft.)</image:title>
+      <image:caption>2.5 BHK luxury layout with optimized carpet area at Kolte Patil Life Republic Echoes | New Launch 2 &amp; 2.5 BHK Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1747221568duet_banner.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Duet | Premium 2 BHK Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic Duet | Premium 2 BHK Hinjewadi luxury residences in Sector Sector R34 (Duet)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1747304746duet_mplan.png</image:loc>
+      <image:title>Kolte Patil Life Republic Duet | Premium 2 BHK Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic Duet | Premium 2 BHK Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1747304746duet_mplan.png</image:loc>
+      <image:title>Kolte Patil Life Republic Duet | Premium 2 BHK Hinjewadi - 2 BHK Eterna Floor Plan (740 sq.ft.)</image:title>
+      <image:caption>2 BHK Eterna luxury layout with optimized carpet area at Kolte Patil Life Republic Duet | Premium 2 BHK Hinjewadi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1747304746duet_mplan.png</image:loc>
+      <image:title>Kolte Patil Life Republic Duet | Premium 2 BHK Hinjewadi - 2 BHK Infinite Floor Plan (766 sq.ft.)</image:title>
+      <image:caption>2 BHK Infinite luxury layout with optimized carpet area at Kolte Patil Life Republic Duet | Premium 2 BHK Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-arezo-efficient-2-bhk-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/1719301346arrrr1795-930.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Arezo | Efficient 2 BHK Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic Arezo | Efficient 2 BHK Hinjewadi luxury residences in Sector Sector R16 (Arezo)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1724398867thumb.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Arezo | Efficient 2 BHK Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic Arezo | Efficient 2 BHK Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1724398867thumb.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Arezo | Efficient 2 BHK Hinjewadi - 2 BHK Efficient Floor Plan (610 sq.ft.)</image:title>
+      <image:caption>2 BHK Efficient luxury layout with optimized carpet area at Kolte Patil Life Republic Arezo | Efficient 2 BHK Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-villas-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/24k-espada-thumb.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Villas | Signature Luxury Villas Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic Villas | Signature Luxury Villas Hinjewadi luxury residences in Sector Sector R9 (Villas)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/arezo-thumb.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Villas | Signature Luxury Villas Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic Villas | Signature Luxury Villas Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/overview-img.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Villas | Signature Luxury Villas Hinjewadi - 5 BHK Grand Villa Floor Plan (3200 sq.ft.)</image:title>
+      <image:caption>5 BHK Grand Villa luxury layout with optimized carpet area at Kolte Patil Life Republic Villas | Signature Luxury Villas Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-sound-of-soul-luxury-4-bhk-row-houses-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/sound-of-soul-thumb.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Sound of Soul | Luxury 4 BHK Row Houses Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic Sound of Soul | Luxury 4 BHK Row Houses Hinjewadi luxury residences in Sector Sector R17A (Sound of Soul)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/sound-of-soul-thumb.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Sound of Soul | Luxury 4 BHK Row Houses Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic Sound of Soul | Luxury 4 BHK Row Houses Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/sound-of-soul-thumb.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Sound of Soul | Luxury 4 BHK Row Houses Hinjewadi - 4 BHK Row House Floor Plan (1650 sq.ft.)</image:title>
+      <image:caption>4 BHK Row House luxury layout with optimized carpet area at Kolte Patil Life Republic Sound of Soul | Luxury 4 BHK Row Houses Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-first-avenue-premium-2-3-bhk-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/project/banner/first-avenue-main.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic First Avenue | Premium 2 &amp; 3 BHK Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic First Avenue | Premium 2 &amp; 3 BHK Hinjewadi luxury residences in Sector Sector R1 (First Avenue)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/overview-img.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic First Avenue | Premium 2 &amp; 3 BHK Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic First Avenue | Premium 2 &amp; 3 BHK Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/overview-img.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic First Avenue | Premium 2 &amp; 3 BHK Hinjewadi - 2 BHK Ready Floor Plan (780 sq.ft.)</image:title>
+      <image:caption>2 BHK Ready luxury layout with optimized carpet area at Kolte Patil Life Republic First Avenue | Premium 2 &amp; 3 BHK Hinjewadi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/overview-img.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic First Avenue | Premium 2 &amp; 3 BHK Hinjewadi - 3 BHK Ready Floor Plan (1050 sq.ft.)</image:title>
+      <image:caption>3 BHK Ready luxury layout with optimized carpet area at Kolte Patil Life Republic First Avenue | Premium 2 &amp; 3 BHK Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-oro-avenue-smart-2-bhk-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/box-img-03.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic ORO Avenue | Smart 2 BHK Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic ORO Avenue | Smart 2 BHK Hinjewadi luxury residences in Sector Sector R9 (ORO Avenue)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/overview-img.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic ORO Avenue | Smart 2 BHK Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic ORO Avenue | Smart 2 BHK Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/overview-img.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic ORO Avenue | Smart 2 BHK Hinjewadi - 2 BHK Smart Floor Plan (610 sq.ft.)</image:title>
+      <image:caption>2 BHK Smart luxury layout with optimized carpet area at Kolte Patil Life Republic ORO Avenue | Smart 2 BHK Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-i-towers-smart-homes-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/canvas_desktop.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic i-Towers | Smart Tech Homes Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic i-Towers | Smart Tech Homes Hinjewadi luxury residences in Sector Sector R7 (i-Towers)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/overview-img.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic i-Towers | Smart Tech Homes Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic i-Towers | Smart Tech Homes Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/overview-img.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic i-Towers | Smart Tech Homes Hinjewadi - 2 BHK Tech Floor Plan (785 sq.ft.)</image:title>
+      <image:caption>2 BHK Tech luxury layout with optimized carpet area at Kolte Patil Life Republic i-Towers | Smart Tech Homes Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1727356856project_banner___1795-930.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Canvas | Premium 3, 3.5 &amp; 4 BHK Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic Canvas | Premium 3, 3.5 &amp; 4 BHK Hinjewadi luxury residences in Sector Sector R5 (Canvas)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Canvas | Premium 3, 3.5 &amp; 4 BHK Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic Canvas | Premium 3, 3.5 &amp; 4 BHK Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Canvas | Premium 3, 3.5 &amp; 4 BHK Hinjewadi - 3 BHK Portrait Floor Plan (1332 sq.ft.)</image:title>
+      <image:caption>3 BHK Portrait luxury layout with optimized carpet area at Kolte Patil Life Republic Canvas | Premium 3, 3.5 &amp; 4 BHK Hinjewadi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Canvas | Premium 3, 3.5 &amp; 4 BHK Hinjewadi - 3 BHK Landscape Floor Plan (1452 sq.ft.)</image:title>
+      <image:caption>3 BHK Landscape luxury layout with optimized carpet area at Kolte Patil Life Republic Canvas | Premium 3, 3.5 &amp; 4 BHK Hinjewadi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Canvas | Premium 3, 3.5 &amp; 4 BHK Hinjewadi - 3 BHK Landscape (Large) Floor Plan (1496 sq.ft.)</image:title>
+      <image:caption>3 BHK Landscape (Large) luxury layout with optimized carpet area at Kolte Patil Life Republic Canvas | Premium 3, 3.5 &amp; 4 BHK Hinjewadi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Canvas | Premium 3, 3.5 &amp; 4 BHK Hinjewadi - 3.5 BHK Macro Floor Plan (1710 sq.ft.)</image:title>
+      <image:caption>3.5 BHK Macro luxury layout with optimized carpet area at Kolte Patil Life Republic Canvas | Premium 3, 3.5 &amp; 4 BHK Hinjewadi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/17284728371Canvas_Flipchart_-_A3_-_Final-21.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Canvas | Premium 3, 3.5 &amp; 4 BHK Hinjewadi - 4 BHK Mega Floor Plan (2023 sq.ft.)</image:title>
+      <image:caption>4 BHK Mega luxury layout with optimized carpet area at Kolte Patil Life Republic Canvas | Premium 3, 3.5 &amp; 4 BHK Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1727356856project_banner___1795-930.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Qrious | Premium 2 &amp; 3 BHK Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic Qrious | Premium 2 &amp; 3 BHK Hinjewadi luxury residences in Sector Sector R14 (Qrious)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/walkthrough.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Qrious | Premium 2 &amp; 3 BHK Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic Qrious | Premium 2 &amp; 3 BHK Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1727356856project_banner___1795-930.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Qrious | Premium 2 &amp; 3 BHK Hinjewadi - 2 BHK Large Floor Plan (796 - 813 sq.ft.)</image:title>
+      <image:caption>2 BHK Large luxury layout with optimized carpet area at Kolte Patil Life Republic Qrious | Premium 2 &amp; 3 BHK Hinjewadi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1727356856project_banner___1795-930.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Qrious | Premium 2 &amp; 3 BHK Hinjewadi - 2 BHK Luxurious Floor Plan (887 - 900 sq.ft.)</image:title>
+      <image:caption>2 BHK Luxurious luxury layout with optimized carpet area at Kolte Patil Life Republic Qrious | Premium 2 &amp; 3 BHK Hinjewadi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1727356856project_banner___1795-930.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Qrious | Premium 2 &amp; 3 BHK Hinjewadi - 3 BHK Large Floor Plan (1100 - 1118 sq.ft.)</image:title>
+      <image:caption>3 BHK Large luxury layout with optimized carpet area at Kolte Patil Life Republic Qrious | Premium 2 &amp; 3 BHK Hinjewadi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1727356856project_banner___1795-930.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic Qrious | Premium 2 &amp; 3 BHK Hinjewadi - 3 BHK Luxurious Floor Plan (1212 - 1231 sq.ft.)</image:title>
+      <image:caption>3 BHK Luxurious luxury layout with optimized carpet area at Kolte Patil Life Republic Qrious | Premium 2 &amp; 3 BHK Hinjewadi</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/projects/kolte-patil-life-republic-3rd-avenue</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/box-img-01.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic 3rd Avenue | 2 BHK Hinjewadi - Architectural Elevation</image:title>
+      <image:caption>Kolte Patil Life Republic 3rd Avenue | 2 BHK Hinjewadi luxury residences in Sector Sector R3 (3rd Avenue)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/walkthrough.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic 3rd Avenue | 2 BHK Hinjewadi Master Layout Plan</image:title>
+      <image:caption>Master floor and site layout plan for Kolte Patil Life Republic 3rd Avenue | 2 BHK Hinjewadi Life Republic</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/box-img-01.jpg</image:loc>
+      <image:title>Kolte Patil Life Republic 3rd Avenue | 2 BHK Hinjewadi - 2 BHK Floor Plan (650 sq.ft.)</image:title>
+      <image:caption>2 BHK luxury layout with optimized carpet area at Kolte Patil Life Republic 3rd Avenue | 2 BHK Hinjewadi</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://life-republic.in/media-center/pune-metro-line-3-hinjewadi-connectivity-impact</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/master-township.webp</image:loc>
+      <image:title>Pune Metro Line 3 Hinjewadi to Shivajinagar: Station Routes &amp; Life Republic Impact (Nov 2026)</image:title>
+      <image:caption>Complete analysis of Pune Metro Line 3 commissioning, station connectivity to Marunji, and its projected 22% capital appreciation impact on Kolte Patil Life Republic.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://life-republic.in/media-center/kolte-patil-life-republic-price-trends-2026</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/1718284587atmosb.webp</image:loc>
+      <image:title>Kolte Patil Life Republic Price Trends 2026: Sector-by-Sector Analysis (Atmos, Aros, Echoes, Canvas)</image:title>
+      <image:caption>Comprehensive 2026 pricing benchmark across all 16 Life Republic sectors: 2 BHK from ₹58L*, 3 BHK from ₹1.15 Cr*, and luxury villas up to ₹3.5 Cr*.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://life-republic.in/media-center/pmrda-ring-road-marunji-hinjewadi-impact</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/master-layout-full.jpg</image:loc>
+      <image:title>PMRDA 110-Meter Ring Road &amp; Marunji Growth Corridor: 2026 Infrastructure Update</image:title>
+      <image:caption>How the PMRDA 110-meter wide arterial Ring Road connects Kolte Patil Life Republic to the Mumbai-Pune Expressway, PCMC, and Chakan industrial corridor.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://life-republic.in/media-center/echoes-sector-r31-new-launch-review</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/gallery/aros/master-layout.webp</image:loc>
+      <image:title>Life Republic Echoes (Sector R31): 2 &amp; 2.5 BHK New Launch Investment Analysis &amp; RERA Status</image:title>
+      <image:caption>Detailed monograph on Life Republic Echoes in Sector R31: Floor plans, MahaRERA PM1261012502409 compliance, starting price ₹85L*, and tech-lifestyle amenities.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://life-republic.in/media-center/top-townships-in-pune-2026</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/home/overview-img.jpg</image:loc>
+      <image:title>Top 5 Integrated Townships in Pune (2026): Why Life Republic Ranks #1 for Amenities &amp; Livability</image:title>
+      <image:caption>Comparative analysis of Pune&apos;s leading integrated townships: Life Republic, Magarpatta, Amanora, Blue Ridge, and Megapolis.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/media-center/future-of-west-pune-real-estate</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/media/blog1.webp</image:loc>
+      <image:title>The Future of West Pune Real Estate: Why Hinjewadi is the Best Investment</image:title>
+      <image:caption>Hinjewadi is rapidly evolving into Pune&apos;s premier real estate hub. Discover why high ROI property in West Pune is attracting massive NRI investment.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/media-center/luxury-living-west-pune-guide</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/media/blog2.webp</image:loc>
+      <image:title>Luxury Living in West Pune: A Guide to Premium 3 &amp; 4 BHK Residences</image:title>
+      <image:caption>Explore the ultra-luxury apartments and row houses in West Pune. Find out what makes premium residences in Hinjewadi the top choice for families.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/media-center/it-professionals-housing-hinjewadi</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/media/blog3.webp</image:loc>
+      <image:title>Top 5 Reasons IT Professionals are Choosing Life Republic Township</image:title>
+      <image:caption>A deep dive into why software engineers and IT executives are investing heavily in flats near Rajiv Gandhi Infotech Park.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/media-center/universe-sector-r10-review</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/universe/universe-banner.jpg</image:loc>
+      <image:title>Life Republic The Universe (Sector R10): The Ultimate IT Hub Investment</image:title>
+      <image:caption>Discover why The Universe at Life Republic is the highest ROI investment for Hinjewadi IT professionals seeking premium 2 BHK flats.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/media-center/canvas-sector-r13-luxury</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/canvas/canvas-banner.jpg</image:loc>
+      <image:title>Life Republic Canvas: Blanketing Pune in Unprecedented Luxury</image:title>
+      <image:caption>Life Republic Canvas (Sector R13) redefines spacious 3 BHK &amp; 4 BHK luxury living in West Pune. Explore the premium architectural marvel.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/media-center/qrious-smart-homes</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/qrious/qrious-banner.jpg</image:loc>
+      <image:title>Qrious Smart Homes: The Tech-Enabled Residences of Life Republic</image:title>
+      <image:caption>Experience the future with Life Republic Qrious. These 2 BHK &amp; 3 BHK smart homes in Pune are equipped with next-gen IoT technology.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/media-center/atmos-premium-living</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://life-republic.in/images/projects/atmos/atmos-banner.jpg</image:loc>
+      <image:title>Atmos (Sector R22): Elevating the Standard of Pune Apartments</image:title>
+      <image:caption>Life Republic Atmos in Sector R22 offers premium lifestyle amenities. Discover why these 2 &amp; 2.5 BHK flats are dominating Pune&apos;s property market.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://life-republic.in/market-reports/pune-real-estate-trends-2026</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://life-republic.in/market-reports/hinjewadi-phase-3-infrastructure-impact</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://life-republic.in/market-reports/hinjewadi-metro-line-3-real-estate-impact</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://life-republic.in/market-reports/integrated-townships-vs-standalone-buildings-pune</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://life-republic.in/market-reports/nri-investment-guide-pune-real-estate-2026</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>

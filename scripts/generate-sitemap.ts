@@ -133,8 +133,81 @@ async function generateSitemap() {
 
     const today = new Date().toISOString().split('T')[0];
 
+    const escapeXml = (str: string) => {
+        return str
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&apos;');
+    };
+
+    const getImagesForRoute = (route: string): { loc: string; title: string; caption: string }[] => {
+        const imgs: { loc: string; title: string; caption: string }[] = [];
+
+        if (route === '/') {
+            imgs.push(
+                { loc: `${DOMAIN}/hero-new.webp`, title: 'Kolte Patil Life Republic Hinjewadi Master Skyline', caption: 'Kolte Patil Life Republic 390-Acre Integrated Gated Township Hinjewadi Pune' },
+                { loc: `${DOMAIN}/images/home/master-layout-full.jpg`, title: 'Life Republic 390-Acre Master Layout Plan', caption: 'Master layout and 16 residential sectors map of Kolte Patil Life Republic' },
+                { loc: `${DOMAIN}/images/gallery/clubhouse.webp`, title: 'Crimson Clubhouse & Sports Complex', caption: 'Olympic-length swimming pool, sports arena, and township lifestyle club' }
+            );
+        } else if (route === '/life-republic-sales-office-hinjewadi') {
+            imgs.push(
+                { loc: `${DOMAIN}/hero-new.webp`, title: 'Kolte Patil Life Republic Sales Office Hinjewadi', caption: 'Official sales office and VIP experience centre at Survey No. 74 Marunji Mulshi' },
+                { loc: `${DOMAIN}/images/home/overview-img.jpg`, title: 'Life Republic Sales Office Gallery & Sample Flat', caption: 'Sample flats and project walkthroughs at Life Republic Sales Office' }
+            );
+        } else if (route.startsWith('/projects/')) {
+            const slug = route.replace('/projects/', '');
+            const proj = projectsRegistry.find(p => (ID_TO_SLUG[p.id] || p.id) === slug || p.id === slug);
+            if (proj) {
+                if (proj.image) {
+                    imgs.push({
+                        loc: proj.image.startsWith('http') ? proj.image : `${DOMAIN}${proj.image}`,
+                        title: `${proj.title} - Architectural Elevation`,
+                        caption: `${proj.title} luxury residences in Sector ${proj.location || 'Hinjewadi'}`
+                    });
+                }
+                if (proj.masterLayout) {
+                    imgs.push({
+                        loc: proj.masterLayout.startsWith('http') ? proj.masterLayout : `${DOMAIN}${proj.masterLayout}`,
+                        title: `${proj.title} Master Layout Plan`,
+                        caption: `Master floor and site layout plan for ${proj.title} Life Republic`
+                    });
+                }
+                if (Array.isArray(proj.floorPlans)) {
+                    proj.floorPlans.forEach((fp: any) => {
+                        if (fp.image) {
+                            imgs.push({
+                                loc: fp.image.startsWith('http') ? fp.image : `${DOMAIN}${fp.image}`,
+                                title: `${proj.title} - ${fp.type} Floor Plan (${fp.size || ''})`,
+                                caption: `${fp.type} luxury layout with optimized carpet area at ${proj.title}`
+                            });
+                        }
+                    });
+                }
+            }
+        } else if (route.startsWith('/media-center/')) {
+            const slug = route.replace('/media-center/', '');
+            const blog = (localBlogsData || []).find((b: any) => b.slug === slug);
+            if (blog && blog.image) {
+                imgs.push({
+                    loc: blog.image.startsWith('http') ? blog.image : `${DOMAIN}${blog.image}`,
+                    title: blog.title,
+                    caption: blog.excerpt || blog.title
+                });
+            }
+        } else if (route === '/amenities') {
+            imgs.push(
+                { loc: `${DOMAIN}/images/gallery/clubhouse.webp`, title: 'Crimson Clubhouse Amenities', caption: 'World-class clubhouse and indoor sports facilities at Life Republic' },
+                { loc: `${DOMAIN}/images/home/overview-img.jpg`, title: '3.5-Acre Central Urban Park', caption: 'Lush green botanical gardens and jogging tracks in Life Republic' }
+            );
+        }
+        return imgs;
+    };
+
     const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${allRoutes.map(route => {
     let priority = '0.8';
     let changefreq = 'weekly';
@@ -153,11 +226,20 @@ ${allRoutes.map(route => {
         changefreq = 'weekly';
     }
 
+    const images = getImagesForRoute(route);
+    const imageTags = images.length > 0 
+        ? '\n' + images.map(img => `    <image:image>
+      <image:loc>${escapeXml(img.loc)}</image:loc>
+      <image:title>${escapeXml(img.title)}</image:title>
+      <image:caption>${escapeXml(img.caption)}</image:caption>
+    </image:image>`).join('\n')
+        : '';
+
     return `  <url>
     <loc>${DOMAIN}${route}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
+    <priority>${priority}</priority>${imageTags}
   </url>`;
 }).join('\n')}
 </urlset>`;
