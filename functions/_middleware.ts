@@ -12,16 +12,32 @@ export const onRequest: PagesFunction = async (context) => {
     }
 
     // 1. Enterprise Edge URL Normalization (Prevent Duplicate Content in Google SERP)
-    const isStaticAsset = path.startsWith('/assets/') || 
-                          path.startsWith('/images/') || 
+    const isStaticAsset = path.startsWith('/assets/') ||
+                          path.startsWith('/images/') ||
                           path.startsWith('/fonts/') ||
-                          path.endsWith('.xml') || 
-                          path.endsWith('.json') || 
+                          path.endsWith('.xml') ||
+                          path.endsWith('.json') ||
                           path.endsWith('.txt') ||
                           path.endsWith('.ico') ||
                           path.endsWith('.svg') ||
-                          path.endsWith('.png') || 
-                          path.endsWith('.webp');
+                          path.endsWith('.png') ||
+                          path.endsWith('.jpg') ||
+                          path.endsWith('.jpeg') ||
+                          path.endsWith('.avif') ||
+                          path.endsWith('.webp') ||
+                          path.endsWith('.woff2') ||
+                          path.endsWith('.webmanifest') ||
+                          path.endsWith('.js') ||
+                          path.endsWith('.css') ||
+                          path.endsWith('.pdf');
+
+    // Immediately return clean 404 noindex for automated vulnerability probes (prevents Soft 404s in GSC)
+    if (/\.(php|asp|aspx|jsp|env|git|sql|bak)$/i.test(path) || /^\/(wp-|cgi-bin|xmlrpc|phpmyadmin)/i.test(path)) {
+        return new Response('Not Found', {
+            status: 404,
+            headers: { 'X-Robots-Tag': 'noindex, nofollow', 'Cache-Control': 'public, max-age=3600' }
+        });
+    }
 
     if (!isStaticAsset && path !== '/') {
         // Enforce trailing slash removal
@@ -69,7 +85,7 @@ export const onRequest: PagesFunction = async (context) => {
     headers.set('Cloudflare-CDN-Cache-Control', 'public, max-age=86400, stale-while-revalidate=604800');
 
     // 6. Edge Geolocation & NRI Country Intelligence
-    const cf = context.request.cf || {};
+    const cf = (context.request.cf || {}) as { country?: unknown; city?: unknown };
     const country = (typeof cf.country === 'string' ? cf.country : 'IN') || 'IN';
     const city = (typeof cf.city === 'string' ? cf.city : 'Pune') || 'Pune';
     const isNRI = country !== 'IN';
@@ -97,11 +113,15 @@ export const onRequest: PagesFunction = async (context) => {
     // 7. Bot & Search Crawler Identification
     const userAgent = context.request.headers.get('user-agent') || '';
     const isSearchBot = /googlebot|bingbot|yandex|duckduckbot|slurp|baiduspider|gptbot|chatgpt|claudebot|perplexitybot|applebot/i.test(userAgent);
-    
+
+    const normalizedCanonicalPath = path.startsWith('/s/')
+        ? `/search/${path.slice(3)}`
+        : path;
+    const canonicalUrl = `https://life-republic.in${normalizedCanonicalPath === '/' ? '/' : normalizedCanonicalPath}`;
+
     // SEO Hardening Directive & Edge Canonical Signaling
     headers.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
     if (!isStaticAsset) {
-        const canonicalUrl = `https://life-republic.in${path === '/' ? '' : path}`;
         headers.set('Link', `<${canonicalUrl}>; rel="canonical", <https://life-republic.in/sitemap.xml>; rel="sitemap"`);
     }
 
@@ -112,7 +132,6 @@ export const onRequest: PagesFunction = async (context) => {
     }
 
     // 7b. Edge Instant IndexNow Signal for Programmatic Pages & Search Crawlers
-    // Asynchronously broadcasts discovery to Bing, Microsoft Copilot, Yandex with 0ms visitor latency
     if (!isStaticAsset && (isSearchBot || path.startsWith('/search/') || path.startsWith('/projects/'))) {
         const targetUrl = `https://life-republic.in${path}`;
         context.waitUntil(
@@ -132,8 +151,28 @@ export const onRequest: PagesFunction = async (context) => {
     const contentType = headers.get('content-type') || '';
 
     // 8. Streaming Edge HTML Rewriting
-    // Preserves authentic SSG / SSR pre-rendered schema, canonical, and title with zero-latency streaming
+    // Preserves authentic SSG / SSR pre-rendered schema, canonical, and title.
+    // For dynamic SPA shell fallbacks (app-shell.html), synthesizes accurate per-URL title, description, and canonical.
     if (contentType.includes('text/html') && response.status === 200) {
+        const rawSlug = path.split('/').filter(Boolean).pop() || '';
+        const readableSlug = rawSlug
+            .replace(/-/g, ' ')
+            .replace(/\bbhk\b/gi, 'BHK')
+            .replace(/\bpune\b/gi, 'Pune')
+            .replace(/\bhinjewadi\b/gi, 'Hinjewadi')
+            .replace(/\bmarunji\b/gi, 'Marunji')
+            .replace(/\bwakad\b/gi, 'Wakad')
+            .replace(/\b24k\b/gi, '24K')
+            .replace(/\brera\b/gi, 'RERA')
+            .replace(/\b\w/g, (c) => c.toUpperCase());
+
+        const dynamicTitle = readableSlug
+            ? `${readableSlug} | Kolte Patil Life Republic`.slice(0, 62)
+            : 'Kolte Patil Life Republic Hinjewadi | Flats, Villas & Prices';
+        const dynamicDesc = readableSlug
+            ? `Explore ${readableSlug} at Kolte Patil Life Republic 390-acre township in Hinjewadi, Pune. View verified pricing, floor plans, amenities & MahaRERA details.`
+            : 'Explore Kolte Patil Life Republic, 390-acre township in Hinjewadi Pune. Check 2, 3 & 4 BHK flats, villas from ₹78L*, floor plans, brochure & MahaRERA details.';
+
         const edgeMeta = `
             <meta name="cf-edge-optimized" content="true" />
             <meta name="cf-edge-location" content="${city}, ${country}" />
@@ -142,11 +181,42 @@ export const onRequest: PagesFunction = async (context) => {
             <meta name="preferred-currency" content="${preferredCurrency}" />
         `;
 
-        const rewriter = new HTMLRewriter().on('head', {
-            element(el) {
-                el.append(edgeMeta, { html: true });
-            }
-        });
+        let isAppShell = false;
+
+        const rewriter = new HTMLRewriter()
+            .on('meta[name="app-shell"]', {
+                element(el) {
+                    isAppShell = true;
+                    el.remove();
+                }
+            })
+            .on('title', {
+                element(el) {
+                    if (isAppShell && readableSlug) {
+                        el.setInnerContent(dynamicTitle);
+                    }
+                }
+            })
+            .on('meta[name="description"]', {
+                element(el) {
+                    if (isAppShell && readableSlug) {
+                        el.setAttribute('content', dynamicDesc);
+                    }
+                }
+            })
+            .on('head', {
+                element(el) {
+                    el.onEndTag((endTag) => {
+                        if (isAppShell) {
+                            endTag.before(
+                                `<link rel="canonical" href="${canonicalUrl}" />\n<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />\n`,
+                                { html: true }
+                            );
+                        }
+                        endTag.before(edgeMeta, { html: true });
+                    });
+                }
+            });
 
         return rewriter.transform(new Response(response.body, {
             status: response.status,

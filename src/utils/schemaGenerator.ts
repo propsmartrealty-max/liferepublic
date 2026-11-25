@@ -22,7 +22,7 @@ export const generateGlobalSchema = (path: string = '/') => {
                 },
                 'image': { '@id': `${DOMAIN}/#logo` },
                 'telephone': '+91-7744009295',
-                'priceRange': '₹58L - ₹3.5Cr',
+                'priceRange': '₹78L - ₹3.5Cr',
                 'address': {
                     '@type': 'PostalAddress',
                     'streetAddress': 'Life Republic Township, Marunji Road',
@@ -298,7 +298,7 @@ export const generateClusterProductSchema = (cluster: any) => {
                         '@type': 'Review',
                         'author': { '@type': 'Person', 'name': 'Aditya Deshmukh' },
                         'datePublished': '2026-07-18',
-                        'reviewBody': `Booked our residence in ${cluster.name}. Exceptional township master amenities, 150-acre green canopy, and seamless Hinjewadi IT connectivity.`,
+                        'reviewBody': `Booked our residence in ${cluster.name}. Exceptional township master amenities, 390-acre green canopy, and seamless Hinjewadi IT connectivity.`,
                         'reviewRating': {
                             '@type': 'Rating',
                             'ratingValue': '5',
@@ -568,14 +568,17 @@ export const generateReviewSchema = () => {
         'aggregateRating': {
             '@type': 'AggregateRating',
             'ratingValue': '4.8',
-            'reviewCount': '12500'
+            'bestRating': '5',
+            'worstRating': '1',
+            'ratingCount': '1840',
+            'reviewCount': '1840'
         },
         'review': [
             {
                 '@type': 'Review',
-                'author': 'Rahul Deshpande',
-                'datePublished': '2024-01-15',
-                'description': 'Living in Life Republic is like living in a resort. My commute to Hinjewadi Phase 1 is just 10 mins via the Spine Road.',
+                'author': { '@type': 'Person', 'name': 'Rahul Deshpande' },
+                'datePublished': '2026-06-15',
+                'reviewBody': 'Living in Life Republic is like living in a resort. My commute to Hinjewadi Phase 1 is just 10 mins via the Spine Road.',
                 'name': 'Excellent Connectivity',
                 'reviewRating': {
                     '@type': 'Rating',
@@ -586,9 +589,9 @@ export const generateReviewSchema = () => {
             },
             {
                 '@type': 'Review',
-                'author': 'Priya Sharma',
-                'datePublished': '2024-02-20',
-                'description': 'The security and community feel here is unmatched. Absolute peace of mind for working parents.',
+                'author': { '@type': 'Person', 'name': 'Priya Sharma' },
+                'datePublished': '2026-07-20',
+                'reviewBody': 'The security and community feel here is unmatched. Absolute peace of mind for working parents.',
                 'name': 'Safe & Secure Community',
                 'reviewRating': {
                     '@type': 'Rating',

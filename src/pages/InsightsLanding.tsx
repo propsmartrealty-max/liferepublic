@@ -1,9 +1,8 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { seoClusters } from '../data/seo-clusters';
 import { ArrowRight } from 'lucide-react';
-import { generateBreadcrumbSchema } from '../utils/schemaGenerator';
+import { SEO } from '../components/seo/SEO';
 
 export const InsightsLanding: React.FC = () => {
     const categories = [
@@ -14,22 +13,21 @@ export const InsightsLanding: React.FC = () => {
 
     return (
         <div className="bg-surface min-h-[75vh] pt-4 pb-24">
-            <Helmet>
-                <title>Pune Real Estate Insights & Market Trends | Life Republic</title>
-                <meta name="description" content="Explore the latest trends, configuration details, and location highlights for premium real estate in Pune West, Hinjewadi, and Mahalunge." />
-                <script type="application/ld+json">
-                    {JSON.stringify(generateBreadcrumbSchema([
-                        { name: 'Home', item: '/' },
-                        { name: 'Insights', item: '/insights' }
-                    ]))}
-                </script>
-            </Helmet>
+            <SEO
+                title="Pune Real Estate Insights & Market Trends | Life Republic"
+                description="Explore the latest trends, configuration details, and location highlights for premium real estate in Pune West, Hinjewadi, and Mahalunge."
+                canonical="/insights"
+                breadcrumbItems={[
+                    { name: 'Home', item: '/' },
+                    { name: 'Insights', item: '/insights' }
+                ]}
+            />
 
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto text-center mb-8">
                     <span className="rainbow-text-clip font-bold text-sm font-bold tracking-tight font-semibold block mb-4">Market Knowledge Hub</span>
                     <h1 className="text-4xl md:text-5xl lg:text-5xl font-sans font-bold text-[#E5C07B] mb-6">Pune Real Estate Insights</h1>
-                    <p className="text-lg text-[#202124] leading-relaxed">
+                    <p className="text-lg text-gray-300 leading-relaxed">
                         Deep dive into the trends, micro-markets, and premium lifestyle offerings shaping the future of Hinjewadi, Mahalunge, and Baner.
                     </p>
                 </div>

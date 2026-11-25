@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Music, Trophy, ArrowRight } from 'lucide-react';
 import { Button } from '../ui/Button';
-import { Helmet } from 'react-helmet-async';
 
 export const CommunityCalendar: React.FC = () => {
     const events = [
@@ -31,34 +30,6 @@ export const CommunityCalendar: React.FC = () => {
 
     return (
         <section className="py-12 bg-white overflow-hidden">
-            <Helmet>
-                <script type="application/ld+json">
-                    {JSON.stringify(events.map(event => ({
-                        "@context": "https://schema.org",
-                        "@type": "Event",
-                        "name": event.title,
-                        "startDate": `2026-${event.date.split(' ')[0] === 'MAY' ? '05' : '06'}-${event.date.split(' ')[1]}T10:00:00+05:30`,
-                        "location": {
-                            "@type": "Place",
-                            "name": "Life Republic Central Park",
-                            "address": {
-                                "@type": "PostalAddress",
-                                "streetAddress": "Life Republic, Hinjewadi",
-                                "addressLocality": "Pune",
-                                "postalCode": "411057",
-                                "addressRegion": "Maharashtra",
-                                "addressCountry": "IN"
-                            }
-                        },
-                        "description": event.desc,
-                        "organizer": {
-                            "@type": "Organization",
-                            "name": "Life Republic Community Management",
-                            "url": "https://life-republic.in"
-                        }
-                    })))}
-                </script>
-            </Helmet>
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row gap-20 items-end mb-8">
                     <div className="lg:w-2/3">

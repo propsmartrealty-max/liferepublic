@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { api } from '../../services/api';
+import { projectsRegistry } from '../../data/projects';
 import type { Project } from '../../lib/types';
 import { ProjectCard } from '../../components/ui/ProjectCard';
 import { SEO } from '../../components/seo/SEO';
@@ -7,8 +8,13 @@ import { motion } from 'framer-motion';
 import { Sparkles, TrendingUp, Target, Layout, ArrowUpRight, Calculator, Landmark, Shield } from 'lucide-react';
 
 export const TwoBHK: React.FC = () => {
-    const [projects, setProjects] = useState<Project[]>([]);
-    const [loading, setLoading] = useState(true);
+    const initialProjects = projectsRegistry.filter((p: Project) =>
+        p.features.some((f: string) => f.includes('2 BHK')) ||
+        p.category.includes('2 BHK') ||
+        p.description.includes('2 BHK')
+    );
+    const [projects, setProjects] = useState<Project[]>(initialProjects);
+    const [loading, setLoading] = useState(initialProjects.length === 0);
 
     useEffect(() => {
         const loadProjects = async () => {
@@ -19,7 +25,7 @@ export const TwoBHK: React.FC = () => {
                     p.category.includes('2 BHK') ||
                     p.description.includes('2 BHK')
                 );
-                setProjects(filtered);
+                if (filtered.length > 0) setProjects(filtered);
             } catch (error) {
                 console.error('Failed to load projects', error);
             } finally {
@@ -32,9 +38,9 @@ export const TwoBHK: React.FC = () => {
     return (
         <div className="bg-transparent">
             <SEO
-                title="Sovereign 2 BHK Flats in Hinjewadi | Yield Synthesis 2026"
-                description="Discover premium 2 BHK residences at Kolte Patil Life Republic Hinjewadi. High-efficiency layouts, 4% rental yields, and IT Park proximity for young professionals."
-                keywords="2bhk in hinjewadi, life republic 2bhk price, kolte patil 2bhk flats, rental yield hinjewadi, 2 bhk investment pune"
+                title="2 BHK Flats in Hinjewadi | Kolte Patil Life Republic"
+                description="Discover premium 2 BHK flats at Kolte Patil Life Republic Hinjewadi from ₹78L*. Smart layouts, 6%+ rental yields & 5-min drive to Hinjewadi IT Park."
+                keywords="2 bhk flats in hinjewadi, life republic 2bhk price, kolte patil 2bhk flats, rental yield hinjewadi, 2 bhk investment pune"
                 canonical="/2-bhk-flats-in-hinjewadi"
             />
             <section className="relative pt-48 pb-32 bg-white overflow-hidden">

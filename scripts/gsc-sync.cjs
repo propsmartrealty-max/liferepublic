@@ -4,37 +4,42 @@
  * Domain: sc-domain:life-republic.in
  * 
  * Features:
- * - Programmatic submission of all sitemap indexes, silo sitemaps & property feeds
- * - Deletion of legacy or invalid sitemaps
+ * - Auto-discovers active XML sitemaps in public/ and submits them to GSC
+ * - Purges obsolete/retired silo sitemaps and non-sitemap shopping feeds from GSC
  * - Live inspection and monitoring of crawl state, download errors & URL counts
- * - URL Inspection API diagnostics for canonicalization and rich snippets
  */
 
 const { JWT } = require('google-auth-library');
 const path = require('path');
 const fs = require('fs');
 
-const KEY_FILE = path.resolve(__dirname, '../service-accounts/account-1.json');
 const SITE_URL = 'sc-domain:life-republic.in';
+const DOMAIN = 'https://life-republic.in';
+const PUBLIC_DIR = path.resolve(__dirname, '../public');
 
-const SITEMAPS = [
-    'https://life-republic.in/sitemap.xml',
-    'https://life-republic.in/sitemap-silos-index.xml',
-    'https://life-republic.in/sitemap-silos-1.xml',
-    'https://life-republic.in/sitemap-silos-2.xml',
-    'https://life-republic.in/sitemap-silos-3.xml',
-    'https://life-republic.in/sitemap-silos-4.xml',
-    'https://life-republic.in/sitemap-silos-5.xml',
-    'https://life-republic.in/sitemap-silos-6.xml',
-    'https://life-republic.in/sitemap-silos-7.xml',
-    'https://life-republic.in/feed.xml',
-    'https://life-republic.in/rss.xml'
-];
+function getActiveSitemaps() {
+    const active = [
+        `${DOMAIN}/sitemap.xml`,
+        `${DOMAIN}/sitemap-silos-index.xml`,
+    ];
 
-// Shopping / Merchant product feeds are crawled via Merchant Center & robots.txt, not GSC Sitemaps API
-const INVALID_OR_LEGACY_FEEDS = [
-    'https://life-republic.in/google-property-feed.xml',
-    'https://life-republic.in/google-shopping-feed.xml'
+    if (fs.existsSync(PUBLIC_DIR)) {
+        const siloFiles = fs
+            .readdirSync(PUBLIC_DIR)
+            .filter(f => /^sitemap-silos-\d+\.xml$/.test(f))
+            .sort();
+        for (const file of siloFiles) {
+            active.push(`${DOMAIN}/${file}`);
+        }
+    }
+
+    active.push(`${DOMAIN}/feed.xml`, `${DOMAIN}/rss.xml`);
+    return active;
+}
+
+const NON_SITEMAP_FEEDS = [
+    `${DOMAIN}/google-property-feed.xml`,
+    `${DOMAIN}/google-shopping-feed.xml`,
 ];
 
 async function getAuthClient() {
@@ -59,9 +64,7 @@ async function getAuthClient() {
             await jwt.authorize();
             console.log(`🔑 GSC Client authorized with ${keyData.client_email}`);
             return jwt;
-        } catch (e) {
-            // Try next candidate
-        }
+        } catch (_) {}
     }
     throw new Error('No valid service account found in service-accounts/ with GSC access');
 }
@@ -74,23 +77,33 @@ async function syncGSC() {
 
     const client = await getAuthClient();
     const encodedSite = encodeURIComponent(SITE_URL);
+    const activeSitemaps = getActiveSitemaps();
 
-    // 0. Clean up legacy or mismatched feeds that generate GSC schema errors
-    for (const legacyUrl of INVALID_OR_LEGACY_FEEDS) {
-        try {
-            await client.request({
-                url: `https://www.googleapis.com/webmasters/v3/sites/${encodedSite}/sitemaps/${encodeURIComponent(legacyUrl)}`,
-                method: 'DELETE'
-            });
-            console.log(`  🗑️ [Purged Legacy Feed]: ${legacyUrl}`);
-        } catch (_) {}
-    }
+    // 0. Query existing registered sitemaps and purge any retired/non-sitemap URLs
+    try {
+        const listBefore = await client.request({
+            url: `https://www.googleapis.com/webmasters/v3/sites/${encodedSite}/sitemaps`
+        });
+        const existing = listBefore.data.sitemap || [];
+        for (const item of existing) {
+            const smPath = item.path;
+            if (!activeSitemaps.includes(smPath) || NON_SITEMAP_FEEDS.includes(smPath)) {
+                try {
+                    await client.request({
+                        url: `https://www.googleapis.com/webmasters/v3/sites/${encodedSite}/sitemaps/${encodeURIComponent(smPath)}`,
+                        method: 'DELETE'
+                    });
+                    console.log(`  🗑️ [Purged Obsolete Sitemap]: ${smPath}`);
+                } catch (_) {}
+            }
+        }
+    } catch (_) {}
 
-    // 1. Submit all 11 active verified XML sitemaps and RSS feeds
-    console.log('📡 Submitting Sitemaps & RSS Feeds to Google Search Console...');
+    // 1. Submit all active verified XML sitemaps and RSS feeds
+    console.log(`📡 Submitting ${activeSitemaps.length} Active Sitemaps & RSS Feeds to Google Search Console...`);
     let successCount = 0;
 
-    for (const smUrl of SITEMAPS) {
+    for (const smUrl of activeSitemaps) {
         try {
             await client.request({
                 url: `https://www.googleapis.com/webmasters/v3/sites/${encodedSite}/sitemaps/${encodeURIComponent(smUrl)}`,
@@ -131,7 +144,7 @@ async function syncGSC() {
     }
 
     console.log('\n' + '═'.repeat(75));
-    console.log(`🎉 GSC Sync Completed: ${successCount}/${SITEMAPS.length} sitemaps active in Google Search Console.`);
+    console.log(`🎉 GSC Sync Completed: ${successCount}/${activeSitemaps.length} sitemaps active in Google Search Console.`);
     console.log('═'.repeat(75) + '\n');
 }
 

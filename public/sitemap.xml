@@ -103,6 +103,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://life-republic.in/nri-investment-guide</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/it-professionals-hinjewadi</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://life-republic.in/testimonials</loc>
     <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -139,7 +151,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://life-republic.in/community-forum</loc>
+    <loc>https://life-republic.in/community-hub</loc>
     <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -152,6 +164,12 @@
   </url>
   <url>
     <loc>https://life-republic.in/locations-directory</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights</loc>
     <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -319,7 +337,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://life-republic.in/location/flats-in-hinjewadi-under-50-lakhs</loc>
+    <loc>https://life-republic.in/location/flats-in-hinjewadi-under-60-lakhs</loc>
     <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -1109,33 +1127,171 @@
     </image:image>
   </url>
   <url>
-    <loc>https://life-republic.in/market-reports/pune-real-estate-trends-2026</loc>
+    <loc>https://life-republic.in/market-reports/pune-real-estate-market-report-2026-hinjewadi</loc>
     <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://life-republic.in/market-reports/hinjewadi-phase-3-infrastructure-impact</loc>
+    <loc>https://life-republic.in/market-reports/pune-metro-line-3-impact-property-prices-hinjewadi</loc>
     <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://life-republic.in/market-reports/hinjewadi-metro-line-3-real-estate-impact</loc>
+    <loc>https://life-republic.in/market-reports/nri-investment-pune-real-estate-hinjewadi</loc>
     <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://life-republic.in/market-reports/integrated-townships-vs-standalone-buildings-pune</loc>
+    <loc>https://life-republic.in/market-reports/2-bhk-vs-3-bhk-flats-hinjewadi-price-trends-roi</loc>
     <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://life-republic.in/market-reports/nri-investment-guide-pune-real-estate-2026</loc>
+    <loc>https://life-republic.in/market-reports/150ft-spine-road-marunji-hinjewadi-infrastructure-advantage</loc>
     <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/2-bhk-flats-in-hinjewadi</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/3-bhk-flats-in-hinjewadi</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/4-bhk-flats-in-hinjewadi</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/row-houses-in-life-republic</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/luxury-villas-near-hinjewadi</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/plots-in-hinjewadi</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/ready-possession-2-bhk-in-pune</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/under-construction-3-bhk-in-baner</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/kolte-patil-life-republic-echoes</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/flats-near-hinjewadi-phase-1</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/flats-near-marunji</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/flats-near-rajiv-gandhi-it-park</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/properties-near-mumbai-pune-expressway</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/flats-near-wakad</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/flats-near-tathawade</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/flats-near-punawale</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/integrated-townships-in-pune</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/kolte-patil-life-republic-price</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/floor-plans-life-republic</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/contact</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/rera-number-life-republic</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/kolte-patil-life-republic-reviews</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://life-republic.in/insights/township-guide</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

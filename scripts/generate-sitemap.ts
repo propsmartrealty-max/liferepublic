@@ -3,6 +3,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { ID_TO_SLUG } from '../src/data/slug-registry';
 import { projectsRegistry } from '../src/data/projects';
+import { generateLongTailKeywords } from '../src/data/seo-clusters';
+import { INSIGHTS_DATA } from '../src/data/market-reports';
 
 const DOMAIN = 'https://life-republic.in';
 const PUBLIC_DIR = path.resolve(process.cwd(), 'public');
@@ -23,15 +25,18 @@ const staticRoutes = [
     '/disclaimer',
     '/location',
     '/nri-corner',
+    '/nri-investment-guide',
+    '/it-professionals-hinjewadi',
     '/testimonials',
     '/media-center',
     '/township-intelligence',
     '/connectivity',
     '/lifestyle',
     '/sustainability',
-    '/community-forum',
+    '/community-hub',
     '/market-reports',
     '/locations-directory',
+    '/insights',
     '/sitemap',
     '/township-guide',
     // BHK & Property Type Landing Pages
@@ -62,7 +67,7 @@ const staticRoutes = [
     '/location/kolte-patil-life-republic-price',
     '/location/kolte-patil-life-republic-reviews',
     '/location/kolte-patil-life-republic-master-plan',
-    '/location/flats-in-hinjewadi-under-50-lakhs',
+    '/location/flats-in-hinjewadi-under-60-lakhs',
     '/location/flats-in-hinjewadi-under-80-lakhs',
     '/location/flats-in-hinjewadi-under-1-crore',
     '/location/township-in-hinjewadi-pune',
@@ -91,14 +96,8 @@ const sectorRoutes = [
     ...(sectorsData.localities || []).map((l: any) => `/location/${l.slug}`),
 ];
 
-// Market Reports routes
-const marketReportRoutes = [
-    '/market-reports/pune-real-estate-trends-2026',
-    '/market-reports/hinjewadi-phase-3-infrastructure-impact',
-    '/market-reports/hinjewadi-metro-line-3-real-estate-impact',
-    '/market-reports/integrated-townships-vs-standalone-buildings-pune',
-    '/market-reports/nri-investment-guide-pune-real-estate-2026'
-];
+// Market Reports routes (synced with INSIGHTS_DATA)
+const marketReportRoutes = INSIGHTS_DATA.map(item => `/market-reports/${item.slug}`);
 
 async function generateSitemap() {
     console.log('🗺️  Generating Canonical Master Sitemap...');
@@ -122,13 +121,17 @@ async function generateSitemap() {
         }
     });
 
+    // Resolve Insights Routes
+    const insightRoutes = generateLongTailKeywords().map(k => `/insights/${k.slug}`);
+
     // Deduplicate all routes
     const allRoutes = Array.from(new Set([
         ...staticRoutes,
         ...sectorRoutes,
         ...projectRoutes,
         ...blogRoutes,
-        ...marketReportRoutes
+        ...marketReportRoutes,
+        ...insightRoutes
     ]));
 
     const today = new Date().toISOString().split('T')[0];

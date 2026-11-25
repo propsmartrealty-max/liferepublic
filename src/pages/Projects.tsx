@@ -8,18 +8,51 @@ import { SectorMesh } from '../components/sections/SectorMesh';
 import { RecentlyViewed } from '../components/sections/RecentlyViewed';
 import { SEO } from '../components/seo/SEO';
 
-const Projects: React.FC = () => {
+interface ProjectsProps {
+    title?: string;
+    description?: string;
+    keywords?: string;
+    canonical?: string;
+    heading?: string;
+    subheading?: string;
+    filterCategory?: 'row-houses' | 'plots' | 'villas';
+}
+
+const Projects: React.FC<ProjectsProps> = ({
+    title = "Projects in Kolte Patil Life Republic Hinjewadi | 2, 3 BHK & Villas",
+    description = "Explore all residential projects in Kolte Patil Life Republic Township Hinjewadi. Choose from premium 2, 3 & 4 BHK flats, row houses, and luxury villas from ₹78L*. Floor plans & pricing.",
+    keywords = "Kolte Patil Life Republic Projects, Kolte Patil Life Republic Township Hinjewadi, Flats in Hinjewadi, 2 BHK in Life Republic, 3 BHK Flats Pune, Row Houses in Hinjewadi, Villas in Pune, New Launch Projects Hinjewadi, Ready Possession Flats",
+    canonical = "/projects",
+    heading = "Properties in Kolte Patil Life Republic Township",
+    subheading = "Explore the distinct residential clusters across the 390-acre Life Republic ecosystem. From smart apartments to ultra-luxury villas.",
+    filterCategory
+}) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
+    const displayedClusters = filterCategory
+        ? CLUSTERS.filter((c) => {
+              if (filterCategory === 'row-houses') {
+                  return c.id.includes('espada') || c.id.includes('sound-of-soul') || c.name.toLowerCase().includes('row house') || c.description.toLowerCase().includes('row house');
+              }
+              if (filterCategory === 'plots') {
+                  return c.category === 'Plots' || c.id.includes('nora') || c.name.toLowerCase().includes('plot') || c.description.toLowerCase().includes('plot');
+              }
+              if (filterCategory === 'villas') {
+                  return c.category === 'Luxury' || c.category === 'Villas' || c.id.includes('villa') || c.id.includes('espada') || c.id.includes('sound-of-soul');
+              }
+              return true;
+          })
+        : CLUSTERS;
+
     return (
         <div className="pt-32 pb-20 bg-black min-h-[50vh]">
-                        <SEO
-                title="Projects in Kolte Patil Life Republic Hinjewadi | 2, 3 BHK & Villas"
-                description="Explore all residential projects in Kolte Patil Life Republic Township Hinjewadi. Choose from premium 2, 3 & 4 BHK flats, row houses, and luxury villas from ₹78L*. Floor plans & pricing."
-                keywords="Kolte Patil Life Republic Projects, Kolte Patil Life Republic Township Hinjewadi, Flats in Hinjewadi, 2 BHK in Life Republic, 3 BHK Flats Pune, Row Houses in Hinjewadi, Villas in Pune, New Launch Projects Hinjewadi, Ready Possession Flats"
-                canonical="/projects"
+            <SEO
+                title={title}
+                description={description}
+                keywords={keywords}
+                canonical={canonical}
             />
             <div className="container mx-auto px-4">
                 <motion.div
@@ -29,16 +62,16 @@ const Projects: React.FC = () => {
                     className="max-w-4xl mx-auto text-center mb-16"
                 >
                     <h1 className="text-4xl md:text-5xl font-sans font-bold text-white mb-3">
-                        Properties in Kolte Patil Life Republic Township
+                        {heading}
                     </h1>
                     <p className="text-xl text-white/60 leading-relaxed">
-                        Explore the distinct residential clusters across the 390-acre Life Republic ecosystem. From smart apartments to ultra-luxury villas.
+                        {subheading}
                     </p>
                 </motion.div>
 
                 {/* Grid displaying the exact ordered clusters */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {CLUSTERS.map((cluster) => (
+                    {(displayedClusters.length > 0 ? displayedClusters : CLUSTERS).map((cluster) => (
                         <ProjectCard key={cluster.id} project={cluster} />
                     ))}
                 </div>

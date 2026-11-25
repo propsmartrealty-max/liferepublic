@@ -29,7 +29,7 @@ export const pSEOMatrix = {
         { key: 'rent', title: 'Flats for Rent & Leasing', aliases: ['rent', 'rental', 'lease', 'tenant', 'to-let'] }
     ],
     configurations: [
-        { key: '2-bhk-flats', title: '2 BHK Flats', bhk: 2, minPrice: '₹62 Lakhs*', maxPrice: '₹85 Lakhs*', lowPriceNum: 6200000, highPriceNum: 8500000, aliases: ['2-bhk', '2bhk', '2-bedroom', '2-bhk-flats'] },
+        { key: '2-bhk-flats', title: '2 BHK Flats', bhk: 2, minPrice: '₹78 Lakhs*', maxPrice: '₹95 Lakhs*', lowPriceNum: 7800000, highPriceNum: 9500000, aliases: ['2-bhk', '2bhk', '2-bedroom', '2-bhk-flats'] },
         { key: '2.5-bhk-flats', title: '2.5 BHK Flats', bhk: 2.5, minPrice: '₹92 Lakhs*', maxPrice: '₹1.05 Cr*', lowPriceNum: 9200000, highPriceNum: 10500000, aliases: ['2.5-bhk', '2-5-bhk', '2.5bhk', '2-5-bhk-flats'] },
         { key: '3-bhk-flats', title: '3 BHK Flats', bhk: 3, minPrice: '₹98 Lakhs*', maxPrice: '₹1.45 Cr*', lowPriceNum: 9800000, highPriceNum: 14500000, aliases: ['3-bhk', '3bhk', '3-bedroom', '3-bhk-flats'] },
         { key: '3.5-bhk-flats', title: '3.5 BHK Flats', bhk: 3.5, minPrice: '₹1.35 Cr*', maxPrice: '₹1.80 Cr*', lowPriceNum: 13500000, highPriceNum: 18000000, aliases: ['3.5-bhk', '3-5-bhk', '3.5bhk', '3-5-bhk-flats'] },
@@ -73,20 +73,20 @@ export const pSEOMatrix = {
         { key: 'life-republic-township', title: 'Life Republic Township', sector: 'Integrated Smart Township', rera: 'P52100079424', aliases: ['life-republic-township', 'township'] },
         { key: 'echoes', title: 'Life Republic Echoes', sector: 'Sector R31', rera: 'PM1261012502409', aliases: ['echoes', 'life-republic-echoes', 'r31'] },
         { key: 'duet', title: 'Life Republic Duet', sector: 'Sector R34', rera: 'P52100079424', aliases: ['duet', 'life-republic-duet', 'r34'] },
-        { key: 'atmos', title: 'Life Republic Atmos', sector: 'Sector R22', rera: 'P52100049756', aliases: ['atmos', 'life-republic-atmos', 'r22'] },
-        { key: 'aros', title: 'Life Republic Aros', sector: 'Sector R1', rera: 'P52100030584', aliases: ['aros', 'life-republic-aros', 'r1-aros'] },
+        { key: 'atmos', title: 'Life Republic Atmos', sector: 'Sector R22', rera: 'P52100051765', aliases: ['atmos', 'life-republic-atmos', 'r22'] },
+        { key: 'aros', title: 'Life Republic Aros', sector: 'Sector R13', rera: 'P52100047921', aliases: ['aros', 'life-republic-aros', 'r13-aros'] },
         { key: 'universe', title: 'Life Republic Universe', sector: 'Sector R10', rera: 'P52100027629', aliases: ['universe', 'life-republic-universe', 'r10'] },
-        { key: 'canvas', title: 'Life Republic Canvas', sector: 'Sector R9', rera: 'P52100054789', aliases: ['canvas', 'life-republic-canvas', 'r9'] },
-        { key: 'qrious', title: 'Life Republic Qrious', sector: 'Sector R2', rera: 'P52100028753', aliases: ['qrious', 'life-republic-qrious', 'r2'] },
-        { key: '24k-espada', title: 'Life Republic 24K Espada', sector: 'Sector R24', rera: 'P52100079424', aliases: ['24k-espada', 'espada', 'r24'] },
-        { key: 'sound-of-soul', title: 'Life Republic Sound of Soul', sector: 'Sector R25', rera: 'P52100079424', aliases: ['sound-of-soul', 'sos', 'r25'] },
-        { key: 'oro-avenue', title: 'Life Republic Oro Avenue', sector: 'Sector R11', rera: 'P52100017116', aliases: ['oro-avenue', 'oro', 'r11'] },
-        { key: 'i-towers', title: 'Life Republic I-Towers', sector: 'Sector R3', rera: 'P52100019018', aliases: ['i-towers', 'i-tower', 'itowers', 'r3'] },
-        { key: 'nora', title: 'Life Republic Nora Bungalow Plots', sector: 'Sector R17', rera: 'P52100018539', aliases: ['nora', 'nora-plots', 'r17'] },
-        { key: 'arezo', title: 'Life Republic Arezo', sector: 'Sector R12', rera: 'P52100020110', aliases: ['arezo', 'r12'] },
-        { key: 'first-avenue', title: 'Life Republic First Avenue', sector: 'Sector R1', rera: 'P52100000041', aliases: ['first-avenue', '1st-avenue'] },
-        { key: '3rd-avenue', title: 'Life Republic 3rd Avenue', sector: 'Sector R3', rera: 'P52100019018', aliases: ['3rd-avenue', 'third-avenue'] },
-        { key: 'villas', title: 'Life Republic Signature Villas', sector: 'Sector R16', rera: 'P52100018539', aliases: ['villas', 'signature-villas'] }
+        { key: 'canvas', title: 'Life Republic Canvas', sector: 'Sector R5', rera: 'P52100077008', aliases: ['canvas', 'life-republic-canvas', 'r5'] },
+        { key: 'qrious', title: 'Life Republic Qrious', sector: 'Sector R14', rera: 'P52100079623', aliases: ['qrious', 'life-republic-qrious', 'r14'] },
+        { key: '24k-espada', title: 'Life Republic 24K Espada', sector: 'Sector R31', rera: 'P52100002646', aliases: ['24k-espada', 'espada', 'r31-espada'] },
+        { key: 'sound-of-soul', title: 'Life Republic Sound of Soul', sector: 'Sector R17A', rera: 'P52100079424', aliases: ['sound-of-soul', 'sos', 'r17a'] },
+        { key: 'oro-avenue', title: 'Life Republic Oro Avenue', sector: 'Sector R9', rera: 'P52100017116', aliases: ['oro-avenue', 'oro', 'r9'] },
+        { key: 'i-towers', title: 'Life Republic I-Towers', sector: 'Sector R7', rera: 'P52100022154', aliases: ['i-towers', 'i-tower', 'itowers', 'r7'] },
+        { key: 'nora', title: 'Life Republic Nora Bungalow Plots', sector: 'Sector R17B', rera: 'P52100022278', aliases: ['nora', 'nora-plots', 'r17b'] },
+        { key: 'arezo', title: 'Life Republic Arezo', sector: 'Sector R16', rera: 'P52100018539', aliases: ['arezo', 'r16'] },
+        { key: 'first-avenue', title: 'Life Republic First Avenue', sector: 'Sector R1', rera: 'P52100002646', aliases: ['first-avenue', '1st-avenue', 'r1'] },
+        { key: '3rd-avenue', title: 'Life Republic 3rd Avenue', sector: 'Sector R3', rera: 'P52100016987', aliases: ['3rd-avenue', 'third-avenue', 'r3'] },
+        { key: 'villas', title: 'Life Republic Signature Villas', sector: 'Sector R31', rera: 'P52100002646', aliases: ['villas', 'signature-villas'] }
     ]
 };
 

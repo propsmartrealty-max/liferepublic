@@ -83,10 +83,20 @@
 /reviews /testimonials 301
 /reviews/ /testimonials 301
 /life-republic-reviews /testimonials 301
+/community-forum /community-hub 301
+/privacy /privacy-policy 301
+/terms /terms-of-service 301
+/4bhk-flats-hinjewadi /4-bhk-flats-in-hinjewadi 301
+/location-highlights /location 301
+/market-reports/pune-real-estate-trends-2026 /market-reports/pune-real-estate-market-report-2026-hinjewadi 301
+/market-reports/hinjewadi-phase-3-infrastructure-impact /market-reports/150ft-spine-road-marunji-hinjewadi-infrastructure-advantage 301
+/market-reports/hinjewadi-metro-line-3-real-estate-impact /market-reports/pune-metro-line-3-impact-property-prices-hinjewadi 301
+/market-reports/integrated-townships-vs-standalone-buildings-pune /market-reports/2-bhk-vs-3-bhk-flats-hinjewadi-price-trends-roi 301
+/market-reports/nri-investment-guide-pune-real-estate-2026 /market-reports/nri-investment-pune-real-estate-hinjewadi 301
 /amenities/ /amenities 301
 /location/ /location 301
 /lifestyle/ /lifestyle 301
 /projects/ /projects 301
 
-# Cloudflare Pages Single Page Application (SPA) Fallback Rule
-/* /index.html 200
+# Cloudflare Pages Single Page Application (SPA) Fallback Rule (clean un-prerendered shell)
+/* /app-shell.html 200

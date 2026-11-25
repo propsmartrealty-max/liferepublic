@@ -1,10 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { getInsightData } from '../data/insights';
-import { generateArticleSchema, generateBreadcrumbSchema } from '../utils/schemaGenerator';
+import { generateArticleSchema } from '../utils/schemaGenerator';
 import { ChevronRight, Calendar, Tag } from 'lucide-react';
 import { Button } from '../components/ui/Button';
+import { SEO } from '../components/seo/SEO';
 
 export const InsightDetail: React.FC = () => {
     const { slug } = useParams<{ slug: string }>();
@@ -16,25 +16,23 @@ export const InsightDetail: React.FC = () => {
 
     return (
         <div className="bg-surface min-h-[75vh] pt-4 pb-24">
-            <Helmet>
-                <title>{article.title}</title>
-                <meta name="description" content={article.excerpt} />
-                <script type="application/ld+json">
-                    {JSON.stringify(generateArticleSchema({
-                        title: article.title,
-                        description: article.excerpt,
-                        slug: article.slug,
-                        date: article.publishDate
-                    }))}
-                </script>
-                <script type="application/ld+json">
-                    {JSON.stringify(generateBreadcrumbSchema([
-                        { name: 'Home', item: '/' },
-                        { name: 'Insights', item: '/insights' },
-                        { name: article.title, item: `/insights/${article.slug}` }
-                    ]))}
-                </script>
-            </Helmet>
+            <SEO
+                title={article.title}
+                description={article.excerpt}
+                canonical={`/insights/${article.slug}`}
+                type="article"
+                schema={generateArticleSchema({
+                    title: article.title,
+                    description: article.excerpt,
+                    slug: article.slug,
+                    date: article.publishDate
+                })}
+                breadcrumbItems={[
+                    { name: 'Home', item: '/' },
+                    { name: 'Insights', item: '/insights' },
+                    { name: article.title, item: `/insights/${article.slug}` }
+                ]}
+            />
 
             <div className="container mx-auto px-4">
                 {/* Breadcrumbs */}

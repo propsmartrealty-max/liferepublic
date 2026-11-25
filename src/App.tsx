@@ -186,19 +186,45 @@ function App() {
               <FourBHK />
             </Layout>
           } />
+          <Route path="/4bhk-flats-hinjewadi" element={<Navigate to="/4-bhk-flats-in-hinjewadi" replace />} />
+          <Route path="/location-highlights" element={<Navigate to="/location" replace />} />
           <Route path="/row-houses-in-life-republic" element={
             <Layout ariaLabel="Row Houses in Life Republic">
-              <Projects />
+              <Projects
+                title="Row Houses in Kolte Patil Life Republic | 24K Espada & Villas"
+                description="Explore 4 & 5 BHK luxury row houses in Kolte Patil Life Republic Hinjewadi. Featuring 24K Espada & Sound of Soul with private lawns from ₹3.40 Cr*."
+                keywords="row houses in life republic, 24k espada life republic, row houses in hinjewadi, kolte patil row houses pune"
+                canonical="/row-houses-in-life-republic"
+                heading="Luxury Row Houses in Kolte Patil Life Republic"
+                subheading="Ultra-luxury 4 & 5 BHK row houses with private gardens, club privileges & gated township security in Sector R31."
+                filterCategory="row-houses"
+              />
             </Layout>
           } />
           <Route path="/plots-in-hinjewadi" element={
             <Layout ariaLabel="Plots in Hinjewadi">
-              <Projects />
+              <Projects
+                title="Bungalow Plots in Hinjewadi | Nora at Life Republic Pune"
+                description="NA bungalow plots in Hinjewadi Pune at Nora Sector R17B, Kolte Patil Life Republic. RERA approved 1500-4000 sq.ft gated plots from ₹1.80 Cr*."
+                keywords="plots in hinjewadi, nora life republic plots, na bungalow plots hinjewadi pune, kolte patil plots"
+                canonical="/plots-in-hinjewadi"
+                heading="Gated Bungalow Plots in Hinjewadi"
+                subheading="Infrastructure-ready NA residential plots at Nora Sector R17B inside the 390-acre Life Republic township."
+                filterCategory="plots"
+              />
             </Layout>
           } />
           <Route path="/luxury-villas-near-hinjewadi" element={
             <Layout ariaLabel="Luxury Villas near Hinjewadi">
-              <Projects />
+              <Projects
+                title="Luxury Villas in Hinjewadi | 24K Espada Life Republic Pune"
+                description="Discover bespoke 4 & 5 BHK luxury villas near Hinjewadi IT Park at Kolte Patil Life Republic. Exclusive 24K estates with private decks & gardens."
+                keywords="luxury villas near hinjewadi, villas in life republic, 24k espada villas pune, kolte patil villas"
+                canonical="/luxury-villas-near-hinjewadi"
+                heading="Signature Luxury Villas near Hinjewadi"
+                subheading="Independent 4 & 5 BHK luxury villas and estates in Kolte Patil Life Republic Hinjewadi."
+                filterCategory="villas"
+              />
             </Layout>
           } />
 
@@ -316,11 +342,13 @@ function App() {
               <PrivacyPolicy />
             </Layout>
           } />
+          <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
           <Route path="/terms-of-service" element={
             <Layout ariaLabel="Terms of Service">
               <TermsOfService />
             </Layout>
           } />
+          <Route path="/terms" element={<Navigate to="/terms-of-service" replace />} />
           <Route path="/disclaimer" element={
             <Layout ariaLabel="Legal Disclaimer">
               <Disclaimer />
@@ -392,6 +420,7 @@ function App() {
               <CommunityForum />
             </Layout>
           } />
+          <Route path="/community-forum" element={<Navigate to="/community-hub" replace />} />
           {/* Catch-all for 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>

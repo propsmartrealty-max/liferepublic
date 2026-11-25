@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { extractSiloData } from '../lib/pSEO-engine';
+import { SEO } from '../components/seo/SEO';
 import { 
     CheckCircle2, ChevronRight, Home, Star, MapPin, 
     Clock, ShieldCheck, ArrowRight, ChevronDown, 
@@ -20,109 +20,91 @@ export const SiloLanding: React.FC = () => {
     const siloData = extractSiloData(activeSlug);
     const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
-    const currentUrl = `https://life-republic.in/search/${activeSlug}`;
+    const canonicalPath = siloSlug ? `/search/${siloSlug}` : `/search/${activeSlug}`;
+    const currentUrl = `https://life-republic.in${canonicalPath}`;
 
-    // Schema: Product / RealEstateListing + Breadcrumbs + FAQPage
-    const jsonLdSchema = {
+    const listingSchema: Record<string, unknown> = {
         '@context': 'https://schema.org',
-        '@graph': [
-            {
-                '@type': 'BreadcrumbList',
-                '@id': `${currentUrl}#breadcrumb`,
-                'itemListElement': [
-                    {
-                        '@type': 'ListItem',
-                        'position': 1,
-                        'name': 'Home',
-                        'item': 'https://life-republic.in'
-                    },
-                    {
-                        '@type': 'ListItem',
-                        'position': 2,
-                        'name': 'Search',
-                        'item': 'https://life-republic.in/locations-directory'
-                    },
-                    {
-                        '@type': 'ListItem',
-                        'position': 3,
-                        'name': siloData.h1,
-                        'item': currentUrl
-                    }
-                ]
-            },
-            {
-                '@type': siloData.schemaType,
-                '@id': `${currentUrl}#listing`,
-                'name': `${siloData.h1} - Kolte Patil Life Republic`,
-                'description': siloData.metaDescription,
-                'url': currentUrl,
-                'image': 'https://life-republic.in/images/projects/walkthrough.jpg',
-                'brand': {
-                    '@type': 'Brand',
-                    'name': 'Kolte Patil Developers Ltd.'
-                },
-                'offers': {
-                    '@type': 'AggregateOffer',
-                    'priceCurrency': 'INR',
-                    'lowPrice': siloData.lowPriceNum,
-                    'highPrice': siloData.highPriceNum,
-                    'price': siloData.lowPriceNum,
-                    'offerCount': 24,
-                    'availability': 'https://schema.org/InStock',
-                    'seller': {
-                        '@type': 'RealEstateAgent',
-                        'name': 'Kolte-Patil Life Republic Authorized Sales Office'
-                    }
-                },
-                'aggregateRating': {
-                    '@type': 'AggregateRating',
-                    'ratingValue': '4.9',
-                    'bestRating': '5',
-                    'worstRating': '1',
-                    'ratingCount': '1840',
-                    'reviewCount': '1840'
-                },
-                'review': [
-                    {
-                        '@type': 'Review',
-                        'author': { '@type': 'Person', 'name': 'Aditya Deshmukh' },
-                        'datePublished': '2026-07-18',
-                        'reviewBody': `Exceptional 390-acre township living with world-class amenities at Kolte Patil Life Republic Hinjewadi.`,
-                        'reviewRating': { '@type': 'Rating', 'ratingValue': '5', 'bestRating': '5' }
-                    }
-                ]
-            },
-            {
-                '@type': 'FAQPage',
-                '@id': `${currentUrl}#faq`,
-                'mainEntity': siloData.faqs.map(faq => ({
-                    '@type': 'Question',
-                    'name': faq.question,
-                    'acceptedAnswer': {
-                        '@type': 'Answer',
-                        'text': faq.answer
-                    }
-                }))
-            },
-            {
-                '@type': 'ApartmentComplex',
-                'name': 'Kolte-Patil Life Republic Township Hinjewadi',
-                'address': {
-                    '@type': 'PostalAddress',
-                    'streetAddress': 'Survey No. 74, Marunji-Kasararsai Road, Hinjewadi',
-                    'addressLocality': 'Pune',
-                    'addressRegion': 'Maharashtra',
-                    'postalCode': '411057',
-                    'addressCountry': 'IN'
-                },
-                'geo': {
-                    '@type': 'GeoCoordinates',
-                    'latitude': '18.5913',
-                    'longitude': '73.7389'
-                }
+        '@type': siloData.schemaType,
+        '@id': `${currentUrl}#listing`,
+        'name': `${siloData.h1} - Kolte Patil Life Republic`,
+        'description': siloData.metaDescription,
+        'url': currentUrl,
+        'image': 'https://life-republic.in/images/projects/walkthrough.jpg',
+        'brand': {
+            '@type': 'Brand',
+            'name': 'Kolte Patil Developers Ltd.'
+        },
+        'offers': {
+            '@type': 'AggregateOffer',
+            'priceCurrency': 'INR',
+            'lowPrice': siloData.lowPriceNum,
+            'highPrice': siloData.highPriceNum,
+            'price': siloData.lowPriceNum,
+            'offerCount': 24,
+            'availability': 'https://schema.org/InStock',
+            'seller': {
+                '@type': 'RealEstateAgent',
+                'name': 'Kolte-Patil Life Republic Authorized Sales Office'
             }
-        ]
+        }
     };
+
+    if (siloData.schemaType === 'Product') {
+        listingSchema.aggregateRating = {
+            '@type': 'AggregateRating',
+            'ratingValue': '4.9',
+            'bestRating': '5',
+            'worstRating': '1',
+            'ratingCount': '1840',
+            'reviewCount': '1840'
+        };
+        listingSchema.review = [
+            {
+                '@type': 'Review',
+                'author': { '@type': 'Person', 'name': 'Aditya Deshmukh' },
+                'datePublished': '2026-07-18',
+                'reviewBody': 'Exceptional 390-acre township living with world-class amenities at Kolte Patil Life Republic Hinjewadi.',
+                'reviewRating': { '@type': 'Rating', 'ratingValue': '5', 'bestRating': '5' }
+            }
+        ];
+    }
+
+    const siloSchemas: Record<string, unknown>[] = [
+        listingSchema,
+        {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            '@id': `${currentUrl}#faq`,
+            'mainEntity': siloData.faqs.map(faq => ({
+                '@type': 'Question',
+                'name': faq.question,
+                'acceptedAnswer': {
+                    '@type': 'Answer',
+                    'text': faq.answer
+                }
+            }))
+        },
+        {
+            '@context': 'https://schema.org',
+            '@type': 'ApartmentComplex',
+            '@id': `${currentUrl}#complex`,
+            'name': 'Kolte-Patil Life Republic Township Hinjewadi',
+            'address': {
+                '@type': 'PostalAddress',
+                'streetAddress': 'Survey No. 74, Marunji-Kasarsai Road, Hinjewadi',
+                'addressLocality': 'Pune',
+                'addressRegion': 'Maharashtra',
+                'postalCode': '411057',
+                'addressCountry': 'IN'
+            },
+            'geo': {
+                '@type': 'GeoCoordinates',
+                'latitude': '18.5913',
+                'longitude': '73.7389'
+            }
+        }
+    ];
 
     const handleOpenEnquiry = (type = 'Price Sheet') => {
         window.dispatchEvent(new CustomEvent('open-enquiry-modal', {
@@ -135,23 +117,18 @@ export const SiloLanding: React.FC = () => {
 
     return (
         <div className="pt-2 bg-gradient-to-b from-gray-50/50 to-white min-h-screen">
-            <Helmet>
-                <title>{siloData.metaTitle}</title>
-                <meta name="description" content={siloData.metaDescription} />
-                <link rel="canonical" href={currentUrl} />
-                <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-                <meta property="og:title" content={siloData.metaTitle} />
-                <meta property="og:description" content={siloData.metaDescription} />
-                <meta property="og:url" content={currentUrl} />
-                <meta property="og:type" content="website" />
-                <meta property="og:image" content="https://life-republic.in/images/projects/walkthrough.jpg" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={siloData.metaTitle} />
-                <meta name="twitter:description" content={siloData.metaDescription} />
-                <script type="application/ld+json">
-                    {JSON.stringify(jsonLdSchema)}
-                </script>
-            </Helmet>
+            <SEO
+                title={siloData.metaTitle}
+                description={siloData.metaDescription}
+                canonical={canonicalPath}
+                image="/images/projects/walkthrough.jpg"
+                schema={siloSchemas}
+                breadcrumbItems={[
+                    { name: 'Home', item: '/' },
+                    { name: 'Search', item: '/locations-directory' },
+                    { name: siloData.h1, item: canonicalPath }
+                ]}
+            />
 
             {/* Breadcrumbs Navigation */}
             <div className="bg-white border-b border-gray-100">

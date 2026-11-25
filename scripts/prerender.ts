@@ -1,74 +1,66 @@
 import path from 'path';
 import fs from 'fs';
 import { projectsRegistry as projects } from '../src/data/projects';
+import { ID_TO_SLUG } from '../src/data/slug-registry';
+import { pseoRegistry } from '../src/data/pseo-registry';
+import { generateLongTailKeywords } from '../src/data/seo-clusters';
+import { INSIGHTS_DATA } from '../src/data/market-reports';
 import dotenv from 'dotenv';
 
 dotenv.config();
 
 const OUT_DIR = path.resolve(process.cwd(), 'dist');
 const SSR_BUNDLE_PATH = path.join(OUT_DIR, 'server/entry-server.js');
-const DOMAIN = 'https://life-republic.in';
 
-// Load local blogs data
 const localBlogsData = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'src/data/blogs.json'), 'utf-8'));
-
-// Load sectors data
 const sectorsData = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'src/data/sectors.json'), 'utf-8'));
 
-const ID_TO_SLUG: Record<string, string> = {
-    'duet': 'kolte-patil-life-republic-duet-premium-2-bhk-flats-hinjewadi',
-    'arezo': 'kolte-patil-life-republic-arezo-efficient-2-bhk-flats-hinjewadi',
-    'canvas': 'kolte-patil-life-republic-canvas-luxury-3-4-bhk-flats-hinjewadi',
-    'atmos': 'kolte-patil-life-republic-atmos-modern-2-3-bhk-flats-hinjewadi',
-    '24k-espada': 'kolte-patil-life-republic-24k-espada-ultra-luxury-row-houses-hinjewadi',
-    'sound-of-soul': 'kolte-patil-life-republic-sound-of-soul-luxury-4-bhk-row-houses-hinjewadi',
-    'aros': 'kolte-patil-life-republic-aros-premium-2-3-bhk-flats-hinjewadi',
-    'universe': 'kolte-patil-life-republic-universe-luxury-2-bhk-flats-hinjewadi',
-    'first-avenue': 'kolte-patil-life-republic-first-avenue-premium-2-3-bhk-hinjewadi',
-    'villas': 'kolte-patil-life-republic-villas-hinjewadi',
-    'bungalows': 'kolte-patil-life-republic-bungalows-hinjewadi',
-    'echoes': 'kolte-patil-life-republic-echoes-new-launch-2-2-5-bhk-hinjewadi',
-    'qrious': 'kolte-patil-life-republic-qrious-smart-2-3-bhk-homes-hinjewadi',
-    'oro-avenue': 'kolte-patil-life-republic-oro-avenue-smart-2-bhk-hinjewadi',
-    'i-towers': 'kolte-patil-life-republic-i-towers-smart-homes-hinjewadi'
-};
-
 const staticRoutes = [
-    '/', '/projects', '/amenities', '/contact', '/life-republic-sales-office-hinjewadi', '/about', '/privacy', '/terms', '/location',
+    '/', '/projects', '/amenities', '/contact', '/life-republic-sales-office-hinjewadi',
+    '/about', '/privacy-policy', '/terms-of-service', '/disclaimer', '/location',
     '/nri-corner', '/testimonials', '/media-center', '/township-intelligence',
-    '/nri-investment-guide', '/connectivity', '/lifestyle', '/sustainability', '/community-hub',
+    '/nri-investment-guide', '/it-professionals-hinjewadi', '/connectivity',
+    '/lifestyle', '/sustainability', '/community-hub', '/market-reports',
+    '/locations-directory', '/insights', '/search',
     '/2-bhk-flats-in-hinjewadi', '/3-bhk-flats-in-hinjewadi', '/4-bhk-flats-in-hinjewadi',
     '/row-houses-in-life-republic', '/luxury-villas-near-hinjewadi',
     '/plots-in-hinjewadi', '/sitemap', '/township-guide'
 ];
 
 const sectorRoutes = [
-    ...sectorsData.sectors.map((s: any) => `/location/${s.slug}`),
-    ...sectorsData.avenues.map((a: any) => `/location/${a.slug}`),
-    ...sectorsData.localities.map((l: any) => `/location/${l.slug}`),
+    ...(sectorsData.sectors || []).map((s: any) => `/location/${s.slug}`),
+    ...(sectorsData.avenues || []).map((a: any) => `/location/${a.slug}`),
+    ...(sectorsData.localities || []).map((l: any) => `/location/${l.slug}`),
 ];
 
 const specialLocationRoutes = [
     '/location/flats-near-hinjewadi', '/location/flats-near-tathawade',
     '/location/flats-near-punawale', '/location/flats-near-wakad',
     '/location/flats-near-marunji', '/location/flats-near-marunji-road',
-    '/location/ready-possession-flats-hinjewadi'
+    '/location/ready-possession-flats-hinjewadi',
+    ...Object.keys(pseoRegistry).map(slug => `/location/${slug}`)
 ];
+
+const marketReportRoutes = INSIGHTS_DATA.map(item => `/market-reports/${item.slug}`);
 
 async function getDynamicRoutes() {
     const routes: string[] = [];
-    
-    // Add projects
+
+    // Canonical Project Routes
     projects.forEach(p => routes.push(`/projects/${ID_TO_SLUG[p.id] || p.id}`));
-    
-    // Add local blogs
+
+    // Local Media / Blog Routes
     (localBlogsData || []).forEach((lb: any) => {
         routes.push(`/media-center/${lb.slug}`);
     });
 
-    // Add Top High-Intent Programmatic Silo Routes (Competitors, Landmarks & Core Clusters)
+    // Insights Routes (e.g. /insights/flats-near-punawale)
+    generateLongTailKeywords().forEach(k => {
+        routes.push(`/insights/${k.slug}`);
+    });
+
+    // High-Intent Programmatic Silo Routes (Competitors, Landmarks & Core Clusters)
     const topPseoRoutes = [
-        // Competitor Comparisons
         '/search/life-republic-vs-megapolis-hinjewadi',
         '/search/life-republic-vs-godrej-woodsville-hinjewadi',
         '/search/life-republic-vs-vtp-bellissimo-hinjewadi',
@@ -76,7 +68,6 @@ async function getDynamicRoutes() {
         '/search/life-republic-vs-shapoorji-joyville-hinjewadi',
         '/search/life-republic-vs-kasturi-balmoral-hinjewadi',
         '/search/life-republic-vs-rohan-nidita-hinjewadi',
-        // Infrastructure & Landmarks
         '/search/pune-metro-line-3-connectivity-life-republic',
         '/search/pmrda-ring-road-marunji-life-republic',
         '/search/anisha-global-school-life-republic-campus',
@@ -86,7 +77,6 @@ async function getDynamicRoutes() {
         '/search/walk-to-work-homes-hinjewadi-phase-1-it-park',
         '/search/it-professionals-housing-hinjewadi-phase-2-tcs-wipro-infosys',
         '/search/nri-investment-guide-life-republic-pune',
-        // Top High-Volume Search Permutations
         ...['price', 'floor-plans', 'brochure', 'rera-number', 'possession-date', 'reviews', 'site-visit', 'booking-offers'].flatMap(intent => [
             `/search/${intent}-2-bhk-flats-in-hinjewadi-kolte-patil-life-republic`,
             `/search/${intent}-2.5-bhk-flats-in-hinjewadi-echoes`,
@@ -105,7 +95,6 @@ async function getDynamicRoutes() {
     ];
 
     routes.push(...topPseoRoutes);
-    
     return routes;
 }
 
@@ -119,9 +108,8 @@ async function prerender() {
 
     const templatePath = path.join(OUT_DIR, 'template.html');
     const indexPath = path.join(OUT_DIR, 'index.html');
-    
+
     let template = '';
-    // If clean template.html exists, use it; otherwise read index.html and cache it
     if (fs.existsSync(indexPath) && fs.readFileSync(indexPath, 'utf-8').includes('<!--app-head-->')) {
         template = fs.readFileSync(indexPath, 'utf-8');
         fs.writeFileSync(templatePath, template);
@@ -130,74 +118,58 @@ async function prerender() {
     } else {
         template = fs.readFileSync(indexPath, 'utf-8');
     }
+
+    // Write clean un-prerendered SPA shell for dynamic /search/* fallbacks (no homepage canonical, no homepage JSON-LD)
+    const appShellHtml = template
+        .replace('<!--app-head-->', '<meta name="app-shell" content="true" />')
+        .replace('<!--app-html-->', '');
+    fs.writeFileSync(path.join(OUT_DIR, 'app-shell.html'), appShellHtml);
+    console.log('🛡️  Generated clean SPA fallback: dist/app-shell.html');
+
     const { render } = await import(`file://${SSR_BUNDLE_PATH}`);
 
     const dynamicRoutes = await getDynamicRoutes();
-    const routes = [...new Set([...staticRoutes, ...sectorRoutes, ...specialLocationRoutes, ...dynamicRoutes])];
+    const routes = [
+        ...new Set([
+            ...staticRoutes,
+            ...sectorRoutes,
+            ...specialLocationRoutes,
+            ...marketReportRoutes,
+            ...dynamicRoutes
+        ])
+    ];
 
     console.log(`🚀 Rendering ${routes.length} routes...`);
 
     for (const route of routes) {
         try {
             console.log(`Rendering: ${route}`);
-            const { html: appHtml, head: headHtml } = await render(route);
-
-            let cleanAppHtml = appHtml || '';
-            
-            // Extract Helmet / Head tags rendered in the body (React 19 streaming output)
-            const titles = cleanAppHtml.match(/<title[^>]*>.*?<\/title>/gi) || [];
-            const metas = cleanAppHtml.match(/<meta[^>]*>/gi) || [];
-            const links = cleanAppHtml.match(/<link[^>]*(data-rh="true"|rel=["']canonical["']|rel=["']alternate["']|rel=["']preload["'])[^>]*>/gi) || [];
-            const schemas = cleanAppHtml.match(/<script\s+[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi) || [];
-
-            // Combine extracted head tags
-            const extractedHeadTags = [
-                ...metas.filter(m => !m.includes('name="description"')),
-                ...links,
-                ...schemas
-            ].join('\n');
-
-            // Strip extracted head tags that belong outside the root
-            cleanAppHtml = cleanAppHtml.replace(/<title[^>]*>.*?<\/title>/gi, '');
-            cleanAppHtml = cleanAppHtml.replace(/<meta[^>]*>/gi, '');
-            cleanAppHtml = cleanAppHtml.replace(/<link[^>]*(data-rh="true"|rel=["']canonical["']|rel=["']alternate["']|rel=["']preload["'])[^>]*>/gi, '');
-            cleanAppHtml = cleanAppHtml.replace(/<script\s+[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, '');
-
-            const finalHead = (headHtml || '') + '\n' + extractedHeadTags;
+            const { html: appHtml, head: headHtml, title, description } = await render(route);
 
             let renderedHtml = template
-                .replace('<!--app-head-->', finalHead)
-                .replace('<!--app-html-->', cleanAppHtml);
+                .replace('<!--app-head-->', headHtml || '')
+                .replace('<!--app-html-->', appHtml || '');
 
-            // Replace template default title with page specific title
-            if (titles.length > 0) {
-                renderedHtml = renderedHtml.replace(/<title>.*?<\/title>/i, titles[titles.length - 1]);
+            if (title) {
+                renderedHtml = renderedHtml.replace(/<title>.*?<\/title>/i, `<title>${title}</title>`);
             }
 
-            // Replace template default description with page specific description
-            const pageDesc = metas.find(m => m.includes('name="description"'));
-            if (pageDesc) {
-                renderedHtml = renderedHtml.replace(/<meta name="description" content=".*?"\/?>/i, pageDesc);
+            if (description) {
+                renderedHtml = renderedHtml.replace(
+                    /<meta name="description" content=".*?"\/?>/i,
+                    `<meta name="description" content="${description}"/>`
+                );
             }
 
-            const filePath = route === '/'
-                ? path.join(OUT_DIR, 'index.html')
-                : path.join(OUT_DIR, route, 'index.html');
-
-            const dir = path.dirname(filePath);
-            if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-            
-            fs.writeFileSync(filePath, renderedHtml);
-
-            // Also output clean flat file (e.g., dist/contact.html) so Cloudflare Pages serves non-trailing-slash URLs with 200 OK
-            if (route !== '/') {
+            if (route === '/') {
+                fs.writeFileSync(path.join(OUT_DIR, 'index.html'), renderedHtml);
+            } else {
                 const cleanRoute = route.startsWith('/') ? route.slice(1) : route;
                 const flatPath = path.join(OUT_DIR, `${cleanRoute}.html`);
                 const flatDir = path.dirname(flatPath);
                 if (!fs.existsSync(flatDir)) fs.mkdirSync(flatDir, { recursive: true });
                 fs.writeFileSync(flatPath, renderedHtml);
             }
-            
         } catch (e) {
             console.error(`⚠️ Failed to render ${route}:`, e);
         }

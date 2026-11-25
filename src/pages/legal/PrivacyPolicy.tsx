@@ -1,22 +1,23 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Shield } from 'lucide-react';
+import { SEO } from '../../components/seo/SEO';
 
 export const PrivacyPolicy: React.FC = () => {
     return (
-        <div className="pt-4 pb-24 bg-[#F8F9FA] min-h-[75vh]">
-            <Helmet>
-                <title>Privacy Policy | Kolte Patil Life Republic Hinjewadi</title>
-                <meta name="description" content="Privacy Policy and Data Protection guidelines for Kolte Patil Life Republic. Read how we protect your information." />
-            </Helmet>
+        <div className="pt-28 pb-24 bg-[#0a0a0a] min-h-[75vh]">
+            <SEO
+                title="Privacy Policy | Kolte Patil Life Republic Hinjewadi"
+                description="Privacy Policy and Data Protection guidelines for Kolte Patil Life Republic. Read how we protect your information."
+                canonical="/privacy-policy"
+            />
             <div className="container mx-auto px-6 max-w-4xl">
-                <div className="bg-[#151822] border border-white/20 rounded-3xl p-8 md:p-12 shadow-sm border border-white/20">
-                    <div className="flex items-center gap-4 mb-8 rainbow-text-clip font-bold">
+                <div className="bg-[#151822] border border-white/20 rounded-3xl p-8 md:p-12 shadow-sm">
+                    <div className="flex items-center gap-4 mb-8 text-[#E5C07B] font-bold">
                         <Shield size={32} />
-                        <h1 className="text-3xl md:text-4xl font-sans font-bold text-[#202124]">Privacy Policy</h1>
+                        <h1 className="text-3xl md:text-4xl font-sans font-bold text-white">Privacy Policy</h1>
                     </div>
                     
-                    <div className="prose prose-lg prose-headings:font-sans prose-headings:text-[#202124] max-w-none text-gray-600">
+                    <div className="prose prose-lg prose-invert prose-headings:font-sans prose-headings:text-white max-w-none text-gray-300">
                         <p>Last updated: {new Date().toLocaleDateString()}</p>
                         
                         <h2>1. Information Collection</h2>

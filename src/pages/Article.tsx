@@ -24,6 +24,12 @@ const Article = () => {
     if (!article) {
         return (
             <div className="min-h-screen bg-[#050505] flex items-center justify-center text-white">
+                <SEO
+                    title="Article Not Found | Kolte Patil Life Republic"
+                    description="The requested market report could not be located. Explore all Pune West & Hinjewadi real estate market reports."
+                    canonical="/market-reports"
+                    noindex={true}
+                />
                 <div className="text-center">
                     <h1 className="text-4xl font-bold mb-4">Article Not Found</h1>
                     <Link to="/market-reports" className="text-white/50 hover:text-white transition-colors border-b border-white/20 pb-1">Return to Insights</Link>
@@ -32,13 +38,33 @@ const Article = () => {
         );
     }
 
+    const articleSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        'headline': article.title,
+        'description': article.excerpt,
+        'image': article.image.startsWith('http') ? article.image : `https://life-republic.in${article.image}`,
+        'url': `https://life-republic.in/market-reports/${article.slug}`,
+        'datePublished': article.date,
+        'dateModified': '2026-11-25',
+        'author': {
+            '@type': 'Organization',
+            'name': article.author || 'Kolte Patil Life Republic Research'
+        },
+        'publisher': {
+            '@id': 'https://life-republic.in/#organization'
+        }
+    };
+
     return (
         <div className="bg-[#050505] min-h-screen text-white pb-20">
             <SEO 
                 title={`${article.title} | Life Republic Insights`}
                 description={article.excerpt}
                 canonical={`/market-reports/${article.slug}`}
+                image={article.image}
                 type="article"
+                schema={articleSchema}
             />
             
             {/* Reading Progress Bar */}

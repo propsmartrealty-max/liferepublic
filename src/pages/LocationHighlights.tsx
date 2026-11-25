@@ -39,10 +39,10 @@ export const LocationHighlights: React.FC = () => {
     return (
         <div className="bg-transparent">
             <SEO
-                title="Sovereign Location Highlights | Hinjewadi 2026 Roadmap"
-                description="Explore the Hinjewadi 2026 Infrastructure Roadmap. 5 mins to Metro, 150ft Spine Road connectivity, and 10 mins to Global IT Hubs. Discover the strategic epicenter of Pune West."
-                keywords="Hinjewadi Infrastructure 2026, Life Republic Location, Hinjewadi Metro Connectivity, Pune Real Estate Investment 2026"
-                canonical="/location-highlights"
+                title="Life Republic Location & Hinjewadi Connectivity | Pune"
+                description="Explore Kolte Patil Life Republic location highlights in Hinjewadi Pune: 3 mins to Pune Metro Line 3, 150ft Spine Road & 5 mins to Hinjewadi IT Park."
+                keywords="Life Republic Location, Hinjewadi Infrastructure 2026, Hinjewadi Metro Connectivity, Pune Real Estate Investment 2026"
+                canonical="/location"
             />
 
             {/* Sovereign Nexus Hero */}

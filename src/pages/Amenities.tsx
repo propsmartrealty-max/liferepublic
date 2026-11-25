@@ -41,18 +41,18 @@ export const Amenities: React.FC = () => {
                 keywords="Life Republic Amenities, Clubhouse in Hinjewadi, School in Life Republic, Integrated Township Amenities, Swimming Pool, Gymnasium, Parks in Hinjewadi, Gated Community Facilities"
                 canonical="/amenities"
             />
-            <section className="bg-white text-[#202124] pt-40 pb-28 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/images/slider/1.jpg')] bg-cover bg-center opacity-30"></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
+            <section className="bg-[#0a0a0a] text-white pt-40 pb-28 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/images/gallery/clubhouse.webp')] bg-cover bg-center opacity-30"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-[#0a0a0a]"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-5xl font-sans font-bold mb-6"
+                        className="text-5xl md:text-5xl font-sans font-bold text-white mb-6"
                     >
                         Life Republic Township Amenities
                     </motion.h1>
-                    <p className="text-xl max-w-2xl mx-auto text-gray-200">
+                    <p className="text-xl max-w-2xl mx-auto text-gray-300">
                         Experience a lifestyle designed for holistic well-being and community engagement.
                     </p>
                 </div>

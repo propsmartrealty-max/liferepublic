@@ -1,30 +1,33 @@
-import { StrictMode } from 'react'
-import { hydrateRoot } from 'react-dom/client'
-import { HelmetProvider } from 'react-helmet-async'
-import { BrowserRouter } from 'react-router-dom'
-import './index.css'
-import App from './App.tsx'
-import { GlobalErrorBoundary } from './components/ui/GlobalErrorBoundary'
+import { StrictMode } from 'react';
+import { hydrateRoot, createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import './index.css';
+import App from './App.tsx';
+import { GlobalErrorBoundary } from './components/ui/GlobalErrorBoundary';
 
 const rootElement = document.getElementById('root')!;
 
-hydrateRoot(
-  rootElement,
-  <StrictMode>
-    <GlobalErrorBoundary>
-      <HelmetProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </HelmetProvider>
-    </GlobalErrorBoundary>
-  </StrictMode>,
-  {
-    onRecoverableError(error) {
-      // In production/audit mode, don't spam console.error
-      if (import.meta.env.DEV) {
-        console.warn('Hydration recoverable notice:', error);
-      }
-    }
-  }
+const app = (
+    <StrictMode>
+        <GlobalErrorBoundary>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </GlobalErrorBoundary>
+    </StrictMode>
 );
+
+const hasPreRenderedHtml =
+    rootElement.children.length > 0 && !rootElement.innerHTML.includes('<!--app-html-->');
+
+if (hasPreRenderedHtml) {
+    hydrateRoot(rootElement, app, {
+        onRecoverableError(error) {
+            if (import.meta.env.DEV) {
+                console.warn('Hydration recoverable notice:', error);
+            }
+        },
+    });
+} else {
+    createRoot(rootElement).render(app);
+}

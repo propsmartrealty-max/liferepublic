@@ -229,11 +229,22 @@ async function main() {
     const cache = loadQuotaCache();
     const allUrls = extractUrls();
     const prioritizedAllUrls = prioritizeUrls(allUrls);
-    const remainingUrls = prioritizedAllUrls.filter(u => !cache.successfulUrls.includes(u));
+    const refreshCore = process.argv.includes('--refresh-core');
+    let coreUrls = [];
+    if (refreshCore && fs.existsSync(CONFIG.sitemapPath)) {
+        const smContent = fs.readFileSync(CONFIG.sitemapPath, 'utf-8');
+        const matches = [...smContent.matchAll(/<loc>(.*?)<\/loc>/g)];
+        coreUrls = prioritizeUrls(matches.map(m => m[1].trim()).filter(u => !u.endsWith('.xml')));
+    }
+    const pendingNewUrls = prioritizedAllUrls.filter(u => !cache.successfulUrls.includes(u));
+    const remainingUrls = refreshCore
+        ? [...coreUrls, ...pendingNewUrls.filter(u => !coreUrls.includes(u))]
+        : pendingNewUrls;
 
-    console.log(`📦 Discovered ${rawAccounts.length} Service Account(s) in credential pool:`);
-    const poolCapacity = rawAccounts.length * 200;
-    console.log(`🎯 Total Pool Daily Capacity: ~${poolCapacity.toLocaleString()} URLs/day (${rawAccounts.length} × 200/day)`);
+    const uniqueProjects = new Set(rawAccounts.map(a => a.projectId));
+    console.log(`📦 Discovered ${rawAccounts.length} Service Account(s) across ${uniqueProjects.size} GCP project(s):`);
+    const poolCapacity = uniqueProjects.size * 200;
+    console.log(`🎯 Total Pool Daily Capacity: ~${poolCapacity.toLocaleString()} URLs/day (${uniqueProjects.size} project(s) × 200/day)`);
 
     const todayPT = getPacificDate();
     const nextReset = getNextPacificMidnight();

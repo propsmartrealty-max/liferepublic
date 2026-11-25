@@ -8,8 +8,14 @@ import { SEO } from '../../components/seo/SEO';
 import { ShieldCheck, TrendingUp, Target, Crown, ArrowUpRight, Landmark, Gem, Zap } from 'lucide-react';
 
 export const FourBHK: React.FC = () => {
-    const [projects, setProjects] = useState<Project[]>([]);
-    const [loading, setLoading] = useState(true);
+    const initialProjects = projectsRegistry.filter((p: Project) =>
+        p.features.some((f: string) => f.includes('4 BHK') || f.includes('4 Bed')) ||
+        p.title.includes('4 BHK') ||
+        p.title.includes('24K') ||
+        p.description.includes('4 BHK')
+    );
+    const [projects, setProjects] = useState<Project[]>(initialProjects);
+    const [loading, setLoading] = useState(initialProjects.length === 0);
 
     useEffect(() => {
         const loadProjects = async () => {
@@ -23,14 +29,6 @@ export const FourBHK: React.FC = () => {
 
                 if (filtered.length > 0) {
                     setProjects(filtered);
-                } else {
-                    const staticProjects = projectsRegistry;
-                    const staticFiltered = staticProjects.filter((p: Project) =>
-                        p.features.some((f: string) => f.includes('4 BHK') || f.includes('4 Bed')) ||
-                        p.title.includes('4 BHK') ||
-                        p.description.includes('4 BHK')
-                    );
-                    setProjects(staticFiltered);
                 }
             } catch (error) {
                 console.error('Failed to load projects:', error);
@@ -44,10 +42,10 @@ export const FourBHK: React.FC = () => {
     return (
         <div className="bg-transparent">
             <SEO
-                title="Sovereign 4BHK Villas & Bungalows | Life Republic Hinjewadi"
-                description="Explore ultra-luxury 4BHK Villas and Bungalows in Life Republic Hinjewadi. 24K Espada, Sound of Soul, and premium row houses designed for grand living."
-                keywords="4bhk villa in hinjewadi, 4bhk bungalow in hinjewadi, luxury row houses pune, kolte patil life republic 24k espada"
-                canonical="/4bhk-flats-hinjewadi"
+                title="4 BHK Flats, Villas & Row Houses in Hinjewadi | Life Republic"
+                description="Explore ultra-luxury 4 BHK flats, villas and row houses in Kolte Patil Life Republic Hinjewadi. 24K Espada, Sound of Soul & Canvas 4 BHK homes from ₹1.59 Cr*."
+                keywords="4bhk in hinjewadi, 4bhk villa in hinjewadi, 4bhk bungalow in hinjewadi, luxury row houses pune, kolte patil life republic 24k espada"
+                canonical="/4-bhk-flats-in-hinjewadi"
             />
 
             {/* Sovereign Hero */}

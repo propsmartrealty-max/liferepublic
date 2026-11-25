@@ -64,6 +64,7 @@ const Insights = () => {
                                     <img 
                                         src={article.image} 
                                         alt={article.title}
+                                        loading="lazy"
                                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                                     />
                                     <div className="absolute top-4 left-4 z-20">

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { api } from '../../services/api';
+import { projectsRegistry } from '../../data/projects';
 import type { Project } from '../../lib/types';
 import { ProjectCard } from '../../components/ui/ProjectCard';
 import { SEO } from '../../components/seo/SEO';
@@ -7,7 +8,12 @@ import { motion } from 'framer-motion';
 import { Maximize, Layout, ShieldCheck, Zap, Sparkles, Target, ArrowUpRight, Building2 } from 'lucide-react';
 
 export const ThreeBHK: React.FC = () => {
-    const [projects, setProjects] = useState<Project[]>([]);
+    const initialProjects = projectsRegistry.filter((p: Project) =>
+        p.features.some((f: string) => f.includes('3 BHK')) ||
+        p.category.includes('3 BHK') ||
+        p.description.includes('3 BHK')
+    );
+    const [projects, setProjects] = useState<Project[]>(initialProjects);
 
     useEffect(() => {
         const loadProjects = async () => {
@@ -17,7 +23,7 @@ export const ThreeBHK: React.FC = () => {
                     p.features.some(f => f.includes('3 BHK')) ||
                     p.category.includes('3 BHK')
                 );
-                setProjects(filtered);
+                if (filtered.length > 0) setProjects(filtered);
             } catch (error) {
                 console.error('Failed to load projects', error);
             }
@@ -28,9 +34,9 @@ export const ThreeBHK: React.FC = () => {
     return (
         <div className="bg-transparent">
             <SEO
-                title="Sovereign 3 BHK Flats in Hinjewadi | Space Synthesis 2026"
-                description="Experience grandeur with Kolte Patil Life Republic's 3 BHK collection. Large carpet areas, 3-side open views, and strategic IT Park proximity in Pune's premium township."
-                keywords="3bhk in hinjewadi, life republic 3bhk, kolte patil township hinjewadi, luxury flats pune west, 3 bhk price hinjewadi"
+                title="3 BHK Flats in Hinjewadi | Kolte Patil Life Republic"
+                description="Spacious 3 BHK luxury apartments in Kolte Patil Life Republic Hinjewadi. Large carpet areas, panoramic sundecks & world-class 390-acre township amenities."
+                keywords="3 bhk flats in hinjewadi, life republic 3bhk, kolte patil township hinjewadi, luxury flats pune west, 3 bhk price hinjewadi"
                 canonical="/3-bhk-flats-in-hinjewadi"
             />
 

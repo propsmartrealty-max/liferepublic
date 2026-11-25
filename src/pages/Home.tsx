@@ -288,8 +288,8 @@ export const Home: React.FC = () => {
     return (
         <div className="w-full bg-[#0a0a0a] text-white selection:bg-[#E5C07B] selection:text-black">
             <SEO
-                title="Kolte Patil Life Republic Hinjewadi | Official Township Portal"
-                description="Official Portal for Kolte Patil Life Republic, Hinjewadi Pune. Explore 390-acre township living with 2, 3 & 4 BHK flats, villas from ₹78L*, floor plans, brochure & MahaRERA."
+                title="Kolte Patil Life Republic Hinjewadi | Flats, Villas & Prices"
+                description="Explore Kolte Patil Life Republic, 390-acre township in Hinjewadi Pune. Check 2, 3 & 4 BHK flats, villas from ₹78L*, floor plans, brochure & MahaRERA details."
                 keywords="life republic kolte patil, kolte patil life republic, life republic hinjewadi, life republic pune, kolte patil hinjewadi, flats in hinjewadi, 2 bhk flats in hinjewadi, 3 bhk in hinjewadi, life republic sales office, life republic sales office or main office mulshi"
                 canonical="/"
                 schema={homeCustomSchema}

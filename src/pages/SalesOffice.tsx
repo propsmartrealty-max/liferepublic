@@ -22,7 +22,7 @@ export const SalesOffice: React.FC = () => {
             "image": "https://life-republic.in/images/brand/logo.webp",
             "url": "https://life-republic.in/life-republic-sales-office-hinjewadi",
             "telephone": "+91-7744009295",
-            "priceRange": "₹58L - ₹3.5Cr",
+            "priceRange": "₹78L - ₹3.5Cr",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Survey No. 74, Marunji, Hinjawadi-Kasarsai Road, Taluka Mulshi",
