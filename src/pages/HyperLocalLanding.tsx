@@ -121,9 +121,9 @@ export const HyperLocalLanding: React.FC = () => {
             'offers': {
                 '@type': 'AggregateOffer',
                 'priceCurrency': 'INR',
-                'lowPrice': '5800000',
+                'lowPrice': '7800000',
                 'highPrice': '35000000',
-                'price': '5800000',
+                'price': '7800000',
                 'offerCount': projects.length || 3,
                 'availability': 'https://schema.org/InStock'
             }
@@ -131,7 +131,7 @@ export const HyperLocalLanding: React.FC = () => {
     ], [config, locationFaqs, projects, slug]);
 
     return (
-        <div className="pt-4 pb-20 bg-transparent">
+        <div className="pt-4 pb-20 bg-[#0a0a0a] text-white selection:bg-[#E5C07B] selection:text-black">
             <SEO 
                 title={config.title}
                 description={config.description}
@@ -147,85 +147,85 @@ export const HyperLocalLanding: React.FC = () => {
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="flex items-center gap-2 rainbow-text-clip font-bold text-[10px] font-bold tracking-tight font-semibold mb-8"
+                            className="flex items-center gap-2 text-[#E5C07B] text-xs font-bold uppercase tracking-wider mb-6"
                         >
                             <Target size={14} /> Market Intelligence Report 2026
                         </motion.div>
-                        <h1 className="text-5xl md:text-5xl font-sans font-bold text-[#202124] mb-10 leading-[1.1]">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-sans font-bold text-white mb-6 leading-[1.1]">
                             {config.title.split('|')[0]}
                         </h1>
-                        <p className="text-[#5F6368] text-xl font-light leading-relaxed max-w-2xl mb-12">
+                        <p className="text-gray-300 text-lg sm:text-xl font-light leading-relaxed max-w-2xl mb-8">
                             A deep-dive analysis of real estate dynamics, infrastructure velocity, and investment potential for <strong>{slug?.replace(/-/g, ' ')}</strong>.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <Button variant="primary" className="rounded-full px-8 h-14" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>Enquire Now for Price List</Button>
-                            <Button variant="outline" className="rounded-full px-8 h-14" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>Download Area Report</Button>
+                            <Button variant="primary" className="rounded-full px-8 h-14 bg-[#E5C07B] text-black font-semibold hover:bg-white transition-colors" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>Enquire Now for Price List</Button>
+                            <Button variant="outline" className="rounded-full px-8 h-14 border-white/20 text-white hover:bg-white/10" onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}>Download Area Report</Button>
                         </div>
                     </div>
 
                     <div className="lg:w-1/3 grid grid-cols-1 gap-6">
-                        <div className="bg-[#F8F9FA] p-8 rounded-[2rem] border border-white/20">
+                        <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-[2rem]">
                             <div className="flex items-center justify-between mb-4">
-                                <span className="text-[10px] font-bold tracking-tight font-medium text-[#5F6368]">Infra Score</span>
-                                <Zap size={16} className="rainbow-text-clip font-bold" />
+                                <span className="text-xs uppercase tracking-wider text-gray-400 font-medium">Infra Score</span>
+                                <Zap size={16} className="text-[#E5C07B]" />
                             </div>
-                            <div className="text-4xl font-sans font-bold text-[#202124]">{config.infraScore}/100</div>
-                            <div className="w-full h-1 bg-gray-200 mt-4 rounded-full overflow-hidden">
-                                <div className="h-full bg-accent" style={{ width: `${config.infraScore}%` }}></div>
+                            <div className="text-4xl font-sans font-bold text-white">{config.infraScore}/100</div>
+                            <div className="w-full h-1.5 bg-white/10 mt-4 rounded-full overflow-hidden">
+                                <div className="h-full bg-[#E5C07B]" style={{ width: `${config.infraScore}%` }}></div>
                             </div>
                         </div>
-                        <div className="bg-white p-8 rounded-[2rem] text-[#202124]">
+                        <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-[2rem]">
                             <div className="flex items-center justify-between mb-4">
-                                <span className="text-[10px] font-bold tracking-tight font-medium text-[#202124]/40">Rental Yield</span>
-                                <TrendingUp size={16} className="rainbow-text-clip font-bold" />
+                                <span className="text-xs uppercase tracking-wider text-gray-400 font-medium">Rental Yield</span>
+                                <TrendingUp size={16} className="text-[#E5C07B]" />
                             </div>
-                            <div className="text-4xl font-sans font-bold">{config.rentalYield}</div>
-                            <p className="text-[#202124]/40 text-[10px] mt-4 tracking-tight font-medium">Projected for Hinjewadi West</p>
+                            <div className="text-4xl font-sans font-bold text-white">{config.rentalYield}</div>
+                            <p className="text-gray-400 text-xs mt-4 tracking-wider">Projected for Hinjewadi West Corridor</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Intelligence Matrix */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-40">
-                    <div className="space-y-6">
-                        <div className="w-12 h-12 bg-[#E5C07B]/20 rounded-2xl flex items-center justify-center rainbow-text-clip font-bold">
+                    <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-[2rem] space-y-6">
+                        <div className="w-12 h-12 bg-[#E5C07B]/20 rounded-2xl flex items-center justify-center text-[#E5C07B]">
                             <Clock size={20} />
                         </div>
-                        <h3 className="text-xl font-sans font-bold text-[#202124]">Velocity Matrix</h3>
+                        <h3 className="text-xl font-sans font-bold text-white">Velocity Matrix</h3>
                         <div className="space-y-4">
-                            <div className="flex justify-between border-b border-white/20 pb-2">
-                                <span className="text-[#5F6368] text-sm">Hinjewadi Phase 1</span>
-                                <span className="font-bold text-[#202124]">{config.commutePhase1}</span>
+                            <div className="flex justify-between border-b border-white/10 pb-2">
+                                <span className="text-gray-400 text-sm">Hinjewadi Phase 1</span>
+                                <span className="font-bold text-white">{config.commutePhase1}</span>
                             </div>
-                            <div className="flex justify-between border-b border-white/20 pb-2">
-                                <span className="text-[#5F6368] text-sm">Mumbai-Pune Expy</span>
-                                <span className="font-bold text-[#202124]">12 mins</span>
+                            <div className="flex justify-between border-b border-white/10 pb-2">
+                                <span className="text-gray-400 text-sm">Mumbai-Pune Expy</span>
+                                <span className="font-bold text-white">12 mins</span>
                             </div>
                         </div>
                     </div>
 
-                    <div className="space-y-6">
-                        <div className="w-12 h-12 bg-[#E5C07B]/20 rounded-2xl flex items-center justify-center rainbow-text-clip font-bold">
+                    <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-[2rem] space-y-6">
+                        <div className="w-12 h-12 bg-[#E5C07B]/20 rounded-2xl flex items-center justify-center text-[#E5C07B]">
                             <Shield size={20} />
                         </div>
-                        <h3 className="text-xl font-sans font-bold text-[#202124]">Sovereign Safety</h3>
+                        <h3 className="text-xl font-sans font-bold text-white">Sovereign Safety</h3>
                         <ul className="space-y-3">
                             {config.highlights.map((h, i) => (
-                                <li key={i} className="flex gap-2 text-sm text-[#5F6368]">
-                                    <span className="rainbow-text-clip font-bold">•</span> {h}
+                                <li key={i} className="flex gap-2 text-sm text-gray-300">
+                                    <span className="text-[#E5C07B]">•</span> {h}
                                 </li>
                             ))}
                         </ul>
                     </div>
 
-                    <div className="bg-gray-900 rounded-[2rem] p-10 text-white flex flex-col justify-between">
+                    <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] p-8 text-white flex flex-col justify-between">
                         <div>
                             <h4 className="text-xl font-bold mb-4 text-white">Market View</h4>
                             <p className="text-gray-300 text-sm leading-relaxed">
                                 Demand for premium housing near {slug?.split('-')[0]} has spiked by 18% in the last quarter due to the Hinjewadi-Shivajinagar Metro progress.
                             </p>
                         </div>
-                        <Link to="/township-intelligence" className="flex items-center gap-2 text-amber-400 hover:text-amber-300 text-xs font-bold tracking-tight font-medium group mt-6">
+                        <Link to="/township-intelligence" className="flex items-center gap-2 text-[#E5C07B] hover:text-white text-xs font-bold tracking-tight font-medium group mt-6 transition-colors">
                             Explore Stats <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                         </Link>
                     </div>
@@ -234,8 +234,8 @@ export const HyperLocalLanding: React.FC = () => {
                 {/* Relevant Projects Section */}
                 <div className="mb-32">
                     <div className="flex items-end justify-between mb-8">
-                        <h2 className="text-4xl font-sans font-bold text-[#202124]">Matching Inventory</h2>
-                        <Link to="/projects" className="rainbow-text-clip font-bold font-bold border-b border-accent/20 pb-1">View All Sectors</Link>
+                        <h2 className="text-3xl sm:text-4xl font-sans font-bold text-white">Matching Inventory</h2>
+                        <Link to="/projects" className="text-[#E5C07B] hover:text-white font-bold border-b border-[#E5C07B]/30 pb-1 transition-colors">View All Sectors</Link>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projects.map((p) => (

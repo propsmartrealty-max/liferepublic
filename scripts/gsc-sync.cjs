@@ -27,10 +27,14 @@ const SITEMAPS = [
     'https://life-republic.in/sitemap-silos-5.xml',
     'https://life-republic.in/sitemap-silos-6.xml',
     'https://life-republic.in/sitemap-silos-7.xml',
-    'https://life-republic.in/google-property-feed.xml',
-    'https://life-republic.in/google-shopping-feed.xml',
     'https://life-republic.in/feed.xml',
     'https://life-republic.in/rss.xml'
+];
+
+// Shopping / Merchant product feeds are crawled via Merchant Center & robots.txt, not GSC Sitemaps API
+const INVALID_OR_LEGACY_FEEDS = [
+    'https://life-republic.in/google-property-feed.xml',
+    'https://life-republic.in/google-shopping-feed.xml'
 ];
 
 async function getAuthClient() {
@@ -71,8 +75,19 @@ async function syncGSC() {
     const client = await getAuthClient();
     const encodedSite = encodeURIComponent(SITE_URL);
 
-    // 1. Submit all 13 active sitemaps and property feeds
-    console.log('📡 Submitting Sitemaps & Real Estate Property Feeds to Google Search Console...');
+    // 0. Clean up legacy or mismatched feeds that generate GSC schema errors
+    for (const legacyUrl of INVALID_OR_LEGACY_FEEDS) {
+        try {
+            await client.request({
+                url: `https://www.googleapis.com/webmasters/v3/sites/${encodedSite}/sitemaps/${encodeURIComponent(legacyUrl)}`,
+                method: 'DELETE'
+            });
+            console.log(`  🗑️ [Purged Legacy Feed]: ${legacyUrl}`);
+        } catch (_) {}
+    }
+
+    // 1. Submit all 11 active verified XML sitemaps and RSS feeds
+    console.log('📡 Submitting Sitemaps & RSS Feeds to Google Search Console...');
     let successCount = 0;
 
     for (const smUrl of SITEMAPS) {

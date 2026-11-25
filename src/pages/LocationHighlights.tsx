@@ -46,8 +46,8 @@ export const LocationHighlights: React.FC = () => {
             />
 
             {/* Sovereign Nexus Hero */}
-            <section className="relative pt-40 pb-32 bg-white overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-secondary z-10"></div>
+            <section className="relative pt-40 pb-32 bg-[#0a0a0a] text-white overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-[#0a0a0a]/60 to-[#0a0a0a] z-10"></div>
                 <div className="absolute inset-0 bg-[url('/images/aerial-sunset.png')] bg-cover bg-center opacity-30 grayscale blur-[1px]"></div>
                 
                 <div className="container mx-auto px-4 relative z-20">
@@ -55,27 +55,27 @@ export const LocationHighlights: React.FC = () => {
                         <motion.div 
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="inline-flex items-center gap-4 px-6 py-3 bg-accent/20 border border-accent/30 rounded-full mb-12 backdrop-blur-xl"
+                            className="inline-flex items-center gap-4 px-6 py-3 bg-[#E5C07B]/10 border border-[#E5C07B]/30 rounded-full mb-12 backdrop-blur-xl"
                         >
-                            <Compass size={16} className="rainbow-text-clip font-bold animate-spin-slow" />
-                            <span className="text-[10px] font-bold tracking-tight font-semibold rainbow-text-clip font-bold">Infrastructure Synthesis 2026</span>
+                            <Compass size={16} className="text-[#E5C07B] animate-spin-slow" />
+                            <span className="text-xs uppercase tracking-wider font-semibold text-[#E5C07B]">Infrastructure Synthesis 2026</span>
                         </motion.div>
-                        <h1 className="text-5xl md:text-9xl font-sans font-bold text-[#202124] mb-10 tracking-tighter leading-none">
-                            The Strategic <br /> <span className="rainbow-text-clip font-bold italic">Epicenter.</span>
+                        <h1 className="text-5xl md:text-8xl font-sans font-bold text-white mb-10 tracking-tight leading-none">
+                            The Strategic <br /> <span className="text-[#E5C07B] italic">Epicenter.</span>
                         </h1>
-                        <p className="text-2xl text-[#5F6368] font-medium max-w-3xl leading-relaxed mb-12">
+                        <p className="text-xl md:text-2xl text-gray-300 font-light max-w-3xl leading-relaxed mb-12">
                             Synthesizing the Rajiv Gandhi Infotech Park's economic velocity with the 2026 Metro expansion. A 390-acre structural masterclass.
                         </p>
                         
                         <div className="flex gap-8">
                             <div className="flex flex-col">
-                                <span className="text-4xl font-sans font-bold text-[#202124]">1.2km</span>
-                                <span className="text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-medium mt-1">To Metro Ph 3</span>
+                                <span className="text-4xl font-sans font-bold text-white">1.2km</span>
+                                <span className="text-xs text-[#E5C07B] uppercase tracking-wider font-medium mt-1">To Metro Ph 3</span>
                             </div>
-                            <div className="w-px h-12 bg-transparent/10"></div>
+                            <div className="w-px h-12 bg-white/20"></div>
                             <div className="flex flex-col">
-                                <span className="text-4xl font-sans font-bold text-[#202124]">0 min</span>
-                                <span className="text-[10px] font-bold rainbow-text-clip font-bold tracking-tight font-medium mt-1">To Spine Road</span>
+                                <span className="text-4xl font-sans font-bold text-white">0 min</span>
+                                <span className="text-xs text-[#E5C07B] uppercase tracking-wider font-medium mt-1">To Spine Road</span>
                             </div>
                         </div>
                     </div>

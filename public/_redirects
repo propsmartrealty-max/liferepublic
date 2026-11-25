@@ -80,6 +80,9 @@
 # General Utility Directives
 /master-plan /township-guide 301
 /masterplan /township-guide 301
+/reviews /testimonials 301
+/reviews/ /testimonials 301
+/life-republic-reviews /testimonials 301
 /amenities/ /amenities 301
 /location/ /location 301
 /lifestyle/ /lifestyle 301

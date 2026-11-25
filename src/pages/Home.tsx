@@ -245,7 +245,7 @@ export const Home: React.FC = () => {
             "@type": "ApartmentComplex",
             "@id": "https://life-republic.in/#complex",
             "name": "Kolte Patil Life Republic Hinjewadi",
-            "alternateName": ["Life Republic Pune", "Kolte Patil Life Republic Township", "Kolte Patil Life Republic"],
+            "alternateName": ["Life Republic Kolte Patil", "Life Republic Kolte Patil Hinjewadi", "Life Republic Pune", "Kolte Patil Life Republic Township", "Kolte Patil Life Republic"],
             "url": "https://life-republic.in",
             "description": "A 390-acre integrated gated township in Marunji, Hinjewadi, Pune offering 2, 2.5, 3 & 4 BHK apartments, row houses, and bungalow plots.",
             "address": {
@@ -288,8 +288,8 @@ export const Home: React.FC = () => {
     return (
         <div className="w-full bg-[#0a0a0a] text-white selection:bg-[#E5C07B] selection:text-black">
             <SEO
-                title="Kolte Patil Life Republic | Life Republic Kolte Patil Pune"
-                description="Official Portal for Kolte Patil Life Republic (Life Republic Kolte Patil), a 390-acre township in Hinjewadi Pune. Explore 2, 3 & 4 BHK flats, villas, verified prices & RERA."
+                title="Kolte Patil Life Republic Hinjewadi | Official Township Portal"
+                description="Official Portal for Kolte Patil Life Republic, Hinjewadi Pune. Explore 390-acre township living with 2, 3 & 4 BHK flats, villas from ₹78L*, floor plans, brochure & MahaRERA."
                 keywords="life republic kolte patil, kolte patil life republic, life republic hinjewadi, life republic pune, kolte patil hinjewadi, flats in hinjewadi, 2 bhk flats in hinjewadi, 3 bhk in hinjewadi, life republic sales office, life republic sales office or main office mulshi"
                 canonical="/"
                 schema={homeCustomSchema}
@@ -322,12 +322,12 @@ export const Home: React.FC = () => {
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold tracking-tight text-white mb-6 leading-[1.1]">
-                        Kolte Patil Life Republic <span className="text-[#E5C07B]">Hinjewadi</span>
+                        Kolte Patil Life Republic <span className="text-[#E5C07B]">Hinjewadi, Pune</span>
                     </h1>
 
                     <p className="text-lg sm:text-xl md:text-2xl text-gray-300 font-light max-w-3xl mb-8 leading-relaxed">
-                        Pune’s benchmark 390-acre integrated smart township in Marunji, Hinjewadi. 
-                        Offering premium 2, 2.5, 3 &amp; 4 BHK residences, bespoke villas, and row houses just 4.5 km from Rajiv Gandhi Infotech Park.
+                        Pune’s benchmark 390-acre integrated smart township in Marunji, Hinjewadi (also known as Life Republic Kolte Patil). 
+                        Offering premium 2, 2.5, 3 &amp; 4 BHK residences, bespoke villas, and row houses just 4.5 km from Rajiv Gandhi Infotech Park Phase 1.
                     </p>
 
                     {/* Township Highlights Badges */}

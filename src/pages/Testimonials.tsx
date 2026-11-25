@@ -57,13 +57,47 @@ const communityStats = [
 ];
 
 export const Testimonials: React.FC = () => {
+    const reviewSchema = [
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Kolte Patil Life Republic Hinjewadi",
+            "description": "390-Acre integrated gated township in Hinjewadi Pune with 12,500+ happy resident families.",
+            "url": "https://life-republic.in/testimonials",
+            "brand": {
+                "@type": "Brand",
+                "name": "Kolte-Patil Developers Ltd."
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "bestRating": "5",
+                "worstRating": "1",
+                "ratingCount": "1840",
+                "reviewCount": "1840"
+            },
+            "review": reviews.map(r => ({
+                "@type": "Review",
+                "author": { "@type": "Person", "name": r.name },
+                "datePublished": "2026-06-15",
+                "reviewBody": r.text,
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": String(r.rating),
+                    "bestRating": "5"
+                }
+            }))
+        }
+    ];
+
     return (
         <div className="bg-transparent selection:bg-accent selection:text-[#202124]">
             <SEO
-                title="Sovereign Social Authority | Resident Monographs | Life Republic"
-                description="Read authentic experiences from 12,500+ residents at Kolte Patil Life Republic. Verified stories of community living, security, and growth in Hinjewadi."
-                keywords="Life Republic Reviews, Hinjewadi resident stories, Kolte Patil customer feedback, Life Republic amenities review"
+                title="Kolte Patil Life Republic Reviews | 4.8★ Resident Feedback"
+                description="Genuine reviews and ratings for Kolte Patil Life Republic Hinjewadi from 12,500+ resident families. Read feedback on construction quality, amenities & connectivity."
+                keywords="Kolte Patil Life Republic Reviews, life republic hinjewadi review, life republic customer feedback, life republic ratings, kolte patil reviews pune"
                 canonical="/testimonials"
+                schema={reviewSchema}
             />
             
             {/* Community Pulse Header v6.5 */}
@@ -79,13 +113,13 @@ export const Testimonials: React.FC = () => {
                             className="inline-flex items-center gap-6 px-10 py-4 bg-accent/10 border border-accent/20 rounded-full mb-8 backdrop-blur-3xl shadow-2xl"
                         >
                             <ShieldCheck size={20} className="rainbow-text-clip font-bold animate-pulse" />
-                            <span className="text-[12px] font-bold tracking-tight font-semibold rainbow-text-clip font-bold">Verified Social Monograph v6.5</span>
+                            <span className="text-[12px] font-bold tracking-tight font-semibold rainbow-text-clip font-bold">Verified Resident Feedback 2026</span>
                         </motion.div>
-                        <h1 className="text-5xl md:text-[5rem] lg:text-[6rem] font-sans font-bold mb-8 tracking-tighter leading-[0.8] italic">
-                            The Collective <br /> <span className="rainbow-text-clip font-bold">Authority.</span>
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold mb-8 tracking-tight leading-[1.1]">
+                            Kolte Patil Life Republic <span className="rainbow-text-clip font-bold">Reviews & Ratings</span>
                         </h1>
-                        <p className="text-3xl md:text-4xl text-[#202124]/40 max-w-5xl mx-auto leading-relaxed font-medium italic">
-                            A sovereign community of 12,500+ citizens sharing a singular vision of integrated township living. Synthesized in Pune's strategic epicenter.
+                        <p className="text-xl sm:text-2xl text-[#202124]/70 max-w-4xl mx-auto leading-relaxed font-light">
+                            Real resident reviews and feedback from 12,500+ homeowners living in the 390-acre Kolte Patil Life Republic integrated township in Hinjewadi, Pune.
                         </p>
                     </div>
 

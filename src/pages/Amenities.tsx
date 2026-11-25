@@ -36,9 +36,9 @@ export const Amenities: React.FC = () => {
     return (
         <div>
                         <SEO
-                title="World-Class Amenities at Kolte Patil Life Republic Township Hinjewadi"
-                description="Discover the world-class amenities at Kolte Patil Life Republic Township Hinjewadi. 3.5-acre urban park, Olympic-size pool, international school, fire station, and 24x7 security. Nature Community Sustainability in Pune."
-                keywords="Life Republic Amenities, Clubhouse in Hinjewadi, School in Life Republic, Integrated Township Amenities, Swimming Pool, Gymnasium, Parks in Hinjewadi, Gated Community Facilities, Better Living in Hinjewadi Pune, Sustainable & Progressive Spaces Pune, 400 Acres of Community Living"
+                title="Kolte Patil Life Republic Amenities | 390-Acre Master Township"
+                description="Explore 50+ world-class lifestyle amenities at Kolte Patil Life Republic Hinjewadi: 3.5-acre Urban Park, Anisha Global School, sports clubs, swimming pool & high-street retail."
+                keywords="Life Republic Amenities, Clubhouse in Hinjewadi, School in Life Republic, Integrated Township Amenities, Swimming Pool, Gymnasium, Parks in Hinjewadi, Gated Community Facilities"
                 canonical="/amenities"
             />
             <section className="bg-white text-[#202124] pt-40 pb-28 relative overflow-hidden">

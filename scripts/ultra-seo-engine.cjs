@@ -141,7 +141,7 @@ async function runUltraSEOEngine() {
     }
 
     // Step 3: Google Search Console Sitemaps & Feeds Re-synchronization
-    log('\n🟢 Step 3: Synchronizing All 13 XML Sitemaps & Feeds with Googlebot...');
+    log('\n🟢 Step 3: Synchronizing All 11 XML Sitemaps & Feeds with Googlebot...');
     const gscRes = await runCommand('node', ['scripts/gsc-sync.cjs']);
     const gscSuccess = gscRes.stdout.match(/GSC Sync Completed:\s*(\d+\/\d+)/);
     if (gscSuccess) {

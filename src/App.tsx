@@ -360,6 +360,8 @@ function App() {
               <Testimonials />
             </Layout>
           } />
+          <Route path="/reviews" element={<Navigate to="/testimonials" replace />} />
+          <Route path="/life-republic-reviews" element={<Navigate to="/testimonials" replace />} />
           <Route path="/township-guide" element={
             <Layout ariaLabel="The Ultimate Guide to Kolte Patil Life Republic Hinjewadi">
               <TownshipGuide />

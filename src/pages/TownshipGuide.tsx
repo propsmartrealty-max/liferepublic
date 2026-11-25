@@ -50,7 +50,7 @@ export const TownshipGuide: React.FC = () => {
             }
         },
         "datePublished": "2024-03-28",
-        "dateModified": "2024-03-28",
+        "dateModified": "2026-11-25",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://life-republic.in/township-guide"
@@ -92,9 +92,9 @@ export const TownshipGuide: React.FC = () => {
     return (
         <div>
             <SEO 
-                title="Life Republic Hinjewadi Guide: Portfolio, Clusters & ROI Analysis"
-                description="Comprehensive guide to Kolte Patil Life Republic. Explore Atmos, Aros, Universe, and Echoes. Analysis of ROI, schools, and Hinjewadi's 390-acre master township."
-                keywords="Life Republic Guide, Hinjewadi Township Analysis, Atmos Life Republic, Aros Hinjewadi price, Universe R10 details, Canvas projects Pune"
+                title="Kolte Patil Life Republic Township Guide 2026 | Master Plan"
+                description="The Definitive 2026 Guide to Kolte Patil Life Republic Hinjewadi. Master plan breakdown of 390 acres, all 11+ residential sectors, pricing, floor plans & Metro Line 3."
+                keywords="Kolte Patil Life Republic Guide, Hinjewadi Township Master Plan, Life Republic sectors, Atmos Life Republic, Aros Hinjewadi price, Universe R10 details, Canvas projects Pune"
                 canonical="/township-guide"
                 schema={[blogSchema, faqSchema]}
             />

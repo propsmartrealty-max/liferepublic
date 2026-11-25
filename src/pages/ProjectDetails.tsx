@@ -216,11 +216,13 @@ const ProjectDetails: React.FC = () => {
     const canonicalSlug = getProjectSlug(project.id, project.slug) || project.slug;
     const clusterSchema = generateClusterProductSchema(project);
 
+    const rawName = project.name || project.title?.split('|')[0]?.trim() || 'Residences';
+    const cleanName = rawName.toLowerCase().includes('kolte patil') ? rawName : `Kolte Patil ${rawName}`;
     const clusterTitle = project.price && !project.price.includes('Sold Out')
-        ? `${project.name} Life Republic Hinjewadi @ ${project.price}`.replace('*', '')
-        : `${project.name} Life Republic Hinjewadi | Luxury Homes`;
+        ? `${cleanName} Life Republic Hinjewadi @ ${project.price}`.replace('*', '').trim()
+        : `${cleanName} Life Republic Hinjewadi | Luxury Residences`;
 
-    const clusterDesc = `★ 4.9/5 Rating (1,840+ Reviews). ${project.name} at Life Republic Hinjewadi Pune. ${project.configurations?.map((c: any) => c.type).join(', ') || project.category}. MahaRERA ${project.rera}. Download Brochure & Pricing!`;
+    const clusterDesc = `Official Portal: ${cleanName} at Kolte Patil Life Republic Hinjewadi Pune. ${project.configurations?.map((c: any) => c.type).join(', ') || project.category} starting ${project.price}. MahaRERA: ${project.rera}. Verified Floor Plans, Brochure & Pricing.`;
 
     return (
         <div className="bg-[#050505] min-h-screen text-white">

@@ -2,8 +2,12 @@ export const onRequest: PagesFunction = async (context) => {
     const url = new URL(context.request.url);
     const path = url.pathname;
 
-    // 0. Apex Domain Normalization (Consolidate www.life-republic.in -> life-republic.in)
-    if (url.hostname === 'www.life-republic.in') {
+    // 0. Strict HTTPS & Apex Domain Normalization (Consolidate http:// and www.life-republic.in -> https://life-republic.in)
+    const proto = context.request.headers.get('x-forwarded-proto') || url.protocol.replace(':', '');
+    const isWww = url.hostname === 'www.life-republic.in';
+    const isHttp = proto === 'http';
+
+    if (isWww || isHttp) {
         return Response.redirect(`https://life-republic.in${url.pathname}${url.search}`, 301);
     }
 
@@ -23,12 +27,12 @@ export const onRequest: PagesFunction = async (context) => {
         // Enforce trailing slash removal
         if (path.endsWith('/')) {
             const cleanPath = path.slice(0, -1);
-            return Response.redirect(`${url.origin}${cleanPath}${url.search}`, 301);
+            return Response.redirect(`https://life-republic.in${cleanPath}${url.search}`, 301);
         }
 
         // Enforce lowercase URLs for SEO consolidation
         if (path !== path.toLowerCase()) {
-            return Response.redirect(`${url.origin}${path.toLowerCase()}${url.search}`, 301);
+            return Response.redirect(`https://life-republic.in${path.toLowerCase()}${url.search}`, 301);
         }
     }
 
