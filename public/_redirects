@@ -98,5 +98,5 @@
 /lifestyle/ /lifestyle 301
 /projects/ /projects 301
 
-# Cloudflare Pages Single Page Application (SPA) Fallback Rule (clean un-prerendered shell)
-/* /app-shell.html 200
+# Cloudflare Pages Single Page Application (SPA) Fallback Rule
+/* /index.html 200

@@ -17,8 +17,16 @@ const app = (
     </StrictMode>
 );
 
+const ssrCanonical = document.querySelector('meta[name="ssr-canonical"]')?.getAttribute('content') || '';
+const isCurrentRoutePreRendered =
+    Boolean(ssrCanonical) &&
+    ssrCanonical !== 'fallback' &&
+    !(ssrCanonical === 'https://life-republic.in/' && window.location.pathname !== '/');
+
 const hasPreRenderedHtml =
-    rootElement.children.length > 0 && !rootElement.innerHTML.includes('<!--app-html-->');
+    isCurrentRoutePreRendered &&
+    rootElement.children.length > 0 &&
+    !rootElement.innerHTML.includes('<!--app-html-->');
 
 if (hasPreRenderedHtml) {
     hydrateRoot(rootElement, app, {

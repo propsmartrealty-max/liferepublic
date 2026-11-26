@@ -119,13 +119,6 @@ async function prerender() {
         template = fs.readFileSync(indexPath, 'utf-8');
     }
 
-    // Write clean un-prerendered SPA shell for dynamic /search/* fallbacks (no homepage canonical, no homepage JSON-LD)
-    const appShellHtml = template
-        .replace('<!--app-head-->', '<meta name="app-shell" content="true" />')
-        .replace('<!--app-html-->', '');
-    fs.writeFileSync(path.join(OUT_DIR, 'app-shell.html'), appShellHtml);
-    console.log('🛡️  Generated clean SPA fallback: dist/app-shell.html');
-
     const { render } = await import(`file://${SSR_BUNDLE_PATH}`);
 
     const dynamicRoutes = await getDynamicRoutes();

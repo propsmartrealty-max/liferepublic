@@ -82,7 +82,7 @@ export function render(url: string): Promise<{ html: string; head: string; title
                 })
                 .join('\n  ');
 
-            const routeAttr = escapeAttr(headCollector.route || `https://life-republic.in${url === '/' ? '' : url}`);
+            const routeAttr = escapeAttr(headCollector.route || `https://life-republic.in${url === '/' ? '/' : url}`);
             const schemaHtml = headCollector.schemas
                 .map(
                     s =>
@@ -91,6 +91,7 @@ export function render(url: string): Promise<{ html: string; head: string; title
                 .join('\n  ');
 
             const head = [
+                `<meta name="ssr-canonical" content="${routeAttr}" />`,
                 '<meta name="ssr-prerendered" content="true" />',
                 metaHtml,
                 linkHtml,

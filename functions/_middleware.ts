@@ -3,12 +3,12 @@ export const onRequest: PagesFunction = async (context) => {
     const path = url.pathname;
 
     // 0. Strict HTTPS & Apex Domain Normalization (Consolidate http:// and www.life-republic.in -> https://life-republic.in)
-    const proto = context.request.headers.get('x-forwarded-proto') || url.protocol.replace(':', '');
     const isWww = url.hostname === 'www.life-republic.in';
-    const isHttp = proto === 'http';
+    const isHttp = url.protocol === 'http:';
 
     if (isWww || isHttp) {
-        return Response.redirect(`https://life-republic.in${url.pathname}${url.search}`, 301);
+        const targetHost = isWww ? 'life-republic.in' : url.hostname;
+        return Response.redirect(`https://${targetHost}${url.pathname}${url.search}`, 301);
     }
 
     // 1. Enterprise Edge URL Normalization (Prevent Duplicate Content in Google SERP)
@@ -120,9 +120,11 @@ export const onRequest: PagesFunction = async (context) => {
     const canonicalUrl = `https://life-republic.in${normalizedCanonicalPath === '/' ? '/' : normalizedCanonicalPath}`;
 
     // SEO Hardening Directive & Edge Canonical Signaling
-    headers.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
-    if (!isStaticAsset) {
-        headers.set('Link', `<${canonicalUrl}>; rel="canonical", <https://life-republic.in/sitemap.xml>; rel="sitemap"`);
+    if (response.status === 200) {
+        headers.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+        if (!isStaticAsset) {
+            headers.set('Link', `<${canonicalUrl}>; rel="canonical", <https://life-republic.in/sitemap.xml>; rel="sitemap"`);
+        }
     }
 
     if (isSearchBot) {
@@ -132,7 +134,7 @@ export const onRequest: PagesFunction = async (context) => {
     }
 
     // 7b. Edge Instant IndexNow Signal for Programmatic Pages & Search Crawlers
-    if (!isStaticAsset && (isSearchBot || path.startsWith('/search/') || path.startsWith('/projects/'))) {
+    if (!isStaticAsset && response.status === 200 && (isSearchBot || path.startsWith('/search/') || path.startsWith('/projects/'))) {
         const targetUrl = `https://life-republic.in${path}`;
         context.waitUntil(
             fetch('https://api.indexnow.org/indexnow', {
@@ -152,7 +154,8 @@ export const onRequest: PagesFunction = async (context) => {
 
     // 8. Streaming Edge HTML Rewriting
     // Preserves authentic SSG / SSR pre-rendered schema, canonical, and title.
-    // For dynamic SPA shell fallbacks (app-shell.html), synthesizes accurate per-URL title, description, and canonical.
+    // On dynamic SPA fallbacks (non-root path served from index.html), strips homepage JSON-LD/DOM
+    // and synthesizes exact per-URL title, description, and self-referencing canonical at the Edge.
     if (contentType.includes('text/html') && response.status === 200) {
         const rawSlug = path.split('/').filter(Boolean).pop() || '';
         const readableSlug = rawSlug
@@ -181,37 +184,84 @@ export const onRequest: PagesFunction = async (context) => {
             <meta name="preferred-currency" content="${preferredCurrency}" />
         `;
 
-        let isAppShell = false;
+        let hasSsrCanonical = false;
+        let isSpaFallback = false;
+        let hasCanonicalTag = false;
+        const needsDynamicRewrite = () => isSpaFallback || (path !== '/' && !hasSsrCanonical);
 
         const rewriter = new HTMLRewriter()
-            .on('meta[name="app-shell"]', {
+            .on('meta[name="ssr-canonical"]', {
                 element(el) {
-                    isAppShell = true;
-                    el.remove();
+                    hasSsrCanonical = true;
+                    const val = el.getAttribute('content') || '';
+                    if (path !== '/' && val === 'https://life-republic.in/') {
+                        isSpaFallback = true;
+                        el.setAttribute('content', 'fallback');
+                    }
                 }
             })
             .on('title', {
                 element(el) {
-                    if (isAppShell && readableSlug) {
+                    if (needsDynamicRewrite() && readableSlug) {
                         el.setInnerContent(dynamicTitle);
                     }
                 }
             })
             .on('meta[name="description"]', {
                 element(el) {
-                    if (isAppShell && readableSlug) {
+                    if (needsDynamicRewrite() && readableSlug) {
                         el.setAttribute('content', dynamicDesc);
+                    }
+                }
+            })
+            .on('meta[property="og:url"], meta[property="twitter:url"]', {
+                element(el) {
+                    if (needsDynamicRewrite()) {
+                        el.setAttribute('content', canonicalUrl);
+                    }
+                }
+            })
+            .on('meta[property="og:title"], meta[property="twitter:title"]', {
+                element(el) {
+                    if (needsDynamicRewrite() && readableSlug) {
+                        el.setAttribute('content', dynamicTitle);
+                    }
+                }
+            })
+            .on('meta[property="og:description"], meta[property="twitter:description"]', {
+                element(el) {
+                    if (needsDynamicRewrite() && readableSlug) {
+                        el.setAttribute('content', dynamicDesc);
+                    }
+                }
+            })
+            .on('link[rel="canonical"]', {
+                element(el) {
+                    hasCanonicalTag = true;
+                    if (needsDynamicRewrite()) {
+                        el.setAttribute('href', canonicalUrl);
+                    }
+                }
+            })
+            .on('script[type="application/ld+json"]', {
+                element(el) {
+                    if (needsDynamicRewrite()) {
+                        el.remove();
+                    }
+                }
+            })
+            .on('div#root', {
+                element(el) {
+                    if (isSpaFallback) {
+                        el.setInnerContent('');
                     }
                 }
             })
             .on('head', {
                 element(el) {
                     el.onEndTag((endTag) => {
-                        if (isAppShell) {
-                            endTag.before(
-                                `<link rel="canonical" href="${canonicalUrl}" />\n<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />\n`,
-                                { html: true }
-                            );
+                        if (needsDynamicRewrite() && !hasCanonicalTag) {
+                            endTag.before(`<link rel="canonical" href="${canonicalUrl}" />\n`, { html: true });
                         }
                         endTag.before(edgeMeta, { html: true });
                     });
